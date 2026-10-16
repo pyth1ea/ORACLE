@@ -1,6 +1,6 @@
 # ORACLE — Quick Start
 
-**What it is:** a personal forecasting system. Every morning around 6 AM Central, Claude runs ORACLE's daily
+**What it is:** a personal forecasting system. Three mornings a week (Monday, Wednesday and Friday, around 6 AM Central), Claude runs ORACLE's
 cycle **in the cloud** (no PC needed): it pulls the news and economic data, scores the day's events, runs the agent
 simulation, checks which past predictions came true, updates every forecast, writes a briefing, updates the phone
 app, and sends a one-line notification to your phone.
@@ -40,7 +40,9 @@ Every mode has a **Glossary** at the bottom.
 
 ## How the daily run works
 - It's a **Claude Code cloud routine** called "ORACLE daily run" (manage it at claude.ai/code/routines). It clones this
-  GitHub repository, does the day's work, and pushes the results back to `main`, which updates the app.
+  GitHub repository, does the work, and pushes the results back to `main`, which updates the app.
+- It runs **Monday, Wednesday and Friday at 6:07 AM Central** (cut from every day in October 2026 to save Claude
+  usage). Each run catches up on everything since the last one.
 - Your PC can be off. Each run uses your Claude plan's usage, the same as before.
 - The old PC task ("ORACLE daily forecast run" under **Scheduled** in the Claude desktop app) is paused and kept only
   as a fallback. Don't turn it back on while the cloud routine is on, or the day would run twice.

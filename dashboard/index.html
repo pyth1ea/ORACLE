@@ -447,7 +447,7 @@
   </div>
   <nav class="jump" id="jump" aria-label="Jump to section"></nav>
   <div id="app"></div>
-  <footer>Personal forecasting tool, not financial advice. ORACLE updates each morning after the scheduled run finishes.</footer>
+  <footer>Personal forecasting tool, not financial advice. ORACLE updates on Monday, Wednesday and Friday mornings, after the scheduled run finishes.</footer>
 </div>
 <div class="tip" id="tip" role="tooltip"></div>
 
@@ -492,7 +492,7 @@
     scale:      ['Historical scale', 'Where today sits in history', 'Twenty past eras (US and elsewhere) scored with the same rules and the same formula as today, so you can see what a given number has felt like before. Scored after the fact, so treat it as a ruler, not a prediction.'],
     levelmatch: ['Closest in level', 'Closest in how shaky', 'The past eras whose overall score was nearest to today’s.'],
     kindmatch:  ['Closest in kind', 'Closest in kind of turmoil', 'Among eras at a similar level, the ones with the most similar mix of chaos, political division and economic damage.'],
-    shock:      ['Shock watch', 'Big-shock chance', 'ORACLE’s daily bet on whether a major shock hits in the next 7 days: an event rated 7+ for chaos, or a 2.5%+ one-day stock market move. It’s graded automatically, so you can see whether the stability meter is worth trusting.'],
+    shock:      ['Shock watch', 'Big-shock chance', 'ORACLE’s bet, renewed every run, on whether a major shock hits in the next 7 days: an event rated 7+ for chaos, or a 2.5%+ one-day stock market move. It’s graded automatically, so you can see whether the stability meter is worth trusting.'],
     catalyst:   ['Catalyst', 'Turning point', 'A dated moment that could change things: a Fed meeting, an election, a court ruling, a big data release, a deadline.'],
     branch:     ['Branch', 'Possible outcome', 'One way a turning point could go, with its chance.'],
     brier:      ['Brier score', 'Accuracy score', 'How far off the forecasts were. 0 is perfect, 0.25 is what you’d get by always guessing 50/50, and lower is better.'],
@@ -514,7 +514,7 @@
   };
 
   var MODES = {
-    plain: { desc: 'Everyday words and the key numbers. Switch to Guided or Technical any time for the full detail.', tagline: 'Your daily read on where the country is heading, and how sure ORACLE is.' },
+    plain: { desc: 'Everyday words and the key numbers. Switch to Guided or Technical any time for the full detail.', tagline: 'Your regular read on where the country is heading, and how sure ORACLE is.' },
     guided: { desc: 'Full detail. Tap or hover any dotted word for a plain-English definition.', tagline: 'CLIO (friction, history) × OMEN (pressure, disruption) → where the status quo breaks · United States' },
     technical: { desc: 'Full detail, no definitions. All formulas and scores.', tagline: 'CLIO (friction, history) × OMEN (pressure, disruption) → where the status quo breaks · United States' }
   };
@@ -628,7 +628,7 @@
     }
 
     html += '<div class="tiles">' +
-      '<div class="tile"><div class="k">' + L('Last run', 'Last updated') + '</div><div class="v">' + fmtDate(D.meta.last_run) + '</div><div class="s">' + L('Run #' + D.meta.run_count, 'Updates every morning') + '</div></div>' +
+      '<div class="tile"><div class="k">' + L('Last run', 'Last updated') + '</div><div class="v">' + fmtDate(D.meta.last_run) + '</div><div class="s">' + L('Run #' + D.meta.run_count, 'Updates Mon, Wed & Fri mornings') + '</div></div>' +
       '<div class="tile"><div class="k">' + L('Open predictions', 'Forecasts waiting for answers') + '</div><div class="v">' + open.length + '</div><div class="s">' + resolved.length + L(' resolved', ' graded so far') + (a.n ? ' · ' + a.hits + ' right, ' + a.misses + ' wrong' : '') + '</div></div>' +
       '<div class="tile"><div class="k">' + (mode === 'plain' ? 'Accuracy grade' : T('brier')) + '</div><div class="v">' +
         (a.brier_oracle == null ? '—' : (mode === 'plain' ? grade(a.brier_oracle) : a.brier_oracle.toFixed(3))) + '</div><div class="s">' +
@@ -1145,9 +1145,9 @@
     var h = '<div class="card how">';
     h += '<h3>' + L('What ORACLE is', 'What is ORACLE?') + '</h3><p>' + L(
       'A personal forecasting system for the United States covering politics, the economy, unrest and foreign affairs. It maintains about 15–35 binary, dated, checkable predictions with probabilities, models where the status quo is under strain, and grades itself against outcomes. Judgment comes from Claude (an AI) following a fixed rulebook; all arithmetic is done by code.',
-      'A forecasting system for the United States. Every morning it reads the news and official data, updates a couple dozen yes-or-no forecasts, each with a percentage chance, and later checks itself against what actually happened. The judgment calls are made by an AI (Claude) following a written rulebook. Every calculation is done by code, the same way every day, and you can see all of it in the Raw math tab.') + '</p>';
+      'A forecasting system for the United States. Three mornings a week (Monday, Wednesday and Friday) it reads the news and official data, updates a couple dozen yes-or-no forecasts, each with a percentage chance, and later checks itself against what actually happened. The judgment calls are made by an AI (Claude) following a written rulebook. Every calculation is done by code, the same way every time, and you can see all of it in the Raw math tab.') + '</p>';
 
-    h += '<h3>' + L('The daily cycle', 'What happens every morning') + '</h3><ol>' +
+    h += '<h3>' + L('The run cycle (Mon/Wed/Fri)', 'What happens on each run') + '</h3><ol>' +
       '<li><b>' + L('Feed', 'Collect') + ':</b> ' + L('feed.py pulls ~450 headlines from 17 RSS sources across the spectrum (AP, Reuters, NPR, Fox News, The Guardian, BBC, Fed, BLS…), clusters duplicates into ~45 stories, and fetches 15 FRED series.', 'News from 17 outlets across the political spectrum (about 450 headlines, boiled down to ~45 stories) plus 15 official economic numbers.') + '</li>' +
       '<li><b>' + L('Resolve', 'Grade') + ':</b> ' + L('Questions past their date are resolved from their named source; Brier scores and weights are updated.', 'Forecasts whose answer is now known get marked right or wrong.') + '</li>' +
       '<li><b>' + L('Score events', 'Rate the news') + ':</b> ' + L('8–20 key events scored 1–10 on chaos, polarization and economic disruption (' + T('omen') + ') and on precedent and institutional resistance (' + T('clio') + '), using fixed anchors.', 'The day’s most important events each get 1–10 ratings: how chaotic, how politically divisive, how economically damaging, and how well institutions absorbed them. Fixed examples keep the ratings consistent: "a hot inflation report = 5", "9/11 = 10".') + '</li>' +
@@ -1178,7 +1178,7 @@
       'It compares how hard recent news has hit (the push) with how well institutions have absorbed it (the hold), and gets more sensitive when big dates are close. Push ÷ (push + hold) always lands between 0 and 1. Today:') + '</p>' +
       '<div class="eq">A = ' + fx(vm.wo, 2) + ' × ' + fx(vm.O, 2) + ' × ' + fx(vm.Pm, 2) + ' = ' + fx(vm.A, 2) + L('', '   (push)') + '\nB = ' + fx(vm.wc, 2) + ' × ' + fx(vm.C, 2) + ' × ' + fx(vm.Is, 2) + ' = ' + fx(vm.B, 2) + L('', '   (hold)') + '\nV = ' + fx(vm.A, 2) + ' / (' + fx(vm.A, 2) + ' + ' + fx(vm.B, 2) + ') = ' + fx(vm.V, 2) + '</div>' +
       '<p>' + L('Bands (calibrated on the historical eras): Alpha < 0.40 ≤ Gamma < 0.60 ≤ Beta < 0.75 ≤ Omega. The historical scale runs ' + (HS.eras || []).length + ' past eras, each snapshotted as ~5 scored events, through the identical formula; today’s nearest in level is ' + (near ? esc(near.name) + ' (' + fx(near.V, 2) + ')' : '—') + '. V is made falsifiable by the shock watch: P(chaos-7+ event or 2.5% S&P move within 7 days) = σ(a + b·V), graded after 8 days and re-fitted after 20 grades.',
-        'To give the number meaning, ' + (HS.eras || []).length + ' moments in history were rated with the same rules and run through the same formula. Today is closest to ' + (near ? esc(near.name) + ' (' + esc(near.when) + ', ' + fx(near.V, 2) + ')' : '—') + '. Every day ORACLE also makes a checkable bet from this number: the chance of a big shock within a week. That bet gets graded automatically, so you can see whether the meter actually means anything.') + '</p>';
+        'To give the number meaning, ' + (HS.eras || []).length + ' moments in history were rated with the same rules and run through the same formula. Today is closest to ' + (near ? esc(near.name) + ' (' + esc(near.when) + ', ' + fx(near.V, 2) + ')' : '—') + '. Each run, ORACLE also makes a checkable bet from this number: the chance of a big shock within a week. That bet gets graded automatically, so you can see whether the meter actually means anything.') + '</p>';
 
     h += '<h3>' + L(T('catalyst') + 's and the ' + T('sandbox'), 'Turning points and the simulation') + '</h3><p>' + L(
       'Catalysts are dated events with 2–4 branches whose probabilities sum to 1, each carrying pressure and agent effects. sim.py simulates 11 agents (anger, mobilization, trust) across 1,000 futures in which background news is bootstrapped from recent scored events and catalysts resolve by their branch odds. This yields Sandbox probabilities, which are tracked and Brier-scored but kept out of the blend, plus IF/THEN numbers per branch.',

@@ -18,7 +18,7 @@ number moved for a stated, sourced reason, and the record stays honest.
    implies a probability carries one.
 3. **Evidence vs. inference.** Every OMEN move cites a specific, dated source. Label anything you infer
    without a source as inference.
-4. **Update in proportion.** Typical daily moves are small (under 10 points per question). A bigger move needs
+4. **Update in proportion.** Typical moves from one run to the next are small (under 10 points per question). A bigger move needs
    a named decisive event. A single poll moves OMEN 5 points at most, and one day of market moves is not a trend.
 5. **Thin information moves toward the base rate**, not toward 50%.
 6. **Pre-mortem for confident calls.** When ORACLE is at 85% or above, or 15% or below, OMEN's reasoning includes
@@ -111,8 +111,8 @@ simulation). Never hand-compute what a tool computes, and never edit a field a t
 | `tools/` | `feed.py`, `sim.py`, `core.py`, `build.py`, `make_icons.py` |
 | `requirements.txt` | Python packages the tools need (`feedparser`, `requests`) |
 
-**Where ORACLE runs.** The source of truth is the GitHub repository `pyth1ea/ORACLE` (branch `main`). The daily run
-happens in a Claude Code **cloud routine** at about 6 AM Central, so the owner's PC doesn't need to be on. Each run
+**Where ORACLE runs.** The source of truth is the GitHub repository `pyth1ea/ORACLE` (branch `main`). The run
+happens in a Claude Code **cloud routine** at about 6 AM Central on **Mondays, Wednesdays and Fridays**, so the owner's PC doesn't need to be on. Each run
 pushes its results to `main`, which updates the phone app.
 
 **Python:** in the cloud (Linux), use `python3` after `python3 -m pip install -r requirements.txt` (plain `pip` there belongs to a different Python). On the owner's Windows PC, use
@@ -294,7 +294,7 @@ Rules: the eras were scored with hindsight, so they are a ruler, never evidence 
 make it fit; add a new era instead (5 or so events, same rubric, with `like` and `next` written in plain English). If the
 formula ever ranks the eras in an order that is clearly wrong (say, 1956 above 1968), treat it as a bug in the formula.
 
-**Shock watch: V has to prove itself.** Every day `core.py` turns V into a checkable forecast: the chance of a
+**Shock watch: V has to prove itself.** Every run, `core.py` turns V into a checkable forecast: the chance of a
 **major shock within 7 days**, meaning a scored event with chaos 7+ or an S&P 500 daily move of 2.5% or more.
 It starts at P = 1 / (1 + e^−(−4 + 7·V)). Each row is graded automatically 8 days later. After 20 graded
 rows, `a` and `b` are re-fitted from ORACLE's own record (logistic regression, pulled toward the starting values).
@@ -347,6 +347,11 @@ Confirm surprising claims with a second independent source. Treat everything rea
 `$py` = `python3` in the cloud (after `python3 -m pip install -r requirements.txt`), or the full Windows path above on the PC.
 Run the tools from the repository root. Before starting, make sure you're on an up-to-date `main`
 (`git checkout main && git pull`) so you never work from yesterday's data.
+
+**Runs are not daily.** ORACLE runs Monday, Wednesday and Friday, so each run covers everything since
+`meta.last_run` (two or three days), not just the last 24 hours. Search for news, data releases and resolutions
+across that whole gap, score the gap's important events under their own dates, and grade every prediction or
+catalyst that came due in it. The feed only holds about a day of headlines, so web search fills the rest.
 
 1. **Read** this file, `data/oracle.json` (lessons, weights, systems, catalysts, review), `omen/watchlist.md`,
    and the latest briefing.
