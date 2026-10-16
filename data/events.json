@@ -2,227 +2,711 @@
   "about": "Scored events. omen: chaos / polarization / economic (1-10). clio: closest historical precedent, precedent_match (1-10), institutional resistance (1-10). systems: push on each system, -3..+3 (+ = toward change, - = toward status quo). Rubric in ORACLE.md section 3.",
   "events": [
     {
-      "id": "E-20261014-01", "date": "2026-10-14", "domain": "economy",
+      "id": "E-20261014-01",
+      "date": "2026-10-14",
+      "domain": "economy",
       "title": "September CPI 3.7% y/y (from 3.4%); gasoline +9.1% in the month; core 2.6%, above estimates",
-      "sources": ["BLS", "CNN", "CNBC", "Washington Post"], "url": "https://www.bls.gov/news.release/cpi.nr0.htm",
-      "omen": { "chaos": 3, "polarization": 3, "economic": 6 },
-      "clio": { "precedent": "1979-80 oil-shock inflation with a hawkish Fed", "precedent_match": 5, "resistance": 5 },
-      "systems": { "S-INFLATION": 2, "S-FED": 2, "S-HOUSE": 1, "S-GROWTH": 1 }
+      "sources": [
+        "BLS",
+        "CNN",
+        "CNBC",
+        "Washington Post"
+      ],
+      "url": "https://www.bls.gov/news.release/cpi.nr0.htm",
+      "omen": {
+        "chaos": 3,
+        "polarization": 3,
+        "economic": 6
+      },
+      "clio": {
+        "precedent": "1979-80 oil-shock inflation with a hawkish Fed",
+        "precedent_match": 5,
+        "resistance": 5
+      },
+      "systems": {
+        "S-INFLATION": 2,
+        "S-FED": 2,
+        "S-HOUSE": 1,
+        "S-GROWTH": 1
+      }
     },
     {
-      "id": "E-20261014-02", "date": "2026-10-14", "domain": "economy",
+      "id": "E-20261014-02",
+      "date": "2026-10-14",
+      "domain": "economy",
       "title": "Odds of an October Fed hike jump after hot CPI",
-      "sources": ["Washington Post", "Conference Board"], "url": "https://washingtonpost.com/business/2026/10/14/prices-increased-september-last-inflation-report-ahead-elections",
-      "omen": { "chaos": 3, "polarization": 1, "economic": 5 },
-      "clio": { "precedent": "2022 hiking cycle into slowing growth", "precedent_match": 4, "resistance": 6 },
-      "systems": { "S-FED": 2, "S-GROWTH": 1 }
+      "sources": [
+        "Washington Post",
+        "Conference Board"
+      ],
+      "url": "https://washingtonpost.com/business/2026/10/14/prices-increased-september-last-inflation-report-ahead-elections",
+      "omen": {
+        "chaos": 3,
+        "polarization": 1,
+        "economic": 5
+      },
+      "clio": {
+        "precedent": "2022 hiking cycle into slowing growth",
+        "precedent_match": 4,
+        "resistance": 6
+      },
+      "systems": {
+        "S-FED": 2,
+        "S-GROWTH": 1
+      }
     },
     {
-      "id": "E-20261014-03", "date": "2026-10-14", "domain": "economy",
+      "id": "E-20261014-03",
+      "date": "2026-10-14",
+      "domain": "economy",
       "title": "Brent holds above $105 (spot near $125) on Hormuz attacks and Gulf storm threat",
-      "sources": ["Yahoo Finance", "FRED/EIA"], "url": "https://finance.yahoo.com/markets/article/oil-prices-climb-above-100-on-strait-of-hormuz-attacks-gulf-storm-threat-122612488.html",
-      "omen": { "chaos": 4, "polarization": 1, "economic": 6 },
-      "clio": { "precedent": "2008 oil spike before recession", "precedent_match": 5, "resistance": 4 },
-      "systems": { "S-INFLATION": 1, "S-GROWTH": 1, "S-HORMUZ": 1 }
+      "sources": [
+        "Yahoo Finance",
+        "FRED/EIA"
+      ],
+      "url": "https://finance.yahoo.com/markets/article/oil-prices-climb-above-100-on-strait-of-hormuz-attacks-gulf-storm-threat-122612488.html",
+      "omen": {
+        "chaos": 4,
+        "polarization": 1,
+        "economic": 6
+      },
+      "clio": {
+        "precedent": "2008 oil spike before recession",
+        "precedent_match": 5,
+        "resistance": 4
+      },
+      "systems": {
+        "S-INFLATION": 1,
+        "S-GROWTH": 1,
+        "S-HORMUZ": 1
+      }
     },
     {
-      "id": "E-20261013-01", "date": "2026-10-13", "domain": "foreign",
+      "id": "E-20261013-01",
+      "date": "2026-10-13",
+      "domain": "foreign",
       "title": "IRGC says it struck another tanker in the Strait of Hormuz; attacks spreading outside the Strait",
-      "sources": ["Democracy Now", "Euronews"], "url": "https://www.euronews.com/2026/10/08/iran-strikes-tankers-outside-hormuz-in-signs-of-expanding-campaign",
-      "omen": { "chaos": 7, "polarization": 2, "economic": 6 },
-      "clio": { "precedent": "1987-88 Tanker War in the Gulf", "precedent_match": 8, "resistance": 4 },
-      "systems": { "S-HORMUZ": -1, "S-INFLATION": 1, "S-GROWTH": 1 }
+      "sources": [
+        "Democracy Now",
+        "Euronews"
+      ],
+      "url": "https://www.euronews.com/2026/10/08/iran-strikes-tankers-outside-hormuz-in-signs-of-expanding-campaign",
+      "omen": {
+        "chaos": 7,
+        "polarization": 2,
+        "economic": 6
+      },
+      "clio": {
+        "precedent": "1987-88 Tanker War in the Gulf",
+        "precedent_match": 8,
+        "resistance": 4
+      },
+      "systems": {
+        "S-HORMUZ": -1,
+        "S-INFLATION": 1,
+        "S-GROWTH": 1
+      }
     },
     {
-      "id": "E-20261013-02", "date": "2026-10-13", "domain": "foreign",
+      "id": "E-20261013-02",
+      "date": "2026-10-13",
+      "domain": "foreign",
       "title": "Iran still reviewing US proposal to reopen the Strait of Hormuz",
-      "sources": ["TheStreet", "Tradingkey"], "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-13-2026",
-      "omen": { "chaos": 3, "polarization": 1, "economic": 5 },
-      "clio": { "precedent": "1988 Iran accepts UN Resolution 598 ceasefire", "precedent_match": 3, "resistance": 6 },
-      "systems": { "S-HORMUZ": 2 }
+      "sources": [
+        "TheStreet",
+        "Tradingkey"
+      ],
+      "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-oct-13-2026",
+      "omen": {
+        "chaos": 3,
+        "polarization": 1,
+        "economic": 5
+      },
+      "clio": {
+        "precedent": "1988 Iran accepts UN Resolution 598 ceasefire",
+        "precedent_match": 3,
+        "resistance": 6
+      },
+      "systems": {
+        "S-HORMUZ": 2
+      }
     },
     {
-      "id": "E-20261013-03", "date": "2026-10-13", "domain": "foreign",
+      "id": "E-20261013-03",
+      "date": "2026-10-13",
+      "domain": "foreign",
       "title": "Houthis warn of response if the US joins Saudi-led attacks on Yemen",
-      "sources": ["Democracy Now"], "url": "https://www.democracynow.org/2026/10/13/headlines",
-      "omen": { "chaos": 6, "polarization": 1, "economic": 4 },
-      "clio": { "precedent": "2024 Red Sea shipping crisis", "precedent_match": 7, "resistance": 4 },
-      "systems": { "S-INFLATION": 1 }
+      "sources": [
+        "Democracy Now"
+      ],
+      "url": "https://www.democracynow.org/2026/10/13/headlines",
+      "omen": {
+        "chaos": 6,
+        "polarization": 1,
+        "economic": 4
+      },
+      "clio": {
+        "precedent": "2024 Red Sea shipping crisis",
+        "precedent_match": 7,
+        "resistance": 4
+      },
+      "systems": {
+        "S-INFLATION": 1
+      }
     },
     {
-      "id": "E-20261013-04", "date": "2026-10-13", "domain": "foreign",
+      "id": "E-20261013-04",
+      "date": "2026-10-13",
+      "domain": "foreign",
       "title": "Russia strikes Ukrainian power plant; ceasefire talks remain stalled",
-      "sources": ["Democracy Now", "UkraNews"], "url": "https://ukranews.com/en/amp/news/1165616-not-this-year-international-analysts-assess-chances-of-ending-war-in-ukraine",
-      "omen": { "chaos": 6, "polarization": 1, "economic": 2 },
-      "clio": { "precedent": "2022-25 winter strikes on Ukraine's grid", "precedent_match": 9, "resistance": 8 },
-      "systems": { "S-UKRAINE": -1 }
+      "sources": [
+        "Democracy Now",
+        "UkraNews"
+      ],
+      "url": "https://ukranews.com/en/amp/news/1165616-not-this-year-international-analysts-assess-chances-of-ending-war-in-ukraine",
+      "omen": {
+        "chaos": 6,
+        "polarization": 1,
+        "economic": 2
+      },
+      "clio": {
+        "precedent": "2022-25 winter strikes on Ukraine's grid",
+        "precedent_match": 9,
+        "resistance": 8
+      },
+      "systems": {
+        "S-UKRAINE": -1
+      }
     },
     {
-      "id": "E-20261013-05", "date": "2026-10-13", "domain": "politics",
+      "id": "E-20261013-05",
+      "date": "2026-10-13",
+      "domain": "politics",
       "title": "Judge extends order blocking White House from banning CNN, MS NOW and Politico reporters",
-      "sources": ["AP", "NPR", "PBS NewsHour", "The Guardian US"], "url": "https://www.democracynow.org/2026/10/13/headlines",
-      "omen": { "chaos": 3, "polarization": 7, "economic": 1 },
-      "clio": { "precedent": "Courts checking the executive on the press (Pentagon Papers, 1971)", "precedent_match": 5, "resistance": 8 },
-      "systems": { "S-STREETS": -1 }
+      "sources": [
+        "AP",
+        "NPR",
+        "PBS NewsHour",
+        "The Guardian US"
+      ],
+      "url": "https://www.democracynow.org/2026/10/13/headlines",
+      "omen": {
+        "chaos": 3,
+        "polarization": 7,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "Courts checking the executive on the press (Pentagon Papers, 1971)",
+        "precedent_match": 5,
+        "resistance": 8
+      },
+      "systems": {
+        "S-STREETS": -1
+      }
     },
     {
-      "id": "E-20261013-06", "date": "2026-10-13", "domain": "foreign",
+      "id": "E-20261013-06",
+      "date": "2026-10-13",
+      "domain": "foreign",
       "title": "Bipartisan senators (6 D, 6 R) urge Trump to rescind Russian diesel deal",
-      "sources": ["NPR", "Fox News"], "url": "https://www.npr.org/2026/10/13/g-s1-147871/trump-russia-diesel-deal-congressional-response",
-      "omen": { "chaos": 2, "polarization": 4, "economic": 3 },
-      "clio": { "precedent": "Congress vs. the executive on Russia sanctions (CAATSA, 2017)", "precedent_match": 5, "resistance": 7 },
+      "sources": [
+        "NPR",
+        "Fox News"
+      ],
+      "url": "https://www.npr.org/2026/10/13/g-s1-147871/trump-russia-diesel-deal-congressional-response",
+      "omen": {
+        "chaos": 2,
+        "polarization": 4,
+        "economic": 3
+      },
+      "clio": {
+        "precedent": "Congress vs. the executive on Russia sanctions (CAATSA, 2017)",
+        "precedent_match": 5,
+        "resistance": 7
+      },
       "systems": {}
     },
     {
-      "id": "E-20261013-07", "date": "2026-10-13", "domain": "unrest",
+      "id": "E-20261013-07",
+      "date": "2026-10-13",
+      "domain": "unrest",
       "title": "Measles cases climb to 263 across Wisconsin",
-      "sources": ["Democracy Now"], "url": "https://www.democracynow.org/2026/10/13/headlines",
-      "omen": { "chaos": 3, "polarization": 4, "economic": 1 },
-      "clio": { "precedent": "2019 US measles outbreak", "precedent_match": 7, "resistance": 6 },
+      "sources": [
+        "Democracy Now"
+      ],
+      "url": "https://www.democracynow.org/2026/10/13/headlines",
+      "omen": {
+        "chaos": 3,
+        "polarization": 4,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2019 US measles outbreak",
+        "precedent_match": 7,
+        "resistance": 6
+      },
       "systems": {}
     },
     {
-      "id": "E-20261012-01", "date": "2026-10-12", "domain": "politics",
+      "id": "E-20261012-01",
+      "date": "2026-10-12",
+      "domain": "politics",
       "title": "DHS agents raid the Washington home of Rep. Ilhan Omar",
-      "sources": ["Democracy Now"], "url": "https://www.democracynow.org/2026/10/13/headlines",
-      "omen": { "chaos": 6, "polarization": 9, "economic": 1 },
-      "clio": { "precedent": "Federal action against political opponents (COINTELPRO era)", "precedent_match": 3, "resistance": 6 },
-      "systems": { "S-HOUSE": 1, "S-STREETS": 1 }
+      "sources": [
+        "Democracy Now"
+      ],
+      "url": "https://www.democracynow.org/2026/10/13/headlines",
+      "omen": {
+        "chaos": 6,
+        "polarization": 9,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "Federal action against political opponents (COINTELPRO era)",
+        "precedent_match": 3,
+        "resistance": 6
+      },
+      "systems": {
+        "S-HOUSE": 1,
+        "S-STREETS": 1
+      }
     },
     {
-      "id": "E-20261012-02", "date": "2026-10-12", "domain": "politics",
+      "id": "E-20261012-02",
+      "date": "2026-10-12",
+      "domain": "politics",
       "title": "Justice Department opens antitrust inquiry into the major TV networks",
-      "sources": ["Democracy Now"], "url": "https://www.democracynow.org/2026/10/13/headlines",
-      "omen": { "chaos": 4, "polarization": 8, "economic": 3 },
-      "clio": { "precedent": "Nixon-era pressure on broadcast licenses", "precedent_match": 5, "resistance": 6 },
-      "systems": { "S-HOUSE": 1 }
+      "sources": [
+        "Democracy Now"
+      ],
+      "url": "https://www.democracynow.org/2026/10/13/headlines",
+      "omen": {
+        "chaos": 4,
+        "polarization": 8,
+        "economic": 3
+      },
+      "clio": {
+        "precedent": "Nixon-era pressure on broadcast licenses",
+        "precedent_match": 5,
+        "resistance": 6
+      },
+      "systems": {
+        "S-HOUSE": 1
+      }
     },
     {
-      "id": "E-20261012-03", "date": "2026-10-12", "domain": "politics",
+      "id": "E-20261012-03",
+      "date": "2026-10-12",
+      "domain": "politics",
       "title": "Musk reportedly funneled $276M to Republican groups and his super PAC since July",
-      "sources": ["New York Times (via Democracy Now)"], "url": "https://www.democracynow.org/2026/10/13/headlines",
-      "omen": { "chaos": 2, "polarization": 6, "economic": 1 },
-      "clio": { "precedent": "Megadonor surges (Adelson 2012, Musk 2024)", "precedent_match": 6, "resistance": 5 },
-      "systems": { "S-HOUSE": -1, "S-SENATE": -1 }
+      "sources": [
+        "New York Times (via Democracy Now)"
+      ],
+      "url": "https://www.democracynow.org/2026/10/13/headlines",
+      "omen": {
+        "chaos": 2,
+        "polarization": 6,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "Megadonor surges (Adelson 2012, Musk 2024)",
+        "precedent_match": 6,
+        "resistance": 5
+      },
+      "systems": {
+        "S-HOUSE": -1,
+        "S-SENATE": -1
+      }
     },
     {
-      "id": "E-20261012-04", "date": "2026-10-12", "domain": "unrest",
+      "id": "E-20261012-04",
+      "date": "2026-10-12",
+      "domain": "unrest",
       "title": "\"No Kings\" nationwide protests set for Oct 17, also pushing early voting",
-      "sources": ["Wikipedia"], "url": "https://en.wikipedia.org/wiki/October_2026_No_Kings_protests",
-      "omen": { "chaos": 4, "polarization": 7, "economic": 1 },
-      "clio": { "precedent": "October 2025 No Kings (~7M, peaceful)", "precedent_match": 8, "resistance": 7 },
-      "systems": { "S-STREETS": 1, "S-HOUSE": 1 }
+      "sources": [
+        "Wikipedia"
+      ],
+      "url": "https://en.wikipedia.org/wiki/October_2026_No_Kings_protests",
+      "omen": {
+        "chaos": 4,
+        "polarization": 7,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "October 2025 No Kings (~7M, peaceful)",
+        "precedent_match": 8,
+        "resistance": 7
+      },
+      "systems": {
+        "S-STREETS": 1,
+        "S-HOUSE": 1
+      }
     },
     {
-      "id": "E-20261014-04", "date": "2026-10-14", "domain": "politics",
+      "id": "E-20261014-04",
+      "date": "2026-10-14",
+      "domain": "politics",
       "title": "Republicans retreat from front-line House districts as battle lines shift",
-      "sources": ["AP", "PBS NewsHour"], "url": "https://www.pbs.org/newshour/politics",
-      "omen": { "chaos": 2, "polarization": 4, "economic": 1 },
-      "clio": { "precedent": "2018 GOP triage of suburban House seats", "precedent_match": 7, "resistance": 4 },
-      "systems": { "S-HOUSE": 2 }
+      "sources": [
+        "AP",
+        "PBS NewsHour"
+      ],
+      "url": "https://www.pbs.org/newshour/politics",
+      "omen": {
+        "chaos": 2,
+        "polarization": 4,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2018 GOP triage of suburban House seats",
+        "precedent_match": 7,
+        "resistance": 4
+      },
+      "systems": {
+        "S-HOUSE": 2
+      }
     },
     {
-      "id": "E-20261014-05", "date": "2026-10-14", "domain": "politics",
+      "id": "E-20261014-05",
+      "date": "2026-10-14",
+      "domain": "politics",
       "title": "Kansas Senate race newly competitive; Democrat could win a Kansas Senate seat for the first time in nearly a century",
-      "sources": ["NPR"], "url": "https://www.npr.org/2026/10/14/nx-s1-5995633/kansas-senate-race-hamilton-marshall-tossup",
-      "omen": { "chaos": 2, "polarization": 3, "economic": 1 },
-      "clio": { "precedent": "2006 wave reaching red states (Montana, Virginia)", "precedent_match": 6, "resistance": 6 },
-      "systems": { "S-SENATE": 1 }
+      "sources": [
+        "NPR"
+      ],
+      "url": "https://www.npr.org/2026/10/14/nx-s1-5995633/kansas-senate-race-hamilton-marshall-tossup",
+      "omen": {
+        "chaos": 2,
+        "polarization": 3,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2006 wave reaching red states (Montana, Virginia)",
+        "precedent_match": 6,
+        "resistance": 6
+      },
+      "systems": {
+        "S-SENATE": 1
+      }
     },
     {
-      "id": "E-20261015-01", "date": "2026-10-15", "domain": "economy",
+      "id": "E-20261015-01",
+      "date": "2026-10-15",
+      "domain": "economy",
       "title": "September producer prices jump 1.3% m/m (forecast ~0.6%), 6.3% y/y, the fastest since 2022; gasoline +20.3%",
-      "sources": ["BLS", "Schwab", "IBTimes", "TradingKey"], "url": "https://www.indexbox.io/blog/producer-prices-surge-at-fastest-pace-since-march-2022-as-energy-costs-bite/",
-      "omen": { "chaos": 3, "polarization": 2, "economic": 6 },
-      "clio": { "precedent": "2022 energy-led producer-price surge", "precedent_match": 6, "resistance": 5 },
-      "systems": { "S-INFLATION": 2, "S-FED": 1, "S-GROWTH": 1 }
+      "sources": [
+        "BLS",
+        "Schwab",
+        "IBTimes",
+        "TradingKey"
+      ],
+      "url": "https://www.indexbox.io/blog/producer-prices-surge-at-fastest-pace-since-march-2022-as-energy-costs-bite/",
+      "omen": {
+        "chaos": 3,
+        "polarization": 2,
+        "economic": 6
+      },
+      "clio": {
+        "precedent": "2022 energy-led producer-price surge",
+        "precedent_match": 6,
+        "resistance": 5
+      },
+      "systems": {
+        "S-INFLATION": 2,
+        "S-FED": 1,
+        "S-GROWTH": 1
+      }
     },
     {
-      "id": "E-20261015-03", "date": "2026-10-15", "domain": "economy",
+      "id": "E-20261015-03",
+      "date": "2026-10-15",
+      "domain": "economy",
       "title": "Chip and AI stock sell-off: S&P 500 falls ~1% Oct 14, chip index down 7 days running; S&P closes 7,744 Oct 15",
-      "sources": ["CNN", "Yahoo Finance", "Quartz", "FRED"], "url": "https://www.cnn.com/2026/10/15/business/tech-selloff-nasdaq-ai-intl",
-      "omen": { "chaos": 3, "polarization": 1, "economic": 4 },
-      "clio": { "precedent": "2022 rate-driven tech sell-off", "precedent_match": 6, "resistance": 6 },
-      "systems": { "S-GROWTH": 1 }
+      "sources": [
+        "CNN",
+        "Yahoo Finance",
+        "Quartz",
+        "FRED"
+      ],
+      "url": "https://www.cnn.com/2026/10/15/business/tech-selloff-nasdaq-ai-intl",
+      "omen": {
+        "chaos": 3,
+        "polarization": 1,
+        "economic": 4
+      },
+      "clio": {
+        "precedent": "2022 rate-driven tech sell-off",
+        "precedent_match": 6,
+        "resistance": 6
+      },
+      "systems": {
+        "S-GROWTH": 1
+      }
     },
     {
-      "id": "E-20261015-04", "date": "2026-10-15", "domain": "economy",
+      "id": "E-20261015-04",
+      "date": "2026-10-15",
+      "domain": "economy",
       "title": "September retail sales up 0.8%, with a big share going to gasoline",
-      "sources": ["AP", "PBS NewsHour"], "url": "https://www.pbs.org/newshour/economy/how-much-longer-will-consumers-be-willing-to-muscle-through-higher-prices",
-      "omen": { "chaos": 1, "polarization": 1, "economic": 3 },
-      "clio": { "precedent": "2008 summer: nominal spending propped up by fuel prices", "precedent_match": 5, "resistance": 6 },
-      "systems": { "S-GROWTH": -1, "S-INFLATION": 1 }
+      "sources": [
+        "AP",
+        "PBS NewsHour"
+      ],
+      "url": "https://www.pbs.org/newshour/economy/how-much-longer-will-consumers-be-willing-to-muscle-through-higher-prices",
+      "omen": {
+        "chaos": 1,
+        "polarization": 1,
+        "economic": 3
+      },
+      "clio": {
+        "precedent": "2008 summer: nominal spending propped up by fuel prices",
+        "precedent_match": 5,
+        "resistance": 6
+      },
+      "systems": {
+        "S-GROWTH": -1,
+        "S-INFLATION": 1
+      }
     },
     {
-      "id": "E-20261015-05", "date": "2026-10-15", "domain": "foreign",
+      "id": "E-20261015-05",
+      "date": "2026-10-15",
+      "domain": "foreign",
       "title": "Two cargo ships sunk near the Strait of Hormuz within 24 hours; nine attacks reported since Monday, UKMTO tally 24+ for October",
-      "sources": ["CNN", "Seatrade Maritime", "gCaptain", "Al Jazeera"], "url": "https://www.cnn.com/2026/10/15/middleeast/strait-of-hormuz-ships-sunk-iran-intl-hnk",
-      "omen": { "chaos": 7, "polarization": 2, "economic": 6 },
-      "clio": { "precedent": "1987-88 Tanker War", "precedent_match": 8, "resistance": 4 },
-      "systems": { "S-HORMUZ": -2, "S-INFLATION": 1 }
+      "sources": [
+        "CNN",
+        "Seatrade Maritime",
+        "gCaptain",
+        "Al Jazeera"
+      ],
+      "url": "https://www.cnn.com/2026/10/15/middleeast/strait-of-hormuz-ships-sunk-iran-intl-hnk",
+      "omen": {
+        "chaos": 7,
+        "polarization": 2,
+        "economic": 6
+      },
+      "clio": {
+        "precedent": "1987-88 Tanker War",
+        "precedent_match": 8,
+        "resistance": 4
+      },
+      "systems": {
+        "S-HORMUZ": -2,
+        "S-INFLATION": 1
+      }
     },
     {
-      "id": "E-20261014-06", "date": "2026-10-14", "domain": "foreign",
+      "id": "E-20261014-06",
+      "date": "2026-10-14",
+      "domain": "foreign",
       "title": "Iran hardens line: security chief says US reply ignored Tehran's seven conditions and there will be no talks until they are met",
-      "sources": ["Reuters (via US News)", "Al Arabiya", "Jerusalem Post"], "url": "https://www.usnews.com/news/world/articles/2026-10-12/iran-says-it-will-reply-to-us-response-on-hormuz-proposal-once-review-over",
-      "omen": { "chaos": 3, "polarization": 1, "economic": 4 },
-      "clio": { "precedent": "1980 hostage talks stalling on preconditions", "precedent_match": 5, "resistance": 6 },
-      "systems": { "S-HORMUZ": -1 }
+      "sources": [
+        "Reuters (via US News)",
+        "Al Arabiya",
+        "Jerusalem Post"
+      ],
+      "url": "https://www.usnews.com/news/world/articles/2026-10-12/iran-says-it-will-reply-to-us-response-on-hormuz-proposal-once-review-over",
+      "omen": {
+        "chaos": 3,
+        "polarization": 1,
+        "economic": 4
+      },
+      "clio": {
+        "precedent": "1980 hostage talks stalling on preconditions",
+        "precedent_match": 5,
+        "resistance": 6
+      },
+      "systems": {
+        "S-HORMUZ": -1
+      }
     },
     {
-      "id": "E-20261015-06", "date": "2026-10-15", "domain": "foreign",
+      "id": "E-20261015-06",
+      "date": "2026-10-15",
+      "domain": "foreign",
       "title": "Houthi missiles hit Yemen's presidential palace in Aden, killing five; Saudi Arabia says it stopped a missile aimed at Medina and accuses Iran of encouraging the Houthis",
-      "sources": ["AP", "BBC", "PBS NewsHour"], "url": "https://www.bbc.co.uk/news/articles/cm62y6lp73zdo",
-      "omen": { "chaos": 6, "polarization": 1, "economic": 3 },
-      "clio": { "precedent": "2015-22 Saudi-Houthi war", "precedent_match": 7, "resistance": 4 },
-      "systems": { "S-HORMUZ": -1 }
+      "sources": [
+        "AP",
+        "BBC",
+        "PBS NewsHour"
+      ],
+      "url": "https://www.bbc.co.uk/news/articles/cm62y6lp73zdo",
+      "omen": {
+        "chaos": 6,
+        "polarization": 1,
+        "economic": 3
+      },
+      "clio": {
+        "precedent": "2015-22 Saudi-Houthi war",
+        "precedent_match": 7,
+        "resistance": 4
+      },
+      "systems": {
+        "S-HORMUZ": -1
+      }
     },
     {
-      "id": "E-20261015-07", "date": "2026-10-15", "domain": "foreign",
+      "id": "E-20261015-07",
+      "date": "2026-10-15",
+      "domain": "foreign",
       "title": "Ukraine ends its pause on energy strikes and hits a Russian refinery; Zelenskyy says he feels betrayed by Trump; Starlink service restored after being throttled",
-      "sources": ["AP", "NPR", "BBC", "Axios"], "url": "https://www.axios.com/2026/10/15/ukraine-starlink-restored-strikes-russia-trump-musk",
-      "omen": { "chaos": 4, "polarization": 3, "economic": 3 },
-      "clio": { "precedent": "2025 energy truce lapsing within weeks", "precedent_match": 7, "resistance": 7 },
-      "systems": { "S-UKRAINE": -1 }
+      "sources": [
+        "AP",
+        "NPR",
+        "BBC",
+        "Axios"
+      ],
+      "url": "https://www.axios.com/2026/10/15/ukraine-starlink-restored-strikes-russia-trump-musk",
+      "omen": {
+        "chaos": 4,
+        "polarization": 3,
+        "economic": 3
+      },
+      "clio": {
+        "precedent": "2025 energy truce lapsing within weeks",
+        "precedent_match": 7,
+        "resistance": 7
+      },
+      "systems": {
+        "S-UKRAINE": -1
+      }
     },
     {
-      "id": "E-20261015-08", "date": "2026-10-15", "domain": "foreign",
+      "id": "E-20261015-08",
+      "date": "2026-10-15",
+      "domain": "foreign",
       "title": "Drone strike and fire on a ship in Romanian waters raise fears the Ukraine war is spilling into NATO territory",
-      "sources": ["AP", "PBS NewsHour"], "url": "https://apnews.com/",
-      "omen": { "chaos": 5, "polarization": 1, "economic": 2 },
-      "clio": { "precedent": "2022 Przewodow missile in Poland", "precedent_match": 6, "resistance": 6 },
-      "systems": { "S-UKRAINE": -1 }
+      "sources": [
+        "AP",
+        "PBS NewsHour"
+      ],
+      "url": "https://apnews.com/",
+      "omen": {
+        "chaos": 5,
+        "polarization": 1,
+        "economic": 2
+      },
+      "clio": {
+        "precedent": "2022 Przewodow missile in Poland",
+        "precedent_match": 6,
+        "resistance": 6
+      },
+      "systems": {
+        "S-UKRAINE": -1
+      }
     },
     {
-      "id": "E-20261015-09", "date": "2026-10-15", "domain": "politics",
+      "id": "E-20261015-09",
+      "date": "2026-10-15",
+      "domain": "politics",
       "title": "Justice Department sues California to stop the counting of ~20,000 mail ballots it says may belong to ineligible voters, after a 48-hour ultimatum",
-      "sources": ["AP", "Axios"], "url": "https://www.axios.com/2026/10/15/trump-doj-california-voters-ballots-lawsuit",
-      "omen": { "chaos": 3, "polarization": 6, "economic": 1 },
-      "clio": { "precedent": "2020 election lawsuits over mail ballots", "precedent_match": 6, "resistance": 7 },
+      "sources": [
+        "AP",
+        "Axios"
+      ],
+      "url": "https://www.axios.com/2026/10/15/trump-doj-california-voters-ballots-lawsuit",
+      "omen": {
+        "chaos": 3,
+        "polarization": 6,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2020 election lawsuits over mail ballots",
+        "precedent_match": 6,
+        "resistance": 7
+      },
       "systems": {}
     },
     {
-      "id": "E-20261015-10", "date": "2026-10-15", "domain": "politics",
+      "id": "E-20261015-10",
+      "date": "2026-10-15",
+      "domain": "politics",
       "title": "Letters with 'suspicious substances' mailed to US senators and election offices in several states (Oklahoma, Ohio, Louisiana)",
-      "sources": ["AP", "BBC"], "url": "https://www.bbc.co.uk/news/articles/cmq8n513x523o",
-      "omen": { "chaos": 4, "polarization": 3, "economic": 1 },
-      "clio": { "precedent": "2001 anthrax letters (far less severe so far)", "precedent_match": 3, "resistance": 7 },
-      "systems": { "S-STREETS": 1 }
+      "sources": [
+        "AP",
+        "BBC"
+      ],
+      "url": "https://www.bbc.co.uk/news/articles/cmq8n513x523o",
+      "omen": {
+        "chaos": 4,
+        "polarization": 3,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2001 anthrax letters (far less severe so far)",
+        "precedent_match": 3,
+        "resistance": 7
+      },
+      "systems": {
+        "S-STREETS": 1
+      }
     },
     {
-      "id": "E-20261015-11", "date": "2026-10-15", "domain": "politics",
+      "id": "E-20261015-11",
+      "date": "2026-10-15",
+      "domain": "politics",
       "title": "Nine fired FBI agents sue the administration, saying they were dismissed for working on the classified-documents case; new subpoenas in the Omar immigration probe",
-      "sources": ["AP", "Axios", "Fox News"], "url": "https://www.axios.com/2026/10/15/trump-fbi-agents-lawsuit-classified-documents-firings",
-      "omen": { "chaos": 2, "polarization": 5, "economic": 1 },
-      "clio": { "precedent": "1973-74 firings and lawsuits around Watergate investigators", "precedent_match": 3, "resistance": 7 },
+      "sources": [
+        "AP",
+        "Axios",
+        "Fox News"
+      ],
+      "url": "https://www.axios.com/2026/10/15/trump-fbi-agents-lawsuit-classified-documents-firings",
+      "omen": {
+        "chaos": 2,
+        "polarization": 5,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "1973-74 firings and lawsuits around Watergate investigators",
+        "precedent_match": 3,
+        "resistance": 7
+      },
       "systems": {}
     },
     {
-      "id": "E-20261015-12", "date": "2026-10-15", "domain": "unrest",
+      "id": "E-20261015-12",
+      "date": "2026-10-15",
+      "domain": "unrest",
       "title": "Shooting at an elementary school in Bend, Oregon kills three children and a teacher; 16-year-old suspect shot dead by a community member",
-      "sources": ["AP", "Reuters", "BBC", "The Hill"], "url": "https://thehill.com/homenews/state-watch/6152592-bend-oregon-elementary-school-shooting/",
-      "omen": { "chaos": 5, "polarization": 2, "economic": 1 },
-      "clio": { "precedent": "2018 Santa Fe High School shooting", "precedent_match": 6, "resistance": 8 },
+      "sources": [
+        "AP",
+        "Reuters",
+        "BBC",
+        "The Hill"
+      ],
+      "url": "https://thehill.com/homenews/state-watch/6152592-bend-oregon-elementary-school-shooting/",
+      "omen": {
+        "chaos": 5,
+        "polarization": 2,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2018 Santa Fe High School shooting",
+        "precedent_match": 6,
+        "resistance": 8
+      },
+      "systems": {}
+    },
+    {
+      "id": "E-20261016-01",
+      "date": "2026-10-16",
+      "domain": "politics",
+      "title": "FTC sends civil subpoenas to OpenAI and Anthropic over AI safety incidents",
+      "sources": [
+        "Axios"
+      ],
+      "url": "https://www.axios.com/2026/10/15/ftc-openai-anthropic-ai-safety-investigation",
+      "omen": {
+        "chaos": 2,
+        "polarization": 3,
+        "economic": 2
+      },
+      "clio": {
+        "precedent": "2019 FTC Facebook privacy probe",
+        "precedent_match": 4,
+        "resistance": 7
+      },
       "systems": {}
     }
   ]

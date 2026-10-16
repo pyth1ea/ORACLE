@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16T05:11:13.119781+00:00",
+ "updated": "2026-10-16T11:15:05.056166+00:00",
  "source": "FRED (fred.stlouisfed.org)",
  "series": {
   "SP500": {
@@ -530,7 +530,9 @@
      "2026-10-15",
      7744.06
     ]
-   ]
+   ],
+   "stale": true,
+   "error": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=20)"
   },
   "VIXCLS": {
    "name": "VIX volatility index",
@@ -1060,7 +1062,9 @@
      "2026-10-14",
      16.87
     ]
-   ]
+   ],
+   "stale": true,
+   "error": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=20)"
   },
   "DCOILBRENTEU": {
    "name": "Brent crude",
@@ -1590,7 +1594,9 @@
      "2026-10-14",
      126.55
     ]
-   ]
+   ],
+   "stale": true,
+   "error": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=20)"
   },
   "DCOILWTICO": {
    "name": "WTI crude",
@@ -2120,7 +2126,9 @@
      "2026-10-14",
      101.91
     ]
-   ]
+   ],
+   "stale": true,
+   "error": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=20)"
   },
   "GASREGW": {
    "name": "US regular gasoline",
@@ -2414,7 +2422,9 @@
      "2026-10-12",
      4.331
     ]
-   ]
+   ],
+   "stale": true,
+   "error": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=20)"
   },
   "DFEDTARU": {
    "name": "Fed funds target (upper)",
@@ -2944,7 +2954,9 @@
      "2026-10-15",
      4.0
     ]
-   ]
+   ],
+   "stale": true,
+   "error": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=20)"
   },
   "DGS10": {
    "name": "10-year Treasury yield",
@@ -3474,7 +3486,9 @@
      "2026-10-14",
      5.19
     ]
-   ]
+   ],
+   "stale": true,
+   "error": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=20)"
   },
   "T10Y2Y": {
    "name": "10y-2y yield spread",
@@ -4004,7 +4018,9 @@
      "2026-10-15",
      0.33
     ]
-   ]
+   ],
+   "stale": true,
+   "error": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=20)"
   },
   "CPIAUCSL": {
    "name": "CPI (index, seasonally adjusted)",
@@ -4074,7 +4090,9 @@
      "2026-09-01",
      336.298
     ]
-   ]
+   ],
+   "stale": true,
+   "error": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=20)"
   },
   "CPIAUCNS": {
    "name": "CPI (index, not seasonally adjusted - matches headline y/y)",
@@ -4144,7 +4162,9 @@
      "2026-09-01",
      336.94
     ]
-   ]
+   ],
+   "stale": true,
+   "error": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=20)"
   },
   "CPILFESL": {
    "name": "Core CPI (index)",
@@ -4214,7 +4234,9 @@
      "2026-09-01",
      338.896
     ]
-   ]
+   ],
+   "stale": true,
+   "error": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=20)"
   },
   "PAYEMS": {
    "name": "Nonfarm payrolls",
@@ -4288,7 +4310,9 @@
      "2026-09-01",
      159044.0
     ]
-   ]
+   ],
+   "stale": true,
+   "error": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=20)"
   },
   "UNRATE": {
    "name": "Unemployment rate",
@@ -4358,7 +4382,9 @@
      "2026-09-01",
      4.2
     ]
-   ]
+   ],
+   "stale": true,
+   "error": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=20)"
   },
   "ICSA": {
    "name": "Initial jobless claims",
@@ -4652,7 +4678,9 @@
      "2026-10-10",
      199000.0
     ]
-   ]
+   ],
+   "stale": true,
+   "error": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=20)"
   },
   "UMCSENT": {
    "name": "Consumer sentiment (UMich)",
@@ -4722,7 +4750,9 @@
      "2026-08-01",
      51.7
     ]
-   ]
+   ],
+   "stale": true,
+   "error": "HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read timeout=20)"
   }
  },
  "derived": {
@@ -4741,5 +4771,22 @@
    "value": 29.0,
    "units": "thousands"
   }
- }
+ },
+ "failed": [
+  "SP500",
+  "VIXCLS",
+  "DCOILBRENTEU",
+  "DCOILWTICO",
+  "GASREGW",
+  "DFEDTARU",
+  "DGS10",
+  "T10Y2Y",
+  "CPIAUCSL",
+  "CPIAUCNS",
+  "CPILFESL",
+  "PAYEMS",
+  "UNRATE",
+  "ICSA",
+  "UMCSENT"
+ ]
 }
