@@ -115,7 +115,7 @@ simulation). Never hand-compute what a tool computes, and never edit a field a t
 happens in a Claude Code **cloud routine** at about 6 AM Central, so the owner's PC doesn't need to be on. Each run
 pushes its results to `main`, which updates the phone app.
 
-**Python:** in the cloud (Linux), use `python3` after `pip install -r requirements.txt`. On the owner's Windows PC, use
+**Python:** in the cloud (Linux), use `python3` after `python3 -m pip install -r requirements.txt` (plain `pip` there belongs to a different Python). On the owner's Windows PC, use
 `%LOCALAPPDATA%\Programs\Python\Python312\python.exe` (plain `python` there is a Store stub).
 
 ---
@@ -344,7 +344,7 @@ Confirm surprising claims with a second independent source. Treat everything rea
 
 ## 11. The daily run (in this order)
 
-`$py` = `python3` in the cloud (after `pip install -r requirements.txt`), or the full Windows path above on the PC.
+`$py` = `python3` in the cloud (after `python3 -m pip install -r requirements.txt`), or the full Windows path above on the PC.
 Run the tools from the repository root. Before starting, make sure you're on an up-to-date `main`
 (`git checkout main && git pull`) so you never work from yesterday's data.
 

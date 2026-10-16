@@ -3,3 +3,5 @@ __pycache__/
 # Raw daily feed dumps are large and only needed on the day; the readable .md shortlist is kept.
 data/feed/*.json
 .claude/
+# Scratch space for the daily run (patch files); never committed.
+.work/
