@@ -422,6 +422,7 @@
   footer { color: var(--muted); font-size: 12px; margin-top: 30px; }
   .err { background: var(--surface); border: 1px solid var(--critical); border-radius: 12px; padding: 16px; }
 </style>
+<meta name="robots" content="noindex, nofollow">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#0d0d0d">
 <meta name="mobile-web-app-capable" content="yes">
@@ -1036,6 +1037,7 @@
     var ink2 = getComputedStyle(root).getPropertyValue('--ink-2').trim();
     host.innerHTML = NUMS.map(function (n) {
       var s = (MET.series || {})[n[0]], dv = (MET.derived || {})[n[0]];
+      if (s && s.last == null) s = null;  // a series that failed and has no saved copy: skip it, don't crash
       if (!s && !dv) return '';
       var v = s ? s.last : dv.value, date = s ? s.last_date : dv.date, spark = '';
       if (s && s.history && s.history.length > 2) {
@@ -1044,7 +1046,7 @@
       }
       var ch = s && s.change != null ? (s.change > 0 ? '+' : '') + Number(s.change.toFixed(n[3] || 2)) : '';
       return '<div class="card nm"><div class="k">' + (mode === 'plain' ? n[2] : n[1]) + '</div><div class="v">' + Number(v).toLocaleString(undefined, { maximumFractionDigits: n[3], minimumFractionDigits: n[3] }) + '</div>' +
-        '<div class="s">' + (ch ? ch + ' · ' : '') + fmtDate(date) + '</div>' + spark + '</div>';
+        '<div class="s">' + (ch ? ch + ' · ' : '') + fmtDate(date) + (s && s.stale ? L(' · stale (last fetch failed)', ' · not updated today') : '') + '</div>' + spark + '</div>';
     }).join('');
   }
 

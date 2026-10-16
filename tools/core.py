@@ -23,6 +23,8 @@ from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8")
 
+from oracle_time import today as central_today  # noqa: E402  (tools/ is on the path when run as a script)
+
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 
@@ -258,7 +260,7 @@ def main():
     ap.add_argument("--date", default=None)
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
-    today = d(args.date) if args.date else dt.date.today()
+    today = d(args.date) if args.date else central_today()
     tstr = today.isoformat()
 
     db = load(DATA / "oracle.json")
@@ -446,6 +448,7 @@ def main():
     sw = db.setdefault("shock_watch", [])
     spx = (series.get("SP500") or {}).get("history") or []
     spx_moves = {spx[i][0]: abs(spx[i][1] / spx[i - 1][1] - 1) for i in range(1, len(spx))}
+    spx_last = d(spx[-1][0]) if spx else None
     for row in sw:
         if row.get("outcome") is not None:
             continue
@@ -453,6 +456,11 @@ def main():
         if (today - start).days < 8:
             continue
         end = start + dt.timedelta(days=7)
+        # a grade is permanent, so never grade without market data covering the window (weekends allowed)
+        if spx_last is None or spx_last < end - dt.timedelta(days=3):
+            notes.append(f"Shock watch {row['date']} not graded yet: S&P 500 data only runs to {spx_last}. "
+                         f"It will be graded once market data covers the window.")
+            continue
         hits = [e["id"] for e in events if start < d(e["date"]) <= end and e["omen"]["chaos"] >= cfg["shock_chaos"]]
         mkt = [k for k, v in spx_moves.items() if start < d(k) <= end and v >= cfg["shock_spx_move"]]
         row["outcome"] = bool(hits or mkt)
@@ -570,7 +578,8 @@ def main():
 
     # ---------- save + summary ----------
     if not args.dry_run:
-        (DATA / "oracle.json").write_text(json.dumps(db, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        (DATA / "oracle.json").write_text(json.dumps(db, indent=2, ensure_ascii=False) + "\n", encoding="utf-8",
+                                          newline="\n")
 
     print(f"ORACLE core — {tstr}{' (dry run, nothing saved)' if args.dry_run else ''}")
     print(f"Open {sum(1 for p in preds if p.get('status') == 'open')} · resolved {a['n']} "

@@ -64,6 +64,10 @@ vulnerable and what would trigger change**:
 Scope (v2): **United States**, covering politics & elections, economy & markets, unrest & social, and
 foreign affairs. It's a personal intelligence briefing, not financial advice.
 
+**Everything in this repository and the phone app is public** (anyone with the link can read it, though search engines
+are asked not to index it). Never write personal information about the owner, secrets, or the notification channel name
+into any file.
+
 ---
 
 ## 1. The five layers
@@ -363,12 +367,33 @@ Run the tools from the repository root. Before starting, make sure you're on an 
    you learn a new anchor.
 10. **Build:** `& $py tools/build.py` (validates the JSON and writes the dashboard, the phone app in `docs/`, and the
     scorecard). It must print `OK`.
-11. **Publish to GitHub:** commit everything with the message `ORACLE daily run YYYY-MM-DD` and push to `main`
-    (`git push origin HEAD:main`). This updates the phone app within a few minutes. If the push is rejected because
-    `main` moved, run `git pull --rebase origin main` once, rebuild if `data/` conflicted, and push again. Never force-push.
-12. **Notify:** send one ntfy push notification to the channel named in your run instructions (it's private, so
-    never write it into any file in this repository). Use a one-line plain-English summary under 200 characters that
-    leads with the most important change, and set the click link to https://pyth1ea.github.io/ORACLE/.
+11. **Publish to GitHub.** Dates are Central time: get today with
+    `python3 -c "import sys; sys.path.insert(0,'tools'); from oracle_time import today; print(today())"`.
+    - **Leak check first:** `git grep -n "<the ntfy channel name>"` must find nothing. If it finds anything, remove it
+      before committing.
+    - Commit everything with the message `ORACLE daily run YYYY-MM-DD`, then `git push origin HEAD:main`. This updates
+      the phone app within a few minutes.
+    - **If the push is rejected because `main` moved:** `git fetch origin main && git rebase origin/main`.
+      - If only *generated* files conflict (`docs/*`, `dashboard/data.js`, `dashboard/artifact.html`, `scorecard.md`):
+        take either side, re-run `core.py` and `build.py`, `git add -A`, then `git -c core.editor=true rebase --continue`,
+        and push once more.
+      - If anything else conflicts (`data/`, `briefings/`, `clio/`, `omen/`, `tools/`): **never hand-merge tool-owned
+        JSON.** Run `git rebase --abort`, push the run to a side branch `claude/oracle-YYYY-MM-DD`, and say in the
+        notification that a manual merge is needed.
+    - **If the push is refused for permission reasons** (not "main moved"): push to `claude/oracle-YYYY-MM-DD` instead,
+      so the run isn't lost, and say so in the notification.
+    - Never force-push. Never open a pull request for a normal daily run.
+12. **Notify:** send exactly one ntfy push notification to the channel named in your run instructions. The name is a
+    secret, so never write it into any file in this repository. Use a quoted heredoc, so prices like "$95" aren't
+    mangled by the shell, and a plain-ASCII title:
+    ```bash
+    curl -sS --fail-with-body -H "Title: ORACLE - Oct 17" -H "Click: https://pyth1ea.github.io/ORACLE/" \
+         -H "Tags: crystal_ball" --data-binary @- https://ntfy.sh/<channel> <<'MSG'
+    One plain-English line under 200 characters, leading with the most important change.
+    MSG
+    ```
+    It counts as sent only if the response contains `"id"`. If the run couldn't update the app, the line says so
+    ("ORACLE ran but couldn't update the app: <reason>").
 13. **Optional backup view:** if the Artifact tool is available, republish the private claude.ai page
     (https://claude.ai/artifact/WeU1NVenCGHXuHv8jVjpuM): `read` it, `list` its files, then `publish`
     `dashboard/artifact.html` to that url with `files: {"data.js": "dashboard/data.js"}`. Never force and never create

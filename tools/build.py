@@ -21,13 +21,16 @@ from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8")
 
+from oracle_time import today as central_today  # noqa: E402  (tools/ is on the path when run as a script)
+
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 DASH = ROOT / "dashboard"
 DOCS = ROOT / "docs"
 
 # Added to the phone-app copy of the page, just before </head>.
-PWA_HEAD = """<link rel="manifest" href="manifest.webmanifest">
+PWA_HEAD = """<meta name="robots" content="noindex, nofollow">
+<link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#0d0d0d">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -85,11 +88,12 @@ def write_scorecard(db):
               f"so the closer engine gains a few points. Limits: 20%–80%._", "", "## Calibration",
               "| ORACLE said | Count | Average forecast | Actually happened |", "|---|---|---|---|"]
     for b in st.get("calibration", []):
-        lines.append(f"| {b['range']} | {b['n']} | {'—' if b['avg_forecast'] is None else f'{b['avg_forecast']:.0%}'} | "
-                     f"{'—' if b['happened'] is None else f'{b['happened']:.0%}'} |")
+        avg = "—" if b["avg_forecast"] is None else format(b["avg_forecast"], ".0%")
+        hap = "—" if b["happened"] is None else format(b["happened"], ".0%")
+        lines.append(f"| {b['range']} | {b['n']} | {avg} | {hap} |")
     lines += ["", "_Well calibrated means the last two columns match. Needs about 8+ results per row to mean much._", "",
               "## Lessons", *[f"- {l['date']}{' (prior)' if l.get('source') == 'prior' else ''}: {l['text']}" for l in db.get("lessons", [])], ""]
-    (ROOT / "scorecard.md").write_text("\n".join(lines), encoding="utf-8")
+    (ROOT / "scorecard.md").write_text("\n".join(lines), encoding="utf-8", newline="\n")
 
 
 def main():
@@ -108,7 +112,7 @@ def main():
     sim = load(DATA / "sim.json", None)
     model = load(DATA / "model.json", {"agents": []})
     agents = [{"id": a["id"], "name": a["name"], "description": a.get("description", "")} for a in model["agents"]]
-    cutoff = (dt.date.today() - dt.timedelta(days=90)).isoformat()
+    cutoff = (central_today() - dt.timedelta(days=90)).isoformat()
     events = [e for e in (load(DATA / "events.json", {"events": []})["events"]) if e["date"] >= cutoff]
     metrics = load(DATA / "metrics.json", None)
     if metrics:

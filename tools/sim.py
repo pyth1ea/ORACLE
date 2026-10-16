@@ -29,6 +29,8 @@ import random
 import sys
 from pathlib import Path
 
+from oracle_time import today as central_today
+
 sys.stdout.reconfigure(encoding="utf-8")
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -91,7 +93,7 @@ def main():
     ap.add_argument("--seed", type=int, default=None)
     ap.add_argument("--date", default=None)
     args = ap.parse_args()
-    today = d(args.date) if args.date else dt.date.today()
+    today = d(args.date) if args.date else central_today()
 
     model = load(DATA / "model.json")
     db = load(DATA / "oracle.json")
@@ -110,15 +112,34 @@ def main():
     for a in agents:  # agents added to the model later start at their starting values
         st["agents"].setdefault(a["id"], dict(a.get("start", a["baseline"])))
     last = d(st["date"])
-    replayed = 0
+    # Track WHICH events are already in agent memory, not just the last date: a morning run mostly scores
+    # yesterday's news, which carries the previous run's date and would otherwise be skipped forever.
+    if "replayed_ids" not in st:  # first run with tracking: everything up to the last run counts as absorbed
+        st["replayed_ids"] = [e["id"] for e in events if d(e["date"]) <= last]
+    seen = set(st["replayed_ids"])
+    horizon_start = today - dt.timedelta(days=90)
+    unseen = [e for e in events if e["id"] not in seen and horizon_start <= d(e["date"]) <= today]
+    steps = []
     day = last + dt.timedelta(days=1)
-    while day <= today:
-        todays = [(e, e["omen"]["chaos"], e["omen"]["polarization"], e["omen"]["economic"])
-                  for e in events if e["date"] == day.isoformat()]
+    while day <= today:  # one step per elapsed day (agents also cool off day by day)
+        steps.append([e for e in unseen if e["date"] == day.isoformat()])
+        day += dt.timedelta(days=1)
+    late = [e for e in unseen if d(e["date"]) <= last]  # scored after the previous run had already happened
+    if late:
+        if steps:
+            steps[0] = late + steps[0]
+        else:
+            steps.append(late)
+    replayed = 0
+    for evs in steps:
+        todays = [(e, e["omen"]["chaos"], e["omen"]["polarization"], e["omen"]["economic"]) for e in evs]
         replayed += len(todays)
         step_agents(st["agents"], agents, todays, P)
-        day += dt.timedelta(days=1)
-    st["date"] = today.isoformat()
+        seen.update(e["id"] for e in evs)
+    keep_from = (today - dt.timedelta(days=120)).isoformat()
+    dates = {e["id"]: e["date"] for e in events}
+    st["replayed_ids"] = sorted(i for i in seen if dates.get(i, "") >= keep_from)
+    st["date"] = max(last, today).isoformat()
     snap = {"date": today.isoformat(), "agents": {aid: {k2: round(v, 1) for k2, v in vals.items()}
                                                    for aid, vals in st["agents"].items()}}
     st["history"] = [h for h in st.get("history", []) if h["date"] != snap["date"]] + [snap]
@@ -275,8 +296,8 @@ def main():
         "agents_now": snap["agents"],
         "agents_day30": {aid: {"A": round(v["A"] / runs, 1), "M": round(v["M"] / runs, 1)} for aid, v in proj30.items()},
     }
-    (DATA / "agents_state.json").write_text(json.dumps(st, indent=1, ensure_ascii=False), encoding="utf-8")
-    (DATA / "sim.json").write_text(json.dumps(sim, indent=2, ensure_ascii=False), encoding="utf-8")
+    (DATA / "agents_state.json").write_text(json.dumps(st, indent=1, ensure_ascii=False), encoding="utf-8", newline="\n")
+    (DATA / "sim.json").write_text(json.dumps(sim, indent=2, ensure_ascii=False), encoding="utf-8", newline="\n")
 
     names = {a["id"]: a["name"] for a in agents}
     print(f"Sandbox — {today}: {runs} runs, {horizon} days ahead, {lam:.1f} events/day from {len(pool)} recent "

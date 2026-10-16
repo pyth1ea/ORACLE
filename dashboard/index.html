@@ -1024,6 +1024,7 @@
     var ink2 = getComputedStyle(root).getPropertyValue('--ink-2').trim();
     host.innerHTML = NUMS.map(function (n) {
       var s = (MET.series || {})[n[0]], dv = (MET.derived || {})[n[0]];
+      if (s && s.last == null) s = null;  // a series that failed and has no saved copy: skip it, don't crash
       if (!s && !dv) return '';
       var v = s ? s.last : dv.value, date = s ? s.last_date : dv.date, spark = '';
       if (s && s.history && s.history.length > 2) {
@@ -1032,7 +1033,7 @@
       }
       var ch = s && s.change != null ? (s.change > 0 ? '+' : '') + Number(s.change.toFixed(n[3] || 2)) : '';
       return '<div class="card nm"><div class="k">' + (mode === 'plain' ? n[2] : n[1]) + '</div><div class="v">' + Number(v).toLocaleString(undefined, { maximumFractionDigits: n[3], minimumFractionDigits: n[3] }) + '</div>' +
-        '<div class="s">' + (ch ? ch + ' · ' : '') + fmtDate(date) + '</div>' + spark + '</div>';
+        '<div class="s">' + (ch ? ch + ' · ' : '') + fmtDate(date) + (s && s.stale ? L(' · stale (last fetch failed)', ' · not updated today') : '') + '</div>' + spark + '</div>';
     }).join('');
   }
 

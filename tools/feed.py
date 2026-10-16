@@ -25,6 +25,8 @@ from pathlib import Path
 import feedparser
 import requests
 
+from oracle_time import today
+
 sys.stdout.reconfigure(encoding="utf-8")
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -221,8 +223,11 @@ def rank(clusters):
     return out
 
 
-def fetch_fred(start):
-    series = {}
+def fetch_fred(start, previous=None):
+    """Fresh FRED numbers. A series that fails (timeout, blocked network) keeps its last good copy, marked
+    stale, instead of being wiped: losing its history would break the dashboard and the shock-watch grading."""
+    previous = previous or {}
+    series, failed = {}, []
     for sid, (name, units) in FRED.items():
         url = f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={sid}&cosd={start}"
         try:
@@ -231,7 +236,7 @@ def fetch_fred(start):
             rows = list(csv.reader(io.StringIO(r.text)))[1:]
             obs = [(d, float(v)) for d, v in rows if v not in (".", "")]
             if not obs:
-                continue
+                raise ValueError("no observations returned")
             last_d, last_v = obs[-1]
             prev = obs[-2][1] if len(obs) > 1 else None
             series[sid] = {
@@ -240,7 +245,12 @@ def fetch_fred(start):
                 "history": obs[-130:],
             }
         except Exception as ex:
-            series[sid] = {"name": name, "units": units, "error": str(ex)[:160]}
+            failed.append(sid)
+            old = previous.get(sid)
+            if old and "last" in old:
+                series[sid] = {**old, "stale": True, "error": str(ex)[:160]}
+            else:
+                series[sid] = {"name": name, "units": units, "error": str(ex)[:160]}
         time.sleep(0.2)
 
     derived = {}
@@ -257,7 +267,7 @@ def fetch_fred(start):
     h = series.get("PAYEMS", {}).get("history") or []
     if len(h) >= 2:
         derived["payrolls_change"] = {"date": h[-1][0], "value": round(h[-1][1] - h[-2][1], 1), "units": "thousands"}
-    return series, derived
+    return series, derived, failed
 
 
 def write_md(path, date, ranked, status):
@@ -285,7 +295,7 @@ def write_md(path, date, ranked, status):
             if c["summary"]:
                 lines.append(f"  - {c['summary'][:220]}")
         lines.append("")
-    path.write_text("\n".join(lines), encoding="utf-8")
+    path.write_text("\n".join(lines), encoding="utf-8", newline="\n")
 
 
 def main():
@@ -296,7 +306,7 @@ def main():
     ap.add_argument("--no-metrics", action="store_true")
     args = ap.parse_args()
 
-    date = dt.date.today().isoformat()
+    date = today().isoformat()
     (DATA / "feed").mkdir(parents=True, exist_ok=True)
 
     if not args.no_news:
@@ -304,7 +314,8 @@ def main():
         ranked = rank(cluster(items))[: args.top]
         out = {"date": date, "generated": now_utc().isoformat(), "hours": args.hours,
                "n_items": len(items), "sources": status, "clusters": ranked}
-        (DATA / "feed" / f"{date}.json").write_text(json.dumps(out, indent=2, ensure_ascii=False), encoding="utf-8")
+        (DATA / "feed" / f"{date}.json").write_text(json.dumps(out, indent=2, ensure_ascii=False), encoding="utf-8",
+                                                    newline="\n")
         write_md(DATA / "feed" / f"{date}.md", date, ranked, status)
         ok = sum(1 for s in status if s["ok"])
         print(f"News: {len(items)} items from {ok}/{len(status)} sources -> {len(ranked)} clusters "
@@ -314,14 +325,22 @@ def main():
                 print(f"  feed failed: {s['source']}: {s['error']}")
 
     if not args.no_metrics:
-        start = (dt.date.today() - dt.timedelta(days=500)).isoformat()
-        series, derived = fetch_fred(start)
-        (DATA / "metrics.json").write_text(json.dumps(
+        start = (today() - dt.timedelta(days=500)).isoformat()
+        mpath = DATA / "metrics.json"
+        try:
+            previous = json.loads(mpath.read_text(encoding="utf-8")).get("series", {}) if mpath.exists() else {}
+        except (json.JSONDecodeError, OSError):
+            previous = {}
+        series, derived, failed = fetch_fred(start, previous)
+        mpath.write_text(json.dumps(
             {"updated": now_utc().isoformat(), "source": "FRED (fred.stlouisfed.org)", "series": series,
-             "derived": derived}, indent=1, ensure_ascii=False), encoding="utf-8")
-        good = [k for k, v in series.items() if "last" in v]
-        print(f"Metrics: {len(good)}/{len(FRED)} FRED series updated (data/metrics.json)")
-        for k in good:
+             "derived": derived, "failed": failed}, indent=1, ensure_ascii=False), encoding="utf-8", newline="\n")
+        fresh = [k for k in FRED if k not in failed and "last" in series.get(k, {})]
+        print(f"Metrics: {len(fresh)}/{len(FRED)} FRED series updated (data/metrics.json)")
+        if failed:
+            print(f"WARNING: {len(failed)} FRED series failed and kept their last good values (marked stale): "
+                  f"{', '.join(failed)}. First error: {series[failed[0]].get('error', '?')}")
+        for k in fresh:
             v = series[k]
             print(f"  {v['name']}: {v['last']} ({v['last_date']})")
         for k, v in derived.items():
