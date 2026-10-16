@@ -1,0 +1,3 @@
+# Store text with LF line endings so the Windows PC and the Linux cloud runs produce identical files.
+* text=auto eol=lf
+*.png binary

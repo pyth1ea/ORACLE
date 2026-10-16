@@ -1,0 +1,1319 @@
+<title>ORACLE Dashboard</title>
+<style>
+  /* Layout: one centered column. Summary first (mode switch, tiles, stability meter, briefing, timeline),
+     then structure (what could change, turning points), then detail (forecasts, players, numbers, grades).
+     Three reading modes share one page: Plain (everyday words), Guided (full detail + definitions on
+     dotted words), Technical (full detail). */
+  :root {
+    color-scheme: light;
+    --page: #f9f9f7;
+    --surface: #fcfcfb;
+    --surface-2: #f3f3f0;
+    --ink: #0b0b0b;
+    --ink-2: #52514e;
+    --muted: #898781;
+    --grid: #e1e0d9;
+    --axis: #c3c2b7;
+    --border: rgba(11,11,11,0.10);
+    --clio: #2a78d6;      /* categorical slot 1: CLIO / history / resistance */
+    --omen: #eb6834;      /* categorical slot 2: OMEN / current events / push */
+    --market: #1baf7a;    /* categorical slot 3: betting markets */
+    --sim: #eda100;       /* categorical slot 4: simulation */
+    --oracle: #0b0b0b;    /* the final call wears primary ink */
+    --good: #0ca30c;
+    --good-text: #006300;
+    --warning: #fab219;
+    --serious: #ec835a;
+    --critical: #d03b3b;
+    --chip: #ecebe6;
+    --bar: #c3c2b7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --page: #0d0d0d; --surface: #1a1a19; --surface-2: #222220;
+      --ink: #ffffff; --ink-2: #c3c2b7; --muted: #898781; --grid: #2c2c2a; --axis: #383835;
+      --border: rgba(255,255,255,0.10);
+      --clio: #3987e5; --omen: #d95926; --market: #199e70; --sim: #c98500; --oracle: #ffffff;
+      --good-text: #0ca30c; --chip: #2a2a28; --bar: #55554f;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface: #1a1a19; --surface-2: #222220;
+    --ink: #ffffff; --ink-2: #c3c2b7; --muted: #898781; --grid: #2c2c2a; --axis: #383835;
+    --border: rgba(255,255,255,0.10);
+    --clio: #3987e5; --omen: #d95926; --market: #199e70; --sim: #c98500; --oracle: #ffffff;
+    --good-text: #0ca30c; --chip: #2a2a28; --bar: #55554f;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--page); color: var(--ink);
+    font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 20px 16px 64px; }
+  @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+
+  header.top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+  .brand h1 { margin: 0; font-size: 26px; letter-spacing: 0.14em; font-weight: 700; }
+  .brand p { margin: 2px 0 0; color: var(--ink-2); font-size: 13px; text-wrap: balance; }
+  .theme-btn { border: 1px solid var(--border); background: var(--surface); color: var(--ink-2); border-radius: 8px; padding: 6px 10px; font: inherit; font-size: 13px; cursor: pointer; white-space: nowrap; }
+
+  /* Mode switch */
+  .modebar { margin-bottom: 14px; }
+  .modes { display: inline-flex; background: var(--chip); border-radius: 10px; padding: 3px; gap: 2px; max-width: 100%; }
+  .modes button { border: 0; background: transparent; color: var(--ink-2); font: inherit; font-size: 14px; padding: 6px 14px; border-radius: 8px; cursor: pointer; }
+  .modes button[aria-pressed="true"] { background: var(--surface); color: var(--ink); font-weight: 600; box-shadow: 0 1px 3px rgba(0,0,0,0.12); }
+  .mode-desc { font-size: 12px; color: var(--muted); margin-top: 5px; }
+  .views { display: flex; gap: 0; border-bottom: 1px solid var(--grid); margin-bottom: 14px; overflow-x: auto; }
+  .views button { flex: none; border: 0; border-bottom: 2px solid transparent; background: none; color: var(--ink-2); font: inherit; font-size: 14px; padding: 8px 14px; cursor: pointer; }
+  .views button[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--ink); font-weight: 600; }
+  .how { padding: 18px; max-width: 760px; }
+  .how h3 { font-size: 17px; margin: 22px 0 6px; }
+  .how h3:first-child { margin-top: 0; }
+  .how p, .how li { font-size: 15px; color: var(--ink-2); }
+  .how p b, .how li b { color: var(--ink); }
+  .how ol, .how ul { padding-left: 22px; }
+  .eq { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: 13px; background: var(--surface-2); border-radius: 8px; padding: 10px 12px; margin: 8px 0; overflow-x: auto; white-space: pre; color: var(--ink); }
+  .raw { padding: 16px; font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: 12.5px; line-height: 1.55; color: var(--ink); }
+  .raw h3 { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; font-size: 15px; margin: 22px 0 6px; }
+  .raw h3:first-child { margin-top: 0; }
+  .raw .ln { white-space: pre-wrap; overflow-wrap: anywhere; }
+  .raw .ok { color: var(--good-text); font-weight: 700; }
+  .raw .bad { color: var(--critical); font-weight: 700; }
+  .raw .dim { color: var(--muted); }
+  .raw-wrap { overflow-x: auto; margin: 6px 0; }
+  .raw table { border-collapse: collapse; font-variant-numeric: tabular-nums; font-size: 12px; }
+  .raw th, .raw td { text-align: right; padding: 2px 10px 2px 0; border-bottom: 1px solid var(--grid); white-space: nowrap; }
+  .raw th { color: var(--muted); font-weight: 500; }
+  .raw td:first-child, .raw th:first-child { text-align: left; }
+  .raw pre { white-space: pre-wrap; overflow-wrap: anywhere; background: var(--surface-2); padding: 10px; border-radius: 8px; max-height: 420px; overflow: auto; }
+  .term { border-bottom: 1.5px dotted var(--ink-2); cursor: help; }
+  .term:focus-visible { outline: 2px solid var(--clio); outline-offset: 2px; border-radius: 2px; }
+
+  nav.jump { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 6px; margin-bottom: 14px; scrollbar-width: none; }
+  nav.jump::-webkit-scrollbar { display: none; }
+  nav.jump button { flex: none; border: 1px solid var(--border); background: var(--surface); color: var(--ink-2); border-radius: 999px; padding: 4px 11px; font: inherit; font-size: 13px; cursor: pointer; }
+
+  .howto { padding: 14px 16px; margin-bottom: 18px; }
+  .howto summary { cursor: pointer; font-weight: 600; }
+  .howto ul { margin: 10px 0 0; padding-left: 20px; font-size: 14px; color: var(--ink-2); }
+  .howto li { margin: 6px 0; }
+  .howto li b { color: var(--ink); }
+
+  .tiles { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 10px; margin-bottom: 24px; }
+  .tile { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; min-width: 0; }
+  .tile .k { color: var(--ink-2); font-size: 12px; }
+  .tile .v { font-size: 26px; font-weight: 650; margin-top: 2px; }
+  .tile .s { color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
+  @media (max-width: 640px) { .tiles { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+
+  section { margin-bottom: 30px; scroll-margin-top: 12px; }
+  h2 { font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 4px; font-weight: 600; }
+  .plain h2 { font-size: 17px; letter-spacing: 0; text-transform: none; color: var(--ink); }
+  .sec-sub { margin: 0 0 12px; color: var(--muted); font-size: 13px; max-width: 70ch; }
+  .plain .sec-sub { color: var(--ink-2); font-size: 14px; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; min-width: 0; }
+  .empty { padding: 18px 14px; color: var(--muted); font-size: 14px; }
+  .muted { color: var(--muted); }
+
+  .chip { border: 1px solid var(--border); background: var(--surface); color: var(--ink-2); border-radius: 999px; padding: 5px 12px; font: inherit; font-size: 13px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+  .chip[aria-pressed="true"] { background: var(--ink); color: var(--page); border-color: var(--ink); }
+  .pill { font-size: 12px; background: var(--chip); color: var(--ink-2); border-radius: 999px; padding: 1px 8px; cursor: pointer; border: 0; font-family: inherit; }
+  .pill b { color: var(--ink); }
+  .row-wrap { display: flex; flex-wrap: wrap; gap: 6px; }
+  .pword { font-size: 12px; font-weight: 600; color: var(--ink-2); }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12px; color: var(--ink-2); margin: 0 0 10px; }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .sw { width: 10px; height: 10px; border-radius: 50%; display: inline-block; flex: none; }
+  .sw.oracle { width: 3px; height: 14px; border-radius: 2px; background: var(--oracle); }
+  .sw.market { background: transparent; border: 2px solid var(--market); }
+  .sw.sim { border-radius: 2px; background: var(--sim); }
+  .sw.wall { width: 5px; height: 14px; border-radius: 2px; background: var(--clio); }
+
+  /* Stability meter (volatility) */
+  .vol { padding: 16px; display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 18px; }
+  @media (max-width: 720px) { .vol { grid-template-columns: 1fr; } }
+  .vol-top { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .vol-v { font-size: 44px; font-weight: 750; line-height: 1; font-variant-numeric: tabular-nums; }
+  .vol-path { font-size: 17px; font-weight: 650; }
+  .vol-desc { font-size: 14px; color: var(--ink-2); margin: 6px 0 12px; }
+  .bands { position: relative; display: flex; height: 28px; gap: 2px; }
+  .bands .seg { display: flex; align-items: center; justify-content: center; font-size: 11px; color: var(--ink); position: relative; text-align: center; line-height: 1.1; padding: 0 2px; }
+  .bands .seg::before { content: ""; position: absolute; inset: 0; opacity: .28; border-radius: inherit; }
+  .bands .b-alpha { border-radius: 6px 0 0 6px; }
+  .bands .b-beta { border-radius: 0 6px 6px 0; }
+  .bands .b-alpha::before { background: var(--axis); }
+  .bands .b-gamma::before { background: var(--warning); }
+  .bands .b-beta::before { background: var(--critical); }
+  .bands .b-omega { border-radius: 0 6px 6px 0; }
+  .bands .b-omega::before { background: var(--critical); opacity: .55; }
+  .bands.four .b-beta { border-radius: 0; }
+  /* past eras as dots on the meter */
+  .era-strip { position: relative; height: 16px; margin-bottom: 3px; }
+  .era-strip button { position: absolute; top: 3px; width: 10px; height: 10px; margin-left: -5px; border-radius: 50%; border: 0; padding: 0; background: var(--ink-2); opacity: .75; cursor: pointer; box-shadow: 0 0 0 2px var(--surface); }
+  .era-strip button:hover, .era-strip button:focus-visible { opacity: 1; background: var(--ink); }
+  /* where today sits in history */
+  .hist { grid-column: 1 / -1; border-top: 1px solid var(--grid); padding-top: 14px; }
+  .hist h3 { margin: 0 0 4px; }
+  .hist-match { font-size: 14px; color: var(--ink-2); margin: 4px 0; }
+  .hist-match b { color: var(--ink); }
+  .ladder { margin-top: 10px; display: flex; flex-direction: column; }
+  .rung { border-top: 1px solid var(--grid); }
+  .rung summary, .rung .sumrow { list-style: none; cursor: pointer; display: grid; grid-template-columns: 40px minmax(60px, 0.8fr) minmax(0, 2fr); gap: 10px; align-items: center; padding: 7px 0; }
+  .rung summary::-webkit-details-marker { display: none; }
+  .rung .rv { font-variant-numeric: tabular-nums; font-weight: 650; font-size: 14px; }
+  .rung .rbar { height: 8px; background: var(--grid); border-radius: 4px; position: relative; }
+  .rung .rbar i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 4px; background: var(--bar); }
+  .rung .rname { font-size: 14px; min-width: 0; }
+  .rung .rname small { display: block; color: var(--muted); font-size: 12px; }
+  .rung .rbody { padding: 0 0 10px 50px; font-size: 13px; color: var(--ink-2); display: grid; gap: 5px; }
+  .rung .rbody b { color: var(--ink); }
+  .rung.today { border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); background: var(--surface-2); }
+  .rung.today .rbar i { background: var(--ink); }
+  .rung.today .sumrow { padding-left: 4px; }
+  .band-tag { font-size: 11px; color: var(--muted); padding: 8px 0 2px; letter-spacing: .06em; text-transform: uppercase; border-top: 1px solid var(--grid); }
+  .bands span { position: relative; }
+  .vol-mark { position: absolute; top: -5px; bottom: -5px; width: 4px; margin-left: -2px; background: var(--ink); border-radius: 2px; box-shadow: 0 0 0 2px var(--surface); }
+  .vol-axis { display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; margin-top: 4px; }
+  .vol-axis.pos { position: relative; display: block; height: 15px; }
+  .vol-axis.pos span { position: absolute; top: 0; transform: translateX(-50%); white-space: nowrap; }
+  .vol-axis.pos span:first-child { transform: none; }
+  .vol-axis.pos span:last-child { transform: translateX(-100%); }
+  .band-labels { display: flex; gap: 2px; margin-top: 5px; }
+  .band-labels span { font-size: 12px; color: var(--ink-2); text-align: center; line-height: 1.2; min-width: 0; }
+  .band-labels span.on { color: var(--ink); font-weight: 650; }
+  .formula { margin-top: 12px; font-size: 13px; color: var(--ink-2); display: grid; gap: 4px; font-variant-numeric: tabular-nums; }
+  .formula b { color: var(--ink); }
+  .dom-v { display: grid; grid-template-columns: 96px minmax(0,1fr) 40px; gap: 8px; align-items: center; font-size: 13px; margin: 6px 0; }
+  .dom-v .bar { height: 8px; background: var(--grid); border-radius: 4px; position: relative; }
+  .dom-v .bar i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 4px; background: var(--ink-2); }
+  .dom-v .n { text-align: right; font-variant-numeric: tabular-nums; color: var(--ink-2); }
+  .shock { background: var(--surface-2); border-radius: 10px; padding: 12px; margin-top: 12px; }
+  .shock .big { font-size: 28px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .shock .k { font-size: 12px; color: var(--ink-2); }
+  .vol h3 { margin: 0 0 6px; font-size: 13px; font-weight: 600; color: var(--ink-2); }
+
+  /* Briefing */
+  .brief { padding: 16px; }
+  .brief-body { position: relative; max-height: 440px; overflow: hidden; }
+  .brief-body::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 80px; background: linear-gradient(to bottom, transparent, var(--surface)); pointer-events: none; }
+  .brief.expanded .brief-body, .brief.short .brief-body { max-height: none; }
+  .brief.expanded .brief-body::after, .brief.short .brief-body::after { display: none; }
+  .btn { margin-top: 10px; border: 1px solid var(--border); background: var(--surface-2); color: var(--ink); border-radius: 8px; padding: 6px 12px; font: inherit; font-size: 13px; cursor: pointer; }
+  .md { font-size: 14px; color: var(--ink); min-width: 0; }
+  .plain .md { font-size: 15px; }
+  .md h1 { font-size: 18px; margin: 0 0 6px; text-wrap: balance; }
+  .md h2 { margin: 18px 0 6px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); }
+  .md p { margin: 6px 0; }
+  .md ul { margin: 6px 0; padding-left: 20px; }
+  .md li { margin: 4px 0; }
+  .md a { color: var(--ink-2); }
+  .md em { color: var(--ink-2); }
+  .md summary { cursor: pointer; color: var(--ink-2); margin: 10px 0 6px; }
+  .md .tbl { overflow-x: auto; }
+  .md table { border-collapse: collapse; font-size: 12px; font-variant-numeric: tabular-nums; min-width: 520px; }
+  .md th, .md td { text-align: left; padding: 4px 8px 4px 0; border-bottom: 1px solid var(--grid); }
+  .md th { color: var(--muted); font-weight: 500; }
+  .md pre { white-space: pre-wrap; font: inherit; margin: 0; }
+
+  /* Timeline */
+  .tl-controls { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+  .tl-card { padding: 10px 0 8px; overflow: hidden; }
+  .tl-grid { display: grid; grid-template-columns: 78px minmax(0,1fr); }
+  .tl-labels { border-right: 1px solid var(--grid); }
+  .tl-labels div { display: flex; align-items: center; padding: 0 6px 0 12px; font-size: 12px; color: var(--ink-2); border-top: 1px solid var(--grid); line-height: 1.2; }
+  .tl-labels div:first-child { border-top: 0; }
+  .tl-scroll { overflow-x: auto; overflow-y: hidden; }
+  .tl-canvas { position: relative; }
+  .tl-lane { position: absolute; left: 0; right: 0; border-top: 1px solid var(--grid); }
+  .tl-tick { position: absolute; top: 0; bottom: 0; width: 1px; background: var(--grid); opacity: .6; }
+  .tl-month { position: absolute; top: 2px; font-size: 11px; color: var(--muted); white-space: nowrap; padding-left: 4px; border-left: 1px solid var(--axis); height: 16px; }
+  .tl-today { position: absolute; top: 0; bottom: 0; width: 2px; background: var(--ink); }
+  .tl-today span { position: absolute; top: 2px; left: 5px; font-size: 11px; font-weight: 600; color: var(--ink); white-space: nowrap; }
+  .mkr { position: absolute; transform: translate(-50%, -50%); border: 0; padding: 0; cursor: pointer; font: inherit; display: grid; place-items: center; }
+  .mkr.t-pred { width: 26px; height: 26px; border-radius: 50%; background: var(--surface); box-shadow: inset 0 0 0 2px var(--ink); color: var(--ink); font-size: 9px; font-weight: 700; }
+  .mkr.t-hit { width: 22px; height: 22px; border-radius: 50%; background: var(--good); color: #fff; font-size: 12px; font-weight: 800; box-shadow: 0 0 0 2px var(--surface); }
+  .mkr.t-miss { width: 22px; height: 22px; border-radius: 50%; background: var(--critical); color: #fff; font-size: 12px; font-weight: 800; box-shadow: 0 0 0 2px var(--surface); }
+  .mkr.t-nocall { width: 22px; height: 22px; border-radius: 50%; background: var(--axis); color: var(--ink); font-size: 11px; font-weight: 800; }
+  .mkr.t-cat { width: 14px; height: 14px; transform: translate(-50%, -50%) rotate(45deg); background: var(--ink-2); border-radius: 2px; box-shadow: 0 0 0 2px var(--surface); }
+  .mkr.t-news { width: 8px; height: 8px; border-radius: 50%; background: var(--ink-2); }
+  .tl-window { position: absolute; height: 4px; border-radius: 2px; background: var(--ink-2); opacity: .35; transform: translateY(-50%); }
+  .tl-legend { padding: 8px 12px 0; }
+  .lg-pred { width: 14px; height: 14px; border-radius: 50%; box-shadow: inset 0 0 0 2px var(--ink); display: inline-block; }
+  .lg-hit, .lg-miss { width: 14px; height: 14px; border-radius: 50%; color: #fff; font-size: 9px; display: inline-grid; place-items: center; font-weight: 800; }
+  .lg-hit { background: var(--good); }
+  .lg-miss { background: var(--critical); }
+  .lg-cat { width: 10px; height: 10px; background: var(--ink-2); transform: rotate(45deg); display: inline-block; border-radius: 1px; }
+  .lg-news { width: 8px; height: 8px; background: var(--ink-2); border-radius: 50%; display: inline-block; }
+
+  /* Systems */
+  .sys-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; }
+  @media (max-width: 720px) { .sys-grid { grid-template-columns: 1fr; } }
+  .sys { padding: 14px; }
+  .sys-head { display: flex; justify-content: space-between; gap: 10px; align-items: flex-start; }
+  .sys-name { font-weight: 600; font-size: 15px; }
+  .sys-sub { color: var(--muted); font-size: 12px; margin-top: 2px; }
+  .plain .sys-sub { font-size: 13px; color: var(--ink-2); }
+  .status { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; border-radius: 999px; padding: 2px 9px 2px 6px; background: var(--chip); color: var(--ink); white-space: nowrap; flex: none; }
+  .status i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; background: var(--axis); }
+  .status.st-strained i { background: var(--warning); }
+  .status.st-critical i { background: var(--serious); }
+  .status.st-tipping i { background: var(--critical); }
+  .gauge { position: relative; height: 26px; margin: 16px 0 4px; }
+  .gauge .rail { position: absolute; left: 0; right: 0; top: 12px; height: 2px; background: var(--grid); }
+  .gauge .span { position: absolute; top: 10px; height: 6px; border-radius: 3px; opacity: .45; }
+  .gauge .gm { position: absolute; top: 13px; transform: translate(-50%, -50%); width: 14px; height: 14px; border-radius: 50%; box-shadow: 0 0 0 2px var(--surface); }
+  .gauge .gm.f { background: var(--clio); width: 6px; height: 26px; border-radius: 3px; }
+  .gauge .gm.p { background: var(--omen); }
+  .g-axis { display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .g-read { display: flex; justify-content: space-between; gap: 10px; font-size: 13px; margin-top: 6px; flex-wrap: wrap; }
+  .g-read span { display: inline-flex; align-items: center; gap: 6px; color: var(--ink-2); }
+  .g-read b { color: var(--ink); }
+  .sys-stats { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 8px; margin-top: 12px; }
+  .stat { background: var(--surface-2); border-radius: 8px; padding: 8px 10px; min-width: 0; }
+  .stat .k { font-size: 11px; color: var(--muted); }
+  .stat .v { font-size: 18px; font-weight: 650; font-variant-numeric: tabular-nums; }
+  .sys-foot, .mom { margin-top: 10px; font-size: 13px; color: var(--ink-2); }
+  .drivers { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px; font-size: 13px; color: var(--ink-2); }
+  @media (max-width: 520px) { .drivers { grid-template-columns: 1fr; } }
+  .drivers h4 { margin: 0 0 4px; font-size: 12px; color: var(--ink); display: flex; align-items: center; gap: 6px; }
+  .drivers ul { margin: 0; padding-left: 18px; }
+  .drivers li { margin: 3px 0; }
+
+  details.more { margin-top: 10px; }
+  details.more summary { cursor: pointer; color: var(--ink-2); font-size: 13px; list-style: none; }
+  details.more summary::-webkit-details-marker { display: none; }
+  details.more summary::before { content: "▸ "; }
+  details.more[open] summary::before { content: "▾ "; }
+
+  /* Turning points (catalysts) */
+  .cats { display: flex; flex-direction: column; gap: 8px; }
+  .cat { padding: 14px; }
+  .cat-head { display: flex; gap: 6px 12px; align-items: baseline; flex-wrap: wrap; }
+  .cat-date { font-weight: 700; font-variant-numeric: tabular-nums; }
+  .cat-name { font-weight: 600; }
+  .cat-kind { font-size: 12px; color: var(--muted); }
+  .branch { display: grid; grid-template-columns: minmax(0, 1fr) 54px; gap: 4px 12px; padding: 10px 0; border-top: 1px solid var(--grid); }
+  .branch:first-of-type { margin-top: 8px; }
+  .br-label { font-size: 14px; font-weight: 550; }
+  .br-prob { text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .br-bar { grid-column: 1 / -1; height: 4px; background: var(--grid); border-radius: 2px; overflow: hidden; }
+  .br-bar div { height: 100%; background: var(--ink-2); border-radius: 2px; }
+  .br-text { grid-column: 1 / -1; font-size: 13px; color: var(--ink-2); }
+  .br-if { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 6px; }
+  .ifx { font-size: 12px; background: var(--chip); border-radius: 6px; padding: 2px 8px; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+  .ifx b { color: var(--ink); }
+
+  /* Forecasts */
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 12px; }
+  select.sort { margin-left: auto; border: 1px solid var(--border); background: var(--surface); color: var(--ink); border-radius: 8px; padding: 5px 8px; font: inherit; font-size: 13px; }
+  .preds { display: flex; flex-direction: column; gap: 8px; }
+  .pred { padding: 12px 14px; }
+  .pred-head { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 12px; align-items: start; }
+  .pred-q { font-size: 15px; font-weight: 520; }
+  .pred-meta { margin-top: 3px; color: var(--muted); font-size: 12px; display: flex; flex-wrap: wrap; gap: 4px 10px; }
+  .pred-p { text-align: right; }
+  .pred-p .big { font-size: 28px; font-weight: 700; line-height: 1; }
+  .pred-p .delta { font-size: 12px; color: var(--ink-2); margin-top: 3px; }
+  .flag { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; color: var(--ink); }
+  .flag .ic { width: 14px; height: 14px; border-radius: 3px; background: var(--warning); color: #0b0b0b; font-size: 10px; font-weight: 800; display: inline-grid; place-items: center; }
+  .trk { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; color: var(--ink-2); }
+  .trk i { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+  .trk.on i { background: var(--good); }
+  .trk.off i { background: var(--critical); }
+  .track-wrap { position: relative; margin-top: 12px; padding: 6px 0; cursor: crosshair; }
+  .track { position: relative; height: 18px; }
+  .track .rail { position: absolute; left: 0; right: 0; top: 8px; height: 2px; background: var(--grid); border-radius: 2px; }
+  .track .mid { position: absolute; left: 50%; top: 3px; width: 1px; height: 12px; background: var(--axis); }
+  .track .span { position: absolute; top: 7px; height: 4px; background: var(--axis); border-radius: 2px; opacity: 0.8; }
+  .mk { position: absolute; top: 9px; transform: translate(-50%, -50%); }
+  .mk.clio, .mk.omen { width: 11px; height: 11px; border-radius: 50%; box-shadow: 0 0 0 2px var(--surface); }
+  .mk.clio { background: var(--clio); }
+  .mk.omen { background: var(--omen); }
+  .mk.sim { width: 9px; height: 9px; border-radius: 2px; background: var(--sim); box-shadow: 0 0 0 2px var(--surface); }
+  .mk.market { width: 13px; height: 13px; border-radius: 50%; border: 2px solid var(--market); background: transparent; }
+  .mk.oracle { width: 4px; height: 20px; border-radius: 2px; background: var(--oracle); box-shadow: 0 0 0 2px var(--surface); }
+  .axis-labels { display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; margin-top: 2px; }
+  .reason { display: grid; gap: 8px; margin-top: 8px; font-size: 13px; color: var(--ink-2); }
+  .reason b { color: var(--ink); font-weight: 600; }
+  .reason .tag { display: inline-flex; align-items: center; gap: 6px; margin-right: 4px; }
+  .small-table { width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 4px; font-variant-numeric: tabular-nums; }
+  .small-table th, .small-table td { text-align: left; padding: 3px 6px 3px 0; border-bottom: 1px solid var(--grid); color: var(--ink-2); }
+  .small-table th { color: var(--muted); font-weight: 500; }
+
+  /* Players (agents) */
+  .agents { padding: 4px 14px; overflow-x: auto; }
+  .ag-table { width: 100%; border-collapse: collapse; min-width: 560px; }
+  .ag-table th { text-align: left; font-size: 12px; color: var(--muted); font-weight: 500; padding: 8px 8px 6px 0; }
+  .ag-table td { padding: 9px 10px 9px 0; border-top: 1px solid var(--grid); vertical-align: middle; }
+  .ag-name { font-size: 14px; font-weight: 550; }
+  .ag-desc { font-size: 12px; color: var(--muted); max-width: 260px; }
+  .meter { position: relative; height: 8px; background: var(--grid); border-radius: 4px; min-width: 90px; }
+  .meter .fill { position: absolute; left: 0; top: 0; bottom: 0; background: var(--bar); border-radius: 4px; }
+  .meter .proj { position: absolute; top: -4px; width: 2px; height: 16px; background: var(--ink); border-radius: 1px; }
+  .meter-v { font-size: 12px; color: var(--ink-2); font-variant-numeric: tabular-nums; margin-top: 3px; white-space: nowrap; }
+
+  /* Numbers */
+  .nums { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 10px; }
+  @media (max-width: 720px) { .nums { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+  .nm { padding: 10px 12px; }
+  .nm .k { font-size: 12px; color: var(--ink-2); }
+  .nm .v { font-size: 20px; font-weight: 650; font-variant-numeric: tabular-nums; }
+  .nm .s { font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .nm svg { display: block; width: 100%; height: 30px; margin-top: 4px; }
+
+  /* Review, graded, scorecard, glossary */
+  .rev { padding: 12px 14px; }
+  .rev h3, .chart-card h3, .weights h3 { margin: 0 0 6px; font-size: 14px; font-weight: 600; }
+  .rev ul { margin: 0 0 12px; padding-left: 18px; font-size: 13px; color: var(--ink-2); }
+  .rev li { margin: 4px 0; }
+  .rev li b { color: var(--ink); }
+  .res-row { display: grid; grid-template-columns: 22px minmax(0,1fr) auto; gap: 10px; padding: 10px 14px; border-bottom: 1px solid var(--grid); align-items: start; }
+  .res-row:last-child { border-bottom: 0; }
+  .res-ic { width: 20px; height: 20px; border-radius: 50%; display: grid; place-items: center; font-size: 12px; font-weight: 800; color: #fff; }
+  .res-ic.yes { background: var(--good); }
+  .res-ic.no { background: var(--critical); }
+  .res-ic.nc { background: var(--axis); color: var(--ink); }
+  .res-q { font-size: 14px; }
+  .res-note { font-size: 12px; color: var(--muted); }
+  .res-b { font-size: 12px; color: var(--ink-2); text-align: right; font-variant-numeric: tabular-nums; }
+  .grid2 { display: grid; grid-template-columns: 3fr 2fr; gap: 10px; }
+  @media (max-width: 720px) { .grid2 { grid-template-columns: 1fr; } }
+  .chart-card { padding: 14px; position: relative; }
+  .chart-card .sub, .weights .sub { margin: 0 0 10px; font-size: 12px; color: var(--muted); }
+  svg text { font-family: inherit; }
+  .weights { padding: 14px; }
+  .w-row { display: grid; grid-template-columns: 96px minmax(0,1fr); gap: 10px; align-items: center; margin: 9px 0; font-size: 13px; }
+  .w-bar { display: flex; height: 14px; gap: 2px; }
+  .w-bar .c { background: var(--clio); border-radius: 4px 0 0 4px; }
+  .w-bar .o { background: var(--omen); border-radius: 0 4px 4px 0; }
+  .w-nums { font-size: 11px; color: var(--muted); display: flex; justify-content: space-between; font-variant-numeric: tabular-nums; margin-top: 2px; }
+  .lessons { padding: 6px 14px; }
+  .lessons li { margin: 8px 0; font-size: 13px; color: var(--ink-2); }
+  .lessons li .d { color: var(--muted); font-size: 12px; margin-right: 6px; font-variant-numeric: tabular-nums; }
+  .lessons ul { padding-left: 18px; margin: 0; }
+  .gloss { padding: 4px 16px; }
+  .gloss dl { margin: 0; display: grid; grid-template-columns: minmax(120px, 200px) minmax(0, 1fr); }
+  .gloss dt, .gloss dd { margin: 0; padding: 9px 12px 9px 0; border-top: 1px solid var(--grid); font-size: 14px; }
+  .gloss dt { font-weight: 600; }
+  .gloss dt small { display: block; font-weight: 400; color: var(--muted); font-size: 12px; }
+  .gloss dd { color: var(--ink-2); }
+  .gloss dt:first-of-type, .gloss dd:first-of-type { border-top: 0; }
+  @media (max-width: 560px) { .gloss dl { grid-template-columns: 1fr; } .gloss dd { border-top: 0; padding-top: 0; } }
+
+  .tip { position: fixed; pointer-events: none; z-index: 10; background: var(--surface); color: var(--ink); border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; font-size: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.18); min-width: 150px; max-width: 290px; display: none; }
+  .tip .row { display: flex; align-items: center; gap: 8px; justify-content: space-between; }
+  .tip .row span:first-child { display: inline-flex; align-items: center; gap: 6px; color: var(--ink-2); }
+  .tip .row b { font-variant-numeric: tabular-nums; }
+  .tip .t { font-weight: 600; margin-bottom: 4px; }
+  .tip .x { color: var(--ink-2); margin-top: 4px; }
+
+  button:focus-visible, select:focus-visible, .track-wrap:focus-visible, summary:focus-visible { outline: 2px solid var(--clio); outline-offset: 2px; }
+  footer { color: var(--muted); font-size: 12px; margin-top: 30px; }
+  .err { background: var(--surface); border: 1px solid var(--critical); border-radius: 12px; padding: 16px; }
+</style>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <h1>ORACLE</h1>
+      <p id="tagline"></p>
+    </div>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle light or dark theme">Theme</button>
+  </header>
+  <div class="modebar">
+    <div class="modes" role="group" aria-label="Reading mode">
+      <button type="button" data-mode="plain">Plain English</button>
+      <button type="button" data-mode="guided">Guided</button>
+      <button type="button" data-mode="technical">Technical</button>
+    </div>
+    <div class="mode-desc" id="modeDesc"></div>
+  </div>
+  <div class="views" role="group" aria-label="View">
+    <button type="button" data-view="dash">Dashboard</button>
+    <button type="button" data-view="how">How it works</button>
+    <button type="button" data-view="raw">Raw math</button>
+  </div>
+  <nav class="jump" id="jump" aria-label="Jump to section"></nav>
+  <div id="app"></div>
+  <footer>Personal forecasting tool, not financial advice. ORACLE updates each morning after the scheduled run finishes.</footer>
+</div>
+<div class="tip" id="tip" role="tooltip"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js"></script>
+<script src="data.js"></script>
+<script>
+(function () {
+  var root = document.documentElement;
+  try { var savedTheme = localStorage.getItem('oracle-theme'); if (savedTheme) root.setAttribute('data-theme', savedTheme); } catch (e) {}
+
+  var D = window.ORACLE_DATA;
+  var app = document.getElementById('app');
+  if (!D) { app.innerHTML = '<div class="err"><b>No data found.</b> dashboard/data.js is missing. Run tools/build.py.</div>'; return; }
+  var SIM = window.ORACLE_SIM || null, AGENTS = window.ORACLE_AGENTS || [], EVENTS = window.ORACLE_EVENTS || [], MET = window.ORACLE_METRICS || null;
+
+  // ======================================================================================
+  // Words. Every important term has: technical label, plain-English label, and a definition.
+  // ======================================================================================
+  var G = {
+    oracle:     ['ORACLE', 'ORACLE’s call', 'The final forecast. It blends the history engine (CLIO) and the current-events engine (OMEN), giving more say to whichever has been more accurate lately.'],
+    clio:       ['CLIO', 'History says', 'The history engine. It asks: ignoring today’s headlines, how often does this kind of thing usually happen? It stands for everything that resists change: laws, habits, institutions and track records.'],
+    omen:       ['OMEN', 'Current events say', 'The current-events engine. It asks: what’s different right now that could break the usual pattern? It tracks anger, chaos, economic pain and surprises, good or bad.'],
+    sandbox:    ['Sandbox', 'Simulation says', 'A computer simulation of 11 imaginary players (voters, parties, protesters, Wall Street, the Fed and others) that plays out 1,000 possible next months. It’s a second opinion, tracked separately.'],
+    market:     ['Market', 'Betting markets say', 'What prediction markets (like Kalshi or Polymarket) or major forecasters say. This is the benchmark ORACLE is trying to beat.'],
+    pressure:   ['Pressure', 'Push for change', 'How hard current events are pushing for something to change, on a 0–10 scale. Set by the current-events engine (OMEN).'],
+    friction:   ['Friction', 'Resistance', 'How strongly laws, institutions, habits and history are holding things in place, on a 0–10 scale. Set by the history engine (CLIO).'],
+    margin:     ['Margin', 'Gap', 'Push minus resistance. Above zero means the push for change is winning.'],
+    system:     ['System', 'Thing that could change', 'One part of how things are now that could change, like which party controls the House, or whether the Fed raises rates.'],
+    tip:        ['Tip', 'Change', 'When the push for change beats the resistance and the change actually happens.'],
+    holding:    ['Holding', 'Stable', 'Resistance is far stronger than the push. Change is unlikely for now.'],
+    strained:   ['Strained', 'Under strain', 'The push is building but resistance is still clearly ahead.'],
+    critical:   ['On the edge', 'Could go either way', 'Push and resistance are about even. A small event could decide it.'],
+    tipping:    ['Tipping', 'Change likely', 'The push is now stronger than the resistance. Change is more likely than not.'],
+    gauge:      ['Gauge', 'Push vs. resistance', 'The chance of change worked out from the push and resistance numbers alone.'],
+    volatility: ['Timeline volatility', 'Stability meter', 'A 0-to-1 score for how shaky things are across the country right now. 0 means calm and stable; 1 means something big is about to break. It compares how intense recent news has been with how well institutions absorbed it, and gets more sensitive as big dates approach.'],
+    V:          ['V', 'Shakiness score', 'The stability meter’s number, from 0 (calm) to 1 (about to break).'],
+    alpha:      ['Path Alpha', 'Steady', 'Below 0.40. History is in charge: today’s news will probably fizzle out and things continue as usual.'],
+    gamma:      ['Path Gamma', 'Tense but holding', 'From 0.40 to 0.60. Real tension, with changes at the edges, but the overall system holds. Expect compromise and normal political ups and downs.'],
+    beta:       ['Path Beta', 'Breaking point', 'From 0.60 to 0.75. The push for change is overpowering the usual resistance. Expect big breaks inside the system: safe seats lost, policies or markets collapsing, widespread protest. Past examples: 2008, 2020, 1933.'],
+    omega:      ['Path Omega', 'Collapse', 'Above 0.75. The system itself is giving way: revolution or civil war. Past examples: the outbreak of the US Civil War (1861) and Caesar crossing the Rubicon (49 BC).'],
+    scale:      ['Historical scale', 'Where today sits in history', 'Twenty past eras (US and elsewhere) scored with the same rules and the same formula as today, so you can see what a given number has felt like before. Scored after the fact, so treat it as a ruler, not a prediction.'],
+    levelmatch: ['Closest in level', 'Closest in how shaky', 'The past eras whose overall score was nearest to today’s.'],
+    kindmatch:  ['Closest in kind', 'Closest in kind of turmoil', 'Among eras at a similar level, the ones with the most similar mix of chaos, political division and economic damage.'],
+    shock:      ['Shock watch', 'Big-shock chance', 'ORACLE’s daily bet on whether a major shock hits in the next 7 days: an event rated 7+ for chaos, or a 2.5%+ one-day stock market move. It’s graded automatically, so you can see whether the stability meter is worth trusting.'],
+    catalyst:   ['Catalyst', 'Turning point', 'A dated moment that could change things: a Fed meeting, an election, a court ruling, a big data release, a deadline.'],
+    branch:     ['Branch', 'Possible outcome', 'One way a turning point could go, with its chance.'],
+    brier:      ['Brier score', 'Accuracy score', 'How far off the forecasts were. 0 is perfect, 0.25 is what you’d get by always guessing 50/50, and lower is better.'],
+    calibration:['Calibration', 'Honest percentages', 'Whether ORACLE’s percentages mean what they say: things it calls 70% should happen about 70% of the time.'],
+    weights:    ['Engine weights', 'Who ORACLE trusts more', 'How much ORACLE listens to the history engine versus the current-events engine on each topic. It shifts toward whichever has been right more often.'],
+    momentum:   ['News momentum', 'Recent news push', 'Which way the last 3 weeks of news has been pushing this thing: toward change or toward staying the same.'],
+    divergence: ['Divergence', 'Disagreement', 'History and current events disagree by 30+ points, a sign something unusual is happening.'],
+    anger:      ['Anger', 'Anger', 'How upset this group is with how things are.'],
+    mobilization:['Mobilization', 'Ready to act', 'How ready this group is to do something about it: vote, protest, spend, raise rates, escalate.'],
+    trust:      ['Trust', 'Trust in institutions', 'How much this group trusts courts, elections, agencies and the media.'],
+    horizon:    ['Horizon', 'How far ahead', 'How far ahead the question looks: 1d = tomorrow, 1w = a week, 1m = a month, 3m = three months, 6m+ = longer.'],
+    resolve:    ['Resolves', 'Answer due', 'When the real answer becomes known and the forecast gets graded.'],
+    tracking:   ['Tracking', 'Live check', 'For questions about a number (stocks, oil, inflation), whether today’s actual value is on course for the forecast. "Proxy" means a close stand-in for the official number.'],
+    intensity:  ['Intensity (O)', 'News intensity', 'How hard recent news has hit: chaos, political division and economic damage, scored 1–10 and averaged, with recent days counting more.'],
+    resistance: ['Resistance (C)', 'Institutional resistance', 'How well institutions absorbed recent news (courts blocking things, normal processes handling it), scored 1–10.'],
+    calendar:   ['Calendar (Pm)', 'Big dates coming', 'Extra sensitivity when big dates are close. An election next week makes everything matter more.'],
+    inertia:    ['Inertia (Is)', 'Built-in slowness', 'A constant for how slowly the US system normally changes: bureaucracy, checks and balances, slow lawmaking.'],
+    weekreview: ['7-day review', 'Last week in review', 'A look back at the last 7 days: what got graded, which engine was closer, and what changed most.']
+  };
+
+  var MODES = {
+    plain: { desc: 'Everyday words and the key numbers. Switch to Guided or Technical any time for the full detail.', tagline: 'Your daily read on where the country is heading, and how sure ORACLE is.' },
+    guided: { desc: 'Full detail. Tap or hover any dotted word for a plain-English definition.', tagline: 'CLIO (friction, history) × OMEN (pressure, disruption) → where the status quo breaks · United States' },
+    technical: { desc: 'Full detail, no definitions. All formulas and scores.', tagline: 'CLIO (friction, history) × OMEN (pressure, disruption) → where the status quo breaks · United States' }
+  };
+  var mode = recall('oracle-mode', 'plain');
+  if (!MODES[mode]) mode = 'plain';
+
+  function T(k, cap) { // a term, as the current mode shows it
+    var g = G[k]; if (!g) return k;
+    if (mode === 'plain') return g[1];
+    if (mode === 'guided') return '<span class="term" tabindex="0" data-tipkey="g-' + k + '">' + g[0] + '</span>';
+    return g[0];
+  }
+  function Tx(k) { var g = G[k]; return !g ? k : (mode === 'plain' ? g[1] : g[0]); } // plain text (no markup)
+  function L(tech, plain) { return mode === 'plain' ? plain : tech; }
+  var DOMAINS_T = { politics: 'Politics', economy: 'Economy', unrest: 'Unrest', foreign: 'Foreign' };
+  var DOMAINS_P = { politics: 'Politics', economy: 'Economy', unrest: 'Protests & society', foreign: 'World affairs' };
+  function DOM(k) { return (mode === 'plain' ? DOMAINS_P : DOMAINS_T)[k] || k; }
+  var DOM_KEYS = ['politics', 'economy', 'unrest', 'foreign'];
+  var STATUS_KEY = { holding: 'holding', strained: 'strained', critical: 'critical', tipping: 'tipping' };
+  var KIND_P = { data: 'data release', decision: 'decision', election: 'election', deadline: 'deadline', event: 'event', market: 'market close', ruling: 'court ruling' };
+
+  // ---------- helpers ----------
+  function pct(p) { return p == null ? '—' : Math.round(p * 100) + '%'; }
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function parseDate(s) { var a = s.split('-'); return new Date(+a[0], +a[1] - 1, +a[2]); }
+  var MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function fmtDate(s) { var d = parseDate(s); return MONTHS[d.getMonth()] + ' ' + d.getDate(); }
+  var today = parseDate(D.meta.last_run);
+  function daysUntil(s) { return Math.round((parseDate(s) - today) / 86400000); }
+  function addDays(d, n) { var x = new Date(d); x.setDate(x.getDate() + n); return x; }
+  function store(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+  function recall(k, dflt) { try { var v = JSON.parse(localStorage.getItem(k) || 'null'); return v == null ? dflt : v; } catch (e) { return dflt; } }
+  function inDays(s) { var n = daysUntil(s); return n === 0 ? 'today' : n === 1 ? 'tomorrow' : n > 0 ? 'in ' + n + ' days' : Math.abs(n) + ' days ago'; }
+  function pword(p) { return p == null ? '' : p >= 0.85 ? 'Very likely' : p >= 0.65 ? 'Likely' : p > 0.35 ? 'Toss-up' : p > 0.15 ? 'Unlikely' : 'Very unlikely'; }
+  function grade(b) { return b == null ? null : b < 0.10 ? 'A' : b < 0.15 ? 'B' : b < 0.20 ? 'C' : b < 0.25 ? 'D' : 'F'; }
+
+  var preds = D.predictions || [];
+  var open = preds.filter(function (p) { return p.status === 'open'; });
+  var resolved = preds.filter(function (p) { return p.status === 'resolved'; });
+  var byId = {}; preds.forEach(function (p) { byId[p.id] = p; });
+  var systems = (D.systems || []).filter(function (s) { return !s.retired; });
+  var sysById = {}; (D.systems || []).forEach(function (s) { sysById[s.id] = s; });
+  var cats = (D.catalysts || []).slice().sort(function (a, b) { return a.date < b.date ? -1 : 1; });
+  function lastDelta(p) { var h = p.history || []; return h.length < 2 ? null : h[h.length - 1].oracle - h[h.length - 2].oracle; }
+
+  // ---------- tooltip ----------
+  var tip = document.getElementById('tip');
+  function showTip(html, x, y) {
+    tip.innerHTML = html; tip.style.display = 'block';
+    var w = tip.offsetWidth, h = tip.offsetHeight;
+    tip.style.left = Math.min(window.innerWidth - w - 8, Math.max(8, x + 14)) + 'px';
+    var top = y + 16; if (top + h > window.innerHeight - 8) top = y - h - 12;
+    tip.style.top = Math.max(8, top) + 'px';
+  }
+  function hideTip() { tip.style.display = 'none'; }
+  function tipRow(cls, label, val) {
+    var sw = cls === 'oracle' ? '<i class="sw oracle"></i>' : cls === 'market' ? '<i class="sw market"></i>' : cls === 'sim' ? '<i class="sw sim"></i>' : cls ? '<i class="sw" style="background:var(--' + cls + ')"></i>' : '';
+    return '<div class="row"><span>' + sw + label + '</span><b>' + val + '</b></div>';
+  }
+  var tipFns = {};
+  Object.keys(G).forEach(function (k) { tipFns['g-' + k] = function () { return '<div class="t">' + G[k][0] + (G[k][1] !== G[k][0] ? ' <span class="muted">· ' + G[k][1] + '</span>' : '') + '</div><div>' + G[k][2] + '</div>'; }; });
+  document.addEventListener('pointermove', function (e) {
+    var el = e.target.closest && e.target.closest('[data-tipkey]');
+    if (el && tipFns[el.getAttribute('data-tipkey')]) showTip(tipFns[el.getAttribute('data-tipkey')](), e.clientX, e.clientY);
+    else if (!e.target.closest || !e.target.closest('#scoreChart')) hideTip();
+  });
+  document.addEventListener('focusin', function (e) {
+    var el = e.target.closest && e.target.closest('[data-tipkey]');
+    if (el && tipFns[el.getAttribute('data-tipkey')]) { var r = el.getBoundingClientRect(); showTip(tipFns[el.getAttribute('data-tipkey')](), r.left, r.bottom); }
+  });
+  document.addEventListener('focusout', hideTip);
+  window.addEventListener('scroll', hideTip, { passive: true });
+
+  // ======================================================================================
+  // Page skeleton (rebuilt whenever the mode changes)
+  // ======================================================================================
+  var state = recall('oracle-view', { dom: 'all', sort: 'soon' });
+  var view = recall('oracle-tab', 'dash');
+  if (['dash', 'how', 'raw'].indexOf(view) < 0) view = 'dash';
+  var tlOn = recall('oracle-tl', { pred: true, hit: true, miss: true, cat: true, news: false });
+
+  function sectionList() {
+    return [['sec-vol', L('Volatility', 'Stability')], ['sec-brief', 'Briefing'], ['sec-timeline', 'Timeline'],
+      ['sec-systems', L('Systems', 'What could change')], ['sec-catalysts', L('Catalysts', 'Turning points')],
+      ['sec-preds', L('Predictions', 'Forecasts')], ['sec-agents', L('Agents', 'Players')], ['sec-numbers', 'Numbers'],
+      ['sec-review', L('7-day review', 'Last week')], ['sec-score', L('Scorecard', 'Accuracy')], ['sec-gloss', 'Glossary']];
+  }
+
+  function renderAll() {
+    document.body.classList.toggle('plain', mode === 'plain');
+    Array.prototype.forEach.call(document.querySelectorAll('[data-mode]'), function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-mode') === mode ? 'true' : 'false'); });
+    document.getElementById('modeDesc').textContent = MODES[mode].desc;
+    document.getElementById('tagline').textContent = MODES[mode].tagline;
+    document.getElementById('jump').innerHTML = sectionList().map(function (s) { return '<button type="button" data-goto="' + s[0] + '">' + s[1] + '</button>'; }).join('');
+    Array.prototype.forEach.call(document.querySelectorAll('[data-view]'), function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-view') === view ? 'true' : 'false'); });
+    document.getElementById('jump').style.display = view === 'dash' ? '' : 'none';
+    if (view === 'how') { app.innerHTML = renderHow(); return; }
+    if (view === 'raw') { app.innerHTML = renderRaw(); return; }
+
+    var a = (D.stats && D.stats.all) || { n: 0 };
+    var nextCat = cats.filter(function (c) { return c.status !== 'resolved' && daysUntil(c.window_end || c.date) >= 0; })[0];
+    var html = '';
+
+    if (mode !== 'technical') {
+      html += '<details class="card howto"' + (mode === 'plain' ? ' open' : '') + '><summary>How to read this page</summary><ul>' +
+        '<li><b>ORACLE makes forecasts</b> about US politics, the economy, protests and world affairs, each with a percentage. 80% means "this happens about 8 times out of 10."</li>' +
+        '<li><b>Two engines argue, ORACLE decides.</b> <span style="color:var(--clio)">●</span> ' + Tx('clio') + ' = how things usually go historically. <span style="color:var(--omen)">●</span> ' + Tx('omen') + ' = what today’s news suggests. The black bar is ' + Tx('oracle') + '.</li>' +
+        '<li><b>Every forecast gets graded</b> when the real answer comes in (✓ right, ✗ wrong), and ORACLE learns which engine to trust more.</li>' +
+        '<li><b>Start at the top:</b> the ' + Tx('volatility').toLowerCase() + ' shows how shaky things are overall, and compares today with moments in history (like 1968 or 2008). Then the briefing says what changed today.</li>' +
+        '</ul></details>';
+    }
+
+    html += '<div class="tiles">' +
+      '<div class="tile"><div class="k">' + L('Last run', 'Last updated') + '</div><div class="v">' + fmtDate(D.meta.last_run) + '</div><div class="s">' + L('Run #' + D.meta.run_count, 'Updates every morning') + '</div></div>' +
+      '<div class="tile"><div class="k">' + L('Open predictions', 'Forecasts waiting for answers') + '</div><div class="v">' + open.length + '</div><div class="s">' + resolved.length + L(' resolved', ' graded so far') + (a.n ? ' · ' + a.hits + ' right, ' + a.misses + ' wrong' : '') + '</div></div>' +
+      '<div class="tile"><div class="k">' + (mode === 'plain' ? 'Accuracy grade' : T('brier')) + '</div><div class="v">' +
+        (a.brier_oracle == null ? '—' : (mode === 'plain' ? grade(a.brier_oracle) : a.brier_oracle.toFixed(3))) + '</div><div class="s">' +
+        (a.brier_oracle == null ? L('Scoring starts after the first result', 'First grades arrive in the next few days') : L('lower is better · 0.25 = coin flip', 'A = excellent, F = no better than a coin flip')) + '</div></div>' +
+      '<div class="tile"><div class="k">' + L('Next ' + T('catalyst').toLowerCase(), 'Next turning point') + '</div><div class="v">' + (nextCat ? fmtDate(nextCat.date) : '—') + '</div><div class="s">' + (nextCat ? esc(nextCat.name) : '') + '</div></div>' +
+      '</div>';
+
+    html += '<section id="sec-vol"><h2>' + L(T('volatility'), 'How shaky are things right now?') + '</h2><p class="sec-sub">' +
+      L('One number for how close the whole system is to a break: ' + T('V') + ' = A ÷ (A + B), where A is ' + T('omen') + '’s push and B is ' + T('clio') + '’s hold. 0 = total stability, 1 = imminent systemic shift.',
+        'A single 0-to-1 score for the whole country. Low means calm; high means something big may be about to break.') + '</p><div class="card vol" id="vol"></div></section>';
+
+    var B = window.ORACLE_BRIEFING;
+    html += '<section id="sec-brief"><h2>' + L('Briefing', 'Today’s briefing') + (B ? ' · ' + esc(fmtDate(B.date)) : '') + '</h2>' +
+      (B && B.markdown ? '<div class="card brief" id="brief"><div class="brief-body"><div class="md" id="briefMd"></div></div><button class="btn" id="briefToggle" type="button" aria-expanded="false"></button></div>'
+        : '<div class="card empty">No briefing yet.</div>') + '</section>';
+
+    html += '<section id="sec-timeline"><h2>Timeline</h2><p class="sec-sub">' +
+      L('What ORACLE expects, what already happened, and how its calls turned out. Scroll sideways; tap a mark for details.',
+        'Left of the black line is the past, right is the future. Circles are forecasts placed on the day their answer is due (the number is the % chance). Green ✓ and red ✗ show forecasts ORACLE got right or wrong. Diamonds are turning points. Scroll sideways and tap anything for details.') + '</p>' +
+      '<div class="tl-controls" id="tlControls"></div><div class="card tl-card"><div id="tl"></div>' +
+      '<div class="legend tl-legend"><span><i class="lg-pred"></i>' + L('Open prediction (resolves here)', 'Forecast (answer due here)') + '</span><span><i class="lg-hit">✓</i>' + L('Called right', 'ORACLE was right') + '</span>' +
+      '<span><i class="lg-miss">✗</i>' + L('Called wrong', 'ORACLE was wrong') + '</span><span><i class="lg-cat"></i>' + L('Catalyst', 'Turning point') + '</span><span><i class="lg-news"></i>' + L('Scored news event', 'News event') + '</span></div></div></section>';
+
+    html += '<section id="sec-systems"><h2>' + L('Systems under pressure', 'What could change') + '</h2><p class="sec-sub">' +
+      L('Each ' + T('system') + ' is a piece of the status quo. ' + T('omen') + ' measures the ' + T('pressure') + ' pushing for change; ' + T('clio') + ' measures the ' + T('friction') + ' holding it in place (0–10). When pressure passes friction, the system ' + T('tip') + 's.',
+        'Each card is one thing about the country that could change soon. The orange ball is the push for change from current events. The blue wall is the resistance from laws, institutions and history. When the ball gets past the wall, change becomes likely.') + '</p>' +
+      '<div class="legend"><span><i class="sw wall"></i>' + L(T('friction') + ' (' + T('clio') + '), the wall', 'Resistance (history, institutions)') + '</span><span><i class="sw" style="background:var(--omen)"></i>' + L(T('pressure') + ' (' + T('omen') + '), the push', 'Push for change (current events)') + '</span></div>' +
+      '<div class="sys-grid" id="systems"></div></section>';
+
+    html += '<section id="sec-catalysts"><h2>' + L('Catalyst registry', 'Upcoming turning points') + '</h2><p class="sec-sub">' +
+      L('Scheduled moments that can move the systems. Each ' + T('branch') + ' shows its odds and, from the ' + T('sandbox') + ', how the outlook changes IF that branch happens.',
+        'Dates when something could swing. For each one you’ll see the possible outcomes, how likely each is, and what ORACLE’s simulation thinks would change if it happens.') + '</p><div class="cats" id="catalysts"></div></section>';
+
+    html += '<section id="sec-preds"><h2>' + L('Open predictions', 'Forecasts') + '</h2>' + (mode === 'plain' ? '<p class="sec-sub">Specific yes-or-no questions with ORACLE’s chance that the answer is yes. Tap "Why?" to see both engines’ reasoning.</p>' : '') +
+      '<div class="filters" id="filters"><button class="chip" data-dom="all" aria-pressed="true">All</button>' +
+      DOM_KEYS.map(function (k) { return '<button class="chip" data-dom="' + k + '" aria-pressed="false">' + DOM(k) + '</button>'; }).join('') +
+      '<select class="sort" id="sortSel" aria-label="Sort forecasts"><option value="soon">' + L('Resolves soonest', 'Answer due soonest') + '</option><option value="div">' + L('Biggest CLIO/OMEN gap', 'Biggest disagreement') + '</option><option value="move">' + L('Biggest recent move', 'Changed most recently') + '</option><option value="prob">' + L('Highest probability', 'Most likely first') + '</option></select></div>' +
+      '<div class="legend"><span><i class="sw" style="background:var(--clio)"></i>' + T('clio') + '</span><span><i class="sw" style="background:var(--omen)"></i>' + T('omen') + '</span>' +
+      '<span><i class="sw oracle"></i>' + T('oracle') + L(' (final)', '') + '</span><span><i class="sw sim"></i>' + T('sandbox') + '</span><span><i class="sw market"></i>' + T('market') + '</span></div>' +
+      '<div class="preds" id="preds"></div></section>';
+
+    html += '<section id="sec-agents"><h2>' + L('Agent ecosystem', 'Simulated players') + '</h2><p class="sec-sub">' +
+      L('The ' + T('sandbox') + '’s simulated actors. Bars show today; the black tick shows where the average simulated future puts them in 30 days.',
+        'A simplified computer model of the key groups in American life. The bars show how angry each group is, how ready it is to act, and how much it trusts institutions (0–100). The black tick is where the simulation expects them to be in a month.') + '</p><div class="card agents" id="agents"></div></section>';
+    html += '<section id="sec-numbers"><h2>Key numbers</h2><p class="sec-sub">' + L('Raw data from FRED', 'Official economic numbers from the Federal Reserve’s public database (FRED)') + (MET ? ', updated ' + esc(fmtDate(MET.updated.slice(0, 10))) : '') + '.</p><div class="nums" id="numbers"></div></section>';
+    html += '<section id="sec-review"><h2>' + L(T('weekreview'), 'Last week in review') + '</h2><p class="sec-sub">' +
+      L('Looking back a week: which engine was closer, what moved, and whether tracked numbers are on course.', 'What got graded in the last 7 days, which engine was closer, and which forecasts changed the most.') + '</p><div class="card rev" id="review"></div></section>';
+    html += '<section id="sec-score"><h2>' + L('Resolved', 'Graded forecasts') + '</h2><div class="card" id="resolved"></div></section>';
+    html += '<section><h2>' + L('Scorecard', 'How accurate is ORACLE?') + '</h2><div class="grid2">' +
+      '<div class="card chart-card"><h3>' + L('Running ' + T('brier'), 'Accuracy over time') + '</h3><p class="sub">' + L('Cumulative mean over resolved predictions · lower is better', 'How far off the forecasts have been on average. Lower is better; the dotted line is coin-flip guessing.') + '</p><div id="scoreChart"></div></div>' +
+      '<div class="card weights"><h3>' + L(T('weights') + ' by domain', 'Who ORACLE trusts more, by topic') + '</h3><p class="sub">' + L('Each result nudges weight toward whichever engine was closer', 'After each graded forecast, ORACLE listens a bit more to whichever engine was closer.') + '</p>' +
+      DOM_KEYS.map(function (k) {
+        var w = (D.weights || {})[k] || { clio: 0.5, omen: 0.5 };
+        return '<div class="w-row"><div>' + DOM(k) + '</div><div><div class="w-bar" title="' + Tx('clio') + ' ' + pct(w.clio) + ' · ' + Tx('omen') + ' ' + pct(w.omen) + '">' +
+          '<div class="c" style="flex:' + w.clio + ' 1 0"></div><div class="o" style="flex:' + w.omen + ' 1 0"></div></div>' +
+          '<div class="w-nums"><span>' + L('CLIO', 'History') + ' ' + pct(w.clio) + '</span><span>' + L('OMEN', 'Current events') + ' ' + pct(w.omen) + '</span></div></div></div>';
+      }).join('') + '</div></div></section>';
+    var lessons = D.lessons || [];
+    html += '<section><h2>' + L('Lessons', 'What ORACLE has learned') + '</h2><div class="card lessons">' +
+      (lessons.length ? '<ul>' + lessons.map(function (l) { return '<li><span class="d">' + esc(l.date) + (l.source === 'prior' ? L(' · prior', ' · starting rule') : '') + '</span>' + esc(l.text) + '</li>'; }).join('') + '</ul>' : '<div class="empty">No lessons yet.</div>') +
+      '</div></section>';
+    html += '<section id="sec-gloss"><h2>Glossary</h2><p class="sec-sub">Every term on this page, in plain English.</p><div class="card gloss" id="gloss"></div></section>';
+    app.innerHTML = html;
+
+    renderBriefing(); renderVolatility(); renderTlControls(); renderTimeline(false); renderSystems(); renderCatalysts();
+    document.getElementById('sortSel').value = state.sort; renderPreds();
+    renderAgents(); renderNumbers(); renderReview(); renderResolved(); renderScoreChart(); renderGlossary();
+  }
+
+  // ---------- briefing ----------
+  function renderBriefing() {
+    var B = window.ORACLE_BRIEFING; if (!B || !B.markdown) return;
+    var md = document.getElementById('briefMd'), box = document.getElementById('brief'), btn = document.getElementById('briefToggle');
+    // Plain mode leads with the briefing's "In plain English" section when the briefing has one
+    var plainPart = null, m = B.markdown.match(/^##[^\n]*in plain english[^\n]*\n([\s\S]*?)(?=^## |$(?![\s\S]))/im);
+    if (m) plainPart = m[1].trim();
+    var showFull = box.classList.contains('expanded');
+    var src = (mode === 'plain' && plainPart && !showFull) ? plainPart : B.markdown;
+    if (window.marked && window.DOMPurify) {
+      md.innerHTML = DOMPurify.sanitize(marked.parse(src));
+      Array.prototype.forEach.call(md.querySelectorAll('table'), function (t) { var w = document.createElement('div'); w.className = 'tbl'; t.parentNode.insertBefore(w, t); w.appendChild(t); });
+      Array.prototype.forEach.call(md.querySelectorAll('a'), function (x) { x.target = '_blank'; x.rel = 'noopener'; });
+    } else { md.innerHTML = '<pre></pre>'; md.firstChild.textContent = src; }
+    box.classList.toggle('short', mode === 'plain' && !!plainPart && !showFull);
+    btn.textContent = showFull ? 'Show less' : (mode === 'plain' && plainPart ? 'Read the full analyst briefing' : 'Show full briefing');
+    btn.setAttribute('aria-expanded', showFull ? 'true' : 'false');
+  }
+
+  // ---------- stability meter (volatility) ----------
+  var PATH_DESC = {
+    alpha: ['Status quo. CLIO dominates: current news is likely to fizzle and history repeats as expected.', 'Things are calm. Today’s news will probably blow over, and life continues as usual.'],
+    gamma: ['Synthesis. Balanced tension: shifts happen at the edges, but the overall system holds. Expect compromise and normal political cycles.', 'There’s real tension, and some things may change, but the big picture is holding together. Expect normal political fights and compromises, not a collapse.'],
+    beta: ['Systemic shock. OMEN is breaking through: expect major breaks such as safe seats falling, policy collapse or widespread unrest.', 'Things are near a breaking point. Expect big, unusual events: shock election results, major policy collapses, widespread unrest.'],
+    omega: ['Collapse. Friction has failed: revolution, civil war or regime breakdown territory.', 'The system itself is giving way, as at the start of a revolution or civil war.']
+  };
+  var eraAll = recall('oracle-eras-all', false);
+  function renderVolatility() {
+    var host = document.getElementById('vol'), V = D.volatility;
+    if (!V) { host.innerHTML = '<div class="empty">Not enough scored events yet to compute this.</div>'; return; }
+    var bands = (D.config || {}).path_bands || [0.4, 0.6, 0.75], log = D.volatility_log || [];
+    var edges = [0].concat(bands, [1]), pathKeys = ['alpha', 'gamma', 'beta', 'omega'].slice(0, edges.length - 1);
+    var HS = D.history_scale, eraById = {};
+    ((HS && HS.eras) || []).forEach(function (e) { eraById[e.id] = e; });
+    var prev = log.length > 1 ? log[log.length - 2] : null;
+    var chg = prev ? ' <span class="muted" style="font-size:14px">' + (V.V - prev.V >= 0 ? '▲ ' : '▼ ') + Math.abs(V.V - prev.V).toFixed(2) + L(' vs ', ' since ') + fmtDate(prev.date) + '</span>' : '';
+    var A = V.w_omen * V.O * V.Pm, Bh = V.w_clio * V.C * V.inertia, sh = V.shock || {};
+    var spark = '';
+    if (log.length > 1) {
+      var pts = log.slice(-60).map(function (r, i, arr) { return (i / (arr.length - 1) * 100).toFixed(2) + ',' + (28 - r.V * 26).toFixed(2); }).join(' ');
+      spark = '<svg viewBox="0 0 100 30" preserveAspectRatio="none" style="width:100%;height:34px;margin-top:10px" aria-label="History"><polyline fill="none" stroke="' + getComputedStyle(root).getPropertyValue('--ink').trim() + '" stroke-width="1.5" vector-effect="non-scaling-stroke" points="' + pts + '"/></svg>';
+    }
+    var drivers = (V.calendar_drivers || []).map(function (c) { return esc(c.name) + (mode === 'plain' ? '' : ' (+' + Math.round(c.add * 100) + '%)'); });
+    var explain = mode === 'plain'
+      ? '<div class="formula"><div>Recent news has been <b>' + (V.O >= 6 ? 'very intense' : V.O >= 4.5 ? 'fairly intense' : V.O >= 3 ? 'moderate' : 'quiet') + '</b> (' + V.O.toFixed(1) + ' out of 10), and institutions have been <b>' +
+        (V.C >= 7 ? 'absorbing it well' : V.C >= 5 ? 'holding up moderately' : 'struggling to contain it') + '</b> (' + V.C.toFixed(1) + ' out of 10).</div>' +
+        (drivers.length ? '<div>Big dates coming up make everything more sensitive right now: ' + drivers.join(', ') + '.</div>' : '') + '</div>'
+      : '<div class="formula">' +
+        '<div><i class="sw" style="background:var(--omen)"></i> Push A = w<sub>' + T('omen') + '</sub> <b>' + V.w_omen.toFixed(2) + '</b> × ' + T('intensity') + ' <b>' + V.O.toFixed(2) + '</b> × ' + T('calendar') + ' <b>' + V.Pm.toFixed(2) + '</b> = <b>' + A.toFixed(2) + '</b></div>' +
+        '<div><i class="sw wall"></i> Hold B = w<sub>' + T('clio') + '</sub> <b>' + V.w_clio.toFixed(2) + '</b> × ' + T('resistance') + ' <b>' + V.C.toFixed(2) + '</b> × ' + T('inertia') + ' <b>' + V.inertia.toFixed(2) + '</b> = <b>' + Bh.toFixed(2) + '</b></div>' +
+        '<div class="muted">From ' + V.n_events + ' scored events in the last 14 days' + (drivers.length ? '. Calendar pressure from: ' + drivers.join(', ') : '') + '.</div></div>';
+    host.innerHTML = '<div>' +
+      '<div class="vol-top"><span class="vol-v">' + V.V.toFixed(2) + '</span><span class="vol-path">' + T(V.path) + '</span>' + chg + '</div>' +
+      '<div class="vol-desc">' + PATH_DESC[V.path][mode === 'plain' ? 1 : 0] + '</div>' +
+      (HS ? '<div class="era-strip" aria-label="' + Tx('scale') + '">' + HS.eras.filter(function (e) { return e.featured || eraAll; }).map(function (e) {
+        tipFns['era-' + e.id] = function () { return '<div class="t">' + esc(e.name) + ' · ' + esc(e.when) + '</div>' + tipRow('', Tx('V'), e.V.toFixed(2)) + '<div class="x">' + esc(e.like) + '</div>'; };
+        return '<button type="button" data-tipkey="era-' + e.id + '" aria-label="' + esc(e.name) + ', ' + e.V.toFixed(2) + '" style="left:' + e.V * 100 + '%"></button>'; }).join('') + '</div>' : '') +
+      '<div class="bands' + (pathKeys.length > 3 ? ' four' : '') + '">' + pathKeys.map(function (k, i) {
+        return '<div class="seg b-' + k + '" style="flex:' + (edges[i + 1] - edges[i]) + ' 1 0"></div>'; }).join('') +
+        '<div class="vol-mark" style="left:' + V.V * 100 + '%" aria-label="Today ' + V.V.toFixed(2) + '"></div></div>' +
+      '<div class="band-labels">' + pathKeys.map(function (k, i) {
+        return '<span class="' + (V.path === k ? 'on' : '') + '" style="flex:' + (edges[i + 1] - edges[i]) + ' 1 0">' + T(k) + '</span>'; }).join('') + '</div>' +
+      '<div class="vol-axis pos">' + edges.map(function (x, i) { return '<span style="left:' + x * 100 + '%">' + (i === 0 ? '0' : i === edges.length - 1 ? '1' : x.toFixed(2)) + '</span>'; }).join('') + '</div>' +
+      (HS ? '<div class="mode-desc">' + L('Dots above the bar are past eras measured the same way. Tap one, or see the full ' + T('scale').toLowerCase() + ' below.', 'Dots above the bar are moments in history measured the same way. Tap one, or see the list below.') + '</div>' : '') +
+      explain + spark + '</div>' +
+      '<div><h3>' + L('By domain', 'By topic') + '</h3>' + DOM_KEYS.map(function (k) {
+        var dv = V.by_domain && V.by_domain[k];
+        return '<div class="dom-v"><span>' + DOM(k) + '</span><div class="bar">' + (dv ? '<i style="width:' + dv.V * 100 + '%"></i>' : '') + '</div><span class="n">' + (dv ? dv.V.toFixed(2) : 'n/a') + '</span></div>';
+      }).join('') +
+      '<div class="shock"><div class="k">' + L(T('shock') + ': chance of a major shock in the next 7 days', 'Chance of a big shock in the next 7 days') + '</div><div class="big">' + pct(sh.p) + '</div>' +
+        '<div class="k">' + L('Shock = a scored event with chaos 7+ or an S&amp;P 500 move of 2.5%+. ', 'A "big shock" means something like a deadly attack, a war escalation, or the stock market moving 2.5%+ in a day. ') +
+        (sh.n_resolved ? L('Record: ' + sh.n_resolved + ' graded, ' + T('brier') + ' ' + (sh.brier != null ? sh.brier.toFixed(3) : '—') + (sh.fitted ? ', mapping re-fitted from results.' : ', still on the starting formula.'), 'Track record so far: ' + sh.n_resolved + ' weeks graded, accuracy grade ' + grade(sh.brier) + '.')
+          : L('Grading starts 8 days after the first reading.', 'ORACLE grades this bet a week later, so you’ll see if it’s any good.')) + '</div></div>' +
+      '</div>' + renderHistory(V, HS, eraById, edges, pathKeys);
+  }
+
+  // ---------- where today sits in history ----------
+  function renderHistory(V, HS, eraById, edges, pathKeys) {
+    if (!HS || !HS.eras || !HS.eras.length) return '';
+    function nm(id) { var e = eraById[id]; return e ? '<b>' + esc(e.name) + '</b> (' + esc(e.when) + ', ' + e.V.toFixed(2) + ')' : ''; }
+    var lv = (HS.closest_level || []).slice(0, 2).map(nm).filter(Boolean);
+    var kd = (HS.closest_kind || []).slice(0, 2).map(nm).filter(Boolean);
+    var list = HS.eras.filter(function (e) { return e.featured || eraAll; }).slice();
+    list.push({ today: true, V: V.V, path: V.path });
+    list.sort(function (a, b) { return b.V - a.V; });
+    var rows = '', lastPath = null;
+    list.forEach(function (e) {
+      if (e.path !== lastPath) { rows += '<div class="band-tag">' + Tx(e.path) + '</div>'; lastPath = e.path; }
+      if (e.today) {
+        rows += '<div class="rung today"><div class="sumrow"><span class="rv">' + e.V.toFixed(2) + '</span><span class="rbar"><i style="width:' + e.V * 100 + '%"></i></span>' +
+          '<span class="rname"><b>▶ ' + L('Today', 'Today') + '</b><small>' + fmtDate(D.meta.last_run) + ', ' + D.meta.last_run.slice(0, 4) + ' · United States</small></span></div></div>';
+        return;
+      }
+      var p = e.profile || {};
+      rows += '<details class="rung"><summary><span class="rv">' + e.V.toFixed(2) + '</span><span class="rbar"><i style="width:' + e.V * 100 + '%"></i></span>' +
+        '<span class="rname">' + esc(e.name) + '<small>' + esc(e.when) + ' · ' + esc(e.place) + '</small></span></summary><div class="rbody">' +
+        '<div><b>' + L('What it was like:', 'What it was like:') + '</b> ' + esc(e.like) + '</div>' +
+        '<div><b>' + L('What happened next:', 'What happened next:') + '</b> ' + esc(e.next) + '</div>' +
+        (mode === 'plain' ? '' : '<div>' + T('intensity') + ' ' + e.O.toFixed(2) + ' · ' + T('resistance') + ' ' + e.C.toFixed(2) + ' · ' + T('calendar') + ' ' + e.Pm.toFixed(2) +
+          ' · chaos ' + p.chaos + ' / polarization ' + p.polarization + ' / economic ' + p.economic + (e.mix_similarity != null ? ' · mix similarity to today ' + Math.round(e.mix_similarity * 100) + '%' : '') + '</div>' +
+          '<div class="muted">' + L('Scored events: ', '') + e.events.map(esc).join(' · ') + '</div>') +
+        '</div></details>';
+    });
+    return '<div class="hist" id="history"><h3>' + L(T('scale'), 'Where today sits in history') + '</h3>' +
+      '<div class="hist-match">' + L(T('levelmatch'), 'Closest in how shaky things are') + ': ' + lv.join(' and ') + '.</div>' +
+      '<div class="hist-match">' + L(T('kindmatch'), 'Closest in the kind of turmoil') + ': ' + kd.join(' and ') + '.</div>' +
+      '<div class="ladder">' + rows + '</div>' +
+      '<button class="btn" type="button" data-eras="1">' + (eraAll ? 'Show fewer eras' : 'Show all ' + HS.eras.length + ' eras (including outside the US)') + '</button>' +
+      '<div class="mode-desc">' + L('Eras are scored after the fact with the same rubric and formula as today (see ORACLE.md §8). Treat this as a ruler, not a forecast.',
+        'These moments were scored with hindsight, using the same rules as today. They’re a measuring stick, not a prediction.') + '</div></div>';
+  }
+
+  // ---------- timeline ----------
+  function renderTlControls() {
+    var TYPES = [['pred', L('Predicted', 'Forecasts')], ['hit', L('Correct', 'Right')], ['miss', L('Missed', 'Wrong')], ['cat', L('Catalysts', 'Turning points')], ['news', 'News']];
+    document.getElementById('tlControls').innerHTML = TYPES.map(function (t) { return '<button class="chip" type="button" data-tl="' + t[0] + '" aria-pressed="' + (tlOn[t[0]] ? 'true' : 'false') + '">' + t[1] + '</button>'; }).join('');
+  }
+  function renderTimeline(keepScroll) {
+    var host = document.getElementById('tl');
+    var oldScroll = host.querySelector('.tl-scroll'); var prevLeft = oldScroll ? oldScroll.scrollLeft : null;
+    var items = [];
+    if (tlOn.pred) open.forEach(function (p) { items.push({ k: 'pred', date: p.resolves_on, dom: p.domain, ref: p }); });
+    resolved.forEach(function (p) {
+      var kind = p.hit === true ? 'hit' : p.hit === false ? 'miss' : 'nocall';
+      if ((kind === 'hit' && tlOn.hit) || (kind === 'miss' && tlOn.miss) || (kind === 'nocall' && (tlOn.hit || tlOn.miss))) items.push({ k: kind, date: p.resolved_on || p.resolves_on, dom: p.domain, ref: p });
+    });
+    if (tlOn.cat) cats.forEach(function (c) { items.push({ k: 'cat', date: c.date, end: c.window_end, dom: c.domain, ref: c }); });
+    if (tlOn.news) EVENTS.forEach(function (ev) { items.push({ k: 'news', date: ev.date, dom: ev.domain, ref: ev }); });
+
+    var PX = 9, start = addDays(today, -21), end = addDays(today, 60);
+    items.forEach(function (it) { var d = parseDate(it.date); if (d < start) start = d; var e2 = parseDate(it.end || it.date); if (e2 > end) end = e2; });
+    start = addDays(start, -4); end = addDays(end, 8);
+    if ((end - today) / 86400000 > 240) end = addDays(today, 240);
+    var days = Math.round((end - start) / 86400000), W = days * PX, HEAD = 22, ROW = 30;
+    function xOf(s) { return Math.round((parseDate(s) - start) / 86400000) * PX + PX / 2; }
+    var laneRows = {}; DOM_KEYS.forEach(function (l) { laneRows[l] = []; });
+    items.sort(function (p, q) { return p.date < q.date ? -1 : p.date > q.date ? 1 : 0; });
+    items.forEach(function (it) {
+      if (parseDate(it.date) > end) { it.skip = true; return; }
+      it.x = xOf(it.date);
+      var rows = laneRows[it.dom] || (laneRows[it.dom] = []), need = it.k === 'news' ? 12 : 30, r = 0;
+      while (rows[r] != null && rows[r] > it.x - need) r++;
+      rows[r] = it.x; it.row = r;
+    });
+    var laneH = {}, laneY = {}, y = HEAD;
+    DOM_KEYS.forEach(function (l) { laneH[l] = Math.max(1, laneRows[l].length) * ROW + 10; laneY[l] = y; y += laneH[l]; });
+    var cv = '';
+    for (var i = 0; i <= days; i++) {
+      var d = addDays(start, i);
+      if (d.getDate() === 1) cv += '<div class="tl-month" style="left:' + i * PX + 'px">' + MONTHS[d.getMonth()] + (d.getMonth() === 0 ? ' ' + d.getFullYear() : '') + '</div>';
+      else if (d.getDay() === 1) cv += '<div class="tl-tick" style="left:' + i * PX + 'px;top:' + HEAD + 'px"></div>';
+    }
+    DOM_KEYS.forEach(function (l) { cv += '<div class="tl-lane" style="top:' + laneY[l] + 'px;height:' + laneH[l] + 'px"></div>'; });
+    var tx = Math.round((today - start) / 86400000) * PX + PX / 2;
+    cv += '<div class="tl-today" style="left:' + (tx - 1) + 'px"><span>Today</span></div>';
+    items.forEach(function (it, idx) {
+      if (it.skip) return;
+      var cy = laneY[it.dom] + 5 + it.row * ROW + ROW / 2, key = 'tl' + idx, r = it.ref;
+      var pos = 'left:' + it.x + 'px;top:' + cy + 'px';
+      if (it.k === 'cat' && it.end) cv += '<div class="tl-window" style="left:' + it.x + 'px;width:' + Math.max(0, xOf(it.end) - it.x) + 'px;top:' + cy + 'px"></div>';
+      if (it.k === 'pred') cv += '<button class="mkr t-pred" type="button" data-tipkey="' + key + '" data-jump="' + esc(r.id) + '" aria-label="' + esc(r.question) + ', ' + pct(r.oracle) + '" style="' + pos + '">' + Math.round(r.oracle * 100) + '</button>';
+      else if (it.k === 'cat') cv += '<button class="mkr t-cat" type="button" data-tipkey="' + key + '" data-jump="' + esc(r.id) + '" aria-label="' + esc(r.name) + '" style="' + pos + '"></button>';
+      else if (it.k === 'news') cv += '<button class="mkr t-news" type="button" data-tipkey="' + key + '" aria-label="' + esc(r.title) + '" style="' + pos + ';opacity:' + (0.35 + 0.065 * Math.max(r.omen.chaos, r.omen.polarization, r.omen.economic)) + '"></button>';
+      else cv += '<button class="mkr t-' + it.k + '" type="button" data-tipkey="' + key + '" data-jump="res-' + esc(r.id) + '" aria-label="' + esc(r.question) + '" style="' + pos + '">' + (it.k === 'hit' ? '✓' : it.k === 'miss' ? '✗' : '–') + '</button>';
+      tipFns[key] = (function (it) { return function () {
+        var r = it.ref;
+        if (it.k === 'pred') return '<div class="t">' + L(esc(r.id) + ' · resolves ', 'Answer due ') + fmtDate(r.resolves_on) + '</div><div>' + esc(r.question) + '</div>' +
+          tipRow('oracle', Tx('oracle'), pct(r.oracle) + (mode === 'plain' ? ' · ' + pword(r.oracle) : '')) + (r.sim != null ? tipRow('sim', Tx('sandbox'), pct(r.sim)) : '') + (r.market != null ? tipRow('market', Tx('market'), pct(r.market)) : '');
+        if (it.k === 'cat') return '<div class="t">' + fmtDate(r.date) + (r.window_end ? '–' + fmtDate(r.window_end) : '') + ' · ' + esc(r.name) + '</div>' + (r.branches || []).map(function (b) { return tipRow('', esc(b.label), pct(b.prob)); }).join('');
+        if (it.k === 'news') return '<div class="t">' + fmtDate(r.date) + ' · ' + DOM(r.domain) + '</div><div>' + esc(r.title) + '</div>' +
+          '<div class="x">' + L('Chaos ' + r.omen.chaos + ' · Polarization ' + r.omen.polarization + ' · Economic ' + r.omen.economic, 'How disruptive: chaos ' + r.omen.chaos + '/10, political division ' + r.omen.polarization + '/10, economic hit ' + r.omen.economic + '/10') + '</div>' +
+          '<div class="x">' + L('Like: ', 'Most like: ') + esc(r.clio.precedent) + '</div>';
+        return '<div class="t">' + (it.k === 'hit' ? L('✓ Called right', '✓ ORACLE was right') : it.k === 'miss' ? L('✗ Called wrong', '✗ ORACLE was wrong') : 'No call (50%)') + ' · ' + fmtDate(it.date) + '</div><div>' + esc(r.question) + '</div>' +
+          tipRow('', L('Outcome', 'Answer'), r.outcome ? 'YES' : 'NO') + tipRow('oracle', L('ORACLE said', 'ORACLE had said'), pct(r.oracle)) + (mode === 'plain' ? '' : tipRow('', 'Brier', r.brier && r.brier.oracle != null ? r.brier.oracle.toFixed(3) : '—'));
+      }; })(it);
+    });
+    host.innerHTML = '<div class="tl-grid"><div class="tl-labels" style="padding-top:' + HEAD + 'px">' +
+      DOM_KEYS.map(function (l) { return '<div style="height:' + laneH[l] + 'px">' + DOM(l) + '</div>'; }).join('') +
+      '</div><div class="tl-scroll"><div class="tl-canvas" style="width:' + W + 'px;height:' + y + 'px">' + cv + '</div></div></div>';
+    var sc = host.querySelector('.tl-scroll');
+    sc.scrollLeft = keepScroll && prevLeft != null ? prevLeft : Math.max(0, tx - sc.clientWidth * 0.22);
+  }
+
+  // ---------- what could change (systems) ----------
+  function renderSystems() {
+    var simSys = (SIM && SIM.systems) || {};
+    document.getElementById('systems').innerHTML = systems.map(function (s) {
+      var P = s.pressure, F = s.friction, lo = Math.min(P, F), hi = Math.max(P, F);
+      var linkedCats = cats.filter(function (c) { return c.status !== 'resolved' && ((c.linked_predictions || []).indexOf(s.tip_prediction) >= 0 || (c.branches || []).some(function (b) { return b.effects && b.effects.systems && b.effects.systems[s.id]; })); });
+      var simTip = s.sim ? s.sim.tip : (simSys[s.id] ? simSys[s.id].tip : null);
+      var proj = '';
+      if (s.projection) proj = '<div class="sys-foot">' + L('Trend: ' + (s.trend_per_week > 0 ? '+' : '') + s.trend_per_week + ' per week. Projected <b>' + (s.projection.kind === 'crossing' ? 'tipping point ' : 're-stabilizing ') + fmtDate(s.projection.date) + '</b> if the trend holds.',
+        (s.projection.kind === 'crossing' ? 'If things keep moving like this, the push overtakes the resistance around <b>' : 'If things keep moving like this, it settles back down around <b>') + fmtDate(s.projection.date) + '</b>.') + '</div>';
+      var mom = s.momentum == null ? '' : '<div class="mom">' + L(T('momentum') + ' (3 weeks): <b>' + (s.momentum > 0 ? '+' : '') + s.momentum.toFixed(1) + '</b> ' + (s.momentum >= 0.5 ? '▲ toward change' : s.momentum <= -0.5 ? '▼ toward the status quo' : '· neutral'),
+        'Recent news is ' + (s.momentum >= 1.5 ? '<b>pushing strongly toward change</b>' : s.momentum >= 0.5 ? '<b>pushing toward change</b>' : s.momentum <= -1.5 ? '<b>pushing strongly toward keeping things as they are</b>' : s.momentum <= -0.5 ? '<b>pushing toward keeping things as they are</b>' : 'not pushing much either way') + '.') + '</div>';
+      var stats = mode === 'plain'
+        ? '<div class="stat"><div class="k">Chance it changes</div><div class="v">' + pct(s.linked_oracle != null ? s.linked_oracle : s.tip_probability) + '</div></div>' +
+          '<div class="stat"><div class="k">Simulation says</div><div class="v">' + pct(simTip) + '</div></div>' +
+          '<div class="stat"><div class="k">Decided by</div><div class="v" style="font-size:15px;padding-top:3px">' + fmtDate(s.window) + '</div></div>'
+        : '<div class="stat"><div class="k">' + T('gauge') + ' says</div><div class="v">' + pct(s.tip_probability) + '</div></div>' +
+          '<div class="stat"><div class="k">' + T('sandbox') + ' says</div><div class="v">' + pct(simTip) + '</div></div>' +
+          '<div class="stat"><div class="k">Decision point</div><div class="v" style="font-size:15px;padding-top:3px">' + fmtDate(s.window) + '</div></div>';
+      return '<article class="card sys" id="' + esc(s.id) + '">' +
+        '<div class="sys-head"><div><div class="sys-name">' + esc(s.name) + '</div><div class="sys-sub">' + L(esc(s.status_quo) + ' → ' + esc(s.change), 'Now: ' + esc(s.status_quo) + '. Could become: ' + esc(s.change) + '.') + '</div></div>' +
+        '<span class="status st-' + esc(s.status) + '"><i aria-hidden="true"></i>' + T(STATUS_KEY[s.status] || s.status) + '</span></div>' +
+        '<div class="gauge" data-tipkey="sys-' + esc(s.id) + '"><div class="rail"></div><div class="span" style="left:' + lo * 10 + '%;width:' + (hi - lo) * 10 + '%;background:' + (P > F ? 'var(--omen)' : 'var(--clio)') + '"></div>' +
+          '<div class="gm f" style="left:' + F * 10 + '%"></div><div class="gm p" style="left:' + P * 10 + '%"></div></div>' +
+        '<div class="g-axis"><span>0</span><span>5</span><span>10</span></div>' +
+        '<div class="g-read"><span><i class="sw wall"></i>' + T('friction') + ' <b>' + F.toFixed(1) + '</b></span>' + (mode === 'plain' ? '' : '<span>' + T('margin') + ' <b>' + (s.margin > 0 ? '+' : '') + s.margin.toFixed(1) + '</b></span>') +
+          '<span><i class="sw" style="background:var(--omen)"></i>' + T('pressure') + ' <b>' + P.toFixed(1) + '</b></span></div>' +
+        '<div class="sys-stats">' + stats + '</div>' + proj + mom +
+        '<details class="more"><summary>' + L('What is pushing and what is holding', 'Why?') + '</summary><div class="drivers">' +
+          '<div><h4><i class="sw" style="background:var(--omen)"></i>' + L(T('pressure') + ' (' + T('omen') + ')', 'Pushing for change') + '</h4><ul>' + (s.pressure_drivers || []).map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul></div>' +
+          '<div><h4><i class="sw wall"></i>' + L(T('friction') + ' (' + T('clio') + ')', 'Holding it in place') + '</h4><ul>' + (s.friction_drivers || []).map(function (x) { return '<li>' + esc(x) + '</li>'; }).join('') + '</ul></div></div>' +
+          '<div class="sys-foot">' + L('Scored by ', 'Graded by forecast ') + (s.tip_prediction ? '<button class="pill" type="button" data-jump="' + esc(s.tip_prediction) + '">' + esc(s.tip_prediction) + ' <b>' + pct(s.linked_oracle) + '</b></button>' : '—') +
+          (linkedCats.length ? L(' · Catalysts: ', ' · Turning points: ') + linkedCats.map(function (c) { return '<button class="pill" type="button" data-jump="' + esc(c.id) + '">' + fmtDate(c.date) + ' ' + esc(c.name) + '</button>'; }).join(' ') : '') + '</div>' +
+        '</details></article>';
+    }).join('') || '<div class="card empty">Nothing tracked yet.</div>';
+    systems.forEach(function (s) {
+      tipFns['sys-' + s.id] = function () {
+        return '<div class="t">' + esc(s.name) + '</div>' + tipRow('omen', Tx('pressure'), s.pressure.toFixed(1)) + tipRow('clio', Tx('friction'), s.friction.toFixed(1)) +
+          tipRow('', L('Tip chance (gauge)', 'Chance from push vs. resistance'), pct(s.tip_probability)) + (s.sim ? tipRow('sim', Tx('sandbox'), pct(s.sim.tip)) : '');
+      };
+    });
+  }
+
+  // ---------- turning points (catalysts) ----------
+  function renderCatalysts() {
+    var simSys = (SIM && SIM.systems) || {};
+    var list = cats.filter(function (c) { return c.status !== 'resolved'; }).concat(cats.filter(function (c) { return c.status === 'resolved'; }));
+    document.getElementById('catalysts').innerHTML = list.map(function (c) {
+      var dd = daysUntil(c.date);
+      var when = c.window_end ? fmtDate(c.date) + ' – ' + fmtDate(c.window_end) : fmtDate(c.date);
+      var rel = dd >= 0 ? inDays(c.date) : (c.window_end && daysUntil(c.window_end) >= 0 ? L('window open', 'could happen any day now') : inDays(c.date));
+      var branches = (c.branches || []).map(function (b) {
+        var cond = c.sim_conditional && c.sim_conditional[b.label], ifx = [];
+        if (cond && cond.systems) {
+          Object.keys(cond.systems).forEach(function (sid) { var base = simSys[sid] ? simSys[sid].tip : null, v = cond.systems[sid]; if (base != null && Math.abs(v - base) >= 0.03 && sysById[sid]) ifx.push({ sid: sid, base: base, v: v }); });
+          ifx.sort(function (p, q) { return Math.abs(q.v - q.base) - Math.abs(p.v - p.base); });
+        }
+        var won = c.outcome_branch === b.label;
+        return '<div class="branch"><div class="br-label">' + (won ? '✓ ' : '') + esc(b.label) + '</div><div class="br-prob">' + pct(b.prob) + '</div>' +
+          '<div class="br-bar"><div style="width:' + b.prob * 100 + '%"></div></div>' + (b.narrative ? '<div class="br-text">' + esc(b.narrative) + '</div>' : '') +
+          (ifx.length ? '<div class="br-if">' + ifx.slice(0, mode === 'plain' ? 3 : 4).map(function (x) {
+            return '<span class="ifx">' + L('IF this: ', 'If this happens: ') + esc(sysById[x.sid].name) + (mode === 'plain' ? ' changes ' : ' ') + '<b>' + pct(x.base) + ' → ' + pct(x.v) + '</b></span>'; }).join('') + '</div>' : '') + '</div>';
+      }).join('');
+      return '<article class="card cat" id="' + esc(c.id) + '"><div class="cat-head"><span class="cat-date">' + when + '</span><span class="cat-name">' + esc(c.name) + '</span>' +
+        '<span class="cat-kind">' + esc(mode === 'plain' ? (KIND_P[c.kind] || c.kind || '') : (c.kind || '')) + ' · ' + rel + (c.status === 'resolved' ? L(' · resolved', ' · happened') : '') + '</span></div>' +
+        ((c.linked_predictions || []).length ? '<div class="row-wrap" style="margin-top:6px">' + c.linked_predictions.map(function (id) {
+          var p = byId[id]; return p ? '<button class="pill" type="button" data-jump="' + esc(id) + '" title="' + esc(p.question) + '">' + esc(id) + ' <b>' + (p.status === 'open' ? pct(p.oracle) : (p.outcome ? 'YES' : 'NO')) + '</b></button>' : '';
+        }).join('') + '</div>' : '') +
+        (branches || '<div class="sys-foot">' + L('Scheduled event with no branches modeled.', 'A scheduled date; no outcomes modeled.') + '</div>') + '</article>';
+    }).join('') || '<div class="card empty">Nothing registered.</div>';
+  }
+
+  // ---------- forecasts (predictions) ----------
+  function renderPreds() {
+    var list = open.filter(function (p) { return state.dom === 'all' || p.domain === state.dom; });
+    var sorters = {
+      soon: function (p, q) { return p.resolves_on < q.resolves_on ? -1 : p.resolves_on > q.resolves_on ? 1 : 0; },
+      div: function (p, q) { return Math.abs(q.clio - q.omen) - Math.abs(p.clio - p.omen); },
+      move: function (p, q) { return Math.abs(lastDelta(q) || 0) - Math.abs(lastDelta(p) || 0); },
+      prob: function (p, q) { return q.oracle - p.oracle; }
+    };
+    list.sort(sorters[state.sort] || sorters.soon);
+    document.getElementById('preds').innerHTML = list.map(function (p) {
+      var d = lastDelta(p);
+      var deltaTxt = mode === 'plain' ? pword(p.oracle) : (d == null || Math.abs(d) < 0.005 ? 'new ' + fmtDate(p.created) : (d > 0 ? '▲ ' : '▼ ') + Math.round(Math.abs(d) * 100) + ' pts');
+      var gap = Math.abs(p.clio - p.omen), lo = Math.min(p.clio, p.omen), hi = Math.max(p.clio, p.omen), dd = daysUntil(p.resolves_on);
+      var ts = p.track_status;
+      var trk = ts ? '<span class="trk ' + (ts.met ? 'on' : 'off') + '"><i aria-hidden="true"></i>' + (mode === 'plain' ? (ts.met ? 'On course right now' : 'Not on course right now') : (ts.met ? 'On track' : 'Off track') + ' now (' + ts.value + (ts.proxy ? ', proxy' : '') + ')') + '</span>' : '';
+      var hist = (p.history || []).map(function (h) { return '<tr><td>' + esc(h.date) + '</td><td>' + pct(h.clio) + '</td><td>' + pct(h.omen) + '</td><td>' + (h.sim != null ? pct(h.sim) : '—') + '</td><td><b style="color:var(--ink)">' + pct(h.oracle) + '</b></td></tr>'; }).join('');
+      tipFns['p-' + p.id] = function () { return '<div class="t">' + esc(p.id) + '</div>' + tipRow('oracle', Tx('oracle'), pct(p.oracle)) + tipRow('clio', Tx('clio'), pct(p.clio)) + tipRow('omen', Tx('omen'), pct(p.omen)) + (p.sim != null ? tipRow('sim', Tx('sandbox'), pct(p.sim)) : '') + (p.market != null ? tipRow('market', Tx('market'), pct(p.market)) : ''); };
+      var meta = mode === 'plain'
+        ? '<span>' + DOM(p.domain) + '</span><span>Answer due ' + fmtDate(p.resolves_on) + ' (' + (dd >= 0 ? inDays(p.resolves_on) : 'overdue') + ')</span>' + (gap >= 0.3 ? '<span class="flag"><i class="ic">!</i>History and current events disagree</span>' : '') + trk
+        : '<span>' + esc(p.id) + '</span><span>' + DOM(p.domain) + '</span><span>' + (mode === 'guided' ? '<span class="term" tabindex="0" data-tipkey="g-horizon">' + esc(p.horizon) + '</span>' : esc(p.horizon)) + '</span>' +
+          '<span>' + T('resolve').toLowerCase().replace('resolves', 'resolves') + ' ' + fmtDate(p.resolves_on) + (dd >= 0 ? ' (' + (dd === 0 ? 'today' : dd + 'd') + ')' : ' (due)') + '</span>' +
+          (gap >= 0.3 ? '<span class="flag"><i class="ic">!</i>' + T('divergence') + ' ' + Math.round(gap * 100) + ' pts</span>' : '') + trk;
+      return '<article class="card pred" id="' + esc(p.id) + '"><div class="pred-head"><div><div class="pred-q">' + esc(p.question) + '</div><div class="pred-meta">' + meta + '</div></div>' +
+        '<div class="pred-p"><div class="big">' + pct(p.oracle) + '</div><div class="delta' + (mode === 'plain' ? ' pword' : '') + '">' + deltaTxt + '</div></div></div>' +
+        '<div class="track-wrap" data-tipkey="p-' + esc(p.id) + '" tabindex="0" aria-label="' + Tx('clio') + ' ' + pct(p.clio) + ', ' + Tx('omen') + ' ' + pct(p.omen) + ', ' + Tx('oracle') + ' ' + pct(p.oracle) + '">' +
+          '<div class="track"><div class="rail"></div><div class="mid"></div><div class="span" style="left:' + lo * 100 + '%;width:' + (hi - lo) * 100 + '%"></div>' +
+          (p.market != null ? '<div class="mk market" style="left:' + p.market * 100 + '%"></div>' : '') + (p.sim != null ? '<div class="mk sim" style="left:' + p.sim * 100 + '%"></div>' : '') +
+          '<div class="mk clio" style="left:' + p.clio * 100 + '%"></div><div class="mk omen" style="left:' + p.omen * 100 + '%"></div><div class="mk oracle" style="left:' + p.oracle * 100 + '%"></div></div>' +
+          '<div class="axis-labels"><span>0%</span><span>50%</span><span>100%</span></div></div>' +
+        '<details class="more"><summary>' + L('Reasoning &amp; history', 'Why?') + '</summary><div class="reason">' +
+          '<div><span class="tag"><i class="sw" style="background:var(--clio)"></i><b>' + Tx('clio') + ' ' + pct(p.clio) + '</b></span>' + esc(p.reasoning && p.reasoning.clio) + '</div>' +
+          '<div><span class="tag"><i class="sw" style="background:var(--omen)"></i><b>' + Tx('omen') + ' ' + pct(p.omen) + '</b></span>' + esc(p.reasoning && p.reasoning.omen) + '</div>' +
+          (p.sim != null ? '<div><span class="tag"><i class="sw sim"></i><b>' + Tx('sandbox') + ' ' + pct(p.sim) + '</b></span>' + L('Agent simulation, tracked separately (not part of the blend).', 'A second opinion from the computer simulation. It doesn’t change ORACLE’s number.') + '</div>' : '') +
+          (p.adjustment && p.adjustment.value ? '<div><b>' + L('Judge adjustment', 'ORACLE’s own nudge') + ' ' + (p.adjustment.value > 0 ? '+' : '') + Math.round(p.adjustment.value * 100) + ' pts:</b> ' + esc(p.adjustment.reason) + '</div>' : '') +
+          (p.market_source ? '<div><span class="tag"><i class="sw market"></i><b>' + Tx('market') + ' ' + pct(p.market) + '</b></span>' + esc(p.market_source) + '</div>' : '') +
+          '<div><b>' + L('Resolves by:', 'How the answer will be checked:') + '</b> ' + esc(p.resolution_source) + '</div>' +
+          (mode === 'plain' ? '' : '<table class="small-table"><thead><tr><th>Date</th><th>CLIO</th><th>OMEN</th><th>Sandbox</th><th>ORACLE</th></tr></thead><tbody>' + hist + '</tbody></table>') +
+        '</div></details></article>';
+    }).join('') || '<div class="card empty">No open forecasts in this topic.</div>';
+    Array.prototype.forEach.call(document.querySelectorAll('#filters .chip'), function (c) { c.setAttribute('aria-pressed', c.getAttribute('data-dom') === state.dom ? 'true' : 'false'); });
+    store('oracle-view', state);
+  }
+
+  // ---------- simulated players ----------
+  function renderAgents() {
+    var host = document.getElementById('agents');
+    if (!SIM || !SIM.agents_now) { host.innerHTML = '<div class="empty">The simulation has not run yet.</div>'; return; }
+    function meter(v, proj) {
+      return '<div class="meter"><div class="fill" style="width:' + v + '%"></div>' + (proj != null ? '<div class="proj" style="left:' + proj + '%"></div>' : '') + '</div><div class="meter-v">' + Math.round(v) + (proj != null ? ' → ' + Math.round(proj) : '') + '</div>';
+    }
+    host.innerHTML = '<table class="ag-table"><thead><tr><th>' + L('Agent', 'Group') + '</th><th>' + T('anger') + '</th><th>' + T('mobilization') + '</th><th>' + T('trust') + '</th></tr></thead><tbody>' +
+      AGENTS.map(function (ag) {
+        var v = SIM.agents_now[ag.id]; if (!v) return '';
+        var p30 = (SIM.agents_day30 || {})[ag.id] || {};
+        return '<tr><td><div class="ag-name">' + esc(ag.name) + '</div><div class="ag-desc">' + esc(ag.description) + '</div></td><td>' + meter(v.A, p30.A) + '</td><td>' + meter(v.M, p30.M) + '</td><td>' + meter(v.T, null) + '</td></tr>';
+      }).join('') + '</tbody></table>' +
+      '<p class="sec-sub" style="margin:8px 0 6px">' + L(T('sandbox') + ': ' + SIM.runs + ' simulated futures, ' + SIM.horizon_days + ' days ahead, ~' + SIM.events_per_day + ' news events per day drawn from ' + SIM.event_pool + ' recent scored events.',
+        'The simulation plays out ' + SIM.runs.toLocaleString() + ' possible futures using the mix of recent real news. It’s a rough model, so treat it as a second opinion.') + '</p>';
+  }
+
+  // ---------- key numbers ----------
+  var NUMS = [['SP500', 'S&P 500', 'Stock market (S&P 500)', 0], ['VIXCLS', 'VIX', 'Market fear index (VIX)', 1], ['DCOILBRENTEU', 'Brent spot ($)', 'Oil price ($ per barrel)', 2], ['GASREGW', 'Gasoline ($/gal)', 'Gas price ($ per gallon)', 2],
+    ['DFEDTARU', 'Fed funds (upper %)', 'Fed interest rate (%)', 2], ['DGS10', '10-yr yield (%)', 'Long-term interest rate (%)', 2], ['cpi_yoy', 'CPI y/y (%)', 'Inflation (% over a year)', 1], ['core_cpi_yoy', 'Core CPI y/y (%)', 'Inflation without food & energy (%)', 1],
+    ['payrolls_change', 'Payrolls (k, m/m)', 'Jobs added last month (thousands)', 0], ['UNRATE', 'Unemployment (%)', 'Unemployment (%)', 1], ['ICSA', 'Jobless claims', 'New jobless claims (weekly)', 0], ['UMCSENT', 'Consumer sentiment', 'Consumer mood (index)', 1]];
+  function renderNumbers() {
+    var host = document.getElementById('numbers'); if (!host) return;
+    if (!MET) { host.innerHTML = '<div class="card empty">No numbers yet.</div>'; return; }
+    var ink2 = getComputedStyle(root).getPropertyValue('--ink-2').trim();
+    host.innerHTML = NUMS.map(function (n) {
+      var s = (MET.series || {})[n[0]], dv = (MET.derived || {})[n[0]];
+      if (!s && !dv) return '';
+      var v = s ? s.last : dv.value, date = s ? s.last_date : dv.date, spark = '';
+      if (s && s.history && s.history.length > 2) {
+        var h = s.history.slice(-60), vals = h.map(function (x) { return x[1]; }), mn = Math.min.apply(null, vals), mx = Math.max.apply(null, vals), rg = mx - mn || 1;
+        spark = '<svg viewBox="0 0 100 30" preserveAspectRatio="none" aria-hidden="true"><polyline fill="none" stroke="' + ink2 + '" stroke-width="1.5" vector-effect="non-scaling-stroke" points="' + h.map(function (x, i) { return (i / (h.length - 1) * 100).toFixed(2) + ',' + (28 - (x[1] - mn) / rg * 24).toFixed(2); }).join(' ') + '"/></svg>';
+      }
+      var ch = s && s.change != null ? (s.change > 0 ? '+' : '') + Number(s.change.toFixed(n[3] || 2)) : '';
+      return '<div class="card nm"><div class="k">' + (mode === 'plain' ? n[2] : n[1]) + '</div><div class="v">' + Number(v).toLocaleString(undefined, { maximumFractionDigits: n[3], minimumFractionDigits: n[3] }) + '</div>' +
+        '<div class="s">' + (ch ? ch + ' · ' : '') + fmtDate(date) + '</div>' + spark + '</div>';
+    }).join('');
+  }
+
+  // ---------- last week in review ----------
+  function renderReview() {
+    var R = D.review, host = document.getElementById('review');
+    if (!R) { host.innerHTML = '<div class="empty">No review yet.</div>'; return; }
+    var h = '<h3>' + L('Results since ', 'Graded since ') + fmtDate(R.since) + '</h3>';
+    h += R.resolved.length ? '<ul>' + R.resolved.map(function (x) {
+      return '<li><b>' + (x.hit ? '✓' : x.hit === false ? '✗' : '–') + ' ' + esc(x.question) + '</b> → ' + (x.outcome ? 'YES' : 'NO') + '. ' + Tx('oracle') + ' ' + pct(x.oracle) + ', ' + Tx('clio') + ' ' + pct(x.clio) + ', ' + Tx('omen') + ' ' + pct(x.omen) + '. ' + L('Closer: ' + x.closer_engine, 'Closer: ' + (x.closer_engine === 'CLIO' ? 'history' : x.closer_engine === 'OMEN' ? 'current events' : 'a tie')) + '.</li>';
+    }).join('') + '</ul>' : '<ul><li>' + L('Nothing resolved in the last 7 days.', 'Nothing was graded in the last 7 days.') + '</li></ul>';
+    h += '<h3>' + L('Biggest moves vs a week ago', 'Biggest changes since last week') + '</h3>' + (R.big_moves.length ? '<ul>' + R.big_moves.map(function (m) { return '<li><b>' + esc(m.question) + '</b> ' + pct(m.then) + ' → <b>' + pct(m.now) + '</b></li>'; }).join('') + '</ul>'
+      : '<ul><li>' + L('No forecast moved 5+ points over the past week (or ORACLE is less than a week old).', 'No forecast changed much yet. ORACLE is less than a week old.') + '</li></ul>');
+    h += '<h3>' + L(T('weights') + ' changes', 'Changes in who ORACLE trusts') + '</h3>' + (R.weight_changes.length ? '<ul>' + R.weight_changes.map(function (w) {
+      return '<li>' + fmtDate(w.date) + ' · ' + DOM(w.domain) + ': ' + Tx('clio') + ' ' + pct(w.clio) + ' / ' + Tx('omen') + ' ' + pct(w.omen) + '</li>'; }).join('') + '</ul>' : '<ul><li>' + L('No changes yet.', 'No changes yet; it needs graded forecasts first.') + '</li></ul>');
+    h += '<h3>' + L('Live tracking', 'Live checks on the numbers') + '</h3>' + (R.tracked.length ? '<ul>' + R.tracked.map(function (t) {
+      return '<li><span class="trk ' + (t.met ? 'on' : 'off') + '"><i aria-hidden="true"></i>' + (t.met ? L('On track', 'On course') : L('Off track', 'Not on course')) + '</span> ' + esc(t.question) + L(' Latest: ' + t.value + ' (' + fmtDate(t.date) + (t.proxy ? ', proxy' : '') + ')', '') + '</li>'; }).join('') + '</ul>' : '<ul><li>No tracked numbers.</li></ul>');
+    host.innerHTML = h;
+  }
+
+  // ---------- graded forecasts ----------
+  function renderResolved() {
+    var host = document.getElementById('resolved');
+    if (!resolved.length) { host.innerHTML = '<div class="empty">' + L('Nothing resolved yet. The first answers come in over the next few days.', 'Nothing graded yet. The first answers come in over the next few days.') + '</div>'; return; }
+    host.innerHTML = resolved.slice().sort(function (p, q) { return p.resolved_on < q.resolved_on ? 1 : -1; }).map(function (p) {
+      var cls = p.hit === true ? 'yes' : p.hit === false ? 'no' : 'nc';
+      return '<div class="res-row" id="res-' + esc(p.id) + '"><div class="res-ic ' + cls + '" aria-label="' + (p.hit ? 'Right' : p.hit === false ? 'Wrong' : 'No call') + '">' + (p.hit ? '✓' : p.hit === false ? '✗' : '–') + '</div>' +
+        '<div><div class="res-q">' + esc(p.question) + '</div><div class="res-note">' + (p.outcome ? 'YES' : 'NO') + ' · ' + esc(p.resolved_on || '') + (p.resolution_note ? ' · ' + esc(p.resolution_note) : '') + '</div></div>' +
+        '<div class="res-b">' + Tx('oracle') + ' ' + pct(p.oracle) + (mode === 'plain' ? '' : '<br>Brier ' + (p.brier && p.brier.oracle != null ? p.brier.oracle.toFixed(3) : '—')) + '</div></div>';
+    }).join('');
+  }
+
+  // ---------- accuracy chart ----------
+  function renderScoreChart() {
+    var host = document.getElementById('scoreChart'); if (!host) return;
+    var log = (D.score_log || []).filter(function (r) { return r.brier_oracle != null; });
+    if (log.length < 2) {
+      host.innerHTML = '<div class="empty" style="padding:24px 0">' + (log.length === 1 ? 'One day of scores so far (' + Tx('oracle') + ' ' + log[0].brier_oracle.toFixed(3) + '). The trend line appears after the second graded day.' : L('No resolved predictions yet. This chart fills in as answers come in.', 'Nothing graded yet. This chart fills in as answers come in.')) + '</div>';
+      return;
+    }
+    var cs = getComputedStyle(root); function v(n) { return cs.getPropertyValue(n).trim(); }
+    var series = [{ key: 'brier_oracle', label: Tx('oracle'), color: v('--oracle'), w: 2.5, c: 'oracle' }, { key: 'brier_clio', label: L('CLIO', 'History'), color: v('--clio'), w: 2, c: 'clio' },
+      { key: 'brier_omen', label: L('OMEN', 'Current events'), color: v('--omen'), w: 2, c: 'omen' }, { key: 'brier_sim', label: L('Sandbox', 'Simulation'), color: v('--sim'), w: 2, c: 'sim' }, { key: 'brier_market', label: L('Market', 'Betting markets'), color: v('--market'), w: 2, dash: '4 3', c: 'market' }];
+    var W = host.clientWidth || 500, H = 220, m = { l: 40, r: 12, t: 10, b: 24 }, iw = W - m.l - m.r, ih = H - m.t - m.b, maxY = 0.3;
+    log.forEach(function (r) { series.forEach(function (s) { if (r[s.key] != null) maxY = Math.max(maxY, r[s.key]); }); });
+    maxY = Math.ceil(maxY * 20) / 20;
+    function x(i) { return m.l + i * iw / (log.length - 1); } function y(val) { return m.t + ih - (val / maxY) * ih; }
+    var svg = '<svg width="' + W + '" height="' + H + '" role="img" aria-label="Accuracy over time">';
+    for (var g = 0; g <= maxY + 1e-9; g += 0.05) svg += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + y(g) + '" y2="' + y(g) + '" stroke="' + v('--grid') + '"/><text x="' + (m.l - 6) + '" y="' + (y(g) + 4) + '" text-anchor="end" font-size="11" fill="' + v('--muted') + '">' + g.toFixed(2) + '</text>';
+    svg += '<line x1="' + m.l + '" x2="' + (W - m.r) + '" y1="' + y(0.25) + '" y2="' + y(0.25) + '" stroke="' + v('--axis') + '" stroke-dasharray="2 3"/><text x="' + (W - m.r) + '" y="' + (y(0.25) - 4) + '" text-anchor="end" font-size="11" fill="' + v('--muted') + '">coin flip</text>';
+    [0, log.length - 1].forEach(function (i) { svg += '<text x="' + x(i) + '" y="' + (H - 6) + '" text-anchor="' + (i === 0 ? 'start' : 'end') + '" font-size="11" fill="' + v('--muted') + '">' + fmtDate(log[i].date) + '</text>'; });
+    series.forEach(function (s) {
+      var pts = []; log.forEach(function (r, i) { if (r[s.key] != null) pts.push(x(i) + ',' + y(r[s.key])); });
+      if (pts.length > 1) svg += '<polyline fill="none" stroke="' + s.color + '" stroke-width="' + s.w + '" stroke-linejoin="round" stroke-linecap="round"' + (s.dash ? ' stroke-dasharray="' + s.dash + '"' : '') + ' points="' + pts.join(' ') + '"/>';
+      else if (pts.length === 1) { var q = pts[0].split(','); svg += '<circle cx="' + q[0] + '" cy="' + q[1] + '" r="4" fill="' + s.color + '"/>'; }
+    });
+    svg += '<line id="xh" x1="0" x2="0" y1="' + m.t + '" y2="' + (m.t + ih) + '" stroke="' + v('--axis') + '" visibility="hidden"/><rect x="' + m.l + '" y="' + m.t + '" width="' + iw + '" height="' + ih + '" fill="transparent" id="hit"/></svg>';
+    host.innerHTML = '<div class="legend">' + series.map(function (s) { return '<span><i class="sw" style="background:' + s.color + '"></i>' + s.label + '</span>'; }).join('') + '</div>' + svg;
+    var hit = host.querySelector('#hit'), xh = host.querySelector('#xh');
+    hit.addEventListener('pointermove', function (e) {
+      var r = hit.getBoundingClientRect(), i = Math.max(0, Math.min(log.length - 1, Math.round((e.clientX - r.left) / r.width * (log.length - 1)))), row = log[i];
+      xh.setAttribute('x1', x(i)); xh.setAttribute('x2', x(i)); xh.setAttribute('visibility', 'visible');
+      showTip('<div class="t">' + fmtDate(row.date) + ' · ' + row.total_resolved + L(' resolved', ' graded') + '</div>' + series.map(function (s) { return row[s.key] != null ? tipRow(s.c, s.label, row[s.key].toFixed(3)) : ''; }).join(''), e.clientX, e.clientY);
+    });
+    hit.addEventListener('pointerleave', function () { xh.setAttribute('visibility', 'hidden'); hideTip(); });
+  }
+
+  // ---------- shared live math (mirrors tools/core.py, so the page can show and check its work) ----------
+  function fx(x, n) { return x == null || isNaN(x) ? '—' : Number(x).toFixed(n == null ? 3 : n); }
+  function sig(x) { return 1 / (1 + Math.exp(-x)); }
+  var KW = { election: 0.5, decision: 0.2, ruling: 0.2, deadline: 0.15, event: 0.1, data: 0.05, market: 0 };
+  function intens(e) { var s = [e.omen.chaos, e.omen.polarization, e.omen.economic]; return 0.5 * Math.max(s[0], s[1], s[2]) + 0.5 * (s[0] + s[1] + s[2]) / 3; }
+  function volMath() {
+    var cfg = D.config || {}, hl = cfg.vol_halflife || 5, win = cfg.vol_window || 14, rows = [], sw = 0, swi = 0, swr = 0;
+    EVENTS.forEach(function (e) {
+      var age = -daysUntil(e.date); if (age < 0 || age > win) return;
+      var w = Math.pow(0.5, age / hl), I = intens(e);
+      sw += w; swi += w * I; swr += w * e.clio.resistance;
+      rows.push({ e: e, age: age, w: w, I: I });
+    });
+    var cal = [], pm = 0;
+    cats.forEach(function (c) {
+      if ((c.status || 'upcoming') !== 'upcoming') return;
+      var st = daysUntil(c.date), en = daysUntil(c.window_end || c.date);
+      if (en < 0 || st > 30) return;
+      var s0 = Math.max(0, st), near = en > s0 ? 10 / (en - s0) * (Math.exp(-s0 / 10) - Math.exp(-en / 10)) : Math.exp(-s0 / 10);
+      var kw = KW[c.kind] != null ? KW[c.kind] : 0.1;
+      cal.push({ c: c, s0: s0, en: en, near: near, kw: kw, add: kw * near }); pm += kw * near;
+    });
+    var cap = cfg.pm_cap || 0.6, Pm = 1 + Math.min(cap, pm), wo = 0, wc = 0;
+    DOM_KEYS.forEach(function (k) { var w = (D.weights || {})[k] || { clio: 0.5, omen: 0.5 }; wo += w.omen / 4; wc += w.clio / 4; });
+    var O = sw ? swi / sw : null, C = sw ? swr / sw : null, Is = cfg.inertia || 1, A = wo * O * Pm, B = wc * C * Is;
+    return { rows: rows, sw: sw, swi: swi, swr: swr, O: O, C: C, cal: cal, pmSum: pm, Pm: Pm, cap: cap, wo: wo, wc: wc, Is: Is, A: A, B: B, V: A / (A + B), hl: hl, win: win };
+  }
+  function check(mine, stored, tol) {
+    if (stored == null) return '';
+    return Math.abs(mine - stored) <= (tol || 0.0015) ? '  <span class="ok">✓ matches core.py (' + fx(stored) + ')</span>' : '  <span class="bad">✗ core.py stored ' + fx(stored) + '</span>';
+  }
+  function statusOf(m) { return m < -2 ? 'holding' : m < -0.5 ? 'strained' : m <= 0.5 ? 'critical' : 'tipping'; }
+
+  // ---------- How it works ----------
+  function renderHow() {
+    var vm = volMath(), cfg = D.config || {}, k = cfg.k || 0.6;
+    var ex = (byId['P-0001'] && byId['P-0001'].status === 'open') ? byId['P-0001'] : open[0];
+    var sx = sysById['S-HOUSE'] || systems[0];
+    var exW = ex ? ((D.weights || {})[ex.domain] || { clio: 0.5, omen: 0.5 }) : null;
+    var HS = D.history_scale || {}, eraById = {}; (HS.eras || []).forEach(function (e) { eraById[e.id] = e; });
+    var near = HS.closest_level ? eraById[HS.closest_level[0]] : null;
+    var h = '<div class="card how">';
+    h += '<h3>' + L('What ORACLE is', 'What is ORACLE?') + '</h3><p>' + L(
+      'A personal forecasting system for the United States covering politics, the economy, unrest and foreign affairs. It maintains about 15–35 binary, dated, checkable predictions with probabilities, models where the status quo is under strain, and grades itself against outcomes. Judgment comes from Claude (an AI) following a fixed rulebook; all arithmetic is done by code.',
+      'A forecasting system for the United States. Every morning it reads the news and official data, updates a couple dozen yes-or-no forecasts, each with a percentage chance, and later checks itself against what actually happened. The judgment calls are made by an AI (Claude) following a written rulebook. Every calculation is done by code, the same way every day, and you can see all of it in the Raw math tab.') + '</p>';
+
+    h += '<h3>' + L('The daily cycle', 'What happens every morning') + '</h3><ol>' +
+      '<li><b>' + L('Feed', 'Collect') + ':</b> ' + L('feed.py pulls ~450 headlines from 17 RSS sources across the spectrum (AP, Reuters, NPR, Fox News, The Guardian, BBC, Fed, BLS…), clusters duplicates into ~45 stories, and fetches 15 FRED series.', 'News from 17 outlets across the political spectrum (about 450 headlines, boiled down to ~45 stories) plus 15 official economic numbers.') + '</li>' +
+      '<li><b>' + L('Resolve', 'Grade') + ':</b> ' + L('Questions past their date are resolved from their named source; Brier scores and weights are updated.', 'Forecasts whose answer is now known get marked right or wrong.') + '</li>' +
+      '<li><b>' + L('Score events', 'Rate the news') + ':</b> ' + L('8–20 key events scored 1–10 on chaos, polarization and economic disruption (' + T('omen') + ') and on precedent and institutional resistance (' + T('clio') + '), using fixed anchors.', 'The day’s most important events each get 1–10 ratings: how chaotic, how politically divisive, how economically damaging, and how well institutions absorbed them. Fixed examples keep the ratings consistent: "a hot inflation report = 5", "9/11 = 10".') + '</li>' +
+      '<li><b>' + L('Sandbox', 'Simulate') + ':</b> ' + L('sim.py replays new events into 11 agents and runs 1,000 Monte Carlo futures.', 'A computer simulation plays out 1,000 possible next months.') + '</li>' +
+      '<li><b>' + L('Judge', 'Two engines weigh in') + ':</b> ' + L(T('clio') + ' and ' + T('omen') + ' each give a probability for every question, and readings for every system.', 'The history engine and the current-events engine each give their own number for every forecast.') + '</li>' +
+      '<li><b>' + L('Compute', 'Do the math') + ':</b> ' + L('core.py blends, scores, updates weights, computes gauges, V, the shock watch and the historical scale. No final number is typed by hand.', 'Code combines everything into the final numbers. No final number is ever typed in by hand.') + '</li>' +
+      '<li><b>' + L('Publish', 'Report') + ':</b> ' + L('Briefing written; build.py packages data; this page is republished.', 'The briefing is written and this page is updated.') + '</li></ol>';
+
+    h += '<h3>' + L('Two engines: ' + T('clio') + ' and ' + T('omen'), 'Two engines that argue') + '</h3><p>' + L(
+      T('clio') + ' is the outside view: it starts from base rates and reference classes ("the president’s party lost House seats in 18 of 20 midterms since 1946") and represents institutional friction. ' + T('omen') + ' is the inside view: specific current evidence and shocks in either direction, representing pressure. Starting from the base rate and adjusting for specifics is the approach used by the most accurate human forecasters (Tetlock’s "superforecasters").',
+      'The <b>history engine</b> asks: "Ignoring today’s headlines, how often does this kind of thing happen?" For example, the president’s party has lost House seats in 18 of the last 20 midterm elections. The <b>current-events engine</b> asks: "What’s different right now?" Starting from history and then adjusting for what’s new is how the most accurate human forecasters work.') + '</p>';
+
+    if (ex) {
+      var raw = exW.clio * ex.clio + exW.omen * ex.omen + ((ex.adjustment || {}).value || 0);
+      h += '<h3>' + L('How a forecast’s probability is made', 'How a forecast gets its percentage') + '</h3><p>' + L(
+        'ORACLE = w<sub>CLIO</sub>·CLIO + w<sub>OMEN</sub>·OMEN + adjustment (at most ±10 pts), clamped to 2–98%. The weights are learned per topic. Live example, ' + esc(ex.id) + ':',
+        'ORACLE takes a weighted average of the two engines’ numbers. Each engine’s weight depends on how accurate it has been on that topic. Live example: "' + esc(ex.question) + '"') + '</p>' +
+        '<div class="eq">' + L('ORACLE', 'Final') + ' = ' + fx(exW.clio, 2) + ' × ' + fx(ex.clio, 2) + ' (' + L('CLIO', 'history') + ')  +  ' + fx(exW.omen, 2) + ' × ' + fx(ex.omen, 2) + ' (' + L('OMEN', 'current events') + ')\n      = ' + fx(raw) + '  →  ' + pct(ex.oracle) + '</div>';
+    }
+    if (sx) {
+      h += '<h3>' + L(T('pressure') + ' vs ' + T('friction'), 'Push for change vs. resistance') + '</h3><p>' + L(
+        'Each ' + T('system') + ' carries a pressure reading (OMEN, 0–10) and a friction reading (CLIO, 0–10). The tipping probability is a logistic curve on the gap, with k = ' + k + '. Readings are cross-checked against linked predictions and against news momentum computed from scored events. Example, ' + esc(sx.name) + ':',
+        'For each thing that could change, the current-events engine rates the push for change (0–10) and the history engine rates the resistance (0–10). The bigger the gap, the likelier the change. An S-shaped curve turns the gap into a percentage. Example, ' + esc(sx.name) + ':') + '</p>' +
+        '<div class="eq">' + L('gap', 'gap') + ' = ' + fx(sx.pressure, 1) + ' − ' + fx(sx.friction, 1) + ' = ' + fx(sx.pressure - sx.friction, 1) + '\nchance = 1 / (1 + e^(−' + k + ' × ' + fx(sx.pressure - sx.friction, 1) + ')) = ' + fx(sig(k * (sx.pressure - sx.friction))) + '  →  ' + pct(sig(k * (sx.pressure - sx.friction))) + '</div>';
+    }
+    h += '<h3>' + L('The stability meter (' + T('V') + ')', 'The stability meter') + '</h3><p>' + L(
+      'V = A ÷ (A + B), with A = w<sub>OMEN</sub> × O × P<sub>m</sub> (push) and B = w<sub>CLIO</sub> × C × I<sub>s</sub> (hold). O is the recency-weighted average event intensity over 14 days (weight halves every 5 days), C is the weighted average institutional resistance, and P<sub>m</sub> rises when elections or decisions are near. Today:',
+      'It compares how hard recent news has hit (the push) with how well institutions have absorbed it (the hold), and gets more sensitive when big dates are close. Push ÷ (push + hold) always lands between 0 and 1. Today:') + '</p>' +
+      '<div class="eq">A = ' + fx(vm.wo, 2) + ' × ' + fx(vm.O, 2) + ' × ' + fx(vm.Pm, 2) + ' = ' + fx(vm.A, 2) + L('', '   (push)') + '\nB = ' + fx(vm.wc, 2) + ' × ' + fx(vm.C, 2) + ' × ' + fx(vm.Is, 2) + ' = ' + fx(vm.B, 2) + L('', '   (hold)') + '\nV = ' + fx(vm.A, 2) + ' / (' + fx(vm.A, 2) + ' + ' + fx(vm.B, 2) + ') = ' + fx(vm.V, 2) + '</div>' +
+      '<p>' + L('Bands (calibrated on the historical eras): Alpha < 0.40 ≤ Gamma < 0.60 ≤ Beta < 0.75 ≤ Omega. The historical scale runs ' + (HS.eras || []).length + ' past eras, each snapshotted as ~5 scored events, through the identical formula; today’s nearest in level is ' + (near ? esc(near.name) + ' (' + fx(near.V, 2) + ')' : '—') + '. V is made falsifiable by the shock watch: P(chaos-7+ event or 2.5% S&P move within 7 days) = σ(a + b·V), graded after 8 days and re-fitted after 20 grades.',
+        'To give the number meaning, ' + (HS.eras || []).length + ' moments in history were rated with the same rules and run through the same formula. Today is closest to ' + (near ? esc(near.name) + ' (' + esc(near.when) + ', ' + fx(near.V, 2) + ')' : '—') + '. Every day ORACLE also makes a checkable bet from this number: the chance of a big shock within a week. That bet gets graded automatically, so you can see whether the meter actually means anything.') + '</p>';
+
+    h += '<h3>' + L(T('catalyst') + 's and the ' + T('sandbox'), 'Turning points and the simulation') + '</h3><p>' + L(
+      'Catalysts are dated events with 2–4 branches whose probabilities sum to 1, each carrying pressure and agent effects. sim.py simulates 11 agents (anger, mobilization, trust) across 1,000 futures in which background news is bootstrapped from recent scored events and catalysts resolve by their branch odds. This yields Sandbox probabilities, which are tracked and Brier-scored but kept out of the blend, plus IF/THEN numbers per branch.',
+      'Turning points are dates when something could swing, like a Fed decision or an election, each with its possible outcomes and their odds. The simulation has 11 imaginary groups (swing voters, both parties, protesters, Wall Street, the Fed, the courts, Iran and others) react to news across 1,000 possible futures. That shows what changes IF each outcome happens. Its numbers are kept separate as a second opinion and graded too.') + '</p>';
+
+    h += '<h3>' + L('Scoring and learning', 'How ORACLE is graded and learns') + '</h3><p>' + L(
+      'Brier score = (p − outcome)², where 0 is perfect and 0.25 is coin-flipping. Per domain, after each resolution: w ← w·e^(−' + (cfg.eta || 0.5) + '·Brier), renormalized and clamped to 20–80%. From 40 results on, Platt calibration (heavily regularized and capped) corrects systematic over- or underconfidence. Past forecasts are never edited.',
+      'Every forecast is graded when its answer arrives, with an accuracy score = (forecast − result)². Say ORACLE said 80%. If it happens, the penalty is tiny (0.04). If it doesn’t, the penalty is big (0.64). Always guessing 50% would score 0.25. After each grade, ORACLE listens a little more to whichever engine was closer. Once there are 40 grades, it also corrects any habit of being too confident. Old forecasts are never edited to look better.') + '</p>' +
+      '<div class="eq">' + L('Brier', 'penalty') + ' = (0.80 − 1)² = 0.04     ' + L('Brier', 'penalty') + ' = (0.80 − 0)² = 0.64\n' + L('w_engine ← w_engine × e^(−0.5 × Brier), then rescale to sum 1', 'closer engine’s weight goes up a few points each time') + '</div>';
+
+    h += '<h3>' + L('Sources', 'Where the information comes from') + '</h3><p>' + L(
+      'RSS: AP, Reuters, C-SPAN (via Google News), BBC, PBS, The Hill, Axios, NPR, Politico, The Guardian US, Fox News, Washington Examiner, the Federal Reserve, BLS. Data: FRED (S&P 500, VIX, Brent, gasoline, the Fed funds rate, 10y, CPI, core CPI, payrolls, unemployment, claims, sentiment). Benchmarks: Kalshi, Polymarket, Metaculus, CME FedWatch, Decision Desk HQ. Surprising claims need a second independent source.',
+      'Wire services (AP, Reuters), outlets on the left, center and right (from The Guardian to Fox News), C-SPAN, and official sources (the Federal Reserve, the Labor Department, FRED economic data). Betting markets are used as a benchmark to beat. Anything surprising has to be confirmed by a second independent source.') + '</p>';
+
+    h += '<h3>' + L('Limits', 'What ORACLE can’t do') + '</h3><ul>' +
+      '<li>' + L('Inputs (event scores, engine probabilities, gauge readings) are AI judgments on fixed rubrics. They are consistent, not objective.', 'The ratings and engine numbers are judgment calls by an AI using fixed rules. They are consistent, but not "objective truth."') + '</li>' +
+      '<li>' + L('True surprises are, by definition, under-forecast; the shock watch measures how badly.', 'No system sees true surprises coming. The shock-watch record shows how often ORACLE gets caught off guard.') + '</li>' +
+      '<li>' + L('The historical scale is scored with hindsight: a ruler, not evidence. Backtesting is impossible without contamination, so the track record comes only from live forecasts.', 'The history comparisons were rated with hindsight, so they’re a measuring stick, not proof. ORACLE’s real track record only comes from live forecasts graded over time.') + '</li>' +
+      '<li>' + L('No memory between runs except the files. The sandbox parameters are hand-set. Not financial advice.', 'The simulation is a rough model with hand-picked settings. This is a personal tool, not financial advice.') + '</li>' +
+      '<li>' + L('Trust should come from the Scorecard, not from the math looking sophisticated.', 'Trust ORACLE as much as its accuracy grade says, and no more.') + '</li></ul>';
+    return h + '</div>';
+  }
+
+  // ---------- Raw math ----------
+  function renderRaw() {
+    var vm = volMath(), cfg = D.config || {}, k = cfg.k || 0.6, out = [];
+    function ln(s) { out.push('<div class="ln">' + s + '</div>'); }
+    function table(head, rows) { return '<div class="raw-wrap"><table><tr>' + head.map(function (x) { return '<th>' + x + '</th>'; }).join('') + '</tr>' + rows.map(function (r) { return '<tr>' + r.map(function (x) { return '<td>' + x + '</td>'; }).join('') + '</tr>'; }).join('') + '</table></div>'; }
+    out.push('<div class="card raw">');
+    ln('<span class="dim">// Every number below is recomputed in your browser from the raw data, using the same formulas as tools/core.py. ✓ means it matches what the morning run stored. Date: ' + D.meta.last_run + '</span>');
+
+    out.push('<h3>1 · Stability meter V</h3>');
+    ln('intensity I = 0.5·max(chaos, polarization, economic) + 0.5·mean(…)    weight w = 0.5^(age/' + vm.hl + ')    window ' + vm.win + ' days');
+    out.push(table(['event', 'age', 'w', 'chaos', 'polar.', 'econ', 'I', 'resist.', 'w·I', 'w·R'], vm.rows.map(function (r) {
+      return [esc(r.e.id), r.age, fx(r.w), r.e.omen.chaos, r.e.omen.polarization, r.e.omen.economic, fx(r.I, 2), r.e.clio.resistance, fx(r.w * r.I), fx(r.w * r.e.clio.resistance)]; })));
+    ln('Σw = ' + fx(vm.sw) + '   Σw·I = ' + fx(vm.swi) + '   Σw·R = ' + fx(vm.swr));
+    ln('O = Σw·I / Σw = ' + fx(vm.swi) + ' / ' + fx(vm.sw) + ' = ' + fx(vm.O) + check(vm.O, D.volatility && D.volatility.O, 0.006));
+    ln('C = Σw·R / Σw = ' + fx(vm.swr) + ' / ' + fx(vm.sw) + ' = ' + fx(vm.C) + check(vm.C, D.volatility && D.volatility.C, 0.006));
+    ln('closeness = e^(−days/10); for a window: 10/(end−start)·(e^(−start/10) − e^(−end/10))    kind weights ' + JSON.stringify(KW));
+    out.push(table(['catalyst', 'kind', 'start', 'end', 'weight', 'closeness', 'adds'], vm.cal.map(function (c) {
+      return [esc(c.c.id) + ' ' + esc(c.c.name), esc(c.c.kind || ''), c.s0, c.en, fx(c.kw, 2), fx(c.near), fx(c.add)]; })));
+    ln('P_m = 1 + min(' + vm.cap + ', ' + fx(vm.pmSum) + ') = ' + fx(vm.Pm) + check(vm.Pm, D.volatility && D.volatility.Pm, 0.0015));
+    ln('w_omen = mean(domain OMEN weights) = ' + fx(vm.wo) + '    w_clio = ' + fx(vm.wc) + '    I_s = ' + fx(vm.Is, 2));
+    ln('A = ' + fx(vm.wo) + ' × ' + fx(vm.O) + ' × ' + fx(vm.Pm) + ' = ' + fx(vm.A));
+    ln('B = ' + fx(vm.wc) + ' × ' + fx(vm.C) + ' × ' + fx(vm.Is, 2) + ' = ' + fx(vm.B));
+    ln('V = A / (A + B) = ' + fx(vm.A) + ' / ' + fx(vm.A + vm.B) + ' = <b>' + fx(vm.V) + '</b>' + check(vm.V, D.volatility && D.volatility.V, 0.0015));
+    var b = cfg.path_bands || [0.4, 0.6, 0.75];
+    ln('path: V < ' + b[0] + ' alpha | < ' + b[1] + ' gamma | < ' + b[2] + ' beta | else omega  →  ' + (vm.V < b[0] ? 'alpha' : vm.V < b[1] ? 'gamma' : vm.V < b[2] ? 'beta' : 'omega'));
+    var sh = (D.volatility || {}).shock;
+    if (sh) ln('shock watch p = σ(a + b·V) = σ(' + fx(sh.a) + ' + ' + fx(sh.b) + ' × ' + fx(vm.V) + ') = σ(' + fx(sh.a + sh.b * vm.V) + ') = <b>' + fx(sig(sh.a + sh.b * vm.V)) + '</b>' + check(sig(sh.a + sh.b * vm.V), sh.p, 0.002) + '   (' + (sh.fitted ? 'fitted' : 'starting values') + ', ' + sh.n_resolved + ' graded)');
+
+    out.push('<h3>2 · Forecast blends</h3>');
+    var cal = D.calibration || {};
+    ln('blend = w_clio·CLIO + w_omen·OMEN + adj, clamped to [' + (cfg.clamp || [0.02, 0.98]).join(', ') + ']' + (cal.active ? '; then oracle = σ(' + cal.a + ' + ' + cal.b + '·logit(blend))' : '; calibration off (' + (cal.n || 0) + '/' + (cfg.calib_min || 40) + ' results)'));
+    out.push(table(['id', 'w_c', 'CLIO', 'w_o', 'OMEN', 'adj', 'blend', 'oracle', 'check'], open.map(function (p) {
+      var w = (D.weights || {})[p.domain] || { clio: 0.5, omen: 0.5 }, adj = (p.adjustment || {}).value || 0;
+      var bl = Math.min(0.98, Math.max(0.02, w.clio * p.clio + w.omen * p.omen + adj));
+      var or = cal.active ? sig(cal.a + cal.b * Math.log(bl / (1 - bl))) : bl;
+      var ok = Math.abs(Math.floor(or * 100 + 0.5 + 1e-9) / 100 - p.oracle) < 0.001;
+      return [esc(p.id), fx(w.clio, 2), fx(p.clio, 2), fx(w.omen, 2), fx(p.omen, 2), fx(adj, 2), fx(bl, 4), fx(p.oracle, 2), ok ? '<span class="ok">✓</span>' : '<span class="bad">✗</span>']; })));
+
+    out.push('<h3>3 · Systems: pressure vs friction</h3>');
+    ln('tip = σ(k·(P − F)), k = ' + k + '    status: m < −2 holding | < −0.5 strained | ≤ 0.5 critical | else tipping');
+    ln('momentum = Σ impact × I/10 × 0.5^(age/7), events ≤ 21 days old');
+    out.push(table(['system', 'P', 'F', 'm = P−F', 'k·m', 'tip', 'stored', 'status', 'momentum', 'stored'], systems.map(function (s) {
+      var m = s.pressure - s.friction, t = sig(k * m), mom = 0;
+      EVENTS.forEach(function (e) { var imp = (e.systems || {})[s.id], age = -daysUntil(e.date); if (imp && age >= 0 && age <= 21) mom += imp * intens(e) / 10 * Math.pow(0.5, age / 7); });
+      var okT = Math.abs(t - s.tip_probability) < 0.0015, okM = s.momentum == null || Math.abs(mom - s.momentum) < 0.006;
+      return [esc(s.id), fx(s.pressure, 1), fx(s.friction, 1), fx(m, 2), fx(k * m, 3), fx(t), fx(s.tip_probability) + (okT ? ' <span class="ok">✓</span>' : ' <span class="bad">✗</span>'), statusOf(m), fx(mom, 2), fx(s.momentum, 2) + (okM ? ' <span class="ok">✓</span>' : ' <span class="bad">✗</span>')]; })));
+
+    out.push('<h3>4 · Grading and learning</h3>');
+    ln('Brier = (p − outcome)²    weights: w ← w·e^(−' + (cfg.eta || 0.5) + '·Brier), renormalize, clamp [' + (cfg.w_min || 0.2) + ', ' + (cfg.w_max || 0.8) + ']');
+    if (resolved.length) out.push(table(['id', 'outcome', 'ORACLE', 'Brier', 'CLIO', 'Brier', 'OMEN', 'Brier'], resolved.map(function (p) {
+      var o = p.outcome ? 1 : 0; return [esc(p.id), o, fx(p.oracle, 2), fx(Math.pow(p.oracle - o, 2), 4), fx(p.clio, 2), fx(Math.pow(p.clio - o, 2), 4), fx(p.omen, 2), fx(Math.pow(p.omen - o, 2), 4)]; })));
+    else ln('<span class="dim">no resolved predictions yet</span>');
+    var wh = D.weights_history || [];
+    if (wh.length) wh.forEach(function (w) { ln(w.date + ' ' + w.domain + ' after ' + w.prediction + ': clio ' + fx(w.clio) + ' (Δ ' + fx(w.change_clio) + ')  omen ' + fx(w.omen)); });
+    else ln('<span class="dim">no weight updates yet; all domains at clio 0.500 / omen 0.500</span>');
+    var st = (D.stats || {}).all || {};
+    ln('running means: ORACLE ' + fx(st.brier_oracle, 4) + '  CLIO ' + fx(st.brier_clio, 4) + '  OMEN ' + fx(st.brier_omen, 4) + '  sandbox ' + fx(st.brier_sim, 4) + '  market ' + fx(st.brier_market, 4) + '  (n=' + (st.n || 0) + ')');
+    var swr = (D.shock_watch || []).filter(function (r) { return r.outcome != null; });
+    ln('shock watch graded: ' + swr.length + (swr.length ? '  mean Brier ' + fx(swr.reduce(function (a, r) { return a + r.brier; }, 0) / swr.length, 4) : '  (first grade 8 days after the first reading)'));
+
+    var HS = D.history_scale;
+    if (HS && HS.eras) {
+      out.push('<h3>5 · Historical eras (same formula)</h3>');
+      out.push(table(['era', 'when', 'O', 'C', 'P_m', 'A', 'B', 'V'], HS.eras.slice().reverse().map(function (e) {
+        var A = vm.wo * e.O * e.Pm, B = vm.wc * e.C * vm.Is; return [esc(e.id), esc(e.when), fx(e.O, 2), fx(e.C, 2), fx(e.Pm, 3), fx(A), fx(B), fx(e.V)]; })));
+      ln('<span class="dim">A and B shown with today’s weights; O, C and P_m are rounded, so A/(A+B) may differ from V in the last digit.</span>');
+    }
+
+    out.push('<h3>6 · Raw data</h3>');
+    [['config', D.config], ['weights', D.weights], ['volatility', D.volatility], ['calibration', D.calibration], ['stats', D.stats], ['review', D.review], ['sandbox summary', SIM ? { date: SIM.date, runs: SIM.runs, events_per_day: SIM.events_per_day, systems: SIM.systems, predictions: SIM.predictions } : null]].forEach(function (x) {
+      out.push('<details><summary>' + x[0] + '</summary><pre>' + esc(JSON.stringify(x[1], null, 2)) + '</pre></details>');
+    });
+    ln('<span class="dim">Everything else (every prediction, event and catalyst) is in data.js, generated from data/oracle.json.</span>');
+    return out.join('') + '</div>';
+  }
+
+  // ---------- glossary ----------
+  function renderGlossary() {
+    var order = ['oracle', 'clio', 'omen', 'sandbox', 'market', 'system', 'pressure', 'friction', 'margin', 'tip', 'holding', 'strained', 'critical', 'tipping', 'gauge', 'momentum',
+      'volatility', 'V', 'alpha', 'gamma', 'beta', 'omega', 'scale', 'levelmatch', 'kindmatch', 'intensity', 'resistance', 'calendar', 'inertia', 'shock', 'catalyst', 'branch', 'divergence', 'horizon', 'resolve', 'tracking',
+      'anger', 'mobilization', 'trust', 'brier', 'calibration', 'weights', 'weekreview'];
+    document.getElementById('gloss').innerHTML = '<dl>' + order.map(function (k) {
+      var g = G[k], primary = mode === 'plain' ? g[1] : g[0], other = mode === 'plain' ? g[0] : g[1];
+      return '<dt>' + primary + (other !== primary ? '<small>' + (mode === 'plain' ? 'Technical name: ' : 'Plain English: ') + other + '</small>' : '') + '</dt><dd>' + g[2] + '</dd>';
+    }).join('') + '</dl>';
+  }
+
+  // ======================================================================================
+  // Interaction (delegated once, survives re-renders)
+  // ======================================================================================
+  document.addEventListener('click', function (e) {
+    var t = e.target;
+    var mb = t.closest('[data-mode]');
+    if (mb) { var y0 = window.scrollY; mode = mb.getAttribute('data-mode'); store('oracle-mode', mode); renderAll(); window.scrollTo(0, y0); return; }
+    if (t.closest('#themeBtn')) {
+      var cur = root.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      var next = cur === 'dark' ? 'light' : 'dark'; root.setAttribute('data-theme', next);
+      try { localStorage.setItem('oracle-theme', next); } catch (err) {}
+      renderScoreChart(); renderNumbers(); renderVolatility(); return;
+    }
+    var vb = t.closest('[data-view]');
+    if (vb) { view = vb.getAttribute('data-view'); store('oracle-tab', view); renderAll(); window.scrollTo(0, 0); return; }
+    if (t.closest('[data-eras]')) { eraAll = !eraAll; store('oracle-eras-all', eraAll); renderVolatility(); return; }
+    var term = t.closest('.term');
+    if (term) { var tr = term.getBoundingClientRect(); showTip(tipFns[term.getAttribute('data-tipkey')](), tr.left, tr.bottom); e.stopPropagation(); return; }
+    var gt = t.closest('[data-goto]'); if (gt) { var sec = document.getElementById(gt.getAttribute('data-goto')); if (sec) sec.scrollIntoView({ behavior: 'smooth', block: 'start' }); return; }
+    var dm = t.closest('[data-dom]'); if (dm) { state.dom = dm.getAttribute('data-dom'); renderPreds(); return; }
+    var tl = t.closest('[data-tl]'); if (tl) { var k = tl.getAttribute('data-tl'); tlOn[k] = !tlOn[k]; tl.setAttribute('aria-pressed', tlOn[k] ? 'true' : 'false'); store('oracle-tl', tlOn); renderTimeline(true); return; }
+    if (t.closest('#briefToggle')) { document.getElementById('brief').classList.toggle('expanded'); renderBriefing(); return; }
+    var j = t.closest('[data-jump]');
+    if (j) {
+      var id = j.getAttribute('data-jump');
+      if (byId[id] && byId[id].status === 'open' && state.dom !== 'all') { state.dom = 'all'; renderPreds(); }
+      var target = document.getElementById(id); if (target) target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  });
+  document.addEventListener('change', function (e) { if (e.target && e.target.id === 'sortSel') { state.sort = e.target.value; renderPreds(); } });
+  var lastW = window.innerWidth;
+  window.addEventListener('resize', function () { if (window.innerWidth !== lastW) { lastW = window.innerWidth; renderScoreChart(); } });
+
+  renderAll();
+})();
+</script>

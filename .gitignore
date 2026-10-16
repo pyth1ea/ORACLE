@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+# Raw daily feed dumps are large and only needed on the day; the readable .md shortlist is kept.
+data/feed/*.json
+.claude/

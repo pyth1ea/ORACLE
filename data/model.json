@@ -1,0 +1,96 @@
+{
+  "about": "Agent roster and parameters for tools/sim.py. Gauges run 0-100. baseline = long-run normal the agent drifts back to; start = state when ORACLE v2 launched (2026-10-14). sens = how strongly the agent reacts to an event's chaos / polarization / economic scores. domains = how much the agent cares about each news domain (default 1, or other_domains).",
+  "params": {
+    "alpha": 1.0,
+    "decay": 0.05,
+    "m_follow": 0.12,
+    "m_decay": 0.03,
+    "t_hit": 0.6,
+    "t_recover": 0.03,
+    "event_pressure": 0.08,
+    "event_halflife_days": 14,
+    "reversal_prob": 0.3,
+    "score_noise": 1.0,
+    "min_daily_events": 1.0,
+    "max_daily_events": 6.0,
+    "horizon_days": 200,
+    "runs": 1000
+  },
+  "agents": [
+    {
+      "id": "A-SWING", "name": "Median swing voter",
+      "description": "Persuadable voter in the middle. Cares most about prices, safety and things working.",
+      "baseline": { "A": 45, "M": 30, "T": 45 }, "start": { "A": 64, "M": 42, "T": 38 },
+      "sens": { "chaos": 0.4, "polarization": 0.2, "economic": 0.9 },
+      "domains": { "foreign": 0.6 }
+    },
+    {
+      "id": "A-DBASE", "name": "Democratic base",
+      "description": "Core Democratic voters. Currently out of power and highly motivated.",
+      "baseline": { "A": 55, "M": 50, "T": 40 }, "start": { "A": 80, "M": 70, "T": 30 },
+      "sens": { "chaos": 0.5, "polarization": 0.8, "economic": 0.4 },
+      "domains": { "foreign": 0.6 }
+    },
+    {
+      "id": "A-RBASE", "name": "Republican base",
+      "description": "Core Republican voters. Loyal to the president; enthusiasm is the variable.",
+      "baseline": { "A": 45, "M": 50, "T": 45 }, "start": { "A": 48, "M": 50, "T": 48 },
+      "sens": { "chaos": 0.4, "polarization": 0.8, "economic": 0.3 },
+      "domains": { "foreign": 0.6 }
+    },
+    {
+      "id": "A-DLEAD", "name": "Democratic leadership",
+      "description": "Party leaders in Congress and governors. Mobilization = willingness to confront and obstruct.",
+      "baseline": { "A": 45, "M": 55, "T": 55 }, "start": { "A": 60, "M": 68, "T": 50 },
+      "sens": { "chaos": 0.3, "polarization": 0.5, "economic": 0.3 }
+    },
+    {
+      "id": "A-RLEAD", "name": "Republican leadership & White House",
+      "description": "The administration and GOP congressional leaders. Mobilization = willingness to use executive power aggressively.",
+      "baseline": { "A": 40, "M": 60, "T": 55 }, "start": { "A": 50, "M": 66, "T": 52 },
+      "sens": { "chaos": 0.4, "polarization": 0.5, "economic": 0.4 }
+    },
+    {
+      "id": "A-PROTEST", "name": "Protest movement",
+      "description": "Organized opposition in the streets (No Kings, unions, advocacy groups).",
+      "baseline": { "A": 60, "M": 45, "T": 30 }, "start": { "A": 82, "M": 72, "T": 22 },
+      "sens": { "chaos": 0.7, "polarization": 0.9, "economic": 0.3 },
+      "domains": { "economy": 0.5 }
+    },
+    {
+      "id": "A-HARD", "name": "Pro-administration hardliners",
+      "description": "The most militant supporters of the administration, inside and outside government.",
+      "baseline": { "A": 50, "M": 45, "T": 30 }, "start": { "A": 58, "M": 55, "T": 28 },
+      "sens": { "chaos": 0.6, "polarization": 0.9, "economic": 0.2 },
+      "domains": { "economy": 0.4 }
+    },
+    {
+      "id": "A-BIZ", "name": "Corporate & Wall Street",
+      "description": "Large employers, investors and lobbies. Anger = market stress; they push hardest for oil relief and against chaos.",
+      "baseline": { "A": 35, "M": 40, "T": 60 }, "start": { "A": 55, "M": 48, "T": 52 },
+      "sens": { "chaos": 0.5, "polarization": 0.2, "economic": 1.0 },
+      "domains": { "unrest": 0.5 }
+    },
+    {
+      "id": "A-FED", "name": "Federal Reserve",
+      "description": "Technocratic central bank. Mobilization = readiness to tighten policy.",
+      "baseline": { "A": 30, "M": 45, "T": 75 }, "start": { "A": 55, "M": 66, "T": 72 },
+      "sens": { "chaos": 0.2, "polarization": 0.0, "economic": 1.0 },
+      "domains": { "economy": 1.0 }, "other_domains": 0.15
+    },
+    {
+      "id": "A-COURTS", "name": "Federal courts",
+      "description": "Judges and the Supreme Court. Mobilization = readiness to block or check the executive.",
+      "baseline": { "A": 30, "M": 40, "T": 70 }, "start": { "A": 45, "M": 58, "T": 66 },
+      "sens": { "chaos": 0.3, "polarization": 0.6, "economic": 0.0 },
+      "domains": { "politics": 1.0, "unrest": 0.8 }, "other_domains": 0.1
+    },
+    {
+      "id": "A-IRAN", "name": "Iran & allied forces",
+      "description": "Iran's leadership, the IRGC and allied groups such as the Houthis. Mobilization = readiness to escalate.",
+      "baseline": { "A": 60, "M": 50, "T": 10 }, "start": { "A": 82, "M": 78, "T": 8 },
+      "sens": { "chaos": 0.8, "polarization": 0.1, "economic": 0.3 },
+      "domains": { "foreign": 1.0 }, "other_domains": 0.05
+    }
+  ]
+}

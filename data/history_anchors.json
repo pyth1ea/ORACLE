@@ -1,0 +1,256 @@
+{
+  "about": "Historical scale for the stability meter. Each era is a snapshot of its most intense ~two weeks, scored with the SAME rubric as today's events (ORACLE.md section 3: chaos, polarization, economic 1-10; institutional resistance 1-10; age = days before the snapshot date) plus the big dates that were coming up (calendar: kind + days away). tools/core.py runs them through the SAME volatility formula as today, so their V values sit on the same ruler. Scored retrospectively by Claude on 2026-10-14, which means with hindsight. Rule: never re-score an era to make it fit; add new eras instead.",
+  "eras": [
+    {
+      "id": "H-1851", "name": "Victorian Britain at its height", "when": "May 1851", "place": "Britain", "featured": false,
+      "like": "Peace, booming trade and railways, and the Great Exhibition showing off the empire's confidence. Political fights were about religion and reform, not survival.",
+      "next": "Decades of relative stability and growth followed; reform came gradually through Parliament.",
+      "calendar": [],
+      "events": [
+        { "title": "Great Exhibition opens in the Crystal Palace", "age": 2, "chaos": 1, "polarization": 1, "economic": 1, "resistance": 9 },
+        { "title": "Steady growth from railways and trade", "age": 7, "chaos": 1, "polarization": 1, "economic": 1, "resistance": 9 },
+        { "title": "Parliament fights over the anti-Catholic Ecclesiastical Titles Bill", "age": 4, "chaos": 1, "polarization": 5, "economic": 1, "resistance": 9 },
+        { "title": "Chartist reform movement fades after 1848", "age": 10, "chaos": 2, "polarization": 3, "economic": 1, "resistance": 8 }
+      ]
+    },
+    {
+      "id": "H-1956", "name": "Postwar calm", "when": "Sept 1956", "place": "United States", "featured": true,
+      "like": "Near-full employment, low inflation and a popular president running on 'peace and prosperity.' The big tension was school desegregation, where the National Guard was sent to some towns.",
+      "next": "Eisenhower won in a landslide. The civil-rights struggle grew slowly through the late 1950s.",
+      "calendar": [{ "kind": "election", "days": 52 }],
+      "events": [
+        { "title": "Eisenhower campaigns for re-election on peace and prosperity", "age": 2, "chaos": 1, "polarization": 2, "economic": 1, "resistance": 8 },
+        { "title": "Desegregation standoffs in Clinton, Tennessee and Mansfield, Texas; National Guard called in", "age": 3, "chaos": 5, "polarization": 6, "economic": 1, "resistance": 6 },
+        { "title": "Steel industry back to work after summer strike", "age": 6, "chaos": 2, "polarization": 2, "economic": 3, "resistance": 7 },
+        { "title": "Suez Canal tension after Egypt nationalizes the canal", "age": 8, "chaos": 3, "polarization": 1, "economic": 3, "resistance": 6 },
+        { "title": "Economy near full employment with low inflation", "age": 10, "chaos": 1, "polarization": 1, "economic": 1, "resistance": 9 }
+      ]
+    },
+    {
+      "id": "H-1962", "name": "Cuban Missile Crisis", "when": "Oct 1962", "place": "United States", "featured": true,
+      "like": "Thirteen days where nuclear war felt possible. Fear was enormous, but the country rallied behind the president and institutions held firm.",
+      "next": "The Soviets withdrew their missiles. A hotline and a test-ban treaty followed. Kennedy's party did well in the midterms.",
+      "calendar": [{ "kind": "election", "days": 10 }],
+      "events": [
+        { "title": "US spy plane shot down over Cuba; nuclear war feared", "age": 0, "chaos": 10, "polarization": 2, "economic": 4, "resistance": 5 },
+        { "title": "Soviet ships approach the naval quarantine line", "age": 3, "chaos": 8, "polarization": 1, "economic": 3, "resistance": 5 },
+        { "title": "Stocks fall on war fears", "age": 4, "chaos": 5, "polarization": 1, "economic": 5, "resistance": 7 },
+        { "title": "Kennedy announces naval quarantine of Cuba", "age": 5, "chaos": 8, "polarization": 2, "economic": 3, "resistance": 6 },
+        { "title": "Congress and public rally behind the president", "age": 5, "chaos": 2, "polarization": 1, "economic": 1, "resistance": 8 }
+      ]
+    },
+    {
+      "id": "H-1968", "name": "1968: assassinations, riots and Vietnam", "when": "June 1968", "place": "United States", "featured": true,
+      "like": "Two national leaders assassinated in two months, riots in over 100 cities, a war tearing the country apart, and campus protests everywhere.",
+      "next": "Chaotic Democratic convention in August; Nixon won on 'law and order.' The war and the protests went on for years.",
+      "calendar": [],
+      "events": [
+        { "title": "Robert F. Kennedy assassinated after winning the California primary", "age": 1, "chaos": 9, "polarization": 7, "economic": 1, "resistance": 5 },
+        { "title": "Rising inflation and Vietnam War spending strain the budget", "age": 6, "chaos": 2, "polarization": 3, "economic": 5, "resistance": 6 },
+        { "title": "Vietnam casualties near their peak; protests on campuses", "age": 7, "chaos": 7, "polarization": 8, "economic": 3, "resistance": 4 },
+        { "title": "Poor People's Campaign encamped on the National Mall", "age": 10, "chaos": 4, "polarization": 6, "economic": 2, "resistance": 6 },
+        { "title": "Cities still scarred by riots after Martin Luther King Jr.'s assassination", "age": 14, "chaos": 8, "polarization": 8, "economic": 3, "resistance": 4 }
+      ]
+    },
+    {
+      "id": "H-1974", "name": "Watergate: Nixon resigns", "when": "Aug 1974", "place": "United States", "featured": true,
+      "like": "A president forced out by scandal, with inflation above 10% and stocks in a bear market. Yet it was orderly: courts, Congress and the press all did their jobs.",
+      "next": "Ford took over peacefully and pardoned Nixon. Democrats won big in the midterms, and the economy fell into recession.",
+      "calendar": [],
+      "events": [
+        { "title": "Nixon resigns ahead of certain impeachment", "age": 0, "chaos": 7, "polarization": 9, "economic": 2, "resistance": 9 },
+        { "title": "Ford sworn in; peaceful transfer of power", "age": 0, "chaos": 2, "polarization": 3, "economic": 1, "resistance": 9 },
+        { "title": "Inflation above 10%; stocks in a bear market", "age": 3, "chaos": 4, "polarization": 3, "economic": 8, "resistance": 5 },
+        { "title": "'Smoking gun' tape released", "age": 4, "chaos": 6, "polarization": 9, "economic": 1, "resistance": 8 },
+        { "title": "House committee approves articles of impeachment", "age": 11, "chaos": 5, "polarization": 9, "economic": 1, "resistance": 9 }
+      ]
+    },
+    {
+      "id": "H-1979US", "name": "Iran hostage crisis and stagflation", "when": "Nov 1979", "place": "United States", "featured": true,
+      "like": "Inflation above 12%, the Fed hiking rates sharply, gas worries, and Iran holding Americans hostage. A widespread feeling that things were slipping out of control.",
+      "next": "The hostage crisis lasted 444 days. A recession hit in 1980, and Carter lost in a landslide to Reagan.",
+      "calendar": [],
+      "events": [
+        { "title": "Carter halts Iranian oil imports; gas worries return", "age": 3, "chaos": 5, "polarization": 2, "economic": 7, "resistance": 5 },
+        { "title": "Mortgage rates hit records after the Fed's sharp rate hikes", "age": 4, "chaos": 4, "polarization": 3, "economic": 7, "resistance": 6 },
+        { "title": "Inflation runs above 12%", "age": 6, "chaos": 3, "polarization": 4, "economic": 8, "resistance": 5 },
+        { "title": "Ted Kennedy launches a primary challenge to the president", "age": 8, "chaos": 2, "polarization": 6, "economic": 1, "resistance": 8 },
+        { "title": "Militants seize the US embassy in Tehran and take hostages", "age": 11, "chaos": 8, "polarization": 3, "economic": 3, "resistance": 4 }
+      ]
+    },
+    {
+      "id": "H-1979UK", "name": "Britain's Winter of Discontent", "when": "Jan 1979", "place": "Britain", "featured": false,
+      "like": "Waves of strikes: trucks stopped, garbage piled in the streets, some of the dead went unburied. Inflation was back and the government looked powerless.",
+      "next": "The government lost a confidence vote in March, and Thatcher won the election in May, starting a sharp change of direction.",
+      "calendar": [],
+      "events": [
+        { "title": "Public-sector strikes: rubbish piles up, some dead go unburied", "age": 1, "chaos": 5, "polarization": 7, "economic": 5, "resistance": 5 },
+        { "title": "Truck drivers' strike causes shortages", "age": 3, "chaos": 5, "polarization": 6, "economic": 7, "resistance": 5 },
+        { "title": "Inflation back above 9%; government pay caps collapse", "age": 8, "chaos": 3, "polarization": 5, "economic": 7, "resistance": 6 },
+        { "title": "'Crisis? What crisis?' headline sums up the prime minister's response", "age": 12, "chaos": 2, "polarization": 6, "economic": 2, "resistance": 7 }
+      ]
+    },
+    {
+      "id": "H-1997", "name": "Late-1990s boom", "when": "Aug 1997", "place": "United States", "featured": true,
+      "like": "Low unemployment, record stock markets and a bipartisan budget deal. The headlines were a big but orderly strike and fundraising hearings.",
+      "next": "The boom continued to 2000. The biggest political drama was the 1998 impeachment, which the system absorbed.",
+      "calendar": [],
+      "events": [
+        { "title": "Stock market near record highs; unemployment under 5%", "age": 2, "chaos": 1, "polarization": 1, "economic": 1, "resistance": 9 },
+        { "title": "Senate hearings on 1996 campaign fundraising", "age": 4, "chaos": 2, "polarization": 5, "economic": 1, "resistance": 8 },
+        { "title": "Teamsters strike shuts down UPS deliveries", "age": 5, "chaos": 4, "polarization": 3, "economic": 4, "resistance": 6 },
+        { "title": "Clinton signs bipartisan balanced-budget deal", "age": 10, "chaos": 1, "polarization": 2, "economic": 2, "resistance": 8 }
+      ]
+    },
+    {
+      "id": "H-2001", "name": "9/11 attacks", "when": "Sept 2001", "place": "United States", "featured": true,
+      "like": "The deadliest attack on US soil, the airspace shut for days, and the stock market's worst week in decades. But the country pulled together and institutions held.",
+      "next": "War in Afghanistan within a month, a short recession, and a long era of security politics.",
+      "calendar": [],
+      "events": [
+        { "title": "Stock market reopens and falls 7%", "age": 0, "chaos": 7, "polarization": 1, "economic": 8, "resistance": 6 },
+        { "title": "National unity; the president's approval surges", "age": 2, "chaos": 2, "polarization": 1, "economic": 1, "resistance": 9 },
+        { "title": "Congress passes use-of-force resolution almost unanimously", "age": 3, "chaos": 4, "polarization": 1, "economic": 2, "resistance": 8 },
+        { "title": "All US airspace shut down for days", "age": 5, "chaos": 8, "polarization": 1, "economic": 6, "resistance": 6 },
+        { "title": "Terrorist attacks kill nearly 3,000 people", "age": 6, "chaos": 10, "polarization": 2, "economic": 7, "resistance": 5 }
+      ]
+    },
+    {
+      "id": "H-2008", "name": "2008 financial crisis", "when": "Oct 2008", "place": "United States", "featured": true,
+      "like": "The biggest bank failure in US history, credit markets frozen, Congress first voting down the bailout and the market crashing, all five weeks before an election.",
+      "next": "The bailout passed, Obama won, and the Great Recession deepened into 2009 before a slow recovery.",
+      "calendar": [{ "kind": "event", "days": 4 }, { "kind": "event", "days": 12 }, { "kind": "data", "days": 0 }],
+      "events": [
+        { "title": "Congress passes $700 billion bank rescue", "age": 0, "chaos": 5, "polarization": 6, "economic": 8, "resistance": 7 },
+        { "title": "Credit markets freeze; companies can't borrow", "age": 2, "chaos": 6, "polarization": 2, "economic": 9, "resistance": 4 },
+        { "title": "House rejects the bailout; stocks plunge 7%", "age": 4, "chaos": 9, "polarization": 6, "economic": 9, "resistance": 4 },
+        { "title": "Washington Mutual seized: largest bank failure in US history", "age": 8, "chaos": 7, "polarization": 2, "economic": 9, "resistance": 6 }
+      ]
+    },
+    {
+      "id": "H-2011", "name": "Debt-ceiling showdown", "when": "Aug 2011", "place": "United States", "featured": false,
+      "like": "Congress came within hours of a US default, the country lost its AAA credit rating, and stocks fell sharply. Unemployment was still stuck above 9%.",
+      "next": "No default. Years of budget brinkmanship followed, but the recovery continued slowly.",
+      "calendar": [],
+      "events": [
+        { "title": "Stocks fall 5.6% in a day", "age": 0, "chaos": 6, "polarization": 2, "economic": 7, "resistance": 6 },
+        { "title": "S&P strips the US of its AAA credit rating", "age": 3, "chaos": 6, "polarization": 7, "economic": 7, "resistance": 6 },
+        { "title": "Unemployment stuck at 9.1%", "age": 3, "chaos": 2, "polarization": 3, "economic": 5, "resistance": 6 },
+        { "title": "Debt-ceiling deal reached hours before default deadline", "age": 6, "chaos": 4, "polarization": 8, "economic": 5, "resistance": 7 }
+      ]
+    },
+    {
+      "id": "H-2018", "name": "Kavanaugh fight before the 2018 midterms", "when": "Oct 2018", "place": "United States", "featured": false,
+      "like": "A bitterly divided Supreme Court confirmation with mass protests at the Capitol, but a strong economy with the lowest unemployment since 1969.",
+      "next": "Democrats won the House a month later. The economy kept growing until the pandemic.",
+      "calendar": [{ "kind": "election", "days": 29 }],
+      "events": [
+        { "title": "Kavanaugh confirmed 50-48 after assault allegations", "age": 2, "chaos": 4, "polarization": 9, "economic": 1, "resistance": 7 },
+        { "title": "Unemployment falls to 3.7%, lowest since 1969", "age": 3, "chaos": 1, "polarization": 1, "economic": 1, "resistance": 9 },
+        { "title": "Mass protests at the Capitol; hundreds arrested", "age": 4, "chaos": 5, "polarization": 8, "economic": 1, "resistance": 7 },
+        { "title": "Trade-war tariffs on China escalate", "age": 14, "chaos": 3, "polarization": 4, "economic": 5, "resistance": 6 }
+      ]
+    },
+    {
+      "id": "H-2020", "name": "Pandemic and George Floyd protests", "when": "June 2020", "place": "United States", "featured": true,
+      "like": "100,000 dead from COVID, 40 million jobless claims, and protests and riots in hundreds of cities with curfews and troops. The most turbulent stretch in decades.",
+      "next": "Protests faded over the summer, the economy rebounded with huge aid, and a bitterly contested election came in November.",
+      "calendar": [],
+      "events": [
+        { "title": "Federal forces clear Lafayette Square; troop deployment threatened", "age": 1, "chaos": 7, "polarization": 9, "economic": 1, "resistance": 5 },
+        { "title": "Protests and riots in hundreds of cities after George Floyd's killing; curfews", "age": 2, "chaos": 9, "polarization": 8, "economic": 3, "resistance": 4 },
+        { "title": "Jobless claims top 40 million since March", "age": 5, "chaos": 6, "polarization": 3, "economic": 10, "resistance": 4 },
+        { "title": "US COVID deaths pass 100,000", "age": 6, "chaos": 8, "polarization": 6, "economic": 7, "resistance": 4 },
+        { "title": "Fed and Congress pour trillions into the economy", "age": 10, "chaos": 3, "polarization": 4, "economic": 8, "resistance": 7 }
+      ]
+    },
+    {
+      "id": "H-2021", "name": "January 6 Capitol attack", "when": "Jan 2021", "place": "United States", "featured": true,
+      "like": "A mob stormed the Capitol to stop the count of electoral votes, during the deadliest days of the pandemic. Congress finished the count that same night.",
+      "next": "Biden was inaugurated peacefully two weeks later. Trump was impeached a second time and acquitted.",
+      "calendar": [{ "kind": "decision", "days": 6 }, { "kind": "deadline", "days": 13 }],
+      "events": [
+        { "title": "Congress certifies the election overnight", "age": 0, "chaos": 3, "polarization": 8, "economic": 1, "resistance": 9 },
+        { "title": "COVID deaths hit a record of about 4,000 a day", "age": 0, "chaos": 7, "polarization": 6, "economic": 5, "resistance": 5 },
+        { "title": "Mob storms the Capitol to stop the electoral count", "age": 1, "chaos": 9, "polarization": 10, "economic": 2, "resistance": 5 },
+        { "title": "Georgia runoffs flip control of the Senate", "age": 2, "chaos": 2, "polarization": 6, "economic": 2, "resistance": 9 },
+        { "title": "Recording of pressure call to Georgia's secretary of state released", "age": 4, "chaos": 4, "polarization": 9, "economic": 1, "resistance": 8 }
+      ]
+    },
+    {
+      "id": "H-1933", "name": "Great Depression bank panic", "when": "Mar 1933", "place": "United States", "featured": true,
+      "like": "The banking system was collapsing, a quarter of workers were jobless, and farmers were rioting over foreclosures.",
+      "next": "FDR closed every bank for a week, launched the New Deal, and confidence slowly returned, though the Depression lasted years.",
+      "calendar": [{ "kind": "decision", "days": 2 }],
+      "events": [
+        { "title": "FDR inaugurated: 'the only thing we have to fear is fear itself'", "age": 0, "chaos": 3, "polarization": 3, "economic": 5, "resistance": 6 },
+        { "title": "Banking system collapses; states declare bank holidays", "age": 2, "chaos": 8, "polarization": 4, "economic": 10, "resistance": 2 },
+        { "title": "Unemployment near 25%", "age": 7, "chaos": 6, "polarization": 5, "economic": 10, "resistance": 3 },
+        { "title": "Farm foreclosure riots in the Midwest", "age": 8, "chaos": 6, "polarization": 6, "economic": 8, "resistance": 3 }
+      ]
+    },
+    {
+      "id": "H-1923", "name": "Weimar Germany's hyperinflation", "when": "Nov 1923", "place": "Germany", "featured": false,
+      "like": "Money became worthless (a loaf of bread cost billions), food riots broke out, regions tried to break away, and Hitler attempted a coup in Munich.",
+      "next": "A new currency stopped the inflation and calm returned for a few years, but the damage to trust helped the Nazis rise after 1929.",
+      "calendar": [],
+      "events": [
+        { "title": "The mark collapses: a loaf of bread costs billions", "age": 0, "chaos": 7, "polarization": 6, "economic": 10, "resistance": 2 },
+        { "title": "New currency (Rentenmark) introduced", "age": 0, "chaos": 3, "polarization": 3, "economic": 8, "resistance": 6 },
+        { "title": "Food riots in German cities", "age": 5, "chaos": 7, "polarization": 7, "economic": 9, "resistance": 3 },
+        { "title": "Hitler's Beer Hall Putsch fails in Munich", "age": 7, "chaos": 8, "polarization": 9, "economic": 3, "resistance": 5 },
+        { "title": "Separatist revolts in the Rhineland", "age": 10, "chaos": 6, "polarization": 7, "economic": 4, "resistance": 3 }
+      ]
+    },
+    {
+      "id": "H-1991", "name": "Soviet Union: the August coup", "when": "Aug 1991", "place": "Soviet Union", "featured": false,
+      "like": "Hardliners tried to seize power with tanks in Moscow, crowds defended parliament, republics declared independence, and shelves were empty.",
+      "next": "The coup failed in three days, and the Soviet Union dissolved within four months.",
+      "calendar": [],
+      "events": [
+        { "title": "Coup collapses after three days", "age": 0, "chaos": 6, "polarization": 9, "economic": 3, "resistance": 6 },
+        { "title": "Baltic republics declare independence", "age": 1, "chaos": 6, "polarization": 9, "economic": 4, "resistance": 2 },
+        { "title": "Hardliners attempt a coup; tanks in Moscow", "age": 2, "chaos": 9, "polarization": 9, "economic": 5, "resistance": 4 },
+        { "title": "Yeltsin defies the coup; crowds defend parliament", "age": 2, "chaos": 7, "polarization": 9, "economic": 2, "resistance": 5 },
+        { "title": "Shortages and rationing across the country", "age": 7, "chaos": 4, "polarization": 5, "economic": 9, "resistance": 3 }
+      ]
+    },
+    {
+      "id": "H-1789", "name": "French Revolution: storming of the Bastille", "when": "July 1789", "place": "France", "featured": false,
+      "like": "A bankrupt state, bread at record prices, the king massing troops around Paris, and then crowds seizing the Bastille.",
+      "next": "The monarchy lost control within weeks. A decade of revolution, terror and war followed.",
+      "calendar": [],
+      "events": [
+        { "title": "Crowd storms the Bastille", "age": 0, "chaos": 9, "polarization": 9, "economic": 6, "resistance": 2 },
+        { "title": "King dismisses popular finance minister Necker", "age": 3, "chaos": 5, "polarization": 8, "economic": 6, "resistance": 3 },
+        { "title": "Bread prices at a 70-year high; hunger in Paris", "age": 5, "chaos": 5, "polarization": 5, "economic": 9, "resistance": 3 },
+        { "title": "Royal troops mass around Paris", "age": 8, "chaos": 7, "polarization": 8, "economic": 3, "resistance": 3 },
+        { "title": "State bankruptcy looms", "age": 12, "chaos": 3, "polarization": 5, "economic": 8, "resistance": 3 }
+      ]
+    },
+    {
+      "id": "H-1861", "name": "Outbreak of the US Civil War", "when": "Apr 1861", "place": "United States", "featured": true,
+      "like": "Seven states had left the Union, trade between North and South had collapsed, and then Confederate guns fired on Fort Sumter.",
+      "next": "Four more states seceded, and four years of war killed over 600,000 Americans.",
+      "calendar": [],
+      "events": [
+        { "title": "Lincoln calls for 75,000 volunteers", "age": 0, "chaos": 8, "polarization": 10, "economic": 4, "resistance": 2 },
+        { "title": "Confederates fire on Fort Sumter; war begins", "age": 3, "chaos": 10, "polarization": 10, "economic": 5, "resistance": 1 },
+        { "title": "Banks and trade between North and South collapse", "age": 5, "chaos": 6, "polarization": 8, "economic": 8, "resistance": 2 },
+        { "title": "Seven states have seceded; more are about to follow", "age": 6, "chaos": 8, "polarization": 10, "economic": 6, "resistance": 1 }
+      ]
+    },
+    {
+      "id": "H-49BC", "name": "Roman Republic: Caesar crosses the Rubicon", "when": "Jan 49 BC", "place": "Rome", "featured": false,
+      "like": "Decades of street violence between political gangs, a Senate trying to strip a general of his army, and the general marching on Rome instead.",
+      "next": "Civil war. The Republic never recovered; within two decades Rome was ruled by emperors.",
+      "calendar": [],
+      "events": [
+        { "title": "Caesar crosses the Rubicon with his army: civil war", "age": 0, "chaos": 10, "polarization": 10, "economic": 4, "resistance": 1 },
+        { "title": "Tribunes loyal to Caesar flee Rome", "age": 4, "chaos": 6, "polarization": 10, "economic": 1, "resistance": 2 },
+        { "title": "Senate orders Caesar to disband his army", "age": 6, "chaos": 5, "polarization": 10, "economic": 2, "resistance": 3 },
+        { "title": "Years of gang warfare in Rome's streets", "age": 14, "chaos": 6, "polarization": 9, "economic": 3, "resistance": 2 }
+      ]
+    }
+  ]
+}
