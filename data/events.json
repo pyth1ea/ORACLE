@@ -708,6 +708,149 @@
         "resistance": 7
       },
       "systems": {}
+    },
+    {
+      "id": "E-20261016-02",
+      "date": "2026-10-16",
+      "domain": "economy",
+      "title": "S&P 500 falls 1.1% and Nasdaq 2.1% on chip/AI sell-off; worst week since June",
+      "sources": [
+        "CNBC",
+        "Reuters"
+      ],
+      "url": "https://www.cnbc.com/2026/10/15/stock-market-today-live-updates.html",
+      "omen": {
+        "chaos": 3,
+        "polarization": 1,
+        "economic": 4
+      },
+      "clio": {
+        "precedent": "2022 chip and tech sell-off",
+        "precedent_match": 5,
+        "resistance": 7
+      },
+      "systems": {
+        "S-GROWTH": 1
+      }
+    },
+    {
+      "id": "E-20261017-01",
+      "date": "2026-10-17",
+      "domain": "unrest",
+      "title": "No Kings 'Vote Early' rallies at 2,500+ sites; peaceful, crowds reported smaller than earlier days",
+      "sources": [
+        "OPB",
+        "The Guardian",
+        "ABC7"
+      ],
+      "url": "https://www.opb.org/article/2026/10/18/no-kings-protest-eugene/",
+      "omen": {
+        "chaos": 2,
+        "polarization": 4,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2025 October No Kings protests",
+        "precedent_match": 7,
+        "resistance": 8
+      },
+      "systems": {
+        "S-STREETS": -1
+      }
+    },
+    {
+      "id": "E-20261019-01",
+      "date": "2026-10-19",
+      "domain": "economy",
+      "title": "Oil hits 5-month high (Brent ~$110) then eases on Trump Russia sanctions waiver; Gulf crude flows down to ~8.5m bpd",
+      "sources": [
+        "Reuters",
+        "Kpler"
+      ],
+      "url": "https://www.brecorder.com/news/40444883",
+      "omen": {
+        "chaos": 4,
+        "polarization": 4,
+        "economic": 6
+      },
+      "clio": {
+        "precedent": "2022 oil shock after Russia's invasion",
+        "precedent_match": 5,
+        "resistance": 5
+      },
+      "systems": {
+        "S-INFLATION": 1,
+        "S-HORMUZ": -1
+      }
+    },
+    {
+      "id": "E-20261019-02",
+      "date": "2026-10-19",
+      "domain": "foreign",
+      "title": "Russia strikes Kyiv power plants; Zelenskyy says US gave no warning, then thanks Trump for resumed intelligence sharing",
+      "sources": [
+        "The Guardian",
+        "Reuters",
+        "Axios"
+      ],
+      "url": "https://www.theguardian.com/world/2026/oct/19/no-us-warning-russian-strikes-kyiv-power-plants-zelenskyy-ukraine-trump",
+      "omen": {
+        "chaos": 5,
+        "polarization": 3,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2022-23 winter strikes on Ukraine's grid",
+        "precedent_match": 8,
+        "resistance": 8
+      },
+      "systems": {
+        "S-UKRAINE": -1
+      }
+    },
+    {
+      "id": "E-20261019-03",
+      "date": "2026-10-19",
+      "domain": "foreign",
+      "title": "Houthi attack kills 18 at Yemeni government camp in Shabwa; Egypt says it will back Saudi Arabia against the Houthis",
+      "sources": [
+        "Reuters",
+        "AP"
+      ],
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOSXFqMTJmVlRrSjR1NmNocW1VRWFpV1pSMjlNZDh1YXBsS2gyRkE0c19uRXJCQXN4Nklq",
+      "omen": {
+        "chaos": 5,
+        "polarization": 2,
+        "economic": 3
+      },
+      "clio": {
+        "precedent": "2015-22 Saudi-Houthi war",
+        "precedent_match": 6,
+        "resistance": 6
+      },
+      "systems": {}
+    },
+    {
+      "id": "E-20261018-01",
+      "date": "2026-10-18",
+      "domain": "unrest",
+      "title": "Rioting and looting in France during protests of over half a million people; Macron vows accountability",
+      "sources": [
+        "AP",
+        "BBC"
+      ],
+      "url": "https://www.pbs.org/newshour/world/frances-macron-vows-to-hold-accountable-those-who-sought-to-bring-down",
+      "omen": {
+        "chaos": 5,
+        "polarization": 4,
+        "economic": 2
+      },
+      "clio": {
+        "precedent": "2023 French riots",
+        "precedent_match": 6,
+        "resistance": 6
+      },
+      "systems": {}
     }
   ]
 }

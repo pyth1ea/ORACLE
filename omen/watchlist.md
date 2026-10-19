@@ -3,7 +3,7 @@
 Live list of disruptions OMEN is tracking. Each run: update severity, add new items, close dead ones.
 Severity: 🔴 high · 🟠 elevated · 🟡 watch · ⚪ closed. Direction: ↑ worsening · ↓ easing · → steady.
 
-_Last updated: 2026-10-16_
+_Last updated: 2026-10-19_
 
 ---
 
@@ -18,10 +18,11 @@ _Last updated: 2026-10-16_
 ## Economy & markets
 | Sev | Item | Dir | Notes |
 |---|---|---|---|
+| 🟠 | **Fed hike odds fell after Warsh** | ↓ | Futures: Oct hike 15% (from 28%) after Warsh gave no guidance in Bangkok. ORACLE 23%. |
 | 🔴 | **Inflation re-accelerating** | ↑ | Sept CPI 3.7% y/y; **Sept PPI +1.3% m/m, 6.3% y/y** (fastest since 2022), gasoline +20.3%, core PPI 5.0% y/y. Oct CPI ≥ 3.7% now 56%. |
 | 🟠 | **Fed tightening into weakness (stagflation risk)** | → | Futures put an Oct 28 hike at ~27–34% even after hot PPI (CME FedWatch). ORACLE 40%. Warsh speaks Oct 16. New: December hike 33%. |
 | 🟠 | **Oil > $100** | ↑ | Brent spot ~$126.55, WTI ~$102 (Oct 14, FRED). Brent > $100 on Oct 30: 68%. |
-| 🟠 | **Chip / AI stock sell-off** | ↑ | Chip index down 7 sessions running; S&P 500 7,744 (Oct 15), ~1% below its Oct 13 level. 10-year yield ~5.2%. |
+| 🟠 | **Chip / AI stock sell-off** | ↑ | S&P 500 -1.1% to 7,659 and Nasdaq -2.1% on Oct 16, worst week since June. 10-year yield ~5.2%. |
 | 🟡 | **Consumer still spending** | → | Sept retail sales +0.8%, much of it gasoline. Jobless claims 199k. |
 | 🟡 | **Dec 11 government funding cliff** | → | Stopgap (H.R. 6500) funds government to Dec 11. Shutdown 30%. |
 
@@ -38,7 +39,8 @@ _Last updated: 2026-10-16_
 ## Unrest & social
 | Sev | Item | Dir | Notes |
 |---|---|---|---|
-| 🟠 | **"No Kings" protests — Oct 17 (tomorrow)** | ↑ | Nationwide. 60% that organizers claim 5M+; sandbox puts serious clashes near 10%. Watch the federal response. |
+| 🟡 | **France riots (abroad)** | ↑ | Half a million marched; looting in Paris and Milan unrest. Watch for contagion to US-linked markets only. |
+| 🟡 | **"No Kings: Vote Early" protests — Oct 17** | ↓ | Peaceful, 2,500+ sites, local reports of smaller crowds; no national headcount two days later. Organizer claim of 5M+ now 38% (resolves Oct 20). |
 | 🟡 | **Bend, Oregon school shooting** | → | 3 children and a teacher killed Oct 15. Local tragedy; no sign of political motive (scored chaos 5). |
 | 🟡 | **Measles outbreak** | → | 263 cases in Wisconsin. |
 
