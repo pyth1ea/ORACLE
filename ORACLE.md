@@ -365,6 +365,26 @@ catalyst that came due in it. The feed only holds about a day of headlines, so w
    - CLIO pass: friction readings and drivers, CLIO probabilities.
    - OMEN pass: pressure readings and drivers, OMEN probabilities, watchlist.
    - Update `market` numbers. Add new predictions, catalysts and systems as needed.
+   - **Elections (until every 2026 race is called):** run `& $py tools/elections.py refresh`. It is free: pure code
+     that re-downloads every race's candidates and expert ratings, and keeps the old data if a download fails. Then
+     run `& $py tools/elections.py status` and use what it prints:
+     - Create an ORACLE prediction (§6, the normal way) for up to 8 of the listed close Senate and governor races
+       that have none, in the order listed. Word it "Will <the Democrat> (D) win <state>'s 2026 <office> race?" (where
+       the main challenger to the Republican isn't a Democrat, name them and set `yes_party`, e.g. "I"). Resolve on
+       the day after the race is called (Nov 4 at the earliest; Alaska and California take weeks). These race
+       forecasts are extra: they don't count toward the usual number of open predictions.
+     - Link them, and add anything new for the spotlight states, with a patch applied by
+       `& $py tools/elections.py patch .work/elections.json` (validated; on any error nothing changes). Example:
+       `{"races": {"MI-SEN": {"prediction": "P-0031", "yes_party": "D", "polls": {"D": 47.5, "R": 45.0, "source":
+       "RealClearPolling average", "as_of": "2026-10-23"}, "market": {"D": 0.64, "source": "Kalshi", "as_of":
+       "2026-10-23"}, "note": "one short sentence"}}, "spotlight": {"TX": {"early_vote": {"total": 2450000, "share":
+       0.13, "as_of": "2026-10-22", "source": "Texas Secretary of State", "counties": {"48201": 410000}}}}}`.
+       Race ids look like `TX-SEN`, `MI-GOV`, `CA-22`, `AK-AL`. Counties use 5-digit FIPS codes. A `null` removes a field.
+     - Spend at most 4 extra searches on elections per run: early-vote totals for the spotlight states first (Texas
+       publishes county counts every day), then polls or odds for spotlight races whose rating changed.
+     - From the Nov 4 run on, record each called race's `result` (`{"winner": "D", "called": true, "pct": {"D": 51.2,
+       "R": 47.3}, "as_of": "2026-11-04"}`, plus `counties` shares for spotlight states when easy to get), resolve the
+       linked predictions, and keep going each run until every linked race is called.
 8. **Compute:** `& $py tools/core.py`. Read every NOTE and WARNING and act on them, including the gauge-vs-prediction
    gaps and the news-momentum flags. If you change any readings or probabilities afterwards, run it again.
    Note V, the path and the shock watch for the briefing.

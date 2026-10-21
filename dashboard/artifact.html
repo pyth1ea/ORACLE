@@ -416,6 +416,70 @@
   button:focus-visible, select:focus-visible, .track-wrap:focus-visible, summary:focus-visible { outline: 2px solid var(--clio); outline-offset: 2px; }
   footer { color: var(--muted); font-size: 12px; margin-top: 30px; }
   .err { background: var(--surface); border: 1px solid var(--critical); border-radius: 12px; padding: 16px; }
+
+  /* Elections tab. Rating colors: blue = Democratic side, red = Republican side, gold = toss-up; stronger = more certain. */
+  :root {
+    --ex-sd: #1f4e9c; --ex-ld: #4a82d4; --ex-nd: #a4c2ec; --ex-tu: #c99a1e; --ex-nr: #f1aba3; --ex-lr: #d9574f; --ex-sr: #9c1d1d;
+    --ex-i: #8a5cc2; --ex-none: #e4e3dd; --ex-mid: #f1efe9; --ex-line: #ffffff; --ex-h1: #f3dfae; --ex-h2: #e0b54a; --ex-h3: #a87908;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ex-sd: #2f63bd; --ex-ld: #5d8fdc; --ex-nd: #a3c1ee; --ex-tu: #d6a72c; --ex-nr: #f0a59c; --ex-lr: #df625a; --ex-sr: #b8322d;
+      --ex-i: #a07ad6; --ex-none: #2a2a28; --ex-mid: #3a3936; --ex-line: #0d0d0d; --ex-h1: #4d3f1c; --ex-h2: #8f6d1e; --ex-h3: #e2b443;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ex-sd: #2f63bd; --ex-ld: #5d8fdc; --ex-nd: #a3c1ee; --ex-tu: #d6a72c; --ex-nr: #f0a59c; --ex-lr: #df625a; --ex-sr: #b8322d;
+    --ex-i: #a07ad6; --ex-none: #2a2a28; --ex-mid: #3a3936; --ex-line: #0d0d0d; --ex-h1: #4d3f1c; --ex-h2: #8f6d1e; --ex-h3: #e2b443;
+  }
+  .ex h2 { margin: 0 0 4px; }
+  .ex-bar { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 0 0 10px; }
+  .ex-lab { font-size: 12px; color: var(--muted); margin-right: 2px; }
+  .ex-bar select { font: inherit; font-size: 13px; color: var(--ink); background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 5px 10px; max-width: 100%; }
+  .ex-mapwrap { position: relative; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; touch-action: none; }
+  .ex-svg { display: block; width: 100%; height: auto; cursor: grab; }
+  .ex-svg path { vector-effect: non-scaling-stroke; }
+  .ex-sts path { stroke: var(--ex-line); stroke-width: 0.7; cursor: pointer; }
+  .ex-cty path { stroke: var(--ex-line); stroke-width: 0.2; cursor: pointer; }
+  .ex-svg.deep .ex-cty path { stroke-width: 0.6; }
+  .ex-mesh { fill: none; stroke: var(--ex-line); stroke-width: 1; pointer-events: none; }
+  .ex-hi { fill: none; stroke: var(--ink); stroke-width: 2.2; pointer-events: none; }
+  .ex-ctl { position: absolute; right: 8px; bottom: 8px; display: flex; gap: 4px; }
+  .ex-ctl button { width: 34px; height: 34px; border-radius: 8px; border: 1px solid var(--border); background: var(--surface); color: var(--ink); font: inherit; font-size: 18px; line-height: 1; cursor: pointer; }
+  .ex-legend { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 12px; color: var(--ink-2); margin: 8px 2px 0; }
+  .ex-legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; vertical-align: -2px; margin-right: 4px; border: 1px solid var(--border); }
+  .ex-grad { display: inline-flex; align-items: center; gap: 6px; }
+  .ex-grad b { display: inline-block; width: 120px; height: 10px; border-radius: 3px; }
+  .ex-card { padding: 14px 16px; margin-top: 12px; }
+  .ex-card h3 { margin: 0; font-size: 19px; }
+  .ex-card h4 { margin: 18px 0 4px; font-size: 15px; }
+  .ex-ch { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .ex-spot { font-size: 11px; font-weight: 600; color: var(--ex-h3); border: 1px solid currentColor; border-radius: 999px; padding: 1px 7px; vertical-align: 3px; }
+  .ex-head { margin: 8px 0 4px; color: var(--ink-2); font-size: 14px; }
+  .ex-tiles { margin-bottom: 6px; }
+  .ex-race { border-top: 1px solid var(--grid); padding: 12px 0; }
+  .ex-rh { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; }
+  .ex-office { font-weight: 700; }
+  .ex-rate { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 650; border: 1px solid var(--border); border-radius: 999px; padding: 1px 8px 1px 6px; white-space: nowrap; }
+  .ex-rate i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; }
+  .ex-won { font-size: 12px; font-weight: 700; color: var(--good-text); }
+  .ex-cands { margin: 6px 0 2px; display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 14px; }
+  .ex-dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 5px; }
+  .ex-inc { font-size: 11px; color: var(--muted); border: 1px solid var(--border); border-radius: 4px; padding: 0 4px; }
+  .ex-meta { font-size: 13px; color: var(--ink-2); margin-top: 3px; }
+  .ex-dim { color: var(--muted); font-size: 12px; }
+  .ex-note { font-size: 13px; color: var(--ink); background: var(--surface-2); border-radius: 8px; padding: 6px 10px; margin-top: 6px; }
+  .ex-list { display: grid; }
+  .ex-row { display: grid; grid-template-columns: 40px 1fr auto; gap: 4px 10px; align-items: center; width: 100%; text-align: left; padding: 9px 0; background: none; border: 0; border-top: 1px solid var(--grid); color: inherit; font: inherit; font-size: 14px; cursor: pointer; }
+  .ex-row:has(> b:first-child) { grid-template-columns: minmax(110px, 0.6fr) 1fr; }
+  .ex-st { font-weight: 700; color: var(--ink-2); }
+  .ex-odds { text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .ex-odds small { display: block; font-weight: 400; font-size: 11px; color: var(--muted); }
+  .ex-more summary { cursor: pointer; font-size: 13px; color: var(--ink-2); padding: 8px 0; }
+  .ex-mini { display: grid; grid-template-columns: 92px auto 1fr; gap: 8px; align-items: center; padding: 6px 0; border-top: 1px solid var(--grid); font-size: 13px; }
+  .ex-mini .ex-meta { margin: 0; }
+  .ex-ul { margin: 4px 0; padding-left: 18px; font-size: 13px; color: var(--ink-2); }
+  @media (max-width: 640px) { .ex-mini { grid-template-columns: 80px 1fr; } .ex-mini .ex-meta { grid-column: 1 / -1; } .ex-ctl button { width: 38px; height: 38px; } }
 </style>
 <div class="wrap">
   <header class="top">
@@ -435,6 +499,7 @@
   </div>
   <div class="views" role="group" aria-label="View">
     <button type="button" data-view="dash">Dashboard</button>
+    <button type="button" data-view="elex">Elections</button>
     <button type="button" data-view="how">How it works</button>
     <button type="button" data-view="raw">Raw math</button>
   </div>
@@ -503,7 +568,13 @@
     resistance: ['Resistance (C)', 'Institutional resistance', 'How well institutions absorbed recent news (courts blocking things, normal processes handling it), scored 1–10.'],
     calendar:   ['Calendar (Pm)', 'Big dates coming', 'Extra sensitivity when big dates are close. An election next week makes everything matter more.'],
     inertia:    ['Inertia (Is)', 'Built-in slowness', 'A constant for how slowly the US system normally changes: bureaucracy, checks and balances, slow lawmaking.'],
-    weekreview: ['7-day review', 'Last week in review', 'A look back at the last 7 days: what got graded, which engine was closer, and what changed most.']
+    weekreview: ['7-day review', 'Last week in review', 'A look back at the last 7 days: what got graded, which engine was closer, and what changed most.'],
+    rating:     ['Race rating', 'Expert rating', 'How likely each side is to win, according to nonpartisan election forecasters (Cook Political Report, Inside Elections, Sabato’s Crystal Ball and others): Safe, Likely, Lean or Toss-up. ORACLE averages them.'],
+    tossup:     ['Toss-up', 'Toss-up', 'A race the experts think could go either way.'],
+    openseat:   ['Open seat', 'Open seat', 'Nobody who holds the seat now is running (they retired, lost their primary, or are running for something else). Open seats change hands more often.'],
+    special:    ['Special election', 'Special election', 'An election to finish someone else’s term after they left early. In 2026, Florida and Ohio fill the Senate seats Marco Rubio and JD Vance gave up.'],
+    pvi:        ['PVI', 'Partisan lean', 'Cook Partisan Voting Index: how much more Republican (R+) or Democratic (D+) a place voted than the whole country in the last two presidential elections.'],
+    earlyvote:  ['Early vote', 'Early voting', 'Ballots cast before Election Day, in person or by mail. Heavy early voting in one party’s strongholds can hint at the result, but it isn’t the result.']
   };
 
   var MODES = {
@@ -586,7 +657,7 @@
   // ======================================================================================
   var state = recall('oracle-view', { dom: 'all', sort: 'soon' });
   var view = recall('oracle-tab', 'dash');
-  if (['dash', 'how', 'raw'].indexOf(view) < 0) view = 'dash';
+  if (['dash', 'elex', 'how', 'raw'].indexOf(view) < 0) view = 'dash';
   var tlOn = recall('oracle-tl', { pred: true, hit: true, miss: true, cat: true, news: false });
 
   function sectionList() {
@@ -606,6 +677,7 @@
     document.getElementById('jump').style.display = view === 'dash' ? '' : 'none';
     if (view === 'how') { app.innerHTML = renderHow(); return; }
     if (view === 'raw') { app.innerHTML = renderRaw(); return; }
+    if (view === 'elex') { app.innerHTML = renderElex(); elexMount(); return; }
 
     var a = (D.stats && D.stats.all) || { n: 0 };
     var nextCat = cats.filter(function (c) { return c.status !== 'resolved' && daysUntil(c.window_end || c.date) >= 0; })[0];
@@ -1186,6 +1258,9 @@
       'RSS: AP, Reuters, C-SPAN (via Google News), BBC, PBS, The Hill, Axios, NPR, Politico, The Guardian US, Fox News, Washington Examiner, the Federal Reserve, BLS. Data: FRED (S&P 500, VIX, Brent, gasoline, the Fed funds rate, 10y, CPI, core CPI, payrolls, unemployment, claims, sentiment). Benchmarks: Kalshi, Polymarket, Metaculus, CME FedWatch, Decision Desk HQ. Surprising claims need a second independent source.',
       'Wire services (AP, Reuters), outlets on the left, center and right (from The Guardian to Fox News), C-SPAN, and official sources (the Federal Reserve, the Labor Department, FRED economic data). Betting markets are used as a benchmark to beat. Anything surprising has to be confirmed by a second independent source.') + '</p>';
 
+    h += '<h3>' + L('Elections tab', 'The Elections map') + '</h3><p>' + L(
+      '<code>tools/elections.py refresh</code> downloads every 2026 race (candidates, incumbent, status) and the published ratings from Wikipedia’s election pages, which compile Cook, Inside Elections, Sabato, Decision Desk, Split Ticket and others. Each rating maps to a number (Safe/Solid ±3, Likely ±2, Lean ±1, Tilt ±0.5, Toss-up 0) and a race’s rating is the mean; House seats on no competitive list count as Safe for the side of their PVI. The refresh is pure code. The run adds judgment through a validated patch: links to ORACLE forecasts (each close Senate and governor race gets one), polls, betting odds, early-vote counts for spotlight states, and results from Nov 4. County shapes: US Census via us-atlas (2017 lines). 2024 county results: a public dataset.',
+      'Every Monday, Wednesday and Friday a small program downloads every race on the 2026 ballot (who’s running, who holds the seat now) and the ratings from nonpartisan election experts, and averages those ratings. That part is automatic. Then the AI adds the parts that take judgment: ORACLE’s own odds for the closest Senate and governor races, polls and betting odds, early-voting numbers for the spotlight states, and the results once votes are counted. The morning after the election, ORACLE grades all of its race forecasts at once.') + '</p>';
     h += '<h3>' + L('Limits', 'What ORACLE can’t do') + '</h3><ul>' +
       '<li>' + L('Inputs (event scores, engine probabilities, gauge readings) are AI judgments on fixed rubrics. They are consistent, not objective.', 'The ratings and engine numbers are judgment calls by an AI using fixed rules. They are consistent, but not "objective truth."') + '</li>' +
       '<li>' + L('True surprises are, by definition, under-forecast; the shock watch measures how badly.', 'No system sees true surprises coming. The shock-watch record shows how often ORACLE gets caught off guard.') + '</li>' +
@@ -1263,7 +1338,21 @@
       ln('<span class="dim">A and B shown with today’s weights; O, C and P_m are rounded, so A/(A+B) may differ from V in the last digit.</span>');
     }
 
-    out.push('<h3>6 · Raw data</h3>');
+    out.push('<h3>6 · Election ratings</h3>');
+    if (!EX.ready) { elexLoad(); ln('<span class="dim">Loading the election data… (opens with the Elections tab)</span>'); }
+    else {
+      ln('score = mean over raters of s(rating)    s: Safe/Solid ±3 · Likely ±2 · Lean ±1 · Tilt ±0.5 · Toss-up 0    (− = D side)');
+      ln('label: |score| < 0.5 Toss-up · < 1.5 Lean · < 2.5 Likely · otherwise Safe.    House seats on no competitive list: ±3 by PVI.');
+      var er = Object.keys(EX.E.races).map(function (k) { return EX.E.races[k]; })
+        .filter(function (r) { return r.office !== 'house' && r.score != null && Math.abs(r.score) < 1.5; }).sort(function (x, y) { return Math.abs(x.score) - Math.abs(y.score); });
+      out.push(table(['race', 'Cook', 'IE', 'Sabato', 'n', 'score', 'label', 'ORACLE'], er.map(function (r) {
+        var rr = r.ratings || {}, o = oracleOdds(r);
+        return [esc(r.id), esc(rr.Cook || '—'), esc(rr.IE || '—'), esc(rr.Sabato || '—'), r.n_raters, fx(r.score, 2), RK_T[rk(r.score)], o ? esc(o.p.id) + ' ' + pct(o.p.oracle) + ' ' + o.yp : '—'];
+      })));
+      ln('<span class="dim">n = how many raters rated the race; only Cook, IE and Sabato are stored by name, so the mean can’t be fully re-derived here. Ratings refreshed ' + esc(EX.E.meta.refreshed) + '.</span>');
+    }
+
+    out.push('<h3>7 · Raw data</h3>');
     [['config', D.config], ['weights', D.weights], ['volatility', D.volatility], ['calibration', D.calibration], ['stats', D.stats], ['review', D.review], ['sandbox summary', SIM ? { date: SIM.date, runs: SIM.runs, events_per_day: SIM.events_per_day, systems: SIM.systems, predictions: SIM.predictions } : null]].forEach(function (x) {
       out.push('<details><summary>' + x[0] + '</summary><pre>' + esc(JSON.stringify(x[1], null, 2)) + '</pre></details>');
     });
@@ -1271,11 +1360,384 @@
     return out.join('') + '</div>';
   }
 
+  // ======================================================================================
+  // Elections tab: a zoomable map of the 2026 midterms. Its data (elections.js, built from data/elections.json),
+  // the map library and the county shapes load only when the tab is first opened.
+  // ======================================================================================
+  var EXV = recall('oracle-ex', { layer: 'senate', st: null });
+  var EX = { ready: false, loading: false, err: null, layer: EXV.layer || 'senate', sel: EXV.st || null, county: null };
+  var EX_SRC = {
+    d3: 'https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js',
+    topo: 'https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js',
+    atlas: 'https://cdn.jsdelivr.net/npm/us-atlas@3.0.1/counties-albers-10m.json'
+  };
+  var PARTY_T = { D: 'D', R: 'R', I: 'I', L: 'Lib.', G: 'Green', O: 'Other' };
+  var PARTY_P = { D: 'Democrat', R: 'Republican', I: 'Independent', L: 'Libertarian', G: 'Green', O: 'Other party' };
+  var PARTY_C = { D: 'var(--ex-sd)', R: 'var(--ex-sr)', I: 'var(--ex-i)', L: 'var(--muted)', G: 'var(--muted)', O: 'var(--muted)' };
+  var OFFICE_ORDER = { senate: 0, governor: 1, house: 2 };
+  var exSvg = null, exG = null, exZoom = null, exPath = null, exCol = {};
+
+  function loadScript(src) {
+    return new Promise(function (ok, bad) {
+      var s = document.createElement('script'); s.src = src; s.onload = ok;
+      s.onerror = function () { bad(new Error('couldn’t load ' + src.split('/').pop())); };
+      document.head.appendChild(s);
+    });
+  }
+  function elexLoad() {
+    if (EX.ready || EX.loading) return;
+    EX.loading = true; EX.err = null;
+    Promise.all([window.d3 ? null : loadScript(EX_SRC.d3), window.ORACLE_ELECTIONS ? null : loadScript('elections.js')])
+      .then(function () { return window.topojson ? null : loadScript(EX_SRC.topo); })
+      .then(function () { return fetch(EX_SRC.atlas).then(function (r) { if (!r.ok) throw new Error('the map shapes didn’t download (' + r.status + ')'); return r.json(); }); })
+      .then(function (topo) {
+        var E = window.ORACLE_ELECTIONS;
+        if (!E) throw new Error('the election data (elections.js) is missing');
+        EX.E = E; EX.C24 = (window.ORACLE_E2024 || {}).counties || {};
+        EX.states = topojson.feature(topo, topo.objects.states).features;
+        EX.counties = topojson.feature(topo, topo.objects.counties).features;
+        EX.mesh = topojson.mesh(topo, topo.objects.states, function (a, b) { return a !== b; });
+        EX.byFips = {}; EX.stByFips = {}; EX.cByState = {}; EX.abbr = {}; EX.races = {};
+        EX.states.forEach(function (f) { EX.stByFips[f.id] = f; });
+        EX.counties.forEach(function (f) { EX.byFips[f.id] = f; var s = f.id.slice(0, 2); (EX.cByState[s] = EX.cByState[s] || []).push(f); });
+        Object.keys(E.meta.states).forEach(function (a) { EX.abbr[E.meta.states[a][1]] = a; });
+        Object.keys(E.races).forEach(function (id) { var r = E.races[id]; r.id = id; (EX.races[r.state] = EX.races[r.state] || []).push(r); });
+        Object.keys(EX.races).forEach(function (a) {
+          EX.races[a].sort(function (x, y) { return OFFICE_ORDER[x.office] - OFFICE_ORDER[y.office] || (parseInt(x.district, 10) || 0) - (parseInt(y.district, 10) || 0); });
+        });
+        if (EX.sel && !E.meta.states[EX.sel]) EX.sel = null;
+        EX.ready = true; EX.loading = false;
+        if (view === 'elex' || view === 'raw') renderAll();
+      })
+      .catch(function (e) { EX.loading = false; EX.err = e.message || String(e); if (view === 'elex') renderAll(); });
+  }
+
+  // ---------- words and small pieces ----------
+  function exSave() { store('oracle-ex', { layer: EX.layer, st: EX.sel }); }
+  function stName(a) { return EX.E.meta.states[a] ? EX.E.meta.states[a][0] : a; }
+  function fipsOf(a) { return EX.E.meta.states[a] ? EX.E.meta.states[a][1] : ''; }
+  function cName(f) { // 'Harris County, TX', 'Orleans Parish, LA', 'Richmond (city), VA'
+    var c = EX.byFips[f], st = f.slice(0, 2), n = +f.slice(2), name = c ? c.properties.name : f;
+    var kind = st === '02' || /City$/.test(name) ? '' : st === '22' ? ' Parish' : (st === '51' && n >= 500) || (st === '24' && n === 510) || (st === '29' && n === 510) ? ' (city)' : ' County';
+    return name + kind + ', ' + (EX.abbr[st] || '');
+  }
+  function stWord(s) { // a race's status, in everyday words for Plain English mode
+    if (mode !== 'plain') return esc(s);
+    return esc(String(s || '').replace(/^Term-limited$/, 'The current holder can’t run again (term limits)').replace(/^Incumbent /, 'The current holder ')
+      .replace(/^Interim appointee /, 'The appointed holder ').replace(/lost renomination in runoff/, 'lost the primary runoff').replace(/lost renomination/, 'lost the primary').replace(/^New representative to be elected$/, 'Brand-new seat'));
+  }
+  function rk(s) { return s == null ? 'none' : s <= -2.5 ? 'sd' : s <= -1.5 ? 'ld' : s <= -0.5 ? 'nd' : s < 0.5 ? 'tu' : s < 1.5 ? 'nr' : s < 2.5 ? 'lr' : 'sr'; }
+  var RK_T = { sd: 'Safe D', ld: 'Likely D', nd: 'Lean D', tu: 'Toss-up', nr: 'Lean R', lr: 'Likely R', sr: 'Safe R', none: 'Not rated' };
+  var RK_P = { sd: 'Safe Democratic', ld: 'Likely Democratic', nd: 'Leans Democratic', tu: 'Toss-up', nr: 'Leans Republican', lr: 'Likely Republican', sr: 'Safe Republican', none: 'Not rated' };
+  function rWord(s) { return (mode === 'plain' ? RK_P : RK_T)[rk(s)]; }
+  function rChip(r) { return '<span class="ex-rate"><i style="background:var(--ex-' + rk(r.score) + ')"></i>' + rWord(r.score) + '</span>'; }
+  function pName(p) { return (mode === 'plain' ? PARTY_P : PARTY_T)[p] || p; }
+  function fmtS(s) { return s == null ? '—' : s === 0 ? '0.0' : (s > 0 ? '+' : '−') + Math.abs(s).toFixed(1) + (s > 0 ? ' R' : ' D'); }
+  function num(n) { return Number(n).toLocaleString('en-US'); }
+  function marginText(m) {
+    var w = m > 0 ? 'Trump' : 'Harris';
+    return mode === 'plain' ? (m > 0 ? 'Donald Trump' : 'Kamala Harris') + ' won by ' + Math.round(Math.abs(m) * 100) + ' points' : w + ' +' + (Math.abs(m) * 100).toFixed(1);
+  }
+  function partyNums(o, prob) {
+    return Object.keys(o).filter(function (k) { return k !== 'source' && k !== 'as_of'; })
+      .map(function (k) { return pName(k) + ' ' + (prob ? Math.round(o[k] * 100) : o[k]) + '%'; }).join(' · ');
+  }
+  function raceTitle(r) {
+    if (r.office === 'house') return r.district === 'AL' ? L('At-large seat', 'The state’s one House seat') : 'District ' + r.district;
+    return (r.office === 'senate' ? 'Senate' : 'Governor') + (r.special ? ' (' + T('special').toLowerCase() + ')' : '');
+  }
+  function cand(c, r) {
+    return '<span><span class="ex-dot" style="background:' + PARTY_C[c.party] + '"></span>' + esc(c.name) +
+      ' <span class="muted">(' + pName(c.party) + ')</span>' +
+      (r.incumbent && r.incumbent.name === c.name ? ' <span class="ex-inc">' + L('incumbent', 'holds it now') + '</span>' : '') + '</span>';
+  }
+  function matchup(r) { return r.candidates.slice(0, 2).map(function (c) { return esc(c.name.split(' ').slice(-1)[0]) + ' (' + PARTY_T[c.party] + ')'; }).join(' vs '); }
+  function oracleOdds(r) {
+    var p = byId[r.prediction]; if (!p) return null;
+    var yp = r.yes_party || 'D', who = (r.candidates.filter(function (c) { return c.party === yp; })[0] || {}).name;
+    return { p: p, yp: yp, who: who || pName(yp) };
+  }
+  function oracleLine(r) {
+    var o = oracleOdds(r); if (!o) return '';
+    if (o.p.status === 'resolved') return '<div class="ex-meta"><b>' + T('oracle') + '</b>: ' + L('forecast ' + esc(o.p.id) + ' graded, ', 'forecast graded: ') + (o.p.outcome ? esc(o.who) + ' won' : esc(o.who) + ' lost') + '</div>';
+    return '<div class="ex-meta"><b>' + T('oracle') + '</b>: ' + L(pct(o.p.oracle) + ' that ' + esc(o.who) + ' (' + o.yp + ') wins · ' + T('clio') + ' ' + pct(o.p.clio) + ' · ' + T('omen') + ' ' + pct(o.p.omen) + ' · ' + esc(o.p.id),
+      'gives ' + esc(o.who) + ' a <b>' + pct(o.p.oracle) + '</b> chance of winning') + '</div>';
+  }
+  function raceBlock(r) {
+    var h = '<div class="ex-race"><div class="ex-rh"><span class="ex-office">' + raceTitle(r) + '</span>' + rChip(r) +
+      (r.result && r.result.called && r.result.winner ? '<span class="ex-won">' + L('Called: ', 'Winner: ') + pName(r.result.winner) + '</span>' : '') +
+      '<span class="ex-meta">' + (r.open ? T('openseat') + ' · ' + stWord(r.status) : L('Incumbent running', 'The person who holds it now is running again')) + '</span></div>';
+    h += '<div class="ex-cands">' + (r.candidates.length ? r.candidates.map(function (c) { return cand(c, r); }).join('') : '<span class="muted">' + L('Candidates not listed yet', 'Candidates not listed yet') + '</span>') + '</div>';
+    h += oracleLine(r);
+    if (r.result && r.result.pct) h += '<div class="ex-meta">' + L('Result', 'Votes so far') + ': ' + partyNums(r.result.pct) + (r.result.called ? '' : L(' (not called)', ' (still counting)')) + ' · ' + fmtDate(r.result.as_of) + '</div>';
+    if (r.polls) h += '<div class="ex-meta">' + L('Polls', 'Polling average') + ': ' + partyNums(r.polls) + ' · ' + esc(r.polls.source) + ', ' + fmtDate(r.polls.as_of) + '</div>';
+    if (r.market) h += '<div class="ex-meta">' + T('market') + ': ' + partyNums(r.market, true) + ' · ' + esc(r.market.source) + ', ' + fmtDate(r.market.as_of) + '</div>';
+    if (mode !== 'plain') {
+      var rs = Object.keys(r.ratings || {}).map(function (k) { return k + ' ' + esc(r.ratings[k]); }).join(' · ');
+      h += '<div class="ex-meta ex-dim">' + (rs ? rs + ' · ' : '') + (r.n_raters ? 'average ' + fmtS(r.score) + ' (' + r.n_raters + ' raters)' : L('on no competitive list', 'on no expert’s competitive list')) +
+        (r.pvi ? ' · ' + T('pvi') + ' ' + esc(r.pvi) : '') + (r.last ? ' · last time ' + esc(r.last) : '') + '</div>';
+    }
+    if (r.note) h += '<div class="ex-note">' + esc(r.note) + '</div>';
+    return h + '</div>';
+  }
+  function tile(k, v, s) { return '<div class="tile"><div class="k">' + k + '</div><div class="v">' + v + '</div><div class="s">' + s + '</div></div>'; }
+
+  // ---------- the info card under the map ----------
+  function nationalCard() {
+    var E = EX.E, all = Object.keys(E.races).map(function (k) { return E.races[k]; });
+    var d = daysUntil(E.meta.election_day), ctl = E.meta.control || {}, ph = byId[ctl.house], ps = byId[ctl.senate];
+    var top = all.filter(function (r) { return r.office !== 'house' && r.score != null && Math.abs(r.score) < 1.5; })
+      .sort(function (x, y) { return Math.abs(x.score) - Math.abs(y.score); });
+    var house = all.filter(function (r) { return r.office === 'house'; }), hk = {};
+    house.forEach(function (r) { var k = rk(r.score); hk[k] = (hk[k] || 0) + 1; });
+    var tossups = all.filter(function (r) { return rk(r.score) === 'tu'; }).length;
+    var h = '<div class="card ex-card"><div class="tiles ex-tiles">' +
+      tile('Election Day', fmtDate(E.meta.election_day), d > 0 ? d + L(' days away', ' days to go') : d === 0 ? 'Today' : L('Counting', 'Votes being counted')) +
+      (ph ? tile(L('P(D House majority)', 'Democrats win the House'), pct(ph.oracle), L('ORACLE · ' + ph.id, 'ORACLE’s chance')) : '') +
+      (ps ? tile(L('P(D Senate majority)', 'Democrats win the Senate'), pct(ps.oracle), L('ORACLE · ' + ps.id, 'ORACLE’s chance')) : '') +
+      tile(L('Toss-ups', 'Toss-up races'), tossups, L('all offices, by rating average', 'races the experts call 50/50')) + '</div>';
+    h += '<h4>' + L('Closest Senate and governor races', 'The closest Senate and governor races') + '</h4>' +
+      '<p class="ex-meta">' + L('Average rating within Lean, closest first. Tap one to zoom in.', 'Tap a race to zoom into that state.') + '</p><div class="ex-list">' +
+      top.map(function (r) {
+        var o = oracleOdds(r);
+        return '<button type="button" class="ex-row" data-exstate="' + r.state + '"><span class="ex-st">' + r.state + '</span><span><b>' +
+          (r.office === 'senate' ? 'Senate' : 'Governor') + '</b> · ' + matchup(r) + '<br>' + rChip(r) + '</span><span class="ex-odds">' +
+          (o && o.p.status === 'open' ? pct(o.p.oracle) + '<small>' + L(o.yp + ' wins', esc(o.who.split(' ').slice(-1)[0]) + ' wins') + '</small>' : '') + '</span></button>';
+      }).join('') + '</div>';
+    h += '<h4>' + L('House: all 435 seats', 'The House: all 435 seats') + '</h4><p class="ex-meta">' +
+      L('Rating average: ' + ['sd', 'ld', 'nd', 'tu', 'nr', 'lr', 'sr'].map(function (k) { return RK_T[k] + ' ' + (hk[k] || 0); }).join(' · ') + '. 218 seats for a majority.',
+        'The experts see ' + ((hk.sd || 0) + (hk.ld || 0)) + ' seats as safe or likely Democratic, ' + (hk.nd || 0) + ' leaning Democratic, <b>' + (hk.tu || 0) + ' toss-ups</b>, ' +
+        (hk.nr || 0) + ' leaning Republican and ' + ((hk.lr || 0) + (hk.sr || 0)) + ' safe or likely Republican. A party needs 218 for a majority.') + '</p>';
+    var ch = (E.changes || []).filter(function (c) { return daysUntil(c.date) >= -14; }).slice(-8).reverse();
+    if (ch.length) h += '<h4>' + L('Rating changes (14 days)', 'Recent rating changes') + '</h4><ul class="ex-ul">' + ch.map(function (c) {
+      return '<li>' + fmtDate(c.date) + ' · <b>' + esc(c.race) + '</b>: ' + esc(c.from) + ' → ' + esc(c.to) + '</li>'; }).join('') + '</ul>';
+    h += '<p class="ex-meta ex-dim">' + L('Ratings: ' + esc(E.meta.sources.ratings) + '. Refreshed ' + fmtDate(E.meta.refreshed) + '.',
+      'Expert ratings come from Cook Political Report, Inside Elections, Sabato’s Crystal Ball and others, gathered on ' + fmtDate(E.meta.refreshed) + '.') + '</p>';
+    return h + '</div>';
+  }
+  function stateCard(a) {
+    var rs = EX.races[a] || [], sp = EX.E.spotlight[a];
+    var top = rs.filter(function (r) { return r.office !== 'house'; }), hs = rs.filter(function (r) { return r.office === 'house'; });
+    var close = hs.filter(function (r) { return r.score != null && Math.abs(r.score) < 1.5; }).sort(function (x, y) { return Math.abs(x.score) - Math.abs(y.score); });
+    var rest = hs.filter(function (r) { return close.indexOf(r) < 0; });
+    var h = '<div class="card ex-card"><div class="ex-ch"><h3>' + esc(stName(a)) + (sp ? ' <span class="ex-spot">' + L('spotlight', 'spotlight') + '</span>' : '') + '</h3>' +
+      '<button type="button" class="chip" data-exback>' + L('Whole country', '← Whole country') + '</button></div>';
+    if (sp && sp.headline) h += '<p class="ex-head">' + esc(sp.headline) + '</p>';
+    if (!top.length) h += '<p class="ex-meta">' + L('No Senate or governor race in 2026.', 'No Senate or governor race here this year.') + '</p>';
+    top.forEach(function (r) { h += raceBlock(r); });
+    h += '<h4>' + L('House (' + hs.length + (hs.length === 1 ? ' seat)' : ' seats)'), 'House seats (' + hs.length + ')') + '</h4><p class="ex-meta">' +
+      (close.length ? L(close.length + ' rated competitive (average within Lean).', close.length + (close.length === 1 ? ' of them could be close.' : ' of them could be close.')) : L('None rated competitive.', 'None of them is expected to be close.')) +
+      ' ' + L('District lines aren’t drawn on the map yet.', 'House district lines aren’t on the map yet.') + '</p>';
+    close.forEach(function (r) { h += raceBlock(r); });
+    if (rest.length) h += '<details class="ex-more"><summary>' + L('Other seats (' + rest.length + ')', (close.length ? 'The other ' : 'All ') + rest.length + ' seats') + '</summary>' + rest.map(function (r) {
+      return '<div class="ex-mini"><span>' + raceTitle(r) + '</span>' + rChip(r) + '<span class="ex-meta">' + (r.candidates.length ? r.candidates.slice(0, 2).map(function (c) { return esc(c.name) + ' (' + PARTY_T[c.party] + ')'; }).join(' vs ') : '—') + '</span></div>';
+    }).join('') + '</details>';
+    if (sp) h += spotlightExtras(a, sp);
+    return h + '</div>';
+  }
+  function spotlightExtras(a, sp) {
+    var ev = sp.early_vote, h = '<h4>' + T('earlyvote') + '</h4>';
+    if (ev) {
+      h += '<p class="ex-meta"><b>' + num(ev.total) + '</b> ' + L('ballots cast', 'people have already voted') + (ev.share != null ? ' (' + Math.round(ev.share * 100) + '% ' + L('of registered voters', 'of registered voters') + ')' : '') +
+        ' · ' + fmtDate(ev.as_of) + ' · ' + esc(ev.source) + '</p>';
+      var top = Object.keys(ev.counties || {}).sort(function (x, y) { return ev.counties[y] - ev.counties[x]; }).slice(0, 6);
+      if (top.length) h += '<div class="ex-list">' + top.map(function (f) {
+        var c24 = EX.C24[f];
+        return '<button type="button" class="ex-row" data-excounty="' + f + '"><b>' + esc(cName(f)) + '</b><span class="ex-meta">' + num(ev.counties[f]) + L(' early votes', ' early votes') +
+          (c24 ? ' · ' + Math.round(100 * ev.counties[f] / c24[1]) + L('% of 2024 total', '% of everyone who voted in 2024') : '') + '</span></button>'; }).join('') + '</div>';
+    } else h += '<p class="ex-meta">' + L('None recorded yet.', 'No early-voting numbers yet. ORACLE adds them on its Monday, Wednesday and Friday runs.') + '</p>';
+    var w = sp.watch && sp.watch.length ? sp.watch : sp.auto_watch || [];
+    if (w.length) {
+      h += '<h4>' + L('Counties to watch', 'Places to watch on election night') + '</h4><div class="ex-list">' + w.map(function (x) {
+        return '<button type="button" class="ex-row" data-excounty="' + x.fips + '"><b>' + esc(cName(x.fips)) + '</b><span class="ex-meta">' + esc(x.why) + '</span></button>'; }).join('') + '</div>';
+      if (!(sp.watch && sp.watch.length)) h += '<p class="ex-meta ex-dim">' + L('Auto-picked from 2024: top 3 by votes, then the 3 closest with ≥1.5% of the state’s vote.', 'Picked automatically: the biggest places, and the big places that were closest in 2024.') + '</p>';
+    }
+    return h;
+  }
+  function countyCard(f) {
+    var a = EX.abbr[f.slice(0, 2)], c = EX.C24[f], sp = EX.E.spotlight[a] || {}, ev = sp.early_vote;
+    var h = '<div class="card ex-card"><div class="ex-ch"><h3>' + esc(cName(f)) + '</h3><button type="button" class="chip" data-exstate="' + a + '">' + L(stName(a), '← ' + stName(a)) + '</button></div>';
+    h += '<p class="ex-meta"><b>2024:</b> ' + (c ? marginText(c[0]) + ' · ' + num(c[1]) + L(' votes', ' votes cast') : L('no county result (' + (a === 'AK' ? 'Alaska reports by state House district' : 'not in the dataset') + ')', 'not available for this place')) +
+      (mode === 'technical' ? ' · FIPS ' + f : '') + '</p>';
+    if (ev && ev.counties && ev.counties[f] != null) h += '<p class="ex-meta"><b>' + T('earlyvote') + ':</b> ' + num(ev.counties[f]) + (c ? ' (' + Math.round(100 * ev.counties[f] / c[1]) + L('% of the 2024 total)', '% of everyone who voted in 2024)') : '') + ' · ' + fmtDate(ev.as_of) + '</p>';
+    var rs = (EX.races[a] || []).filter(function (r) { return r.office !== 'house'; });
+    rs.forEach(function (r) {
+      var rc = r.result && r.result.counties && r.result.counties[f];
+      if (rc) h += '<p class="ex-meta"><b>' + raceTitle(r) + L(' result here', ' result here') + ':</b> ' + partyNums(rc) + '</p>';
+    });
+    h += '<h4>' + L('Statewide races on this ballot', 'Also on the ballot here') + '</h4>' + (rs.length ? rs.map(function (r) {
+      return '<div class="ex-mini"><span>' + raceTitle(r) + '</span>' + rChip(r) + '<span class="ex-meta">' + matchup(r) + '</span></div>'; }).join('') : '<p class="ex-meta">' + L('None.', 'No Senate or governor race.') + '</p>');
+    h += '<p class="ex-meta ex-dim">' + L('Plus a House race; which district depends on the address (district lines aren’t mapped yet).', 'Voters here also choose a member of the House. District lines aren’t on the map yet.') + '</p>';
+    return h + '</div>';
+  }
+  function exCard() {
+    var host = document.getElementById('exCard'); if (!host) return;
+    host.innerHTML = EX.county ? countyCard(EX.county) : EX.sel ? stateCard(EX.sel) : nationalCard();
+  }
+
+  // ---------- the map ----------
+  function exLayers() {
+    var hasEarly = Object.keys(EX.E.spotlight).some(function (a) { var ev = EX.E.spotlight[a].early_vote; return ev && ev.counties && Object.keys(ev.counties).length; });
+    var ls = [['senate', L('Senate', 'Senate races')], ['governor', L('Governor', 'Governor races')], ['house', L('House (competitive)', 'Close House seats')], ['y2024', L('2024 by county', 'How places voted in 2024')]];
+    if (hasEarly) ls.push(['early', L('Early vote', 'Early voting')]);
+    if (!ls.some(function (l) { return l[0] === EX.layer; })) EX.layer = 'senate';
+    return ls;
+  }
+  function exLegend() {
+    var el = document.getElementById('exLegend'); if (!el) return;
+    var sw = function (k, t) { return '<span><i style="background:var(--ex-' + k + ')"></i>' + t + '</span>'; };
+    var h;
+    if (EX.layer === 'senate' || EX.layer === 'governor') {
+      h = ['sd', 'ld', 'nd', 'tu', 'nr', 'lr', 'sr'].map(function (k) { return sw(k, (mode === 'plain' ? RK_P : RK_T)[k]); }).join('') + sw('none', L('No race', 'No race this year'));
+    } else if (EX.layer === 'house') {
+      h = sw('h1', L('1–2 competitive', '1–2 close seats')) + sw('h2', '3–5') + sw('h3', L('6+', '6 or more')) + sw('none', L('none', 'none'));
+    } else if (EX.layer === 'y2024') {
+      h = '<span class="ex-grad">' + L('Harris +60', 'Harris won big') + '<b style="background:linear-gradient(90deg,var(--ex-sd),var(--ex-mid),var(--ex-sr))"></b>' + L('Trump +60', 'Trump won big') + '</span>';
+    } else {
+      h = '<span class="ex-grad">0%<b style="background:linear-gradient(90deg,var(--ex-mid),var(--ex-h3))"></b>' + L('60%+ of the 2024 total', '60%+ of 2024’s turnout') + '</span>' + sw('none', L('no data', 'no numbers yet'));
+    }
+    el.innerHTML = h;
+  }
+  function exColors() {
+    var cs = getComputedStyle(root);
+    ['sd', 'sr', 'mid', 'h3'].forEach(function (k) { exCol[k] = cs.getPropertyValue('--ex-' + k).trim(); });
+  }
+  function marginColor(m) {
+    var t = Math.max(-1, Math.min(1, m / 0.6));
+    return t < 0 ? d3.interpolateRgb(exCol.mid, exCol.sd)(-t) : d3.interpolateRgb(exCol.mid, exCol.sr)(t);
+  }
+  function stateFill(f) {
+    var a = EX.abbr[f.id], rs = EX.races[a] || [];
+    if (EX.layer === 'senate' || EX.layer === 'governor') {
+      var r = rs.filter(function (x) { return x.office === EX.layer; }).sort(function (x, y) { return Math.abs(x.score == null ? 9 : x.score) - Math.abs(y.score == null ? 9 : y.score); })[0];
+      if (!r) return 'var(--ex-none)';
+      if (r.result && r.result.called && r.result.winner) return PARTY_C[r.result.winner];
+      return 'var(--ex-' + rk(r.score) + ')';
+    }
+    if (EX.layer === 'house') {
+      var n = rs.filter(function (x) { return x.office === 'house' && x.score != null && Math.abs(x.score) < 1.5; }).length;
+      return n === 0 ? 'var(--ex-none)' : 'var(--ex-h' + (n >= 6 ? 3 : n >= 3 ? 2 : 1) + ')';
+    }
+    return 'var(--ex-none)';
+  }
+  function countyFill(f) {
+    var a = EX.abbr[f.id.slice(0, 2)], c24 = EX.C24[f.id];
+    if (EX.layer === 'y2024') return c24 ? marginColor(c24[0]) : 'var(--ex-none)';
+    if (EX.layer === 'early') {
+      var ev = (EX.E.spotlight[a] || {}).early_vote, v = ev && ev.counties && ev.counties[f.id];
+      return v == null || !c24 ? 'var(--ex-none)' : d3.interpolateRgb(exCol.mid, exCol.h3)(Math.min(1, v / c24[1] / 0.6));
+    }
+    if (EX.layer === 'senate' || EX.layer === 'governor') {
+      var r = (EX.races[a] || []).filter(function (x) { return x.office === EX.layer; })[0], rc = r && r.result && r.result.counties && r.result.counties[f.id];
+      if (rc) return marginColor(((rc.R || 0) - (rc.D || 0)) / 100);
+    }
+    return 'transparent';
+  }
+  function exPaint() {
+    if (!exG || !EX.ready) return;
+    exColors();
+    var cdata = EX.layer === 'y2024' || EX.layer === 'early' ? EX.counties : EX.sel ? (EX.cByState[fipsOf(EX.sel)] || []) : [];
+    var dOf = function (f) { return f._d || (f._d = exPath(f)); }; // path shapes are computed once, then reused
+    exG.select('.ex-sts').selectAll('path').data(EX.states, function (f) { return f.id; })
+      .join(function (en) { var pth = en.append('path'); pth.append('title').text(function (f) { return stName(EX.abbr[f.id]) || ''; }); return pth; })
+      .attr('d', dOf).style('fill', stateFill).on('click', function (e, f) { exSelect(EX.abbr[f.id]); });
+    exG.select('.ex-cty').selectAll('path').data(cdata, function (f) { return f.id; })
+      .join(function (en) { var pth = en.append('path'); pth.append('title').text(function (f) { return f.properties.name; }); return pth; })
+      .attr('d', dOf).style('fill', countyFill).on('click', function (e, f) { exPick(f.id); });
+    exG.select('.ex-mesh').attr('d', exPath(EX.mesh));
+    var hi = EX.county ? EX.byFips[EX.county] : EX.sel ? EX.stByFips[fipsOf(EX.sel)] : null;
+    exG.select('.ex-hi').attr('d', hi ? exPath(hi) : null);
+    exLegend();
+  }
+  function exZoomTo(f, animate) {
+    if (!exSvg) return;
+    var t = d3.zoomIdentity;
+    if (f) {
+      var b = exPath.bounds(f), x = (b[0][0] + b[1][0]) / 2, y = (b[0][1] + b[1][1]) / 2;
+      var k = Math.max(1, Math.min(16, 0.86 / Math.max((b[1][0] - b[0][0]) / 975, (b[1][1] - b[0][1]) / 610)));
+      t = d3.zoomIdentity.translate(487.5, 305).scale(k).translate(-x, -y);
+    }
+    var still = !animate || matchMedia('(prefers-reduced-motion: reduce)').matches;
+    (still ? exSvg : exSvg.transition().duration(650)).call(exZoom.transform, t);
+  }
+  function exSelect(a, county) {
+    var moved = a !== EX.sel;
+    EX.sel = a || null; EX.county = county || null; exSave();
+    exPaint(); exCard();
+    if (moved || !a) exZoomTo(a ? EX.stByFips[fipsOf(a)] : null, true);
+    var s = document.getElementById('exState'); if (s) s.value = EX.sel || '';
+    Array.prototype.forEach.call(document.querySelectorAll('[data-exst]'), function (b) { b.setAttribute('aria-pressed', b.getAttribute('data-exst') === EX.sel ? 'true' : 'false'); });
+  }
+  function exPick(f) { // a county was tapped (on the map or in a list)
+    var a = EX.abbr[f.slice(0, 2)];
+    if (a !== EX.sel) exSelect(a, f); else { EX.county = f; exPaint(); exCard(); }
+  }
+  function elexMount() {
+    var host = document.getElementById('exMap'); if (!host || !EX.ready) return;
+    exPath = d3.geoPath();
+    exSvg = d3.select(host).append('svg').attr('viewBox', '0 0 975 610').attr('class', 'ex-svg')
+      .attr('aria-label', L('Map of the United States', 'Map of the United States; tap a state to zoom in'));
+    exG = exSvg.append('g');
+    exG.append('g').attr('class', 'ex-sts'); exG.append('g').attr('class', 'ex-cty');
+    exG.append('path').attr('class', 'ex-mesh'); exG.append('path').attr('class', 'ex-hi');
+    exZoom = d3.zoom().scaleExtent([1, 16]).translateExtent([[-60, -60], [1035, 670]])
+      .on('zoom', function (e) { exG.attr('transform', e.transform); exSvg.classed('deep', e.transform.k > 3); });
+    exSvg.call(exZoom).on('dblclick.zoom', null);
+    exPaint();
+    if (EX.sel) exZoomTo(EX.stByFips[fipsOf(EX.sel)], false);
+    exCard();
+  }
+  function renderElex() {
+    elexLoad();
+    var nS = 35, nG = 36;
+    if (EX.ready) {
+      var rr = Object.keys(EX.E.races).map(function (k) { return EX.E.races[k]; });
+      nS = rr.filter(function (r) { return r.office === 'senate'; }).length; nG = rr.filter(function (r) { return r.office === 'governor'; }).length;
+    }
+    var h = '<section class="ex"><h2>' + L('2026 midterms', 'The 2026 midterm elections') + '</h2><p class="sec-sub">' + L(
+      nS + ' Senate (incl. ' + T('special').toLowerCase() + 's in FL and OH), ' + nG + ' governor and 435 House races. Each race’s ' + T('rating') + ' is the mean of the published ratings (Safe/Solid ±3, Likely ±2, Lean ±1, Tilt ±0.5, Toss-up 0; negative = D side). Ratings, candidates and incumbents refresh on each run; ORACLE adds odds for the closest races.',
+      'Every race on the ballot on Tuesday, November 3: ' + nS + ' Senate seats, ' + nG + ' governors and all 435 House seats. Choose what the map shows, tap a state to zoom in, then tap a county. Pinch or use + and − to zoom. The colors are nonpartisan experts’ ratings; ORACLE adds its own odds for the closest races.') + '</p>';
+    if (!EX.ready) {
+      return h + '<div class="card ex-card">' + (EX.err ? '<b>' + L('The map couldn’t load:', 'The map couldn’t load.') + '</b> ' + esc(EX.err) + '. ' +
+        L('First load needs a connection; after that it works offline.', 'It needs the internet the first time you open it.') + ' <button type="button" class="chip" data-exretry>' + L('Retry', 'Try again') + '</button>'
+        : L('Loading the map…', 'Loading the map…')) + '</div></section>';
+    }
+    var sp = Object.keys(EX.E.spotlight);
+    h += '<div class="ex-bar" role="group" aria-label="' + L('Spotlight states', 'States to keep an eye on') + '"><span class="ex-lab">' + L('Spotlight', 'Keep an eye on') + '</span>' + sp.map(function (a) {
+      return '<button type="button" class="chip" data-exst="' + a + '" aria-pressed="' + (EX.sel === a) + '">' + esc(stName(a)) + '</button>'; }).join('') + '</div>';
+    h += '<div class="ex-bar" role="group" aria-label="' + L('Map layer', 'What the map shows') + '"><span class="ex-lab">' + L('Color by', 'Show') + '</span>' + exLayers().map(function (l) {
+      return '<button type="button" class="chip" data-exlayer="' + l[0] + '" aria-pressed="' + (EX.layer === l[0]) + '">' + l[1] + '</button>'; }).join('') +
+      '<select id="exState" aria-label="' + L('Jump to a state', 'Jump to a state') + '"><option value="">' + L('All states', 'Jump to a state…') + '</option>' +
+      Object.keys(EX.E.meta.states).sort(function (x, y) { return stName(x) < stName(y) ? -1 : 1; }).filter(function (a) { return a !== 'DC'; }).map(function (a) {
+        return '<option value="' + a + '"' + (EX.sel === a ? ' selected' : '') + '>' + esc(stName(a)) + '</option>'; }).join('') + '</select></div>';
+    h += '<div class="ex-mapwrap"><div id="exMap"></div><div class="ex-ctl"><button type="button" data-exzoom="in" aria-label="Zoom in">+</button>' +
+      '<button type="button" data-exzoom="out" aria-label="Zoom out">−</button><button type="button" data-exzoom="reset" aria-label="' + L('Whole country', 'Back to the whole country') + '">⟲</button></div></div>';
+    h += '<div class="ex-legend" id="exLegend"></div><div id="exCard"></div></section>';
+    return h;
+  }
+  function exClick(el) {
+    if (el.hasAttribute('data-exretry')) { EX.err = null; elexLoad(); renderAll(); return; }
+    if (!EX.ready) return;
+    if (el.hasAttribute('data-exlayer')) {
+      EX.layer = el.getAttribute('data-exlayer'); exSave();
+      Array.prototype.forEach.call(document.querySelectorAll('[data-exlayer]'), function (b) { b.setAttribute('aria-pressed', b === el ? 'true' : 'false'); });
+      exPaint(); return;
+    }
+    if (el.hasAttribute('data-exst')) { var a = el.getAttribute('data-exst'); exSelect(EX.sel === a && !EX.county ? null : a); return; }
+    if (el.hasAttribute('data-exstate')) { exSelect(el.getAttribute('data-exstate')); document.getElementById('exMap').scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    if (el.hasAttribute('data-exback')) { exSelect(null); return; }
+    if (el.hasAttribute('data-excounty')) { exPick(el.getAttribute('data-excounty')); document.getElementById('exMap').scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+    var z = el.getAttribute('data-exzoom');
+    if (z === 'reset') exSelect(null);
+    else if (z && exSvg) exSvg.transition().duration(250).call(exZoom.scaleBy, z === 'in' ? 1.6 : 1 / 1.6);
+  }
+
   // ---------- glossary ----------
   function renderGlossary() {
     var order = ['oracle', 'clio', 'omen', 'sandbox', 'market', 'system', 'pressure', 'friction', 'margin', 'tip', 'holding', 'strained', 'critical', 'tipping', 'gauge', 'momentum',
       'volatility', 'V', 'alpha', 'gamma', 'beta', 'omega', 'scale', 'levelmatch', 'kindmatch', 'intensity', 'resistance', 'calendar', 'inertia', 'shock', 'catalyst', 'branch', 'divergence', 'horizon', 'resolve', 'tracking',
-      'anger', 'mobilization', 'trust', 'brier', 'calibration', 'weights', 'weekreview'];
+      'anger', 'mobilization', 'trust', 'brier', 'calibration', 'weights', 'weekreview',
+      'rating', 'tossup', 'openseat', 'special', 'pvi', 'earlyvote'];
     document.getElementById('gloss').innerHTML = '<dl>' + order.map(function (k) {
       var g = G[k], primary = mode === 'plain' ? g[1] : g[0], other = mode === 'plain' ? g[0] : g[1];
       return '<dt>' + primary + (other !== primary ? '<small>' + (mode === 'plain' ? 'Technical name: ' : 'Plain English: ') + other + '</small>' : '') + '</dt><dd>' + g[2] + '</dd>';
@@ -1287,13 +1749,15 @@
   // ======================================================================================
   document.addEventListener('click', function (e) {
     var t = e.target;
+    var exb = t.closest('[data-exlayer],[data-exst],[data-excounty],[data-exback],[data-exstate],[data-exzoom],[data-exretry]');
+    if (exb) { exClick(exb); return; }
     var mb = t.closest('[data-mode]');
     if (mb) { var y0 = window.scrollY; mode = mb.getAttribute('data-mode'); store('oracle-mode', mode); renderAll(); window.scrollTo(0, y0); return; }
     if (t.closest('#themeBtn')) {
       var cur = root.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
       var next = cur === 'dark' ? 'light' : 'dark'; root.setAttribute('data-theme', next);
       try { localStorage.setItem('oracle-theme', next); } catch (err) {}
-      renderScoreChart(); renderNumbers(); renderVolatility(); return;
+      renderScoreChart(); renderNumbers(); renderVolatility(); exPaint(); return;
     }
     var vb = t.closest('[data-view]');
     if (vb) { view = vb.getAttribute('data-view'); store('oracle-tab', view); renderAll(); window.scrollTo(0, 0); return; }
@@ -1311,7 +1775,10 @@
       var target = document.getElementById(id); if (target) target.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   });
-  document.addEventListener('change', function (e) { if (e.target && e.target.id === 'sortSel') { state.sort = e.target.value; renderPreds(); } });
+  document.addEventListener('change', function (e) {
+    if (e.target && e.target.id === 'sortSel') { state.sort = e.target.value; renderPreds(); }
+    if (e.target && e.target.id === 'exState' && EX.ready) exSelect(e.target.value || null);
+  });
   var lastW = window.innerWidth;
   window.addEventListener('resize', function () { if (window.innerWidth !== lastW) { lastW = window.innerWidth; renderScoreChart(); } });
 

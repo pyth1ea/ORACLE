@@ -1,7 +1,7 @@
 // ORACLE app service worker: makes the home-screen app open instantly and work offline.
-// Fresh-first for the page and its data (so each morning's update shows up as soon as you're online),
+// Fresh-first for the page and its data (data.js, elections.js) (so each morning's update shows up as soon as you're online),
 // cache-first for everything else (icons, libraries). Bump VERSION when this file's logic changes.
-const VERSION = 'oracle-v1';
+const VERSION = 'oracle-v2';
 const SHELL = [
   './',
   'index.html',
@@ -41,7 +41,7 @@ self.addEventListener('fetch', (event) => {
   if (req.method !== 'GET') return;
   const url = new URL(req.url);
   const isPage = req.mode === 'navigate';
-  const isData = url.origin === self.location.origin && url.pathname.endsWith('/data.js');
+  const isData = url.origin === self.location.origin && /\/(data|elections)\.js$/.test(url.pathname);
   if (isPage || isData) { event.respondWith(fresh(req)); return; }
   event.respondWith(
     caches.match(req).then((hit) => hit || fetch(req).then((res) => {
