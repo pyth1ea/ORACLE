@@ -447,6 +447,8 @@
   .ex-sts path { stroke: var(--ex-line); stroke-width: 0.7; cursor: pointer; }
   .ex-cty path { stroke: var(--ex-line); stroke-width: 0.2; cursor: pointer; }
   .ex-svg.deep .ex-cty path { stroke-width: 0.6; }
+  .ex-dst path { stroke: var(--ex-line); stroke-width: 0.6; cursor: pointer; }
+  .ex-svg.deep .ex-dst path { stroke-width: 1; }
   .ex-mesh { fill: none; stroke: var(--ex-line); stroke-width: 1; pointer-events: none; }
   .ex-hi { fill: none; stroke: var(--ink); stroke-width: 2.2; pointer-events: none; }
   .ex-ctl { position: absolute; right: 8px; bottom: 8px; display: flex; gap: 4px; }
@@ -581,7 +583,9 @@
     openseat:   ['Open seat', 'Open seat', 'Nobody who holds the seat now is running (they retired, lost their primary, or are running for something else). Open seats change hands more often.'],
     special:    ['Special election', 'Special election', 'An election to finish someone else’s term after they left early. In 2026, Florida and Ohio fill the Senate seats Marco Rubio and JD Vance gave up.'],
     pvi:        ['PVI', 'Partisan lean', 'Cook Partisan Voting Index: how much more Republican (R+) or Democratic (D+) a place voted than the whole country in the last two presidential elections.'],
-    earlyvote:  ['Early vote', 'Early voting', 'Ballots cast before Election Day, in person or by mail. Heavy early voting in one party’s strongholds can hint at the result, but it isn’t the result.']
+    earlyvote:  ['Early vote', 'Early voting', 'Ballots cast before Election Day, in person or by mail. Heavy early voting in one party’s strongholds can hint at the result, but it isn’t the result.'],
+    district:   ['Congressional district', 'House district', 'The area that elects one member of the House. Each state is split into districts of about 760,000 people; states with few people have a single statewide (“at-large”) seat.'],
+    redistrict: ['Redistricting', 'New district lines', 'Redrawing the borders of House districts. It normally happens once a decade, after the census, but nine states drew new lines for 2026 (Texas, California, North Carolina, Ohio, Utah, Florida, Tennessee, Louisiana and Alabama), so some districts cover different places than in 2024.']
   };
 
   var MODES = {
@@ -1266,8 +1270,10 @@
       'Wire services (AP, Reuters), outlets on the left, center and right (from The Guardian to Fox News), C-SPAN, and official sources (the Federal Reserve, the Labor Department, FRED economic data). Betting markets are used as a benchmark to beat. Anything surprising has to be confirmed by a second independent source.') + '</p>';
 
     h += '<h3>' + L('Elections tab', 'The Elections map') + '</h3><p>' + L(
-      '<code>tools/elections.py refresh</code> downloads every 2026 race (candidates, incumbent, status) and the published ratings from Wikipedia’s election pages, which compile Cook, Inside Elections, Sabato, Decision Desk, Split Ticket and others. Each rating maps to a number (Safe/Solid ±3, Likely ±2, Lean ±1, Tilt ±0.5, Toss-up 0) and a race’s rating is the mean; House seats on no competitive list count as Safe for the side of their PVI. The refresh is pure code. The run adds judgment through a validated patch: links to ORACLE forecasts (each close Senate and governor race gets one), polls, betting odds, early-vote counts for spotlight states, and results from Nov 4. County shapes: US Census via us-atlas (2017 lines). 2024 county results: a public dataset.',
-      'Every Monday, Wednesday and Friday a small program downloads every race on the 2026 ballot (who’s running, who holds the seat now) and the ratings from nonpartisan election experts, and averages those ratings. That part is automatic. Then the AI adds the parts that take judgment: ORACLE’s own odds for the closest Senate and governor races, polls and betting odds, early-voting numbers for the spotlight states, and the results once votes are counted. The morning after the election, ORACLE grades all of its race forecasts at once.') + '</p>';
+      '<code>tools/elections.py refresh</code> downloads every 2026 race (candidates, incumbent, status) and the published ratings from Wikipedia’s election pages, which compile Cook, Inside Elections, Sabato, Decision Desk, Split Ticket and others. Each rating maps to a number (Safe/Solid ±3, Likely ±2, Lean ±1, Tilt ±0.5, Toss-up 0) and a race’s rating is the mean; House seats on no competitive list count as Safe for the side of their PVI. The refresh is pure code. The run adds judgment through a validated patch: links to ORACLE forecasts (each close Senate and governor race gets one), polls, betting odds, early-vote counts for spotlight states, and results from Nov 4. County shapes: US Census via us-atlas (2017 lines). 2024 county results: a public dataset. ' +
+        'House ' + T('district').toLowerCase() + ' shapes: <code>tools/make_districts.py</code>, run once. 41 states use the Census 119th Congress lines (cb_2024, 1:500k); the nine that redrew for 2026 use each state’s enacted plan (TX PLANC2333, CA AB 604, NC S.L. 2025-95, OH Oct 31, 2025 commission plan, UT court Map 1, FL EOGPCRP2026, TN May 2026 plan, LA Act 2 of 2026, AL 2023 legislative plan). Missouri’s and Virginia’s new maps were blocked for 2026. Projected like us-atlas, trimmed to its state outlines, simplified to about 0.7 MB, one file per state.',
+      'Every Monday, Wednesday and Friday a small program downloads every race on the 2026 ballot (who’s running, who holds the seat now) and the ratings from nonpartisan election experts, and averages those ratings. That part is automatic. Then the AI adds the parts that take judgment: ORACLE’s own odds for the closest Senate and governor races, polls and betting odds, early-voting numbers for the spotlight states, and the results once votes are counted. The morning after the election, ORACLE grades all of its race forecasts at once. ' +
+        'The House district lines come from the Census Bureau. Nine states drew new lines for 2026 (Texas, California, North Carolina, Ohio, Utah, Florida, Tennessee, Louisiana and Alabama); for those, the map uses each state’s own official new map.') + '</p>';
     h += '<h3>' + L('Limits', 'What ORACLE can’t do') + '</h3><ul>' +
       '<li>' + L('Inputs (event scores, engine probabilities, gauge readings) are AI judgments on fixed rubrics. They are consistent, not objective.', 'The ratings and engine numbers are judgment calls by an AI using fixed rules. They are consistent, but not "objective truth."') + '</li>' +
       '<li>' + L('True surprises are, by definition, under-forecast; the shock watch measures how badly.', 'No system sees true surprises coming. The shock-watch record shows how often ORACLE gets caught off guard.') + '</li>' +
@@ -1357,6 +1363,7 @@
         return [esc(r.id), esc(rr.Cook || '—'), esc(rr.IE || '—'), esc(rr.Sabato || '—'), r.n_raters, fx(r.score, 2), RK_T[rk(r.score)], o ? esc(o.p.id) + ' ' + pct(o.p.oracle) + ' ' + o.yp : '—'];
       })));
       ln('<span class="dim">n = how many raters rated the race; only Cook, IE and Sabato are stored by name, so the mean can’t be fully re-derived here. Ratings refreshed ' + esc(EX.E.meta.refreshed) + '.</span>');
+      ln('<span class="dim">District shapes: districts/XX.json, TopoJSON in us-atlas coordinates (Albers USA, 975×610), one per state, feature id = race id; redrawn for 2026: TX CA NC OH UT FL TN LA AL (see tools/make_districts.py for each source).</span>');
     }
 
     out.push('<h3>7 · Raw data</h3>');
@@ -1369,10 +1376,11 @@
 
   // ======================================================================================
   // Elections tab: a zoomable map of the 2026 midterms. Its data (elections.js, built from data/elections.json),
-  // the map library and the county shapes load only when the tab is first opened.
+  // the map library and the county shapes load only when the tab is first opened. A state's House district
+  // shapes (districts/XX.json, built once by tools/make_districts.py) load when it is opened with the House layer on.
   // ======================================================================================
   var EXV = recall('oracle-ex', { layer: 'senate', st: null });
-  var EX = { ready: false, loading: false, err: null, layer: EXV.layer || 'senate', sel: EXV.st || null, county: null };
+  var EX = { ready: false, loading: false, err: null, layer: EXV.layer || 'senate', sel: EXV.st || null, county: null, dist: null, dsh: {} };
   var EX_SRC = {
     d3: 'https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js',
     topo: 'https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js',
@@ -1514,7 +1522,8 @@
     h += '<h4>' + L('House: all 435 seats', 'The House: all 435 seats') + '</h4><p class="ex-meta">' +
       L('Rating average: ' + ['sd', 'ld', 'nd', 'tu', 'nr', 'lr', 'sr'].map(function (k) { return RK_T[k] + ' ' + (hk[k] || 0); }).join(' · ') + '. 218 seats for a majority.',
         'The experts see ' + ((hk.sd || 0) + (hk.ld || 0)) + ' seats as safe or likely Democratic, ' + (hk.nd || 0) + ' leaning Democratic, <b>' + (hk.tu || 0) + ' toss-ups</b>, ' +
-        (hk.nr || 0) + ' leaning Republican and ' + ((hk.lr || 0) + (hk.sr || 0)) + ' safe or likely Republican. A party needs 218 for a majority.') + '</p>';
+        (hk.nr || 0) + ' leaning Republican and ' + ((hk.lr || 0) + (hk.sr || 0)) + ' safe or likely Republican. A party needs 218 for a majority.') +
+      ' ' + L('With the House layer on, tap a state to see its districts.', 'To see the districts, choose “House races” and tap a state.') + '</p>';
     var ch = (E.changes || []).filter(function (c) { return daysUntil(c.date) >= -14; }).slice(-8).reverse();
     if (ch.length) h += '<h4>' + L('Rating changes (14 days)', 'Recent rating changes') + '</h4><ul class="ex-ul">' + ch.map(function (c) {
       return '<li>' + fmtDate(c.date) + ' · <b>' + esc(c.race) + '</b>: ' + esc(c.from) + ' → ' + esc(c.to) + '</li>'; }).join('') + '</ul>';
@@ -1534,7 +1543,7 @@
     top.forEach(function (r) { h += raceBlock(r); });
     h += '<h4>' + L('House (' + hs.length + (hs.length === 1 ? ' seat)' : ' seats)'), 'House seats (' + hs.length + ')') + '</h4><p class="ex-meta">' +
       (close.length ? L(close.length + ' rated competitive (average within Lean).', close.length + (close.length === 1 ? ' of them could be close.' : ' of them could be close.')) : L('None rated competitive.', 'None of them is expected to be close.')) +
-      ' ' + L('District lines aren’t drawn on the map yet.', 'House district lines aren’t on the map yet.') + '</p>';
+      ' ' + distNote(a) + '</p>';
     close.forEach(function (r) { h += raceBlock(r); });
     if (rest.length) h += '<details class="ex-more"><summary>' + L('Other seats (' + rest.length + ')', (close.length ? 'The other ' : 'All ') + rest.length + ' seats') + '</summary>' + rest.map(function (r) {
       return '<div class="ex-mini"><span>' + raceTitle(r) + '</span>' + rChip(r) + '<span class="ex-meta">' + (r.candidates.length ? r.candidates.slice(0, 2).map(function (c) { return esc(c.name) + ' (' + PARTY_T[c.party] + ')'; }).join(' vs ') : '—') + '</span></div>';
@@ -1574,18 +1583,37 @@
     });
     h += '<h4>' + L('Statewide races on this ballot', 'Also on the ballot here') + '</h4>' + (rs.length ? rs.map(function (r) {
       return '<div class="ex-mini"><span>' + raceTitle(r) + '</span>' + rChip(r) + '<span class="ex-meta">' + matchup(r) + '</span></div>'; }).join('') : '<p class="ex-meta">' + L('None.', 'No Senate or governor race.') + '</p>');
-    h += '<p class="ex-meta ex-dim">' + L('Plus a House race; which district depends on the address (district lines aren’t mapped yet).', 'Voters here also choose a member of the House. District lines aren’t on the map yet.') + '</p>';
+    h += '<p class="ex-meta ex-dim">' + L('Plus a House race; which ' + T('district').toLowerCase() + ' depends on the address. The House layer draws the lines.', 'Voters here also choose a member of the House. To see which district is which, choose “House races” above.') + '</p>';
     return h + '</div>';
+  }
+  function districtCard(id) { // a House district was tapped on the map
+    var r = EX.E.races[id], a = r.state, m = (EX.dsh[a] || {}).meta || {};
+    var h = '<div class="card ex-card"><div class="ex-ch"><h3>' + esc(stName(a)) + '</h3><button type="button" class="chip" data-exstate="' + a + '">' + L(stName(a), '← ' + stName(a)) + '</button></div>';
+    h += raceBlock(r) + '<p class="ex-meta ex-dim">' + (mode === 'technical' ? esc(id) + ' · ' : '') + linesNote(m) + '</p>';
+    return h + '</div>';
+  }
+  function linesNote(m) { // where a state's district lines come from
+    if (m.redrawn) return L(T('redistrict') + ' for 2026: ' + esc(m.plan) + ' · lines from ' + esc(m.source) + '.', 'This state drew new district lines for 2026, so districts may cover different places than in 2024.');
+    return L('Lines: ' + esc(m.plan || '') + ' · ' + esc(m.source || '') + '.', m.plan === 'one statewide seat' ? 'The whole state votes for its one House seat.' : 'Same district lines as in 2024.');
+  }
+  function distNote(a) { // the House-district line of a state's card
+    if (EX.layer !== 'house') return L('Choose the House layer to see ' + T('district').toLowerCase() + ' lines.', 'Choose “House races” above to see the district lines on the map.');
+    var d = EX.dsh[a];
+    if (!d || d.loading) return L('Loading district lines…', 'Loading the district lines…');
+    if (d.err === 'missing') return L('This state’s 2026 district lines aren’t available yet, so they aren’t drawn; the seat list below is complete.',
+      'This state drew new House districts for 2026, and the new lines aren’t available yet, so the map can’t show them. Every seat is still listed below.');
+    if (d.err) return L('District lines didn’t load (' + esc(d.err) + '); the seat list below is complete.', 'The district lines didn’t load (they need the internet the first time), but every seat is listed below.');
+    return L('Tap a ' + T('district').toLowerCase() + ' on the map for its race. ', 'Tap a district on the map to see who’s running there. ') + linesNote(d.meta || {});
   }
   function exCard() {
     var host = document.getElementById('exCard'); if (!host) return;
-    host.innerHTML = EX.county ? countyCard(EX.county) : EX.sel ? stateCard(EX.sel) : nationalCard();
+    host.innerHTML = EX.dist ? districtCard(EX.dist) : EX.county ? countyCard(EX.county) : EX.sel ? stateCard(EX.sel) : nationalCard();
   }
 
   // ---------- the map ----------
   function exLayers() {
     var hasEarly = Object.keys(EX.E.spotlight).some(function (a) { var ev = EX.E.spotlight[a].early_vote; return ev && ev.counties && Object.keys(ev.counties).length; });
-    var ls = [['senate', L('Senate', 'Senate races')], ['governor', L('Governor', 'Governor races')], ['house', L('House (competitive)', 'Close House seats')], ['y2024', L('2024 by county', 'How places voted in 2024')]];
+    var ls = [['senate', L('Senate', 'Senate races')], ['governor', L('Governor', 'Governor races')], ['house', L('House', 'House races')], ['y2024', L('2024 by county', 'How places voted in 2024')]];
     if (hasEarly) ls.push(['early', L('Early vote', 'Early voting')]);
     if (!ls.some(function (l) { return l[0] === EX.layer; })) EX.layer = 'senate';
     return ls;
@@ -1593,11 +1621,13 @@
   function exLegend() {
     var el = document.getElementById('exLegend'); if (!el) return;
     var sw = function (k, t) { return '<span><i style="background:var(--ex-' + k + ')"></i>' + t + '</span>'; };
-    var h;
+    var h, rates = function () { return ['sd', 'ld', 'nd', 'tu', 'nr', 'lr', 'sr'].map(function (k) { return sw(k, (mode === 'plain' ? RK_P : RK_T)[k]); }).join(''); };
     if (EX.layer === 'senate' || EX.layer === 'governor') {
-      h = ['sd', 'ld', 'nd', 'tu', 'nr', 'lr', 'sr'].map(function (k) { return sw(k, (mode === 'plain' ? RK_P : RK_T)[k]); }).join('') + sw('none', L('No race', 'No race this year'));
+      h = rates() + sw('none', L('No race', 'No race this year'));
+    } else if (EX.layer === 'house' && exDistFeats().length) {
+      h = '<span>' + L('Districts by rating:', 'Each district, by expert rating:') + '</span>' + rates();
     } else if (EX.layer === 'house') {
-      h = sw('h1', L('1–2 competitive', '1–2 close seats')) + sw('h2', '3–5') + sw('h3', L('6+', '6 or more')) + sw('none', L('none', 'none'));
+      h = '<span>' + L('Competitive seats per state:', 'Close seats in each state:') + '</span>' + sw('h1', L('1–2', '1–2')) + sw('h2', '3–5') + sw('h3', L('6+', '6 or more')) + sw('none', L('none', 'none'));
     } else if (EX.layer === 'y2024') {
       h = '<span class="ex-grad">' + L('Harris +60', 'Harris won big') + '<b style="background:linear-gradient(90deg,var(--ex-sd),var(--ex-mid),var(--ex-sr))"></b>' + L('Trump +60', 'Trump won big') + '</span>';
     } else {
@@ -1613,15 +1643,18 @@
     var t = Math.max(-1, Math.min(1, m / 0.6));
     return t < 0 ? d3.interpolateRgb(exCol.mid, exCol.sd)(-t) : d3.interpolateRgb(exCol.mid, exCol.sr)(t);
   }
+  function raceFill(r) { // a race's color: the called winner's party, else its rating
+    if (!r) return 'var(--ex-none)';
+    if (r.result && r.result.called && r.result.winner) return PARTY_C[r.result.winner];
+    return 'var(--ex-' + rk(r.score) + ')';
+  }
   function stateFill(f) {
     var a = EX.abbr[f.id], rs = EX.races[a] || [];
     if (EX.layer === 'senate' || EX.layer === 'governor') {
-      var r = rs.filter(function (x) { return x.office === EX.layer; }).sort(function (x, y) { return Math.abs(x.score == null ? 9 : x.score) - Math.abs(y.score == null ? 9 : y.score); })[0];
-      if (!r) return 'var(--ex-none)';
-      if (r.result && r.result.called && r.result.winner) return PARTY_C[r.result.winner];
-      return 'var(--ex-' + rk(r.score) + ')';
+      return raceFill(rs.filter(function (x) { return x.office === EX.layer; }).sort(function (x, y) { return Math.abs(x.score == null ? 9 : x.score) - Math.abs(y.score == null ? 9 : y.score); })[0]);
     }
     if (EX.layer === 'house') {
+      if (a === EX.sel && exDistFeats().length) return 'var(--ex-none)'; // its districts are drawn on top
       var n = rs.filter(function (x) { return x.office === 'house' && x.score != null && Math.abs(x.score) < 1.5; }).length;
       return n === 0 ? 'var(--ex-none)' : 'var(--ex-h' + (n >= 6 ? 3 : n >= 3 ? 2 : 1) + ')';
     }
@@ -1640,10 +1673,25 @@
     }
     return 'transparent';
   }
+  function exDist(a) { // a state's House district shapes: loaded once, then kept ({loading} | {feats, meta} | {err})
+    if (EX.dsh[a]) return EX.dsh[a];
+    var d = EX.dsh[a] = { loading: true };
+    fetch('districts/' + a + '.json')
+      .then(function (r) { if (!r.ok) throw new Error(r.status === 404 ? 'missing' : 'HTTP ' + r.status); return r.json(); })
+      .then(function (t) { d.meta = t.meta || {}; d.feats = topojson.feature(t, t.objects.districts).features.filter(function (f) { return EX.E.races[f.id]; }); })
+      .catch(function (e) { d.err = e.message === 'missing' ? 'missing' : navigator.onLine === false ? 'offline' : String(e.message || e); })
+      .then(function () { d.loading = false; if (view === 'elex' && EX.sel === a) { exPaint(); exCard(); } });
+    return d;
+  }
+  function exDistFeats() { // the districts to draw now: only for the open state, on the House layer
+    var d = EX.layer === 'house' && EX.sel ? exDist(EX.sel) : null;
+    return d && d.feats ? d.feats : [];
+  }
   function exPaint() {
     if (!exG || !EX.ready) return;
     exColors();
-    var cdata = EX.layer === 'y2024' || EX.layer === 'early' ? EX.counties : EX.sel ? (EX.cByState[fipsOf(EX.sel)] || []) : [];
+    var dfe = exDistFeats();
+    var cdata = EX.layer === 'y2024' || EX.layer === 'early' ? EX.counties : EX.sel && !dfe.length ? (EX.cByState[fipsOf(EX.sel)] || []) : [];
     var dOf = function (f) { return f._d || (f._d = exPath(f)); }; // path shapes are computed once, then reused
     exG.select('.ex-sts').selectAll('path').data(EX.states, function (f) { return f.id; })
       .join(function (en) { var pth = en.append('path'); pth.append('title').text(function (f) { return stName(EX.abbr[f.id]) || ''; }); return pth; })
@@ -1651,8 +1699,13 @@
     exG.select('.ex-cty').selectAll('path').data(cdata, function (f) { return f.id; })
       .join(function (en) { var pth = en.append('path'); pth.append('title').text(function (f) { return f.properties.name; }); return pth; })
       .attr('d', dOf).style('fill', countyFill).on('click', function (e, f) { exPick(f.id); });
+    exG.select('.ex-dst').selectAll('path').data(dfe, function (f) { return f.id; })
+      .join(function (en) { var pth = en.append('path'); pth.append('title'); return pth; })
+      .attr('d', dOf).style('fill', function (f) { return raceFill(EX.E.races[f.id]); }).on('click', function (e, f) { exPickDist(f.id); })
+      .select('title').text(function (f) { var r = EX.E.races[f.id]; return stName(r.state) + ' · ' + raceTitle(r) + ' · ' + rWord(r.score); });
     exG.select('.ex-mesh').attr('d', exPath(EX.mesh));
-    var hi = EX.county ? EX.byFips[EX.county] : EX.sel ? EX.stByFips[fipsOf(EX.sel)] : null;
+    var dhi = EX.dist && dfe.filter(function (f) { return f.id === EX.dist; })[0];
+    var hi = dhi || (EX.county ? EX.byFips[EX.county] : EX.sel ? EX.stByFips[fipsOf(EX.sel)] : null);
     exG.select('.ex-hi').attr('d', hi ? exPath(hi) : null);
     exLegend();
   }
@@ -1669,7 +1722,8 @@
   }
   function exSelect(a, county) {
     var moved = a !== EX.sel;
-    EX.sel = a || null; EX.county = county || null; exSave();
+    if (a && EX.dsh[a] && EX.dsh[a].err && EX.dsh[a].err !== 'missing') delete EX.dsh[a]; // retry a failed download
+    EX.sel = a || null; EX.county = county || null; EX.dist = null; exSave();
     exPaint(); exCard();
     if (moved || !a) exZoomTo(a ? EX.stByFips[fipsOf(a)] : null, true);
     var s = document.getElementById('exState'); if (s) s.value = EX.sel || '';
@@ -1677,15 +1731,16 @@
   }
   function exPick(f) { // a county was tapped (on the map or in a list)
     var a = EX.abbr[f.slice(0, 2)];
-    if (a !== EX.sel) exSelect(a, f); else { EX.county = f; exPaint(); exCard(); }
+    if (a !== EX.sel) exSelect(a, f); else { EX.county = f; EX.dist = null; exPaint(); exCard(); }
   }
+  function exPickDist(id) { EX.county = null; EX.dist = id; exPaint(); exCard(); } // a House district was tapped
   function elexMount() {
     var host = document.getElementById('exMap'); if (!host || !EX.ready) return;
     exPath = d3.geoPath();
     exSvg = d3.select(host).append('svg').attr('viewBox', '0 0 975 610').attr('class', 'ex-svg')
       .attr('aria-label', L('Map of the United States', 'Map of the United States; tap a state to zoom in'));
     exG = exSvg.append('g');
-    exG.append('g').attr('class', 'ex-sts'); exG.append('g').attr('class', 'ex-cty');
+    exG.append('g').attr('class', 'ex-sts'); exG.append('g').attr('class', 'ex-cty'); exG.append('g').attr('class', 'ex-dst');
     exG.append('path').attr('class', 'ex-mesh'); exG.append('path').attr('class', 'ex-hi');
     exZoom = d3.zoom().scaleExtent([1, 16]).translateExtent([[-60, -60], [1035, 670]])
       .on('zoom', function (e) { exG.attr('transform', e.transform); exSvg.classed('deep', e.transform.k > 3); });
@@ -1702,8 +1757,8 @@
       nS = rr.filter(function (r) { return r.office === 'senate'; }).length; nG = rr.filter(function (r) { return r.office === 'governor'; }).length;
     }
     var h = '<section class="ex"><h2>' + L('2026 midterms', 'The 2026 midterm elections') + '</h2><p class="sec-sub">' + L(
-      nS + ' Senate (incl. ' + T('special').toLowerCase() + 's in FL and OH), ' + nG + ' governor and 435 House races. Each race’s ' + T('rating') + ' is the mean of the published ratings (Safe/Solid ±3, Likely ±2, Lean ±1, Tilt ±0.5, Toss-up 0; negative = D side). Ratings, candidates and incumbents refresh on each run; ORACLE adds odds for the closest races.',
-      'Every race on the ballot on Tuesday, November 3: ' + nS + ' Senate seats, ' + nG + ' governors and all 435 House seats. Choose what the map shows, tap a state to zoom in, then tap a county. Pinch or use + and − to zoom. The colors are nonpartisan experts’ ratings; ORACLE adds its own odds for the closest races.') + '</p>';
+      nS + ' Senate (incl. ' + T('special').toLowerCase() + 's in FL and OH), ' + nG + ' governor and 435 House races. Each race’s ' + T('rating') + ' is the mean of the published ratings (Safe/Solid ±3, Likely ±2, Lean ±1, Tilt ±0.5, Toss-up 0; negative = D side). Ratings, candidates and incumbents refresh on each run; ORACLE adds odds for the closest races. On the House layer, a selected state shows its 2026 ' + T('district').toLowerCase() + ' lines.',
+      'Every race on the ballot on Tuesday, November 3: ' + nS + ' Senate seats, ' + nG + ' governors and all 435 House seats. Choose what the map shows, tap a state to zoom in, then tap a county (or, with “House races” on, a district). Pinch or use + and − to zoom. The colors are nonpartisan experts’ ratings; ORACLE adds its own odds for the closest races.') + '</p>';
     if (!EX.ready) {
       return h + '<div class="card ex-card">' + (EX.err ? '<b>' + L('The map couldn’t load:', 'The map couldn’t load.') + '</b> ' + esc(EX.err) + '. ' +
         L('First load needs a connection; after that it works offline.', 'It needs the internet the first time you open it.') + ' <button type="button" class="chip" data-exretry>' + L('Retry', 'Try again') + '</button>'
@@ -1728,7 +1783,8 @@
     if (el.hasAttribute('data-exlayer')) {
       EX.layer = el.getAttribute('data-exlayer'); exSave();
       Array.prototype.forEach.call(document.querySelectorAll('[data-exlayer]'), function (b) { b.setAttribute('aria-pressed', b === el ? 'true' : 'false'); });
-      exPaint(); return;
+      if (EX.layer !== 'house') EX.dist = null;
+      exPaint(); if (EX.sel) exCard(); return;
     }
     if (el.hasAttribute('data-exst')) { var a = el.getAttribute('data-exst'); exSelect(EX.sel === a && !EX.county ? null : a); return; }
     if (el.hasAttribute('data-exstate')) { exSelect(el.getAttribute('data-exstate')); document.getElementById('exMap').scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
@@ -1744,7 +1800,7 @@
     var order = ['oracle', 'clio', 'omen', 'sandbox', 'market', 'system', 'pressure', 'friction', 'margin', 'tip', 'holding', 'strained', 'critical', 'tipping', 'gauge', 'momentum',
       'volatility', 'V', 'alpha', 'gamma', 'beta', 'omega', 'scale', 'levelmatch', 'kindmatch', 'intensity', 'resistance', 'calendar', 'inertia', 'shock', 'catalyst', 'branch', 'divergence', 'horizon', 'resolve', 'tracking',
       'anger', 'mobilization', 'trust', 'brier', 'calibration', 'weights', 'weekreview',
-      'rating', 'tossup', 'openseat', 'special', 'pvi', 'earlyvote'];
+      'rating', 'tossup', 'openseat', 'special', 'pvi', 'earlyvote', 'district', 'redistrict'];
     document.getElementById('gloss').innerHTML = '<dl>' + order.map(function (k) {
       var g = G[k], primary = mode === 'plain' ? g[1] : g[0], other = mode === 'plain' ? g[0] : g[1];
       return '<dt>' + primary + (other !== primary ? '<small>' + (mode === 'plain' ? 'Technical name: ' : 'Plain English: ') + other + '</small>' : '') + '</dt><dd>' + g[2] + '</dd>';

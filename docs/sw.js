@@ -1,7 +1,8 @@
 // ORACLE app service worker: makes the home-screen app open instantly and work offline.
 // Fresh-first for the page and its data (data.js, elections.js) (so each morning's update shows up as soon as you're online),
-// cache-first for everything else (icons, libraries). Bump VERSION when this file's logic changes.
-const VERSION = 'oracle-v2';
+// cache-first for everything else (icons, libraries, House district shapes in districts/). Bump VERSION when this file's logic
+// changes or tools/make_districts.py rebuilds the district shapes.
+const VERSION = 'oracle-v3';
 const SHELL = [
   './',
   'index.html',
