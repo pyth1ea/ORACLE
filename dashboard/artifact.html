@@ -1706,9 +1706,17 @@
     if (!exSvg) return;
     var t = d3.zoomIdentity;
     if (f) {
-      var b = exPath.bounds(f), x = (b[0][0] + b[1][0]) / 2, y = (b[0][1] + b[1][1]) / 2;
-      var k = Math.max(1, Math.min(16, 0.86 / Math.max((b[1][0] - b[0][0]) / 975, (b[1][1] - b[0][1]) / 610)));
-      t = d3.zoomIdentity.translate(487.5, 305).scale(k).translate(-x, -y);
+      var b = exPath.bounds(f), x = (b[0][0] + b[1][0]) / 2, y = (b[0][1] + b[1][1]) / 2, w = b[1][0] - b[0][0], hgt = b[1][1] - b[0][1];
+      var fit = function (H) { return Math.max(1, Math.min(16, 0.86 / Math.max(w / 975, hgt / H))); };
+      var k = fit(610), cy = 305;
+      // The + − ⟲ buttons sit over the bottom-right corner (in map units: wider on a phone). If the shape would
+      // end up under them (south Florida, for one), fit it into the strip above the buttons instead.
+      var ctl = document.querySelector('.ex-ctl'), u = 975 / (exSvg.node().getBoundingClientRect().width || 975);
+      if (ctl) {
+        var top = 610 - (ctl.offsetHeight + 12) * u, left = 975 - (ctl.offsetWidth + 12) * u;
+        if (305 + hgt / 2 * k > top && 487.5 + w / 2 * k > left) { k = fit(top); cy = top / 2; }
+      }
+      t = d3.zoomIdentity.translate(487.5, cy).scale(k).translate(-x, -y);
     }
     var still = !animate || matchMedia('(prefers-reduced-motion: reduce)').matches;
     (still ? exSvg : exSvg.transition().duration(650)).call(exZoom.transform, t);
@@ -1735,7 +1743,7 @@
     exG = exSvg.append('g');
     exG.append('g').attr('class', 'ex-sts'); exG.append('g').attr('class', 'ex-cty'); exG.append('g').attr('class', 'ex-dst');
     exG.append('path').attr('class', 'ex-mesh'); exG.append('path').attr('class', 'ex-hi');
-    exZoom = d3.zoom().scaleExtent([1, 16]).translateExtent([[-60, -60], [1035, 670]])
+    exZoom = d3.zoom().scaleExtent([1, 16]).translateExtent([[-60, -60], [1035, 720]])
       .on('zoom', function (e) { exG.attr('transform', e.transform); exSvg.classed('deep', e.transform.k > 3); });
     exSvg.call(exZoom).on('dblclick.zoom', null);
     exPaint();
