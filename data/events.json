@@ -851,6 +851,79 @@
         "resistance": 6
       },
       "systems": {}
+    },
+    {
+      "id": "E-20261020-01",
+      "date": "2026-10-20",
+      "domain": "economy",
+      "title": "Brent near 5-month high on Middle East supply fears and US inventory drawdowns",
+      "sources": [
+        "Reuters"
+      ],
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPNTdIRmp3MTB3c3JZNGxXMUl1Wk5haXFwcjdJNXgtQnJkOEM4aWVVWG5tai03TmhHSWZidkliV1VlRkRvOVJCX3Q3QXhCWVdZeXlYQmViOUdOaU85anVWMXpSWFNCOHAtVU5id3Fad1BhX1BzVEt6S1A4N2s1YjJocFh6QXFTVXhHdDJJVzZBX21WUQ?oc=5",
+      "omen": {
+        "chaos": 3,
+        "polarization": 2,
+        "economic": 5
+      },
+      "clio": {
+        "precedent": "1990 Gulf War oil spike",
+        "precedent_match": 4,
+        "resistance": 5
+      },
+      "systems": {
+        "S-INFLATION": 1,
+        "S-GROWTH": 1
+      }
+    },
+    {
+      "id": "E-20261020-02",
+      "date": "2026-10-20",
+      "domain": "politics",
+      "title": "Trump escalates doomsday warnings about a Democratic takeover of Congress; House GOP scales back redistricting hopes",
+      "sources": [
+        "Axios"
+      ],
+      "url": "https://www.axios.com/2026/10/20/trump-democrats-elections-rallies-comments-vote",
+      "omen": {
+        "chaos": 2,
+        "polarization": 6,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2018 midterm closing rhetoric",
+        "precedent_match": 6,
+        "resistance": 7
+      },
+      "systems": {
+        "S-HOUSE": 1
+      }
+    },
+    {
+      "id": "E-20261021-01",
+      "date": "2026-10-21",
+      "domain": "foreign",
+      "title": "US envoy Witkoff arrives in St Petersburg for talks with Putin",
+      "sources": [
+        "AP",
+        "Reuters",
+        "BBC",
+        "Axios"
+      ],
+      "url": "https://www.axios.com/2026/10/20/rubio-zelensky-trump-directive-harm-ukraine-putin",
+      "omen": {
+        "chaos": 2,
+        "polarization": 2,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2025 Alaska summit diplomacy",
+        "precedent_match": 5,
+        "resistance": 8
+      },
+      "systems": {
+        "S-UKRAINE": 1
+      }
     }
   ]
 }

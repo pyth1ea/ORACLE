@@ -3,7 +3,7 @@
 Live list of disruptions OMEN is tracking. Each run: update severity, add new items, close dead ones.
 Severity: 🔴 high · 🟠 elevated · 🟡 watch · ⚪ closed. Direction: ↑ worsening · ↓ easing · → steady.
 
-_Last updated: 2026-10-19_
+_Last updated: 2026-10-21_
 
 ---
 
