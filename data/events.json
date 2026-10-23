@@ -924,6 +924,181 @@
       "systems": {
         "S-UKRAINE": 1
       }
+    },
+    {
+      "id": "E-20261022-01",
+      "date": "2026-10-22",
+      "domain": "foreign",
+      "title": "Iran says 7 oil tankers hit in Strait of Hormuz overnight, warns of strikes on US bases",
+      "sources": [
+        "AP",
+        "PBS NewsHour",
+        "Al Jazeera",
+        "Washington Post"
+      ],
+      "url": "https://www.pbs.org/newshour/amp/world/iran-says-7-oil-tankers-damaged-in-strait-of-hormuz-and-other-middle-east-news",
+      "omen": {
+        "chaos": 6,
+        "polarization": 2,
+        "economic": 5
+      },
+      "clio": {
+        "precedent": "1987-88 Tanker War",
+        "precedent_match": 7,
+        "resistance": 4
+      },
+      "systems": {
+        "S-HORMUZ": -1,
+        "S-INFLATION": 1
+      }
+    },
+    {
+      "id": "E-20261022-02",
+      "date": "2026-10-22",
+      "domain": "economy",
+      "title": "Initial jobless claims fall to 194,000, a three-month low",
+      "sources": [
+        "Reuters",
+        "Bloomberg"
+      ],
+      "url": "https://money.usnews.com/investing/news/articles/2026-10-22/us-weekly-jobless-claims-near-57-year-lows",
+      "omen": {
+        "chaos": 1,
+        "polarization": 1,
+        "economic": 2
+      },
+      "clio": {
+        "precedent": "2019 low-layoff labor market",
+        "precedent_match": 6,
+        "resistance": 8
+      },
+      "systems": {
+        "S-GROWTH": -1
+      }
+    },
+    {
+      "id": "E-20261021-02",
+      "date": "2026-10-21",
+      "domain": "economy",
+      "title": "AI stocks sell off again: Nasdaq down more than 2% as oil jumps, markets weaker worldwide",
+      "sources": [
+        "CNBC",
+        "AP",
+        "The Guardian US"
+      ],
+      "url": "https://cnbc.com/2026/10/21/stock-market-today-live-updates.html",
+      "omen": {
+        "chaos": 3,
+        "polarization": 1,
+        "economic": 5
+      },
+      "clio": {
+        "precedent": "2022 tech and rate-shock selloff",
+        "precedent_match": 5,
+        "resistance": 6
+      },
+      "systems": {
+        "S-GROWTH": 1
+      }
+    },
+    {
+      "id": "E-20261022-03",
+      "date": "2026-10-22",
+      "domain": "politics",
+      "title": "Federal judge halts DHS noncitizen-voting probes in 9 states; DOJ asks appeals court to step in on California ballot case",
+      "sources": [
+        "AP",
+        "Axios",
+        "Reuters",
+        "Fox News"
+      ],
+      "url": "https://www.axios.com/2026/10/22/trump-noncitizen-voting-investigation-restricted-judge",
+      "omen": {
+        "chaos": 3,
+        "polarization": 6,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2020 election-litigation wave",
+        "precedent_match": 6,
+        "resistance": 8
+      },
+      "systems": {
+        "S-HOUSE": -1
+      }
+    },
+    {
+      "id": "E-20261022-04",
+      "date": "2026-10-22",
+      "domain": "politics",
+      "title": "Supreme Court lets New Hampshire fully ban student IDs for voting in the midterms",
+      "sources": [
+        "AP",
+        "Fox News"
+      ],
+      "url": "https://www.foxnews.com/politics",
+      "omen": {
+        "chaos": 2,
+        "polarization": 5,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2008 Crawford v. Marion voter-ID ruling",
+        "precedent_match": 6,
+        "resistance": 7
+      },
+      "systems": {}
+    },
+    {
+      "id": "E-20261022-05",
+      "date": "2026-10-22",
+      "domain": "foreign",
+      "title": "Russia pounds Kyiv with missiles hours after agreeing in principle to resume US-brokered peace talks",
+      "sources": [
+        "AP",
+        "PBS NewsHour",
+        "BBC",
+        "The Guardian US"
+      ],
+      "url": "https://www.pbs.org/newshour/world/russian-missiles-pound-kyiv-as-moscow-says-over-800-ukrainian-drones-downed",
+      "omen": {
+        "chaos": 5,
+        "polarization": 1,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2025 talks-amid-strikes pattern",
+        "precedent_match": 7,
+        "resistance": 7
+      },
+      "systems": {
+        "S-UKRAINE": 1
+      }
+    },
+    {
+      "id": "E-20261022-06",
+      "date": "2026-10-22",
+      "domain": "unrest",
+      "title": "Rep. Ilhan Omar says she is leaving her DC home after federal agents searched it",
+      "sources": [
+        "AP",
+        "PBS NewsHour",
+        "BBC"
+      ],
+      "url": "https://www.bbc.co.uk/news/articles/cm75p1kxryl5o",
+      "omen": {
+        "chaos": 3,
+        "polarization": 6,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2025 DOJ probes of political opponents",
+        "precedent_match": 6,
+        "resistance": 6
+      },
+      "systems": {
+        "S-STREETS": 1
+      }
     }
   ]
 }

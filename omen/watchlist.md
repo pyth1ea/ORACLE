@@ -3,14 +3,14 @@
 Live list of disruptions OMEN is tracking. Each run: update severity, add new items, close dead ones.
 Severity: 🔴 high · 🟠 elevated · 🟡 watch · ⚪ closed. Direction: ↑ worsening · ↓ easing · → steady.
 
-_Last updated: 2026-10-21_
+_Last updated: 2026-10-23_
 
 ---
 
 ## Foreign affairs
 | Sev | Item | Dir | Notes |
 |---|---|---|---|
-| 🔴 | **US–Iran war / Strait of Hormuz tanker war** | ↑ | Nine attacks in or near Hormuz since Oct 12; two cargo ships sunk within 24 hours (CNN, Oct 15). UKMTO warnings 24+ for October. Iran's security chief: no talks until Tehran's seven conditions are met; Qatar/Pakistan mediating. Deal odds by Nov 14 cut to 16%. |
+| 🔴 | **US–Iran war / Strait of Hormuz tanker war** | ↑ | Nine attacks in or near Hormuz since Oct 12; two cargo ships sunk within 24 hours (CNN, Oct 15). UKMTO warnings 24+ for October. Iran's security chief: no talks until Tehran's seven conditions are met; Qatar/Pakistan mediating. Deal odds by Nov 14 cut to 14%. Oct 22: Iran says 7 tankers hit overnight (unverified) and warns of strikes on US bases; Lloyd's List counts 28 attacks in October, a war-time high. |
 | 🟠 | **Saudi–Houthi conflict / Yemen** | ↑ | Houthi missiles hit Yemen's presidential palace in Aden (5 killed); Saudi Arabia says it stopped a missile aimed at Medina and accuses Iran of encouraging escalation. US strikes in Yemen by Oct 31: 38%. |
 | 🟠 | **Russia–Ukraine** | ↑ | Ukraine ended its energy-strike pause and hit a Russian refinery (Oct 15); Zelenskyy says he feels betrayed by Trump; Starlink briefly throttled, then restored. Drone strike on a ship in Romanian (NATO) waters. |
 | 🟡 | **US purchase of Russian diesel** | → | Treasury waiver; bipartisan Senate pushback. |
