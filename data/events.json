@@ -1099,6 +1099,126 @@
       "systems": {
         "S-STREETS": 1
       }
+    },
+    {
+      "id": "E-20261025-01",
+      "date": "2026-10-25",
+      "domain": "foreign",
+      "title": "Houthis claim attacks on Saudi oil pumping stations and Riyadh airport; Saudi says it intercepted more missiles and drones",
+      "sources": [
+        "Reuters",
+        "AP"
+      ],
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxORlYwOVl3Z1hlOFdacWVmeXZVNnVhejFlWDVOR0toczJ2MWNjT1FMRWZjVU0xd1hGaGtzN",
+      "omen": {
+        "chaos": 6,
+        "polarization": 2,
+        "economic": 5
+      },
+      "clio": {
+        "precedent": "2019 Abqaiq-Khurais attack",
+        "precedent_match": 6,
+        "resistance": 4
+      },
+      "systems": {
+        "S-INFLATION": 1,
+        "S-HORMUZ": -1
+      }
+    },
+    {
+      "id": "E-20261023-01",
+      "date": "2026-10-23",
+      "domain": "economy",
+      "title": "Brent settles at $116.72, highest since April, up 6% on the week; Dow falls 1.2%, S&P 500 closes at 7,623.68",
+      "sources": [
+        "AP",
+        "Reuters"
+      ],
+      "url": "https://www.lanacion.com.ar/usa/how-major-us-stock-indexes-fared-friday-10232026-nid23102026/",
+      "omen": {
+        "chaos": 3,
+        "polarization": 1,
+        "economic": 6
+      },
+      "clio": {
+        "precedent": "2022 Russia-Ukraine oil spike",
+        "precedent_match": 5,
+        "resistance": 5
+      },
+      "systems": {
+        "S-INFLATION": 1,
+        "S-GROWTH": 1
+      }
+    },
+    {
+      "id": "E-20261025-02",
+      "date": "2026-10-25",
+      "domain": "politics",
+      "title": "Trump's DOJ escalates before midterms: lawsuits, raids and arrests; Blanche denies Alaska Senate suit is election meddling",
+      "sources": [
+        "Axios",
+        "AP",
+        "PBS NewsHour"
+      ],
+      "url": "https://www.axios.com/2026/10/25/trump-doj-midterms-interference",
+      "omen": {
+        "chaos": 3,
+        "polarization": 7,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "1980s-2000s DOJ 60-day pre-election restraint norm",
+        "precedent_match": 6,
+        "resistance": 6
+      },
+      "systems": {
+        "S-SENATE": 1
+      }
+    },
+    {
+      "id": "E-20261026-01",
+      "date": "2026-10-26",
+      "domain": "politics",
+      "title": "9th Circuit appears skeptical of DOJ demand to set aside 20,000 California mail ballots",
+      "sources": [
+        "AP",
+        "Reuters",
+        "Fox News"
+      ],
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNWk02Yndlc0hJNzR4d2E3Uk51S0pZbWNsRXJZRVRiZUN3M3Z5LUtVUzlPbEZBRjNzQTJaOVF2dGlLeTdE",
+      "omen": {
+        "chaos": 2,
+        "polarization": 5,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2020 courts rejecting election suits",
+        "precedent_match": 7,
+        "resistance": 8
+      },
+      "systems": {}
+    },
+    {
+      "id": "E-20261026-02",
+      "date": "2026-10-26",
+      "domain": "foreign",
+      "title": "Oil falls over 1% on hopes Iran war hostilities will ease; Iranians fear return to all-out war",
+      "sources": [
+        "Reuters",
+        "AP"
+      ],
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQb2J2QlNheno1OW9FdmN3RTJWVHF1RXdLX0VQSGlKSkZlZEtNTnFxU3FUd1Zab1FPME1felpOVl9oM1oyNXc0T2xk",
+      "omen": {
+        "chaos": 4,
+        "polarization": 1,
+        "economic": 4
+      },
+      "clio": {
+        "precedent": "1987-88 Tanker War",
+        "precedent_match": 6,
+        "resistance": 5
+      },
+      "systems": {}
     }
   ]
 }

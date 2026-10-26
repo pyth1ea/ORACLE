@@ -3,7 +3,7 @@
 Live list of disruptions OMEN is tracking. Each run: update severity, add new items, close dead ones.
 Severity: 🔴 high · 🟠 elevated · 🟡 watch · ⚪ closed. Direction: ↑ worsening · ↓ easing · → steady.
 
-_Last updated: 2026-10-23_
+_Last updated: 2026-10-26_
 
 ---
 
@@ -21,7 +21,8 @@ _Last updated: 2026-10-23_
 | 🟠 | **Fed hike odds fell after Warsh** | ↓ | Futures: Oct hike 15% (from 28%) after Warsh gave no guidance in Bangkok. ORACLE 23%. |
 | 🔴 | **Inflation re-accelerating** | ↑ | Sept CPI 3.7% y/y; **Sept PPI +1.3% m/m, 6.3% y/y** (fastest since 2022), gasoline +20.3%, core PPI 5.0% y/y. Oct CPI ≥ 3.7% now 56%. |
 | 🟠 | **Fed tightening into weakness (stagflation risk)** | → | Futures put an Oct 28 hike at ~27–34% even after hot PPI (CME FedWatch). ORACLE 40%. Warsh speaks Oct 16. New: December hike 33%. |
-| 🟠 | **Oil > $100** | ↑ | Brent spot ~$126.55, WTI ~$102 (Oct 14, FRED). Brent > $100 on Oct 30: 68%. |
+| 🔴 | **Oil surge / Houthi attacks on Saudi Arabia** | ↑ | Brent settled $116.72 on Oct 23 (highest since April, +6% week); Houthis hit Saudi pumping stations and Riyadh airport; ~$115 Oct 26. Brent >$100 Oct 30: 85%. |
+| 🟠 | **Oil > $100 (older reading)** | ↑ | Brent spot ~$126.55, WTI ~$102 (Oct 14, FRED). Brent > $100 on Oct 30: 68%. |
 | 🟠 | **Chip / AI stock sell-off** | ↑ | S&P 500 -1.1% to 7,659 and Nasdaq -2.1% on Oct 16, worst week since June. 10-year yield ~5.2%. |
 | 🟡 | **Consumer still spending** | → | Sept retail sales +0.8%, much of it gasoline. Jobless claims 199k. |
 | 🟡 | **Dec 11 government funding cliff** | → | Stopgap (H.R. 6500) funds government to Dec 11. Shutdown 30%. |
