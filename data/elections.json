@@ -521,7 +521,12 @@
     "IE": "Tossup",
     "Sabato": "Lean D (flip)"
    },
-   "prediction": "P-0006"
+   "prediction": "P-0006",
+   "market": {
+    "D": 0.73,
+    "source": "Kalshi/Polymarket",
+    "as_of": "2026-10-05"
+   }
   },
   "AR-SEN": {
    "state": "AR",
@@ -774,7 +779,16 @@
     "Cook": "Tossup",
     "IE": "Tilt R",
     "Sabato": "Tossup"
-   }
+   },
+   "prediction": "P-0028",
+   "yes_party": "D",
+   "polls": {
+    "D": 44,
+    "R": 47,
+    "source": "National Public Affairs (R)",
+    "as_of": "2026-10-20"
+   },
+   "note": "Within three points in both public polls."
   },
   "KS-SEN": {
    "state": "KS",
@@ -907,7 +921,12 @@
     "IE": "Tossup",
     "Sabato": "Tossup"
    },
-   "prediction": "P-0003"
+   "prediction": "P-0003",
+   "market": {
+    "D": 0.56,
+    "source": "Kalshi",
+    "as_of": "2026-10-20"
+   }
   },
   "MA-SEN": {
    "state": "MA",
@@ -993,7 +1012,10 @@
     "Cook": "Tossup",
     "IE": "Tilt D",
     "Sabato": "Lean D"
-   }
+   },
+   "prediction": "P-0031",
+   "yes_party": "D",
+   "note": "Polling average about D+3 as of Oct 3."
   },
   "MN-SEN": {
    "state": "MN",
@@ -1579,7 +1601,12 @@
     "IE": "Tossup",
     "Sabato": "Tossup"
    },
-   "prediction": "P-0004"
+   "prediction": "P-0004",
+   "market": {
+    "D": 0.5,
+    "source": "Kalshi/Polymarket range",
+    "as_of": "2026-10-20"
+   }
   },
   "VA-SEN": {
    "state": "VA",
@@ -1751,7 +1778,13 @@
     "IE": "Tossup",
     "Sabato": "Tossup"
    },
-   "prediction": "P-0005"
+   "prediction": "P-0005",
+   "polls": {
+    "D": 49,
+    "R": 45,
+    "source": "Marist (CNN has D+6)",
+    "as_of": "2026-10-18"
+   }
   },
   "AL-GOV": {
    "state": "AL",
@@ -1821,7 +1854,10 @@
     "Cook": "Lean D (flip)",
     "IE": "Tossup",
     "Sabato": "Lean D (flip)"
-   }
+   },
+   "prediction": "P-0032",
+   "yes_party": "D",
+   "note": "Murkowski endorsed the Democrat on Oct 27."
   },
   "AZ-GOV": {
    "state": "AZ",
@@ -2094,7 +2130,10 @@
     "Cook": "Tossup",
     "IE": "Tossup",
     "Sabato": "Tossup"
-   }
+   },
+   "prediction": "P-0029",
+   "yes_party": "D",
+   "note": "Toss-up; no verified recent poll."
   },
   "HI-GOV": {
    "state": "HI",
@@ -2238,7 +2277,10 @@
     "Cook": "Lean D (flip)",
     "IE": "Tilt D (flip)",
     "Sabato": "Lean D (flip)"
-   }
+   },
+   "prediction": "P-0034",
+   "yes_party": "D",
+   "note": "CNN likely-voter polling has the Democrat ahead."
   },
   "KS-GOV": {
    "state": "KS",
@@ -2421,7 +2463,10 @@
     "Cook": "Lean D",
     "IE": "Tilt D",
     "Sabato": "Lean D"
-   }
+   },
+   "prediction": "P-0035",
+   "yes_party": "D",
+   "note": "Rated Lean D."
   },
   "MN-GOV": {
    "state": "MN",
@@ -2662,7 +2707,16 @@
     "Cook": "Tossup",
     "IE": "Tossup",
     "Sabato": "Tossup"
-   }
+   },
+   "prediction": "P-0030",
+   "yes_party": "D",
+   "polls": {
+    "D": 50,
+    "R": 43,
+    "source": "Marist",
+    "as_of": "2026-10-18"
+   },
+   "note": "Acton led by 7 in Marist."
   },
   "OK-GOV": {
    "state": "OK",
@@ -3006,7 +3060,10 @@
     "Cook": "Lean R",
     "IE": "Lean R",
     "Sabato": "Lean R"
-   }
+   },
+   "prediction": "P-0033",
+   "yes_party": "D",
+   "note": "Rated Lean R."
   },
   "VT-GOV": {
    "state": "VT",

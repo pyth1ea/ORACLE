@@ -1219,6 +1219,148 @@
         "resistance": 5
       },
       "systems": {}
+    },
+    {
+      "id": "E-20261027-01",
+      "date": "2026-10-27",
+      "domain": "politics",
+      "title": "Grand jury refuses to indict former White House aide Cassidy Hutchinson; FBI raids California home tied to ex-Rep. Swalwell as DOJ activity against Trump critics continues",
+      "sources": [
+        "AP",
+        "Reuters",
+        "The Hill"
+      ],
+      "url": "https://www.pbs.org/newshour/politics/grand-jury-refuses-to-indict-former-white-house-aide-cassidy-hutchinson-ap-sources-say",
+      "omen": {
+        "chaos": 3,
+        "polarization": 6,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2025 grand juries declining Trump-era DOJ cases against critics",
+        "precedent_match": 6,
+        "resistance": 7
+      },
+      "systems": {
+        "S-STREETS": -1
+      }
+    },
+    {
+      "id": "E-20261027-02",
+      "date": "2026-10-27",
+      "domain": "foreign",
+      "title": "Houthis say they hit Saudi Ras Tanura refinery with a missile; Russian satellite data reportedly aids attacks on Saudi Arabia",
+      "sources": [
+        "Reuters",
+        "AP"
+      ],
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPMU9tRHdmbzQ2ZHlsQzBDVmpqUEhlTk9meXgzN1VMOWlUMnlKOU1ibFRMQ1VQNDNjTkloUG9lb054S2JXZ2YwMS1MMX",
+      "omen": {
+        "chaos": 5,
+        "polarization": 1,
+        "economic": 5
+      },
+      "clio": {
+        "precedent": "2019 Abqaiq-Khurais attack on Saudi oil",
+        "precedent_match": 6,
+        "resistance": 4
+      },
+      "systems": {
+        "S-INFLATION": 1,
+        "S-HORMUZ": 1
+      }
+    },
+    {
+      "id": "E-20261027-03",
+      "date": "2026-10-27",
+      "domain": "economy",
+      "title": "Pentagon puts Iran war cost above $47 billion; food and household brands warn of more price hikes",
+      "sources": [
+        "Reuters"
+      ],
+      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQclRmNndRN0ZxR18wcDdQUy01TjRUZnN3V2NOMGRPcmF1WnZCVDM0TzgzWHdHSVpISFgzWnFYbDlpazlmZVpI",
+      "omen": {
+        "chaos": 2,
+        "polarization": 2,
+        "economic": 4
+      },
+      "clio": {
+        "precedent": "1979-80 second oil shock pass-through to consumer goods",
+        "precedent_match": 5,
+        "resistance": 5
+      },
+      "systems": {
+        "S-INFLATION": 1
+      }
+    },
+    {
+      "id": "E-20261027-04",
+      "date": "2026-10-27",
+      "domain": "foreign",
+      "title": "Israel election ends with no clear winner; Netanyahu and Eisenkot blocs both short of 61 seats, record turnout",
+      "sources": [
+        "AP",
+        "PBS NewsHour",
+        "Axios"
+      ],
+      "url": "https://www.pbs.org/newshour/world/no-clear-winner-in-israeli-election-exit-polls-indicate-as-netanyahus-fa",
+      "omen": {
+        "chaos": 3,
+        "polarization": 2,
+        "economic": 2
+      },
+      "clio": {
+        "precedent": "2019-21 Israeli repeat-election deadlock",
+        "precedent_match": 7,
+        "resistance": 6
+      },
+      "systems": {}
+    },
+    {
+      "id": "E-20261027-05",
+      "date": "2026-10-27",
+      "domain": "politics",
+      "title": "Trump and Vance sharpen attacks on Muslim candidate El-Sayed; Trump calls US voter fraud 'rampant' (BBC Verify: extremely rare)",
+      "sources": [
+        "The Guardian US",
+        "Axios",
+        "BBC"
+      ],
+      "url": "https://www.axios.com/2026/10/27/trump-abdul-el-sayed-muslim-faith-midterm-campaign",
+      "omen": {
+        "chaos": 2,
+        "polarization": 6,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2020 pre-election fraud claims",
+        "precedent_match": 6,
+        "resistance": 7
+      },
+      "systems": {}
+    },
+    {
+      "id": "E-20261027-06",
+      "date": "2026-10-27",
+      "domain": "foreign",
+      "title": "US military strike on alleged drug boat in eastern Pacific kills 5",
+      "sources": [
+        "AP",
+        "PBS NewsHour",
+        "The Guardian US"
+      ],
+      "url": "https://www.pbs.org/newshour/world",
+      "omen": {
+        "chaos": 3,
+        "polarization": 4,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2025 Caribbean boat strikes",
+        "precedent_match": 8,
+        "resistance": 3
+      },
+      "systems": {}
     }
   ]
 }
