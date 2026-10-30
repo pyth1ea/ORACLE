@@ -523,10 +523,11 @@
    },
    "prediction": "P-0006",
    "market": {
-    "D": 0.73,
-    "source": "Kalshi/Polymarket",
-    "as_of": "2026-10-05"
-   }
+    "D": 0.67,
+    "source": "Kalshi",
+    "as_of": "2026-10-30"
+   },
+   "note": "DOJ probe of alleged second-Sullivan ballot scheme; governor says certification could be stopped."
   },
   "AR-SEN": {
    "state": "AR",
@@ -823,7 +824,8 @@
     "Cook": "Tossup",
     "IE": "Tilt R",
     "Sabato": "Tossup"
-   }
+   },
+   "prediction": "P-0037"
   },
   "KY-SEN": {
    "state": "KY",
@@ -1471,7 +1473,8 @@
     "Cook": "Lean R",
     "IE": "Lean R",
     "Sabato": "Likely R"
-   }
+   },
+   "prediction": "P-0043"
   },
   "SD-SEN": {
    "state": "SD",
@@ -1896,7 +1899,8 @@
     "Cook": "Lean D",
     "IE": "Tilt D",
     "Sabato": "Lean D"
-   }
+   },
+   "prediction": "P-0041"
   },
   "AR-GOV": {
    "state": "AR",
@@ -2099,7 +2103,8 @@
     "Cook": "Lean R",
     "IE": "Lean R",
     "Sabato": "Lean R"
-   }
+   },
+   "prediction": "P-0040"
   },
   "GA-GOV": {
    "state": "GA",
@@ -2311,7 +2316,8 @@
     "Cook": "Lean R (flip)",
     "IE": "Tilt R (flip)",
     "Sabato": "Lean R (flip)"
-   }
+   },
+   "prediction": "P-0039"
   },
   "ME-GOV": {
    "state": "ME",
@@ -2575,7 +2581,8 @@
     "Cook": "Tossup",
     "IE": "Tilt R",
     "Sabato": "Tossup"
-   }
+   },
+   "prediction": "P-0036"
   },
   "NH-GOV": {
    "state": "NH",
@@ -2794,7 +2801,8 @@
     "Cook": "Lean D",
     "IE": "Lean D",
     "Sabato": "Lean D"
-   }
+   },
+   "prediction": "P-0042"
   },
   "PA-GOV": {
    "state": "PA",
@@ -3137,7 +3145,8 @@
     "Cook": "Tossup",
     "IE": "Tossup",
     "Sabato": "Lean D"
-   }
+   },
+   "prediction": "P-0038"
   },
   "WY-GOV": {
    "state": "WY",

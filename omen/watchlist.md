@@ -49,3 +49,9 @@ _Last updated: 2026-10-26_
 
 ### Closed items
 - ⚪ **Fort Hood shooter execution livestream** — closed Oct 15: Trump said the execution will not be livestreamed.
+
+
+## Added 2026-10-30
+- Alaska certification fight: DOJ probe of alleged second-'Dan Sullivan' ballot scheme; governor says certification 'could be stopped' (Nov 3-Dec).
+- December Fed hike: ~85% priced; two dissenters Oct 28.
+- Binance ~$5.7B hack (Oct 29): watch crypto contagion.

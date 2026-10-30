@@ -1361,6 +1361,196 @@
         "resistance": 3
       },
       "systems": {}
+    },
+    {
+      "id": "E-20261028-01",
+      "date": "2026-10-28",
+      "domain": "economy",
+      "title": "Fed holds rates at 3.75-4.00% in a 10-2 vote, two dissenters wanted a hike; futures price ~85% odds of a December hike",
+      "sources": [
+        "Federal Reserve",
+        "Fox Business"
+      ],
+      "url": "https://www.foxbusiness.com/economy/federal-reserve-interest-rate-decision-october-28-2026",
+      "omen": {
+        "chaos": 2,
+        "polarization": 1,
+        "economic": 4
+      },
+      "clio": {
+        "precedent": "1994-95 Fed tightening cycle pause",
+        "precedent_match": 4,
+        "resistance": 7
+      },
+      "systems": {
+        "S-FED": -1
+      }
+    },
+    {
+      "id": "E-20261029-01",
+      "date": "2026-10-29",
+      "domain": "economy",
+      "title": "US economy grows 3.4% in Q3 on consumer spending and AI investment; inflation measure rises to 3.7%",
+      "sources": [
+        "AP",
+        "Reuters",
+        "The Guardian US"
+      ],
+      "url": "https://www.theguardian.com/business/2026/oct/29/economy-growth-third-quarter",
+      "omen": {
+        "chaos": 1,
+        "polarization": 2,
+        "economic": 4
+      },
+      "clio": {
+        "precedent": "1979 strong growth with energy-driven inflation",
+        "precedent_match": 4,
+        "resistance": 6
+      },
+      "systems": {
+        "S-GROWTH": -2,
+        "S-INFLATION": 1
+      }
+    },
+    {
+      "id": "E-20261029-02",
+      "date": "2026-10-29",
+      "domain": "politics",
+      "title": "Alaska: DOJ criminal probe and Gov. Dunleavy says certification 'could be stopped' over alleged Peltola-aide recruitment of a second 'Dan Sullivan' candidate; Trump, Vance, RNC allege fraud",
+      "sources": [
+        "Axios",
+        "The Hill",
+        "Fox News"
+      ],
+      "url": "https://www.axios.com/2026/10/28/alaska-senate-dan-sullivan-trump-peltola-spoiler-scheme",
+      "omen": {
+        "chaos": 3,
+        "polarization": 7,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2000 Florida recount certification fight",
+        "precedent_match": 3,
+        "resistance": 6
+      },
+      "systems": {}
+    },
+    {
+      "id": "E-20261029-03",
+      "date": "2026-10-29",
+      "domain": "politics",
+      "title": "Justice Department subpoenas California election officials, escalating scrutiny of the state's elections",
+      "sources": [
+        "AP",
+        "Axios"
+      ],
+      "url": "https://www.axios.com/2026/10/29/midterms-election-lawsuits-ballot-disputes",
+      "omen": {
+        "chaos": 2,
+        "polarization": 6,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2020 post-election litigation wave",
+        "precedent_match": 4,
+        "resistance": 7
+      },
+      "systems": {}
+    },
+    {
+      "id": "E-20261029-04",
+      "date": "2026-10-29",
+      "domain": "foreign",
+      "title": "Iran says tankers hit mines in Hormuz (CENTCOM disputes); Houthi missiles hit Aden airport and target Saudi Eastern Province; Vance sends talks framework via Qatar; US reportedly weighing action after midterms",
+      "sources": [
+        "AP",
+        "CNBC",
+        "CBS News"
+      ],
+      "url": "https://www.cnbc.com/2026/10/30/iran-trump-hormuz-oil-middle-east-.html",
+      "omen": {
+        "chaos": 5,
+        "polarization": 2,
+        "economic": 4
+      },
+      "clio": {
+        "precedent": "1987-88 Tanker War",
+        "precedent_match": 6,
+        "resistance": 6
+      },
+      "systems": {
+        "S-HORMUZ": 1,
+        "S-INFLATION": 1
+      }
+    },
+    {
+      "id": "E-20261029-05",
+      "date": "2026-10-29",
+      "domain": "economy",
+      "title": "Alphabet falls 12.6% and Nasdaq drops ~1.4% (S&P 500 -0.3% to 7,720); Brent settles $114.88, on track for a fourth monthly gain",
+      "sources": [
+        "Reuters",
+        "CNBC",
+        "TheStreet"
+      ],
+      "url": "https://www.cnbc.com/2026/10/29/oil-price-today-wti-brent.html",
+      "omen": {
+        "chaos": 3,
+        "polarization": 1,
+        "economic": 4
+      },
+      "clio": {
+        "precedent": "2022 tech earnings sell-off",
+        "precedent_match": 4,
+        "resistance": 6
+      },
+      "systems": {
+        "S-GROWTH": 1
+      }
+    },
+    {
+      "id": "E-20261029-06",
+      "date": "2026-10-29",
+      "domain": "economy",
+      "title": "Binance halts trading after suspected record hack, ~$5.7 billion drained from wallets",
+      "sources": [
+        "Axios",
+        "The Guardian US"
+      ],
+      "url": "https://www.axios.com/2026/10/29/binance-cyberattack-crypto-heist",
+      "omen": {
+        "chaos": 4,
+        "polarization": 1,
+        "economic": 4
+      },
+      "clio": {
+        "precedent": "2022 FTX collapse",
+        "precedent_match": 4,
+        "resistance": 5
+      },
+      "systems": {}
+    },
+    {
+      "id": "E-20261029-07",
+      "date": "2026-10-29",
+      "domain": "politics",
+      "title": "Judge blocks Trump administration Medicaid work-requirement rule requiring proof of medical frailty",
+      "sources": [
+        "AP",
+        "PBS NewsHour"
+      ],
+      "url": "https://www.pbs.org/newshour/health/judge-blocks-trump-administrations-medicaid-work-requirement-rule-forcing-proof-of-medical-frailty",
+      "omen": {
+        "chaos": 1,
+        "polarization": 4,
+        "economic": 2
+      },
+      "clio": {
+        "precedent": "2019 courts blocking Medicaid work rules",
+        "precedent_match": 7,
+        "resistance": 8
+      },
+      "systems": {}
     }
   ]
 }
