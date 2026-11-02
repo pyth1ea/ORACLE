@@ -4,19 +4,19 @@
     "version": "2.0",
     "scope": "United States",
     "created": "2026-10-14",
-    "last_run": "2026-10-30",
-    "run_count": 8,
-    "next_id": 44,
+    "last_run": "2026-11-02",
+    "run_count": 9,
+    "next_id": 49,
     "note": "Single source of truth. Rules live in ORACLE.md. Never rewrite past forecasts. Arithmetic is done by tools/core.py."
   },
   "weights": {
     "politics": {
-      "clio": 0.5,
-      "omen": 0.5
+      "clio": 0.499,
+      "omen": 0.501
     },
     "economy": {
-      "clio": 0.461,
-      "omen": 0.539
+      "clio": 0.462,
+      "omen": 0.538
     },
     "unrest": {
       "clio": 0.5,
@@ -152,7 +152,7 @@
         "market": null,
         "sim": null
       },
-      "sim": 0.55,
+      "sim": 0.56,
       "blend": 0.55
     },
     {
@@ -305,17 +305,17 @@
       "resolves_on": "2026-11-20",
       "resolution_source": "AP race call after Alaska ranked-choice tabulation.",
       "clio": 0.35,
-      "omen": 0.6,
-      "oracle": 0.48,
+      "omen": 0.62,
+      "oracle": 0.49,
       "adjustment": {
         "value": 0.0,
         "reason": ""
       },
       "market": 0.67,
-      "market_source": "Kalshi, Oct 30",
+      "market_source": "Kalshi, Oct 30 (stale)",
       "reasoning": {
-        "clio": "Incumbent Republicans in Alaska rarely lose.",
-        "omen": "Polling average Peltola +3.4 (Oct 16); Kalshi fell to 67% from 75% after the second-Sullivan story and DOJ probe; Dunleavy hints at certification fight."
+        "clio": "Democrats rarely win Alaska Senate races; incumbent advantage.",
+        "omen": "Federal judge dismissed DOJ suit to block certification (AP, Nov 1), easing the legal-risk discount; polls Peltola +3.4. Still below market on ranked-choice and certification risk (inference)."
       },
       "history": [
         {
@@ -343,7 +343,7 @@
         "sim": null
       },
       "sim": null,
-      "blend": 0.48
+      "blend": 0.49
     },
     {
       "id": "P-0007",
@@ -374,19 +374,21 @@
           "oracle": 0.81
         }
       ],
-      "status": "open",
-      "outcome": null,
-      "resolved_on": null,
-      "resolution_note": null,
+      "status": "resolved",
+      "outcome": true,
+      "resolved_on": "2026-11-02",
+      "resolution_note": "FiftyPlusOne average showed Trump approval 35.4% on Nov 1, 2026 (below 37.0%).",
       "brier": {
-        "oracle": null,
-        "clio": null,
-        "omen": null,
+        "oracle": 0.0361,
+        "clio": 0.04,
+        "omen": 0.0324,
         "market": null,
         "sim": null
       },
       "sim": null,
-      "blend": 0.81
+      "blend": 0.81,
+      "hit": true,
+      "scored_on": "2026-11-02"
     },
     {
       "id": "P-0008",
@@ -726,14 +728,14 @@
           "oracle": 0.1
         }
       ],
-      "status": "open",
-      "outcome": null,
-      "resolved_on": null,
-      "resolution_note": null,
+      "status": "resolved",
+      "outcome": false,
+      "resolved_on": "2026-11-02",
+      "resolution_note": "S&P 500 closed Oct 30, 2026 at 7,580.07 (-1.8%), below 7,800 (AP via WTOP).",
       "brier": {
-        "oracle": null,
-        "clio": null,
-        "omen": null,
+        "oracle": 0.01,
+        "clio": 0.0064,
+        "omen": 0.0144,
         "market": null,
         "sim": null
       },
@@ -750,7 +752,9 @@
         "met": false,
         "proxy": false
       },
-      "blend": 0.1
+      "blend": 0.1,
+      "hit": true,
+      "scored_on": "2026-11-02"
     },
     {
       "id": "P-0014",
@@ -811,14 +815,14 @@
           "oracle": 0.95
         }
       ],
-      "status": "open",
-      "outcome": null,
-      "resolved_on": null,
-      "resolution_note": null,
+      "status": "resolved",
+      "outcome": true,
+      "resolved_on": "2026-11-02",
+      "resolution_note": "Brent settled $114.88 on Oct 29 and traded ~$113.5 on Oct 30, far above $100 (market wraps, 10/29-10/30).",
       "brier": {
-        "oracle": null,
-        "clio": null,
-        "omen": null,
+        "oracle": 0.0025,
+        "clio": 0.0049,
+        "omen": 0.0016,
         "market": null,
         "sim": null
       },
@@ -835,7 +839,9 @@
         "met": true,
         "proxy": true
       },
-      "blend": 0.95
+      "blend": 0.95,
+      "hit": true,
+      "scored_on": "2026-11-02"
     },
     {
       "id": "P-0015",
@@ -898,7 +904,7 @@
         "value": 3.7,
         "proxy": true
       },
-      "sim": 0.74,
+      "sim": 0.71,
       "track_status": {
         "date": "2026-09-01",
         "value": 3.74,
@@ -997,7 +1003,7 @@
         "market": null,
         "sim": null
       },
-      "sim": 0.24,
+      "sim": 0.23,
       "blend": 0.19
     },
     {
@@ -1041,7 +1047,7 @@
         "market": null,
         "sim": null
       },
-      "sim": 0.37,
+      "sim": 0.38,
       "blend": 0.3
     },
     {
@@ -1181,19 +1187,21 @@
           "oracle": 0.15
         }
       ],
-      "status": "open",
-      "outcome": null,
-      "resolved_on": null,
-      "resolution_note": null,
+      "status": "resolved",
+      "outcome": false,
+      "resolved_on": "2026-11-02",
+      "resolution_note": "No reporting of US strikes on Yemen targets Oct 25-31 found in wire/search coverage; CENTCOM announced none.",
       "brier": {
-        "oracle": null,
-        "clio": null,
-        "omen": null,
+        "oracle": 0.0225,
+        "clio": 0.0225,
+        "omen": 0.0225,
         "market": null,
         "sim": null
       },
       "sim": null,
-      "blend": 0.15
+      "blend": 0.15,
+      "hit": true,
+      "scored_on": "2026-11-02"
     },
     {
       "id": "P-0022",
@@ -1655,7 +1663,7 @@
       "resolves_on": "2026-11-05",
       "resolution_source": "AP race call / Michigan Secretary of State",
       "clio": 0.55,
-      "omen": 0.65,
+      "omen": 0.58,
       "adjustment": {
         "value": 0.0,
         "reason": ""
@@ -1663,8 +1671,8 @@
       "market": null,
       "market_source": null,
       "reasoning": {
-        "clio": "Michigan is a swing state; midterm environment against the president's party.",
-        "omen": "Polling average El-Sayed about +3 (USPollingData, Oct 3); rated Lean D. Vance and Trump attacking him sharply (Oct 27) show GOP concern; polarizing candidate."
+        "clio": "Lean D rating; Democratic-favorable midterm environment historically.",
+        "omen": "Rep. Haley Stevens (D) endorsed Republican Mike Rogers on Nov 1 (AP, Axios); a small crossover signal in a race rated Lean D. Trimmed 4 pts."
       },
       "status": "open",
       "outcome": null,
@@ -1683,11 +1691,17 @@
           "clio": 0.55,
           "omen": 0.65,
           "oracle": 0.6
+        },
+        {
+          "date": "2026-11-02",
+          "clio": 0.55,
+          "omen": 0.58,
+          "oracle": 0.57
         }
       ],
       "sim": null,
-      "oracle": 0.6,
-      "blend": 0.6
+      "oracle": 0.57,
+      "blend": 0.57
     },
     {
       "id": "P-0032",
@@ -2204,6 +2218,221 @@
       "sim": null,
       "oracle": 0.16,
       "blend": 0.16
+    },
+    {
+      "id": "P-0044",
+      "created": "2026-11-02",
+      "domain": "politics",
+      "horizon": "1m",
+      "question": "Will Peggy Flanagan (D) win Minnesota's 2026 U.S. Senate race?",
+      "resolves_on": "2026-11-04",
+      "resolution_source": "AP race call / Minnesota Secretary of State",
+      "clio": 0.65,
+      "omen": 0.72,
+      "adjustment": {
+        "value": 0.0,
+        "reason": ""
+      },
+      "market": null,
+      "market_source": null,
+      "reasoning": {
+        "clio": "Minnesota has not elected a Republican senator since 2006; rated Lean D (-1.4).",
+        "omen": "Democratic-leaning national environment (generic ballot D+6-7, Trump approval 35%); open seat in a blue-leaning state."
+      },
+      "status": "open",
+      "outcome": null,
+      "resolved_on": null,
+      "resolution_note": null,
+      "brier": {
+        "oracle": null,
+        "clio": null,
+        "omen": null,
+        "market": null,
+        "sim": null
+      },
+      "history": [
+        {
+          "date": "2026-11-02",
+          "clio": 0.65,
+          "omen": 0.72,
+          "oracle": 0.69
+        }
+      ],
+      "sim": null,
+      "oracle": 0.69,
+      "blend": 0.69
+    },
+    {
+      "id": "P-0045",
+      "created": "2026-11-02",
+      "domain": "politics",
+      "horizon": "1m",
+      "question": "Will independent Dan Osborn defeat Sen. Pete Ricketts (R) in Nebraska's 2026 U.S. Senate race?",
+      "resolves_on": "2026-11-04",
+      "resolution_source": "AP race call / Nebraska Secretary of State",
+      "clio": 0.2,
+      "omen": 0.3,
+      "adjustment": {
+        "value": 0.0,
+        "reason": ""
+      },
+      "market": null,
+      "market_source": null,
+      "reasoning": {
+        "clio": "Nebraska has not elected a non-Republican senator since 2008; independents rarely win statewide (Osborn lost by 7 in 2024).",
+        "omen": "Wave environment and Osborn's strong 2024 showing lift him, but rated Lean R (+1.4) with a Republican incumbent."
+      },
+      "status": "open",
+      "outcome": null,
+      "resolved_on": null,
+      "resolution_note": null,
+      "brier": {
+        "oracle": null,
+        "clio": null,
+        "omen": null,
+        "market": null,
+        "sim": null
+      },
+      "history": [
+        {
+          "date": "2026-11-02",
+          "clio": 0.2,
+          "omen": 0.3,
+          "oracle": 0.25
+        }
+      ],
+      "sim": null,
+      "oracle": 0.25,
+      "blend": 0.25
+    },
+    {
+      "id": "P-0046",
+      "created": "2026-11-02",
+      "domain": "economy",
+      "horizon": "1w",
+      "question": "Will the S&P 500 close above 7,580 on Friday, November 6, 2026?",
+      "resolves_on": "2026-11-06",
+      "resolution_source": "Official S&P 500 close (WSJ, Reuters, S&P Dow Jones Indices)",
+      "clio": 0.54,
+      "omen": 0.52,
+      "adjustment": {
+        "value": 0.0,
+        "reason": ""
+      },
+      "market": null,
+      "market_source": null,
+      "reasoning": {
+        "clio": "Weekly index gains happen about 56% of weeks; start level is the Oct 30 close of 7,580.07.",
+        "omen": "Futures advanced Nov 2 as oil fell ~4%, but AI-spending selloff, election risk and ~85% priced December Fed hike weigh."
+      },
+      "status": "open",
+      "outcome": null,
+      "resolved_on": null,
+      "resolution_note": null,
+      "brier": {
+        "oracle": null,
+        "clio": null,
+        "omen": null,
+        "market": null,
+        "sim": null
+      },
+      "history": [
+        {
+          "date": "2026-11-02",
+          "clio": 0.54,
+          "omen": 0.52,
+          "oracle": 0.53
+        }
+      ],
+      "sim": null,
+      "oracle": 0.53,
+      "blend": 0.53
+    },
+    {
+      "id": "P-0047",
+      "created": "2026-11-02",
+      "domain": "economy",
+      "horizon": "1w",
+      "question": "Will Brent crude front-month settle above $100/barrel on Friday, November 6, 2026?",
+      "resolves_on": "2026-11-06",
+      "resolution_source": "ICE Brent front-month settlement (Reuters, EIA, Trading Economics)",
+      "clio": 0.82,
+      "omen": 0.86,
+      "adjustment": {
+        "value": 0.0,
+        "reason": ""
+      },
+      "market": null,
+      "market_source": null,
+      "reasoning": {
+        "clio": "Brent was ~$114 a week earlier; a 12%+ weekly drop is rare outside a deal.",
+        "omen": "Oil fell ~4% Nov 2 on US-Iran talk hopes (Reuters, AP) but started from ~$110+; a deal would drop it sharply, and none is announced."
+      },
+      "status": "open",
+      "outcome": null,
+      "resolved_on": null,
+      "resolution_note": null,
+      "brier": {
+        "oracle": null,
+        "clio": null,
+        "omen": null,
+        "market": null,
+        "sim": null
+      },
+      "history": [
+        {
+          "date": "2026-11-02",
+          "clio": 0.82,
+          "omen": 0.86,
+          "oracle": 0.84
+        }
+      ],
+      "sim": null,
+      "oracle": 0.84,
+      "blend": 0.84
+    },
+    {
+      "id": "P-0048",
+      "created": "2026-11-02",
+      "domain": "politics",
+      "horizon": "1w",
+      "question": "Will the Associated Press project Democrats winning a majority of U.S. House seats by Friday, November 6, 2026?",
+      "resolves_on": "2026-11-06",
+      "resolution_source": "AP race calls / AP House control projection",
+      "clio": 0.72,
+      "omen": 0.8,
+      "adjustment": {
+        "value": 0.0,
+        "reason": ""
+      },
+      "market": null,
+      "market_source": null,
+      "reasoning": {
+        "clio": "With Democrats ~87% to win the House, calls by Thursday are likely but slow counts in CA and close seats can delay control calls.",
+        "omen": "Generic ballot D+6-7 and wave conditions; a decisive margin would be projected quickly, a narrow one could take days."
+      },
+      "status": "open",
+      "outcome": null,
+      "resolved_on": null,
+      "resolution_note": null,
+      "brier": {
+        "oracle": null,
+        "clio": null,
+        "omen": null,
+        "market": null,
+        "sim": null
+      },
+      "history": [
+        {
+          "date": "2026-11-02",
+          "clio": 0.72,
+          "omen": 0.8,
+          "oracle": 0.76
+        }
+      ],
+      "sim": null,
+      "oracle": 0.76,
+      "blend": 0.76
     }
   ],
   "score_log": [
@@ -2318,6 +2547,20 @@
       "n_market": 1,
       "brier_sim": 0.0961,
       "n_sim": 1
+    },
+    {
+      "date": "2026-11-02",
+      "resolved_today": 4,
+      "total_resolved": 11,
+      "hits": 10,
+      "misses": 1,
+      "brier_oracle": 0.0653,
+      "brier_clio": 0.083,
+      "brier_omen": 0.0533,
+      "brier_market": 0.01,
+      "n_market": 1,
+      "brier_sim": 0.0961,
+      "n_sim": 1
     }
   ],
   "config": {
@@ -2410,15 +2653,15 @@
       "tip_probability": 0.872,
       "status": "tipping",
       "sim": {
-        "tip": 0.869,
-        "p10": 7.46,
-        "p50": 7.54,
-        "p90": 7.65
+        "tip": 0.871,
+        "p10": 7.59,
+        "p50": 7.59,
+        "p90": 7.59
       },
       "linked_oracle": 0.87,
       "projection": null,
       "trend_per_week": null,
-      "momentum": 0.44
+      "momentum": 0.32
     },
     {
       "id": "S-SENATE",
@@ -2476,15 +2719,15 @@
       "tip_probability": 0.56,
       "status": "critical",
       "sim": {
-        "tip": 0.552,
-        "p10": 6.79,
-        "p50": 6.85,
-        "p90": 6.9
+        "tip": 0.558,
+        "p10": 6.89,
+        "p50": 6.89,
+        "p90": 6.89
       },
       "linked_oracle": 0.55,
       "projection": null,
       "trend_per_week": 0.2,
-      "momentum": 0.3
+      "momentum": -0.11
     },
     {
       "id": "S-INFLATION",
@@ -2492,14 +2735,14 @@
       "domain": "economy",
       "status_quo": "Inflation drifting down toward 3%",
       "change": "Inflation re-accelerates (Oct CPI 3.7%+)",
-      "pressure": 7.4,
+      "pressure": 7.2,
       "friction": 5.9,
       "pressure_drivers": [
-        "Brent $116.72 on Oct 23, highest since April, +6% on the week",
+        "Brent $114.88 on Oct 29, still near highs despite a ~4% drop Nov 2 on Iran-talk hopes",
         "Sept PPI +1.3% m/m, 6.3% y/y; gasoline +20.3%",
         "Core PPI 5.0% y/y: price rises broadening",
         "Inflation expectations highest since 2023",
-        "Houthi attacks on Saudi energy sites and Hormuz tanker war"
+        "Houthi attacks on Saudi energy sites"
       ],
       "friction_drivers": [
         "Energy spikes often partly reverse the next month",
@@ -2537,21 +2780,26 @@
           "date": "2026-10-26",
           "pressure": 7.4,
           "friction": 5.9
+        },
+        {
+          "date": "2026-11-02",
+          "pressure": 7.2,
+          "friction": 5.9
         }
       ],
-      "margin": 1.5,
-      "tip_probability": 0.711,
+      "margin": 1.3,
+      "tip_probability": 0.686,
       "status": "tipping",
       "sim": {
-        "tip": 0.739,
-        "p10": 6.86,
-        "p50": 7.74,
-        "p90": 8.14
+        "tip": 0.708,
+        "p10": 6.56,
+        "p50": 7.48,
+        "p90": 7.86
       },
       "linked_oracle": 0.61,
       "projection": null,
-      "trend_per_week": 0.69,
-      "momentum": 3.28
+      "trend_per_week": 0.41,
+      "momentum": 2.12
     },
     {
       "id": "S-FED",
@@ -2617,7 +2865,7 @@
       "linked_oracle": 0.13,
       "projection": null,
       "trend_per_week": -0.89,
-      "momentum": 0.22,
+      "momentum": 0.16,
       "retired": true,
       "retired_note": "Oct 28 meeting resolved (hold, 10-2). Successor: S-FEDDEC for the December meeting."
     },
@@ -2682,19 +2930,19 @@
       "tip_probability": 0.182,
       "status": "holding",
       "sim": {
-        "tip": 0.262,
-        "p10": 4.03,
-        "p50": 5.2,
-        "p90": 6.28
+        "tip": 0.259,
+        "p10": 4.0,
+        "p50": 5.11,
+        "p90": 6.31
       },
       "linked_oracle": 0.12,
       "projection": {
         "kind": "crossing",
-        "date": "2027-01-05",
+        "date": "2027-01-08",
         "note": "pressure overtakes friction at the current trend"
       },
       "trend_per_week": 0.26,
-      "momentum": 0.82
+      "momentum": 0.85
     },
     {
       "id": "S-HORMUZ",
@@ -2702,19 +2950,19 @@
       "domain": "foreign",
       "status_quo": "US-Iran tanker war continues",
       "change": "US-Iran deal reopens Hormuz shipping",
-      "pressure": 4.3,
+      "pressure": 4.2,
       "friction": 6.7,
       "pressure_drivers": [
         "Tankers reported hit by mines (Iran says; CENTCOM disputes)",
+        "Trump-Netanyahu call on how fast to return to combat (Axios, Nov 1)",
         "Houthi missiles at Aden and Saudi Eastern Province",
-        "US reportedly weighing action after midterms",
         "Pre-election pressure to cut gas prices"
       ],
       "friction_drivers": [
+        "Oil fell ~4% on hopes of progress in talks (Reuters, Nov 2)",
         "Vance letter via Qatar proposing a talks framework",
         "Rare Saudi-Iran meeting in Tehran",
-        "Deep mutual distrust; Iran's seven conditions",
-        "US 'tanker for tanker' retaliation policy"
+        "Deep mutual distrust; Iran's seven conditions"
       ],
       "window": "2026-11-14",
       "tip_prediction": "P-0019",
@@ -2753,23 +3001,23 @@
           "friction": 6.7
         }
       ],
-      "margin": -2.4,
-      "tip_probability": 0.192,
+      "margin": -2.5,
+      "tip_probability": 0.182,
       "status": "holding",
       "sim": {
         "tip": 0.247,
-        "p10": 3.57,
-        "p50": 4.14,
-        "p90": 8.5
+        "p10": 3.52,
+        "p50": 4.08,
+        "p90": 8.53
       },
       "linked_oracle": 0.14,
       "projection": {
         "kind": "crossing",
-        "date": "2027-07-18",
+        "date": "2027-07-31",
         "note": "pressure overtakes friction at the current trend"
       },
       "trend_per_week": 0.06,
-      "momentum": -0.32
+      "momentum": -0.3
     },
     {
       "id": "S-STREETS",
@@ -2821,15 +3069,15 @@
       "tip_probability": 0.192,
       "status": "holding",
       "sim": {
-        "tip": 0.238,
-        "p10": 4.26,
-        "p50": 4.39,
-        "p90": 4.85
+        "tip": 0.233,
+        "p10": 4.25,
+        "p50": 4.35,
+        "p90": 4.8
       },
       "linked_oracle": 0.19,
       "projection": null,
       "trend_per_week": null,
-      "momentum": -0.03
+      "momentum": -0.02
     },
     {
       "id": "S-FUNDING",
@@ -2880,10 +3128,10 @@
       "tip_probability": 0.302,
       "status": "strained",
       "sim": {
-        "tip": 0.373,
-        "p10": 4.01,
-        "p50": 5.29,
-        "p90": 5.34
+        "tip": 0.377,
+        "p10": 4.03,
+        "p50": 5.3,
+        "p90": 5.35
       },
       "linked_oracle": 0.3,
       "projection": null,
@@ -2930,14 +3178,14 @@
       "status": "holding",
       "sim": {
         "tip": 0.049,
-        "p10": 2.64,
-        "p50": 2.75,
-        "p90": 2.85
+        "p10": 2.67,
+        "p50": 2.77,
+        "p90": 2.86
       },
       "linked_oracle": 0.05,
       "projection": null,
       "trend_per_week": null,
-      "momentum": -0.15
+      "momentum": 0.1
     },
     {
       "id": "S-FEDDEC",
@@ -3294,45 +3542,41 @@
       ],
       "sim_conditional": {
         "Accepts / deal announced": {
-          "share": 0.141,
+          "share": 0.153,
           "systems": {
-            "S-INFLATION": 0.621,
-            "S-HORMUZ": 0.763,
+            "S-INFLATION": 0.584,
+            "S-HORMUZ": 0.759,
             "S-FEDDEC": 0.603,
-            "S-FUNDING": 0.375,
+            "S-FUNDING": 0.381,
             "S-UKRAINE": 0.049,
-            "S-GROWTH": 0.197,
-            "S-HOUSE": 0.862,
-            "S-SENATE": 0.54,
-            "S-STREETS": 0.236
+            "S-GROWTH": 0.198,
+            "S-STREETS": 0.229
           }
         },
         "Rejects or escalates": {
-          "share": 0.495,
+          "share": 0.502,
           "systems": {
-            "S-STREETS": 0.239,
-            "S-INFLATION": 0.779,
-            "S-HORMUZ": 0.141,
+            "S-INFLATION": 0.753,
+            "S-HORMUZ": 0.137,
             "S-FEDDEC": 0.603,
-            "S-FUNDING": 0.372,
+            "S-FUNDING": 0.377,
             "S-UKRAINE": 0.049,
-            "S-GROWTH": 0.284,
-            "S-HOUSE": 0.869,
-            "S-SENATE": 0.553
+            "S-GROWTH": 0.282,
+            "S-STREETS": 0.233,
+            "S-HOUSE": 0.871,
+            "S-SENATE": 0.558
           }
         },
         "No clear answer": {
-          "share": 0.364,
+          "share": 0.345,
           "systems": {
-            "S-STREETS": 0.238,
-            "S-INFLATION": 0.734,
-            "S-HORMUZ": 0.196,
+            "S-STREETS": 0.233,
+            "S-INFLATION": 0.702,
+            "S-HORMUZ": 0.188,
             "S-FEDDEC": 0.603,
-            "S-FUNDING": 0.373,
+            "S-FUNDING": 0.376,
             "S-UKRAINE": 0.049,
-            "S-GROWTH": 0.256,
-            "S-HOUSE": 0.869,
-            "S-SENATE": 0.553
+            "S-GROWTH": 0.253
           }
         }
       }
@@ -3579,27 +3823,27 @@
       ],
       "sim_conditional": {
         "Democrats win the House": {
-          "share": 0.858,
+          "share": 0.878,
           "systems": {
-            "S-STREETS": 0.229,
-            "S-INFLATION": 0.738,
-            "S-HORMUZ": 0.248,
+            "S-STREETS": 0.226,
+            "S-INFLATION": 0.708,
+            "S-HORMUZ": 0.249,
             "S-FEDDEC": 0.603,
             "S-FUNDING": 0.397,
             "S-UKRAINE": 0.049,
-            "S-GROWTH": 0.262
+            "S-GROWTH": 0.258
           }
         },
         "Republicans hold the House": {
-          "share": 0.142,
+          "share": 0.122,
           "systems": {
-            "S-STREETS": 0.29,
-            "S-INFLATION": 0.741,
-            "S-HORMUZ": 0.243,
+            "S-STREETS": 0.285,
+            "S-INFLATION": 0.711,
+            "S-HORMUZ": 0.23,
             "S-FEDDEC": 0.603,
-            "S-FUNDING": 0.23,
-            "S-UKRAINE": 0.049,
-            "S-GROWTH": 0.259
+            "S-FUNDING": 0.231,
+            "S-UKRAINE": 0.05,
+            "S-GROWTH": 0.268
           }
         }
       }
@@ -3652,25 +3896,25 @@
       ],
       "sim_conditional": {
         "Weak (<50k)": {
-          "share": 0.489,
+          "share": 0.475,
           "systems": {
-            "S-STREETS": 0.238,
-            "S-INFLATION": 0.74,
-            "S-HORMUZ": 0.244,
+            "S-STREETS": 0.233,
+            "S-INFLATION": 0.712,
+            "S-HORMUZ": 0.243,
             "S-FEDDEC": 0.603,
-            "S-FUNDING": 0.373,
+            "S-FUNDING": 0.378,
             "S-UKRAINE": 0.049,
-            "S-GROWTH": 0.331
+            "S-GROWTH": 0.33
           }
         },
         "Solid (≥50k)": {
-          "share": 0.511,
+          "share": 0.525,
           "systems": {
-            "S-STREETS": 0.237,
-            "S-INFLATION": 0.738,
-            "S-HORMUZ": 0.25,
+            "S-STREETS": 0.233,
+            "S-INFLATION": 0.705,
+            "S-HORMUZ": 0.251,
             "S-FEDDEC": 0.603,
-            "S-FUNDING": 0.373,
+            "S-FUNDING": 0.376,
             "S-UKRAINE": 0.049,
             "S-GROWTH": 0.195
           }
@@ -3729,23 +3973,23 @@
       ],
       "sim_conditional": {
         "Hot (≥3.7%)": {
-          "share": 0.569,
+          "share": 0.549,
           "systems": {
-            "S-HORMUZ": 0.248,
+            "S-HORMUZ": 0.25,
             "S-FEDDEC": 0.603,
-            "S-FUNDING": 0.37,
+            "S-FUNDING": 0.377,
             "S-UKRAINE": 0.049,
-            "S-GROWTH": 0.283
+            "S-GROWTH": 0.284
           }
         },
         "Cooler (<3.7%)": {
-          "share": 0.431,
+          "share": 0.451,
           "systems": {
-            "S-HORMUZ": 0.245,
+            "S-HORMUZ": 0.243,
             "S-FEDDEC": 0.603,
-            "S-FUNDING": 0.376,
+            "S-FUNDING": 0.378,
             "S-UKRAINE": 0.049,
-            "S-GROWTH": 0.233
+            "S-GROWTH": 0.229
           }
         }
       }
@@ -3791,17 +4035,17 @@
       ],
       "sim_conditional": {
         "Funding lapses": {
-          "share": 0.324,
+          "share": 0.294,
           "systems": {
             "S-UKRAINE": 0.049,
-            "S-GROWTH": 0.28
+            "S-GROWTH": 0.285
           }
         },
         "Deal or stopgap": {
-          "share": 0.676,
+          "share": 0.706,
           "systems": {
             "S-UKRAINE": 0.049,
-            "S-GROWTH": 0.253
+            "S-GROWTH": 0.249
           }
         }
       }
@@ -3946,17 +4190,17 @@
         "Hike": {
           "share": 0.322,
           "systems": {
-            "S-FUNDING": 0.374,
+            "S-FUNDING": 0.375,
             "S-UKRAINE": 0.049,
-            "S-GROWTH": 0.32
+            "S-GROWTH": 0.33
           }
         },
         "Hold or cut": {
           "share": 0.678,
           "systems": {
-            "S-FUNDING": 0.373,
+            "S-FUNDING": 0.378,
             "S-UKRAINE": 0.049,
-            "S-GROWTH": 0.234
+            "S-GROWTH": 0.226
           }
         }
       }
@@ -4080,19 +4324,19 @@
       ],
       "sim_conditional": {
         "Hike": {
-          "share": 0.601,
+          "share": 0.597,
           "systems": {
-            "S-FUNDING": 0.375,
+            "S-FUNDING": 0.376,
             "S-UKRAINE": 0.049,
-            "S-GROWTH": 0.288
+            "S-GROWTH": 0.284
           }
         },
         "Hold": {
-          "share": 0.399,
+          "share": 0.403,
           "systems": {
-            "S-FUNDING": 0.369,
-            "S-UKRAINE": 0.049,
-            "S-GROWTH": 0.222
+            "S-FUNDING": 0.379,
+            "S-UKRAINE": 0.05,
+            "S-GROWTH": 0.223
           }
         }
       }
@@ -4154,19 +4398,51 @@
       "clio": 0.461,
       "omen": 0.539,
       "change_clio": 0.007
+    },
+    {
+      "date": "2026-11-02",
+      "domain": "politics",
+      "prediction": "P-0007",
+      "clio": 0.499,
+      "omen": 0.501,
+      "change_clio": -0.001
+    },
+    {
+      "date": "2026-11-02",
+      "domain": "economy",
+      "prediction": "P-0013",
+      "clio": 0.462,
+      "omen": 0.538,
+      "change_clio": 0.001
+    },
+    {
+      "date": "2026-11-02",
+      "domain": "economy",
+      "prediction": "P-0014",
+      "clio": 0.462,
+      "omen": 0.538,
+      "change_clio": 0.0
+    },
+    {
+      "date": "2026-11-02",
+      "domain": "foreign",
+      "prediction": "P-0021",
+      "clio": 0.499,
+      "omen": 0.501,
+      "change_clio": 0.0
     }
   ],
   "stats": {
     "all": {
-      "n": 7,
-      "hits": 6,
+      "n": 11,
+      "hits": 10,
       "misses": 1,
-      "brier_oracle": 0.0925,
-      "n_oracle": 7,
-      "brier_clio": 0.1199,
-      "n_clio": 7,
-      "brier_omen": 0.0736,
-      "n_omen": 7,
+      "brier_oracle": 0.0653,
+      "n_oracle": 11,
+      "brier_clio": 0.083,
+      "n_clio": 11,
+      "brier_omen": 0.0533,
+      "n_omen": 11,
       "brier_market": 0.01,
       "n_market": 1,
       "brier_sim": 0.0961,
@@ -4174,30 +4450,30 @@
     },
     "by_domain": {
       "politics": {
-        "n": 0,
-        "hits": 0,
+        "n": 1,
+        "hits": 1,
         "misses": 0,
-        "brier_oracle": null,
-        "n_oracle": 0,
-        "brier_clio": null,
-        "n_clio": 0,
-        "brier_omen": null,
-        "n_omen": 0,
+        "brier_oracle": 0.0361,
+        "n_oracle": 1,
+        "brier_clio": 0.04,
+        "n_clio": 1,
+        "brier_omen": 0.0324,
+        "n_omen": 1,
         "brier_market": null,
         "n_market": 0,
         "brier_sim": null,
         "n_sim": 0
       },
       "economy": {
-        "n": 6,
-        "hits": 5,
+        "n": 8,
+        "hits": 7,
         "misses": 1,
-        "brier_oracle": 0.1071,
-        "n_oracle": 6,
-        "brier_clio": 0.1382,
-        "n_clio": 6,
-        "brier_omen": 0.0854,
-        "n_omen": 6,
+        "brier_oracle": 0.0819,
+        "n_oracle": 8,
+        "brier_clio": 0.1051,
+        "n_clio": 8,
+        "brier_omen": 0.0661,
+        "n_omen": 8,
         "brier_market": 0.01,
         "n_market": 1,
         "brier_sim": 0.0961,
@@ -4219,15 +4495,15 @@
         "n_sim": 0
       },
       "foreign": {
-        "n": 1,
-        "hits": 1,
+        "n": 2,
+        "hits": 2,
         "misses": 0,
-        "brier_oracle": 0.0049,
-        "n_oracle": 1,
-        "brier_clio": 0.01,
-        "n_clio": 1,
-        "brier_omen": 0.0025,
-        "n_omen": 1,
+        "brier_oracle": 0.0137,
+        "n_oracle": 2,
+        "brier_clio": 0.0163,
+        "n_clio": 2,
+        "brier_omen": 0.0125,
+        "n_omen": 2,
         "brier_market": null,
         "n_market": 0,
         "brier_sim": null,
@@ -4237,8 +4513,8 @@
     "calibration": [
       {
         "range": "0-20%",
-        "n": 2,
-        "avg_forecast": 0.16,
+        "n": 4,
+        "avg_forecast": 0.14,
         "happened": 0.0
       },
       {
@@ -4261,16 +4537,26 @@
       },
       {
         "range": "80-100%",
-        "n": 1,
-        "avg_forecast": 0.93,
+        "n": 3,
+        "avg_forecast": 0.9,
         "happened": 1.0
       }
     ]
   },
   "review": {
-    "date": "2026-10-30",
-    "since": "2026-10-23",
+    "date": "2026-11-02",
+    "since": "2026-10-26",
     "resolved": [
+      {
+        "id": "P-0007",
+        "question": "Will Trump's approval rating in the FiftyPlusOne polling average be below 37.0% on Nov 2, 2026?",
+        "outcome": true,
+        "oracle": 0.81,
+        "clio": 0.8,
+        "omen": 0.82,
+        "hit": true,
+        "closer_engine": "OMEN"
+      },
       {
         "id": "P-0009",
         "question": "Will the Federal Reserve raise the federal funds target range at its October 27-28, 2026 meeting?",
@@ -4292,14 +4578,34 @@
         "closer_engine": "CLIO"
       },
       {
-        "id": "P-0020",
-        "question": "Between Oct 15 and Oct 21, 2026, will at least one commercial vessel be attacked in or near the Strait of Hormuz / Gulf of Oman / Persian Gulf?",
+        "id": "P-0013",
+        "question": "Will the S&P 500 close above 7,800 on Friday, October 30, 2026?",
+        "outcome": false,
+        "oracle": 0.1,
+        "clio": 0.08,
+        "omen": 0.12,
+        "hit": true,
+        "closer_engine": "CLIO"
+      },
+      {
+        "id": "P-0014",
+        "question": "Will Brent crude front-month settle above $100/barrel on Friday, October 30, 2026?",
         "outcome": true,
-        "oracle": 0.93,
-        "clio": 0.9,
-        "omen": 0.95,
+        "oracle": 0.95,
+        "clio": 0.93,
+        "omen": 0.96,
         "hit": true,
         "closer_engine": "OMEN"
+      },
+      {
+        "id": "P-0021",
+        "question": "Will the US military conduct strikes on targets in Yemen by Oct 31, 2026?",
+        "outcome": false,
+        "oracle": 0.15,
+        "clio": 0.15,
+        "omen": 0.15,
+        "hit": true,
+        "closer_engine": "tie"
       },
       {
         "id": "P-0026",
@@ -4310,20 +4616,10 @@
         "omen": 0.35,
         "hit": true,
         "closer_engine": "OMEN"
-      },
-      {
-        "id": "P-0027",
-        "question": "Will initial jobless claims for the week ending October 17, 2026 (released Oct 22) be above 210,000?",
-        "outcome": false,
-        "oracle": 0.23,
-        "clio": 0.2,
-        "omen": 0.25,
-        "hit": true,
-        "closer_engine": "CLIO"
       }
     ],
     "clio_wins": 3,
-    "omen_wins": 2,
+    "omen_wins": 3,
     "big_moves": [
       {
         "id": "P-0025",
@@ -4333,32 +4629,11 @@
         "delta": 0.29
       },
       {
-        "id": "P-0021",
-        "question": "Will the US military conduct strikes on targets in Yemen by Oct 31, 2026?",
-        "then": 0.38,
-        "now": 0.15,
-        "delta": -0.23
-      },
-      {
-        "id": "P-0014",
-        "question": "Will Brent crude front-month settle above $100/barrel on Friday, October 30, 2026?",
-        "then": 0.74,
-        "now": 0.95,
-        "delta": 0.21
-      },
-      {
-        "id": "P-0013",
-        "question": "Will the S&P 500 close above 7,800 on Friday, October 30, 2026?",
-        "then": 0.29,
-        "now": 0.1,
-        "delta": -0.19
-      },
-      {
         "id": "P-0006",
         "question": "Will Democrat Mary Peltola defeat Sen. Dan Sullivan (R) in Alaska's 2026 Senate race?",
         "then": 0.41,
-        "now": 0.48,
-        "delta": 0.07
+        "now": 0.49,
+        "delta": 0.08
       },
       {
         "id": "P-0002",
@@ -4369,22 +4644,6 @@
       }
     ],
     "weight_changes": [
-      {
-        "date": "2026-10-23",
-        "domain": "foreign",
-        "prediction": "P-0020",
-        "clio": 0.499,
-        "omen": 0.501,
-        "change_clio": -0.001
-      },
-      {
-        "date": "2026-10-23",
-        "domain": "economy",
-        "prediction": "P-0027",
-        "clio": 0.469,
-        "omen": 0.531,
-        "change_clio": 0.003
-      },
       {
         "date": "2026-10-26",
         "domain": "economy",
@@ -4408,6 +4667,38 @@
         "clio": 0.461,
         "omen": 0.539,
         "change_clio": 0.007
+      },
+      {
+        "date": "2026-11-02",
+        "domain": "politics",
+        "prediction": "P-0007",
+        "clio": 0.499,
+        "omen": 0.501,
+        "change_clio": -0.001
+      },
+      {
+        "date": "2026-11-02",
+        "domain": "economy",
+        "prediction": "P-0013",
+        "clio": 0.462,
+        "omen": 0.538,
+        "change_clio": 0.001
+      },
+      {
+        "date": "2026-11-02",
+        "domain": "economy",
+        "prediction": "P-0014",
+        "clio": 0.462,
+        "omen": 0.538,
+        "change_clio": 0.0
+      },
+      {
+        "date": "2026-11-02",
+        "domain": "foreign",
+        "prediction": "P-0021",
+        "clio": 0.499,
+        "omen": 0.501,
+        "change_clio": 0.0
       }
     ],
     "tracked": [
@@ -4416,22 +4707,6 @@
         "question": "Will the October 2026 jobs report show nonfarm payroll growth below +50,000?",
         "date": "2026-09-01",
         "value": 29.0,
-        "met": true,
-        "proxy": true
-      },
-      {
-        "id": "P-0013",
-        "question": "Will the S&P 500 close above 7,800 on Friday, October 30, 2026?",
-        "date": "2026-10-15",
-        "value": 7744.06,
-        "met": false,
-        "proxy": false
-      },
-      {
-        "id": "P-0014",
-        "question": "Will Brent crude front-month settle above $100/barrel on Friday, October 30, 2026?",
-        "date": "2026-10-14",
-        "value": 126.55,
         "met": true,
         "proxy": true
       },
@@ -4455,7 +4730,7 @@
   },
   "calibration": {
     "active": false,
-    "n": 7,
+    "n": 11,
     "a": 0.0,
     "b": 1.0
   },
@@ -4507,72 +4782,71 @@
       "V": 0.497,
       "p": 0.373,
       "outcome": null
+    },
+    {
+      "date": "2026-11-02",
+      "V": 0.489,
+      "p": 0.36,
+      "outcome": null
     }
   ],
   "volatility": {
-    "V": 0.497,
+    "V": 0.489,
     "path": "gamma",
-    "O": 3.92,
-    "C": 6.1,
-    "Pm": 1.476,
+    "O": 3.6,
+    "C": 6.25,
+    "Pm": 1.6,
     "w_omen": 0.51,
     "w_clio": 0.49,
     "inertia": 1.0,
-    "n_events": 36,
+    "n_events": 41,
     "calendar_drivers": [
       {
         "id": "C-007",
         "name": "Midterm elections",
-        "add": 0.335
+        "add": 0.452
       },
       {
         "id": "C-004",
         "name": "Iran's answer to the US offer to reopen Gulf shipping",
-        "add": 0.104
+        "add": 0.116
       },
       {
         "id": "C-008",
         "name": "October jobs report",
-        "add": 0.025
+        "add": 0.034
       }
     ],
-    "date": "2026-10-30",
+    "date": "2026-11-02",
     "by_domain": {
       "politics": {
-        "V": 0.453,
+        "V": 0.451,
         "path": "gamma",
-        "O": 4.38,
-        "C": 7.07,
-        "Pm": 1.335,
-        "n_events": 11
+        "O": 3.97,
+        "C": 7.04,
+        "Pm": 1.452,
+        "n_events": 14
       },
       "economy": {
-        "V": 0.417,
+        "V": 0.416,
         "path": "gamma",
-        "O": 3.45,
-        "C": 5.86,
-        "Pm": 1.037,
-        "n_events": 11
+        "O": 3.38,
+        "C": 5.82,
+        "Pm": 1.05,
+        "n_events": 12
       },
-      "unrest": {
-        "V": 0.394,
-        "path": "alpha",
-        "O": 4.21,
-        "C": 6.48,
-        "Pm": 1.0,
-        "n_events": 3
-      },
+      "unrest": null,
       "foreign": {
-        "V": 0.45,
+        "V": 0.412,
         "path": "gamma",
-        "O": 3.84,
-        "C": 5.21,
-        "Pm": 1.104,
-        "n_events": 11
+        "O": 3.43,
+        "C": 5.47,
+        "Pm": 1.116,
+        "n_events": 13
       }
     },
     "shock": {
-      "p": 0.373,
+      "p": 0.36,
       "a": -4.0,
       "b": 7.0,
       "fitted": false,
@@ -4677,6 +4951,18 @@
         "unrest": 0.394,
         "foreign": 0.45
       }
+    },
+    {
+      "date": "2026-11-02",
+      "V": 0.489,
+      "path": "gamma",
+      "p_shock": 0.36,
+      "by_domain": {
+        "politics": 0.451,
+        "economy": 0.416,
+        "unrest": null,
+        "foreign": 0.412
+      }
     }
   ],
   "history_scale": {
@@ -4706,7 +4992,7 @@
           "Parliament fights over the anti-Catholic Ecclesiastical Titles Bill",
           "Chartist reform movement fades after 1848"
         ],
-        "mix_similarity": 0.689
+        "mix_similarity": 0.733
       },
       {
         "id": "H-1997",
@@ -4733,7 +5019,7 @@
           "Teamsters strike shuts down UPS deliveries",
           "Clinton signs bipartisan balanced-budget deal"
         ],
-        "mix_similarity": 0.975
+        "mix_similarity": 0.987
       },
       {
         "id": "H-1956",
@@ -4761,7 +5047,7 @@
           "Suez Canal tension after Egypt nationalizes the canal",
           "Economy near full employment with low inflation"
         ],
-        "mix_similarity": 0.963
+        "mix_similarity": 0.978
       },
       {
         "id": "H-2018",
@@ -4788,7 +5074,7 @@
           "Mass protests at the Capitol; hundreds arrested",
           "Trade-war tariffs on China escalate"
         ],
-        "mix_similarity": 0.849
+        "mix_similarity": 0.883
       },
       {
         "id": "H-1974",
@@ -4816,7 +5102,7 @@
           "'Smoking gun' tape released",
           "House committee approves articles of impeachment"
         ],
-        "mix_similarity": 0.958
+        "mix_similarity": 0.975
       },
       {
         "id": "H-2001",
@@ -4844,7 +5130,7 @@
           "All US airspace shut down for days",
           "Terrorist attacks kill nearly 3,000 people"
         ],
-        "mix_similarity": 0.782
+        "mix_similarity": 0.744
       },
       {
         "id": "H-2011",
@@ -4871,7 +5157,7 @@
           "Unemployment stuck at 9.1%",
           "Debt-ceiling deal reached hours before default deadline"
         ],
-        "mix_similarity": 0.959
+        "mix_similarity": 0.939
       },
       {
         "id": "H-1979US",
@@ -4899,7 +5185,7 @@
           "Ted Kennedy launches a primary challenge to the president",
           "Militants seize the US embassy in Tehran and take hostages"
         ],
-        "mix_similarity": 0.923
+        "mix_similarity": 0.896
       },
       {
         "id": "H-2021",
@@ -4927,7 +5213,7 @@
           "Georgia runoffs flip control of the Senate",
           "Recording of pressure call to Georgia's secretary of state released"
         ],
-        "mix_similarity": 0.923
+        "mix_similarity": 0.946
       },
       {
         "id": "H-1962",
@@ -4955,7 +5241,7 @@
           "Kennedy announces naval quarantine of Cuba",
           "Congress and public rally behind the president"
         ],
-        "mix_similarity": 0.767
+        "mix_similarity": 0.743
       },
       {
         "id": "H-1979UK",
@@ -4982,7 +5268,7 @@
           "Inflation back above 9%; government pay caps collapse",
           "'Crisis? What crisis?' headline sums up the prime minister's response"
         ],
-        "mix_similarity": 0.983
+        "mix_similarity": 0.979
       },
       {
         "id": "H-1968",
@@ -5010,7 +5296,7 @@
           "Poor People's Campaign encamped on the National Mall",
           "Cities still scarred by riots after Martin Luther King Jr.'s assassination"
         ],
-        "mix_similarity": 0.943
+        "mix_similarity": 0.957
       },
       {
         "id": "H-2008",
@@ -5037,7 +5323,7 @@
           "House rejects the bailout; stocks plunge 7%",
           "Washington Mutual seized: largest bank failure in US history"
         ],
-        "mix_similarity": 0.919
+        "mix_similarity": 0.89
       },
       {
         "id": "H-2020",
@@ -5065,7 +5351,7 @@
           "US COVID deaths pass 100,000",
           "Fed and Congress pour trillions into the economy"
         ],
-        "mix_similarity": 0.991
+        "mix_similarity": 0.993
       },
       {
         "id": "H-1991",
@@ -5093,7 +5379,7 @@
           "Yeltsin defies the coup; crowds defend parliament",
           "Shortages and rationing across the country"
         ],
-        "mix_similarity": 0.973
+        "mix_similarity": 0.986
       },
       {
         "id": "H-1923",
@@ -5121,7 +5407,7 @@
           "Hitler's Beer Hall Putsch fails in Munich",
           "Separatist revolts in the Rhineland"
         ],
-        "mix_similarity": 0.961
+        "mix_similarity": 0.941
       },
       {
         "id": "H-1933",
@@ -5148,7 +5434,7 @@
           "Unemployment near 25%",
           "Farm foreclosure riots in the Midwest"
         ],
-        "mix_similarity": 0.916
+        "mix_similarity": 0.888
       },
       {
         "id": "H-1789",
@@ -5176,7 +5462,7 @@
           "Royal troops mass around Paris",
           "State bankruptcy looms"
         ],
-        "mix_similarity": 0.999
+        "mix_similarity": 0.996
       },
       {
         "id": "H-49BC",
@@ -5203,7 +5489,7 @@
           "Senate orders Caesar to disband his army",
           "Years of gang warfare in Rome's streets"
         ],
-        "mix_similarity": 0.928
+        "mix_similarity": 0.95
       },
       {
         "id": "H-1861",
@@ -5230,7 +5516,7 @@
           "Banks and trade between North and South collapse",
           "Seven states have seceded; more are about to follow"
         ],
-        "mix_similarity": 0.987
+        "mix_similarity": 0.995
       }
     ],
     "closest_level": [
@@ -5240,20 +5526,20 @@
     ],
     "closest_kind": [
       "H-1979UK",
-      "H-2011",
-      "H-1974"
+      "H-1974",
+      "H-1968"
     ],
     "between": [
       "H-2001",
       "H-2011"
     ],
     "today": {
-      "V": 0.497,
+      "V": 0.489,
       "profile": {
-        "chaos": 3.02,
-        "polarization": 3.21,
-        "economic": 2.73,
-        "resistance": 6.1
+        "chaos": 2.72,
+        "polarization": 3.05,
+        "economic": 2.35,
+        "resistance": 6.25
       }
     }
   }

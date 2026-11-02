@@ -3,7 +3,7 @@
 Live list of disruptions OMEN is tracking. Each run: update severity, add new items, close dead ones.
 Severity: 🔴 high · 🟠 elevated · 🟡 watch · ⚪ closed. Direction: ↑ worsening · ↓ easing · → steady.
 
-_Last updated: 2026-10-26_
+_Last updated: 2026-11-02 (Nov 2: Alaska certification suit dismissed, DOJ to appeal; oil -4% on Iran-talk hopes; Michigan Stevens crossover endorsement; Senate Murphy stroke)_
 
 ---
 

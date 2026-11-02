@@ -1551,6 +1551,217 @@
         "resistance": 8
       },
       "systems": {}
+    },
+    {
+      "id": "E-20261030-01",
+      "date": "2026-10-30",
+      "domain": "economy",
+      "title": "S&P 500 falls 1.8%, worst day since June, on AI-spending worries (Intel -25%)",
+      "sources": [
+        "AP",
+        "Reuters"
+      ],
+      "url": "https://wtop.com/news/2026/10/how-major-us-stock-indexes-fared-friday-10-30-2026/",
+      "omen": {
+        "chaos": 3,
+        "polarization": 1,
+        "economic": 4
+      },
+      "clio": {
+        "precedent": "2024 Aug 5 tech and AI selloff",
+        "precedent_match": 4,
+        "resistance": 7
+      },
+      "systems": {
+        "S-GROWTH": 1
+      }
+    },
+    {
+      "id": "E-20261101-01",
+      "date": "2026-11-01",
+      "domain": "politics",
+      "title": "Federal judge dismisses DOJ suit to block certification of Alaska Senate race",
+      "sources": [
+        "AP",
+        "Reuters",
+        "PBS NewsHour"
+      ],
+      "url": "https://www.pbs.org/newshour/politics/sullivan-claims-peltola-is-still-lying-about-campaigns-involvement-in-alaska-ballot-controversy",
+      "omen": {
+        "chaos": 2,
+        "polarization": 5,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2020 post-election lawsuits dismissed by courts",
+        "precedent_match": 6,
+        "resistance": 8
+      },
+      "systems": {}
+    },
+    {
+      "id": "E-20261101-02",
+      "date": "2026-11-01",
+      "domain": "politics",
+      "title": "Rep. Haley Stevens (D) endorses Republican Mike Rogers in Michigan Senate race",
+      "sources": [
+        "AP",
+        "Axios",
+        "Politico",
+        "BBC"
+      ],
+      "url": "https://www.pbs.org/newshour/politics/democrat-haley-stevens-endorses-gops-mike-rogers-in-michigan-senate-race-2-days-before-election",
+      "omen": {
+        "chaos": 1,
+        "polarization": 5,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2016 Republican officials crossing over to endorse Clinton",
+        "precedent_match": 3,
+        "resistance": 6
+      },
+      "systems": {
+        "S-SENATE": -1
+      }
+    },
+    {
+      "id": "E-20261101-03",
+      "date": "2026-11-01",
+      "domain": "politics",
+      "title": "Sen. Chris Murphy (D-CT) hospitalized after stroke",
+      "sources": [
+        "AP",
+        "Axios"
+      ],
+      "url": "https://www.axios.com/2026/11/01/chris-murphy-stroke-hospitalized",
+      "omen": {
+        "chaos": 2,
+        "polarization": 2,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2012 Sen. Mark Kirk stroke",
+        "precedent_match": 5,
+        "resistance": 7
+      },
+      "systems": {}
+    },
+    {
+      "id": "E-20261101-04",
+      "date": "2026-11-01",
+      "domain": "foreign",
+      "title": "Trump and Netanyahu hold frank call on pace of returning to combat with Iran",
+      "sources": [
+        "Axios"
+      ],
+      "url": "https://www.axios.com/2026/11/01/trump-netanyahu-iran-negotiations-war",
+      "omen": {
+        "chaos": 3,
+        "polarization": 3,
+        "economic": 2
+      },
+      "clio": {
+        "precedent": "2025 June Israel-Iran ceasefire strains",
+        "precedent_match": 5,
+        "resistance": 5
+      },
+      "systems": {
+        "S-HORMUZ": 1
+      }
+    },
+    {
+      "id": "E-20261102-01",
+      "date": "2026-11-02",
+      "domain": "economy",
+      "title": "Oil falls nearly 4% on hopes of progress in US-Iran talks",
+      "sources": [
+        "Reuters",
+        "AP"
+      ],
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPeHdxcnVlWmx5T1pjbDZQS19XeXlYTW1xZmNONnJQWHk4YU1EQTRzZFZQVEJxYjd6WEJTN2pfZC10ZGlzXzVURVdHZkg1RjZGY2tjN0ZVRjNRc0p4UmQ1c2F6MUt4eEpHSml6Z3Q4WHpqV094aEo0dTlVbk00OGFBazlmdGhsWGdtckFHQjlBTVU5Q0FRR3hxUnVmcVpPeGZsTHBlWmhTdw?oc=5",
+      "omen": {
+        "chaos": 2,
+        "polarization": 1,
+        "economic": 4
+      },
+      "clio": {
+        "precedent": "2026 May-June oil slides on Iran deal hopes",
+        "precedent_match": 6,
+        "resistance": 5
+      },
+      "systems": {
+        "S-INFLATION": -1,
+        "S-HORMUZ": -1
+      }
+    },
+    {
+      "id": "E-20261101-05",
+      "date": "2026-11-01",
+      "domain": "politics",
+      "title": "Justice Department seeks sanctions for analysis criticizing its noncitizen-voting claims; Georgia election probe",
+      "sources": [
+        "AP",
+        "PBS NewsHour",
+        "Axios"
+      ],
+      "url": "https://www.axios.com/2026/11/01/trump-georgia-elections-justice-department-raffensper",
+      "omen": {
+        "chaos": 2,
+        "polarization": 6,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2020-21 election-fraud claims and DOJ pressure",
+        "precedent_match": 5,
+        "resistance": 7
+      },
+      "systems": {}
+    },
+    {
+      "id": "E-20261031-01",
+      "date": "2026-10-31",
+      "domain": "unrest",
+      "title": "Halloween weekend shootings leave at least 6 dead, dozens hurt, including 4 killed in Dallas",
+      "sources": [
+        "AP",
+        "PBS NewsHour"
+      ],
+      "url": "https://www.pbs.org/newshour/nation/dozens-injured-at-least-6-dead-in-halloween-weekend-gun-violence-at-nightlife-districts-across-u-s",
+      "omen": {
+        "chaos": 3,
+        "polarization": 1,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2022 Halloween weekend shootings",
+        "precedent_match": 6,
+        "resistance": 7
+      },
+      "systems": {}
+    },
+    {
+      "id": "E-20261101-06",
+      "date": "2026-11-01",
+      "domain": "foreign",
+      "title": "Localized ceasefire ends around Kherson as civilians brace for renewed fighting",
+      "sources": [
+        "AP"
+      ],
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQSmJHM1BrS0RMNk5BS0hac0VyQjZTSkdPbmlGdkZ6bGJiUGF2dkJuZVFhNzNTaUNhNU0yOXRyUGVKZU42dE1PZzBMWjNFY3hOVTBfSFRkc0lCclpXZ0xCLVhrRi02REF4b25JVEZFeTFDc2tQSnVsTDNuNVVjeHlEdG5zaXB4ODRDSUYwcWtQZFF2THR6eVNjQUZvUElmd1VwdWNDbVZjVQ?oc=5",
+      "omen": {
+        "chaos": 3,
+        "polarization": 1,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2022-24 short Ukraine truces that lapsed",
+        "precedent_match": 6,
+        "resistance": 7
+      },
+      "systems": {
+        "S-UKRAINE": 1
+      }
     }
   ]
 }
