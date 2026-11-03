@@ -6,7 +6,7 @@
     "created": "2026-10-14",
     "last_run": "2026-11-02",
     "run_count": 9,
-    "next_id": 49,
+    "next_id": 54,
     "note": "Single source of truth. Rules live in ORACLE.md. Never rewrite past forecasts. Arithmetic is done by tools/core.py."
   },
   "weights": {
@@ -2433,6 +2433,221 @@
       "sim": null,
       "oracle": 0.76,
       "blend": 0.76
+    },
+    {
+      "id": "P-0049",
+      "created": "2026-11-02",
+      "domain": "politics",
+      "horizon": "6m+",
+      "question": "Will the House adopt at least one article of impeachment against President Trump between Jan 3 and Dec 31, 2027?",
+      "resolves_on": "2028-01-01",
+      "resolution_source": "House Clerk roll-call votes / Congress.gov (adopted on the floor, not just introduced or tabled)",
+      "clio": 0.18,
+      "omen": 0.22,
+      "adjustment": {
+        "value": 0.0,
+        "reason": ""
+      },
+      "market": null,
+      "market_source": null,
+      "reasoning": {
+        "clio": "Needs a Democratic House (ORACLE 87%) and a leadership decision to go ahead. In 2019 a new Democratic majority took about 11 months to impeach, and only after a specific trigger. Most opposition majorities never impeach.",
+        "omen": "Polarization is high and the base is pushing, but Democratic leaders have signaled caution and a 2028-focused strategy. A new scandal or defiance of a court order would raise this quickly."
+      },
+      "status": "open",
+      "outcome": null,
+      "resolved_on": null,
+      "resolution_note": null,
+      "brier": {
+        "oracle": null,
+        "clio": null,
+        "omen": null,
+        "market": null,
+        "sim": null
+      },
+      "history": [
+        {
+          "date": "2026-11-02",
+          "clio": 0.18,
+          "omen": 0.22,
+          "oracle": 0.2
+        }
+      ],
+      "sim": null,
+      "oracle": 0.2,
+      "blend": 0.2
+    },
+    {
+      "id": "P-0050",
+      "created": "2026-11-02",
+      "domain": "politics",
+      "horizon": "6m+",
+      "question": "Will the Senate confirm a new Supreme Court justice between Nov 3, 2026 and Dec 31, 2027?",
+      "resolves_on": "2028-01-01",
+      "resolution_source": "Senate roll-call vote on a Supreme Court nomination (senate.gov)",
+      "clio": 0.28,
+      "omen": 0.22,
+      "adjustment": {
+        "value": 0.0,
+        "reason": ""
+      },
+      "market": null,
+      "market_source": null,
+      "reasoning": {
+        "clio": "Vacancies have come about every two years on average, and two justices are 76 and 78. Justices often time retirements to a friendly Senate, so a Republican hold makes a summer-2027 retirement more likely.",
+        "omen": "Alito said in August he is staying for another term, and reports say neither he nor Thomas plans to leave; Trump has backed them staying. A Democratic Senate would make retirement less likely and a confirmation much harder."
+      },
+      "status": "open",
+      "outcome": null,
+      "resolved_on": null,
+      "resolution_note": null,
+      "brier": {
+        "oracle": null,
+        "clio": null,
+        "omen": null,
+        "market": null,
+        "sim": null
+      },
+      "history": [
+        {
+          "date": "2026-11-02",
+          "clio": 0.28,
+          "omen": 0.22,
+          "oracle": 0.25
+        }
+      ],
+      "sim": null,
+      "oracle": 0.25,
+      "blend": 0.25
+    },
+    {
+      "id": "P-0051",
+      "created": "2026-11-02",
+      "domain": "politics",
+      "horizon": "6m+",
+      "question": "Will a lapse in federal funding (a full or partial government shutdown) begin between Jan 3 and Oct 31, 2027?",
+      "resolves_on": "2027-11-01",
+      "resolution_source": "OMB / major wire services (AP, Reuters) reporting a lapse in appropriations",
+      "clio": 0.3,
+      "omen": 0.4,
+      "adjustment": {
+        "value": 0.0,
+        "reason": ""
+      },
+      "market": null,
+      "market_source": null,
+      "reasoning": {
+        "clio": "Divided government has produced a shutdown in roughly a third of recent budget years, and the window includes the Oct 1, 2027 deadline for the next fiscal year.",
+        "omen": "Very high polarization and recent long shutdowns lower the cost of using one. A Democratic House would use funding as leverage on tariffs and enforcement. Separate from P-0018, which covers the Dec 11, 2026 deadline."
+      },
+      "status": "open",
+      "outcome": null,
+      "resolved_on": null,
+      "resolution_note": null,
+      "brier": {
+        "oracle": null,
+        "clio": null,
+        "omen": null,
+        "market": null,
+        "sim": null
+      },
+      "history": [
+        {
+          "date": "2026-11-02",
+          "clio": 0.3,
+          "omen": 0.4,
+          "oracle": 0.35
+        }
+      ],
+      "sim": null,
+      "oracle": 0.35,
+      "blend": 0.35
+    },
+    {
+      "id": "P-0052",
+      "created": "2026-11-02",
+      "domain": "economy",
+      "horizon": "6m+",
+      "question": "Will both chambers of Congress pass a bill or resolution that ends or limits any of President Trump's tariffs between Jan 3 and Dec 31, 2027?",
+      "resolves_on": "2028-01-01",
+      "resolution_source": "Congress.gov actions (passed House and passed Senate; becoming law not required)",
+      "clio": 0.3,
+      "omen": 0.4,
+      "adjustment": {
+        "value": 0.0,
+        "reason": ""
+      },
+      "market": null,
+      "market_source": null,
+      "reasoning": {
+        "clio": "Congress rarely reverses a president's trade actions, but national-emergency tariffs can be challenged with privileged resolutions that need only a simple majority. Becoming law would still need the President's signature or a two-thirds override.",
+        "omen": "The Senate already passed resolutions against some tariffs in 2025 with a few Republican votes, and a Democratic House would no longer block them. This depends heavily on the House result (ORACLE 87% D)."
+      },
+      "status": "open",
+      "outcome": null,
+      "resolved_on": null,
+      "resolution_note": null,
+      "brier": {
+        "oracle": null,
+        "clio": null,
+        "omen": null,
+        "market": null,
+        "sim": null
+      },
+      "history": [
+        {
+          "date": "2026-11-02",
+          "clio": 0.3,
+          "omen": 0.4,
+          "oracle": 0.35
+        }
+      ],
+      "sim": null,
+      "oracle": 0.35,
+      "blend": 0.35
+    },
+    {
+      "id": "P-0053",
+      "created": "2026-11-02",
+      "domain": "politics",
+      "horizon": "6m+",
+      "question": "Will at least one current or former governor, senator, vice president or cabinet secretary formally announce a 2028 presidential campaign by June 30, 2027?",
+      "resolves_on": "2027-07-01",
+      "resolution_source": "Candidate's official announcement or FEC Form 2 filing, reported by AP/Reuters",
+      "clio": 0.85,
+      "omen": 0.8,
+      "adjustment": {
+        "value": 0.0,
+        "reason": ""
+      },
+      "market": null,
+      "market_source": null,
+      "reasoning": {
+        "clio": "In open races, the first major candidates usually announce 20 to 24 months before Election Day (Cruz in March 2015, Warren on Dec 31, 2018, Trump in Nov 2022); June 2027 is 16 months out.",
+        "omen": "Both parties have an open field with no incumbent. Midterm winners and losers will move quickly, though some may wait to see how the new Congress goes."
+      },
+      "status": "open",
+      "outcome": null,
+      "resolved_on": null,
+      "resolution_note": null,
+      "brier": {
+        "oracle": null,
+        "clio": null,
+        "omen": null,
+        "market": null,
+        "sim": null
+      },
+      "history": [
+        {
+          "date": "2026-11-02",
+          "clio": 0.85,
+          "omen": 0.8,
+          "oracle": 0.82
+        }
+      ],
+      "sim": null,
+      "oracle": 0.82,
+      "blend": 0.82
     }
   ],
   "score_log": [
