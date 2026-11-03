@@ -1,7 +1,7 @@
 {
  "meta": {
   "election_day": "2026-11-03",
-  "refreshed": "2026-10-21",
+  "refreshed": "2026-11-02",
   "control": {
    "house": "P-0001",
    "senate": "P-0002"
@@ -476,7 +476,7 @@
    "last": "60.10% R",
    "score": 3.0,
    "rating": "Safe R",
-   "n_raters": 11,
+   "n_raters": 12,
    "ratings": {
     "Cook": "Solid R",
     "IE": "Solid R",
@@ -513,9 +513,9 @@
    ],
    "pvi": "R+6",
    "last": "53.90% R",
-   "score": -0.45,
+   "score": -0.33,
    "rating": "Toss-up",
-   "n_raters": 11,
+   "n_raters": 12,
    "ratings": {
     "Cook": "Tossup",
     "IE": "Tossup",
@@ -555,9 +555,9 @@
    ],
    "pvi": "R+15",
    "last": "66.53% R",
-   "score": 2.91,
+   "score": 3.0,
    "rating": "Safe R",
-   "n_raters": 11,
+   "n_raters": 12,
    "ratings": {
     "Cook": "Solid R",
     "IE": "Solid R",
@@ -604,7 +604,7 @@
    "last": "53.50% D",
    "score": -3.0,
    "rating": "Safe D",
-   "n_raters": 11,
+   "n_raters": 12,
    "ratings": {
     "Cook": "Solid D",
     "IE": "Solid D",
@@ -635,7 +635,7 @@
    "last": "59.44% D",
    "score": -3.0,
    "rating": "Safe D",
-   "n_raters": 11,
+   "n_raters": 12,
    "ratings": {
     "Cook": "Solid D",
     "IE": "Solid D",
@@ -664,12 +664,12 @@
    ],
    "pvi": "R+1",
    "last": "50.62% D",
-   "score": -2.09,
+   "score": -2.17,
    "rating": "Likely D",
-   "n_raters": 11,
+   "n_raters": 12,
    "ratings": {
     "Cook": "Likely D",
-    "IE": "Lean D",
+    "IE": "Likely D",
     "Sabato": "Likely D"
    }
   },
@@ -703,9 +703,9 @@
    ],
    "pvi": "R+18",
    "last": "62.62% R",
-   "score": 2.91,
+   "score": 3.0,
    "rating": "Safe R",
-   "n_raters": 11,
+   "n_raters": 12,
    "ratings": {
     "Cook": "Solid R",
     "IE": "Solid R",
@@ -740,7 +740,7 @@
    "last": "54.93% D",
    "score": -3.0,
    "rating": "Safe D",
-   "n_raters": 11,
+   "n_raters": 12,
    "ratings": {
     "Cook": "Solid D",
     "IE": "Solid D",
@@ -773,13 +773,13 @@
    ],
    "pvi": "R+6",
    "last": "51.74% R",
-   "score": 0.05,
+   "score": 0.25,
    "rating": "Toss-up",
-   "n_raters": 11,
+   "n_raters": 12,
    "ratings": {
     "Cook": "Tossup",
-    "IE": "Tilt R",
-    "Sabato": "Tossup"
+    "IE": "Tossup",
+    "Sabato": "Lean R"
    },
    "prediction": "P-0028",
    "yes_party": "D",
@@ -817,13 +817,13 @@
    ],
    "pvi": "R+8",
    "last": "53.22% R",
-   "score": 0.32,
+   "score": -0.25,
    "rating": "Toss-up",
-   "n_raters": 11,
+   "n_raters": 12,
    "ratings": {
     "Cook": "Tossup",
-    "IE": "Tilt R",
-    "Sabato": "Tossup"
+    "IE": "Tossup",
+    "Sabato": "Lean D (flip)"
    },
    "prediction": "P-0037"
   },
@@ -853,9 +853,9 @@
    ],
    "pvi": "R+15",
    "last": "57.76% R",
-   "score": 3.0,
+   "score": 2.92,
    "rating": "Safe R",
-   "n_raters": 11,
+   "n_raters": 12,
    "ratings": {
     "Cook": "Solid R",
     "IE": "Solid R",
@@ -884,13 +884,13 @@
    ],
    "pvi": "R+11",
    "last": "59.32% R",
-   "score": 2.64,
-   "rating": "Safe R",
-   "n_raters": 11,
+   "score": 2.33,
+   "rating": "Likely R",
+   "n_raters": 12,
    "ratings": {
     "Cook": "Solid R",
-    "IE": "Solid R",
-    "Sabato": "Safe R"
+    "IE": "Likely R",
+    "Sabato": "Lean R"
    }
   },
   "ME-SEN": {
@@ -915,13 +915,13 @@
    ],
    "pvi": "D+4",
    "last": "50.98% R",
-   "score": -0.45,
-   "rating": "Toss-up",
-   "n_raters": 11,
+   "score": -0.75,
+   "rating": "Lean D",
+   "n_raters": 12,
    "ratings": {
     "Cook": "Tossup",
     "IE": "Tossup",
-    "Sabato": "Tossup"
+    "Sabato": "Lean D (flip)"
    },
    "prediction": "P-0003",
    "market": {
@@ -962,7 +962,7 @@
    "last": "66.15% D",
    "score": -3.0,
    "rating": "Safe D",
-   "n_raters": 11,
+   "n_raters": 12,
    "ratings": {
     "Cook": "Solid D",
     "IE": "Solid D",
@@ -1007,11 +1007,11 @@
    ],
    "pvi": "EVEN",
    "last": "49.90% D",
-   "score": -0.77,
+   "score": -1.04,
    "rating": "Lean D",
-   "n_raters": 11,
+   "n_raters": 12,
    "ratings": {
-    "Cook": "Tossup",
+    "Cook": "Lean D",
     "IE": "Tilt D",
     "Sabato": "Lean D"
    },
@@ -1049,14 +1049,15 @@
    ],
    "pvi": "D+3",
    "last": "48.74% D",
-   "score": -1.36,
-   "rating": "Lean D",
-   "n_raters": 11,
+   "score": -1.5,
+   "rating": "Likely D",
+   "n_raters": 12,
    "ratings": {
     "Cook": "Lean D",
     "IE": "Lean D",
-    "Sabato": "Lean D"
-   }
+    "Sabato": "Likely D"
+   },
+   "prediction": "P-0044"
   },
   "MS-SEN": {
    "state": "MS",
@@ -1084,12 +1085,12 @@
    ],
    "pvi": "R+11",
    "last": "54.11% R",
-   "score": 2.55,
-   "rating": "Safe R",
-   "n_raters": 11,
+   "score": 2.17,
+   "rating": "Likely R",
+   "n_raters": 12,
    "ratings": {
     "Cook": "Likely R",
-    "IE": "Solid R",
+    "IE": "Likely R",
     "Sabato": "Likely R"
    }
   },
@@ -1123,9 +1124,9 @@
    ],
    "pvi": "R+10",
    "last": "55.01% R",
-   "score": 2.45,
-   "rating": "Likely R",
-   "n_raters": 11,
+   "score": 2.5,
+   "rating": "Safe R",
+   "n_raters": 12,
    "ratings": {
     "Cook": "Solid R",
     "IE": "Solid R",
@@ -1166,14 +1167,16 @@
    ],
    "pvi": "R+10",
    "last": "62.58% R / (2024 sp.)",
-   "score": 1.45,
+   "score": 1.12,
    "rating": "Lean R",
-   "n_raters": 11,
+   "n_raters": 12,
    "ratings": {
-    "Cook": "Likely R",
-    "IE": "Lean R",
+    "Cook": "Lean R",
+    "IE": "Tilt R",
     "Sabato": "Lean R"
-   }
+   },
+   "prediction": "P-0045",
+   "yes_party": "I"
   },
   "NH-SEN": {
    "state": "NH",
@@ -1201,9 +1204,9 @@
    ],
    "pvi": "D+2",
    "last": "56.64% D",
-   "score": -1.5,
+   "score": -1.71,
    "rating": "Likely D",
-   "n_raters": 11,
+   "n_raters": 12,
    "ratings": {
     "Cook": "Lean D",
     "IE": "Tilt D",
@@ -1242,7 +1245,7 @@
    "last": "57.23% D",
    "score": -3.0,
    "rating": "Safe D",
-   "n_raters": 11,
+   "n_raters": 12,
    "ratings": {
     "Cook": "Solid D",
     "IE": "Solid D",
@@ -1271,9 +1274,9 @@
    ],
    "pvi": "D+4",
    "last": "51.73% D",
-   "score": -2.91,
+   "score": -2.92,
    "rating": "Safe D",
-   "n_raters": 11,
+   "n_raters": 12,
    "ratings": {
     "Cook": "Solid D",
     "IE": "Solid D",
@@ -1312,11 +1315,11 @@
    "last": "48.69% R",
    "score": -2.0,
    "rating": "Likely D",
-   "n_raters": 11,
+   "n_raters": 12,
    "ratings": {
     "Cook": "Likely D (flip)",
     "IE": "Lean D (flip)",
-    "Sabato": "Lean D (flip)"
+    "Sabato": "Likely D (flip)"
    }
   },
   "OK-SEN": {
@@ -1355,7 +1358,7 @@
    "last": "Appointed / (2026)",
    "score": 3.0,
    "rating": "Safe R",
-   "n_raters": 11,
+   "n_raters": 12,
    "ratings": {
     "Cook": "Solid R",
     "IE": "Solid R",
@@ -1394,7 +1397,7 @@
    "last": "56.91% D",
    "score": -3.0,
    "rating": "Safe D",
-   "n_raters": 11,
+   "n_raters": 12,
    "ratings": {
     "Cook": "Solid D",
     "IE": "Solid D",
@@ -1429,7 +1432,7 @@
    "last": "66.48% D",
    "score": -3.0,
    "rating": "Safe D",
-   "n_raters": 11,
+   "n_raters": 12,
    "ratings": {
     "Cook": "Solid D",
     "IE": "Solid D",
@@ -1466,13 +1469,13 @@
    ],
    "pvi": "R+8",
    "last": "Appointed / (2026)",
-   "score": 1.27,
+   "score": 0.79,
    "rating": "Lean R",
-   "n_raters": 11,
+   "n_raters": 12,
    "ratings": {
     "Cook": "Lean R",
-    "IE": "Lean R",
-    "Sabato": "Likely R"
+    "IE": "Tilt R",
+    "Sabato": "Lean R"
    },
    "prediction": "P-0043"
   },
@@ -1498,9 +1501,9 @@
    ],
    "pvi": "R+15",
    "last": "65.74% R",
-   "score": 2.82,
+   "score": 2.92,
    "rating": "Safe R",
-   "n_raters": 11,
+   "n_raters": 12,
    "ratings": {
     "Cook": "Solid R",
     "IE": "Solid R",
@@ -1563,7 +1566,7 @@
    "last": "62.20% R",
    "score": 3.0,
    "rating": "Safe R",
-   "n_raters": 11,
+   "n_raters": 12,
    "ratings": {
     "Cook": "Solid R",
     "IE": "Solid R",
@@ -1596,13 +1599,13 @@
    ],
    "pvi": "R+6",
    "last": "53.51% R",
-   "score": -0.18,
-   "rating": "Toss-up",
-   "n_raters": 11,
+   "score": -0.62,
+   "rating": "Lean D",
+   "n_raters": 12,
    "ratings": {
     "Cook": "Tossup",
-    "IE": "Tossup",
-    "Sabato": "Tossup"
+    "IE": "Tilt D (flip)",
+    "Sabato": "Lean D (flip)"
    },
    "prediction": "P-0004",
    "market": {
@@ -1635,7 +1638,7 @@
    "last": "55.99% D",
    "score": -3.0,
    "rating": "Safe D",
-   "n_raters": 11,
+   "n_raters": 12,
    "ratings": {
     "Cook": "Solid D",
     "IE": "Solid D",
@@ -1670,7 +1673,7 @@
    "last": "70.28% R",
    "score": 3.0,
    "rating": "Safe R",
-   "n_raters": 11,
+   "n_raters": 12,
    "ratings": {
     "Cook": "Solid R",
     "IE": "Solid R",
@@ -1701,7 +1704,7 @@
    "last": "72.85% R",
    "score": 3.0,
    "rating": "Safe R",
-   "n_raters": 11,
+   "n_raters": 12,
    "ratings": {
     "Cook": "Solid R",
     "IE": "Solid R",
@@ -1734,13 +1737,13 @@
    ],
    "pvi": "R+5",
    "last": "Appointed / (2025)",
-   "score": 2.09,
+   "score": 2.0,
    "rating": "Likely R",
-   "n_raters": 11,
+   "n_raters": 12,
    "ratings": {
-    "Cook": "Solid R",
+    "Cook": "Likely R",
     "IE": "Likely R",
-    "Sabato": "Safe R"
+    "Sabato": "Likely R"
    }
   },
   "OH-SEN": {
@@ -1773,13 +1776,13 @@
    ],
    "pvi": "R+5",
    "last": "Appointed / (2025)",
-   "score": -0.27,
+   "score": -0.46,
    "rating": "Toss-up",
-   "n_raters": 11,
+   "n_raters": 12,
    "ratings": {
     "Cook": "Tossup",
-    "IE": "Tossup",
-    "Sabato": "Tossup"
+    "IE": "Tilt D (flip)",
+    "Sabato": "Lean D (flip)"
    },
    "prediction": "P-0005",
    "polls": {
@@ -1811,13 +1814,13 @@
    ],
    "pvi": "R+15",
    "last": "66.91% R",
-   "score": 2.88,
+   "score": 2.75,
    "rating": "Safe R",
    "n_raters": 8,
    "ratings": {
     "Cook": "Solid R",
     "IE": "Solid R",
-    "Sabato": "Safe R"
+    "Sabato": "Likely R"
    }
   },
   "AK-GOV": {
@@ -1850,13 +1853,13 @@
    ],
    "pvi": "R+6",
    "last": "50.29% R",
-   "score": -0.88,
+   "score": -1.06,
    "rating": "Lean D",
    "n_raters": 8,
    "ratings": {
     "Cook": "Lean D (flip)",
-    "IE": "Tossup",
-    "Sabato": "Lean D (flip)"
+    "IE": "Tilt D (flip)",
+    "Sabato": "Likely D (flip)"
    },
    "prediction": "P-0032",
    "yes_party": "D",
@@ -1892,13 +1895,13 @@
    ],
    "pvi": "R+2",
    "last": "50.32% D",
-   "score": -1.06,
-   "rating": "Lean D",
+   "score": -1.69,
+   "rating": "Likely D",
    "n_raters": 8,
    "ratings": {
-    "Cook": "Lean D",
+    "Cook": "Likely D",
     "IE": "Tilt D",
-    "Sabato": "Lean D"
+    "Sabato": "Likely D"
    },
    "prediction": "P-0041"
   },
@@ -2096,7 +2099,7 @@
    ],
    "pvi": "R+5",
    "last": "59.37% R",
-   "score": 0.88,
+   "score": 1.0,
    "rating": "Lean R",
    "n_raters": 8,
    "ratings": {
@@ -2128,13 +2131,13 @@
    ],
    "pvi": "R+1",
    "last": "53.41% R",
-   "score": -0.12,
+   "score": -0.44,
    "rating": "Toss-up",
    "n_raters": 8,
    "ratings": {
     "Cook": "Tossup",
-    "IE": "Tossup",
-    "Sabato": "Tossup"
+    "IE": "Tilt D (flip)",
+    "Sabato": "Lean D (flip)"
    },
    "prediction": "P-0029",
    "yes_party": "D",
@@ -2240,7 +2243,7 @@
    ],
    "pvi": "D+6",
    "last": "54.91% D",
-   "score": -2.88,
+   "score": -3.0,
    "rating": "Safe D",
    "n_raters": 8,
    "ratings": {
@@ -2275,12 +2278,12 @@
    ],
    "pvi": "R+6",
    "last": "58.04% R",
-   "score": -1.06,
+   "score": -1.12,
    "rating": "Lean D",
    "n_raters": 8,
    "ratings": {
     "Cook": "Lean D (flip)",
-    "IE": "Tilt D (flip)",
+    "IE": "Lean D (flip)",
     "Sabato": "Lean D (flip)"
    },
    "prediction": "P-0034",
@@ -2309,11 +2312,11 @@
    ],
    "pvi": "R+8",
    "last": "49.54% D",
-   "score": 0.81,
+   "score": 0.69,
    "rating": "Lean R",
    "n_raters": 8,
    "ratings": {
-    "Cook": "Lean R (flip)",
+    "Cook": "Tossup",
     "IE": "Tilt R (flip)",
     "Sabato": "Lean R (flip)"
    },
@@ -2462,13 +2465,13 @@
    ],
    "pvi": "EVEN",
    "last": "54.47% D",
-   "score": -1.19,
-   "rating": "Lean D",
+   "score": -1.5,
+   "rating": "Likely D",
    "n_raters": 8,
    "ratings": {
     "Cook": "Lean D",
-    "IE": "Tilt D",
-    "Sabato": "Lean D"
+    "IE": "Lean D",
+    "Sabato": "Likely D"
    },
    "prediction": "P-0035",
    "yes_party": "D",
@@ -2539,11 +2542,11 @@
    ],
    "pvi": "R+10",
    "last": "59.74% R",
-   "score": 2.12,
+   "score": 1.88,
    "rating": "Likely R",
    "n_raters": 8,
    "ratings": {
-    "Cook": "Likely R",
+    "Cook": "Lean R",
     "IE": "Likely R",
     "Sabato": "Likely R"
    }
@@ -2574,13 +2577,13 @@
    ],
    "pvi": "R+1",
    "last": "48.81% R",
-   "score": 0.06,
+   "score": -0.12,
    "rating": "Toss-up",
    "n_raters": 8,
    "ratings": {
     "Cook": "Tossup",
-    "IE": "Tilt R",
-    "Sabato": "Tossup"
+    "IE": "Tossup",
+    "Sabato": "Lean D (flip)"
    },
    "prediction": "P-0036"
   },
@@ -2610,13 +2613,13 @@
    ],
    "pvi": "D+2",
    "last": "53.64% R",
-   "score": 2.0,
+   "score": 1.75,
    "rating": "Likely R",
    "n_raters": 8,
    "ratings": {
     "Cook": "Likely R",
     "IE": "Solid R",
-    "Sabato": "Likely R"
+    "Sabato": "Lean R"
    }
   },
   "NM-GOV": {
@@ -2707,13 +2710,13 @@
    ],
    "pvi": "R+5",
    "last": "62.41% R",
-   "score": -0.12,
-   "rating": "Toss-up",
+   "score": -0.94,
+   "rating": "Lean D",
    "n_raters": 8,
    "ratings": {
-    "Cook": "Tossup",
-    "IE": "Tossup",
-    "Sabato": "Tossup"
+    "Cook": "Lean D (flip)",
+    "IE": "Tilt D (flip)",
+    "Sabato": "Lean D (flip)"
    },
    "prediction": "P-0030",
    "yes_party": "D",
@@ -2759,13 +2762,13 @@
    ],
    "pvi": "R+17",
    "last": "55.45% R",
-   "score": 2.5,
-   "rating": "Safe R",
+   "score": 2.38,
+   "rating": "Likely R",
    "n_raters": 8,
    "ratings": {
     "Cook": "Likely R",
     "IE": "Likely R",
-    "Sabato": "Safe R"
+    "Sabato": "Likely R"
    }
   },
   "OR-GOV": {
@@ -2794,12 +2797,12 @@
    ],
    "pvi": "D+8",
    "last": "46.96% D",
-   "score": -1.25,
+   "score": -1.19,
    "rating": "Lean D",
    "n_raters": 8,
    "ratings": {
     "Cook": "Lean D",
-    "IE": "Lean D",
+    "IE": "Tilt D",
     "Sabato": "Lean D"
    },
    "prediction": "P-0042"
@@ -3026,12 +3029,12 @@
    ],
    "pvi": "R+14",
    "last": "64.91% R",
-   "score": 2.88,
+   "score": 2.75,
    "rating": "Safe R",
    "n_raters": 8,
    "ratings": {
     "Cook": "Solid R",
-    "IE": "Solid R",
+    "IE": "Likely R",
     "Sabato": "Safe R"
    }
   },
@@ -3061,12 +3064,12 @@
    ],
    "pvi": "R+6",
    "last": "54.76% R",
-   "score": 0.88,
+   "score": 0.81,
    "rating": "Lean R",
    "n_raters": 8,
    "ratings": {
     "Cook": "Lean R",
-    "IE": "Lean R",
+    "IE": "Tilt R",
     "Sabato": "Lean R"
    },
    "prediction": "P-0033",
@@ -3107,13 +3110,13 @@
    ],
    "pvi": "D+17",
    "last": "73.43% R",
-   "score": 1.75,
-   "rating": "Likely R",
+   "score": 1.38,
+   "rating": "Lean R",
    "n_raters": 8,
    "ratings": {
     "Cook": "Likely R",
     "IE": "Likely R",
-    "Sabato": "Likely R"
+    "Sabato": "Lean R"
    }
   },
   "WI-GOV": {
@@ -3138,12 +3141,12 @@
    ],
    "pvi": "EVEN",
    "last": "51.15% D",
-   "score": -0.5,
+   "score": -0.81,
    "rating": "Lean D",
    "n_raters": 8,
    "ratings": {
-    "Cook": "Tossup",
-    "IE": "Tossup",
+    "Cook": "Lean D",
+    "IE": "Tilt D",
     "Sabato": "Lean D"
    },
    "prediction": "P-0038"
@@ -3234,13 +3237,13 @@
    ],
    "pvi": "R+7",
    "last": "54.6% D",
-   "score": 1.4,
+   "score": 0.75,
    "rating": "Lean R",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Likely R (flip)",
-    "IE": "Lean R (flip)",
-    "Sabato": "Lean R (flip)"
+    "Cook": "Lean R (flip)",
+    "IE": "Tilt R (flip)",
+    "Sabato": "Lean D"
    }
   },
   "AL-03": {
@@ -3414,13 +3417,13 @@
    ],
    "pvi": "R+6",
    "last": "51.3% R",
-   "score": 1.9,
+   "score": 1.5,
    "rating": "Likely R",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Likely R",
+    "Cook": "Lean R",
     "IE": "Likely R",
-    "Sabato": "Likely R"
+    "Sabato": "Lean R"
    }
   },
   "AZ-01": {
@@ -3450,7 +3453,7 @@
    ],
    "pvi": "R+1",
    "last": "51.9% R",
-   "score": -1.25,
+   "score": -1.45,
    "rating": "Lean D",
    "n_raters": 10,
    "ratings": {
@@ -3486,13 +3489,13 @@
    ],
    "pvi": "R+7",
    "last": "54.5% R",
-   "score": 1.3,
+   "score": 0.8,
    "rating": "Lean R",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Likely R",
-    "IE": "Likely R",
-    "Sabato": "Likely R"
+    "Cook": "Lean R",
+    "IE": "Lean R",
+    "Sabato": "Lean R"
    }
   },
   "AZ-03": {
@@ -3582,7 +3585,7 @@
    ],
    "pvi": "R+10",
    "last": "60.4% R",
-   "score": 2.7,
+   "score": 2.8,
    "rating": "Safe R",
    "n_raters": 10,
    "ratings": {
@@ -3622,12 +3625,12 @@
    ],
    "pvi": "EVEN",
    "last": "50.0% R",
-   "score": -1.3,
+   "score": -1.35,
    "rating": "Lean D",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Tossup",
-    "IE": "Tossup",
+    "Cook": "Lean D (flip)",
+    "IE": "Tilt D (flip)",
     "Sabato": "Lean D (flip)"
    }
   },
@@ -3682,7 +3685,7 @@
    ],
    "pvi": "R+8",
    "last": "56.5% R",
-   "score": 2.5,
+   "score": 2.6,
    "rating": "Safe R",
    "n_raters": 10,
    "ratings": {
@@ -3774,7 +3777,7 @@
    ],
    "pvi": "R+8",
    "last": "58.9% R",
-   "score": 1.8,
+   "score": 1.9,
    "rating": "Likely R",
    "n_raters": 10,
    "ratings": {
@@ -4010,12 +4013,12 @@
    ],
    "pvi": "D+5",
    "last": "55.5% R",
-   "score": -2.6,
+   "score": -2.7,
    "rating": "Safe D",
    "n_raters": 10,
    "ratings": {
     "Cook": "Solid D (flip)",
-    "IE": "Lean D (flip)",
+    "IE": "Likely D (flip)",
     "Sabato": "Likely D (flip)"
    }
   },
@@ -4210,11 +4213,11 @@
    ],
    "pvi": "D+2",
    "last": "50.0% D",
-   "score": -2.05,
+   "score": -2.25,
    "rating": "Likely D",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Lean D",
+    "Cook": "Likely D",
     "IE": "Tilt D",
     "Sabato": "Likely D"
    }
@@ -4438,11 +4441,11 @@
    ],
    "pvi": "D+5",
    "last": "52.6% D",
-   "score": -2.7,
+   "score": -2.8,
    "rating": "Safe D",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Likely D",
+    "Cook": "Solid D",
     "IE": "Solid D",
     "Sabato": "Likely D"
    }
@@ -4470,7 +4473,7 @@
    ],
    "pvi": "D+1",
    "last": "53.4% R",
-   "score": -1.2,
+   "score": -1.3,
    "rating": "Lean D",
    "n_raters": 10,
    "ratings": {
@@ -5118,12 +5121,12 @@
    ],
    "pvi": "D+3",
    "last": "50.1% D",
-   "score": -2.5,
+   "score": -2.6,
    "rating": "Safe D",
    "n_raters": 10,
    "ratings": {
     "Cook": "Likely D",
-    "IE": "Likely D",
+    "IE": "Solid D",
     "Sabato": "Likely D"
    }
   },
@@ -5206,7 +5209,7 @@
    ],
    "pvi": "D+2",
    "last": "59.3% R",
-   "score": -1.75,
+   "score": -1.95,
    "rating": "Likely D",
    "n_raters": 10,
    "ratings": {
@@ -5430,13 +5433,13 @@
    ],
    "pvi": "R+5",
    "last": "50.8% R",
-   "score": 1.2,
+   "score": 0.8,
    "rating": "Lean R",
    "n_raters": 10,
    "ratings": {
     "Cook": "Likely R",
     "IE": "Likely R",
-    "Sabato": "Likely R"
+    "Sabato": "Lean R"
    }
   },
   "CO-04": {
@@ -5466,12 +5469,12 @@
    ],
    "pvi": "R+9",
    "last": "53.6% R",
-   "score": 1.6,
-   "rating": "Likely R",
+   "score": 1.4,
+   "rating": "Lean R",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Solid R",
-    "IE": "Solid R",
+    "Cook": "Lean R",
+    "IE": "Likely R",
     "Sabato": "Lean R"
    }
   },
@@ -5506,13 +5509,13 @@
    ],
    "pvi": "R+5",
    "last": "54.7% R",
-   "score": 0.75,
-   "rating": "Lean R",
+   "score": 0.4,
+   "rating": "Toss-up",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Lean R",
-    "IE": "Tilt R",
-    "Sabato": "Lean R"
+    "Cook": "Tossup",
+    "IE": "Tossup",
+    "Sabato": "Lean D (flip)"
    }
   },
   "CO-06": {
@@ -5620,18 +5623,18 @@
      "party": "R"
     },
     {
-     "name": "Dan Wood",
+     "name": "Dave Wood",
      "party": "L"
     }
    ],
    "pvi": "EVEN",
    "last": "49.0% R",
-   "score": -1.1,
+   "score": -1.25,
    "rating": "Lean D",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Tossup",
-    "IE": "Tossup",
+    "Cook": "Lean D (flip)",
+    "IE": "Tilt D (flip)",
     "Sabato": "Lean D (flip)"
    }
   },
@@ -5946,11 +5949,11 @@
    ],
    "pvi": "R+5",
    "last": "57.3% R",
-   "score": 2.5,
-   "rating": "Safe R",
+   "score": 2.4,
+   "rating": "Likely R",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Solid R",
+    "Cook": "Likely R",
     "IE": "Solid R",
     "Sabato": "Safe R"
    }
@@ -6050,13 +6053,13 @@
    ],
    "pvi": "R+5",
    "last": "56.5% R",
-   "score": 1.0,
+   "score": 0.9,
    "rating": "Lean R",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Likely R",
+    "Cook": "Lean R",
     "IE": "Likely R",
-    "Sabato": "Likely R"
+    "Sabato": "Lean R"
    }
   },
   "FL-08": {
@@ -6114,13 +6117,13 @@
    ],
    "pvi": "R+8",
    "last": "55.1% D",
-   "score": 1.1,
+   "score": 0.8,
    "rating": "Lean R",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Likely R (flip)",
+    "Cook": "Lean R (flip)",
     "IE": "Likely R (flip)",
-    "Sabato": "Likely R (flip)"
+    "Sabato": "Lean R (flip)"
    }
   },
   "FL-10": {
@@ -6174,7 +6177,7 @@
    ],
    "pvi": "R+7",
    "last": "60.3% R",
-   "score": 2.6,
+   "score": 2.5,
    "rating": "Safe R",
    "n_raters": 10,
    "ratings": {
@@ -6246,13 +6249,13 @@
    ],
    "pvi": "R+6",
    "last": "54.8% R",
-   "score": 1.3,
+   "score": 0.8,
    "rating": "Lean R",
    "n_raters": 10,
    "ratings": {
     "Cook": "Lean R",
     "IE": "Lean R",
-    "Sabato": "Likely R"
+    "Sabato": "Lean R"
    }
   },
   "FL-14": {
@@ -6282,13 +6285,13 @@
    ],
    "pvi": "R+4",
    "last": "57.0% D",
-   "score": -0.8,
+   "score": -0.85,
    "rating": "Lean D",
    "n_raters": 10,
    "ratings": {
     "Cook": "Tossup",
-    "IE": "Tossup",
-    "Sabato": "Tossup"
+    "IE": "Tilt D",
+    "Sabato": "Lean D"
    }
   },
   "FL-15": {
@@ -6314,7 +6317,7 @@
    ],
    "pvi": "R+9",
    "last": "56.2% R",
-   "score": 2.8,
+   "score": 2.9,
    "rating": "Safe R",
    "n_raters": 10,
    "ratings": {
@@ -6350,7 +6353,7 @@
    ],
    "pvi": "R+6",
    "last": "59.5% R",
-   "score": 1.8,
+   "score": 1.7,
    "rating": "Likely R",
    "n_raters": 10,
    "ratings": {
@@ -6385,11 +6388,15 @@
     }
    ],
    "pvi": "R+10",
-   "last": null,
-   "score": 3.0,
-   "n_raters": 0,
-   "ratings": {},
-   "rating": "Safe R"
+   "last": "63.9% R",
+   "score": 2.9,
+   "rating": "Safe R",
+   "n_raters": 10,
+   "ratings": {
+    "Cook": "Solid R",
+    "IE": "Solid R",
+    "Sabato": "Safe R"
+   }
   },
   "FL-18": {
    "state": "FL",
@@ -6418,7 +6425,7 @@
    ],
    "pvi": "R+8",
    "last": "65.3% R",
-   "score": 2.8,
+   "score": 2.9,
    "rating": "Safe R",
    "n_raters": 10,
    "ratings": {
@@ -6518,7 +6525,7 @@
    ],
    "pvi": "R+7",
    "last": "61.8% R",
-   "score": 2.8,
+   "score": 2.9,
    "rating": "Safe R",
    "n_raters": 10,
    "ratings": {
@@ -6550,13 +6557,13 @@
    ],
    "pvi": "R+4",
    "last": "–",
-   "score": -0.25,
+   "score": -0.3,
    "rating": "Toss-up",
    "n_raters": 10,
    "ratings": {
     "Cook": "Tossup",
-    "IE": "Tilt R (flip)",
-    "Sabato": "Tossup"
+    "IE": "Tossup",
+    "Sabato": "Lean D"
    }
   },
   "FL-23": {
@@ -6642,12 +6649,12 @@
    ],
    "pvi": "R+3",
    "last": "52.4% D",
-   "score": -1.1,
+   "score": -0.95,
    "rating": "Lean D",
    "n_raters": 10,
    "ratings": {
     "Cook": "Lean D",
-    "IE": "Tossup",
+    "IE": "Tilt D",
     "Sabato": "Lean D"
    }
   },
@@ -6710,7 +6717,7 @@
    ],
    "pvi": "R+6",
    "last": "60.4% R",
-   "score": 1.4,
+   "score": 1.3,
    "rating": "Lean R",
    "n_raters": 10,
    "ratings": {
@@ -6774,7 +6781,7 @@
    ],
    "pvi": "R+8",
    "last": "62.0% R",
-   "score": 2.6,
+   "score": 2.7,
    "rating": "Safe R",
    "n_raters": 10,
    "ratings": {
@@ -6946,7 +6953,7 @@
    ],
    "pvi": "R+11",
    "last": "64.9% R",
-   "score": 2.8,
+   "score": 2.9,
    "rating": "Safe R",
    "n_raters": 10,
    "ratings": {
@@ -7033,11 +7040,15 @@
     }
    ],
    "pvi": "R+11",
-   "last": null,
-   "score": 3.0,
-   "n_raters": 0,
-   "ratings": {},
-   "rating": "Safe R"
+   "last": "63.1% R",
+   "score": 2.9,
+   "rating": "Safe R",
+   "n_raters": 10,
+   "ratings": {
+    "Cook": "Solid R",
+    "IE": "Solid R",
+    "Sabato": "Safe R"
+   }
   },
   "GA-11": {
    "state": "GA",
@@ -7061,15 +7072,11 @@
     }
    ],
    "pvi": "R+12",
-   "last": "65.6% R",
-   "score": 2.9,
-   "rating": "Safe R",
-   "n_raters": 10,
-   "ratings": {
-    "Cook": "Solid R",
-    "IE": "Solid R",
-    "Sabato": "Safe R"
-   }
+   "last": null,
+   "score": 3.0,
+   "n_raters": 0,
+   "ratings": {},
+   "rating": "Safe R"
   },
   "GA-12": {
    "state": "GA",
@@ -7777,15 +7784,11 @@
     }
    ],
    "pvi": "D+3",
-   "last": "54.4% D",
-   "score": -2.9,
-   "rating": "Safe D",
-   "n_raters": 10,
-   "ratings": {
-    "Cook": "Solid D",
-    "IE": "Solid D",
-    "Sabato": "Safe D"
-   }
+   "last": null,
+   "score": -3.0,
+   "n_raters": 0,
+   "ratings": {},
+   "rating": "Safe D"
   },
   "IN-01": {
    "state": "IN",
@@ -7930,11 +7933,11 @@
    ],
    "pvi": "R+8",
    "last": "56.6% R",
-   "score": 1.9,
+   "score": 1.6,
    "rating": "Likely R",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Likely R",
+    "Cook": "Lean R",
     "IE": "Likely R",
     "Sabato": "Likely R"
    }
@@ -8158,7 +8161,7 @@
    ],
    "pvi": "R+2",
    "last": "51.9% R",
-   "score": -1.35,
+   "score": -1.25,
    "rating": "Lean D",
    "n_raters": 10,
    "ratings": {
@@ -8254,12 +8257,12 @@
    ],
    "pvi": "R+10",
    "last": "57.1% R",
-   "score": 2.6,
-   "rating": "Safe R",
+   "score": 2.3,
+   "rating": "Likely R",
    "n_raters": 10,
    "ratings": {
     "Cook": "Likely R",
-    "IE": "Solid R",
+    "IE": "Likely R",
     "Sabato": "Likely R"
    }
   },
@@ -8289,15 +8292,11 @@
     }
    ],
    "pvi": "D+2",
-   "last": "53.4% D",
-   "score": -2.9,
-   "rating": "Safe D",
-   "n_raters": 10,
-   "ratings": {
-    "Cook": "Solid D",
-    "IE": "Solid D",
-    "Sabato": "Safe D"
-   }
+   "last": null,
+   "score": -3.0,
+   "n_raters": 0,
+   "ratings": {},
+   "rating": "Safe D"
   },
   "KS-04": {
    "state": "KS",
@@ -8518,12 +8517,12 @@
    ],
    "pvi": "R+7",
    "last": "63.0% R",
-   "score": 0.75,
-   "rating": "Lean R",
+   "score": 0.1,
+   "rating": "Toss-up",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Lean R",
-    "IE": "Tilt R",
+    "Cook": "Tossup",
+    "IE": "Tossup",
     "Sabato": "Lean R"
    }
   },
@@ -8854,7 +8853,7 @@
    ],
    "pvi": "R+4",
    "last": "50.3% D",
-   "score": 0.3,
+   "score": 0.4,
    "rating": "Toss-up",
    "n_raters": 10,
    "ratings": {
@@ -8886,7 +8885,7 @@
    ],
    "pvi": "R+8",
    "last": "59.4% R",
-   "score": 2.8,
+   "score": 2.6,
    "rating": "Safe R",
    "n_raters": 10,
    "ratings": {
@@ -9394,13 +9393,13 @@
    ],
    "pvi": "R+11",
    "last": "59.2% R",
-   "score": 2.8,
+   "score": 2.7,
    "rating": "Safe R",
    "n_raters": 10,
    "ratings": {
     "Cook": "Solid R",
     "IE": "Solid R",
-    "Sabato": "Safe R"
+    "Sabato": "Likely R"
    }
   },
   "MI-02": {
@@ -9502,13 +9501,13 @@
    ],
    "pvi": "R+3",
    "last": "55.1% R",
-   "score": -0.05,
+   "score": -0.4,
    "rating": "Toss-up",
    "n_raters": 10,
    "ratings": {
     "Cook": "Tossup",
-    "IE": "Tilt R",
-    "Sabato": "Tossup"
+    "IE": "Tossup",
+    "Sabato": "Lean D (flip)"
    }
   },
   "MI-05": {
@@ -9622,13 +9621,13 @@
    ],
    "pvi": "EVEN",
    "last": "50.3% R",
-   "score": -0.8,
+   "score": -1.1,
    "rating": "Lean D",
    "n_raters": 10,
    "ratings": {
     "Cook": "Tossup",
     "IE": "Tossup",
-    "Sabato": "Tossup"
+    "Sabato": "Lean D (flip)"
    }
   },
   "MI-08": {
@@ -9754,13 +9753,13 @@
    ],
    "pvi": "R+3",
    "last": "51.1% R",
-   "score": -0.65,
+   "score": -0.55,
    "rating": "Lean D",
    "n_raters": 10,
    "ratings": {
     "Cook": "Tossup",
     "IE": "Tilt R",
-    "Sabato": "Tossup"
+    "Sabato": "Lean D (flip)"
    }
   },
   "MI-11": {
@@ -9906,12 +9905,12 @@
    ],
    "pvi": "R+6",
    "last": "58.6% R",
-   "score": 1.1,
+   "score": 0.8,
    "rating": "Lean R",
    "n_raters": 10,
    "ratings": {
     "Cook": "Lean R",
-    "IE": "Likely R",
+    "IE": "Lean R",
     "Sabato": "Lean R"
    }
   },
@@ -9938,7 +9937,7 @@
    ],
    "pvi": "D+3",
    "last": "55.6% D",
-   "score": -2.5,
+   "score": -2.6,
    "rating": "Safe D",
    "n_raters": 10,
    "ratings": {
@@ -10114,7 +10113,7 @@
    ],
    "pvi": "R+7",
    "last": "58.0% R",
-   "score": 2.5,
+   "score": 2.6,
    "rating": "Safe R",
    "n_raters": 10,
    "ratings": {
@@ -10276,7 +10275,7 @@
      "party": "L"
     }
    ],
-   "pvi": "",
+   "pvi": "D+29",
    "last": null,
    "score": -3.0,
    "n_raters": 0,
@@ -10308,9 +10307,9 @@
      "party": "L"
     }
    ],
-   "pvi": "",
+   "pvi": "R+4",
    "last": "54.5% R",
-   "score": 1.2,
+   "score": 0.8,
    "rating": "Lean R",
    "n_raters": 10,
    "ratings": {
@@ -10344,7 +10343,7 @@
      "party": "L"
     }
    ],
-   "pvi": "",
+   "pvi": "R+13",
    "last": null,
    "score": 3.0,
    "n_raters": 0,
@@ -10376,7 +10375,7 @@
      "party": "L"
     }
    ],
-   "pvi": "",
+   "pvi": "R+21",
    "last": null,
    "score": 3.0,
    "n_raters": 0,
@@ -10408,7 +10407,7 @@
      "party": "L"
     }
    ],
-   "pvi": "",
+   "pvi": "D+12",
    "last": null,
    "score": -3.0,
    "n_raters": 0,
@@ -10440,7 +10439,7 @@
      "party": "L"
     }
    ],
-   "pvi": "",
+   "pvi": "R+19",
    "last": null,
    "score": 3.0,
    "n_raters": 0,
@@ -10472,7 +10471,7 @@
      "party": "L"
     }
    ],
-   "pvi": "",
+   "pvi": "R+21",
    "last": null,
    "score": 3.0,
    "n_raters": 0,
@@ -10504,7 +10503,7 @@
      "party": "L"
     }
    ],
-   "pvi": "",
+   "pvi": "R+27",
    "last": null,
    "score": 3.0,
    "n_raters": 0,
@@ -10538,13 +10537,13 @@
    ],
    "pvi": "R+5",
    "last": "52.3% R",
-   "score": 0.45,
+   "score": -0.3,
    "rating": "Toss-up",
    "n_raters": 10,
    "ratings": {
     "Cook": "Tossup",
-    "IE": "Tilt R",
-    "Sabato": "Lean R"
+    "IE": "Tossup",
+    "Sabato": "Lean D (flip)"
    }
   },
   "MT-02": {
@@ -10614,7 +10613,7 @@
    ],
    "pvi": "R+6",
    "last": "60.1% R",
-   "score": 1.9,
+   "score": 2.0,
    "rating": "Likely R",
    "n_raters": 10,
    "ratings": {
@@ -10650,7 +10649,7 @@
    ],
    "pvi": "D+3",
    "last": "50.9% R",
-   "score": -2.1,
+   "score": -2.3,
    "rating": "Likely D",
    "n_raters": 10,
    "ratings": {
@@ -10730,7 +10729,7 @@
    ],
    "pvi": "D+2",
    "last": "52.0% D",
-   "score": -2.3,
+   "score": -2.2,
    "rating": "Likely D",
    "n_raters": 10,
    "ratings": {
@@ -10766,12 +10765,12 @@
    ],
    "pvi": "R+7",
    "last": "55.0% R",
-   "score": 1.4,
+   "score": 0.95,
    "rating": "Lean R",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Likely R",
-    "IE": "Lean R",
+    "Cook": "Lean R",
+    "IE": "Tilt R",
     "Sabato": "Lean R"
    }
   },
@@ -10802,7 +10801,7 @@
    ],
    "pvi": "D+1",
    "last": "51.4% D",
-   "score": -2.2,
+   "score": -2.3,
    "rating": "Likely D",
    "n_raters": 10,
    "ratings": {
@@ -10874,7 +10873,7 @@
    ],
    "pvi": "D+2",
    "last": "54.0% D",
-   "score": -2.2,
+   "score": -2.1,
    "rating": "Likely D",
    "n_raters": 10,
    "ratings": {
@@ -10910,12 +10909,12 @@
    ],
    "pvi": "D+2",
    "last": "53.0% D",
-   "score": -2.7,
+   "score": -2.8,
    "rating": "Safe D",
    "n_raters": 10,
    "ratings": {
     "Cook": "Solid D",
-    "IE": "Likely D",
+    "IE": "Solid D",
     "Sabato": "Likely D"
    }
   },
@@ -10974,13 +10973,13 @@
    ],
    "pvi": "R+5",
    "last": "58.0% R",
-   "score": 2.1,
+   "score": 1.7,
    "rating": "Likely R",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Solid R",
-    "IE": "Solid R",
-    "Sabato": "Likely R"
+    "Cook": "Likely R",
+    "IE": "Likely R",
+    "Sabato": "Lean R"
    }
   },
   "NJ-03": {
@@ -11134,8 +11133,8 @@
    ],
    "pvi": "EVEN",
    "last": "51.8% R",
-   "score": -1.35,
-   "rating": "Lean D",
+   "score": -1.55,
+   "rating": "Likely D",
    "n_raters": 10,
    "ratings": {
     "Cook": "Lean D (flip)",
@@ -11362,7 +11361,7 @@
    ],
    "pvi": "EVEN",
    "last": "52.1% D",
-   "score": -1.75,
+   "score": -1.65,
    "rating": "Likely D",
    "n_raters": 10,
    "ratings": {
@@ -11422,7 +11421,7 @@
    ],
    "pvi": "R+4",
    "last": "55.2% R",
-   "score": 1.9,
+   "score": 1.8,
    "rating": "Likely R",
    "n_raters": 10,
    "ratings": {
@@ -11486,7 +11485,7 @@
    ],
    "pvi": "EVEN",
    "last": "51.8% D",
-   "score": -2.2,
+   "score": -2.1,
    "rating": "Likely D",
    "n_raters": 10,
    "ratings": {
@@ -11914,13 +11913,13 @@
    ],
    "pvi": "D+1",
    "last": "52.2% R",
-   "score": -0.6,
+   "score": -0.7,
    "rating": "Lean D",
    "n_raters": 10,
    "ratings": {
     "Cook": "Tossup",
     "IE": "Tossup",
-    "Sabato": "Tossup"
+    "Sabato": "Lean R"
    }
   },
   "NY-18": {
@@ -12034,8 +12033,8 @@
    ],
    "pvi": "R+10",
    "last": "62.1% R",
-   "score": 1.6,
-   "rating": "Likely R",
+   "score": 1.2,
+   "rating": "Lean R",
    "n_raters": 10,
    "ratings": {
     "Cook": "Lean R",
@@ -12093,11 +12092,15 @@
     }
    ],
    "pvi": "R+10",
-   "last": null,
-   "score": 3.0,
-   "n_raters": 0,
-   "ratings": {},
-   "rating": "Safe R"
+   "last": "65.8% R",
+   "score": 2.9,
+   "rating": "Safe R",
+   "n_raters": 10,
+   "ratings": {
+    "Cook": "Solid R",
+    "IE": "Solid R",
+    "Sabato": "Safe R"
+   }
   },
   "NY-24": {
    "state": "NY",
@@ -12210,12 +12213,12 @@
    ],
    "pvi": "R+5",
    "last": "49.5% D",
-   "score": -0.4,
-   "rating": "Toss-up",
+   "score": -0.85,
+   "rating": "Lean D",
    "n_raters": 10,
    "ratings": {
     "Cook": "Tossup",
-    "IE": "Tossup",
+    "IE": "Tilt D",
     "Sabato": "Lean D"
    }
   },
@@ -12278,12 +12281,12 @@
    ],
    "pvi": "R+6",
    "last": "77.4% R",
-   "score": 2.4,
+   "score": 1.8,
    "rating": "Likely R",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Solid R",
-    "IE": "Solid R",
+    "Cook": "Likely R",
+    "IE": "Likely R",
     "Sabato": "Likely R"
    }
   },
@@ -12346,11 +12349,11 @@
    ],
    "pvi": "R+9",
    "last": "59.5% R",
-   "score": 2.6,
+   "score": 2.5,
    "rating": "Safe R",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Solid R",
+    "Cook": "Likely R",
     "IE": "Solid R",
     "Sabato": "Safe R"
    }
@@ -12414,11 +12417,11 @@
    ],
    "pvi": "R+7",
    "last": "58.6% R",
-   "score": 2.5,
-   "rating": "Safe R",
+   "score": 2.2,
+   "rating": "Likely R",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Solid R",
+    "Cook": "Likely R",
     "IE": "Solid R",
     "Sabato": "Safe R"
    }
@@ -12482,13 +12485,13 @@
    ],
    "pvi": "R+8",
    "last": "56.3% R",
-   "score": 2.4,
+   "score": 2.0,
    "rating": "Likely R",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Solid R",
-    "IE": "Solid R",
-    "Sabato": "Safe R"
+    "Cook": "Likely R",
+    "IE": "Likely R",
+    "Sabato": "Likely R"
    }
   },
   "NC-10": {
@@ -12554,12 +12557,12 @@
    ],
    "pvi": "R+5",
    "last": "56.8% R",
-   "score": -0.3,
-   "rating": "Toss-up",
+   "score": -1.05,
+   "rating": "Lean D",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Tossup",
-    "IE": "Tossup",
+    "Cook": "Lean D (flip)",
+    "IE": "Tilt D (flip)",
     "Sabato": "Lean D (flip)"
    }
   },
@@ -12618,13 +12621,13 @@
    ],
    "pvi": "R+8",
    "last": "58.6% R",
-   "score": 2.5,
-   "rating": "Safe R",
+   "score": 1.9,
+   "rating": "Likely R",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Solid R",
-    "IE": "Solid R",
-    "Sabato": "Safe R"
+    "Cook": "Likely R",
+    "IE": "Likely R",
+    "Sabato": "Likely R"
    }
   },
   "NC-14": {
@@ -12650,11 +12653,11 @@
    ],
    "pvi": "R+8",
    "last": "58.1% R",
-   "score": 2.6,
+   "score": 2.5,
    "rating": "Safe R",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Solid R",
+    "Cook": "Likely R",
     "IE": "Solid R",
     "Sabato": "Safe R"
    }
@@ -12722,12 +12725,12 @@
    ],
    "pvi": "R+1",
    "last": "54.6% D",
-   "score": -1.95,
+   "score": -1.9,
    "rating": "Likely D",
    "n_raters": 10,
    "ratings": {
     "Cook": "Likely D",
-    "IE": "Tilt D",
+    "IE": "Lean D",
     "Sabato": "Likely D"
    }
   },
@@ -12902,13 +12905,13 @@
    ],
    "pvi": "R+5",
    "last": "51.1% R",
-   "score": -0.1,
+   "score": -0.45,
    "rating": "Toss-up",
    "n_raters": 10,
    "ratings": {
     "Cook": "Tossup",
-    "IE": "Tossup",
-    "Sabato": "Tossup"
+    "IE": "Tilt D (flip)",
+    "Sabato": "Lean D (flip)"
    }
   },
   "OH-08": {
@@ -12934,7 +12937,7 @@
    ],
    "pvi": "R+8",
    "last": "62.8% R",
-   "score": 2.7,
+   "score": 2.8,
    "rating": "Safe R",
    "n_raters": 10,
    "ratings": {
@@ -12970,13 +12973,13 @@
    ],
    "pvi": "R+5",
    "last": "48.3% D",
-   "score": -0.7,
+   "score": -0.95,
    "rating": "Lean D",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Tossup",
-    "IE": "Tossup",
-    "Sabato": "Tossup"
+    "Cook": "Lean D",
+    "IE": "Tilt D",
+    "Sabato": "Lean D"
    }
   },
   "OH-10": {
@@ -13006,13 +13009,13 @@
    ],
    "pvi": "R+4",
    "last": "57.6% R",
-   "score": 1.9,
-   "rating": "Likely R",
+   "score": 1.2,
+   "rating": "Lean R",
    "n_raters": 10,
    "ratings": {
     "Cook": "Lean R",
-    "IE": "Solid R",
-    "Sabato": "Likely R"
+    "IE": "Lean R",
+    "Sabato": "Lean R"
    }
   },
   "OH-11": {
@@ -13162,13 +13165,13 @@
    ],
    "pvi": "R+5",
    "last": "56.5% R",
-   "score": 1.4,
+   "score": 1.0,
    "rating": "Lean R",
    "n_raters": 10,
    "ratings": {
     "Cook": "Lean R",
-    "IE": "Likely R",
-    "Sabato": "Likely R"
+    "IE": "Lean R",
+    "Sabato": "Lean R"
    }
   },
   "OK-01": {
@@ -13193,11 +13196,15 @@
     }
    ],
    "pvi": "R+11",
-   "last": null,
-   "score": 3.0,
-   "n_raters": 0,
-   "ratings": {},
-   "rating": "Safe R"
+   "last": "60.4% R",
+   "score": 2.9,
+   "rating": "Safe R",
+   "n_raters": 10,
+   "ratings": {
+    "Cook": "Solid R",
+    "IE": "Solid R",
+    "Sabato": "Safe R"
+   }
   },
   "OK-02": {
    "state": "OK",
@@ -13322,12 +13329,12 @@
    ],
    "pvi": "R+9",
    "last": "60.7% R",
-   "score": 2.7,
+   "score": 2.6,
    "rating": "Safe R",
    "n_raters": 10,
    "ratings": {
     "Cook": "Solid R",
-    "IE": "Solid R",
+    "IE": "Likely R",
     "Sabato": "Safe R"
    }
   },
@@ -13473,15 +13480,11 @@
     }
    ],
    "pvi": "D+4",
-   "last": "47.7% D",
-   "score": -2.9,
-   "rating": "Safe D",
-   "n_raters": 10,
-   "ratings": {
-    "Cook": "Solid D",
-    "IE": "Solid D",
-    "Sabato": "Likely D"
-   }
+   "last": null,
+   "score": -3.0,
+   "n_raters": 0,
+   "ratings": {},
+   "rating": "Safe D"
   },
   "OR-06": {
    "state": "OR",
@@ -13534,13 +13537,13 @@
    ],
    "pvi": "D+1",
    "last": "56.4% R",
-   "score": 0.3,
+   "score": -0.3,
    "rating": "Toss-up",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Lean R",
-    "IE": "Lean R",
-    "Sabato": "Lean R"
+    "Cook": "Tossup",
+    "IE": "Tossup",
+    "Sabato": "Lean D (flip)"
    }
   },
   "PA-02": {
@@ -13706,7 +13709,7 @@
    ],
    "pvi": "R+1",
    "last": "50.5% R",
-   "score": -1.15,
+   "score": -1.35,
    "rating": "Lean D",
    "n_raters": 10,
    "ratings": {
@@ -13738,13 +13741,13 @@
    ],
    "pvi": "R+4",
    "last": "50.8% R",
-   "score": -0.55,
+   "score": -0.85,
    "rating": "Lean D",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Tossup",
+    "Cook": "Lean D (flip)",
     "IE": "Tilt D (flip)",
-    "Sabato": "Tossup"
+    "Sabato": "Lean D (flip)"
    }
   },
   "PA-09": {
@@ -13798,12 +13801,12 @@
    ],
    "pvi": "R+3",
    "last": "50.6% R",
-   "score": -1.3,
+   "score": -0.95,
    "rating": "Lean D",
    "n_raters": 10,
    "ratings": {
     "Cook": "Lean D (flip)",
-    "IE": "Tossup",
+    "IE": "Tilt D (flip)",
     "Sabato": "Lean D (flip)"
    }
   },
@@ -13829,11 +13832,15 @@
     }
    ],
    "pvi": "R+11",
-   "last": null,
-   "score": 3.0,
-   "n_raters": 0,
-   "ratings": {},
-   "rating": "Safe R"
+   "last": "62.9% R",
+   "score": 2.9,
+   "rating": "Safe R",
+   "n_raters": 10,
+   "ratings": {
+    "Cook": "Solid R",
+    "IE": "Solid R",
+    "Sabato": "Safe R"
+   }
   },
   "PA-12": {
    "state": "PA",
@@ -13969,11 +13976,15 @@
     }
    ],
    "pvi": "R+11",
-   "last": null,
-   "score": 3.0,
-   "n_raters": 0,
-   "ratings": {},
-   "rating": "Safe R"
+   "last": "63.7% R",
+   "score": 2.9,
+   "rating": "Safe R",
+   "n_raters": 10,
+   "ratings": {
+    "Cook": "Solid R",
+    "IE": "Solid R",
+    "Sabato": "Safe R"
+   }
   },
   "PA-17": {
    "state": "PA",
@@ -14090,12 +14101,12 @@
    ],
    "pvi": "R+6",
    "last": "58.3% R",
-   "score": 1.1,
+   "score": 0.75,
    "rating": "Lean R",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Lean R",
-    "IE": "Lean R",
+    "Cook": "Tossup",
+    "IE": "Tilt R",
     "Sabato": "Lean R"
    }
   },
@@ -14126,7 +14137,7 @@
    ],
    "pvi": "R+7",
    "last": "59.5% R",
-   "score": 2.7,
+   "score": 2.8,
    "rating": "Safe R",
    "n_raters": 10,
    "ratings": {
@@ -14520,7 +14531,7 @@
    "ratings": {
     "Cook": "Solid R",
     "IE": "Solid R",
-    "Sabato": "Safe R"
+    "Sabato": "Likely R"
    }
   },
   "TN-06": {
@@ -14589,11 +14600,15 @@
     }
    ],
    "pvi": "R+11",
-   "last": null,
-   "score": 3.0,
-   "n_raters": 0,
-   "ratings": {},
-   "rating": "Safe R"
+   "last": "59.5% R",
+   "score": 2.9,
+   "rating": "Safe R",
+   "n_raters": 10,
+   "ratings": {
+    "Cook": "Solid R",
+    "IE": "Solid R",
+    "Sabato": "Safe R"
+   }
   },
   "TN-08": {
    "state": "TN",
@@ -14678,13 +14693,13 @@
    ],
    "pvi": "R+9",
    "last": "71.3% D",
-   "score": 2.5,
-   "rating": "Safe R",
+   "score": 2.3,
+   "rating": "Likely R",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Solid R (flip)",
-    "IE": "Solid R (flip)",
-    "Sabato": "Safe R (flip)"
+    "Cook": "Likely R (flip)",
+    "IE": "Likely R (flip)",
+    "Sabato": "Likely R (flip)"
    }
   },
   "TX-01": {
@@ -14737,11 +14752,15 @@
     }
    ],
    "pvi": "R+11",
-   "last": null,
-   "score": 3.0,
-   "n_raters": 0,
-   "ratings": {},
-   "rating": "Safe R"
+   "last": "65.7% R",
+   "score": 2.8,
+   "rating": "Safe R",
+   "n_raters": 10,
+   "ratings": {
+    "Cook": "Solid R",
+    "IE": "Solid R",
+    "Sabato": "Safe R"
+   }
   },
   "TX-03": {
    "state": "TX",
@@ -14821,11 +14840,15 @@
     }
    ],
    "pvi": "R+10",
-   "last": null,
-   "score": 3.0,
-   "n_raters": 0,
-   "ratings": {},
-   "rating": "Safe R"
+   "last": "64.1% R",
+   "score": 2.9,
+   "rating": "Safe R",
+   "n_raters": 10,
+   "ratings": {
+    "Cook": "Solid R",
+    "IE": "Solid R",
+    "Sabato": "Safe R"
+   }
   },
   "TX-06": {
    "state": "TX",
@@ -14938,12 +14961,12 @@
    ],
    "pvi": "R+9",
    "last": "–",
-   "score": 2.2,
+   "score": 2.0,
    "rating": "Likely R",
    "n_raters": 10,
    "ratings": {
     "Cook": "Likely R (flip)",
-    "IE": "Likely R (flip)",
+    "IE": "Lean R (flip)",
     "Sabato": "Likely R (flip)"
    }
   },
@@ -15114,13 +15137,13 @@
    ],
    "pvi": "R+7",
    "last": "57.1% R",
-   "score": 0.0,
+   "score": -0.35,
    "rating": "Toss-up",
    "n_raters": 10,
    "ratings": {
     "Cook": "Tossup",
-    "IE": "Tossup",
-    "Sabato": "Tossup"
+    "IE": "Tilt D (flip)",
+    "Sabato": "Lean D (flip)"
    }
   },
   "TX-16": {
@@ -15173,11 +15196,15 @@
     }
    ],
    "pvi": "R+10",
-   "last": null,
-   "score": 3.0,
-   "n_raters": 0,
-   "ratings": {},
-   "rating": "Safe R"
+   "last": "66.4% R",
+   "score": 2.9,
+   "rating": "Safe R",
+   "n_raters": 10,
+   "ratings": {
+    "Cook": "Solid R",
+    "IE": "Solid R",
+    "Sabato": "Safe R"
+   }
   },
   "TX-18": {
    "state": "TX",
@@ -15286,7 +15313,7 @@
    ],
    "pvi": "R+10",
    "last": "61.9% R",
-   "score": 2.9,
+   "score": 2.8,
    "rating": "Safe R",
    "n_raters": 10,
    "ratings": {
@@ -15354,11 +15381,11 @@
    ],
    "pvi": "R+7",
    "last": "62.3% R",
-   "score": 1.1,
+   "score": 0.8,
    "rating": "Lean R",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Likely R",
+    "Cook": "Lean R",
     "IE": "Likely R",
     "Sabato": "Lean R"
    }
@@ -15386,7 +15413,7 @@
    ],
    "pvi": "R+8",
    "last": "60.3% R",
-   "score": 2.5,
+   "score": 2.6,
    "rating": "Safe R",
    "n_raters": 10,
    "ratings": {
@@ -15514,12 +15541,12 @@
    ],
    "pvi": "R+3",
    "last": "52.8% D",
-   "score": -1.45,
-   "rating": "Lean D",
+   "score": -1.8,
+   "rating": "Likely D",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Lean D",
-    "IE": "Tilt D",
+    "Cook": "Likely D",
+    "IE": "Lean D",
     "Sabato": "Lean D"
    }
   },
@@ -15605,11 +15632,15 @@
     }
    ],
    "pvi": "R+11",
-   "last": null,
-   "score": 3.0,
-   "n_raters": 0,
-   "ratings": {},
-   "rating": "Safe R"
+   "last": "64.5% R",
+   "score": 2.9,
+   "rating": "Safe R",
+   "n_raters": 10,
+   "ratings": {
+    "Cook": "Solid R",
+    "IE": "Solid R",
+    "Sabato": "Safe R"
+   }
   },
   "TX-32": {
    "state": "TX",
@@ -15634,7 +15665,7 @@
    ],
    "pvi": "R+8",
    "last": "–",
-   "score": 2.5,
+   "score": 2.6,
    "rating": "Safe R",
    "n_raters": 10,
    "ratings": {
@@ -15702,11 +15733,11 @@
    ],
    "pvi": "R+3",
    "last": "51.3% D",
-   "score": -0.9,
+   "score": -1.2,
    "rating": "Lean D",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Tossup",
+    "Cook": "Lean D",
     "IE": "Tossup",
     "Sabato": "Lean D"
    }
@@ -15734,13 +15765,13 @@
    ],
    "pvi": "R+4",
    "last": "–",
-   "score": 0.4,
+   "score": -0.1,
    "rating": "Toss-up",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Lean R (flip)",
-    "IE": "Lean R (flip)",
-    "Sabato": "Tossup"
+    "Cook": "Tossup",
+    "IE": "Tossup",
+    "Sabato": "Lean D"
    }
   },
   "TX-36": {
@@ -15825,11 +15856,15 @@
     }
    ],
    "pvi": "R+10",
-   "last": null,
-   "score": 3.0,
-   "n_raters": 0,
-   "ratings": {},
-   "rating": "Safe R"
+   "last": "62.7% R",
+   "score": 2.9,
+   "rating": "Safe R",
+   "n_raters": 10,
+   "ratings": {
+    "Cook": "Solid R",
+    "IE": "Solid R",
+    "Sabato": "Safe R"
+   }
   },
   "UT-01": {
    "state": "UT",
@@ -16110,7 +16145,7 @@
    ],
    "pvi": "R+2",
    "last": "51.7% D",
-   "score": -1.4,
+   "score": -1.2,
    "rating": "Lean D",
    "n_raters": 10,
    "ratings": {
@@ -16141,7 +16176,7 @@
     }
    ],
    "pvi": "R+10",
-   "last": "98.2% R",
+   "last": "52.02% R",
    "score": 2.9,
    "rating": "Safe R",
    "n_raters": 10,
@@ -16174,12 +16209,12 @@
    ],
    "pvi": "R+5",
    "last": "60.6% R",
-   "score": 2.4,
+   "score": 2.1,
    "rating": "Likely R",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Solid R",
-    "IE": "Solid R",
+    "Cook": "Likely R",
+    "IE": "Likely R",
     "Sabato": "Likely R"
    }
   },
@@ -16406,12 +16441,12 @@
    ],
    "pvi": "R+2",
    "last": "54.1% R",
-   "score": 0.7,
-   "rating": "Lean R",
+   "score": 0.4,
+   "rating": "Toss-up",
    "n_raters": 10,
    "ratings": {
     "Cook": "Lean R",
-    "IE": "Likely R",
+    "IE": "Lean R",
     "Sabato": "Lean R"
    }
   },
@@ -16470,12 +16505,12 @@
    ],
    "pvi": "R+3",
    "last": "51.4% R",
-   "score": -0.9,
+   "score": -1.15,
    "rating": "Lean D",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Tossup",
-    "IE": "Tossup",
+    "Cook": "Lean D (flip)",
+    "IE": "Tilt D (flip)",
     "Sabato": "Lean D (flip)"
    }
   },
@@ -16606,7 +16641,7 @@
    ],
    "pvi": "R+11",
    "last": "63.6% R",
-   "score": 2.9,
+   "score": 2.8,
    "rating": "Safe R",
    "n_raters": 10,
    "ratings": {
@@ -16710,13 +16745,13 @@
    ],
    "pvi": "R+3",
    "last": "56.4% R",
-   "score": 0.0,
+   "score": -0.05,
    "rating": "Toss-up",
    "n_raters": 10,
    "ratings": {
     "Cook": "Tossup",
-    "IE": "Lean R",
-    "Sabato": "Tossup"
+    "IE": "Tilt R",
+    "Sabato": "Lean D (flip)"
    }
   },
   "VA-02": {
@@ -16750,12 +16785,12 @@
    ],
    "pvi": "EVEN",
    "last": "50.8% R",
-   "score": -1.2,
+   "score": -1.25,
    "rating": "Lean D",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Tossup",
-    "IE": "Tossup",
+    "Cook": "Lean D (flip)",
+    "IE": "Tilt D (flip)",
     "Sabato": "Lean D (flip)"
    }
   },
@@ -16854,13 +16889,13 @@
    ],
    "pvi": "R+6",
    "last": "57.5% R",
-   "score": 1.4,
+   "score": 1.0,
    "rating": "Lean R",
    "n_raters": 10,
    "ratings": {
-    "Cook": "Likely R",
-    "IE": "Likely R",
-    "Sabato": "Lean R"
+    "Cook": "Lean R",
+    "IE": "Lean R",
+    "Sabato": "Lean D (flip)"
    }
   },
   "VA-06": {
@@ -16930,13 +16965,13 @@
    ],
    "pvi": "D+2",
    "last": "51.3% D",
-   "score": -2.5,
+   "score": -2.7,
    "rating": "Safe D",
    "n_raters": 10,
    "ratings": {
     "Cook": "Likely D",
-    "IE": "Likely D",
-    "Sabato": "Likely D"
+    "IE": "Solid D",
+    "Sabato": "Safe D"
    }
   },
   "VA-08": {
@@ -17068,5 +17103,162 @@
    "rating": "Safe D"
   }
  },
- "changes": []
+ "changes": [
+  {
+   "date": "2026-11-02",
+   "race": "LA-SEN",
+   "from": "Safe R",
+   "to": "Likely R"
+  },
+  {
+   "date": "2026-11-02",
+   "race": "ME-SEN",
+   "from": "Toss-up",
+   "to": "Lean D"
+  },
+  {
+   "date": "2026-11-02",
+   "race": "MN-SEN",
+   "from": "Lean D",
+   "to": "Likely D"
+  },
+  {
+   "date": "2026-11-02",
+   "race": "MS-SEN",
+   "from": "Safe R",
+   "to": "Likely R"
+  },
+  {
+   "date": "2026-11-02",
+   "race": "MT-SEN",
+   "from": "Likely R",
+   "to": "Safe R"
+  },
+  {
+   "date": "2026-11-02",
+   "race": "TX-SEN",
+   "from": "Toss-up",
+   "to": "Lean D"
+  },
+  {
+   "date": "2026-11-02",
+   "race": "AZ-GOV",
+   "from": "Lean D",
+   "to": "Likely D"
+  },
+  {
+   "date": "2026-11-02",
+   "race": "MI-GOV",
+   "from": "Lean D",
+   "to": "Likely D"
+  },
+  {
+   "date": "2026-11-02",
+   "race": "OH-GOV",
+   "from": "Toss-up",
+   "to": "Lean D"
+  },
+  {
+   "date": "2026-11-02",
+   "race": "OK-GOV",
+   "from": "Safe R",
+   "to": "Likely R"
+  },
+  {
+   "date": "2026-11-02",
+   "race": "VT-GOV",
+   "from": "Likely R",
+   "to": "Lean R"
+  },
+  {
+   "date": "2026-11-02",
+   "race": "CO-04",
+   "from": "Likely R",
+   "to": "Lean R"
+  },
+  {
+   "date": "2026-11-02",
+   "race": "CO-05",
+   "from": "Lean R",
+   "to": "Toss-up"
+  },
+  {
+   "date": "2026-11-02",
+   "race": "FL-04",
+   "from": "Safe R",
+   "to": "Likely R"
+  },
+  {
+   "date": "2026-11-02",
+   "race": "KS-02",
+   "from": "Safe R",
+   "to": "Likely R"
+  },
+  {
+   "date": "2026-11-02",
+   "race": "KY-06",
+   "from": "Lean R",
+   "to": "Toss-up"
+  },
+  {
+   "date": "2026-11-02",
+   "race": "NJ-07",
+   "from": "Lean D",
+   "to": "Likely D"
+  },
+  {
+   "date": "2026-11-02",
+   "race": "NY-21",
+   "from": "Likely R",
+   "to": "Lean R"
+  },
+  {
+   "date": "2026-11-02",
+   "race": "NC-01",
+   "from": "Toss-up",
+   "to": "Lean D"
+  },
+  {
+   "date": "2026-11-02",
+   "race": "NC-07",
+   "from": "Safe R",
+   "to": "Likely R"
+  },
+  {
+   "date": "2026-11-02",
+   "race": "NC-11",
+   "from": "Toss-up",
+   "to": "Lean D"
+  },
+  {
+   "date": "2026-11-02",
+   "race": "NC-13",
+   "from": "Safe R",
+   "to": "Likely R"
+  },
+  {
+   "date": "2026-11-02",
+   "race": "OH-10",
+   "from": "Likely R",
+   "to": "Lean R"
+  },
+  {
+   "date": "2026-11-02",
+   "race": "TN-09",
+   "from": "Safe R",
+   "to": "Likely R"
+  },
+  {
+   "date": "2026-11-02",
+   "race": "TX-28",
+   "from": "Lean D",
+   "to": "Likely D"
+  },
+  {
+   "date": "2026-11-02",
+   "race": "WI-01",
+   "from": "Lean R",
+   "to": "Toss-up"
+  }
+ ]
 }
