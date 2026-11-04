@@ -1762,6 +1762,202 @@
       "systems": {
         "S-UKRAINE": 1
       }
+    },
+    {
+      "id": "E-20261104-01",
+      "date": "2026-11-04",
+      "domain": "politics",
+      "title": "Democrats win control of the U.S. House in a decisive rebuke of Republican governance",
+      "sources": [
+        "AP",
+        "PBS NewsHour",
+        "Guardian US"
+      ],
+      "url": "https://www.pbs.org/newshour/politics/democrats-win-control-of-the-u-s-house",
+      "omen": {
+        "chaos": 3,
+        "polarization": 5,
+        "economic": 2
+      },
+      "clio": {
+        "precedent": "2018 Democratic House wave",
+        "precedent_match": 7,
+        "resistance": 6
+      },
+      "systems": {
+        "S-HOUSE": 3
+      }
+    },
+    {
+      "id": "E-20261104-02",
+      "date": "2026-11-04",
+      "domain": "politics",
+      "title": "Democrats also win the Senate, flipping Texas, Iowa, Ohio, Maine, Kansas, South Carolina and North Carolina",
+      "sources": [
+        "AP",
+        "Reuters",
+        "Axios",
+        "PBS NewsHour"
+      ],
+      "url": "https://www.axios.com/2026/11/04/texas-senate-results-talarico-paxton",
+      "omen": {
+        "chaos": 3,
+        "polarization": 5,
+        "economic": 3
+      },
+      "clio": {
+        "precedent": "2006 Democratic Senate takeover",
+        "precedent_match": 5,
+        "resistance": 5
+      },
+      "systems": {
+        "S-SENATE": 3
+      }
+    },
+    {
+      "id": "E-20261104-03",
+      "date": "2026-11-04",
+      "domain": "politics",
+      "title": "Democrats flip governorships in Texas, Ohio, Georgia, Iowa, Nevada and Michigan hold",
+      "sources": [
+        "AP",
+        "Reuters",
+        "BBC"
+      ],
+      "url": "https://www.nbcnews.com/politics/2026-elections/governor-results",
+      "omen": {
+        "chaos": 2,
+        "polarization": 4,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2018 governor flips (KS, WI, MI)",
+        "precedent_match": 6,
+        "resistance": 6
+      },
+      "systems": {}
+    },
+    {
+      "id": "E-20261104-04",
+      "date": "2026-11-04",
+      "domain": "economy",
+      "title": "Stock futures drop 1.4% overnight on election results and AI-regulation worries, then recover",
+      "sources": [
+        "Reuters",
+        "Yahoo Finance",
+        "Fortune"
+      ],
+      "url": "https://finance.yahoo.com/markets/stocks/articles/wall-street-futures-plunged-democrats-102707086.html",
+      "omen": {
+        "chaos": 3,
+        "polarization": 2,
+        "economic": 4
+      },
+      "clio": {
+        "precedent": "2018 post-midterm market swings",
+        "precedent_match": 4,
+        "resistance": 7
+      },
+      "systems": {
+        "S-GROWTH": 1
+      }
+    },
+    {
+      "id": "E-20261104-05",
+      "date": "2026-11-04",
+      "domain": "politics",
+      "title": "Trump says he will accept the results and links losses to the Iran war and gas prices",
+      "sources": [
+        "CNN",
+        "NYT",
+        "Reuters"
+      ],
+      "url": "https://www.cnn.com/2026/11/04/politics/live-news/midterm-election-congress",
+      "omen": {
+        "chaos": 2,
+        "polarization": 3,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2018 Trump post-midterm press conference",
+        "precedent_match": 6,
+        "resistance": 8
+      },
+      "systems": {
+        "S-STREETS": -1
+      }
+    },
+    {
+      "id": "E-20261104-06",
+      "date": "2026-11-04",
+      "domain": "foreign",
+      "title": "Oil eases and Iran's negotiator says Americans voted 'no to war'; Trump tells FT no immediate plan to strike",
+      "sources": [
+        "Reuters",
+        "FT"
+      ],
+      "url": "https://www.ft.com",
+      "omen": {
+        "chaos": 3,
+        "polarization": 2,
+        "economic": 4
+      },
+      "clio": {
+        "precedent": "1987-88 Tanker War",
+        "precedent_match": 4,
+        "resistance": 6
+      },
+      "systems": {
+        "S-HORMUZ": -1,
+        "S-INFLATION": -1
+      }
+    },
+    {
+      "id": "E-20261104-07",
+      "date": "2026-11-04",
+      "domain": "politics",
+      "title": "DOJ sends election monitors mostly to Democratic areas and widens its Alaska Senate criminal probe",
+      "sources": [
+        "Axios",
+        "AP",
+        "PBS NewsHour"
+      ],
+      "url": "https://www.pbs.org/newshour/politics",
+      "omen": {
+        "chaos": 3,
+        "polarization": 6,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2020 DOJ election-period actions",
+        "precedent_match": 4,
+        "resistance": 7
+      },
+      "systems": {
+        "S-SENATE": -1
+      }
+    },
+    {
+      "id": "E-20261104-08",
+      "date": "2026-11-04",
+      "domain": "politics",
+      "title": "Vote-scanner malfunction delays counting in Westchester County, New York",
+      "sources": [
+        "AP",
+        "PBS NewsHour"
+      ],
+      "url": "https://www.pbs.org/newshour/politics/vote-scanning-machine-malfunction-expected-to-delay-counting-in-new-yorks-westchester-county",
+      "omen": {
+        "chaos": 2,
+        "polarization": 2,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2022 Maricopa printer problems",
+        "precedent_match": 5,
+        "resistance": 8
+      },
+      "systems": {}
     }
   ]
 }

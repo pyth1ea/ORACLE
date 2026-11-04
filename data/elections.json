@@ -789,7 +789,12 @@
     "source": "National Public Affairs (R)",
     "as_of": "2026-10-20"
    },
-   "note": "Within three points in both public polls."
+   "note": "Within three points in both public polls.",
+   "result": {
+    "winner": "D",
+    "called": true,
+    "as_of": "2026-11-04"
+   }
   },
   "KS-SEN": {
    "state": "KS",
@@ -825,7 +830,12 @@
     "IE": "Tossup",
     "Sabato": "Lean D (flip)"
    },
-   "prediction": "P-0037"
+   "prediction": "P-0037",
+   "result": {
+    "winner": "D",
+    "called": true,
+    "as_of": "2026-11-04"
+   }
   },
   "KY-SEN": {
    "state": "KY",
@@ -928,6 +938,15 @@
     "D": 0.56,
     "source": "Kalshi",
     "as_of": "2026-10-20"
+   },
+   "result": {
+    "winner": "D",
+    "called": true,
+    "pct": {
+     "D": 53.0,
+     "R": 46.9
+    },
+    "as_of": "2026-11-04"
    }
   },
   "MA-SEN": {
@@ -1017,7 +1036,16 @@
    },
    "prediction": "P-0031",
    "yes_party": "D",
-   "note": "Polling average about D+3 as of Oct 3."
+   "note": "Polling average about D+3 as of Oct 3.",
+   "result": {
+    "winner": "D",
+    "called": true,
+    "pct": {
+     "D": 52,
+     "R": 46
+    },
+    "as_of": "2026-11-04"
+   }
   },
   "MN-SEN": {
    "state": "MN",
@@ -1477,7 +1505,12 @@
     "IE": "Tilt R",
     "Sabato": "Lean R"
    },
-   "prediction": "P-0043"
+   "prediction": "P-0043",
+   "result": {
+    "winner": "D",
+    "called": true,
+    "as_of": "2026-11-04"
+   }
   },
   "SD-SEN": {
    "state": "SD",
@@ -1612,6 +1645,11 @@
     "D": 0.5,
     "source": "Kalshi/Polymarket range",
     "as_of": "2026-10-20"
+   },
+   "result": {
+    "winner": "D",
+    "called": true,
+    "as_of": "2026-11-04"
    }
   },
   "VA-SEN": {
@@ -1790,6 +1828,11 @@
     "R": 45,
     "source": "Marist (CNN has D+6)",
     "as_of": "2026-10-18"
+   },
+   "result": {
+    "winner": "D",
+    "called": true,
+    "as_of": "2026-11-04"
    }
   },
   "AL-GOV": {
@@ -2107,7 +2150,16 @@
     "IE": "Lean R",
     "Sabato": "Lean R"
    },
-   "prediction": "P-0040"
+   "prediction": "P-0040",
+   "result": {
+    "winner": "R",
+    "called": true,
+    "pct": {
+     "D": 48.7,
+     "R": 50.0
+    },
+    "as_of": "2026-11-04"
+   }
   },
   "GA-GOV": {
    "state": "GA",
@@ -2141,7 +2193,12 @@
    },
    "prediction": "P-0029",
    "yes_party": "D",
-   "note": "Toss-up; no verified recent poll."
+   "note": "Toss-up; no verified recent poll.",
+   "result": {
+    "winner": "D",
+    "called": true,
+    "as_of": "2026-11-04"
+   }
   },
   "HI-GOV": {
    "state": "HI",
@@ -2288,7 +2345,16 @@
    },
    "prediction": "P-0034",
    "yes_party": "D",
-   "note": "CNN likely-voter polling has the Democrat ahead."
+   "note": "CNN likely-voter polling has the Democrat ahead.",
+   "result": {
+    "winner": "D",
+    "called": true,
+    "pct": {
+     "D": 55.5,
+     "R": 44.5
+    },
+    "as_of": "2026-11-04"
+   }
   },
   "KS-GOV": {
    "state": "KS",
@@ -2585,7 +2651,16 @@
     "IE": "Tossup",
     "Sabato": "Lean D (flip)"
    },
-   "prediction": "P-0036"
+   "prediction": "P-0036",
+   "result": {
+    "winner": "D",
+    "called": true,
+    "pct": {
+     "D": 51.7,
+     "R": 44.2
+    },
+    "as_of": "2026-11-04"
+   }
   },
   "NH-GOV": {
    "state": "NH",
@@ -2726,7 +2801,12 @@
     "source": "Marist",
     "as_of": "2026-10-18"
    },
-   "note": "Acton led by 7 in Marist."
+   "note": "Acton led by 7 in Marist.",
+   "result": {
+    "winner": "D",
+    "called": true,
+    "as_of": "2026-11-04"
+   }
   },
   "OK-GOV": {
    "state": "OK",
@@ -3074,7 +3154,12 @@
    },
    "prediction": "P-0033",
    "yes_party": "D",
-   "note": "Rated Lean R."
+   "note": "Rated Lean R.",
+   "result": {
+    "winner": "D",
+    "called": true,
+    "as_of": "2026-11-04"
+   }
   },
   "VT-GOV": {
    "state": "VT",
@@ -3149,7 +3234,16 @@
     "IE": "Tilt D",
     "Sabato": "Lean D"
    },
-   "prediction": "P-0038"
+   "prediction": "P-0038",
+   "result": {
+    "winner": "D",
+    "called": true,
+    "pct": {
+     "D": 54.1,
+     "R": 45.9
+    },
+    "as_of": "2026-11-04"
+   }
   },
   "WY-GOV": {
    "state": "WY",

@@ -4,15 +4,15 @@
     "version": "2.0",
     "scope": "United States",
     "created": "2026-10-14",
-    "last_run": "2026-11-02",
-    "run_count": 9,
-    "next_id": 54,
+    "last_run": "2026-11-04",
+    "run_count": 10,
+    "next_id": 55,
     "note": "Single source of truth. Rules live in ORACLE.md. Never rewrite past forecasts. Arithmetic is done by tools/core.py."
   },
   "weights": {
     "politics": {
-      "clio": 0.499,
-      "omen": 0.501
+      "clio": 0.23,
+      "omen": 0.77
     },
     "economy": {
       "clio": 0.462,
@@ -57,6 +57,11 @@
       "date": "2026-10-16",
       "source": "resolution P-0010",
       "text": "In an energy shock, producer prices react more than consumer prices: September gasoline was +9.1% in CPI but +20.3% in PPI, and PPI final demand jumped 1.3% (ORACLE gave a 0.5%+ rise only 48%; history-based CLIO said 35%). When CPI energy jumps 5%+, treat a 0.5%+ PPI headline as likely (65-75%), not unusual."
+    },
+    {
+      "date": "2026-11-04",
+      "source": "run",
+      "text": "2026-11-04: In a wave year, ORACLE's Senate/governor calls of 40-60% on Democrats all broke the same way (TX, IA, OH, KS, SC flipped). Race forecasts are highly correlated; treat 'toss-up' seats as one shared bet on the national environment rather than independent coin flips."
     }
   ],
   "predictions": [
@@ -90,19 +95,21 @@
           "sim": 0.89
         }
       ],
-      "status": "open",
-      "outcome": null,
-      "resolved_on": null,
-      "resolution_note": null,
+      "status": "resolved",
+      "outcome": true,
+      "resolved_on": "2026-11-04",
+      "resolution_note": "AP/PBS: Democrats won control of the U.S. House (Nov 3-4, 2026).",
       "brier": {
-        "oracle": null,
-        "clio": null,
-        "omen": null,
-        "market": null,
-        "sim": null
+        "oracle": 0.0169,
+        "clio": 0.0225,
+        "omen": 0.0144,
+        "market": 0.01,
+        "sim": 0.0169
       },
       "sim": 0.87,
-      "blend": 0.87
+      "blend": 0.87,
+      "hit": true,
+      "scored_on": "2026-11-04"
     },
     {
       "id": "P-0002",
@@ -141,19 +148,21 @@
           "sim": 0.55
         }
       ],
-      "status": "open",
-      "outcome": null,
-      "resolved_on": null,
-      "resolution_note": null,
+      "status": "resolved",
+      "outcome": true,
+      "resolved_on": "2026-11-04",
+      "resolution_note": "AP/PBS/Reuters: Democrats won the Senate majority, flipping TX, IA, OH, ME, KS, SC, NC (Nov 4).",
       "brier": {
-        "oracle": null,
-        "clio": null,
-        "omen": null,
-        "market": null,
-        "sim": null
+        "oracle": 0.2025,
+        "clio": 0.3364,
+        "omen": 0.1024,
+        "market": 0.1225,
+        "sim": 0.1936
       },
       "sim": 0.56,
-      "blend": 0.55
+      "blend": 0.55,
+      "hit": true,
+      "scored_on": "2026-11-04"
     },
     {
       "id": "P-0003",
@@ -184,19 +193,21 @@
           "oracle": 0.54
         }
       ],
-      "status": "open",
-      "outcome": null,
-      "resolved_on": null,
-      "resolution_note": null,
+      "status": "resolved",
+      "outcome": true,
+      "resolved_on": "2026-11-04",
+      "resolution_note": "PBS NewsHour: Troy Jackson (D) defeated Sen. Susan Collins; she conceded.",
       "brier": {
-        "oracle": null,
-        "clio": null,
-        "omen": null,
+        "oracle": 0.2116,
+        "clio": 0.3025,
+        "omen": 0.1444,
         "market": null,
         "sim": null
       },
       "sim": null,
-      "blend": 0.54
+      "blend": 0.54,
+      "hit": true,
+      "scored_on": "2026-11-04"
     },
     {
       "id": "P-0004",
@@ -233,19 +244,21 @@
           "oracle": 0.4
         }
       ],
-      "status": "open",
-      "outcome": null,
-      "resolved_on": null,
-      "resolution_note": null,
+      "status": "resolved",
+      "outcome": true,
+      "resolved_on": "2026-11-04",
+      "resolution_note": "AP/Axios: Talarico defeated Paxton, who conceded.",
       "brier": {
-        "oracle": null,
-        "clio": null,
-        "omen": null,
-        "market": null,
+        "oracle": 0.36,
+        "clio": 0.5625,
+        "omen": 0.2025,
+        "market": 0.25,
         "sim": null
       },
       "sim": null,
-      "blend": 0.4
+      "blend": 0.4,
+      "hit": false,
+      "scored_on": "2026-11-04"
     },
     {
       "id": "P-0005",
@@ -282,19 +295,21 @@
           "oracle": 0.5
         }
       ],
-      "status": "open",
-      "outcome": null,
-      "resolved_on": null,
-      "resolution_note": null,
+      "status": "resolved",
+      "outcome": true,
+      "resolved_on": "2026-11-04",
+      "resolution_note": "AP feed: Sherrod Brown won back the Ohio Senate seat.",
       "brier": {
-        "oracle": null,
-        "clio": null,
-        "omen": null,
+        "oracle": 0.25,
+        "clio": 0.3844,
+        "omen": 0.1444,
         "market": null,
         "sim": null
       },
       "sim": null,
-      "blend": 0.5
+      "blend": 0.5,
+      "hit": null,
+      "scored_on": "2026-11-04"
     },
     {
       "id": "P-0006",
@@ -304,18 +319,18 @@
       "question": "Will Democrat Mary Peltola defeat Sen. Dan Sullivan (R) in Alaska's 2026 Senate race?",
       "resolves_on": "2026-11-20",
       "resolution_source": "AP race call after Alaska ranked-choice tabulation.",
-      "clio": 0.35,
-      "omen": 0.62,
-      "oracle": 0.49,
+      "clio": 0.4,
+      "omen": 0.7,
+      "oracle": 0.63,
       "adjustment": {
         "value": 0.0,
         "reason": ""
       },
       "market": 0.67,
-      "market_source": "Kalshi, Oct 30 (stale)",
+      "market_source": "none updated",
       "reasoning": {
-        "clio": "Democrats rarely win Alaska Senate races; incumbent advantage.",
-        "omen": "Federal judge dismissed DOJ suit to block certification (AP, Nov 1), easing the legal-risk discount; polls Peltola +3.4. Still below market on ranked-choice and certification risk (inference)."
+        "clio": "Reference class: incumbent senators hold ~85% normally, but Alaska is uncalled in a wave where Democrats won TX, KS, SC.",
+        "omen": "Uncalled as of Nov 4 (Washington Examiner, PBS) while Democrats flipped red states; DOJ probe and a second Dan Sullivan on the ballot add certification risk (inference)."
       },
       "history": [
         {
@@ -329,6 +344,12 @@
           "clio": 0.35,
           "omen": 0.62,
           "oracle": 0.49
+        },
+        {
+          "date": "2026-11-04",
+          "clio": 0.4,
+          "omen": 0.7,
+          "oracle": 0.63
         }
       ],
       "status": "open",
@@ -343,7 +364,7 @@
         "sim": null
       },
       "sim": null,
-      "blend": 0.49
+      "blend": 0.63
     },
     {
       "id": "P-0007",
@@ -398,9 +419,9 @@
       "question": "Will 2026 midterm turnout reach 50.0% or more of the voting-eligible population?",
       "resolves_on": "2026-12-15",
       "resolution_source": "US Elections Project (election.lab.ufl.edu) 2026 general election turnout estimate.",
-      "clio": 0.4,
-      "omen": 0.58,
-      "oracle": 0.49,
+      "clio": 0.48,
+      "omen": 0.68,
+      "oracle": 0.63,
       "adjustment": {
         "value": 0.0,
         "reason": ""
@@ -408,8 +429,8 @@
       "market": null,
       "market_source": null,
       "reasoning": {
-        "clio": "Only one midterm since 1914 reached 50% (2018). 2022 was ~46.6%.",
-        "omen": "Very high polarization, mass protest mobilization tied to early voting, record money, competitive Senate map."
+        "clio": "2018 turnout was 50% and 2022 was 46%.",
+        "omen": "Wave results and decisive outcomes suggest high turnout; no official figure yet (inference)."
       },
       "history": [
         {
@@ -417,6 +438,12 @@
           "clio": 0.4,
           "omen": 0.58,
           "oracle": 0.49
+        },
+        {
+          "date": "2026-11-04",
+          "clio": 0.48,
+          "omen": 0.68,
+          "oracle": 0.63
         }
       ],
       "status": "open",
@@ -431,7 +458,7 @@
         "sim": null
       },
       "sim": null,
-      "blend": 0.49
+      "blend": 0.63
     },
     {
       "id": "P-0009",
@@ -904,7 +931,7 @@
         "value": 3.7,
         "proxy": true
       },
-      "sim": 0.71,
+      "sim": 0.68,
       "track_status": {
         "date": "2026-09-01",
         "value": 3.74,
@@ -1003,7 +1030,7 @@
         "market": null,
         "sim": null
       },
-      "sim": 0.23,
+      "sim": 0.19,
       "blend": 0.19
     },
     {
@@ -1016,7 +1043,7 @@
       "resolution_source": "AP/Reuters reporting that appropriations lapsed for any federal agencies on Dec 12.",
       "clio": 0.25,
       "omen": 0.35,
-      "oracle": 0.3,
+      "oracle": 0.33,
       "adjustment": {
         "value": 0.0,
         "reason": ""
@@ -1034,6 +1061,13 @@
           "omen": 0.35,
           "oracle": 0.3,
           "sim": 0.37
+        },
+        {
+          "date": "2026-11-04",
+          "clio": 0.25,
+          "omen": 0.35,
+          "oracle": 0.33,
+          "sim": 0.29
         }
       ],
       "status": "open",
@@ -1047,8 +1081,8 @@
         "market": null,
         "sim": null
       },
-      "sim": 0.38,
-      "blend": 0.3
+      "sim": 0.29,
+      "blend": 0.33
     },
     {
       "id": "P-0019",
@@ -1059,8 +1093,8 @@
       "resolves_on": "2026-11-14",
       "resolution_source": "Official US and/or Iranian government announcement reported by AP/Reuters. Both sides must confirm.",
       "clio": 0.12,
-      "omen": 0.16,
-      "oracle": 0.14,
+      "omen": 0.18,
+      "oracle": 0.15,
       "adjustment": {
         "value": 0.0,
         "reason": ""
@@ -1068,8 +1102,8 @@
       "market": null,
       "market_source": null,
       "reasoning": {
-        "clio": "Ceasefires during an active tanker war are rare and often premature; deal odds low.",
-        "omen": "Iran says 7 more tankers hit Oct 22 and threatens US bases (AP/PBS); no talks started. Small cut from 0.18."
+        "clio": "Announced deals often lapse.",
+        "omen": "Iran's negotiator signalled the vote was a 'no to war' and Trump has no immediate strike plan, but no agreement yet."
       },
       "history": [
         {
@@ -1098,8 +1132,8 @@
         "market": null,
         "sim": null
       },
-      "sim": 0.25,
-      "blend": 0.14
+      "sim": 0.24,
+      "blend": 0.15
     },
     {
       "id": "P-0020",
@@ -1350,7 +1384,7 @@
         "market": null,
         "sim": null
       },
-      "sim": 0.26,
+      "sim": 0.3,
       "blend": 0.12
     },
     {
@@ -1545,14 +1579,14 @@
         "clio": "Iowa has voted R at the top of the ticket in recent cycles; open-seat Senate toss-up rating.",
         "omen": "Marist (Oct 8-11) shows a 3-pt race; an R-leaning pollster has Hinson +3. Wave environment but a lean-R state."
       },
-      "status": "open",
-      "outcome": null,
-      "resolved_on": null,
-      "resolution_note": null,
+      "status": "resolved",
+      "outcome": true,
+      "resolved_on": "2026-11-04",
+      "resolution_note": "AP/Axios/Reuters: Josh Turek flipped the Iowa Senate seat.",
       "brier": {
-        "oracle": null,
-        "clio": null,
-        "omen": null,
+        "oracle": 0.36,
+        "clio": 0.4225,
+        "omen": 0.3136,
         "market": null,
         "sim": null
       },
@@ -1566,7 +1600,9 @@
       ],
       "sim": null,
       "oracle": 0.4,
-      "blend": 0.4
+      "blend": 0.4,
+      "hit": false,
+      "scored_on": "2026-11-04"
     },
     {
       "id": "P-0029",
@@ -1588,14 +1624,14 @@
         "clio": "Georgia is a true toss-up state; open governor seat.",
         "omen": "Toss-up expert ratings; national environment favors Democrats but no verified recent Georgia poll found (inference)."
       },
-      "status": "open",
-      "outcome": null,
-      "resolved_on": null,
-      "resolution_note": null,
+      "status": "resolved",
+      "outcome": true,
+      "resolved_on": "2026-11-04",
+      "resolution_note": "AP/Reuters: Keisha Lance Bottoms won Georgia governor.",
       "brier": {
-        "oracle": null,
-        "clio": null,
-        "omen": null,
+        "oracle": 0.3025,
+        "clio": 0.3364,
+        "omen": 0.2809,
         "market": null,
         "sim": null
       },
@@ -1609,7 +1645,9 @@
       ],
       "sim": null,
       "oracle": 0.45,
-      "blend": 0.45
+      "blend": 0.45,
+      "hit": false,
+      "scored_on": "2026-11-04"
     },
     {
       "id": "P-0030",
@@ -1631,14 +1669,14 @@
         "clio": "Ohio has voted R for governor by large margins since 2018.",
         "omen": "Marist (Oct 15-18) Acton +7; CNN likely-voter polling also has her ahead."
       },
-      "status": "open",
-      "outcome": null,
-      "resolved_on": null,
-      "resolution_note": null,
+      "status": "resolved",
+      "outcome": true,
+      "resolved_on": "2026-11-04",
+      "resolution_note": "AP/BBC: Amy Acton defeated Vivek Ramaswamy.",
       "brier": {
-        "oracle": null,
-        "clio": null,
-        "omen": null,
+        "oracle": 0.25,
+        "clio": 0.3844,
+        "omen": 0.1444,
         "market": null,
         "sim": null
       },
@@ -1652,7 +1690,9 @@
       ],
       "sim": null,
       "oracle": 0.5,
-      "blend": 0.5
+      "blend": 0.5,
+      "hit": null,
+      "scored_on": "2026-11-04"
     },
     {
       "id": "P-0031",
@@ -1674,14 +1714,14 @@
         "clio": "Lean D rating; Democratic-favorable midterm environment historically.",
         "omen": "Rep. Haley Stevens (D) endorsed Republican Mike Rogers on Nov 1 (AP, Axios); a small crossover signal in a race rated Lean D. Trimmed 4 pts."
       },
-      "status": "open",
-      "outcome": null,
-      "resolved_on": null,
-      "resolution_note": null,
+      "status": "resolved",
+      "outcome": true,
+      "resolved_on": "2026-11-04",
+      "resolution_note": "AP call 2:27 a.m. ET Nov 4: El-Sayed 52, Rogers 46.",
       "brier": {
-        "oracle": null,
-        "clio": null,
-        "omen": null,
+        "oracle": 0.1849,
+        "clio": 0.2025,
+        "omen": 0.1764,
         "market": null,
         "sim": null
       },
@@ -1701,7 +1741,9 @@
       ],
       "sim": null,
       "oracle": 0.57,
-      "blend": 0.57
+      "blend": 0.57,
+      "hit": true,
+      "scored_on": "2026-11-04"
     },
     {
       "id": "P-0032",
@@ -1711,8 +1753,8 @@
       "question": "Will Jonathan Kreiss-Tomkins (D) win Alaska's 2026 governor race?",
       "resolves_on": "2026-11-20",
       "resolution_source": "AP race call / Alaska Division of Elections",
-      "clio": 0.42,
-      "omen": 0.6,
+      "clio": 0.65,
+      "omen": 0.9,
       "adjustment": {
         "value": 0.0,
         "reason": ""
@@ -1720,8 +1762,8 @@
       "market": null,
       "market_source": null,
       "reasoning": {
-        "clio": "Alaska is R-leaning but ranked-choice voting and a split GOP field help a single Democrat.",
-        "omen": "Rated Lean D; three Republicans split the field; Murkowski endorsed him Oct 27 (The Hill). Count takes weeks."
+        "clio": "Open seat in a Democratic wave year.",
+        "omen": "NBC: Kreiss-Tomkins 49.2% vs Wilson 29.2% with 73.9% reporting."
       },
       "status": "open",
       "outcome": null,
@@ -1740,11 +1782,17 @@
           "clio": 0.42,
           "omen": 0.6,
           "oracle": 0.51
+        },
+        {
+          "date": "2026-11-04",
+          "clio": 0.65,
+          "omen": 0.9,
+          "oracle": 0.84
         }
       ],
       "sim": null,
-      "oracle": 0.51,
-      "blend": 0.51
+      "oracle": 0.84,
+      "blend": 0.84
     },
     {
       "id": "P-0033",
@@ -1766,14 +1814,14 @@
         "clio": "No Democrat has won Texas governor since 1990; Abbott won by 11 in 2022.",
         "omen": "Rated Lean R; Senate race is tight but Abbott runs well ahead of a generic Republican (inference)."
       },
-      "status": "open",
-      "outcome": null,
-      "resolved_on": null,
-      "resolution_note": null,
+      "status": "resolved",
+      "outcome": true,
+      "resolved_on": "2026-11-04",
+      "resolution_note": "AP/Reuters: Gina Hinojosa defeated Gov. Abbott.",
       "brier": {
-        "oracle": null,
-        "clio": null,
-        "omen": null,
+        "oracle": 0.6724,
+        "clio": 0.7396,
+        "omen": 0.6084,
         "market": null,
         "sim": null
       },
@@ -1787,7 +1835,9 @@
       ],
       "sim": null,
       "oracle": 0.18,
-      "blend": 0.18
+      "blend": 0.18,
+      "hit": false,
+      "scored_on": "2026-11-04"
     },
     {
       "id": "P-0034",
@@ -1809,14 +1859,14 @@
         "clio": "Open seat in a lean-R state, but Sand is a statewide officeholder.",
         "omen": "CNN likely-voter polling has the Democrat leading; Marist reports Iowa split-ticket lean (Oct 19); rated Lean D."
       },
-      "status": "open",
-      "outcome": null,
-      "resolved_on": null,
-      "resolution_note": null,
+      "status": "resolved",
+      "outcome": true,
+      "resolved_on": "2026-11-04",
+      "resolution_note": "AP/NBC: Rob Sand won Iowa governor (55.5-44.5).",
       "brier": {
-        "oracle": null,
-        "clio": null,
-        "omen": null,
+        "oracle": 0.2116,
+        "clio": 0.3025,
+        "omen": 0.1444,
         "market": null,
         "sim": null
       },
@@ -1830,7 +1880,9 @@
       ],
       "sim": null,
       "oracle": 0.54,
-      "blend": 0.54
+      "blend": 0.54,
+      "hit": true,
+      "scored_on": "2026-11-04"
     },
     {
       "id": "P-0035",
@@ -1852,14 +1904,14 @@
         "clio": "Swing state; party out of the White House typically does well in midterms.",
         "omen": "Rated Lean D; national environment strongly D (Trump approval 31-39% across polls); no verified fresh state poll (inference)."
       },
-      "status": "open",
-      "outcome": null,
-      "resolved_on": null,
-      "resolution_note": null,
+      "status": "resolved",
+      "outcome": true,
+      "resolved_on": "2026-11-04",
+      "resolution_note": "AP call 1:45 a.m. Nov 4: Benson 53.6, James 44.7.",
       "brier": {
-        "oracle": null,
-        "clio": null,
-        "omen": null,
+        "oracle": 0.1681,
+        "clio": 0.2304,
+        "omen": 0.1225,
         "market": null,
         "sim": null
       },
@@ -1873,7 +1925,9 @@
       ],
       "sim": null,
       "oracle": 0.59,
-      "blend": 0.59
+      "blend": 0.59,
+      "hit": true,
+      "scored_on": "2026-11-04"
     },
     {
       "id": "P-0036",
@@ -1895,14 +1949,14 @@
         "clio": "Incumbent governors win re-election ~80% nationally, but Lombardo is in a toss-up rated race in a D-leaning midterm cycle against a president's party.",
         "omen": "Toss-up rating (+0.1); generic ballot D+7 and low presidential approval (inference). No poll checked this run."
       },
-      "status": "open",
-      "outcome": null,
-      "resolved_on": null,
-      "resolution_note": null,
+      "status": "resolved",
+      "outcome": true,
+      "resolved_on": "2026-11-04",
+      "resolution_note": "AP/NBC: Aaron Ford defeated Gov. Lombardo (~51.7-44.2).",
       "brier": {
-        "oracle": null,
-        "clio": null,
-        "omen": null,
+        "oracle": 0.3025,
+        "clio": 0.3364,
+        "omen": 0.2704,
         "market": null,
         "sim": null
       },
@@ -1916,7 +1970,9 @@
       ],
       "sim": null,
       "oracle": 0.45,
-      "blend": 0.45
+      "blend": 0.45,
+      "hit": false,
+      "scored_on": "2026-11-04"
     },
     {
       "id": "P-0037",
@@ -1938,14 +1994,14 @@
         "clio": "Kansas has not elected a Democratic senator since 1932; incumbent Marshall.",
         "omen": "Rated toss-up (+0.3) in a wave environment (inference); no poll checked this run."
       },
-      "status": "open",
-      "outcome": null,
-      "resolved_on": null,
-      "resolution_note": null,
+      "status": "resolved",
+      "outcome": true,
+      "resolved_on": "2026-11-04",
+      "resolution_note": "AP/Reuters: Adam Hamilton elected to the Senate from Kansas.",
       "brier": {
-        "oracle": null,
-        "clio": null,
-        "omen": null,
+        "oracle": 0.4356,
+        "clio": 0.5184,
+        "omen": 0.36,
         "market": null,
         "sim": null
       },
@@ -1959,7 +2015,9 @@
       ],
       "sim": null,
       "oracle": 0.34,
-      "blend": 0.34
+      "blend": 0.34,
+      "hit": false,
+      "scored_on": "2026-11-04"
     },
     {
       "id": "P-0038",
@@ -1981,14 +2039,14 @@
         "clio": "Open seat; president's party loses most midterm governor races in Wisconsin.",
         "omen": "Rated lean D (-0.5); generic ballot D+7 (inference)."
       },
-      "status": "open",
-      "outcome": null,
-      "resolved_on": null,
-      "resolution_note": null,
+      "status": "resolved",
+      "outcome": true,
+      "resolved_on": "2026-11-04",
+      "resolution_note": "NBC projected winner: Crowley 54.1, Tiffany 45.9 (98.5% in).",
       "brier": {
-        "oracle": null,
-        "clio": null,
-        "omen": null,
+        "oracle": 0.1681,
+        "clio": 0.2025,
+        "omen": 0.1444,
         "market": null,
         "sim": null
       },
@@ -2002,7 +2060,9 @@
       ],
       "sim": null,
       "oracle": 0.59,
-      "blend": 0.59
+      "blend": 0.59,
+      "hit": true,
+      "scored_on": "2026-11-04"
     },
     {
       "id": "P-0039",
@@ -2012,8 +2072,8 @@
       "question": "Will Cindy Holscher (D) win Kansas's 2026 governor race?",
       "resolves_on": "2026-11-05",
       "resolution_source": "AP race call / Kansas Secretary of State",
-      "clio": 0.35,
-      "omen": 0.4,
+      "clio": 0.5,
+      "omen": 0.55,
       "adjustment": {
         "value": 0.0,
         "reason": ""
@@ -2021,8 +2081,8 @@
       "market": null,
       "market_source": null,
       "reasoning": {
-        "clio": "Kansas elects Democratic governors often in open races (2006, 2018, 2022 re-elect) despite R leanings.",
-        "omen": "Rated lean R (+0.8); wave environment (inference)."
+        "clio": "Near coin flip once counted.",
+        "omen": "NBC: Holscher 50.3 vs Masterson 49.7 with 97.9% reporting; not called."
       },
       "status": "open",
       "outcome": null,
@@ -2041,11 +2101,17 @@
           "clio": 0.35,
           "omen": 0.4,
           "oracle": 0.38
+        },
+        {
+          "date": "2026-11-04",
+          "clio": 0.5,
+          "omen": 0.55,
+          "oracle": 0.54
         }
       ],
       "sim": null,
-      "oracle": 0.38,
-      "blend": 0.38
+      "oracle": 0.54,
+      "blend": 0.54
     },
     {
       "id": "P-0040",
@@ -2067,14 +2133,14 @@
         "clio": "Florida has leaned R by ~13 points in recent statewide races.",
         "omen": "Rated lean R (+0.9); wave environment (inference)."
       },
-      "status": "open",
-      "outcome": null,
-      "resolved_on": null,
-      "resolution_note": null,
+      "status": "resolved",
+      "outcome": false,
+      "resolved_on": "2026-11-04",
+      "resolution_note": "PBS/NBC: Byron Donalds won Florida governor (50.0-48.7, 99% in).",
       "brier": {
-        "oracle": null,
-        "clio": null,
-        "omen": null,
+        "oracle": 0.0576,
+        "clio": 0.04,
+        "omen": 0.0729,
         "market": null,
         "sim": null
       },
@@ -2088,7 +2154,9 @@
       ],
       "sim": null,
       "oracle": 0.24,
-      "blend": 0.24
+      "blend": 0.24,
+      "hit": true,
+      "scored_on": "2026-11-04"
     },
     {
       "id": "P-0041",
@@ -2110,14 +2178,14 @@
         "clio": "Incumbent governors win ~80%; Hobbs won 2022 by under 1 point.",
         "omen": "Rated lean D (-1.1); D-leaning environment (inference)."
       },
-      "status": "open",
-      "outcome": null,
-      "resolved_on": null,
-      "resolution_note": null,
+      "status": "resolved",
+      "outcome": true,
+      "resolved_on": "2026-11-04",
+      "resolution_note": "NBC projected winner: Hobbs 55.7, Biggs 42.6.",
       "brier": {
-        "oracle": null,
-        "clio": null,
-        "omen": null,
+        "oracle": 0.1936,
+        "clio": 0.25,
+        "omen": 0.1444,
         "market": null,
         "sim": null
       },
@@ -2131,7 +2199,9 @@
       ],
       "sim": null,
       "oracle": 0.56,
-      "blend": 0.56
+      "blend": 0.56,
+      "hit": true,
+      "scored_on": "2026-11-04"
     },
     {
       "id": "P-0042",
@@ -2141,8 +2211,8 @@
       "question": "Will Tina Kotek (D) win Oregon's 2026 governor race?",
       "resolves_on": "2026-11-05",
       "resolution_source": "AP race call / Oregon Secretary of State",
-      "clio": 0.68,
-      "omen": 0.74,
+      "clio": 0.85,
+      "omen": 0.93,
       "adjustment": {
         "value": 0.0,
         "reason": ""
@@ -2150,8 +2220,8 @@
       "market": null,
       "market_source": null,
       "reasoning": {
-        "clio": "Oregon votes D by double digits in presidential years; Kotek won 2022 by 3.4.",
-        "omen": "Rated lean D (-1.2); D-leaning environment (inference)."
+        "clio": "Incumbent Democrat in a wave year.",
+        "omen": "NBC: Kotek 51.7 vs Drazan 45.5 with 75% reporting; not yet called."
       },
       "status": "open",
       "outcome": null,
@@ -2170,11 +2240,17 @@
           "clio": 0.68,
           "omen": 0.74,
           "oracle": 0.71
+        },
+        {
+          "date": "2026-11-04",
+          "clio": 0.85,
+          "omen": 0.93,
+          "oracle": 0.91
         }
       ],
       "sim": null,
-      "oracle": 0.71,
-      "blend": 0.71
+      "oracle": 0.91,
+      "blend": 0.91
     },
     {
       "id": "P-0043",
@@ -2196,14 +2272,14 @@
         "clio": "No Democrat has won a SC Senate race since 1998.",
         "omen": "Rated lean R (+1.3); wave environment (inference)."
       },
-      "status": "open",
-      "outcome": null,
-      "resolved_on": null,
-      "resolution_note": null,
+      "status": "resolved",
+      "outcome": true,
+      "resolved_on": "2026-11-04",
+      "resolution_note": "AP/Reuters: Annie Andrews won South Carolina's Senate seat.",
       "brier": {
-        "oracle": null,
-        "clio": null,
-        "omen": null,
+        "oracle": 0.7056,
+        "clio": 0.7744,
+        "omen": 0.64,
         "market": null,
         "sim": null
       },
@@ -2217,7 +2293,9 @@
       ],
       "sim": null,
       "oracle": 0.16,
-      "blend": 0.16
+      "blend": 0.16,
+      "hit": false,
+      "scored_on": "2026-11-04"
     },
     {
       "id": "P-0044",
@@ -2239,14 +2317,14 @@
         "clio": "Minnesota has not elected a Republican senator since 2006; rated Lean D (-1.4).",
         "omen": "Democratic-leaning national environment (generic ballot D+6-7, Trump approval 35%); open seat in a blue-leaning state."
       },
-      "status": "open",
-      "outcome": null,
-      "resolved_on": null,
-      "resolution_note": null,
+      "status": "resolved",
+      "outcome": true,
+      "resolved_on": "2026-11-04",
+      "resolution_note": "AP call just after midnight: Flanagan beat Tafoya (~54-43).",
       "brier": {
-        "oracle": null,
-        "clio": null,
-        "omen": null,
+        "oracle": 0.0961,
+        "clio": 0.1225,
+        "omen": 0.0784,
         "market": null,
         "sim": null
       },
@@ -2260,7 +2338,9 @@
       ],
       "sim": null,
       "oracle": 0.69,
-      "blend": 0.69
+      "blend": 0.69,
+      "hit": true,
+      "scored_on": "2026-11-04"
     },
     {
       "id": "P-0045",
@@ -2270,8 +2350,8 @@
       "question": "Will independent Dan Osborn defeat Sen. Pete Ricketts (R) in Nebraska's 2026 U.S. Senate race?",
       "resolves_on": "2026-11-04",
       "resolution_source": "AP race call / Nebraska Secretary of State",
-      "clio": 0.2,
-      "omen": 0.3,
+      "clio": 0.3,
+      "omen": 0.4,
       "adjustment": {
         "value": 0.0,
         "reason": ""
@@ -2279,8 +2359,8 @@
       "market": null,
       "market_source": null,
       "reasoning": {
-        "clio": "Nebraska has not elected a non-Republican senator since 2008; independents rarely win statewide (Osborn lost by 7 in 2024).",
-        "omen": "Wave environment and Osborn's strong 2024 showing lift him, but rated Lean R (+1.4) with a Republican incumbent."
+        "clio": "Independents rarely win Senate seats; Nebraska is Republican-leaning.",
+        "omen": "Uncalled on Nov 4 in a wave where Democrats won Kansas and South Carolina (inference)."
       },
       "status": "open",
       "outcome": null,
@@ -2299,11 +2379,17 @@
           "clio": 0.2,
           "omen": 0.3,
           "oracle": 0.25
+        },
+        {
+          "date": "2026-11-04",
+          "clio": 0.3,
+          "omen": 0.4,
+          "oracle": 0.38
         }
       ],
       "sim": null,
-      "oracle": 0.25,
-      "blend": 0.25
+      "oracle": 0.38,
+      "blend": 0.38
     },
     {
       "id": "P-0046",
@@ -2313,8 +2399,8 @@
       "question": "Will the S&P 500 close above 7,580 on Friday, November 6, 2026?",
       "resolves_on": "2026-11-06",
       "resolution_source": "Official S&P 500 close (WSJ, Reuters, S&P Dow Jones Indices)",
-      "clio": 0.54,
-      "omen": 0.52,
+      "clio": 0.57,
+      "omen": 0.6,
       "adjustment": {
         "value": 0.0,
         "reason": ""
@@ -2322,8 +2408,8 @@
       "market": null,
       "market_source": null,
       "reasoning": {
-        "clio": "Weekly index gains happen about 56% of weeks; start level is the Oct 30 close of 7,580.07.",
-        "omen": "Futures advanced Nov 2 as oil fell ~4%, but AI-spending selloff, election risk and ~85% priced December Fed hike weigh."
+        "clio": "Index drifts up slightly more often than not.",
+        "omen": "S&P futures ~7,679 on Nov 4 vs the 7,580 threshold; recovered after the early drop."
       },
       "status": "open",
       "outcome": null,
@@ -2342,11 +2428,17 @@
           "clio": 0.54,
           "omen": 0.52,
           "oracle": 0.53
+        },
+        {
+          "date": "2026-11-04",
+          "clio": 0.57,
+          "omen": 0.6,
+          "oracle": 0.59
         }
       ],
       "sim": null,
-      "oracle": 0.53,
-      "blend": 0.53
+      "oracle": 0.59,
+      "blend": 0.59
     },
     {
       "id": "P-0047",
@@ -2356,8 +2448,8 @@
       "question": "Will Brent crude front-month settle above $100/barrel on Friday, November 6, 2026?",
       "resolves_on": "2026-11-06",
       "resolution_source": "ICE Brent front-month settlement (Reuters, EIA, Trading Economics)",
-      "clio": 0.82,
-      "omen": 0.86,
+      "clio": 0.86,
+      "omen": 0.88,
       "adjustment": {
         "value": 0.0,
         "reason": ""
@@ -2365,8 +2457,8 @@
       "market": null,
       "market_source": null,
       "reasoning": {
-        "clio": "Brent was ~$114 a week earlier; a 12%+ weekly drop is rare outside a deal.",
-        "omen": "Oil fell ~4% Nov 2 on US-Iran talk hopes (Reuters, AP) but started from ~$110+; a deal would drop it sharply, and none is announced."
+        "clio": "Brent has held above $100 for weeks.",
+        "omen": "Brent $104.36 on Nov 4 (Yahoo/Reuters)."
       },
       "status": "open",
       "outcome": null,
@@ -2385,11 +2477,17 @@
           "clio": 0.82,
           "omen": 0.86,
           "oracle": 0.84
+        },
+        {
+          "date": "2026-11-04",
+          "clio": 0.86,
+          "omen": 0.88,
+          "oracle": 0.87
         }
       ],
       "sim": null,
-      "oracle": 0.84,
-      "blend": 0.84
+      "oracle": 0.87,
+      "blend": 0.87
     },
     {
       "id": "P-0048",
@@ -2411,14 +2509,14 @@
         "clio": "With Democrats ~87% to win the House, calls by Thursday are likely but slow counts in CA and close seats can delay control calls.",
         "omen": "Generic ballot D+6-7 and wave conditions; a decisive margin would be projected quickly, a narrow one could take days."
       },
-      "status": "open",
-      "outcome": null,
-      "resolved_on": null,
-      "resolution_note": null,
+      "status": "resolved",
+      "outcome": true,
+      "resolved_on": "2026-11-04",
+      "resolution_note": "AP and PBS reported Democrats won the House on Nov 4, well before Nov 6.",
       "brier": {
-        "oracle": null,
-        "clio": null,
-        "omen": null,
+        "oracle": 0.0576,
+        "clio": 0.0784,
+        "omen": 0.04,
         "market": null,
         "sim": null
       },
@@ -2432,7 +2530,9 @@
       ],
       "sim": null,
       "oracle": 0.76,
-      "blend": 0.76
+      "blend": 0.76,
+      "hit": true,
+      "scored_on": "2026-11-04"
     },
     {
       "id": "P-0049",
@@ -2442,8 +2542,8 @@
       "question": "Will the House adopt at least one article of impeachment against President Trump between Jan 3 and Dec 31, 2027?",
       "resolves_on": "2028-01-01",
       "resolution_source": "House Clerk roll-call votes / Congress.gov (adopted on the floor, not just introduced or tabled)",
-      "clio": 0.18,
-      "omen": 0.22,
+      "clio": 0.22,
+      "omen": 0.28,
       "adjustment": {
         "value": 0.0,
         "reason": ""
@@ -2451,8 +2551,8 @@
       "market": null,
       "market_source": null,
       "reasoning": {
-        "clio": "Needs a Democratic House (ORACLE 87%) and a leadership decision to go ahead. In 2019 a new Democratic majority took about 11 months to impeach, and only after a specific trigger. Most opposition majorities never impeach.",
-        "omen": "Polarization is high and the base is pushing, but Democratic leaders have signaled caution and a 2028-focused strategy. A new scandal or defiance of a court order would raise this quickly."
+        "clio": "Impeachments are rare, though both of Trump's came under a Democratic House.",
+        "omen": "Democrats now control the House; leadership caution vs. base pressure."
       },
       "status": "open",
       "outcome": null,
@@ -2471,11 +2571,18 @@
           "clio": 0.18,
           "omen": 0.22,
           "oracle": 0.2
+        },
+        {
+          "date": "2026-11-04",
+          "clio": 0.22,
+          "omen": 0.28,
+          "oracle": 0.27,
+          "sim": 0.29
         }
       ],
-      "sim": null,
-      "oracle": 0.2,
-      "blend": 0.2
+      "sim": 0.29,
+      "oracle": 0.27,
+      "blend": 0.27
     },
     {
       "id": "P-0050",
@@ -2485,8 +2592,8 @@
       "question": "Will the Senate confirm a new Supreme Court justice between Nov 3, 2026 and Dec 31, 2027?",
       "resolves_on": "2028-01-01",
       "resolution_source": "Senate roll-call vote on a Supreme Court nomination (senate.gov)",
-      "clio": 0.28,
-      "omen": 0.22,
+      "clio": 0.12,
+      "omen": 0.1,
       "adjustment": {
         "value": 0.0,
         "reason": ""
@@ -2494,8 +2601,8 @@
       "market": null,
       "market_source": null,
       "reasoning": {
-        "clio": "Vacancies have come about every two years on average, and two justices are 76 and 78. Justices often time retirements to a friendly Senate, so a Republican hold makes a summer-2027 retirement more likely.",
-        "omen": "Alito said in August he is staying for another term, and reports say neither he nor Thomas plans to leave; Trump has backed them staying. A Democratic Senate would make retirement less likely and a confirmation much harder."
+        "clio": "Democratic Senate controls confirmations from Jan 2027.",
+        "omen": "A vacancy would need to arise before Jan 3 and pass the lame-duck Senate."
       },
       "status": "open",
       "outcome": null,
@@ -2514,11 +2621,17 @@
           "clio": 0.28,
           "omen": 0.22,
           "oracle": 0.25
+        },
+        {
+          "date": "2026-11-04",
+          "clio": 0.12,
+          "omen": 0.1,
+          "oracle": 0.1
         }
       ],
       "sim": null,
-      "oracle": 0.25,
-      "blend": 0.25
+      "oracle": 0.1,
+      "blend": 0.1
     },
     {
       "id": "P-0051",
@@ -2528,8 +2641,8 @@
       "question": "Will a lapse in federal funding (a full or partial government shutdown) begin between Jan 3 and Oct 31, 2027?",
       "resolves_on": "2027-11-01",
       "resolution_source": "OMB / major wire services (AP, Reuters) reporting a lapse in appropriations",
-      "clio": 0.3,
-      "omen": 0.4,
+      "clio": 0.35,
+      "omen": 0.45,
       "adjustment": {
         "value": 0.0,
         "reason": ""
@@ -2537,8 +2650,8 @@
       "market": null,
       "market_source": null,
       "reasoning": {
-        "clio": "Divided government has produced a shutdown in roughly a third of recent budget years, and the window includes the Oct 1, 2027 deadline for the next fiscal year.",
-        "omen": "Very high polarization and recent long shutdowns lower the cost of using one. A Democratic House would use funding as leverage on tariffs and enforcement. Separate from P-0018, which covers the Dec 11, 2026 deadline."
+        "clio": "Divided government raises shutdown risk.",
+        "omen": "Democratic House and Republican White House set up 2027 budget fights."
       },
       "status": "open",
       "outcome": null,
@@ -2557,11 +2670,17 @@
           "clio": 0.3,
           "omen": 0.4,
           "oracle": 0.35
+        },
+        {
+          "date": "2026-11-04",
+          "clio": 0.35,
+          "omen": 0.45,
+          "oracle": 0.43
         }
       ],
       "sim": null,
-      "oracle": 0.35,
-      "blend": 0.35
+      "oracle": 0.43,
+      "blend": 0.43
     },
     {
       "id": "P-0052",
@@ -2571,8 +2690,8 @@
       "question": "Will both chambers of Congress pass a bill or resolution that ends or limits any of President Trump's tariffs between Jan 3 and Dec 31, 2027?",
       "resolves_on": "2028-01-01",
       "resolution_source": "Congress.gov actions (passed House and passed Senate; becoming law not required)",
-      "clio": 0.3,
-      "omen": 0.4,
+      "clio": 0.4,
+      "omen": 0.5,
       "adjustment": {
         "value": 0.0,
         "reason": ""
@@ -2580,8 +2699,8 @@
       "market": null,
       "market_source": null,
       "reasoning": {
-        "clio": "Congress rarely reverses a president's trade actions, but national-emergency tariffs can be challenged with privileged resolutions that need only a simple majority. Becoming law would still need the President's signature or a two-thirds override.",
-        "omen": "The Senate already passed resolutions against some tariffs in 2025 with a few Republican votes, and a Democratic House would no longer block them. This depends heavily on the House result (ORACLE 87% D)."
+        "clio": "Tariff-limiting bills rarely pass both chambers.",
+        "omen": "Democratic majorities from 2027 raise the chance; Senate filibuster and vetoes remain."
       },
       "status": "open",
       "outcome": null,
@@ -2600,11 +2719,17 @@
           "clio": 0.3,
           "omen": 0.4,
           "oracle": 0.35
+        },
+        {
+          "date": "2026-11-04",
+          "clio": 0.4,
+          "omen": 0.5,
+          "oracle": 0.45
         }
       ],
       "sim": null,
-      "oracle": 0.35,
-      "blend": 0.35
+      "oracle": 0.45,
+      "blend": 0.45
     },
     {
       "id": "P-0053",
@@ -2646,8 +2771,51 @@
         }
       ],
       "sim": null,
-      "oracle": 0.82,
-      "blend": 0.82
+      "oracle": 0.81,
+      "blend": 0.81
+    },
+    {
+      "id": "P-0054",
+      "created": "2026-11-04",
+      "domain": "politics",
+      "horizon": "6m+",
+      "question": "Will Hakeem Jeffries be elected Speaker of the U.S. House on or by Jan 5, 2027?",
+      "resolves_on": "2027-01-05",
+      "resolution_source": "Clerk of the House / AP",
+      "clio": 0.93,
+      "omen": 0.95,
+      "adjustment": {
+        "value": 0.0,
+        "reason": ""
+      },
+      "market": null,
+      "market_source": null,
+      "reasoning": {
+        "clio": "Majority-party leaders are elected on the first ballot nearly every time (rare exceptions like 2023).",
+        "omen": "AP and PBS describe Jeffries as poised to become speaker; Democrats hold the majority."
+      },
+      "status": "open",
+      "outcome": null,
+      "resolved_on": null,
+      "resolution_note": null,
+      "brier": {
+        "oracle": null,
+        "clio": null,
+        "omen": null,
+        "market": null,
+        "sim": null
+      },
+      "history": [
+        {
+          "date": "2026-11-04",
+          "clio": 0.93,
+          "omen": 0.95,
+          "oracle": 0.95
+        }
+      ],
+      "sim": null,
+      "oracle": 0.95,
+      "blend": 0.95
     }
   ],
   "score_log": [
@@ -2776,6 +2944,20 @@
       "n_market": 1,
       "brier_sim": 0.0961,
       "n_sim": 1
+    },
+    {
+      "date": "2026-11-04",
+      "resolved_today": 20,
+      "total_resolved": 31,
+      "hits": 21,
+      "misses": 8,
+      "brier_oracle": 0.1912,
+      "brier_clio": 0.2407,
+      "brier_omen": 0.1527,
+      "brier_market": 0.0981,
+      "n_market": 4,
+      "brier_sim": 0.1022,
+      "n_sim": 3
     }
   ],
   "config": {
@@ -2876,7 +3058,9 @@
       "linked_oracle": 0.87,
       "projection": null,
       "trend_per_week": null,
-      "momentum": 0.32
+      "momentum": 1.36,
+      "retired": true,
+      "retired_note": "Resolved Nov 4: Democrats won the House. Successor: S-OVERSIGHT."
     },
     {
       "id": "S-SENATE",
@@ -2942,7 +3126,9 @@
       "linked_oracle": 0.55,
       "projection": null,
       "trend_per_week": 0.2,
-      "momentum": -0.11
+      "momentum": 0.79,
+      "retired": true,
+      "retired_note": "Resolved Nov 4: Democrats won the Senate. Successor: S-OVERSIGHT."
     },
     {
       "id": "S-INFLATION",
@@ -2950,14 +3136,13 @@
       "domain": "economy",
       "status_quo": "Inflation drifting down toward 3%",
       "change": "Inflation re-accelerates (Oct CPI 3.7%+)",
-      "pressure": 7.2,
+      "pressure": 7.0,
       "friction": 5.9,
       "pressure_drivers": [
-        "Brent $114.88 on Oct 29, still near highs despite a ~4% drop Nov 2 on Iran-talk hopes",
+        "Brent about $104 on Nov 4, still above $100",
         "Sept PPI +1.3% m/m, 6.3% y/y; gasoline +20.3%",
         "Core PPI 5.0% y/y: price rises broadening",
-        "Inflation expectations highest since 2023",
-        "Houthi attacks on Saudi energy sites"
+        "Inflation expectations highest since 2023"
       ],
       "friction_drivers": [
         "Energy spikes often partly reverse the next month",
@@ -3000,21 +3185,26 @@
           "date": "2026-11-02",
           "pressure": 7.2,
           "friction": 5.9
+        },
+        {
+          "date": "2026-11-04",
+          "pressure": 7.0,
+          "friction": 5.9
         }
       ],
-      "margin": 1.3,
-      "tip_probability": 0.686,
+      "margin": 1.1,
+      "tip_probability": 0.659,
       "status": "tipping",
       "sim": {
-        "tip": 0.708,
-        "p10": 6.56,
-        "p50": 7.48,
-        "p90": 7.86
+        "tip": 0.677,
+        "p10": 6.32,
+        "p50": 7.22,
+        "p90": 7.65
       },
       "linked_oracle": 0.61,
       "projection": null,
-      "trend_per_week": 0.41,
-      "momentum": 2.12
+      "trend_per_week": 0.28,
+      "momentum": 1.27
     },
     {
       "id": "S-FED",
@@ -3080,7 +3270,7 @@
       "linked_oracle": 0.13,
       "projection": null,
       "trend_per_week": -0.89,
-      "momentum": 0.16,
+      "momentum": 0.13,
       "retired": true,
       "retired_note": "Oct 28 meeting resolved (hold, 10-2). Successor: S-FEDDEC for the December meeting."
     },
@@ -3090,19 +3280,19 @@
       "domain": "economy",
       "status_quo": "The economy keeps growing",
       "change": "Technical recession (two negative quarters)",
-      "pressure": 4.5,
+      "pressure": 4.8,
       "friction": 7.0,
       "pressure_drivers": [
-        "Oil shock: Brent $114.88",
-        "Fed hiking into weak hiring (payrolls +29k); December hike priced ~85%",
-        "10-year yield ~5.2%",
-        "Alphabet -12.6%, Nasdaq -1.4% on AI-spending worries"
+        "Oil shock: Brent about $104",
+        "Fed hiking into weak hiring (payrolls +29k)",
+        "10-year yield ~5%",
+        "Tech sell-off on AI-spending and AI-regulation worries (futures -1.4% overnight Nov 4)"
       ],
       "friction_drivers": [
         "Q3 GDP +3.4% (Oct 29)",
         "Sept retail sales +0.8%",
         "Low jobless claims (~194-199k)",
-        "Recessions are rare in any given half-year"
+        "Markets recovered quickly after the election"
       ],
       "window": "2027-04-30",
       "tip_prediction": "P-0024",
@@ -3139,25 +3329,30 @@
           "date": "2026-10-30",
           "pressure": 4.5,
           "friction": 7.0
+        },
+        {
+          "date": "2026-11-04",
+          "pressure": 4.8,
+          "friction": 7.0
         }
       ],
-      "margin": -2.5,
-      "tip_probability": 0.182,
+      "margin": -2.2,
+      "tip_probability": 0.211,
       "status": "holding",
       "sim": {
-        "tip": 0.259,
-        "p10": 4.0,
-        "p50": 5.11,
-        "p90": 6.31
+        "tip": 0.297,
+        "p10": 4.32,
+        "p50": 5.45,
+        "p90": 6.66
       },
       "linked_oracle": 0.12,
       "projection": {
         "kind": "crossing",
-        "date": "2027-01-08",
+        "date": "2027-01-16",
         "note": "pressure overtakes friction at the current trend"
       },
-      "trend_per_week": 0.26,
-      "momentum": 0.85
+      "trend_per_week": 0.21,
+      "momentum": 0.98
     },
     {
       "id": "S-HORMUZ",
@@ -3165,7 +3360,7 @@
       "domain": "foreign",
       "status_quo": "US-Iran tanker war continues",
       "change": "US-Iran deal reopens Hormuz shipping",
-      "pressure": 4.2,
+      "pressure": 4.0,
       "friction": 6.7,
       "pressure_drivers": [
         "Tankers reported hit by mines (Iran says; CENTCOM disputes)",
@@ -3214,25 +3409,26 @@
           "date": "2026-10-30",
           "pressure": 4.3,
           "friction": 6.7
+        },
+        {
+          "date": "2026-11-04",
+          "pressure": 4.0,
+          "friction": 6.7
         }
       ],
-      "margin": -2.5,
-      "tip_probability": 0.182,
+      "margin": -2.7,
+      "tip_probability": 0.165,
       "status": "holding",
       "sim": {
-        "tip": 0.247,
-        "p10": 3.52,
-        "p50": 4.08,
-        "p90": 8.53
+        "tip": 0.237,
+        "p10": 3.29,
+        "p50": 3.93,
+        "p90": 8.35
       },
-      "linked_oracle": 0.14,
-      "projection": {
-        "kind": "crossing",
-        "date": "2027-07-31",
-        "note": "pressure overtakes friction at the current trend"
-      },
-      "trend_per_week": 0.06,
-      "momentum": -0.3
+      "linked_oracle": 0.15,
+      "projection": null,
+      "trend_per_week": -0.01,
+      "momentum": -0.62
     },
     {
       "id": "S-STREETS",
@@ -3284,15 +3480,15 @@
       "tip_probability": 0.192,
       "status": "holding",
       "sim": {
-        "tip": 0.233,
-        "p10": 4.25,
-        "p50": 4.35,
-        "p90": 4.8
+        "tip": 0.188,
+        "p10": 3.88,
+        "p50": 3.95,
+        "p90": 4.04
       },
       "linked_oracle": 0.19,
       "projection": null,
       "trend_per_week": null,
-      "momentum": -0.02
+      "momentum": -0.34
     },
     {
       "id": "S-FUNDING",
@@ -3343,12 +3539,12 @@
       "tip_probability": 0.302,
       "status": "strained",
       "sim": {
-        "tip": 0.377,
-        "p10": 4.03,
-        "p50": 5.3,
-        "p90": 5.35
+        "tip": 0.29,
+        "p10": 4.46,
+        "p50": 4.51,
+        "p90": 4.55
       },
-      "linked_oracle": 0.3,
+      "linked_oracle": 0.33,
       "projection": null,
       "trend_per_week": null,
       "momentum": 0.0
@@ -3392,15 +3588,15 @@
       "tip_probability": 0.05,
       "status": "holding",
       "sim": {
-        "tip": 0.049,
-        "p10": 2.67,
-        "p50": 2.77,
+        "tip": 0.05,
+        "p10": 2.68,
+        "p50": 2.78,
         "p90": 2.86
       },
       "linked_oracle": 0.05,
       "projection": null,
       "trend_per_week": null,
-      "momentum": 0.1
+      "momentum": 0.13
     },
     {
       "id": "S-FEDDEC",
@@ -3443,6 +3639,49 @@
         "p90": 6.2
       },
       "linked_oracle": 0.62,
+      "projection": null,
+      "trend_per_week": null,
+      "momentum": 0.0
+    },
+    {
+      "id": "S-OVERSIGHT",
+      "name": "House investigations of the administration",
+      "domain": "politics",
+      "status_quo": "The administration faces little formal oversight from Congress",
+      "change": "Democratic House opens impeachment or formal investigations of the administration",
+      "pressure": 4.5,
+      "friction": 6.5,
+      "pressure_drivers": [
+        "Democrats won the House and Senate on Nov 3",
+        "Base demand for accountability",
+        "Omar probe subpoenas and DOJ actions against opponents"
+      ],
+      "friction_drivers": [
+        "Impeachment is rare; leadership cautious",
+        "New majority only sworn in Jan 3, 2027",
+        "Senate conviction impossible (needs 67)"
+      ],
+      "window": "2027-12-31",
+      "tip_prediction": "P-0049",
+      "tip_means": "yes",
+      "agent_links": [],
+      "history": [
+        {
+          "date": "2026-11-04",
+          "pressure": 4.5,
+          "friction": 6.5
+        }
+      ],
+      "margin": -2.0,
+      "tip_probability": 0.231,
+      "status": "strained",
+      "sim": {
+        "tip": 0.285,
+        "p10": 5.0,
+        "p50": 5.0,
+        "p90": 5.0
+      },
+      "linked_oracle": 0.27,
       "projection": null,
       "trend_per_week": null,
       "momentum": 0.0
@@ -3757,41 +3996,42 @@
       ],
       "sim_conditional": {
         "Accepts / deal announced": {
-          "share": 0.153,
+          "share": 0.172,
           "systems": {
-            "S-INFLATION": 0.584,
-            "S-HORMUZ": 0.759,
+            "S-INFLATION": 0.551,
+            "S-HORMUZ": 0.737,
             "S-FEDDEC": 0.603,
-            "S-FUNDING": 0.381,
-            "S-UKRAINE": 0.049,
-            "S-GROWTH": 0.198,
-            "S-STREETS": 0.229
+            "S-FUNDING": 0.29,
+            "S-UKRAINE": 0.05,
+            "S-GROWTH": 0.232,
+            "S-OVERSIGHT": 0.285,
+            "S-STREETS": 0.187
           }
         },
         "Rejects or escalates": {
-          "share": 0.502,
+          "share": 0.474,
           "systems": {
-            "S-INFLATION": 0.753,
-            "S-HORMUZ": 0.137,
             "S-FEDDEC": 0.603,
-            "S-FUNDING": 0.377,
+            "S-FUNDING": 0.29,
             "S-UKRAINE": 0.049,
-            "S-GROWTH": 0.282,
-            "S-STREETS": 0.233,
-            "S-HOUSE": 0.871,
-            "S-SENATE": 0.558
+            "S-GROWTH": 0.326,
+            "S-OVERSIGHT": 0.285,
+            "S-INFLATION": 0.728,
+            "S-HORMUZ": 0.121,
+            "S-STREETS": 0.188
           }
         },
         "No clear answer": {
-          "share": 0.345,
+          "share": 0.354,
           "systems": {
-            "S-STREETS": 0.233,
-            "S-INFLATION": 0.702,
-            "S-HORMUZ": 0.188,
+            "S-STREETS": 0.187,
+            "S-INFLATION": 0.674,
+            "S-HORMUZ": 0.17,
             "S-FEDDEC": 0.603,
-            "S-FUNDING": 0.376,
-            "S-UKRAINE": 0.049,
-            "S-GROWTH": 0.253
+            "S-FUNDING": 0.29,
+            "S-UKRAINE": 0.05,
+            "S-GROWTH": 0.288,
+            "S-OVERSIGHT": 0.284
           }
         }
       }
@@ -3979,8 +4219,8 @@
         "P-0006",
         "P-0008"
       ],
-      "status": "upcoming",
-      "outcome_branch": null,
+      "status": "resolved",
+      "outcome_branch": "Democrats win the House",
       "branches": [
         {
           "label": "Democrats win the House",
@@ -4111,27 +4351,29 @@
       ],
       "sim_conditional": {
         "Weak (<50k)": {
-          "share": 0.475,
+          "share": 0.481,
           "systems": {
-            "S-STREETS": 0.233,
-            "S-INFLATION": 0.712,
-            "S-HORMUZ": 0.243,
+            "S-STREETS": 0.188,
+            "S-INFLATION": 0.68,
+            "S-HORMUZ": 0.241,
             "S-FEDDEC": 0.603,
-            "S-FUNDING": 0.378,
+            "S-FUNDING": 0.29,
             "S-UKRAINE": 0.049,
-            "S-GROWTH": 0.33
+            "S-GROWTH": 0.375,
+            "S-OVERSIGHT": 0.284
           }
         },
         "Solid (≥50k)": {
-          "share": 0.525,
+          "share": 0.519,
           "systems": {
-            "S-STREETS": 0.233,
-            "S-INFLATION": 0.705,
-            "S-HORMUZ": 0.251,
+            "S-STREETS": 0.187,
+            "S-INFLATION": 0.675,
+            "S-HORMUZ": 0.234,
             "S-FEDDEC": 0.603,
-            "S-FUNDING": 0.376,
-            "S-UKRAINE": 0.049,
-            "S-GROWTH": 0.195
+            "S-FUNDING": 0.29,
+            "S-UKRAINE": 0.05,
+            "S-GROWTH": 0.224,
+            "S-OVERSIGHT": 0.285
           }
         }
       }
@@ -4188,23 +4430,25 @@
       ],
       "sim_conditional": {
         "Hot (≥3.7%)": {
-          "share": 0.549,
+          "share": 0.544,
           "systems": {
-            "S-HORMUZ": 0.25,
+            "S-HORMUZ": 0.237,
             "S-FEDDEC": 0.603,
-            "S-FUNDING": 0.377,
+            "S-FUNDING": 0.29,
             "S-UKRAINE": 0.049,
-            "S-GROWTH": 0.284
+            "S-GROWTH": 0.324,
+            "S-OVERSIGHT": 0.285
           }
         },
         "Cooler (<3.7%)": {
-          "share": 0.451,
+          "share": 0.456,
           "systems": {
-            "S-HORMUZ": 0.243,
+            "S-HORMUZ": 0.238,
             "S-FEDDEC": 0.603,
-            "S-FUNDING": 0.378,
-            "S-UKRAINE": 0.049,
-            "S-GROWTH": 0.229
+            "S-FUNDING": 0.29,
+            "S-UKRAINE": 0.05,
+            "S-GROWTH": 0.264,
+            "S-OVERSIGHT": 0.284
           }
         }
       }
@@ -4250,17 +4494,19 @@
       ],
       "sim_conditional": {
         "Funding lapses": {
-          "share": 0.294,
+          "share": 0.273,
           "systems": {
-            "S-UKRAINE": 0.049,
-            "S-GROWTH": 0.285
+            "S-UKRAINE": 0.05,
+            "S-GROWTH": 0.331,
+            "S-OVERSIGHT": 0.283
           }
         },
         "Deal or stopgap": {
-          "share": 0.706,
+          "share": 0.727,
           "systems": {
             "S-UKRAINE": 0.049,
-            "S-GROWTH": 0.249
+            "S-GROWTH": 0.284,
+            "S-OVERSIGHT": 0.285
           }
         }
       }
@@ -4403,19 +4649,21 @@
       ],
       "sim_conditional": {
         "Hike": {
-          "share": 0.322,
+          "share": 0.316,
           "systems": {
-            "S-FUNDING": 0.375,
+            "S-FUNDING": 0.29,
             "S-UKRAINE": 0.049,
-            "S-GROWTH": 0.33
+            "S-GROWTH": 0.367,
+            "S-OVERSIGHT": 0.286
           }
         },
         "Hold or cut": {
-          "share": 0.678,
+          "share": 0.684,
           "systems": {
-            "S-FUNDING": 0.378,
-            "S-UKRAINE": 0.049,
-            "S-GROWTH": 0.226
+            "S-FUNDING": 0.29,
+            "S-UKRAINE": 0.05,
+            "S-GROWTH": 0.264,
+            "S-OVERSIGHT": 0.284
           }
         }
       }
@@ -4539,19 +4787,78 @@
       ],
       "sim_conditional": {
         "Hike": {
-          "share": 0.597,
+          "share": 0.612,
           "systems": {
-            "S-FUNDING": 0.376,
+            "S-FUNDING": 0.29,
             "S-UKRAINE": 0.049,
-            "S-GROWTH": 0.284
+            "S-GROWTH": 0.324,
+            "S-OVERSIGHT": 0.285
           }
         },
         "Hold": {
-          "share": 0.403,
+          "share": 0.388,
           "systems": {
-            "S-FUNDING": 0.379,
+            "S-FUNDING": 0.29,
             "S-UKRAINE": 0.05,
-            "S-GROWTH": 0.223
+            "S-GROWTH": 0.253,
+            "S-OVERSIGHT": 0.284
+          }
+        }
+      }
+    },
+    {
+      "id": "C-015",
+      "date": "2027-01-03",
+      "window_end": null,
+      "name": "New Congress sworn in and Speaker vote",
+      "domain": "politics",
+      "kind": "event",
+      "linked_predictions": [
+        "P-0054"
+      ],
+      "status": "upcoming",
+      "outcome_branch": null,
+      "branches": [
+        {
+          "label": "Jeffries elected Speaker",
+          "prob": 0.93,
+          "narrative": "Democrats unify and the new House opens investigations",
+          "effects": {
+            "systems": {
+              "S-OVERSIGHT": {
+                "pressure": 0.5
+              }
+            },
+            "agents": {}
+          }
+        },
+        {
+          "label": "Speaker vote drags on",
+          "prob": 0.07,
+          "narrative": "Democratic infighting delays the vote",
+          "effects": {
+            "systems": {
+              "S-OVERSIGHT": {
+                "pressure": -0.2
+              }
+            },
+            "agents": {}
+          }
+        }
+      ],
+      "sim_conditional": {
+        "Jeffries elected Speaker": {
+          "share": 0.943,
+          "systems": {
+            "S-GROWTH": 0.296,
+            "S-OVERSIGHT": 0.289
+          }
+        },
+        "Speaker vote drags on": {
+          "share": 0.057,
+          "systems": {
+            "S-GROWTH": 0.301,
+            "S-OVERSIGHT": 0.211
           }
         }
       }
@@ -4645,39 +4952,199 @@
       "clio": 0.499,
       "omen": 0.501,
       "change_clio": 0.0
+    },
+    {
+      "date": "2026-11-04",
+      "domain": "politics",
+      "prediction": "P-0001",
+      "clio": 0.498,
+      "omen": 0.502,
+      "change_clio": -0.001
+    },
+    {
+      "date": "2026-11-04",
+      "domain": "politics",
+      "prediction": "P-0002",
+      "clio": 0.469,
+      "omen": 0.531,
+      "change_clio": -0.029
+    },
+    {
+      "date": "2026-11-04",
+      "domain": "politics",
+      "prediction": "P-0003",
+      "clio": 0.449,
+      "omen": 0.551,
+      "change_clio": -0.02
+    },
+    {
+      "date": "2026-11-04",
+      "domain": "politics",
+      "prediction": "P-0004",
+      "clio": 0.405,
+      "omen": 0.595,
+      "change_clio": -0.044
+    },
+    {
+      "date": "2026-11-04",
+      "domain": "politics",
+      "prediction": "P-0005",
+      "clio": 0.376,
+      "omen": 0.624,
+      "change_clio": -0.029
+    },
+    {
+      "date": "2026-11-04",
+      "domain": "politics",
+      "prediction": "P-0028",
+      "clio": 0.363,
+      "omen": 0.637,
+      "change_clio": -0.013
+    },
+    {
+      "date": "2026-11-04",
+      "domain": "politics",
+      "prediction": "P-0029",
+      "clio": 0.357,
+      "omen": 0.643,
+      "change_clio": -0.006
+    },
+    {
+      "date": "2026-11-04",
+      "domain": "politics",
+      "prediction": "P-0030",
+      "clio": 0.33,
+      "omen": 0.67,
+      "change_clio": -0.027
+    },
+    {
+      "date": "2026-11-04",
+      "domain": "politics",
+      "prediction": "P-0031",
+      "clio": 0.327,
+      "omen": 0.673,
+      "change_clio": -0.003
+    },
+    {
+      "date": "2026-11-04",
+      "domain": "politics",
+      "prediction": "P-0033",
+      "clio": 0.313,
+      "omen": 0.687,
+      "change_clio": -0.014
+    },
+    {
+      "date": "2026-11-04",
+      "domain": "politics",
+      "prediction": "P-0034",
+      "clio": 0.296,
+      "omen": 0.704,
+      "change_clio": -0.017
+    },
+    {
+      "date": "2026-11-04",
+      "domain": "politics",
+      "prediction": "P-0035",
+      "clio": 0.285,
+      "omen": 0.715,
+      "change_clio": -0.011
+    },
+    {
+      "date": "2026-11-04",
+      "domain": "politics",
+      "prediction": "P-0036",
+      "clio": 0.278,
+      "omen": 0.722,
+      "change_clio": -0.007
+    },
+    {
+      "date": "2026-11-04",
+      "domain": "politics",
+      "prediction": "P-0037",
+      "clio": 0.262,
+      "omen": 0.738,
+      "change_clio": -0.016
+    },
+    {
+      "date": "2026-11-04",
+      "domain": "politics",
+      "prediction": "P-0038",
+      "clio": 0.256,
+      "omen": 0.744,
+      "change_clio": -0.006
+    },
+    {
+      "date": "2026-11-04",
+      "domain": "politics",
+      "prediction": "P-0040",
+      "clio": 0.259,
+      "omen": 0.741,
+      "change_clio": 0.003
+    },
+    {
+      "date": "2026-11-04",
+      "domain": "politics",
+      "prediction": "P-0041",
+      "clio": 0.249,
+      "omen": 0.751,
+      "change_clio": -0.01
+    },
+    {
+      "date": "2026-11-04",
+      "domain": "politics",
+      "prediction": "P-0043",
+      "clio": 0.237,
+      "omen": 0.763,
+      "change_clio": -0.012
+    },
+    {
+      "date": "2026-11-04",
+      "domain": "politics",
+      "prediction": "P-0044",
+      "clio": 0.233,
+      "omen": 0.767,
+      "change_clio": -0.004
+    },
+    {
+      "date": "2026-11-04",
+      "domain": "politics",
+      "prediction": "P-0048",
+      "clio": 0.23,
+      "omen": 0.77,
+      "change_clio": -0.003
     }
   ],
   "stats": {
     "all": {
-      "n": 11,
-      "hits": 10,
-      "misses": 1,
-      "brier_oracle": 0.0653,
-      "n_oracle": 11,
-      "brier_clio": 0.083,
-      "n_clio": 11,
-      "brier_omen": 0.0533,
-      "n_omen": 11,
-      "brier_market": 0.01,
-      "n_market": 1,
-      "brier_sim": 0.0961,
-      "n_sim": 1
+      "n": 31,
+      "hits": 21,
+      "misses": 8,
+      "brier_oracle": 0.1912,
+      "n_oracle": 31,
+      "brier_clio": 0.2407,
+      "n_clio": 31,
+      "brier_omen": 0.1527,
+      "n_omen": 31,
+      "brier_market": 0.0981,
+      "n_market": 4,
+      "brier_sim": 0.1022,
+      "n_sim": 3
     },
     "by_domain": {
       "politics": {
-        "n": 1,
-        "hits": 1,
-        "misses": 0,
-        "brier_oracle": 0.0361,
-        "n_oracle": 1,
-        "brier_clio": 0.04,
-        "n_clio": 1,
-        "brier_omen": 0.0324,
-        "n_omen": 1,
-        "brier_market": null,
-        "n_market": 0,
-        "brier_sim": null,
-        "n_sim": 0
+        "n": 21,
+        "hits": 12,
+        "misses": 7,
+        "brier_oracle": 0.2497,
+        "n_oracle": 21,
+        "brier_clio": 0.3138,
+        "n_clio": 21,
+        "brier_omen": 0.1991,
+        "n_omen": 21,
+        "brier_market": 0.1275,
+        "n_market": 3,
+        "brier_sim": 0.1052,
+        "n_sim": 2
       },
       "economy": {
         "n": 8,
@@ -4728,40 +5195,90 @@
     "calibration": [
       {
         "range": "0-20%",
-        "n": 4,
-        "avg_forecast": 0.14,
-        "happened": 0.0
+        "n": 6,
+        "avg_forecast": 0.15,
+        "happened": 0.33
       },
       {
         "range": "20-40%",
-        "n": 1,
-        "avg_forecast": 0.23,
-        "happened": 0.0
+        "n": 3,
+        "avg_forecast": 0.27,
+        "happened": 0.33
       },
       {
         "range": "40-60%",
-        "n": 2,
-        "avg_forecast": 0.45,
-        "happened": 0.5
+        "n": 15,
+        "avg_forecast": 0.5,
+        "happened": 0.93
       },
       {
         "range": "60-80%",
-        "n": 1,
-        "avg_forecast": 0.7,
+        "n": 3,
+        "avg_forecast": 0.72,
         "happened": 1.0
       },
       {
         "range": "80-100%",
-        "n": 3,
-        "avg_forecast": 0.9,
+        "n": 4,
+        "avg_forecast": 0.89,
         "happened": 1.0
       }
     ]
   },
   "review": {
-    "date": "2026-11-02",
-    "since": "2026-10-26",
+    "date": "2026-11-04",
+    "since": "2026-10-28",
     "resolved": [
+      {
+        "id": "P-0001",
+        "question": "Will Democrats win a majority (218+) of House seats in the 2026 midterms?",
+        "outcome": true,
+        "oracle": 0.87,
+        "clio": 0.85,
+        "omen": 0.88,
+        "hit": true,
+        "closer_engine": "OMEN"
+      },
+      {
+        "id": "P-0002",
+        "question": "Will Democrats win control of the Senate (51+ seats, since the VP breaks ties) in the 2026 midterms?",
+        "outcome": true,
+        "oracle": 0.55,
+        "clio": 0.42,
+        "omen": 0.68,
+        "hit": true,
+        "closer_engine": "OMEN"
+      },
+      {
+        "id": "P-0003",
+        "question": "Will Democrat Troy Jackson defeat Sen. Susan Collins (R) in Maine's 2026 Senate race?",
+        "outcome": true,
+        "oracle": 0.54,
+        "clio": 0.45,
+        "omen": 0.62,
+        "hit": true,
+        "closer_engine": "OMEN"
+      },
+      {
+        "id": "P-0004",
+        "question": "Will Democrat James Talarico defeat Republican Ken Paxton in Texas's 2026 Senate race?",
+        "outcome": true,
+        "oracle": 0.4,
+        "clio": 0.25,
+        "omen": 0.55,
+        "hit": false,
+        "closer_engine": "OMEN"
+      },
+      {
+        "id": "P-0005",
+        "question": "Will Democrat Sherrod Brown defeat Sen. Jon Husted (R) in Ohio's 2026 Senate race?",
+        "outcome": true,
+        "oracle": 0.5,
+        "clio": 0.38,
+        "omen": 0.62,
+        "hit": null,
+        "closer_engine": "OMEN"
+      },
       {
         "id": "P-0007",
         "question": "Will Trump's approval rating in the FiftyPlusOne polling average be below 37.0% on Nov 2, 2026?",
@@ -4823,19 +5340,166 @@
         "closer_engine": "tie"
       },
       {
-        "id": "P-0026",
-        "question": "Will the S&P 500 close above 7,700 on Friday, October 23, 2026?",
+        "id": "P-0028",
+        "question": "Will Josh Turek (D) win Iowa's 2026 U.S. Senate race?",
+        "outcome": true,
+        "oracle": 0.4,
+        "clio": 0.35,
+        "omen": 0.44,
+        "hit": false,
+        "closer_engine": "OMEN"
+      },
+      {
+        "id": "P-0029",
+        "question": "Will Keisha Lance Bottoms (D) win Georgia's 2026 governor race?",
+        "outcome": true,
+        "oracle": 0.45,
+        "clio": 0.42,
+        "omen": 0.47,
+        "hit": false,
+        "closer_engine": "OMEN"
+      },
+      {
+        "id": "P-0030",
+        "question": "Will Amy Acton (D) win Ohio's 2026 governor race?",
+        "outcome": true,
+        "oracle": 0.5,
+        "clio": 0.38,
+        "omen": 0.62,
+        "hit": null,
+        "closer_engine": "OMEN"
+      },
+      {
+        "id": "P-0031",
+        "question": "Will Abdul El-Sayed (D) win Michigan's 2026 U.S. Senate race?",
+        "outcome": true,
+        "oracle": 0.57,
+        "clio": 0.55,
+        "omen": 0.58,
+        "hit": true,
+        "closer_engine": "OMEN"
+      },
+      {
+        "id": "P-0033",
+        "question": "Will Gina Hinojosa (D) defeat Gov. Greg Abbott (R) in Texas's 2026 governor race?",
+        "outcome": true,
+        "oracle": 0.18,
+        "clio": 0.14,
+        "omen": 0.22,
+        "hit": false,
+        "closer_engine": "OMEN"
+      },
+      {
+        "id": "P-0034",
+        "question": "Will Rob Sand (D) win Iowa's 2026 governor race?",
+        "outcome": true,
+        "oracle": 0.54,
+        "clio": 0.45,
+        "omen": 0.62,
+        "hit": true,
+        "closer_engine": "OMEN"
+      },
+      {
+        "id": "P-0035",
+        "question": "Will Jocelyn Benson (D) win Michigan's 2026 governor race?",
+        "outcome": true,
+        "oracle": 0.59,
+        "clio": 0.52,
+        "omen": 0.65,
+        "hit": true,
+        "closer_engine": "OMEN"
+      },
+      {
+        "id": "P-0036",
+        "question": "Will Aaron Ford (D) win Nevada's 2026 governor race?",
+        "outcome": true,
+        "oracle": 0.45,
+        "clio": 0.42,
+        "omen": 0.48,
+        "hit": false,
+        "closer_engine": "OMEN"
+      },
+      {
+        "id": "P-0037",
+        "question": "Will Adam Hamilton (D) win Kansas's 2026 U.S. Senate race?",
+        "outcome": true,
+        "oracle": 0.34,
+        "clio": 0.28,
+        "omen": 0.4,
+        "hit": false,
+        "closer_engine": "OMEN"
+      },
+      {
+        "id": "P-0038",
+        "question": "Will David Crowley (D) win Wisconsin's 2026 governor race?",
+        "outcome": true,
+        "oracle": 0.59,
+        "clio": 0.55,
+        "omen": 0.62,
+        "hit": true,
+        "closer_engine": "OMEN"
+      },
+      {
+        "id": "P-0040",
+        "question": "Will David Jolly (D) win Florida's 2026 governor race?",
         "outcome": false,
-        "oracle": 0.42,
+        "oracle": 0.24,
+        "clio": 0.2,
+        "omen": 0.27,
+        "hit": true,
+        "closer_engine": "CLIO"
+      },
+      {
+        "id": "P-0041",
+        "question": "Will Katie Hobbs (D) win Arizona's 2026 governor race?",
+        "outcome": true,
+        "oracle": 0.56,
         "clio": 0.5,
-        "omen": 0.35,
+        "omen": 0.62,
+        "hit": true,
+        "closer_engine": "OMEN"
+      },
+      {
+        "id": "P-0043",
+        "question": "Will Annie Andrews (D) win South Carolina's 2026 U.S. Senate race?",
+        "outcome": true,
+        "oracle": 0.16,
+        "clio": 0.12,
+        "omen": 0.2,
+        "hit": false,
+        "closer_engine": "OMEN"
+      },
+      {
+        "id": "P-0044",
+        "question": "Will Peggy Flanagan (D) win Minnesota's 2026 U.S. Senate race?",
+        "outcome": true,
+        "oracle": 0.69,
+        "clio": 0.65,
+        "omen": 0.72,
+        "hit": true,
+        "closer_engine": "OMEN"
+      },
+      {
+        "id": "P-0048",
+        "question": "Will the Associated Press project Democrats winning a majority of U.S. House seats by Friday, November 6, 2026?",
+        "outcome": true,
+        "oracle": 0.76,
+        "clio": 0.72,
+        "omen": 0.8,
         "hit": true,
         "closer_engine": "OMEN"
       }
     ],
-    "clio_wins": 3,
-    "omen_wins": 3,
+    "clio_wins": 4,
+    "omen_wins": 21,
     "big_moves": [
+      {
+        "id": "P-0032",
+        "question": "Will Jonathan Kreiss-Tomkins (D) win Alaska's 2026 governor race?",
+        "then": 0.51,
+        "now": 0.84,
+        "delta": 0.33
+      },
       {
         "id": "P-0025",
         "question": "Will the Federal Reserve raise the federal funds target range at its December 8-9, 2026 meeting?",
@@ -4846,27 +5510,19 @@
       {
         "id": "P-0006",
         "question": "Will Democrat Mary Peltola defeat Sen. Dan Sullivan (R) in Alaska's 2026 Senate race?",
-        "then": 0.41,
-        "now": 0.49,
-        "delta": 0.08
+        "then": 0.49,
+        "now": 0.63,
+        "delta": 0.14
       },
       {
-        "id": "P-0002",
-        "question": "Will Democrats win control of the Senate (51+ seats, since the VP breaks ties) in the 2026 midterms?",
-        "then": 0.5,
-        "now": 0.55,
-        "delta": 0.05
+        "id": "P-0008",
+        "question": "Will 2026 midterm turnout reach 50.0% or more of the voting-eligible population?",
+        "then": 0.49,
+        "now": 0.63,
+        "delta": 0.14
       }
     ],
     "weight_changes": [
-      {
-        "date": "2026-10-26",
-        "domain": "economy",
-        "prediction": "P-0026",
-        "clio": 0.453,
-        "omen": 0.547,
-        "change_clio": -0.016
-      },
       {
         "date": "2026-10-30",
         "domain": "economy",
@@ -4914,6 +5570,166 @@
         "clio": 0.499,
         "omen": 0.501,
         "change_clio": 0.0
+      },
+      {
+        "date": "2026-11-04",
+        "domain": "politics",
+        "prediction": "P-0001",
+        "clio": 0.498,
+        "omen": 0.502,
+        "change_clio": -0.001
+      },
+      {
+        "date": "2026-11-04",
+        "domain": "politics",
+        "prediction": "P-0002",
+        "clio": 0.469,
+        "omen": 0.531,
+        "change_clio": -0.029
+      },
+      {
+        "date": "2026-11-04",
+        "domain": "politics",
+        "prediction": "P-0003",
+        "clio": 0.449,
+        "omen": 0.551,
+        "change_clio": -0.02
+      },
+      {
+        "date": "2026-11-04",
+        "domain": "politics",
+        "prediction": "P-0004",
+        "clio": 0.405,
+        "omen": 0.595,
+        "change_clio": -0.044
+      },
+      {
+        "date": "2026-11-04",
+        "domain": "politics",
+        "prediction": "P-0005",
+        "clio": 0.376,
+        "omen": 0.624,
+        "change_clio": -0.029
+      },
+      {
+        "date": "2026-11-04",
+        "domain": "politics",
+        "prediction": "P-0028",
+        "clio": 0.363,
+        "omen": 0.637,
+        "change_clio": -0.013
+      },
+      {
+        "date": "2026-11-04",
+        "domain": "politics",
+        "prediction": "P-0029",
+        "clio": 0.357,
+        "omen": 0.643,
+        "change_clio": -0.006
+      },
+      {
+        "date": "2026-11-04",
+        "domain": "politics",
+        "prediction": "P-0030",
+        "clio": 0.33,
+        "omen": 0.67,
+        "change_clio": -0.027
+      },
+      {
+        "date": "2026-11-04",
+        "domain": "politics",
+        "prediction": "P-0031",
+        "clio": 0.327,
+        "omen": 0.673,
+        "change_clio": -0.003
+      },
+      {
+        "date": "2026-11-04",
+        "domain": "politics",
+        "prediction": "P-0033",
+        "clio": 0.313,
+        "omen": 0.687,
+        "change_clio": -0.014
+      },
+      {
+        "date": "2026-11-04",
+        "domain": "politics",
+        "prediction": "P-0034",
+        "clio": 0.296,
+        "omen": 0.704,
+        "change_clio": -0.017
+      },
+      {
+        "date": "2026-11-04",
+        "domain": "politics",
+        "prediction": "P-0035",
+        "clio": 0.285,
+        "omen": 0.715,
+        "change_clio": -0.011
+      },
+      {
+        "date": "2026-11-04",
+        "domain": "politics",
+        "prediction": "P-0036",
+        "clio": 0.278,
+        "omen": 0.722,
+        "change_clio": -0.007
+      },
+      {
+        "date": "2026-11-04",
+        "domain": "politics",
+        "prediction": "P-0037",
+        "clio": 0.262,
+        "omen": 0.738,
+        "change_clio": -0.016
+      },
+      {
+        "date": "2026-11-04",
+        "domain": "politics",
+        "prediction": "P-0038",
+        "clio": 0.256,
+        "omen": 0.744,
+        "change_clio": -0.006
+      },
+      {
+        "date": "2026-11-04",
+        "domain": "politics",
+        "prediction": "P-0040",
+        "clio": 0.259,
+        "omen": 0.741,
+        "change_clio": 0.003
+      },
+      {
+        "date": "2026-11-04",
+        "domain": "politics",
+        "prediction": "P-0041",
+        "clio": 0.249,
+        "omen": 0.751,
+        "change_clio": -0.01
+      },
+      {
+        "date": "2026-11-04",
+        "domain": "politics",
+        "prediction": "P-0043",
+        "clio": 0.237,
+        "omen": 0.763,
+        "change_clio": -0.012
+      },
+      {
+        "date": "2026-11-04",
+        "domain": "politics",
+        "prediction": "P-0044",
+        "clio": 0.233,
+        "omen": 0.767,
+        "change_clio": -0.004
+      },
+      {
+        "date": "2026-11-04",
+        "domain": "politics",
+        "prediction": "P-0048",
+        "clio": 0.23,
+        "omen": 0.77,
+        "change_clio": -0.003
       }
     ],
     "tracked": [
@@ -4945,7 +5761,7 @@
   },
   "calibration": {
     "active": false,
-    "n": 11,
+    "n": 31,
     "a": 0.0,
     "b": 1.0
   },
@@ -5003,65 +5819,71 @@
       "V": 0.489,
       "p": 0.36,
       "outcome": null
+    },
+    {
+      "date": "2026-11-04",
+      "V": 0.472,
+      "p": 0.333,
+      "outcome": null
     }
   ],
   "volatility": {
-    "V": 0.489,
+    "V": 0.472,
     "path": "gamma",
-    "O": 3.6,
-    "C": 6.25,
-    "Pm": 1.6,
-    "w_omen": 0.51,
-    "w_clio": 0.49,
+    "O": 3.52,
+    "C": 6.39,
+    "Pm": 1.188,
+    "w_omen": 0.577,
+    "w_clio": 0.423,
     "inertia": 1.0,
-    "n_events": 41,
+    "n_events": 44,
     "calendar_drivers": [
-      {
-        "id": "C-007",
-        "name": "Midterm elections",
-        "add": 0.452
-      },
       {
         "id": "C-004",
         "name": "Iran's answer to the US offer to reopen Gulf shipping",
-        "add": 0.116
+        "add": 0.126
       },
       {
         "id": "C-008",
         "name": "October jobs report",
-        "add": 0.034
+        "add": 0.041
+      },
+      {
+        "id": "C-009",
+        "name": "October inflation report (date approx.)",
+        "add": 0.02
       }
     ],
-    "date": "2026-11-02",
+    "date": "2026-11-04",
     "by_domain": {
       "politics": {
-        "V": 0.451,
-        "path": "gamma",
-        "O": 3.97,
-        "C": 7.04,
-        "Pm": 1.452,
-        "n_events": 14
+        "V": 0.643,
+        "path": "beta",
+        "O": 3.69,
+        "C": 6.84,
+        "Pm": 1.0,
+        "n_events": 19
       },
       "economy": {
-        "V": 0.416,
+        "V": 0.404,
         "path": "gamma",
-        "O": 3.38,
-        "C": 5.82,
-        "Pm": 1.05,
-        "n_events": 12
+        "O": 3.34,
+        "C": 6.1,
+        "Pm": 1.061,
+        "n_events": 11
       },
       "unrest": null,
       "foreign": {
         "V": 0.412,
         "path": "gamma",
-        "O": 3.43,
-        "C": 5.47,
-        "Pm": 1.116,
-        "n_events": 13
+        "O": 3.41,
+        "C": 5.51,
+        "Pm": 1.126,
+        "n_events": 12
       }
     },
     "shock": {
-      "p": 0.36,
+      "p": 0.333,
       "a": -4.0,
       "b": 7.0,
       "fitted": false,
@@ -5178,6 +6000,18 @@
         "unrest": null,
         "foreign": 0.412
       }
+    },
+    {
+      "date": "2026-11-04",
+      "V": 0.472,
+      "path": "gamma",
+      "p_shock": 0.333,
+      "by_domain": {
+        "politics": 0.643,
+        "economy": 0.404,
+        "unrest": null,
+        "foreign": 0.412
+      }
     }
   ],
   "history_scale": {
@@ -5190,7 +6024,7 @@
         "featured": false,
         "like": "Peace, booming trade and railways, and the Great Exhibition showing off the empire's confidence. Political fights were about religion and reform, not survival.",
         "next": "Decades of relative stability and growth followed; reform came gradually through Parliament.",
-        "V": 0.188,
+        "V": 0.233,
         "path": "alpha",
         "O": 1.97,
         "C": 8.87,
@@ -5207,7 +6041,7 @@
           "Parliament fights over the anti-Catholic Ecclesiastical Titles Bill",
           "Chartist reform movement fades after 1848"
         ],
-        "mix_similarity": 0.733
+        "mix_similarity": 0.781
       },
       {
         "id": "H-1997",
@@ -5217,7 +6051,7 @@
         "featured": true,
         "like": "Low unemployment, record stock markets and a bipartisan budget deal. The headlines were a big but orderly strike and fundraising hearings.",
         "next": "The boom continued to 2000. The biggest political drama was the 1998 impeachment, which the system absorbed.",
-        "V": 0.253,
+        "V": 0.307,
         "path": "alpha",
         "O": 2.56,
         "C": 7.88,
@@ -5234,7 +6068,7 @@
           "Teamsters strike shuts down UPS deliveries",
           "Clinton signs bipartisan balanced-budget deal"
         ],
-        "mix_similarity": 0.987
+        "mix_similarity": 0.995
       },
       {
         "id": "H-1956",
@@ -5244,7 +6078,7 @@
         "featured": true,
         "like": "Near-full employment, low inflation and a popular president running on 'peace and prosperity.' The big tension was school desegregation, where the National Guard was sent to some towns.",
         "next": "Eisenhower won in a landslide. The civil-rights struggle grew slowly through the late 1950s.",
-        "V": 0.292,
+        "V": 0.351,
         "path": "alpha",
         "O": 2.82,
         "C": 7.11,
@@ -5262,7 +6096,7 @@
           "Suez Canal tension after Egypt nationalizes the canal",
           "Economy near full employment with low inflation"
         ],
-        "mix_similarity": 0.978
+        "mix_similarity": 0.985
       },
       {
         "id": "H-2018",
@@ -5272,7 +6106,7 @@
         "featured": false,
         "like": "A bitterly divided Supreme Court confirmation with mass protests at the Capitol, but a strong economy with the lowest unemployment since 1969.",
         "next": "Democrats won the House a month later. The economy kept growing until the pandemic.",
-        "V": 0.402,
+        "V": 0.468,
         "path": "gamma",
         "O": 4.74,
         "C": 7.55,
@@ -5289,7 +6123,7 @@
           "Mass protests at the Capitol; hundreds arrested",
           "Trade-war tariffs on China escalate"
         ],
-        "mix_similarity": 0.883
+        "mix_similarity": 0.913
       },
       {
         "id": "H-1974",
@@ -5299,7 +6133,7 @@
         "featured": true,
         "like": "A president forced out by scandal, with inflation above 10% and stocks in a bear market. Yet it was orderly: courts, Congress and the press all did their jobs.",
         "next": "Ford took over peacefully and pardoned Nixon. Democrats won big in the midterms, and the economy fell into recession.",
-        "V": 0.427,
+        "V": 0.494,
         "path": "gamma",
         "O": 5.77,
         "C": 8.07,
@@ -5317,7 +6151,7 @@
           "'Smoking gun' tape released",
           "House committee approves articles of impeachment"
         ],
-        "mix_similarity": 0.975
+        "mix_similarity": 0.986
       },
       {
         "id": "H-2001",
@@ -5327,7 +6161,7 @@
         "featured": true,
         "like": "The deadliest attack on US soil, the airspace shut for days, and the stock market's worst week in decades. But the country pulled together and institutions held.",
         "next": "War in Afghanistan within a month, a short recession, and a long era of security politics.",
-        "V": 0.429,
+        "V": 0.497,
         "path": "gamma",
         "O": 5.02,
         "C": 6.94,
@@ -5345,7 +6179,7 @@
           "All US airspace shut down for days",
           "Terrorist attacks kill nearly 3,000 people"
         ],
-        "mix_similarity": 0.744
+        "mix_similarity": 0.694
       },
       {
         "id": "H-2011",
@@ -5355,7 +6189,7 @@
         "featured": false,
         "like": "Congress came within hours of a US default, the country lost its AAA credit rating, and stocks fell sharply. Unemployment was still stuck above 9%.",
         "next": "No default. Years of budget brinkmanship followed, but the recovery continued slowly.",
-        "V": 0.499,
+        "V": 0.566,
         "path": "gamma",
         "O": 5.89,
         "C": 6.16,
@@ -5372,7 +6206,7 @@
           "Unemployment stuck at 9.1%",
           "Debt-ceiling deal reached hours before default deadline"
         ],
-        "mix_similarity": 0.939
+        "mix_similarity": 0.916
       },
       {
         "id": "H-1979US",
@@ -5382,7 +6216,7 @@
         "featured": true,
         "like": "Inflation above 12%, the Fed hiking rates sharply, gas worries, and Iran holding Americans hostage. A widespread feeling that things were slipping out of control.",
         "next": "The hostage crisis lasted 444 days. A recession hit in 1980, and Carter lost in a landslide to Reagan.",
-        "V": 0.519,
+        "V": 0.586,
         "path": "gamma",
         "O": 5.81,
         "C": 5.61,
@@ -5400,7 +6234,7 @@
           "Ted Kennedy launches a primary challenge to the president",
           "Militants seize the US embassy in Tehran and take hostages"
         ],
-        "mix_similarity": 0.896
+        "mix_similarity": 0.865
       },
       {
         "id": "H-2021",
@@ -5410,7 +6244,7 @@
         "featured": true,
         "like": "A mob stormed the Capitol to stop the count of electoral votes, during the deadliest days of the pandemic. Congress finished the count that same night.",
         "next": "Biden was inaugurated peacefully two weeks later. Trump was impeached a second time and acquitted.",
-        "V": 0.524,
+        "V": 0.591,
         "path": "gamma",
         "O": 6.51,
         "C": 7.08,
@@ -5428,7 +6262,7 @@
           "Georgia runoffs flip control of the Senate",
           "Recording of pressure call to Georgia's secretary of state released"
         ],
-        "mix_similarity": 0.946
+        "mix_similarity": 0.965
       },
       {
         "id": "H-1962",
@@ -5438,8 +6272,8 @@
         "featured": true,
         "like": "Thirteen days where nuclear war felt possible. Fear was enormous, but the country rallied behind the president and institutions held firm.",
         "next": "The Soviets withdrew their missiles. A hotline and a test-ban treaty followed. Kennedy's party did well in the midterms.",
-        "V": 0.535,
-        "path": "gamma",
+        "V": 0.601,
+        "path": "beta",
         "O": 5.58,
         "C": 5.97,
         "Pm": 1.184,
@@ -5456,7 +6290,7 @@
           "Kennedy announces naval quarantine of Cuba",
           "Congress and public rally behind the president"
         ],
-        "mix_similarity": 0.743
+        "mix_similarity": 0.702
       },
       {
         "id": "H-1979UK",
@@ -5466,8 +6300,8 @@
         "featured": false,
         "like": "Waves of strikes: trucks stopped, garbage piled in the streets, some of the dead went unburied. Inflation was back and the government looked powerless.",
         "next": "The government lost a confidence vote in March, and Thatcher won the election in May, starting a sharp change of direction.",
-        "V": 0.546,
-        "path": "gamma",
+        "V": 0.612,
+        "path": "beta",
         "O": 6.18,
         "C": 5.35,
         "Pm": 1.0,
@@ -5483,7 +6317,7 @@
           "Inflation back above 9%; government pay caps collapse",
           "'Crisis? What crisis?' headline sums up the prime minister's response"
         ],
-        "mix_similarity": 0.979
+        "mix_similarity": 0.974
       },
       {
         "id": "H-1968",
@@ -5493,8 +6327,8 @@
         "featured": true,
         "like": "Two national leaders assassinated in two months, riots in over 100 cities, a war tearing the country apart, and campus protests everywhere.",
         "next": "Chaotic Democratic convention in August; Nixon won on 'law and order.' The war and the protests went on for years.",
-        "V": 0.564,
-        "path": "gamma",
+        "V": 0.629,
+        "path": "beta",
         "O": 6.32,
         "C": 5.08,
         "Pm": 1.0,
@@ -5511,7 +6345,7 @@
           "Poor People's Campaign encamped on the National Mall",
           "Cities still scarred by riots after Martin Luther King Jr.'s assassination"
         ],
-        "mix_similarity": 0.957
+        "mix_similarity": 0.961
       },
       {
         "id": "H-2008",
@@ -5521,7 +6355,7 @@
         "featured": true,
         "like": "The biggest bank failure in US history, credit markets frozen, Congress first voting down the bailout and the market crashing, all five weeks before an election.",
         "next": "The bailout passed, Obama won, and the Great Recession deepened into 2009 before a slow recovery.",
-        "V": 0.626,
+        "V": 0.687,
         "path": "beta",
         "O": 7.54,
         "C": 5.37,
@@ -5538,7 +6372,7 @@
           "House rejects the bailout; stocks plunge 7%",
           "Washington Mutual seized: largest bank failure in US history"
         ],
-        "mix_similarity": 0.89
+        "mix_similarity": 0.857
       },
       {
         "id": "H-2020",
@@ -5548,7 +6382,7 @@
         "featured": true,
         "like": "100,000 dead from COVID, 40 million jobless claims, and protests and riots in hundreds of cities with curfews and troops. The most turbulent stretch in decades.",
         "next": "Protests faded over the summer, the economy rebounded with huge aid, and a bitterly contested election came in November.",
-        "V": 0.633,
+        "V": 0.693,
         "path": "beta",
         "O": 7.57,
         "C": 4.58,
@@ -5566,7 +6400,7 @@
           "US COVID deaths pass 100,000",
           "Fed and Congress pour trillions into the economy"
         ],
-        "mix_similarity": 0.993
+        "mix_similarity": 0.986
       },
       {
         "id": "H-1991",
@@ -5576,7 +6410,7 @@
         "featured": false,
         "like": "Hardliners tried to seize power with tanks in Moscow, crowds defended parliament, republics declared independence, and shelves were empty.",
         "next": "The coup failed in three days, and the Soviet Union dissolved within four months.",
-        "V": 0.658,
+        "V": 0.716,
         "path": "beta",
         "O": 7.71,
         "C": 4.17,
@@ -5594,7 +6428,7 @@
           "Yeltsin defies the coup; crowds defend parliament",
           "Shortages and rationing across the country"
         ],
-        "mix_similarity": 0.986
+        "mix_similarity": 0.994
       },
       {
         "id": "H-1923",
@@ -5604,7 +6438,7 @@
         "featured": false,
         "like": "Money became worthless (a loaf of bread cost billions), food riots broke out, regions tried to break away, and Hitler attempted a coup in Munich.",
         "next": "A new currency stopped the inflation and calm returned for a few years, but the damage to trust helped the Nazis rise after 1929.",
-        "V": 0.672,
+        "V": 0.729,
         "path": "beta",
         "O": 7.63,
         "C": 3.88,
@@ -5622,7 +6456,7 @@
           "Hitler's Beer Hall Putsch fails in Munich",
           "Separatist revolts in the Rhineland"
         ],
-        "mix_similarity": 0.941
+        "mix_similarity": 0.92
       },
       {
         "id": "H-1933",
@@ -5632,7 +6466,7 @@
         "featured": true,
         "like": "The banking system was collapsing, a quarter of workers were jobless, and farmers were rioting over foreclosures.",
         "next": "FDR closed every bank for a week, launched the New Deal, and confidence slowly returned, though the Depression lasted years.",
-        "V": 0.675,
+        "V": 0.732,
         "path": "beta",
         "O": 6.71,
         "C": 3.91,
@@ -5649,7 +6483,7 @@
           "Unemployment near 25%",
           "Farm foreclosure riots in the Midwest"
         ],
-        "mix_similarity": 0.888
+        "mix_similarity": 0.856
       },
       {
         "id": "H-1789",
@@ -5659,7 +6493,7 @@
         "featured": false,
         "like": "A bankrupt state, bread at record prices, the king massing troops around Paris, and then crowds seizing the Bastille.",
         "next": "The monarchy lost control within weeks. A decade of revolution, terror and war followed.",
-        "V": 0.753,
+        "V": 0.8,
         "path": "omega",
         "O": 7.7,
         "C": 2.63,
@@ -5677,7 +6511,7 @@
           "Royal troops mass around Paris",
           "State bankruptcy looms"
         ],
-        "mix_similarity": 0.996
+        "mix_similarity": 0.99
       },
       {
         "id": "H-49BC",
@@ -5687,7 +6521,7 @@
         "featured": false,
         "like": "Decades of street violence between political gangs, a Senate trying to strip a general of his army, and the general marching on Rome instead.",
         "next": "Civil war. The Republic never recovered; within two decades Rome was ruled by emperors.",
-        "V": 0.833,
+        "V": 0.868,
         "path": "omega",
         "O": 8.35,
         "C": 1.74,
@@ -5704,7 +6538,7 @@
           "Senate orders Caesar to disband his army",
           "Years of gang warfare in Rome's streets"
         ],
-        "mix_similarity": 0.95
+        "mix_similarity": 0.965
       },
       {
         "id": "H-1861",
@@ -5714,7 +6548,7 @@
         "featured": true,
         "like": "Seven states had left the Union, trade between North and South had collapsed, and then Confederate guns fired on Fort Sumter.",
         "next": "Four more states seceded, and four years of war killed over 600,000 Americans.",
-        "V": 0.851,
+        "V": 0.882,
         "path": "omega",
         "O": 8.66,
         "C": 1.58,
@@ -5731,30 +6565,30 @@
           "Banks and trade between North and South collapse",
           "Seven states have seceded; more are about to follow"
         ],
-        "mix_similarity": 0.995
+        "mix_similarity": 0.998
       }
     ],
     "closest_level": [
-      "H-2011",
-      "H-1979US",
-      "H-2021"
+      "H-2018",
+      "H-1974",
+      "H-2001"
     ],
     "closest_kind": [
-      "H-1979UK",
       "H-1974",
-      "H-1968"
+      "H-2011",
+      "H-2018"
     ],
     "between": [
-      "H-2001",
-      "H-2011"
+      "H-2018",
+      "H-1974"
     ],
     "today": {
-      "V": 0.489,
+      "V": 0.472,
       "profile": {
-        "chaos": 2.72,
-        "polarization": 3.05,
-        "economic": 2.35,
-        "resistance": 6.25
+        "chaos": 2.66,
+        "polarization": 3.25,
+        "economic": 2.25,
+        "resistance": 6.39
       }
     }
   }

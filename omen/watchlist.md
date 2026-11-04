@@ -55,3 +55,9 @@ _Last updated: 2026-11-02 (Nov 2: Alaska certification suit dismissed, DOJ to ap
 - Alaska certification fight: DOJ probe of alleged second-'Dan Sullivan' ballot scheme; governor says certification 'could be stopped' (Nov 3-Dec).
 - December Fed hike: ~85% priced; two dissenters Oct 28.
 - Binance ~$5.7B hack (Oct 29): watch crypto contagion.
+
+## 2026-11-04
+- Alaska Senate and governor counts, DOJ certification suit appeal and the second "Dan Sullivan" ballot issue.
+- Post-election market: AI-regulation and data-center scrutiny from a Democratic Congress; futures fell 1.4% then recovered.
+- Iran talks after the vote ("no to war" signal); Brent about $104.
+- First House investigations once the new Congress is sworn in Jan 3.
