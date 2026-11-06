@@ -1204,7 +1204,16 @@
     "Sabato": "Lean R"
    },
    "prediction": "P-0045",
-   "yes_party": "I"
+   "yes_party": "I",
+   "result": {
+    "winner": "R",
+    "called": true,
+    "pct": {
+     "R": 50.4,
+     "I": 43.6
+    },
+    "as_of": "2026-11-05"
+   }
   },
   "NH-SEN": {
    "state": "NH",

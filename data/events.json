@@ -1958,6 +1958,198 @@
         "resistance": 8
       },
       "systems": {}
+    },
+    {
+      "id": "E-20261105-01",
+      "date": "2026-11-05",
+      "domain": "economy",
+      "title": "AI-stock sell-off: S&P 500 falls 4.4%, Nasdaq 5.5% (correction), Dow drops 1,833 points",
+      "sources": [
+        "AP",
+        "BBC",
+        "The Guardian US",
+        "Fox Business"
+      ],
+      "url": "https://www.nbcbayarea.com/news/national-international/november-5-stock-market/4170982/",
+      "omen": {
+        "chaos": 7,
+        "polarization": 3,
+        "economic": 7
+      },
+      "clio": {
+        "precedent": "2000 Nasdaq tech crash",
+        "precedent_match": 5,
+        "resistance": 4
+      },
+      "systems": {
+        "S-GROWTH": 2,
+        "S-FEDDEC": -1
+      }
+    },
+    {
+      "id": "E-20261105-02",
+      "date": "2026-11-05",
+      "domain": "foreign",
+      "title": "Three more tanker attacks in Hormuz; Brent rebounds 3.9% to $98.29 after post-election plunge; Eurasia Group cuts deal odds to 10%",
+      "sources": [
+        "Reuters",
+        "CBS News"
+      ],
+      "url": "https://cbsnews.com/live-updates/iran-war-us-trump-midterms-strait-of-hormuz",
+      "omen": {
+        "chaos": 4,
+        "polarization": 1,
+        "economic": 4
+      },
+      "clio": {
+        "precedent": "1987-88 Tanker War",
+        "precedent_match": 6,
+        "resistance": 5
+      },
+      "systems": {
+        "S-HORMUZ": -1,
+        "S-INFLATION": 1
+      }
+    },
+    {
+      "id": "E-20261105-03",
+      "date": "2026-11-05",
+      "domain": "economy",
+      "title": "Bank of England raises rates for the first time in three years",
+      "sources": [
+        "AP"
+      ],
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNb0NDY2lDWk9qMGtnT3ZVZEhLY1RTQ1J5MFlOazFRTzk4",
+      "omen": {
+        "chaos": 2,
+        "polarization": 1,
+        "economic": 4
+      },
+      "clio": {
+        "precedent": "2022 global central-bank tightening",
+        "precedent_match": 4,
+        "resistance": 6
+      },
+      "systems": {
+        "S-FEDDEC": 1
+      }
+    },
+    {
+      "id": "E-20261105-04",
+      "date": "2026-11-05",
+      "domain": "politics",
+      "title": "Democrats, newly in control of Congress, vow major probes of the Trump administration",
+      "sources": [
+        "AP",
+        "PBS NewsHour",
+        "Axios"
+      ],
+      "url": "https://www.axios.com/2026/11/06/democrats-oversight-trump-health-rfk",
+      "omen": {
+        "chaos": 2,
+        "polarization": 5,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2019 House Democratic investigations",
+        "precedent_match": 6,
+        "resistance": 6
+      },
+      "systems": {
+        "S-OVERSIGHT": 1
+      }
+    },
+    {
+      "id": "E-20261105-05",
+      "date": "2026-11-05",
+      "domain": "politics",
+      "title": "Vance blames midterm loss on the Iran war; Trump weighs next move in Iran",
+      "sources": [
+        "AP",
+        "PBS NewsHour",
+        "Axios"
+      ],
+      "url": "https://www.axios.com/2026/11/05/vance-maga-power-play-2028",
+      "omen": {
+        "chaos": 3,
+        "polarization": 4,
+        "economic": 2
+      },
+      "clio": {
+        "precedent": "2006 midterm loss and Iraq war policy shift",
+        "precedent_match": 6,
+        "resistance": 6
+      },
+      "systems": {
+        "S-HORMUZ": 1
+      }
+    },
+    {
+      "id": "E-20261105-06",
+      "date": "2026-11-05",
+      "domain": "politics",
+      "title": "Kansas governor race: Holscher leads by about 7,000 votes and claims victory; Masterson seeks another look, hand count required",
+      "sources": [
+        "KCUR",
+        "Kansas Reflector"
+      ],
+      "url": "https://www.kcur.org/politics-elections-and-government/2026-11-04/ty-masterson-trails-in-kansas-governor-race-by-5-500-votes-he-says-the-results-need-another-look",
+      "omen": {
+        "chaos": 2,
+        "polarization": 4,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2022 Arizona governor count dispute",
+        "precedent_match": 4,
+        "resistance": 8
+      },
+      "systems": {}
+    },
+    {
+      "id": "E-20261105-07",
+      "date": "2026-11-05",
+      "domain": "politics",
+      "title": "Alaska Senate race too close to call; Trump urges moving votes from a same-named candidate to Sullivan",
+      "sources": [
+        "Alaska Beacon",
+        "Anchorage Daily News"
+      ],
+      "url": "https://alaskabeacon.com/2026/11/03/democratic-candidate-mary-peltola-leads-in-early-vote-counts-for-alaskas-us-senate-election/",
+      "omen": {
+        "chaos": 3,
+        "polarization": 6,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2022 Alaska ranked-choice count",
+        "precedent_match": 5,
+        "resistance": 7
+      },
+      "systems": {}
+    },
+    {
+      "id": "E-20261105-08",
+      "date": "2026-11-05",
+      "domain": "politics",
+      "title": "Judge blocks construction of Trump's 250-foot arch; Trump designates Oval Office a national monument",
+      "sources": [
+        "BBC",
+        "Fox News",
+        "AP"
+      ],
+      "url": "https://www.bbc.co.uk/news/articles/cq99zd93ryvko",
+      "omen": {
+        "chaos": 2,
+        "polarization": 4,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2025 court limits on White House construction",
+        "precedent_match": 5,
+        "resistance": 8
+      },
+      "systems": {}
     }
   ]
 }
