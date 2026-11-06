@@ -6,7 +6,7 @@
     "created": "2026-10-14",
     "last_run": "2026-11-06",
     "run_count": 11,
-    "next_id": 55,
+    "next_id": 57,
     "note": "Single source of truth. Rules live in ORACLE.md. Never rewrite past forecasts. Arithmetic is done by tools/core.py."
   },
   "weights": {
@@ -2856,6 +2856,92 @@
       "sim": null,
       "oracle": 0.95,
       "blend": 0.95
+    },
+    {
+      "id": "P-0055",
+      "created": "2026-11-06",
+      "domain": "politics",
+      "horizon": "3m",
+      "question": "Will Pete Hegseth stop serving as Secretary of Defense (resignation, firing or removal) between Nov 6, 2026 and Mar 1, 2027?",
+      "resolves_on": "2027-03-01",
+      "resolution_source": "White House / Defense Department announcement or AP/Reuters reporting that he has left the post or announced a departure date on or before Mar 1, 2027",
+      "clio": 0.45,
+      "omen": 0.55,
+      "adjustment": {
+        "value": 0.0,
+        "reason": ""
+      },
+      "market": null,
+      "market_source": null,
+      "reasoning": {
+        "clio": "Cabinet members blamed for a midterm loss often go soon after: Rumsfeld resigned the day after the 2006 midterms and Sessions was pushed out the day after 2018's. But Trump has stood by Hegseth through earlier scandals, and the White House publicly denies he is leaving.",
+        "omen": "Pressure is unusually high and bipartisan: Republicans blame the Iran war for the losses, Trump is reportedly asking advisers whether Hegseth should stay, and Rep. Massie (R) threatens impeachment unless he resigns. A Democratic House from Jan 3 adds subpoenas and hearings."
+      },
+      "status": "open",
+      "outcome": null,
+      "resolved_on": null,
+      "resolution_note": null,
+      "brier": {
+        "oracle": null,
+        "clio": null,
+        "omen": null,
+        "market": null,
+        "sim": null
+      },
+      "history": [
+        {
+          "date": "2026-11-06",
+          "clio": 0.45,
+          "omen": 0.55,
+          "oracle": 0.53
+        }
+      ],
+      "sim": null,
+      "oracle": 0.53,
+      "blend": 0.53
+    },
+    {
+      "id": "P-0056",
+      "created": "2026-11-06",
+      "domain": "politics",
+      "horizon": "6m+",
+      "question": "Will the House adopt at least one article of impeachment against Pete Hegseth between Nov 6, 2026 and Dec 31, 2027?",
+      "resolves_on": "2028-01-01",
+      "resolution_source": "House Clerk roll-call votes / Congress.gov (adopted on the floor, not just introduced, referred or tabled)",
+      "clio": 0.2,
+      "omen": 0.3,
+      "adjustment": {
+        "value": 0.0,
+        "reason": ""
+      },
+      "market": null,
+      "market_source": null,
+      "reasoning": {
+        "clio": "Only two cabinet members have ever been impeached (Belknap 1876, Mayorkas 2024). Officials under this much pressure usually leave first, which ends most impeachment drives. Linked to the departure question: if he leaves before Mar 1, this is unlikely.",
+        "omen": "Massie plans to force a vote in the lame duck, some Republicans have turned on Hegseth, and from Jan 3 a large Democratic House can impeach on its own. Jeffries has been cautious, and leaders may prefer hearings to a vote."
+      },
+      "status": "open",
+      "outcome": null,
+      "resolved_on": null,
+      "resolution_note": null,
+      "brier": {
+        "oracle": null,
+        "clio": null,
+        "omen": null,
+        "market": null,
+        "sim": null
+      },
+      "history": [
+        {
+          "date": "2026-11-06",
+          "clio": 0.2,
+          "omen": 0.3,
+          "oracle": 0.28
+        }
+      ],
+      "sim": null,
+      "oracle": 0.28,
+      "blend": 0.28
     }
   ],
   "score_log": [
