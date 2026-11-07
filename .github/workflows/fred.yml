@@ -1,0 +1,40 @@
+name: Fetch FRED and election data
+# Runs on GitHub's servers, which can reach FRED and Wikipedia (the Claude cloud VM often cannot).
+on:
+  schedule:
+    - cron: "30 10 * * 1-5"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Download FRED series
+        run: |
+          mkdir -p incoming/fred
+          for s in $(python3 tools/feed.py --list-series); do
+            curl -fsS --retry 3 --max-time 60 -A "Mozilla/5.0 (ORACLE personal forecasting research)" \
+              "https://fred.stlouisfed.org/graph/fredgraph.csv?id=$s&cosd=2025-01-01" -o "incoming/fred/$s.csv.tmp" \
+              && mv "incoming/fred/$s.csv.tmp" "incoming/fred/$s.csv" || rm -f "incoming/fred/$s.csv.tmp"
+          done
+      - name: Refresh election ratings
+        continue-on-error: true
+        run: |
+          python3 -m pip install -q -r requirements.txt
+          python3 tools/elections.py refresh
+      - name: Commit if changed
+        run: |
+          git config user.name "oracle-data-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add incoming data/elections.json
+          if git diff --cached --quiet; then echo "no changes"; else
+            git commit -m "Data refresh (FRED + election ratings)"
+            git pull --rebase origin main && git push origin HEAD:main
+          fi

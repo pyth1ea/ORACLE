@@ -3098,6 +3098,20 @@
       "n_market": 4,
       "brier_sim": 0.1022,
       "n_sim": 3
+    },
+    {
+      "date": "2026-11-07",
+      "resolved_today": 0,
+      "total_resolved": 32,
+      "hits": 22,
+      "misses": 8,
+      "brier_oracle": 0.1897,
+      "brier_clio": 0.236,
+      "brier_omen": 0.153,
+      "brier_market": 0.0981,
+      "n_market": 4,
+      "brier_sim": 0.1022,
+      "n_sim": 3
     }
   ],
   "config": {
@@ -3198,7 +3212,7 @@
       "linked_oracle": 0.87,
       "projection": null,
       "trend_per_week": null,
-      "momentum": 1.0,
+      "momentum": 0.91,
       "retired": true,
       "retired_note": "Resolved Nov 4: Democrats won the House. Successor: S-OVERSIGHT."
     },
@@ -3266,7 +3280,7 @@
       "linked_oracle": 0.55,
       "projection": null,
       "trend_per_week": null,
-      "momentum": 0.62,
+      "momentum": 0.56,
       "retired": true,
       "retired_note": "Resolved Nov 4: Democrats won the Senate. Successor: S-OVERSIGHT."
     },
@@ -3347,9 +3361,13 @@
         "p90": 7.21
       },
       "linked_oracle": 0.61,
-      "projection": null,
-      "trend_per_week": 0.02,
-      "momentum": 1.0
+      "projection": {
+        "kind": "restabilizing",
+        "date": "2026-11-28",
+        "note": "friction regains the upper hand at the current trend"
+      },
+      "trend_per_week": -0.23,
+      "momentum": 0.91
     },
     {
       "id": "S-FED",
@@ -3414,8 +3432,8 @@
       },
       "linked_oracle": 0.13,
       "projection": null,
-      "trend_per_week": -0.82,
-      "momentum": -0.13,
+      "trend_per_week": -0.62,
+      "momentum": -0.12,
       "retired": true,
       "retired_note": "Oct 28 meeting resolved (hold, 10-2). Successor: S-FEDDEC for the December meeting."
     },
@@ -3498,11 +3516,11 @@
       "linked_oracle": 0.12,
       "projection": {
         "kind": "crossing",
-        "date": "2026-12-16",
+        "date": "2026-12-17",
         "note": "pressure overtakes friction at the current trend"
       },
       "trend_per_week": 0.24,
-      "momentum": 1.75
+      "momentum": 1.54
     },
     {
       "id": "S-HORMUZ",
@@ -3576,13 +3594,9 @@
         "p90": 8.34
       },
       "linked_oracle": 0.11,
-      "projection": {
-        "kind": "crossing",
-        "date": "2027-04-24",
-        "note": "pressure overtakes friction at the current trend"
-      },
-      "trend_per_week": 0.11,
-      "momentum": -0.33
+      "projection": null,
+      "trend_per_week": -0.42,
+      "momentum": -0.3
     },
     {
       "id": "S-STREETS",
@@ -3642,7 +3656,7 @@
       "linked_oracle": 0.19,
       "projection": null,
       "trend_per_week": null,
-      "momentum": -0.32
+      "momentum": -0.29
     },
     {
       "id": "S-FUNDING",
@@ -3750,7 +3764,7 @@
       "linked_oracle": 0.05,
       "projection": null,
       "trend_per_week": null,
-      "momentum": 0.2
+      "momentum": 0.18
     },
     {
       "id": "S-FEDDEC",
@@ -3800,7 +3814,7 @@
       "linked_oracle": 0.57,
       "projection": null,
       "trend_per_week": -0.8,
-      "momentum": -0.29
+      "momentum": -0.26
     },
     {
       "id": "S-OVERSIGHT",
@@ -3843,7 +3857,7 @@
       "linked_oracle": 0.27,
       "projection": null,
       "trend_per_week": null,
-      "momentum": 0.35
+      "momentum": 0.31
     }
   ],
   "catalysts": [
@@ -5393,8 +5407,8 @@
     ]
   },
   "review": {
-    "date": "2026-11-06",
-    "since": "2026-10-30",
+    "date": "2026-11-07",
+    "since": "2026-10-31",
     "resolved": [
       {
         "id": "P-0001",
@@ -5455,26 +5469,6 @@
         "omen": 0.82,
         "hit": true,
         "closer_engine": "OMEN"
-      },
-      {
-        "id": "P-0009",
-        "question": "Will the Federal Reserve raise the federal funds target range at its October 27-28, 2026 meeting?",
-        "outcome": false,
-        "oracle": 0.13,
-        "clio": 0.12,
-        "omen": 0.14,
-        "hit": true,
-        "closer_engine": "CLIO"
-      },
-      {
-        "id": "P-0011",
-        "question": "Will the Q3 2026 GDP advance estimate show real growth of 1.0% or more (annualized)?",
-        "outcome": true,
-        "oracle": 0.7,
-        "clio": 0.75,
-        "omen": 0.66,
-        "hit": true,
-        "closer_engine": "CLIO"
       },
       {
         "id": "P-0013",
@@ -5667,7 +5661,7 @@
         "closer_engine": "OMEN"
       }
     ],
-    "clio_wins": 5,
+    "clio_wins": 3,
     "omen_wins": 21,
     "big_moves": [
       {
@@ -5721,22 +5715,6 @@
       }
     ],
     "weight_changes": [
-      {
-        "date": "2026-10-30",
-        "domain": "economy",
-        "prediction": "P-0009",
-        "clio": 0.454,
-        "omen": 0.546,
-        "change_clio": 0.001
-      },
-      {
-        "date": "2026-10-30",
-        "domain": "economy",
-        "prediction": "P-0011",
-        "clio": 0.461,
-        "omen": 0.539,
-        "change_clio": 0.007
-      },
       {
         "date": "2026-11-02",
         "domain": "politics",
@@ -5976,49 +5954,78 @@
       "date": "2026-10-14",
       "V": 0.514,
       "p": 0.401,
-      "outcome": null
+      "outcome": true,
+      "evidence": [
+        "E-20261015-05"
+      ],
+      "resolved_on": "2026-11-07",
+      "brier": 0.3588
     },
     {
       "date": "2026-10-16",
       "V": 0.515,
       "p": 0.403,
-      "outcome": null
+      "outcome": false,
+      "evidence": [],
+      "resolved_on": "2026-11-07",
+      "brier": 0.1624
     },
     {
       "date": "2026-10-19",
       "V": 0.486,
       "p": 0.355,
-      "outcome": null
+      "outcome": false,
+      "evidence": [],
+      "resolved_on": "2026-11-07",
+      "brier": 0.126
     },
     {
       "date": "2026-10-21",
       "V": 0.486,
       "p": 0.355,
-      "outcome": null
+      "outcome": false,
+      "evidence": [],
+      "resolved_on": "2026-11-07",
+      "brier": 0.126
     },
     {
       "date": "2026-10-23",
       "V": 0.482,
       "p": 0.348,
-      "outcome": null
+      "outcome": false,
+      "evidence": [],
+      "resolved_on": "2026-11-07",
+      "brier": 0.1211
     },
     {
       "date": "2026-10-26",
       "V": 0.521,
       "p": 0.413,
-      "outcome": null
+      "outcome": false,
+      "evidence": [],
+      "resolved_on": "2026-11-07",
+      "brier": 0.1706
     },
     {
       "date": "2026-10-28",
       "V": 0.53,
       "p": 0.428,
-      "outcome": null
+      "outcome": false,
+      "evidence": [],
+      "resolved_on": "2026-11-07",
+      "brier": 0.1832
     },
     {
       "date": "2026-10-30",
       "V": 0.497,
       "p": 0.373,
-      "outcome": null
+      "outcome": true,
+      "evidence": [
+        "E-20261105-01",
+        "S&P 500 move 2026-11-05"
+      ],
+      "resolved_on": "2026-11-07",
+      "brier": 0.3931
     },
     {
       "date": "2026-11-02",
@@ -6037,36 +6044,37 @@
       "V": 0.486,
       "p": 0.355,
       "outcome": null
+    },
+    {
+      "date": "2026-11-07",
+      "V": 0.477,
+      "p": 0.341,
+      "outcome": null
     }
   ],
   "volatility": {
-    "V": 0.486,
+    "V": 0.477,
     "path": "gamma",
-    "O": 3.64,
-    "C": 6.33,
-    "Pm": 1.212,
+    "O": 3.63,
+    "C": 6.34,
+    "Pm": 1.171,
     "w_omen": 0.576,
     "w_clio": 0.424,
     "inertia": 1.0,
-    "n_events": 44,
+    "n_events": 43,
     "calendar_drivers": [
       {
         "id": "C-004",
         "name": "Iran's answer to the US offer to reopen Gulf shipping",
-        "add": 0.138
-      },
-      {
-        "id": "C-008",
-        "name": "October jobs report",
-        "add": 0.05
+        "add": 0.144
       },
       {
         "id": "C-009",
         "name": "October inflation report (date approx.)",
-        "add": 0.025
+        "add": 0.027
       }
     ],
-    "date": "2026-11-06",
+    "date": "2026-11-07",
     "by_domain": {
       "politics": {
         "V": 0.633,
@@ -6077,31 +6085,31 @@
         "n_events": 22
       },
       "economy": {
-        "V": 0.459,
+        "V": 0.445,
         "path": "gamma",
-        "O": 3.85,
-        "C": 5.68,
-        "Pm": 1.075,
-        "n_events": 11
+        "O": 3.83,
+        "C": 5.7,
+        "Pm": 1.027,
+        "n_events": 10
       },
       "unrest": null,
       "foreign": {
-        "V": 0.422,
+        "V": 0.423,
         "path": "gamma",
         "O": 3.41,
         "C": 5.34,
-        "Pm": 1.138,
+        "Pm": 1.144,
         "n_events": 10
       }
     },
     "shock": {
-      "p": 0.355,
+      "p": 0.341,
       "a": -4.0,
       "b": 7.0,
       "fitted": false,
-      "n_resolved": 0,
-      "brier": null,
-      "hits": 0
+      "n_resolved": 8,
+      "brier": 0.2051,
+      "hits": 6
     }
   },
   "volatility_log": [
@@ -6236,6 +6244,18 @@
         "unrest": null,
         "foreign": 0.422
       }
+    },
+    {
+      "date": "2026-11-07",
+      "V": 0.477,
+      "path": "gamma",
+      "p_shock": 0.341,
+      "by_domain": {
+        "politics": 0.633,
+        "economy": 0.445,
+        "unrest": null,
+        "foreign": 0.423
+      }
     }
   ],
   "history_scale": {
@@ -6265,7 +6285,7 @@
           "Parliament fights over the anti-Catholic Ecclesiastical Titles Bill",
           "Chartist reform movement fades after 1848"
         ],
-        "mix_similarity": 0.768
+        "mix_similarity": 0.771
       },
       {
         "id": "H-1997",
@@ -6320,7 +6340,7 @@
           "Suez Canal tension after Egypt nationalizes the canal",
           "Economy near full employment with low inflation"
         ],
-        "mix_similarity": 0.983
+        "mix_similarity": 0.984
       },
       {
         "id": "H-2018",
@@ -6347,7 +6367,7 @@
           "Mass protests at the Capitol; hundreds arrested",
           "Trade-war tariffs on China escalate"
         ],
-        "mix_similarity": 0.905
+        "mix_similarity": 0.908
       },
       {
         "id": "H-1974",
@@ -6375,7 +6395,7 @@
           "'Smoking gun' tape released",
           "House committee approves articles of impeachment"
         ],
-        "mix_similarity": 0.983
+        "mix_similarity": 0.984
       },
       {
         "id": "H-2001",
@@ -6403,7 +6423,7 @@
           "All US airspace shut down for days",
           "Terrorist attacks kill nearly 3,000 people"
         ],
-        "mix_similarity": 0.708
+        "mix_similarity": 0.704
       },
       {
         "id": "H-2011",
@@ -6430,7 +6450,7 @@
           "Unemployment stuck at 9.1%",
           "Debt-ceiling deal reached hours before default deadline"
         ],
-        "mix_similarity": 0.924
+        "mix_similarity": 0.921
       },
       {
         "id": "H-1979US",
@@ -6458,7 +6478,7 @@
           "Ted Kennedy launches a primary challenge to the president",
           "Militants seize the US embassy in Tehran and take hostages"
         ],
-        "mix_similarity": 0.875
+        "mix_similarity": 0.872
       },
       {
         "id": "H-2021",
@@ -6486,7 +6506,7 @@
           "Georgia runoffs flip control of the Senate",
           "Recording of pressure call to Georgia's secretary of state released"
         ],
-        "mix_similarity": 0.96
+        "mix_similarity": 0.962
       },
       {
         "id": "H-1962",
@@ -6514,7 +6534,7 @@
           "Kennedy announces naval quarantine of Cuba",
           "Congress and public rally behind the president"
         ],
-        "mix_similarity": 0.712
+        "mix_similarity": 0.71
       },
       {
         "id": "H-1979UK",
@@ -6541,7 +6561,7 @@
           "Inflation back above 9%; government pay caps collapse",
           "'Crisis? What crisis?' headline sums up the prime minister's response"
         ],
-        "mix_similarity": 0.977
+        "mix_similarity": 0.975
       },
       {
         "id": "H-1968",
@@ -6569,7 +6589,7 @@
           "Poor People's Campaign encamped on the National Mall",
           "Cities still scarred by riots after Martin Luther King Jr.'s assassination"
         ],
-        "mix_similarity": 0.959
+        "mix_similarity": 0.96
       },
       {
         "id": "H-2008",
@@ -6596,7 +6616,7 @@
           "House rejects the bailout; stocks plunge 7%",
           "Washington Mutual seized: largest bank failure in US history"
         ],
-        "mix_similarity": 0.867
+        "mix_similarity": 0.864
       },
       {
         "id": "H-2020",
@@ -6652,7 +6672,7 @@
           "Yeltsin defies the coup; crowds defend parliament",
           "Shortages and rationing across the country"
         ],
-        "mix_similarity": 0.992
+        "mix_similarity": 0.993
       },
       {
         "id": "H-1923",
@@ -6680,7 +6700,7 @@
           "Hitler's Beer Hall Putsch fails in Munich",
           "Separatist revolts in the Rhineland"
         ],
-        "mix_similarity": 0.927
+        "mix_similarity": 0.924
       },
       {
         "id": "H-1933",
@@ -6707,7 +6727,7 @@
           "Unemployment near 25%",
           "Farm foreclosure riots in the Midwest"
         ],
-        "mix_similarity": 0.866
+        "mix_similarity": 0.863
       },
       {
         "id": "H-1789",
@@ -6735,7 +6755,7 @@
           "Royal troops mass around Paris",
           "State bankruptcy looms"
         ],
-        "mix_similarity": 0.992
+        "mix_similarity": 0.991
       },
       {
         "id": "H-49BC",
@@ -6762,7 +6782,7 @@
           "Senate orders Caesar to disband his army",
           "Years of gang warfare in Rome's streets"
         ],
-        "mix_similarity": 0.96
+        "mix_similarity": 0.962
       },
       {
         "id": "H-1861",
@@ -6789,13 +6809,13 @@
           "Banks and trade between North and South collapse",
           "Seven states have seceded; more are about to follow"
         ],
-        "mix_similarity": 0.997
+        "mix_similarity": 0.998
       }
     ],
     "closest_level": [
+      "H-2018",
       "H-1974",
-      "H-2001",
-      "H-2018"
+      "H-2001"
     ],
     "closest_kind": [
       "H-1974",
@@ -6807,12 +6827,12 @@
       "H-1974"
     ],
     "today": {
-      "V": 0.486,
+      "V": 0.477,
       "profile": {
         "chaos": 2.78,
-        "polarization": 3.34,
-        "economic": 2.37,
-        "resistance": 6.33
+        "polarization": 3.35,
+        "economic": 2.35,
+        "resistance": 6.34
       }
     }
   }

@@ -44,15 +44,13 @@ SOURCES = [
     ("PBS NewsHour", "center", "https://www.pbs.org/newshour/feeds/rss/headlines"),
     ("The Hill", "center", "https://thehill.com/news/feed/"),
     ("Axios", "center", "https://api.axios.com/feed/"),
-    ("NPR", "center-left", "https://feeds.npr.org/1001/rss.xml"),
-    ("NPR Politics", "center-left", "https://feeds.npr.org/1014/rss.xml"),
-    ("NPR Business", "center-left", "https://feeds.npr.org/1006/rss.xml"),
+        ("NPR", "center-left", "https://news.google.com/rss/search?q=when:1d+site:npr.org&hl=en-US&gl=US&ceid=US:en"),
     ("Politico", "center-left", "https://rss.politico.com/politics-news.xml"),
     ("The Guardian US", "left", "https://www.theguardian.com/us-news/rss"),
     ("Fox News", "right", "https://moxie.foxnews.com/google-publisher/politics.xml"),
     ("Washington Examiner", "right", "https://www.washingtonexaminer.com/feed/"),
     ("Federal Reserve", "official", "https://www.federalreserve.gov/feeds/press_all.xml"),
-    ("BLS", "official", "https://www.bls.gov/feed/bls_latest.rss"),
+    ("BLS", "official", "https://news.google.com/rss/search?q=when:7d+site:bls.gov&hl=en-US&gl=US&ceid=US:en"),
 ]
 
 # FRED series pulled without an API key (public CSV endpoint).
@@ -223,20 +221,71 @@ def rank(clusters):
     return out
 
 
+INCOMING = ROOT / "incoming" / "fred"
+# Yahoo Finance fallback (reachable from the cloud VM) for the few series that have a close match there.
+# Yahoo dates are trading days; the scale converts units if needed.
+YAHOO = {"SP500": ("%5EGSPC", 1.0), "VIXCLS": ("%5EVIX", 1.0), "DGS10": ("%5ETNX", 1.0)}
+
+
+def _read_csv_text(text):
+    rows = list(csv.reader(io.StringIO(text)))[1:]
+    return [(d, float(v)) for d, v in rows if v not in (".", "")]
+
+
+def _incoming_obs(sid, start):
+    """Observations from incoming/fred/<SERIES>.csv (written by the GitHub Action, which can reach FRED)."""
+    f = INCOMING / f"{sid}.csv"
+    if not f.exists():
+        return []
+    return [(d, v) for d, v in _read_csv_text(f.read_text(encoding="utf-8")) if d >= start]
+
+
+def _yahoo_obs(sid):
+    sym, scale = YAHOO[sid]
+    r = requests.get(f"https://query1.finance.yahoo.com/v8/finance/chart/{sym}?range=3mo&interval=1d",
+                     headers=UA, timeout=TIMEOUT)
+    r.raise_for_status()
+    res = r.json()["chart"]["result"][0]
+    out = []
+    for t, c in zip(res["timestamp"], res["indicators"]["quote"][0]["close"]):
+        if c is not None:
+            out.append((dt.datetime.fromtimestamp(t, dt.timezone.utc).date().isoformat(), round(c * scale, 4)))
+    return out
+
+
 def fetch_fred(start, previous=None):
-    """Fresh FRED numbers. A series that fails (timeout, blocked network) keeps its last good copy, marked
-    stale, instead of being wiped: losing its history would break the dashboard and the shock-watch grading."""
+    """Fresh FRED numbers. Order of preference per series: direct FRED download, then incoming/fred/ (committed
+    by the GitHub Action, which can reach FRED), then Yahoo Finance for S&P 500 / VIX / 10-year yield (merged
+    into the saved history). A series that still fails keeps its last good copy, marked stale, instead of being
+    wiped: losing its history would break the dashboard and the shock-watch grading."""
     previous = previous or {}
-    series, failed = {}, []
+    series, failed, how = {}, [], {}
+    fred_down, direct_err = False, ""
     for sid, (name, units) in FRED.items():
-        url = f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={sid}&cosd={start}"
+        old = previous.get(sid) or {}
+        old_hist = [(d, v) for d, v in old.get("history", [])]
         try:
-            r = requests.get(url, headers=UA, timeout=TIMEOUT)
-            r.raise_for_status()
-            rows = list(csv.reader(io.StringIO(r.text)))[1:]
-            obs = [(d, float(v)) for d, v in rows if v not in (".", "")]
-            if not obs:
-                raise ValueError("no observations returned")
+            obs, src = [], None
+            if not fred_down:
+                try:
+                    r = requests.get(f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={sid}&cosd={start}",
+                                     headers=UA, timeout=8)
+                    r.raise_for_status()
+                    obs, src = _read_csv_text(r.text), "FRED"
+                except Exception as ex:
+                    fred_down, direct_err = True, str(ex)[:100]  # don't wait on 14 more timeouts
+            inc = _incoming_obs(sid, start)
+            if inc and (not obs or inc[-1][0] > obs[-1][0]):
+                obs, src = inc, "incoming"
+            if (not obs or obs[-1][0] <= (old_hist[-1][0] if old_hist else "")) and sid in YAHOO:
+                base = dict(old_hist)
+                base.update(dict(obs))
+                base.update(dict(_yahoo_obs(sid)))
+                obs, src = sorted(base.items()), "Yahoo"
+            if src is None or not obs:
+                raise ValueError("no source reachable (FRED: %s)" % direct_err)
+            if old_hist and obs[-1][0] < old_hist[-1][0]:
+                raise ValueError("source older than saved copy")
             last_d, last_v = obs[-1]
             prev = obs[-2][1] if len(obs) > 1 else None
             series[sid] = {
@@ -244,14 +293,18 @@ def fetch_fred(start, previous=None):
                 "prev": prev, "change": None if prev is None else round(last_v - prev, 4),
                 "history": obs[-130:],
             }
+            if src != "FRED":
+                series[sid]["source"] = src
+            how[sid] = src
         except Exception as ex:
             failed.append(sid)
-            old = previous.get(sid)
             if old and "last" in old:
                 series[sid] = {**old, "stale": True, "error": str(ex)[:160]}
             else:
                 series[sid] = {"name": name, "units": units, "error": str(ex)[:160]}
-        time.sleep(0.2)
+        time.sleep(0.1)
+    if how:
+        print("Series sources: " + ", ".join(f"{k}={v}" for k, v in how.items() if v != "FRED"))
 
     derived = {}
     for sid, label in (("CPIAUCNS", "cpi_yoy"), ("CPILFESL", "core_cpi_yoy")):
@@ -304,7 +357,11 @@ def main():
     ap.add_argument("--top", type=int, default=45)
     ap.add_argument("--no-news", action="store_true")
     ap.add_argument("--no-metrics", action="store_true")
+    ap.add_argument("--list-series", action="store_true", help="print the FRED series ids and exit (used by the workflow)")
     args = ap.parse_args()
+    if args.list_series:
+        print("\n".join(FRED))
+        return
 
     date = today().isoformat()
     (DATA / "feed").mkdir(parents=True, exist_ok=True)
@@ -345,6 +402,21 @@ def main():
             print(f"  {v['name']}: {v['last']} ({v['last_date']})")
         for k, v in derived.items():
             print(f"  {k}: {v['value']}{v['units'] if v['units'] == '%' else ''} ({v['date']})")
+
+    elections_reminder()
+
+
+def elections_reminder():
+    """Make the elections step in ORACLE.md section 11 impossible to miss."""
+    try:
+        meta = json.loads((DATA / "elections.json").read_text(encoding="utf-8"))["meta"]
+        age = (today() - dt.date.fromisoformat(meta["refreshed"])).days
+    except Exception:
+        return
+    print(f"\nREMINDER (ORACLE.md step 7, Elections): ratings last refreshed {meta['refreshed']} ({age} days ago). "
+          "Run `python3 tools/elections.py refresh` then `python3 tools/elections.py status`, and record results "
+          "and early vote for any race not yet called. (If Wikipedia answers 429 from this VM, the GitHub Action "
+          "in .github/workflows/fred.yml refreshes data/elections.json; `git pull` to get it.)")
 
 
 if __name__ == "__main__":

@@ -115,6 +115,15 @@ simulation). Never hand-compute what a tool computes, and never edit a field a t
 happens in a Claude Code **cloud routine** at about 6 AM Central on **Mondays, Wednesdays and Fridays**, so the owner's PC doesn't need to be on. Each run
 pushes its results to `main`, which updates the phone app.
 
+**Data the cloud VM can't reach.** From the cloud VM, FRED (`fred.stlouisfed.org`) times out and Wikipedia often answers
+429 (too many requests); NPR and BLS RSS return 403. So: (1) the GitHub Action `.github/workflows/fred.yml` runs on GitHub's
+servers about 10:30 UTC Monday to Friday (and on demand), downloads every FRED series into `incoming/fred/<SERIES>.csv`,
+runs `tools/elections.py refresh`, and commits only if something changed; (2) `tools/feed.py` uses a direct FRED download if
+it works, else `incoming/fred/` if fresher, else Yahoo Finance for the S&P 500, VIX and 10-year yield (series marked
+`source` in `metrics.json`; other series stay marked stale). So always `git pull` before the run. NPR and BLS now come
+through Google News RSS. Wikipedia: if `elections.py refresh` fails here, the Action's copy of `data/elections.json` is
+the refresh. `feed.py` prints an Elections reminder at the end of its output.
+
 **Python:** in the cloud (Linux), use `python3` after `python3 -m pip install -r requirements.txt` (plain `pip` there belongs to a different Python). On the owner's Windows PC, use
 `%LOCALAPPDATA%\Programs\Python\Python312\python.exe` (plain `python` there is a Store stub).
 
@@ -334,7 +343,7 @@ Prefer **numbers over narrative** and **many outlets over one**. No single sourc
 - **Feed** (`feed.py`): AP, Reuters, C-SPAN (via Google News), BBC, PBS, The Hill, Axios, NPR, Politico, The Guardian US,
   Fox News, Washington Examiner, Federal Reserve, BLS. Check its "lean coverage" line, and when one side is thin,
   search for it deliberately.
-- **Data:** FRED (in `metrics.json`), BLS, BEA, the Federal Reserve, EIA, AAA.
+- **Data:** FRED (in `metrics.json`; fetched via `incoming/fred/` or Yahoo when the VM can't reach it, see §1), BLS, BEA, the Federal Reserve, EIA, AAA.
 - **Polls/elections:** Silver Bulletin, FiftyPlusOne, RealClearPolling, NYT, Decision Desk HQ, Cook, official results.
 - **Benchmarks:** Kalshi, Polymarket, Metaculus, CME FedWatch.
 - **Conflict/unrest:** ACLED, Crisis Group, CENTCOM, UKMTO.
