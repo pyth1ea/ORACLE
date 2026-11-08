@@ -4,9 +4,9 @@
     "version": "2.0",
     "scope": "United States",
     "created": "2026-10-14",
-    "last_run": "2026-11-06",
-    "run_count": 11,
-    "next_id": 57,
+    "last_run": "2026-11-07",
+    "run_count": 12,
+    "next_id": 59,
     "note": "Single source of truth. Rules live in ORACLE.md. Never rewrite past forecasts. Arithmetic is done by tools/core.py."
   },
   "weights": {
@@ -2942,6 +2942,92 @@
       "sim": null,
       "oracle": 0.28,
       "blend": 0.28
+    },
+    {
+      "id": "P-0057",
+      "created": "2026-11-07",
+      "domain": "politics",
+      "horizon": "1m",
+      "question": "Will Donald Trump publicly claim that fraud or rigging cost Republicans the House or the Senate in the 2026 midterms, between Nov 7 and Dec 31, 2026?",
+      "resolves_on": "2027-01-01",
+      "resolution_source": "AP, Reuters or NYT reporting Trump saying the midterms overall, or control of the House or Senate, were rigged, stolen or fraudulent. Claims about single races (Alaska, Mississippi, Georgia HD-154) do not count.",
+      "clio": 0.25,
+      "omen": 0.3,
+      "adjustment": {
+        "value": 0.0,
+        "reason": ""
+      },
+      "market": null,
+      "market_source": null,
+      "reasoning": {
+        "clio": "After 2018 Trump alleged 'electoral corruption' in Florida and Arizona counts, and after 2022 he backed claims in Arizona, but in neither case did he call the national result stolen. So far he is blaming Republican candidates and the party, not fraud.",
+        "omen": "The margins are too big to dispute (AP: rigging claims have been 'limited'), but there are hooks: the Georgia memory card, the Alaska decoy candidate and the Mississippi affidavit fight. A bad turn in Mississippi or Alaska, or pressure over Hegseth, could push him toward a broader claim."
+      },
+      "status": "open",
+      "outcome": null,
+      "resolved_on": null,
+      "resolution_note": null,
+      "brier": {
+        "oracle": null,
+        "clio": null,
+        "omen": null,
+        "market": null,
+        "sim": null
+      },
+      "history": [
+        {
+          "date": "2026-11-07",
+          "clio": 0.25,
+          "omen": 0.3,
+          "oracle": 0.29
+        }
+      ],
+      "sim": null,
+      "oracle": 0.29,
+      "blend": 0.29
+    },
+    {
+      "id": "P-0058",
+      "created": "2026-11-07",
+      "domain": "politics",
+      "horizon": "1m",
+      "question": "Will Democrats hold at least 91 of the 180 Georgia House seats once the Dec 1 runoff and any recounts are settled (results as of Dec 15, 2026)?",
+      "resolves_on": "2026-12-15",
+      "resolution_source": "Georgia Secretary of State certified results / AJC tally of Georgia House seats",
+      "clio": 0.85,
+      "omen": 0.8,
+      "adjustment": {
+        "value": 0.0,
+        "reason": ""
+      },
+      "market": null,
+      "market_source": null,
+      "reasoning": {
+        "clio": "After the Seminole County card flipped HD-154, Democrats sit at about 92 seats, one above the 91 needed. Recounts rarely move a result by more than a few dozen votes, but the closest Democratic win (Luchey over Hong) is only 27 votes, and the Cheokas-Wolfe runoff is Dec 1.",
+        "omen": "Polarization over the memory card raises the odds of more legal challenges in close seats, though the investigation so far points to a human error that the state's own check caught."
+      },
+      "status": "open",
+      "outcome": null,
+      "resolved_on": null,
+      "resolution_note": null,
+      "brier": {
+        "oracle": null,
+        "clio": null,
+        "omen": null,
+        "market": null,
+        "sim": null
+      },
+      "history": [
+        {
+          "date": "2026-11-07",
+          "clio": 0.85,
+          "omen": 0.8,
+          "oracle": 0.81
+        }
+      ],
+      "sim": null,
+      "oracle": 0.81,
+      "blend": 0.81
     }
   ],
   "score_log": [
@@ -6047,21 +6133,21 @@
     },
     {
       "date": "2026-11-07",
-      "V": 0.477,
-      "p": 0.341,
+      "V": 0.472,
+      "p": 0.333,
       "outcome": null
     }
   ],
   "volatility": {
-    "V": 0.477,
+    "V": 0.472,
     "path": "gamma",
-    "O": 3.63,
-    "C": 6.34,
+    "O": 3.61,
+    "C": 6.41,
     "Pm": 1.171,
     "w_omen": 0.576,
     "w_clio": 0.424,
     "inertia": 1.0,
-    "n_events": 43,
+    "n_events": 44,
     "calendar_drivers": [
       {
         "id": "C-004",
@@ -6077,12 +6163,12 @@
     "date": "2026-11-07",
     "by_domain": {
       "politics": {
-        "V": 0.633,
+        "V": 0.628,
         "path": "beta",
-        "O": 3.67,
-        "C": 6.88,
+        "O": 3.63,
+        "C": 6.96,
         "Pm": 1.0,
-        "n_events": 22
+        "n_events": 23
       },
       "economy": {
         "V": 0.445,
@@ -6103,7 +6189,7 @@
       }
     },
     "shock": {
-      "p": 0.341,
+      "p": 0.333,
       "a": -4.0,
       "b": 7.0,
       "fitted": false,
@@ -6247,11 +6333,11 @@
     },
     {
       "date": "2026-11-07",
-      "V": 0.477,
+      "V": 0.472,
       "path": "gamma",
-      "p_shock": 0.341,
+      "p_shock": 0.333,
       "by_domain": {
-        "politics": 0.633,
+        "politics": 0.628,
         "economy": 0.445,
         "unrest": null,
         "foreign": 0.423
@@ -6285,7 +6371,7 @@
           "Parliament fights over the anti-Catholic Ecclesiastical Titles Bill",
           "Chartist reform movement fades after 1848"
         ],
-        "mix_similarity": 0.771
+        "mix_similarity": 0.784
       },
       {
         "id": "H-1997",
@@ -6312,7 +6398,7 @@
           "Teamsters strike shuts down UPS deliveries",
           "Clinton signs bipartisan balanced-budget deal"
         ],
-        "mix_similarity": 0.994
+        "mix_similarity": 0.996
       },
       {
         "id": "H-1956",
@@ -6340,7 +6426,7 @@
           "Suez Canal tension after Egypt nationalizes the canal",
           "Economy near full employment with low inflation"
         ],
-        "mix_similarity": 0.984
+        "mix_similarity": 0.987
       },
       {
         "id": "H-2018",
@@ -6367,7 +6453,7 @@
           "Mass protests at the Capitol; hundreds arrested",
           "Trade-war tariffs on China escalate"
         ],
-        "mix_similarity": 0.908
+        "mix_similarity": 0.917
       },
       {
         "id": "H-1974",
@@ -6395,7 +6481,7 @@
           "'Smoking gun' tape released",
           "House committee approves articles of impeachment"
         ],
-        "mix_similarity": 0.984
+        "mix_similarity": 0.987
       },
       {
         "id": "H-2001",
@@ -6423,7 +6509,7 @@
           "All US airspace shut down for days",
           "Terrorist attacks kill nearly 3,000 people"
         ],
-        "mix_similarity": 0.704
+        "mix_similarity": 0.69
       },
       {
         "id": "H-2011",
@@ -6450,7 +6536,7 @@
           "Unemployment stuck at 9.1%",
           "Debt-ceiling deal reached hours before default deadline"
         ],
-        "mix_similarity": 0.921
+        "mix_similarity": 0.913
       },
       {
         "id": "H-1979US",
@@ -6478,7 +6564,7 @@
           "Ted Kennedy launches a primary challenge to the president",
           "Militants seize the US embassy in Tehran and take hostages"
         ],
-        "mix_similarity": 0.872
+        "mix_similarity": 0.861
       },
       {
         "id": "H-2021",
@@ -6506,7 +6592,7 @@
           "Georgia runoffs flip control of the Senate",
           "Recording of pressure call to Georgia's secretary of state released"
         ],
-        "mix_similarity": 0.962
+        "mix_similarity": 0.968
       },
       {
         "id": "H-1962",
@@ -6534,7 +6620,7 @@
           "Kennedy announces naval quarantine of Cuba",
           "Congress and public rally behind the president"
         ],
-        "mix_similarity": 0.71
+        "mix_similarity": 0.7
       },
       {
         "id": "H-1979UK",
@@ -6561,7 +6647,7 @@
           "Inflation back above 9%; government pay caps collapse",
           "'Crisis? What crisis?' headline sums up the prime minister's response"
         ],
-        "mix_similarity": 0.975
+        "mix_similarity": 0.972
       },
       {
         "id": "H-1968",
@@ -6589,7 +6675,7 @@
           "Poor People's Campaign encamped on the National Mall",
           "Cities still scarred by riots after Martin Luther King Jr.'s assassination"
         ],
-        "mix_similarity": 0.96
+        "mix_similarity": 0.962
       },
       {
         "id": "H-2008",
@@ -6616,7 +6702,7 @@
           "House rejects the bailout; stocks plunge 7%",
           "Washington Mutual seized: largest bank failure in US history"
         ],
-        "mix_similarity": 0.864
+        "mix_similarity": 0.853
       },
       {
         "id": "H-2020",
@@ -6644,7 +6730,7 @@
           "US COVID deaths pass 100,000",
           "Fed and Congress pour trillions into the economy"
         ],
-        "mix_similarity": 0.988
+        "mix_similarity": 0.986
       },
       {
         "id": "H-1991",
@@ -6672,7 +6758,7 @@
           "Yeltsin defies the coup; crowds defend parliament",
           "Shortages and rationing across the country"
         ],
-        "mix_similarity": 0.993
+        "mix_similarity": 0.995
       },
       {
         "id": "H-1923",
@@ -6700,7 +6786,7 @@
           "Hitler's Beer Hall Putsch fails in Munich",
           "Separatist revolts in the Rhineland"
         ],
-        "mix_similarity": 0.924
+        "mix_similarity": 0.916
       },
       {
         "id": "H-1933",
@@ -6727,7 +6813,7 @@
           "Unemployment near 25%",
           "Farm foreclosure riots in the Midwest"
         ],
-        "mix_similarity": 0.863
+        "mix_similarity": 0.852
       },
       {
         "id": "H-1789",
@@ -6755,7 +6841,7 @@
           "Royal troops mass around Paris",
           "State bankruptcy looms"
         ],
-        "mix_similarity": 0.991
+        "mix_similarity": 0.988
       },
       {
         "id": "H-49BC",
@@ -6782,7 +6868,7 @@
           "Senate orders Caesar to disband his army",
           "Years of gang warfare in Rome's streets"
         ],
-        "mix_similarity": 0.962
+        "mix_similarity": 0.967
       },
       {
         "id": "H-1861",
@@ -6819,20 +6905,20 @@
     ],
     "closest_kind": [
       "H-1974",
-      "H-2011",
-      "H-2018"
+      "H-2018",
+      "H-2011"
     ],
     "between": [
       "H-2018",
       "H-1974"
     ],
     "today": {
-      "V": 0.477,
+      "V": 0.472,
       "profile": {
-        "chaos": 2.78,
-        "polarization": 3.35,
-        "economic": 2.35,
-        "resistance": 6.34
+        "chaos": 2.75,
+        "polarization": 3.38,
+        "economic": 2.29,
+        "resistance": 6.41
       }
     }
   }

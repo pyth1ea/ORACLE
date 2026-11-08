@@ -2150,6 +2150,30 @@
         "resistance": 8
       },
       "systems": {}
+    },
+    {
+      "id": "E-20261106-01",
+      "date": "2026-11-06",
+      "domain": "politics",
+      "title": "Georgia: uncounted memory card (388 votes) found in Seminole County flips state House District 154 to the Republican; Raffensperger opens investigation, Democrats' new House majority narrows to about 92 of 180",
+      "sources": [
+        "Atlanta Journal-Constitution",
+        "WCTV",
+        "WTXL",
+        "The Center Square"
+      ],
+      "url": "https://www.ajc.com/politics/2026/11/georgia-elections-missing-memory-card/",
+      "omen": {
+        "chaos": 2,
+        "polarization": 4,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2020 Georgia audit found uncounted memory cards in Floyd and Fayette counties",
+        "precedent_match": 7,
+        "resistance": 8
+      },
+      "systems": {}
     }
   ]
 }
