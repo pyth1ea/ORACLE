@@ -1,7 +1,7 @@
 {
  "meta": {
   "election_day": "2026-11-03",
-  "refreshed": "2026-11-02",
+  "refreshed": "2026-11-09",
   "control": {
    "house": "P-0001",
    "senate": "P-0002"
@@ -460,7 +460,7 @@
     "name": "Tommy Tuberville",
     "party": "R"
    },
-   "status": "Incumbent retiring / to run for governor",
+   "status": "Incumbent retiring / to run for governor. / Republican hold.",
    "open": true,
    "candidates": [
     {
@@ -468,7 +468,7 @@
      "party": "D"
     },
     {
-     "name": "Barry Moore",
+     "name": "Y Barry Moore",
      "party": "R"
     }
    ],
@@ -513,7 +513,7 @@
    ],
    "pvi": "R+6",
    "last": "53.90% R",
-   "score": -0.33,
+   "score": -0.25,
    "rating": "Toss-up",
    "n_raters": 12,
    "ratings": {
@@ -537,15 +537,15 @@
     "name": "Tom Cotton",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected",
+   "open": true,
    "candidates": [
     {
      "name": "Hallie Shoffner",
      "party": "D"
     },
     {
-     "name": "Tom Cotton",
+     "name": "Y Tom Cotton",
      "party": "R"
     },
     {
@@ -572,11 +572,11 @@
     "name": "John Hickenlooper",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected",
+   "open": true,
    "candidates": [
     {
-     "name": "John Hickenlooper",
+     "name": "Y John Hickenlooper",
      "party": "D"
     },
     {
@@ -593,10 +593,6 @@
     },
     {
      "name": "Bob Chew",
-     "party": "O"
-    },
-    {
-     "name": "Christopher Baum",
      "party": "O"
     }
    ],
@@ -619,11 +615,11 @@
     "name": "Chris Coons",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected",
+   "open": true,
    "candidates": [
     {
-     "name": "Chris Coons",
+     "name": "Y Chris Coons",
      "party": "D"
     },
     {
@@ -650,11 +646,11 @@
     "name": "Jon Ossoff",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected",
+   "open": true,
    "candidates": [
     {
-     "name": "Jon Ossoff",
+     "name": "Y Jon Ossoff",
      "party": "D"
     },
     {
@@ -681,11 +677,11 @@
     "name": "Jim Risch",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected",
+   "open": true,
    "candidates": [
     {
-     "name": "Jim Risch",
+     "name": "Y Jim Risch",
      "party": "R"
     },
     {
@@ -720,11 +716,11 @@
     "name": "Dick Durbin",
     "party": "D"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retiring. / Democratic hold.",
    "open": true,
    "candidates": [
     {
-     "name": "Juliana Stratton",
+     "name": "Y Juliana Stratton",
      "party": "D"
     },
     {
@@ -755,11 +751,11 @@
     "name": "Joni Ernst",
     "party": "R"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retiring. / Democratic gain.",
    "open": true,
    "candidates": [
     {
-     "name": "Josh Turek",
+     "name": "Y Josh Turek",
      "party": "D"
     },
     {
@@ -804,11 +800,11 @@
     "name": "Roger Marshall",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Adam Hamilton",
+     "name": "Y Adam Hamilton",
      "party": "D"
     },
     {
@@ -845,7 +841,7 @@
     "name": "Mitch McConnell",
     "party": "R"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retiring. / Republican hold.",
    "open": true,
    "candidates": [
     {
@@ -853,7 +849,7 @@
      "party": "D"
     },
     {
-     "name": "Andy Barr",
+     "name": "Y Andy Barr",
      "party": "R"
     },
     {
@@ -880,7 +876,7 @@
     "name": "Bill Cassidy",
     "party": "R"
    },
-   "status": "Incumbent lost renomination",
+   "status": "Incumbent lost renomination. / Republican hold.",
    "open": true,
    "candidates": [
     {
@@ -888,7 +884,7 @@
      "party": "D"
     },
     {
-     "name": "Julia Letlow",
+     "name": "Y Julia Letlow",
      "party": "R"
     }
    ],
@@ -911,11 +907,11 @@
     "name": "Susan Collins",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Troy Jackson",
+     "name": "Y Troy Jackson",
      "party": "D"
     },
     {
@@ -957,11 +953,11 @@
     "name": "Ed Markey",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected",
+   "open": true,
    "candidates": [
     {
-     "name": "Ed Markey",
+     "name": "Y Ed Markey",
      "party": "D"
     },
     {
@@ -996,11 +992,11 @@
     "name": "Gary Peters",
     "party": "D"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retiring. / Democratic hold.",
    "open": true,
    "candidates": [
     {
-     "name": "Abdul El-Sayed",
+     "name": "Y Abdul El-Sayed",
      "party": "D"
     },
     {
@@ -1055,11 +1051,11 @@
     "name": "Tina Smith",
     "party": "D"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retiring. / DFL hold.",
    "open": true,
    "candidates": [
     {
-     "name": "Peggy Flanagan",
+     "name": "Y Peggy Flanagan",
      "party": "D"
     },
     {
@@ -1130,7 +1126,7 @@
     "name": "Steve Daines",
     "party": "R"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retiring. / Republican hold.",
    "open": true,
    "candidates": [
     {
@@ -1138,7 +1134,7 @@
      "party": "D"
     },
     {
-     "name": "Kurt Alme",
+     "name": "Y Kurt Alme",
      "party": "R"
     },
     {
@@ -1169,11 +1165,11 @@
     "name": "Pete Ricketts",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected",
+   "open": true,
    "candidates": [
     {
-     "name": "Pete Ricketts",
+     "name": "Y Pete Ricketts",
      "party": "R"
     },
     {
@@ -1223,11 +1219,11 @@
     "name": "Jeanne Shaheen",
     "party": "D"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retiring. / Democratic hold.",
    "open": true,
    "candidates": [
     {
-     "name": "Chris Pappas",
+     "name": "Y Chris Pappas",
      "party": "D"
     },
     {
@@ -1241,7 +1237,7 @@
    ],
    "pvi": "D+2",
    "last": "56.64% D",
-   "score": -1.71,
+   "score": -1.62,
    "rating": "Likely D",
    "n_raters": 12,
    "ratings": {
@@ -1258,11 +1254,11 @@
     "name": "Cory Booker",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected",
+   "open": true,
    "candidates": [
     {
-     "name": "Cory Booker",
+     "name": "Y Cory Booker",
      "party": "D"
     },
     {
@@ -1297,11 +1293,11 @@
     "name": "Ben Ray Luján",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected",
+   "open": true,
    "candidates": [
     {
-     "name": "Ben Ray Luján",
+     "name": "Y Ben Ray Luján",
      "party": "D"
     },
     {
@@ -1328,11 +1324,11 @@
     "name": "Thom Tillis",
     "party": "R"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retiring. / Democratic gain.",
    "open": true,
    "candidates": [
     {
-     "name": "Roy Cooper",
+     "name": "Y Roy Cooper",
      "party": "D"
     },
     {
@@ -1350,7 +1346,7 @@
    ],
    "pvi": "R+1",
    "last": "48.69% R",
-   "score": -2.0,
+   "score": -2.08,
    "rating": "Likely D",
    "n_raters": 12,
    "ratings": {
@@ -1367,7 +1363,7 @@
     "name": "Alan Armstrong",
     "party": "R"
    },
-   "status": "Interim appointee ineligible to run",
+   "status": "Interim appointee ineligible to run. / Republican hold.",
    "open": true,
    "candidates": [
     {
@@ -1375,7 +1371,7 @@
      "party": "D"
     },
     {
-     "name": "Kevin Hern",
+     "name": "Y Kevin Hern",
      "party": "R"
     },
     {
@@ -1410,11 +1406,11 @@
     "name": "Jeff Merkley",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected",
+   "open": true,
    "candidates": [
     {
-     "name": "Jeff Merkley",
+     "name": "Y Jeff Merkley",
      "party": "D"
     },
     {
@@ -1449,11 +1445,11 @@
     "name": "Jack Reed",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected",
+   "open": true,
    "candidates": [
     {
-     "name": "Jack Reed",
+     "name": "Y Jack Reed",
      "party": "D"
     },
     {
@@ -1484,11 +1480,11 @@
     "name": "Darline Graham",
     "party": "R"
    },
-   "status": "Interim appointee nominated in runoff",
-   "open": false,
+   "status": "Interim appointee lost election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Annie Andrews",
+     "name": "Y Annie Andrews",
      "party": "D"
     },
     {
@@ -1506,7 +1502,7 @@
    ],
    "pvi": "R+8",
    "last": "Appointed / (2026)",
-   "score": 0.79,
+   "score": 0.71,
    "rating": "Lean R",
    "n_raters": 12,
    "ratings": {
@@ -1529,11 +1525,11 @@
     "name": "Mike Rounds",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected",
+   "open": true,
    "candidates": [
     {
-     "name": "Mike Rounds",
+     "name": "Y Mike Rounds",
      "party": "R"
     },
     {
@@ -1560,15 +1556,15 @@
     "name": "Bill Hagerty",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected",
+   "open": true,
    "candidates": [
     {
      "name": "Marquita Bradshaw",
      "party": "D"
     },
     {
-     "name": "Bill Hagerty",
+     "name": "Y Bill Hagerty",
      "party": "R"
     },
     {
@@ -1623,11 +1619,11 @@
     "name": "John Cornyn",
     "party": "R"
    },
-   "status": "Incumbent lost renomination in runoff",
+   "status": "Incumbent lost renomination in runoff. / Democratic gain.",
    "open": true,
    "candidates": [
     {
-     "name": "James Talarico",
+     "name": "Y James Talarico",
      "party": "D"
     },
     {
@@ -1641,7 +1637,7 @@
    ],
    "pvi": "R+6",
    "last": "53.51% R",
-   "score": -0.62,
+   "score": -0.54,
    "rating": "Lean D",
    "n_raters": 12,
    "ratings": {
@@ -1669,11 +1665,11 @@
     "name": "Mark Warner",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected",
+   "open": true,
    "candidates": [
     {
-     "name": "Mark Warner",
+     "name": "Y Mark Warner",
      "party": "D"
     },
     {
@@ -1700,15 +1696,15 @@
     "name": "Shelley Moore Capito",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected",
+   "open": true,
    "candidates": [
     {
      "name": "Rachel Fetty Anderson",
      "party": "D"
     },
     {
-     "name": "Shelley Moore Capito",
+     "name": "Y Shelley Moore Capito",
      "party": "R"
     },
     {
@@ -1735,7 +1731,7 @@
     "name": "Cynthia Lummis",
     "party": "R"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retiring. / Republican hold.",
    "open": true,
    "candidates": [
     {
@@ -1743,7 +1739,7 @@
      "party": "D"
     },
     {
-     "name": "Harriet Hageman",
+     "name": "Y Harriet Hageman",
      "party": "R"
     }
    ],
@@ -1766,15 +1762,15 @@
     "name": "Ashley Moody",
     "party": "R"
    },
-   "status": "Interim appointee nominated",
-   "open": false,
+   "status": "Interim appointee elected",
+   "open": true,
    "candidates": [
     {
      "name": "Angie Nixon",
      "party": "D"
     },
     {
-     "name": "Ashley Moody",
+     "name": "Y Ashley Moody",
      "party": "R"
     },
     {
@@ -1801,11 +1797,11 @@
     "name": "Jon Husted",
     "party": "R"
    },
-   "status": "Interim appointee nominated",
-   "open": false,
+   "status": "Interim appointee lost election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Sherrod Brown",
+     "name": "Y Sherrod Brown",
      "party": "D"
     },
     {
@@ -1852,18 +1848,9 @@
     "name": "Kay Ivey",
     "party": "R"
    },
-   "status": "Term-limited",
+   "status": "Incumbent term-limited. / Republican hold.",
    "open": true,
-   "candidates": [
-    {
-     "name": "Doug Jones",
-     "party": "D"
-    },
-    {
-     "name": "Tommy Tuberville",
-     "party": "R"
-    }
-   ],
+   "candidates": [],
    "pvi": "R+15",
    "last": "66.91% R",
    "score": 2.75,
@@ -1883,26 +1870,9 @@
     "name": "Mike Dunleavy",
     "party": "R"
    },
-   "status": "Term-limited",
+   "status": "Incumbent term-limited.",
    "open": true,
-   "candidates": [
-    {
-     "name": "Jonathan Kreiss-Tomkins",
-     "party": "D"
-    },
-    {
-     "name": "Bernadette Wilson",
-     "party": "R"
-    },
-    {
-     "name": "Dave Bronson",
-     "party": "R"
-    },
-    {
-     "name": "Treg Taylor",
-     "party": "R"
-    }
-   ],
+   "candidates": [],
    "pvi": "R+6",
    "last": "50.29% R",
    "score": -1.06,
@@ -1925,26 +1895,9 @@
     "name": "Katie Hobbs",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
-   "candidates": [
-    {
-     "name": "Katie Hobbs",
-     "party": "D"
-    },
-    {
-     "name": "Andy Biggs",
-     "party": "R"
-    },
-    {
-     "name": "Risa Lombardo",
-     "party": "G"
-    },
-    {
-     "name": "Teri Hourihan",
-     "party": "O"
-    }
-   ],
+   "status": "Incumbent re-elected.",
+   "open": true,
+   "candidates": [],
    "pvi": "R+2",
    "last": "50.32% D",
    "score": -1.69,
@@ -1965,22 +1918,9 @@
     "name": "Sarah Huckabee Sanders",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
-   "candidates": [
-    {
-     "name": "Fredrick Love",
-     "party": "D"
-    },
-    {
-     "name": "Sarah Huckabee Sanders",
-     "party": "R"
-    },
-    {
-     "name": "Colt Shelby",
-     "party": "L"
-    }
-   ],
+   "status": "Incumbent re-elected.",
+   "open": true,
+   "candidates": [],
    "pvi": "R+15",
    "last": "62.96% R",
    "score": 3.0,
@@ -2000,18 +1940,9 @@
     "name": "Gavin Newsom",
     "party": "D"
    },
-   "status": "Term-limited",
+   "status": "Incumbent term-limited. / Democratic hold.",
    "open": true,
-   "candidates": [
-    {
-     "name": "Xavier Becerra",
-     "party": "D"
-    },
-    {
-     "name": "Steve Hilton",
-     "party": "R"
-    }
-   ],
+   "candidates": [],
    "pvi": "D+12",
    "last": "59.18% D",
    "score": -3.0,
@@ -2031,38 +1962,9 @@
     "name": "Jared Polis",
     "party": "D"
    },
-   "status": "Term-limited",
+   "status": "Incumbent term-limited. / Democratic hold.",
    "open": true,
-   "candidates": [
-    {
-     "name": "Phil Weiser",
-     "party": "D"
-    },
-    {
-     "name": "Victor Marx",
-     "party": "R"
-    },
-    {
-     "name": "Greg Lopez",
-     "party": "I"
-    },
-    {
-     "name": "Eric Mulder",
-     "party": "L"
-    },
-    {
-     "name": "Erik Underwood",
-     "party": "O"
-    },
-    {
-     "name": "Jeff Peckman",
-     "party": "O"
-    },
-    {
-     "name": "Stephen Hamilton",
-     "party": "O"
-    }
-   ],
+   "candidates": [],
    "pvi": "D+6",
    "last": "58.53% D",
    "score": -2.88,
@@ -2082,18 +1984,9 @@
     "name": "Ned Lamont",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
-   "candidates": [
-    {
-     "name": "Ned Lamont",
-     "party": "D"
-    },
-    {
-     "name": "Ryan Fazio",
-     "party": "R"
-    }
-   ],
+   "status": "Incumbent re-elected.",
+   "open": true,
+   "candidates": [],
    "pvi": "D+8",
    "last": "55.97% D",
    "score": -2.88,
@@ -2113,42 +2006,9 @@
     "name": "Ron DeSantis",
     "party": "R"
    },
-   "status": "Term-limited",
+   "status": "Incumbent term-limited. / Republican hold.",
    "open": true,
-   "candidates": [
-    {
-     "name": "David Jolly",
-     "party": "D"
-    },
-    {
-     "name": "Byron Donalds",
-     "party": "R"
-    },
-    {
-     "name": "Charles Burkett",
-     "party": "I"
-    },
-    {
-     "name": "Dean Abrams",
-     "party": "I"
-    },
-    {
-     "name": "Frank Russo",
-     "party": "I"
-    },
-    {
-     "name": "Jeffrey Datto",
-     "party": "I"
-    },
-    {
-     "name": "Moe Dimanche",
-     "party": "I"
-    },
-    {
-     "name": "Scott Jewett",
-     "party": "L"
-    }
-   ],
+   "candidates": [],
    "pvi": "R+5",
    "last": "59.37% R",
    "score": 1.0,
@@ -2178,18 +2038,9 @@
     "name": "Brian Kemp",
     "party": "R"
    },
-   "status": "Term-limited",
+   "status": "Incumbent term-limited. / Democratic gain.",
    "open": true,
-   "candidates": [
-    {
-     "name": "Keisha Lance Bottoms",
-     "party": "D"
-    },
-    {
-     "name": "Rick Jackson",
-     "party": "R"
-    }
-   ],
+   "candidates": [],
    "pvi": "R+1",
    "last": "53.41% R",
    "score": -0.44,
@@ -2217,18 +2068,9 @@
     "name": "Josh Green",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
-   "candidates": [
-    {
-     "name": "Josh Green",
-     "party": "D"
-    },
-    {
-     "name": "Gary Cordery",
-     "party": "R"
-    }
-   ],
+   "status": "Incumbent re-elected.",
+   "open": true,
+   "candidates": [],
    "pvi": "D+13",
    "last": "63.21% D",
    "score": -3.0,
@@ -2248,30 +2090,9 @@
     "name": "Brad Little",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
-   "candidates": [
-    {
-     "name": "Terri Pickens",
-     "party": "D"
-    },
-    {
-     "name": "Brad Little",
-     "party": "R"
-    },
-    {
-     "name": "John Stegner",
-     "party": "I"
-    },
-    {
-     "name": "Paul Sand",
-     "party": "L"
-    },
-    {
-     "name": "Pro-Life",
-     "party": "O"
-    }
-   ],
+   "status": "Incumbent re-elected.",
+   "open": true,
+   "candidates": [],
    "pvi": "R+18",
    "last": "60.52% R",
    "score": 3.0,
@@ -2291,22 +2112,9 @@
     "name": "JB Pritzker",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
-   "candidates": [
-    {
-     "name": "JB Pritzker",
-     "party": "D"
-    },
-    {
-     "name": "Darren Bailey",
-     "party": "R"
-    },
-    {
-     "name": "Collin Corbett",
-     "party": "I"
-    }
-   ],
+   "status": "Incumbent re-elected.",
+   "open": true,
+   "candidates": [],
    "pvi": "D+6",
    "last": "54.91% D",
    "score": -3.0,
@@ -2326,22 +2134,9 @@
     "name": "Kim Reynolds",
     "party": "R"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retiring. / Democratic gain.",
    "open": true,
-   "candidates": [
-    {
-     "name": "Rob Sand",
-     "party": "D"
-    },
-    {
-     "name": "Zach Lahn",
-     "party": "R"
-    },
-    {
-     "name": "Sondra Wilson",
-     "party": "I"
-    }
-   ],
+   "candidates": [],
    "pvi": "R+6",
    "last": "58.04% R",
    "score": -1.12,
@@ -2373,21 +2168,12 @@
     "name": "Laura Kelly",
     "party": "D"
    },
-   "status": "Term-limited",
+   "status": "Incumbent term-limited.",
    "open": true,
-   "candidates": [
-    {
-     "name": "Cindy Holscher",
-     "party": "D"
-    },
-    {
-     "name": "Ty Masterson",
-     "party": "R"
-    }
-   ],
+   "candidates": [],
    "pvi": "R+8",
    "last": "49.54% D",
-   "score": 0.69,
+   "score": 0.56,
    "rating": "Lean R",
    "n_raters": 8,
    "ratings": {
@@ -2405,22 +2191,9 @@
     "name": "Janet Mills",
     "party": "D"
    },
-   "status": "Term-limited",
+   "status": "Incumbent term-limited. / Democratic hold.",
    "open": true,
-   "candidates": [
-    {
-     "name": "Hannah Pingree",
-     "party": "D"
-    },
-    {
-     "name": "Robert B. Charles",
-     "party": "R"
-    },
-    {
-     "name": "Rick Bennett",
-     "party": "I"
-    }
-   ],
+   "candidates": [],
    "pvi": "D+4",
    "last": "55.69% D",
    "score": -2.62,
@@ -2440,26 +2213,9 @@
     "name": "Wes Moore",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
-   "candidates": [
-    {
-     "name": "Wes Moore",
-     "party": "D"
-    },
-    {
-     "name": "Dan Cox",
-     "party": "R"
-    },
-    {
-     "name": "Andy Ellis",
-     "party": "G"
-    },
-    {
-     "name": "Cathy White",
-     "party": "O"
-    }
-   ],
+   "status": "Incumbent re-elected.",
+   "open": true,
+   "candidates": [],
    "pvi": "D+15",
    "last": "64.53% D",
    "score": -3.0,
@@ -2479,22 +2235,9 @@
     "name": "Maura Healey",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
-   "candidates": [
-    {
-     "name": "Maura Healey",
-     "party": "D"
-    },
-    {
-     "name": "Mike Minogue",
-     "party": "R"
-    },
-    {
-     "name": "Andrea James",
-     "party": "I"
-    }
-   ],
+   "status": "Incumbent re-elected.",
+   "open": true,
+   "candidates": [],
    "pvi": "D+14",
    "last": "63.74% D",
    "score": -3.0,
@@ -2514,30 +2257,9 @@
     "name": "Gretchen Whitmer",
     "party": "D"
    },
-   "status": "Term-limited",
+   "status": "Incumbent term-limited. / Democratic hold.",
    "open": true,
-   "candidates": [
-    {
-     "name": "Jocelyn Benson",
-     "party": "D"
-    },
-    {
-     "name": "John James",
-     "party": "R"
-    },
-    {
-     "name": "Anthony Hudson",
-     "party": "L"
-    },
-    {
-     "name": "Donna Brandenburg",
-     "party": "O"
-    },
-    {
-     "name": "Douglas Campbell",
-     "party": "G"
-    }
-   ],
+   "candidates": [],
    "pvi": "EVEN",
    "last": "54.47% D",
    "score": -1.5,
@@ -2560,22 +2282,9 @@
     "name": "Tim Walz",
     "party": "D"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retired. / Democratic hold.",
    "open": true,
-   "candidates": [
-    {
-     "name": "Amy Klobuchar",
-     "party": "D"
-    },
-    {
-     "name": "Lisa Demuth",
-     "party": "R"
-    },
-    {
-     "name": "Steven Young",
-     "party": "G"
-    }
-   ],
+   "candidates": [],
    "pvi": "D+3",
    "last": "52.27% DFL",
    "score": -2.5,
@@ -2595,26 +2304,9 @@
     "name": "Jim Pillen",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
-   "candidates": [
-    {
-     "name": "Lynne Walz",
-     "party": "D"
-    },
-    {
-     "name": "Jim Pillen",
-     "party": "R"
-    },
-    {
-     "name": "Brett Lindstrom",
-     "party": "O"
-    },
-    {
-     "name": "Rick Beard",
-     "party": "O"
-    }
-   ],
+   "status": "Incumbent re-elected.",
+   "open": true,
+   "candidates": [],
    "pvi": "R+10",
    "last": "59.74% R",
    "score": 1.88,
@@ -2634,22 +2326,9 @@
     "name": "Joe Lombardo",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
-   "candidates": [
-    {
-     "name": "Aaron Ford",
-     "party": "D"
-    },
-    {
-     "name": "Joe Lombardo",
-     "party": "R"
-    },
-    {
-     "name": "Danielle Ford",
-     "party": "I"
-    }
-   ],
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
+   "candidates": [],
    "pvi": "R+1",
    "last": "48.81% R",
    "score": -0.12,
@@ -2679,22 +2358,9 @@
     "name": "Kelly Ayotte",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
-   "candidates": [
-    {
-     "name": "Cinde Warmington",
-     "party": "D"
-    },
-    {
-     "name": "Kelly Ayotte",
-     "party": "R"
-    },
-    {
-     "name": "Jon Kiper",
-     "party": "O"
-    }
-   ],
+   "status": "Incumbent re-elected.",
+   "open": true,
+   "candidates": [],
    "pvi": "D+2",
    "last": "53.64% R",
    "score": 1.75,
@@ -2714,18 +2380,9 @@
     "name": "Michelle Lujan Grisham",
     "party": "D"
    },
-   "status": "Term-limited",
+   "status": "Incumbent term-limited. / Democratic hold.",
    "open": true,
-   "candidates": [
-    {
-     "name": "Deb Haaland",
-     "party": "D"
-    },
-    {
-     "name": "Gregg Hull",
-     "party": "R"
-    }
-   ],
+   "candidates": [],
    "pvi": "D+4",
    "last": "51.97% D",
    "score": -2.5,
@@ -2745,18 +2402,9 @@
     "name": "Kathy Hochul",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
-   "candidates": [
-    {
-     "name": "Kathy Hochul",
-     "party": "D"
-    },
-    {
-     "name": "Bruce Blakeman",
-     "party": "R"
-    }
-   ],
+   "status": "Incumbent re-elected.",
+   "open": true,
+   "candidates": [],
    "pvi": "D+8",
    "last": "53.12% D",
    "score": -2.75,
@@ -2776,22 +2424,9 @@
     "name": "Mike DeWine",
     "party": "R"
    },
-   "status": "Term-limited",
+   "status": "Incumbent term-limited. / Democratic gain.",
    "open": true,
-   "candidates": [
-    {
-     "name": "Amy Acton",
-     "party": "D"
-    },
-    {
-     "name": "Vivek Ramaswamy",
-     "party": "R"
-    },
-    {
-     "name": "Donald Kissick",
-     "party": "L"
-    }
-   ],
+   "candidates": [],
    "pvi": "R+5",
    "last": "62.41% R",
    "score": -0.94,
@@ -2825,30 +2460,9 @@
     "name": "Kevin Stitt",
     "party": "R"
    },
-   "status": "Term-limited",
+   "status": "Incumbent term-limited. / Republican hold.",
    "open": true,
-   "candidates": [
-    {
-     "name": "Cyndi Munson",
-     "party": "D"
-    },
-    {
-     "name": "Mike Mazzei",
-     "party": "R"
-    },
-    {
-     "name": "Jerry Griffin",
-     "party": "I"
-    },
-    {
-     "name": "Orlando Bush",
-     "party": "I"
-    },
-    {
-     "name": "Robert Brooks Sr.",
-     "party": "I"
-    }
-   ],
+   "candidates": [],
    "pvi": "R+17",
    "last": "55.45% R",
    "score": 2.38,
@@ -2868,22 +2482,9 @@
     "name": "Tina Kotek",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
-   "candidates": [
-    {
-     "name": "Tina Kotek",
-     "party": "D"
-    },
-    {
-     "name": "Christine Drazan",
-     "party": "R"
-    },
-    {
-     "name": "Brett Smith",
-     "party": "G"
-    }
-   ],
+   "status": "Incumbent re-elected.",
+   "open": true,
+   "candidates": [],
    "pvi": "D+8",
    "last": "46.96% D",
    "score": -1.19,
@@ -2913,22 +2514,9 @@
     "name": "Josh Shapiro",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
-   "candidates": [
-    {
-     "name": "Josh Shapiro",
-     "party": "D"
-    },
-    {
-     "name": "Stacy Garrity",
-     "party": "R"
-    },
-    {
-     "name": "Ken Krawchuk",
-     "party": "L"
-    }
-   ],
+   "status": "Incumbent re-elected.",
+   "open": true,
+   "candidates": [],
    "pvi": "R+1",
    "last": "56.49% D",
    "score": -3.0,
@@ -2948,30 +2536,9 @@
     "name": "Dan McKee",
     "party": "D"
    },
-   "status": "Incumbent lost renomination",
+   "status": "Incumbent lost renomination. / Democratic hold.",
    "open": true,
-   "candidates": [
-    {
-     "name": "Helena Foulkes",
-     "party": "D"
-    },
-    {
-     "name": "Aaron Guckian",
-     "party": "R"
-    },
-    {
-     "name": "CD Reynolds",
-     "party": "I"
-    },
-    {
-     "name": "Jasjit Gotra",
-     "party": "I"
-    },
-    {
-     "name": "Ken Block",
-     "party": "I"
-    }
-   ],
+   "candidates": [],
    "pvi": "D+8",
    "last": "57.92% D",
    "score": -3.0,
@@ -2991,29 +2558,12 @@
     "name": "Henry McMaster",
     "party": "R"
    },
-   "status": "Term-limited",
+   "status": "Incumbent term-limited. / Republican hold.",
    "open": true,
-   "candidates": [
-    {
-     "name": "Jermaine Johnson",
-     "party": "D"
-    },
-    {
-     "name": "Alan Wilson",
-     "party": "R"
-    },
-    {
-     "name": "Michael Addison",
-     "party": "O"
-    },
-    {
-     "name": "Walid Hakim",
-     "party": "G"
-    }
-   ],
+   "candidates": [],
    "pvi": "R+8",
    "last": "58.04% R",
-   "score": 2.62,
+   "score": 2.75,
    "rating": "Safe R",
    "n_raters": 8,
    "ratings": {
@@ -3030,18 +2580,9 @@
     "name": "Larry Rhoden",
     "party": "R"
    },
-   "status": "Incumbent nominated to full term",
-   "open": false,
-   "candidates": [
-    {
-     "name": "Dan Ahlers",
-     "party": "D"
-    },
-    {
-     "name": "Larry Rhoden",
-     "party": "R"
-    }
-   ],
+   "status": "Incumbent elected to full term.",
+   "open": true,
+   "candidates": [],
    "pvi": "R+15",
    "last": "61.98% R",
    "score": 3.0,
@@ -3061,70 +2602,9 @@
     "name": "Bill Lee",
     "party": "R"
    },
-   "status": "Term-limited",
+   "status": "Incumbent term-limited. / Republican hold.",
    "open": true,
-   "candidates": [
-    {
-     "name": "Jerri Green",
-     "party": "D"
-    },
-    {
-     "name": "Marsha Blackburn",
-     "party": "R"
-    },
-    {
-     "name": "Charles Van Morgan",
-     "party": "I"
-    },
-    {
-     "name": "David Hatley",
-     "party": "I"
-    },
-    {
-     "name": "Dean Brewer",
-     "party": "I"
-    },
-    {
-     "name": "Eddie Lee Murphy",
-     "party": "I"
-    },
-    {
-     "name": "Karl Smithson",
-     "party": "I"
-    },
-    {
-     "name": "L. Webb Taylor",
-     "party": "I"
-    },
-    {
-     "name": "Lauren Pinkston",
-     "party": "I"
-    },
-    {
-     "name": "Misam Abidi",
-     "party": "I"
-    },
-    {
-     "name": "Ray Brown",
-     "party": "I"
-    },
-    {
-     "name": "Robert Vick",
-     "party": "I"
-    },
-    {
-     "name": "Santiago Asconape",
-     "party": "I"
-    },
-    {
-     "name": "Taylor Hafley",
-     "party": "I"
-    },
-    {
-     "name": "Wendell Jackson",
-     "party": "I"
-    }
-   ],
+   "candidates": [],
    "pvi": "R+14",
    "last": "64.91% R",
    "score": 2.75,
@@ -3144,22 +2624,9 @@
     "name": "Greg Abbott",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
-   "candidates": [
-    {
-     "name": "Gina Hinojosa",
-     "party": "D"
-    },
-    {
-     "name": "Greg Abbott",
-     "party": "R"
-    },
-    {
-     "name": "Pat Dixon",
-     "party": "L"
-    }
-   ],
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
+   "candidates": [],
    "pvi": "R+6",
    "last": "54.76% R",
    "score": 0.81,
@@ -3187,30 +2654,9 @@
     "name": "Phil Scott",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
-   "candidates": [
-    {
-     "name": "Amanda Janoo",
-     "party": "D"
-    },
-    {
-     "name": "Phil Scott",
-     "party": "R"
-    },
-    {
-     "name": "Brian Judd",
-     "party": "I"
-    },
-    {
-     "name": "Dean Roy",
-     "party": "O"
-    },
-    {
-     "name": "June Goodband",
-     "party": "G"
-    }
-   ],
+   "status": "Incumbent re-elected.",
+   "open": true,
+   "candidates": [],
    "pvi": "D+17",
    "last": "73.43% R",
    "score": 1.38,
@@ -3230,18 +2676,9 @@
     "name": "Tony Evers",
     "party": "D"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retiring. / Democratic hold.",
    "open": true,
-   "candidates": [
-    {
-     "name": "David Crowley",
-     "party": "D"
-    },
-    {
-     "name": "Tom Tiffany",
-     "party": "R"
-    }
-   ],
+   "candidates": [],
    "pvi": "EVEN",
    "last": "51.15% D",
    "score": -0.81,
@@ -3271,22 +2708,9 @@
     "name": "Mark Gordon",
     "party": "R"
    },
-   "status": "Term-limited",
+   "status": "Incumbent term-limited. / Republican hold.",
    "open": true,
-   "candidates": [
-    {
-     "name": "Kenneth Casner",
-     "party": "D"
-    },
-    {
-     "name": "Eric Barlow",
-     "party": "R"
-    },
-    {
-     "name": "Joseph Kibler",
-     "party": "O"
-    }
-   ],
+   "candidates": [],
    "pvi": "R+23",
    "last": "74.07% R",
    "score": 3.0,
@@ -3307,7 +2731,7 @@
     "name": null,
     "party": null
    },
-   "status": "New representative to be elected",
+   "status": "New member elected. / Republican gain.",
    "open": true,
    "candidates": [
     {
@@ -3315,7 +2739,7 @@
      "party": "D"
     },
     {
-     "name": "Jerry Carl",
+     "name": "Y Jerry Carl",
      "party": "R"
     }
    ],
@@ -3335,11 +2759,11 @@
     "name": "Barry Moore / Redistricted from the 1st district",
     "party": "R"
    },
-   "status": "Incumbent retiring to run for U.S. Senate. / Republican loss.",
+   "status": "Incumbent retired to run for U.S. Senate. / Republican loss.",
    "open": true,
    "candidates": [
     {
-     "name": "Shomari Figures",
+     "name": "Y Shomari Figures",
      "party": "D"
     },
     {
@@ -3367,15 +2791,15 @@
     "name": "Mike Rogers",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Lee McInnis",
      "party": "D"
     },
     {
-     "name": "Mike Rogers",
+     "name": "Y Mike Rogers",
      "party": "R"
     }
    ],
@@ -3395,15 +2819,15 @@
     "name": "Robert Aderholt",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Amanda Pusczek",
      "party": "D"
     },
     {
-     "name": "Robert Aderholt",
+     "name": "Y Robert Aderholt",
      "party": "R"
     }
    ],
@@ -3423,15 +2847,15 @@
     "name": "Dale Strong",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Andrew Sneed",
      "party": "D"
     },
     {
-     "name": "Dale Strong",
+     "name": "Y Dale Strong",
      "party": "R"
     }
    ],
@@ -3451,15 +2875,15 @@
     "name": "Gary Palmer",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Maurice Mercer",
      "party": "D"
     },
     {
-     "name": "Gary Palmer",
+     "name": "Y Gary Palmer",
      "party": "R"
     }
    ],
@@ -3479,11 +2903,11 @@
     "name": "Terri Sewell",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Terri Sewell",
+     "name": "Y Terri Sewell",
      "party": "D"
     },
     {
@@ -3547,11 +2971,11 @@
     "name": "David Schweikert",
     "party": "R"
    },
-   "status": "Incumbent retiring to run for governor",
+   "status": "Incumbent retired to run for governor. / Democratic gain.",
    "open": true,
    "candidates": [
     {
-     "name": "Amish Shah",
+     "name": "Y Amish Shah",
      "party": "D"
     },
     {
@@ -3583,15 +3007,15 @@
     "name": "Eli Crane",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Jonathan Nez",
      "party": "D"
     },
     {
-     "name": "Eli Crane",
+     "name": "Y Eli Crane",
      "party": "R"
     },
     {
@@ -3619,11 +3043,11 @@
     "name": "Yassamin Ansari",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Yassamin Ansari",
+     "name": "Y Yassamin Ansari",
      "party": "D"
     },
     {
@@ -3651,11 +3075,11 @@
     "name": "Greg Stanton",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Greg Stanton",
+     "name": "Y Greg Stanton",
      "party": "D"
     },
     {
@@ -3683,7 +3107,7 @@
     "name": "Andy Biggs",
     "party": "R"
    },
-   "status": "Incumbent retiring to run for governor",
+   "status": "Incumbent retired to run for governor. / Republican hold.",
    "open": true,
    "candidates": [
     {
@@ -3691,7 +3115,7 @@
      "party": "D"
     },
     {
-     "name": "Mark Lamb",
+     "name": "Y Mark Lamb",
      "party": "R"
     }
    ],
@@ -3715,11 +3139,11 @@
     "name": "Juan Ciscomani",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "JoAnna Mendoza",
+     "name": "Y JoAnna Mendoza",
      "party": "D"
     },
     {
@@ -3755,11 +3179,11 @@
     "name": "Adelita Grijalva",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Adelita Grijalva",
+     "name": "Y Adelita Grijalva",
      "party": "D"
     },
     {
@@ -3783,15 +3207,15 @@
     "name": "Abraham Hamadeh",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Bernadette Greene-Placentia",
      "party": "D"
     },
     {
-     "name": "Abraham Hamadeh",
+     "name": "Y Abraham Hamadeh",
      "party": "R"
     }
    ],
@@ -3815,15 +3239,15 @@
     "name": "Paul Gosar",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Dani Sterbinsky",
      "party": "D"
     },
     {
-     "name": "Paul Gosar",
+     "name": "Y Paul Gosar",
      "party": "R"
     }
    ],
@@ -3843,15 +3267,15 @@
     "name": "Rick Crawford",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Terri Green",
      "party": "D"
     },
     {
-     "name": "Rick Crawford",
+     "name": "Y Rick Crawford",
      "party": "R"
     },
     {
@@ -3875,15 +3299,15 @@
     "name": "French Hill",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Chris Jones",
      "party": "D"
     },
     {
-     "name": "French Hill",
+     "name": "Y French Hill",
      "party": "R"
     }
    ],
@@ -3907,15 +3331,15 @@
     "name": "Steve Womack",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Robb Ryerse",
      "party": "D"
     },
     {
-     "name": "Steve Womack",
+     "name": "Y Steve Womack",
      "party": "R"
     },
     {
@@ -3939,15 +3363,15 @@
     "name": "Bruce Westerman",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "James Russell",
      "party": "D"
     },
     {
-     "name": "Bruce Westerman",
+     "name": "Y Bruce Westerman",
      "party": "R"
     }
    ],
@@ -3967,11 +3391,11 @@
     "name": "James Gallagher",
     "party": "R"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Mike McGuire",
+     "name": "Y Mike McGuire",
      "party": "D"
     },
     {
@@ -3995,11 +3419,11 @@
     "name": "Jared Huffman",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Jared Huffman",
+     "name": "Y Jared Huffman",
      "party": "D"
     },
     {
@@ -4023,11 +3447,11 @@
     "name": "Ami Bera / Redistricted from the 6th district",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Ami Bera",
+     "name": "Y Ami Bera",
      "party": "D"
     },
     {
@@ -4051,7 +3475,7 @@
     "name": "Mike Thompson",
     "party": "D"
    },
-   "status": "Incumbent advanced to general. / Democratic hold.",
+   "status": "Incumbent advanced to general.",
    "open": false,
    "candidates": [
     {
@@ -4079,15 +3503,15 @@
     "name": "Tom McClintock",
     "party": "R"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Michael Masuda",
      "party": "D"
     },
     {
-     "name": "Tom McClintock",
+     "name": "Y Tom McClintock",
      "party": "R"
     }
    ],
@@ -4111,11 +3535,11 @@
     "name": "Kevin Kiley / Redistricted from the 3rd district",
     "party": "I"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Richard Pan",
+     "name": "Y Richard Pan",
      "party": "D"
     },
     {
@@ -4143,7 +3567,7 @@
     "name": "Doris Matsui",
     "party": "D"
    },
-   "status": "Incumbent advanced to general. / Democratic hold.",
+   "status": "Incumbent advanced to general.",
    "open": false,
    "candidates": [
     {
@@ -4171,11 +3595,11 @@
     "name": "John Garamendi",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "John Garamendi",
+     "name": "Y John Garamendi",
      "party": "D"
     },
     {
@@ -4199,11 +3623,11 @@
     "name": "Josh Harder",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Josh Harder",
+     "name": "Y Josh Harder",
      "party": "D"
     },
     {
@@ -4227,11 +3651,11 @@
     "name": "Mark DeSaulnier",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Mark DeSaulnier",
+     "name": "Y Mark DeSaulnier",
      "party": "D"
     },
     {
@@ -4255,7 +3679,7 @@
     "name": "Nancy Pelosi",
     "party": "D"
    },
-   "status": "Incumbent retiring. / Democratic hold.",
+   "status": "Incumbent retired. / Democratic hold.",
    "open": true,
    "candidates": [
     {
@@ -4263,7 +3687,7 @@
      "party": "D"
     },
     {
-     "name": "Scott Wiener",
+     "name": "Y Scott Wiener",
      "party": "D"
     }
    ],
@@ -4283,15 +3707,15 @@
     "name": "Lateefah Simon",
     "party": "D"
    },
-   "status": "Incumbent advanced to general / Democratic hold.",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Lateefah Simon",
+     "name": "Jamie Joyce",
      "party": "D"
     },
     {
-     "name": "Jamie Joyce",
+     "name": "Y Lateefah Simon",
      "party": "D"
     }
    ],
@@ -4311,11 +3735,11 @@
     "name": "Adam Gray",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Adam Gray",
+     "name": "Y Adam Gray",
      "party": "D"
     },
     {
@@ -4343,15 +3767,15 @@
     "name": "Aisha Wahab",
     "party": "D"
    },
-   "status": "Incumbent advanced to general. / Democratic hold.",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Aisha Wahab",
+     "name": "Melissa Hernandez",
      "party": "D"
     },
     {
-     "name": "Melissa Hernandez",
+     "name": "Y Aisha Wahab",
      "party": "D"
     }
    ],
@@ -4371,11 +3795,11 @@
     "name": "Kevin Mullin",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Kevin Mullin",
+     "name": "Y Kevin Mullin",
      "party": "D"
     },
     {
@@ -4399,11 +3823,11 @@
     "name": "Sam Liccardo",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Sam Liccardo",
+     "name": "Y Sam Liccardo",
      "party": "D"
     },
     {
@@ -4427,11 +3851,11 @@
     "name": "Ro Khanna",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Ro Khanna",
+     "name": "Y Ro Khanna",
      "party": "D"
     },
     {
@@ -4455,11 +3879,11 @@
     "name": "Zoe Lofgren",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Zoe Lofgren",
+     "name": "Y Zoe Lofgren",
      "party": "D"
     },
     {
@@ -4483,11 +3907,11 @@
     "name": "Jimmy Panetta",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Jimmy Panetta",
+     "name": "Y Jimmy Panetta",
      "party": "D"
     },
     {
@@ -4511,15 +3935,15 @@
     "name": "Vince Fong",
     "party": "R"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Sandra Van Scotter",
      "party": "D"
     },
     {
-     "name": "Vince Fong",
+     "name": "Y Vince Fong",
      "party": "R"
     }
    ],
@@ -4539,11 +3963,11 @@
     "name": "Jim Costa",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Jim Costa",
+     "name": "Y Jim Costa",
      "party": "D"
     },
     {
@@ -4571,11 +3995,11 @@
     "name": "David Valadao",
     "party": "R"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Randy Villegas",
+     "name": "Y Randy Villegas",
      "party": "D"
     },
     {
@@ -4603,7 +4027,7 @@
     "name": "Jay Obernolte",
     "party": "R"
    },
-   "status": "Incumbent advanced to general",
+   "status": "Incumbent advanced to general.",
    "open": false,
    "candidates": [
     {
@@ -4631,11 +4055,11 @@
     "name": "Salud Carbajal",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Salud Carbajal",
+     "name": "Y Salud Carbajal",
      "party": "D"
     },
     {
@@ -4659,11 +4083,11 @@
     "name": "Raul Ruiz",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Raul Ruiz",
+     "name": "Y Raul Ruiz",
      "party": "D"
     },
     {
@@ -4687,11 +4111,11 @@
     "name": "Julia Brownley",
     "party": "D"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retired. / Democratic hold.",
    "open": true,
    "candidates": [
     {
-     "name": "Jacqui Irwin",
+     "name": "Y Jacqui Irwin",
      "party": "D"
     },
     {
@@ -4715,11 +4139,11 @@
     "name": "George T. Whitesides",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "George Whitesides",
+     "name": "Y George T. Whitesides",
      "party": "D"
     },
     {
@@ -4743,11 +4167,11 @@
     "name": "Judy Chu",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Judy Chu",
+     "name": "Y Judy Chu",
      "party": "D"
     },
     {
@@ -4771,15 +4195,15 @@
     "name": "Luz Rivas",
     "party": "D"
    },
-   "status": "Incumbent advanced to general. / Democratic hold.",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Luz Rivas",
+     "name": "Angelica Dueñas",
      "party": "D"
     },
     {
-     "name": "Angelica Dueñas",
+     "name": "Y Luz Rivas",
      "party": "D"
     }
    ],
@@ -4799,11 +4223,11 @@
     "name": "Laura Friedman",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Laura Friedman",
+     "name": "Y Laura Friedman",
      "party": "D"
     },
     {
@@ -4827,11 +4251,11 @@
     "name": "Gil Cisneros",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Gil Cisneros",
+     "name": "Y Gil Cisneros",
      "party": "D"
     },
     {
@@ -4855,11 +4279,11 @@
     "name": "Brad Sherman",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Brad Sherman",
+     "name": "Y Brad Sherman",
      "party": "D"
     },
     {
@@ -4883,11 +4307,11 @@
     "name": "Pete Aguilar",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Pete Aguilar",
+     "name": "Y Pete Aguilar",
      "party": "D"
     },
     {
@@ -4911,15 +4335,15 @@
     "name": "Jimmy Gomez",
     "party": "D"
    },
-   "status": "Incumbent advanced to general. / Democratic hold.",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic hold.",
+   "open": true,
    "candidates": [
     {
      "name": "Jimmy Gomez",
      "party": "D"
     },
     {
-     "name": "Angela Gonzales-Torres",
+     "name": "Y Angela Gonzales-Torres",
      "party": "D"
     }
    ],
@@ -4939,11 +4363,11 @@
     "name": "Norma Torres",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Norma Torres",
+     "name": "Y Norma Torres",
      "party": "D"
     },
     {
@@ -4967,11 +4391,11 @@
     "name": "Ted Lieu",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Ted Lieu",
+     "name": "Y Ted Lieu",
      "party": "D"
     },
     {
@@ -4995,15 +4419,15 @@
     "name": "Sydney Kamlager-Dove",
     "party": "D"
    },
-   "status": "Incumbent advanced to general. / Democratic hold.",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Sydney Kamlager-Dove",
+     "name": "Samantha Mota",
      "party": "D"
     },
     {
-     "name": "Samantha Mota",
+     "name": "Y Sydney Kamlager-Dove",
      "party": "D"
     }
    ],
@@ -5023,11 +4447,11 @@
     "name": null,
     "party": null
    },
-   "status": "New representative to be elected",
+   "status": "New member elected. / Democratic gain.",
    "open": true,
    "candidates": [
     {
-     "name": "Hilda Solis",
+     "name": "Y Hilda Solis",
      "party": "D"
     },
     {
@@ -5051,11 +4475,11 @@
     "name": "Mark Takano",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Mark Takano",
+     "name": "Y Mark Takano",
      "party": "D"
     },
     {
@@ -5079,7 +4503,7 @@
     "name": "Ken Calvert / Redistricted from the 41st district",
     "party": "R"
    },
-   "status": "Incumbent advanced to general. / Republican hold.",
+   "status": "Incumbent advanced to general.",
    "open": false,
    "candidates": [
     {
@@ -5107,11 +4531,11 @@
     "name": "Linda Sánchez / Redistricted from the 38th district",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Linda Sánchez",
+     "name": "Y Linda Sánchez",
      "party": "D"
     },
     {
@@ -5135,11 +4559,11 @@
     "name": "Robert Garcia",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Robert Garcia",
+     "name": "Y Robert Garcia",
      "party": "D"
     },
     {
@@ -5163,11 +4587,11 @@
     "name": "Maxine Waters",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Maxine Waters",
+     "name": "Y Maxine Waters",
      "party": "D"
     },
     {
@@ -5191,11 +4615,11 @@
     "name": "Nanette Barragán",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Nanette Barragán",
+     "name": "Y Nanette Barragán",
      "party": "D"
     },
     {
@@ -5219,11 +4643,11 @@
     "name": "Derek Tran",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Derek Tran",
+     "name": "Y Derek Tran",
      "party": "D"
     },
     {
@@ -5251,11 +4675,11 @@
     "name": "Lou Correa",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Lou Correa",
+     "name": "Y Lou Correa",
      "party": "D"
     },
     {
@@ -5279,11 +4703,11 @@
     "name": "Dave Min",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Dave Min",
+     "name": "Y Dave Min",
      "party": "D"
     },
     {
@@ -5307,11 +4731,11 @@
     "name": "Darrell Issa",
     "party": "R"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retired. / Democratic gain.",
    "open": true,
    "candidates": [
     {
-     "name": "Marni von Wilpert",
+     "name": "Y Marni von Wilpert",
      "party": "D"
     },
     {
@@ -5339,11 +4763,11 @@
     "name": "Mike Levin",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Mike Levin",
+     "name": "Y Mike Levin",
      "party": "D"
     },
     {
@@ -5367,11 +4791,11 @@
     "name": "Scott Peters",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Scott Peters",
+     "name": "Y Scott Peters",
      "party": "D"
     },
     {
@@ -5395,11 +4819,11 @@
     "name": "Sara Jacobs",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Sara Jacobs",
+     "name": "Y Sara Jacobs",
      "party": "D"
     },
     {
@@ -5423,11 +4847,11 @@
     "name": "Juan Vargas",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Juan Vargas",
+     "name": "Y Juan Vargas",
      "party": "D"
     },
     {
@@ -5451,11 +4875,11 @@
     "name": "Diana DeGette",
     "party": "D"
    },
-   "status": "Incumbent lost renomination",
+   "status": "Incumbent lost renomination. / Democratic hold.",
    "open": true,
    "candidates": [
     {
-     "name": "Melat Kiros",
+     "name": "Y Melat Kiros",
      "party": "D"
     },
     {
@@ -5491,11 +4915,11 @@
     "name": "Joe Neguse",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Joe Neguse",
+     "name": "Y Joe Neguse",
      "party": "D"
     },
     {
@@ -5523,15 +4947,15 @@
     "name": "Jeff Hurd",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Dwayne Romero",
      "party": "D"
     },
     {
-     "name": "Jeff Hurd",
+     "name": "Y Jeff Hurd",
      "party": "R"
     },
     {
@@ -5563,11 +4987,11 @@
     "name": "Lauren Boebert",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Eileen Laubacher",
+     "name": "Y Eileen Laubacher",
      "party": "D"
     },
     {
@@ -5599,11 +5023,11 @@
     "name": "Jeff Crank",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Jessica Killin",
+     "name": "Y Jessica Killin",
      "party": "D"
     },
     {
@@ -5639,11 +5063,11 @@
     "name": "Jason Crow",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Jason Crow",
+     "name": "Y Jason Crow",
      "party": "D"
     },
     {
@@ -5679,11 +5103,11 @@
     "name": "Brittany Pettersen",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Brittany Pettersen",
+     "name": "Y Brittany Pettersen",
      "party": "D"
     },
     {
@@ -5723,11 +5147,11 @@
     "name": "Gabe Evans",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Manny Rutinel",
+     "name": "Y Manny Rutinel",
      "party": "D"
     },
     {
@@ -5759,11 +5183,11 @@
     "name": "John B. Larson",
     "party": "D"
    },
-   "status": "Incumbent lost renomination",
+   "status": "Incumbent lost renomination. / Democratic hold.",
    "open": true,
    "candidates": [
     {
-     "name": "Luke Bronin",
+     "name": "Y Luke Bronin",
      "party": "D"
     },
     {
@@ -5791,11 +5215,11 @@
     "name": "Joe Courtney",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Joe Courtney",
+     "name": "Y Joe Courtney",
      "party": "D"
     },
     {
@@ -5819,11 +5243,11 @@
     "name": "Rosa DeLauro",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Rosa DeLauro",
+     "name": "Y Rosa DeLauro",
      "party": "D"
     },
     {
@@ -5851,11 +5275,11 @@
     "name": "Jim Himes",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Jim Himes",
+     "name": "Y Jim Himes",
      "party": "D"
     },
     {
@@ -5883,11 +5307,11 @@
     "name": "Jahana Hayes",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Jahana Hayes",
+     "name": "Y Jahana Hayes",
      "party": "D"
     },
     {
@@ -5911,11 +5335,11 @@
     "name": "Sarah McBride",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Sarah McBride",
+     "name": "Y Sarah McBride",
      "party": "D"
     },
     {
@@ -5939,15 +5363,15 @@
     "name": "Jimmy Patronis",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Gay Valimont",
      "party": "D"
     },
     {
-     "name": "Jimmy Patronis",
+     "name": "Y Jimmy Patronis",
      "party": "R"
     },
     {
@@ -5971,7 +5395,7 @@
     "name": "Neal Dunn",
     "party": "R"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retired. / Republican hold.",
    "open": true,
    "candidates": [
     {
@@ -5979,7 +5403,7 @@
      "party": "D"
     },
     {
-     "name": "Austin Rogers",
+     "name": "Y Austin Rogers",
      "party": "R"
     }
    ],
@@ -6003,15 +5427,15 @@
     "name": "Kat Cammack",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Seth Harp",
      "party": "D"
     },
     {
-     "name": "Kat Cammack",
+     "name": "Y Kat Cammack",
      "party": "R"
     },
     {
@@ -6039,15 +5463,15 @@
     "name": "Aaron Bean",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "LaShonda Holloway",
      "party": "D"
     },
     {
-     "name": "Aaron Bean",
+     "name": "Y Aaron Bean",
      "party": "R"
     },
     {
@@ -6079,15 +5503,15 @@
     "name": "John Rutherford",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Rachel Grage",
      "party": "D"
     },
     {
-     "name": "John Rutherford",
+     "name": "Y John Rutherford",
      "party": "R"
     }
    ],
@@ -6111,15 +5535,15 @@
     "name": "Randy Fine",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Eric Yonce",
      "party": "D"
     },
     {
-     "name": "Randy Fine",
+     "name": "Y Randy Fine",
      "party": "R"
     },
     {
@@ -6147,7 +5571,7 @@
     "name": "Cory Mills",
     "party": "R"
    },
-   "status": "Incumbent lost renomination",
+   "status": "Incumbent lost renomination.",
    "open": true,
    "candidates": [
     {
@@ -6183,15 +5607,15 @@
     "name": "Mike Haridopolos",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Jennifer Jenkins",
      "party": "D"
     },
     {
-     "name": "Mike Haridopolos",
+     "name": "Y Mike Haridopolos",
      "party": "R"
     }
    ],
@@ -6215,11 +5639,11 @@
     "name": "Darren Soto",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Darren Soto",
+     "name": "Y Darren Soto",
      "party": "D"
     },
     {
@@ -6247,11 +5671,11 @@
     "name": "Maxwell Frost",
     "party": "D"
    },
-   "status": "Incumbent re-elected",
+   "status": "Incumbent re-elected.",
    "open": true,
    "candidates": [
     {
-     "name": "Maxwell Frost",
+     "name": "Y Maxwell Frost",
      "party": "D"
     }
    ],
@@ -6271,7 +5695,7 @@
     "name": "Daniel Webster",
     "party": "R"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retired. / Republican hold.",
    "open": true,
    "candidates": [
     {
@@ -6279,7 +5703,7 @@
      "party": "D"
     },
     {
-     "name": "Joe Strada",
+     "name": "Y Joe Strada",
      "party": "R"
     },
     {
@@ -6307,15 +5731,15 @@
     "name": "Gus Bilirakis",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Kimberly Overman",
      "party": "D"
     },
     {
-     "name": "Gus Bilirakis",
+     "name": "Y Gus Bilirakis",
      "party": "R"
     },
     {
@@ -6343,15 +5767,15 @@
     "name": "Anna Paulina Luna",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Leela Gray",
      "party": "D"
     },
     {
-     "name": "Anna Paulina Luna",
+     "name": "Y Anna Paulina Luna",
      "party": "R"
     },
     {
@@ -6379,11 +5803,11 @@
     "name": "Kathy Castor",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Kathy Castor",
+     "name": "Y Kathy Castor",
      "party": "D"
     },
     {
@@ -6415,15 +5839,15 @@
     "name": "Laurel Lee",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Robert People",
      "party": "D"
     },
     {
-     "name": "Laurel Lee",
+     "name": "Y Laurel Lee",
      "party": "R"
     }
    ],
@@ -6447,7 +5871,7 @@
     "name": "Vern Buchanan",
     "party": "R"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retired. / Republican hold.",
    "open": true,
    "candidates": [
     {
@@ -6455,7 +5879,7 @@
      "party": "D"
     },
     {
-     "name": "Sydney Gruters",
+     "name": "Y Sydney Gruters",
      "party": "R"
     },
     {
@@ -6483,15 +5907,15 @@
     "name": "Greg Steube",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Matthew Montavon",
      "party": "D"
     },
     {
-     "name": "Greg Steube",
+     "name": "Y Greg Steube",
      "party": "R"
     },
     {
@@ -6519,15 +5943,15 @@
     "name": "Scott Franklin",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Curtis Gibson",
      "party": "D"
     },
     {
-     "name": "Scott Franklin",
+     "name": "Y Scott Franklin",
      "party": "R"
     },
     {
@@ -6555,7 +5979,7 @@
     "name": "Byron Donalds",
     "party": "R"
    },
-   "status": "Incumbent retiring to run for governor",
+   "status": "Incumbent retired to run for governor. / Republican hold.",
    "open": true,
    "candidates": [
     {
@@ -6563,7 +5987,7 @@
      "party": "D"
     },
     {
-     "name": "Jim Schwartzel",
+     "name": "Y Jim Schwartzel",
      "party": "R"
     },
     {
@@ -6587,11 +6011,11 @@
     "name": "Debbie Wasserman Schultz / Redistricted from the 25th district",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Debbie Wasserman Schultz",
+     "name": "Y Debbie Wasserman Schultz",
      "party": "D"
     },
     {
@@ -6619,15 +6043,15 @@
     "name": "Brian Mast",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "James Martin",
      "party": "D"
     },
     {
-     "name": "Brian Mast",
+     "name": "Y Brian Mast",
      "party": "R"
     },
     {
@@ -6655,11 +6079,11 @@
     "name": null,
     "party": null
    },
-   "status": "New representative to be elected",
+   "status": "New representative elected. / Democratic gain.",
    "open": true,
    "candidates": [
     {
-     "name": "Pia Dandiya",
+     "name": "Y Pia Dandiya",
      "party": "D"
     },
     {
@@ -6687,11 +6111,11 @@
     "name": "Lois Frankel / Redistricted from the 22nd district",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Lois Frankel",
+     "name": "Y Lois Frankel",
      "party": "D"
     },
     {
@@ -6715,11 +6139,11 @@
     "name": "Frederica Wilson",
     "party": "D"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retired. / Democratic hold.",
    "open": true,
    "candidates": [
     {
-     "name": "Oliver Gilbert",
+     "name": "Y Oliver Gilbert",
      "party": "D"
     },
     {
@@ -6743,11 +6167,11 @@
     "name": "Jared Moskowitz / Redistricted from the 23rd district",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Jared Moskowitz",
+     "name": "Y Jared Moskowitz",
      "party": "D"
     },
     {
@@ -6847,15 +6271,15 @@
     "name": "Carlos A. Giménez",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Phil Ehr",
      "party": "D"
     },
     {
-     "name": "Carlos Giménez",
+     "name": "Y Carlos A. Giménez",
      "party": "R"
     },
     {
@@ -6879,7 +6303,7 @@
     "name": "Buddy Carter",
     "party": "R"
    },
-   "status": "Incumbent retiring to run for U.S. Senate",
+   "status": "Incumbent retired to run for U.S. Senate. / Republican hold.",
    "open": true,
    "candidates": [
     {
@@ -6887,7 +6311,7 @@
      "party": "D"
     },
     {
-     "name": "Jim Kingston",
+     "name": "Y Jim Kingston",
      "party": "R"
     }
    ],
@@ -6911,11 +6335,11 @@
     "name": "Sanford Bishop",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Sanford Bishop",
+     "name": "Y Sanford Bishop",
      "party": "D"
     },
     {
@@ -6939,15 +6363,15 @@
     "name": "Brian Jack",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Maura Keller",
      "party": "D"
     },
     {
-     "name": "Brian Jack",
+     "name": "Y Brian Jack",
      "party": "R"
     }
    ],
@@ -6967,11 +6391,11 @@
     "name": "Hank Johnson",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Hank Johnson",
+     "name": "Y Hank Johnson",
      "party": "D"
     },
     {
@@ -6995,11 +6419,11 @@
     "name": "Nikema Williams",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Nikema Williams",
+     "name": "Y Nikema Williams",
      "party": "D"
     },
     {
@@ -7023,11 +6447,11 @@
     "name": "Lucy McBath",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Lucy McBath",
+     "name": "Y Lucy McBath",
      "party": "D"
     },
     {
@@ -7051,15 +6475,15 @@
     "name": "Rich McCormick",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Tony Kozycki",
      "party": "D"
     },
     {
-     "name": "Rich McCormick",
+     "name": "Y Rich McCormick",
      "party": "R"
     }
    ],
@@ -7083,15 +6507,15 @@
     "name": "Austin Scott",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Kelly Esti",
      "party": "D"
     },
     {
-     "name": "Austin Scott",
+     "name": "Y Austin Scott",
      "party": "R"
     }
    ],
@@ -7111,15 +6535,15 @@
     "name": "Andrew Clyde",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Caitlyn Gegen",
      "party": "D"
     },
     {
-     "name": "Andrew Clyde",
+     "name": "Y Andrew Clyde",
      "party": "R"
     }
    ],
@@ -7139,7 +6563,7 @@
     "name": "Mike Collins",
     "party": "R"
    },
-   "status": "Incumbent retiring to run for U.S. Senate",
+   "status": "Incumbent retired to run for U.S. Senate. / Republican hold.",
    "open": true,
    "candidates": [
     {
@@ -7147,7 +6571,7 @@
      "party": "D"
     },
     {
-     "name": "Houston Gaines",
+     "name": "Y Houston Gaines",
      "party": "R"
     }
    ],
@@ -7171,7 +6595,7 @@
     "name": "Barry Loudermilk",
     "party": "R"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retired. / Republican hold.",
    "open": true,
    "candidates": [
     {
@@ -7179,7 +6603,7 @@
      "party": "D"
     },
     {
-     "name": "John Cowan",
+     "name": "Y John Cowan",
      "party": "R"
     }
    ],
@@ -7199,15 +6623,15 @@
     "name": "Rick Allen",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Ceretta Smith",
      "party": "D"
     },
     {
-     "name": "Rick Allen",
+     "name": "Y Rick Allen",
      "party": "R"
     }
    ],
@@ -7231,11 +6655,11 @@
     "name": "Everton Blair",
     "party": "D"
    },
-   "status": "Blair lost the initial nomination for the full term; later elected to complete David Scott's unexpired term.",
+   "status": "Incumbent lost nomination for full term; later elected to complete unexpired term. / Democratic hold.",
    "open": true,
    "candidates": [
     {
-     "name": "Jasmine Clark",
+     "name": "Y Jasmine Clark",
      "party": "D"
     },
     {
@@ -7259,15 +6683,15 @@
     "name": "Clay Fuller",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Shawn Harris",
      "party": "D"
     },
     {
-     "name": "Clay Fuller",
+     "name": "Y Clay Fuller",
      "party": "R"
     }
    ],
@@ -7287,11 +6711,11 @@
     "name": "Ed Case",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Ed Case",
+     "name": "Y Ed Case",
      "party": "D"
     },
     {
@@ -7323,11 +6747,11 @@
     "name": "Jill Tokuda",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Jill Tokuda",
+     "name": "Y Jill Tokuda",
      "party": "D"
     },
     {
@@ -7351,15 +6775,15 @@
     "name": "Russ Fulcher",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Kaylee Peterson",
      "party": "D"
     },
     {
-     "name": "Russ Fulcher",
+     "name": "Y Russ Fulcher",
      "party": "R"
     },
     {
@@ -7387,15 +6811,15 @@
     "name": "Mike Simpson",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Ellie Gilbreath",
      "party": "D"
     },
     {
-     "name": "Mike Simpson",
+     "name": "Y Mike Simpson",
      "party": "R"
     },
     {
@@ -7427,11 +6851,11 @@
     "name": "Jonathan Jackson",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Jonathan Jackson",
+     "name": "Y Jonathan Jackson",
      "party": "D"
     },
     {
@@ -7455,11 +6879,11 @@
     "name": "Robin Kelly",
     "party": "D"
    },
-   "status": "Incumbent retiring to run for U.S. Senate",
+   "status": "Incumbent retired to run for U.S. Senate. / Democratic hold.",
    "open": true,
    "candidates": [
     {
-     "name": "Donna Miller",
+     "name": "Y Donna Miller",
      "party": "D"
     },
     {
@@ -7483,11 +6907,11 @@
     "name": "Delia Ramirez",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Delia Ramirez",
+     "name": "Y Delia Ramirez",
      "party": "D"
     },
     {
@@ -7511,11 +6935,11 @@
     "name": "Chuy García",
     "party": "D"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retired. / Democratic hold.",
    "open": true,
    "candidates": [
     {
-     "name": "Patty Garcia",
+     "name": "Y Patty García",
      "party": "D"
     },
     {
@@ -7547,11 +6971,11 @@
     "name": "Mike Quigley",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Mike Quigley",
+     "name": "Y Mike Quigley",
      "party": "D"
     },
     {
@@ -7575,11 +6999,11 @@
     "name": "Sean Casten",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Sean Casten",
+     "name": "Y Sean Casten",
      "party": "D"
     },
     {
@@ -7603,11 +7027,11 @@
     "name": "Danny Davis",
     "party": "D"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retired. / Democratic hold.",
    "open": true,
    "candidates": [
     {
-     "name": "La Shawn Ford",
+     "name": "Y La Shawn Ford",
      "party": "D"
     },
     {
@@ -7631,11 +7055,11 @@
     "name": "Raja Krishnamoorthi",
     "party": "D"
    },
-   "status": "Incumbent retiring to run for U.S. Senate",
+   "status": "Incumbent retired to run for U.S. Senate. / Democratic hold.",
    "open": true,
    "candidates": [
     {
-     "name": "Melissa Bean",
+     "name": "Y Melissa Bean",
      "party": "D"
     },
     {
@@ -7659,11 +7083,11 @@
     "name": "Jan Schakowsky",
     "party": "D"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retired. / Democratic hold.",
    "open": true,
    "candidates": [
     {
-     "name": "Daniel Biss",
+     "name": "Y Daniel Biss",
      "party": "D"
     },
     {
@@ -7687,11 +7111,11 @@
     "name": "Brad Schneider",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Brad Schneider",
+     "name": "Y Brad Schneider",
      "party": "D"
     },
     {
@@ -7715,11 +7139,11 @@
     "name": "Bill Foster",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Bill Foster",
+     "name": "Y Bill Foster",
      "party": "D"
     },
     {
@@ -7743,15 +7167,15 @@
     "name": "Mike Bost",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Julie Fortier",
      "party": "D"
     },
     {
-     "name": "Mike Bost",
+     "name": "Y Mike Bost",
      "party": "R"
     }
    ],
@@ -7771,11 +7195,11 @@
     "name": "Nikki Budzinski",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Nikki Budzinski",
+     "name": "Y Nikki Budzinski",
      "party": "D"
     },
     {
@@ -7799,11 +7223,11 @@
     "name": "Lauren Underwood",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Lauren Underwood",
+     "name": "Y Lauren Underwood",
      "party": "D"
     },
     {
@@ -7827,15 +7251,15 @@
     "name": "Mary Miller",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Jennifer Todd",
      "party": "D"
     },
     {
-     "name": "Mary Miller",
+     "name": "Y Mary Miller",
      "party": "R"
     }
    ],
@@ -7855,15 +7279,15 @@
     "name": "Darin LaHood",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Paul Nolley",
      "party": "D"
     },
     {
-     "name": "Darin LaHood",
+     "name": "Y Darin LaHood",
      "party": "R"
     }
    ],
@@ -7883,11 +7307,11 @@
     "name": "Eric Sorensen",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Eric Sorensen",
+     "name": "Y Eric Sorensen",
      "party": "D"
     },
     {
@@ -7911,11 +7335,11 @@
     "name": "Frank J. Mrvan",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Frank Mrvan",
+     "name": "Y Frank J. Mrvan",
      "party": "D"
     },
     {
@@ -7943,15 +7367,15 @@
     "name": "Rudy Yakym",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Jamee Decio",
      "party": "D"
     },
     {
-     "name": "Rudy Yakym",
+     "name": "Y Rudy Yakym",
      "party": "R"
     },
     {
@@ -7975,15 +7399,15 @@
     "name": "Marlin Stutzman",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Kelly Thompson",
      "party": "D"
     },
     {
-     "name": "Marlin Stutzman",
+     "name": "Y Marlin Stutzman",
      "party": "R"
     }
    ],
@@ -8003,15 +7427,15 @@
     "name": "Jim Baird",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Drew Cox",
      "party": "D"
     },
     {
-     "name": "Jim Baird",
+     "name": "Y Jim Baird",
      "party": "R"
     }
    ],
@@ -8031,11 +7455,11 @@
     "name": "Victoria Spartz",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "J. D. Ford",
+     "name": "Y J. D. Ford",
      "party": "D"
     },
     {
@@ -8063,15 +7487,15 @@
     "name": "Jefferson Shreve",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Cinde Wirth",
      "party": "D"
     },
     {
-     "name": "Jefferson Shreve",
+     "name": "Y Jefferson Shreve",
      "party": "R"
     }
    ],
@@ -8091,11 +7515,11 @@
     "name": "André Carson",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "André Carson",
+     "name": "Y André Carson",
      "party": "D"
     },
     {
@@ -8123,15 +7547,15 @@
     "name": "Mark Messmer",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Mary Allen",
      "party": "D"
     },
     {
-     "name": "Mark Messmer",
+     "name": "Y Mark Messmer",
      "party": "R"
     }
    ],
@@ -8151,15 +7575,15 @@
     "name": "Erin Houchin",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Brad Meyer",
      "party": "D"
     },
     {
-     "name": "Erin Houchin",
+     "name": "Y Erin Houchin",
      "party": "R"
     },
     {
@@ -8183,11 +7607,11 @@
     "name": "Mariannette Miller-Meeks",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Christina Bohannan",
+     "name": "Y Christina Bohannan",
      "party": "D"
     },
     {
@@ -8219,11 +7643,11 @@
     "name": "Ashley Hinson",
     "party": "R"
    },
-   "status": "Incumbent retiring to run for U.S. Senate",
+   "status": "Incumbent retired to run for U.S. Senate. / Democratic gain.",
    "open": true,
    "candidates": [
     {
-     "name": "Lindsay James",
+     "name": "Y Lindsay James",
      "party": "D"
     },
     {
@@ -8259,11 +7683,11 @@
     "name": "Zach Nunn",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Sarah Trone Garriott",
+     "name": "Y Sarah Trone Garriott",
      "party": "D"
     },
     {
@@ -8291,7 +7715,7 @@
     "name": "Randy Feenstra",
     "party": "R"
    },
-   "status": "Incumbent retiring to run for governor",
+   "status": "Incumbent retired to run for governor. / Republican hold.",
    "open": true,
    "candidates": [
     {
@@ -8299,7 +7723,7 @@
      "party": "D"
     },
     {
-     "name": "Chris McGowan",
+     "name": "Y Chris McGowan",
      "party": "R"
     }
    ],
@@ -8319,15 +7743,15 @@
     "name": "Tracey Mann",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Lauren Reinhold",
      "party": "D"
     },
     {
-     "name": "Tracey Mann",
+     "name": "Y Tracey Mann",
      "party": "R"
     },
     {
@@ -8351,15 +7775,15 @@
     "name": "Derek Schmidt",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Don Coover",
      "party": "D"
     },
     {
-     "name": "Derek Schmidt",
+     "name": "Y Derek Schmidt",
      "party": "R"
     },
     {
@@ -8387,11 +7811,11 @@
     "name": "Sharice Davids",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Sharice Davids",
+     "name": "Y Sharice Davids",
      "party": "D"
     },
     {
@@ -8419,15 +7843,15 @@
     "name": "Ron Estes",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Katy Tyndell",
      "party": "D"
     },
     {
-     "name": "Ron Estes",
+     "name": "Y Ron Estes",
      "party": "R"
     },
     {
@@ -8451,18 +7875,9 @@
     "name": "James Comer",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
-   "candidates": [
-    {
-     "name": "Drew Williams",
-     "party": "D"
-    },
-    {
-     "name": "James Comer",
-     "party": "R"
-    }
-   ],
+   "status": "Incumbent re-elected.",
+   "open": true,
+   "candidates": [],
    "pvi": "R+23",
    "last": null,
    "score": 3.0,
@@ -8479,22 +7894,9 @@
     "name": "Brett Guthrie",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
-   "candidates": [
-    {
-     "name": "Megan Wingfield",
-     "party": "D"
-    },
-    {
-     "name": "Brett Guthrie",
-     "party": "R"
-    },
-    {
-     "name": "Thomas Loecken",
-     "party": "I"
-    }
-   ],
+   "status": "Incumbent re-elected.",
+   "open": true,
+   "candidates": [],
    "pvi": "R+20",
    "last": null,
    "score": 3.0,
@@ -8511,18 +7913,9 @@
     "name": "Morgan McGarvey",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
-   "candidates": [
-    {
-     "name": "Morgan McGarvey",
-     "party": "D"
-    },
-    {
-     "name": "Maria Rodriquez",
-     "party": "R"
-    }
-   ],
+   "status": "Incumbent re-elected.",
+   "open": true,
+   "candidates": [],
    "pvi": "D+10",
    "last": null,
    "score": -3.0,
@@ -8539,22 +7932,9 @@
     "name": "Thomas Massie",
     "party": "R"
    },
-   "status": "Incumbent lost renomination",
+   "status": "Incumbent lost renomination. / Republican hold.",
    "open": true,
-   "candidates": [
-    {
-     "name": "Melissa Strange",
-     "party": "D"
-    },
-    {
-     "name": "Ed Gallrein",
-     "party": "R"
-    },
-    {
-     "name": "Jeremy Todd",
-     "party": "L"
-    }
-   ],
+   "candidates": [],
    "pvi": "R+18",
    "last": null,
    "score": 3.0,
@@ -8571,26 +7951,9 @@
     "name": "Hal Rogers",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
-   "candidates": [
-    {
-     "name": "Ned Pillersdorf",
-     "party": "D"
-    },
-    {
-     "name": "Hal Rogers",
-     "party": "R"
-    },
-    {
-     "name": "Gerardo Serrano",
-     "party": "I"
-    },
-    {
-     "name": "Mikel Wein",
-     "party": "I"
-    }
-   ],
+   "status": "Incumbent re-elected.",
+   "open": true,
+   "candidates": [],
    "pvi": "R+32",
    "last": null,
    "score": 3.0,
@@ -8607,26 +7970,9 @@
     "name": "Andy Barr",
     "party": "R"
    },
-   "status": "Incumbent retiring to run for U.S. Senate",
+   "status": "Incumbent retired to run for U.S. Senate. / Democratic gain.",
    "open": true,
-   "candidates": [
-    {
-     "name": "Zach Dembo",
-     "party": "D"
-    },
-    {
-     "name": "Ralph Alvarado",
-     "party": "R"
-    },
-    {
-     "name": "Jay Bowman",
-     "party": "I"
-    },
-    {
-     "name": "Pete Lynch",
-     "party": "O"
-    }
-   ],
+   "candidates": [],
    "pvi": "R+7",
    "last": "63.0% R",
    "score": 0.1,
@@ -8647,7 +7993,7 @@
     "name": "Steve Scalise",
     "party": "R"
    },
-   "status": "Incumbent running",
+   "status": "Incumbent re-elected.",
    "open": true,
    "candidates": [
     {
@@ -8655,11 +8001,11 @@
      "party": "D"
     },
     {
-     "name": "Steve Scalise",
+     "name": "Randall Arrington",
      "party": "R"
     },
     {
-     "name": "Randall Arrington",
+     "name": "Y Steve Scalise",
      "party": "R"
     },
     {
@@ -8683,15 +8029,15 @@
     "name": "Troy Carter",
     "party": "D"
    },
-   "status": "Incumbent running",
+   "status": "Incumbent re-elected.",
    "open": true,
    "candidates": [
     {
-     "name": "Troy Carter",
+     "name": "Renada Collins",
      "party": "D"
     },
     {
-     "name": "Renada Collins",
+     "name": "Y Troy Carter",
      "party": "D"
     },
     {
@@ -8723,7 +8069,7 @@
     "name": "Clay Higgins",
     "party": "R"
    },
-   "status": "Incumbent running",
+   "status": "Incumbent re-elected.",
    "open": true,
    "candidates": [
     {
@@ -8743,11 +8089,11 @@
      "party": "D"
     },
     {
-     "name": "Clay Higgins",
+     "name": "Kate Cotten",
      "party": "R"
     },
     {
-     "name": "Kate Cotten",
+     "name": "Y Clay Higgins",
      "party": "R"
     }
    ],
@@ -8767,7 +8113,7 @@
     "name": "Mike Johnson",
     "party": "R"
    },
-   "status": "Incumbent running",
+   "status": "Incumbent re-elected.",
    "open": true,
    "candidates": [
     {
@@ -8779,15 +8125,15 @@
      "party": "D"
     },
     {
-     "name": "Mike Johnson",
-     "party": "R"
-    },
-    {
      "name": "Gordon Heslop",
      "party": "R"
     },
     {
      "name": "Mike Nichols",
+     "party": "R"
+    },
+    {
+     "name": "Y Mike Johnson",
      "party": "R"
     }
    ],
@@ -8807,7 +8153,7 @@
     "name": "Julia Letlow",
     "party": "R"
    },
-   "status": "Incumbent retiring to run for U.S. Senate",
+   "status": "Incumbent retired to run for U.S. Senate.",
    "open": true,
    "candidates": [
     {
@@ -8820,6 +8166,10 @@
     },
     {
      "name": "Patricia Moore",
+     "party": "D"
+    },
+    {
+     "name": "Y Patricia Moore",
      "party": "D"
     },
     {
@@ -8839,11 +8189,11 @@
      "party": "R"
     },
     {
-     "name": "Omar Dantzler",
+     "name": "Stewart Cathey Jr.",
      "party": "R"
     },
     {
-     "name": "Stewart Cathey Jr.",
+     "name": "Y Gabe Firment",
      "party": "R"
     }
    ],
@@ -8863,9 +8213,13 @@
     "name": "Cleo Fields",
     "party": "D"
    },
-   "status": "Incumbent retiring to run for Louisiana State Senate",
+   "status": "Incumbent retired to run for Louisiana State Senate.",
    "open": true,
    "candidates": [
+    {
+     "name": "Chauna Banks",
+     "party": "D"
+    },
     {
      "name": "Lindsay Garcia",
      "party": "D"
@@ -8875,19 +8229,15 @@
      "party": "D"
     },
     {
+     "name": "Y Chauna Banks",
+     "party": "D"
+    },
+    {
      "name": "Blake Miguez",
      "party": "R"
     },
     {
-     "name": "Chris Johnson",
-     "party": "R"
-    },
-    {
      "name": "Larry Davis",
-     "party": "R"
-    },
-    {
-     "name": "Michael Mebruer",
      "party": "R"
     },
     {
@@ -8900,6 +8250,10 @@
     },
     {
      "name": "Stephen Wagley",
+     "party": "R"
+    },
+    {
+     "name": "Y Blake Miguez",
      "party": "R"
     },
     {
@@ -8923,11 +8277,11 @@
     "name": "Chellie Pingree",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Chellie Pingree",
+     "name": "Y Chellie Pingree",
      "party": "D"
     },
     {
@@ -8951,7 +8305,7 @@
     "name": "Jared Golden",
     "party": "D"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retired. / Republican gain.",
    "open": true,
    "candidates": [
     {
@@ -8959,7 +8313,7 @@
      "party": "D"
     },
     {
-     "name": "Paul LePage",
+     "name": "Y Paul LePage",
      "party": "R"
     }
    ],
@@ -8983,15 +8337,15 @@
     "name": "Andy Harris",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Dan Schwartz",
      "party": "D"
     },
     {
-     "name": "Andy Harris",
+     "name": "Y Andy Harris",
      "party": "R"
     }
    ],
@@ -9015,11 +8369,11 @@
     "name": "Johnny Olszewski",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Johnny Olszewski",
+     "name": "Y Johnny Olszewski",
      "party": "D"
     },
     {
@@ -9043,11 +8397,11 @@
     "name": "Sarah Elfreth",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Sarah Elfreth",
+     "name": "Y Sarah Elfreth",
      "party": "D"
     },
     {
@@ -9071,11 +8425,11 @@
     "name": "Glenn Ivey",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Glenn Ivey",
+     "name": "Y Glenn Ivey",
      "party": "D"
     },
     {
@@ -9103,11 +8457,11 @@
     "name": "Steny Hoyer",
     "party": "D"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retiring / Democratic hold.",
    "open": true,
    "candidates": [
     {
-     "name": "Adrian Boafo",
+     "name": "Y Adrian Boafo",
      "party": "D"
     },
     {
@@ -9131,11 +8485,11 @@
     "name": "April McClain Delaney",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "April McClain Delaney",
+     "name": "Y April McClain Delaney",
      "party": "D"
     },
     {
@@ -9163,11 +8517,11 @@
     "name": "Kweisi Mfume",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Kweisi Mfume",
+     "name": "Y Kweisi Mfume",
      "party": "D"
     },
     {
@@ -9191,11 +8545,11 @@
     "name": "Jamie Raskin",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Jamie Raskin",
+     "name": "Y Jamie Raskin",
      "party": "D"
     },
     {
@@ -9223,11 +8577,11 @@
     "name": "Richard Neal",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Richard Neal",
+     "name": "Y Richard Neal",
      "party": "D"
     },
     {
@@ -9251,11 +8605,11 @@
     "name": "Jim McGovern",
     "party": "D"
    },
-   "status": "Incumbent re-elected",
+   "status": "Incumbent re-elected.",
    "open": true,
    "candidates": [
     {
-     "name": "Jim McGovern",
+     "name": "Y Jim McGovern",
      "party": "D"
     }
    ],
@@ -9275,11 +8629,11 @@
     "name": "Lori Trahan",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Lori Trahan",
+     "name": "Y Lori Trahan",
      "party": "D"
     },
     {
@@ -9307,11 +8661,11 @@
     "name": "Jake Auchincloss",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Jake Auchincloss",
+     "name": "Y Jake Auchincloss",
      "party": "D"
     },
     {
@@ -9335,11 +8689,11 @@
     "name": "Katherine Clark",
     "party": "D"
    },
-   "status": "Incumbent re-elected",
+   "status": "Incumbent re-elected.",
    "open": true,
    "candidates": [
     {
-     "name": "Katherine Clark",
+     "name": "Y Katherine Clark",
      "party": "D"
     }
    ],
@@ -9359,11 +8713,11 @@
     "name": "Seth Moulton",
     "party": "D"
    },
-   "status": "Incumbent retiring to run for U.S. Senate",
+   "status": "Incumbent retired to run for U.S. Senate. / Democratic hold.",
    "open": true,
    "candidates": [
     {
-     "name": "Dan Koh",
+     "name": "Y Dan Koh",
      "party": "D"
     },
     {
@@ -9387,11 +8741,11 @@
     "name": "Ayanna Pressley",
     "party": "D"
    },
-   "status": "Incumbent re-elected",
+   "status": "Incumbent re-elected.",
    "open": true,
    "candidates": [
     {
-     "name": "Ayanna Pressley",
+     "name": "Y Ayanna Pressley",
      "party": "D"
     }
    ],
@@ -9411,11 +8765,11 @@
     "name": "Stephen Lynch",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Stephen Lynch",
+     "name": "Y Stephen Lynch",
      "party": "D"
     },
     {
@@ -9443,11 +8797,11 @@
     "name": "Bill Keating",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Bill Keating",
+     "name": "Y Bill Keating",
      "party": "D"
     },
     {
@@ -9471,15 +8825,15 @@
     "name": "Jack Bergman",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Callie Barr",
      "party": "D"
     },
     {
-     "name": "Jack Bergman",
+     "name": "Y Jack Bergman",
      "party": "R"
     },
     {
@@ -9523,15 +8877,15 @@
     "name": "John Moolenaar",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Ben Ambrose",
      "party": "D"
     },
     {
-     "name": "John Moolenaar",
+     "name": "Y John Moolenaar",
      "party": "R"
     },
     {
@@ -9559,11 +8913,11 @@
     "name": "Hillary Scholten",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Hillary Scholten",
+     "name": "Y Hillary Scholten",
      "party": "D"
     },
     {
@@ -9595,11 +8949,11 @@
     "name": "Bill Huizenga",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Sean McCann",
+     "name": "Y Sean McCann",
      "party": "D"
     },
     {
@@ -9631,15 +8985,15 @@
     "name": "Tim Walberg",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Christian Vukasovich",
      "party": "D"
     },
     {
-     "name": "Tim Walberg",
+     "name": "Y Tim Walberg",
      "party": "R"
     },
     {
@@ -9671,11 +9025,11 @@
     "name": "Debbie Dingell",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Debbie Dingell",
+     "name": "Y Debbie Dingell",
      "party": "D"
     },
     {
@@ -9715,11 +9069,11 @@
     "name": "Tom Barrett",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "William Lawrence",
+     "name": "Y William Lawrence",
      "party": "D"
     },
     {
@@ -9751,11 +9105,11 @@
     "name": "Kristen McDonald Rivet",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Kristen McDonald Rivet",
+     "name": "Y Kristen McDonald Rivet",
      "party": "D"
     },
     {
@@ -9795,15 +9149,15 @@
     "name": "Lisa McClain",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Ray Pooley",
      "party": "D"
     },
     {
-     "name": "Lisa McClain",
+     "name": "Y Lisa McClain",
      "party": "R"
     },
     {
@@ -9839,11 +9193,11 @@
     "name": "John James",
     "party": "R"
    },
-   "status": "Incumbent retiring to run for governor",
+   "status": "Incumbent retired to run for governor. / Democratic gain.",
    "open": true,
    "candidates": [
     {
-     "name": "Christina Hines",
+     "name": "Y Christina Hines",
      "party": "D"
     },
     {
@@ -9883,11 +9237,11 @@
     "name": "Haley Stevens",
     "party": "D"
    },
-   "status": "Incumbent retiring to run for U.S. Senate",
+   "status": "Incumbent retiring to run for U.S. Senate. / Democratic hold.",
    "open": true,
    "candidates": [
     {
-     "name": "Jeremy Moss",
+     "name": "Y Jeremy Moss",
      "party": "D"
     },
     {
@@ -9923,11 +9277,11 @@
     "name": "Rashida Tlaib",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Rashida Tlaib",
+     "name": "Y Rashida Tlaib",
      "party": "D"
     },
     {
@@ -9963,11 +9317,11 @@
     "name": "Shri Thanedar",
     "party": "D"
    },
-   "status": "Incumbent lost renomination",
+   "status": "Incumbent lost renomination. / Democratic hold.",
    "open": true,
    "candidates": [
     {
-     "name": "Donavan McKinney",
+     "name": "Y Donavan McKinney",
      "party": "D"
     },
     {
@@ -10003,11 +9357,11 @@
     "name": "Brad Finstad",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / DFL gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Jake Johnson",
+     "name": "Y Jake Johnson",
      "party": "D"
     },
     {
@@ -10035,11 +9389,11 @@
     "name": "Angie Craig",
     "party": "D"
    },
-   "status": "Incumbent retiring to run for U.S. Senate",
+   "status": "Incumbent retiring to run for U.S. Senate. / DFL hold.",
    "open": true,
    "candidates": [
     {
-     "name": "Matt Little",
+     "name": "Y Matt Little",
      "party": "D"
     },
     {
@@ -10048,7 +9402,7 @@
     }
    ],
    "pvi": "D+3",
-   "last": "55.6% D",
+   "last": "55.6% DFL",
    "score": -2.6,
    "rating": "Safe D",
    "n_raters": 10,
@@ -10067,11 +9421,11 @@
     "name": "Kelly Morrison",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Kelly Morrison",
+     "name": "Y Kelly Morrison",
      "party": "D"
     },
     {
@@ -10095,11 +9449,11 @@
     "name": "Betty McCollum",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Betty McCollum",
+     "name": "Y Betty McCollum",
      "party": "D"
     },
     {
@@ -10123,11 +9477,11 @@
     "name": "Ilhan Omar",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Ilhan Omar",
+     "name": "Y Ilhan Omar",
      "party": "D"
     },
     {
@@ -10155,15 +9509,15 @@
     "name": "Tom Emmer",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Doug Chapin",
      "party": "D"
     },
     {
-     "name": "Tom Emmer",
+     "name": "Y Tom Emmer",
      "party": "R"
     }
    ],
@@ -10183,15 +9537,15 @@
     "name": "Michelle Fischbach",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Erik Osberg",
      "party": "D"
     },
     {
-     "name": "Michelle Fischbach",
+     "name": "Y Michelle Fischbach",
      "party": "R"
     }
    ],
@@ -10211,15 +9565,15 @@
     "name": "Pete Stauber",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Trina Swanson",
      "party": "D"
     },
     {
-     "name": "Pete Stauber",
+     "name": "Y Pete Stauber",
      "party": "R"
     }
    ],
@@ -10243,15 +9597,15 @@
     "name": "Trent Kelly",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Cliff Johnson",
      "party": "D"
     },
     {
-     "name": "Trent Kelly",
+     "name": "Y Trent Kelly",
      "party": "R"
     },
     {
@@ -10275,11 +9629,11 @@
     "name": "Bennie Thompson",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Bennie Thompson",
+     "name": "Y Bennie Thompson",
      "party": "D"
     },
     {
@@ -10307,15 +9661,15 @@
     "name": "Michael Guest",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Michael Chiaradio",
      "party": "D"
     },
     {
-     "name": "Michael Guest",
+     "name": "Y Michael Guest",
      "party": "R"
     },
     {
@@ -10339,15 +9693,15 @@
     "name": "Mike Ezell",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Jeffrey Hulum III",
      "party": "D"
     },
     {
-     "name": "Mike Ezell",
+     "name": "Y Mike Ezell",
      "party": "R"
     },
     {
@@ -10371,11 +9725,11 @@
     "name": "Wesley Bell",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Wesley Bell",
+     "name": "Y Wesley Bell",
      "party": "D"
     },
     {
@@ -10403,11 +9757,11 @@
     "name": "Ann Wagner",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Fred Wellman",
+     "name": "Y Fred Wellman",
      "party": "D"
     },
     {
@@ -10439,15 +9793,15 @@
     "name": "Bob Onder",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Bethany Mann",
      "party": "D"
     },
     {
-     "name": "Bob Onder",
+     "name": "Y Bob Onder",
      "party": "R"
     },
     {
@@ -10471,15 +9825,15 @@
     "name": "Mark Alford",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Jordan Herrera",
      "party": "D"
     },
     {
-     "name": "Mark Alford",
+     "name": "Y Mark Alford",
      "party": "R"
     },
     {
@@ -10503,11 +9857,11 @@
     "name": "Emanuel Cleaver",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Emanuel Cleaver",
+     "name": "Y Emanuel Cleaver",
      "party": "D"
     },
     {
@@ -10535,7 +9889,7 @@
     "name": "Sam Graves",
     "party": "R"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retired. / Republican hold.",
    "open": true,
    "candidates": [
     {
@@ -10543,7 +9897,7 @@
      "party": "D"
     },
     {
-     "name": "Chris Stigall",
+     "name": "Y Chris Stigall",
      "party": "R"
     },
     {
@@ -10567,15 +9921,15 @@
     "name": "Eric Burlison",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Missi Hesketh",
      "party": "D"
     },
     {
-     "name": "Eric Burlison",
+     "name": "Y Eric Burlison",
      "party": "R"
     },
     {
@@ -10599,15 +9953,15 @@
     "name": "Jason Smith",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Chris Reichard",
      "party": "D"
     },
     {
-     "name": "Jason Smith",
+     "name": "Y Jason Smith",
      "party": "R"
     },
     {
@@ -10631,11 +9985,11 @@
     "name": "Ryan Zinke",
     "party": "R"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retired. / Democratic gain.",
    "open": true,
    "candidates": [
     {
-     "name": "Sam Forstag",
+     "name": "Y Sam Forstag",
      "party": "D"
     },
     {
@@ -10667,15 +10021,15 @@
     "name": "Troy Downing",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Brian Miller",
      "party": "D"
     },
     {
-     "name": "Troy Downing",
+     "name": "Y Troy Downing",
      "party": "R"
     },
     {
@@ -10703,15 +10057,15 @@
     "name": "Mike Flood",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Chris Backemeyer",
      "party": "D"
     },
     {
-     "name": "Mike Flood",
+     "name": "Y Mike Flood",
      "party": "R"
     },
     {
@@ -10743,11 +10097,11 @@
     "name": "Don Bacon",
     "party": "R"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retired. / Democratic gain.",
    "open": true,
    "candidates": [
     {
-     "name": "Denise Powell",
+     "name": "Y Denise Powell",
      "party": "D"
     },
     {
@@ -10779,15 +10133,15 @@
     "name": "Adrian Smith",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Becky Stille",
      "party": "D"
     },
     {
-     "name": "Adrian Smith",
+     "name": "Y Adrian Smith",
      "party": "R"
     },
     {
@@ -10819,11 +10173,11 @@
     "name": "Dina Titus",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Dina Titus",
+     "name": "Y Dina Titus",
      "party": "D"
     },
     {
@@ -10859,11 +10213,11 @@
     "name": "Mark Amodei",
     "party": "R"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retired. / Democratic gain.",
    "open": true,
    "candidates": [
     {
-     "name": "Teresa Benitez-Thompson",
+     "name": "Y Teresa Benitez-Thompson",
      "party": "D"
     },
     {
@@ -10895,11 +10249,11 @@
     "name": "Susie Lee",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Susie Lee",
+     "name": "Y Susie Lee",
      "party": "D"
     },
     {
@@ -10931,11 +10285,11 @@
     "name": "Steven Horsford",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Steven Horsford",
+     "name": "Y Steven Horsford",
      "party": "D"
     },
     {
@@ -10971,11 +10325,11 @@
     "name": "Chris Pappas",
     "party": "D"
    },
-   "status": "Incumbent retiring to run for U.S. Senate",
+   "status": "Incumbent retired to run for U.S. Senate. / Democratic hold.",
    "open": true,
    "candidates": [
     {
-     "name": "Stefany Shaheen",
+     "name": "Y Stefany Shaheen",
      "party": "D"
     },
     {
@@ -11003,11 +10357,11 @@
     "name": "Maggie Goodlander",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Maggie Goodlander",
+     "name": "Y Maggie Goodlander",
      "party": "D"
     },
     {
@@ -11039,11 +10393,11 @@
     "name": "Donald Norcross",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Donald Norcross",
+     "name": "Y Donald Norcross",
      "party": "D"
     },
     {
@@ -11067,11 +10421,11 @@
     "name": "Jeff Van Drew",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Zack Mullock",
+     "name": "Y Zack Mullock",
      "party": "D"
     },
     {
@@ -11103,11 +10457,11 @@
     "name": "Herb Conaway",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Herb Conaway",
+     "name": "Y Herb Conaway",
      "party": "D"
     },
     {
@@ -11139,15 +10493,15 @@
     "name": "Chris Smith",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Rachel Peace",
      "party": "D"
     },
     {
-     "name": "Chris Smith",
+     "name": "Y Chris Smith",
      "party": "R"
     }
    ],
@@ -11167,11 +10521,11 @@
     "name": "Josh Gottheimer",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Josh Gottheimer",
+     "name": "Y Josh Gottheimer",
      "party": "D"
     },
     {
@@ -11199,11 +10553,11 @@
     "name": "Frank Pallone",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Frank Pallone",
+     "name": "Y Frank Pallone",
      "party": "D"
     },
     {
@@ -11227,11 +10581,11 @@
     "name": "Thomas Kean Jr.",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Rebecca Bennett",
+     "name": "Y Rebecca Bennett",
      "party": "D"
     },
     {
@@ -11263,11 +10617,11 @@
     "name": "Rob Menendez",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Rob Menendez",
+     "name": "Y Rob Menendez",
      "party": "D"
     },
     {
@@ -11299,11 +10653,11 @@
     "name": "Nellie Pou",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Nellie Pou",
+     "name": "Y Nellie Pou",
      "party": "D"
     },
     {
@@ -11335,11 +10689,11 @@
     "name": "LaMonica McIver",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "LaMonica McIver",
+     "name": "Y LaMonica McIver",
      "party": "D"
     },
     {
@@ -11363,11 +10717,11 @@
     "name": "Analilia Mejia",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Analilia Mejia",
+     "name": "Y Analilia Mejia",
      "party": "D"
     },
     {
@@ -11395,11 +10749,11 @@
     "name": "Bonnie Watson Coleman",
     "party": "D"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retired. / Democratic hold.",
    "open": true,
    "candidates": [
     {
-     "name": "Adam Hamawy",
+     "name": "Y Adam Hamawy",
      "party": "D"
     },
     {
@@ -11431,11 +10785,11 @@
     "name": "Melanie Stansbury",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Melanie Stansbury",
+     "name": "Y Melanie Stansbury",
      "party": "D"
     },
     {
@@ -11459,11 +10813,11 @@
     "name": "Gabe Vasquez",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Gabe Vasquez",
+     "name": "Y Gabe Vasquez",
      "party": "D"
     },
     {
@@ -11491,11 +10845,11 @@
     "name": "Teresa Leger Fernandez",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Teresa Leger Fernández",
+     "name": "Y Teresa Leger Fernández",
      "party": "D"
     },
     {
@@ -11519,15 +10873,15 @@
     "name": "Nick LaLota",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Chris Gallant",
      "party": "D"
     },
     {
-     "name": "Nick LaLota",
+     "name": "Y Nick LaLota",
      "party": "R"
     }
    ],
@@ -11551,15 +10905,15 @@
     "name": "Andrew Garbarino",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Patrick Halpin",
      "party": "D"
     },
     {
-     "name": "Andrew Garbarino",
+     "name": "Y Andrew Garbarino",
      "party": "R"
     }
    ],
@@ -11583,11 +10937,11 @@
     "name": "Tom Suozzi",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Tom Suozzi",
+     "name": "Y Tom Suozzi",
      "party": "D"
     },
     {
@@ -11615,11 +10969,11 @@
     "name": "Laura Gillen",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Laura Gillen",
+     "name": "Y Laura Gillen",
      "party": "D"
     },
     {
@@ -11651,11 +11005,11 @@
     "name": "Gregory Meeks",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Gregory Meeks",
+     "name": "Y Gregory Meeks",
      "party": "D"
     },
     {
@@ -11679,11 +11033,11 @@
     "name": "Grace Meng",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Grace Meng",
+     "name": "Y Grace Meng",
      "party": "D"
     },
     {
@@ -11707,11 +11061,11 @@
     "name": "Nydia Velázquez",
     "party": "D"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retired. Democratic hold.",
    "open": true,
    "candidates": [
     {
-     "name": "Claire Valdez",
+     "name": "Y Claire Valdez",
      "party": "D"
     },
     {
@@ -11739,11 +11093,11 @@
     "name": "Hakeem Jeffries",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Hakeem Jeffries",
+     "name": "Y Hakeem Jeffries",
      "party": "D"
     },
     {
@@ -11767,11 +11121,11 @@
     "name": "Yvette Clarke",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Yvette Clarke",
+     "name": "Y Yvette Clarke",
      "party": "D"
     },
     {
@@ -11795,11 +11149,11 @@
     "name": "Dan Goldman",
     "party": "D"
    },
-   "status": "Incumbent lost renomination",
+   "status": "Incumbent lost renomination. / Democratic hold.",
    "open": true,
    "candidates": [
     {
-     "name": "Brad Lander",
+     "name": "Y Brad Lander",
      "party": "D"
     },
     {
@@ -11823,15 +11177,15 @@
     "name": "Nicole Malliotakis",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Michael DeCillis",
      "party": "D"
     },
     {
-     "name": "Nicole Malliotakis",
+     "name": "Y Nicole Malliotakis",
      "party": "R"
     }
    ],
@@ -11851,11 +11205,11 @@
     "name": "Jerry Nadler",
     "party": "D"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retired. Democratic hold.",
    "open": true,
    "candidates": [
     {
-     "name": "Micah Lasher",
+     "name": "Y Micah Lasher",
      "party": "D"
     },
     {
@@ -11887,11 +11241,11 @@
     "name": "Adriano Espaillat",
     "party": "D"
    },
-   "status": "Incumbent lost renomination",
+   "status": "Incumbent lost renomination. / Democratic hold.",
    "open": true,
    "candidates": [
     {
-     "name": "Darializa Avila Chevalier",
+     "name": "Y Darializa Avila Chevalier",
      "party": "D"
     },
     {
@@ -11915,11 +11269,11 @@
     "name": "Alexandria Ocasio-Cortez",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Alexandria Ocasio-Cortez",
+     "name": "Y Alexandria Ocasio-Cortez",
      "party": "D"
     },
     {
@@ -11943,11 +11297,11 @@
     "name": "Ritchie Torres",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Ritchie Torres",
+     "name": "Y Ritchie Torres",
      "party": "D"
     },
     {
@@ -11983,11 +11337,11 @@
     "name": "George Latimer",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "George Latimer",
+     "name": "Y George Latimer",
      "party": "D"
     },
     {
@@ -12011,11 +11365,11 @@
     "name": "Mike Lawler",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Cait Conley",
+     "name": "Y Cait Conley",
      "party": "D"
     },
     {
@@ -12043,11 +11397,11 @@
     "name": "Pat Ryan",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Pat Ryan",
+     "name": "Y Pat Ryan",
      "party": "D"
     },
     {
@@ -12071,11 +11425,11 @@
     "name": "Josh Riley",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Josh Riley",
+     "name": "Y Josh Riley",
      "party": "D"
     },
     {
@@ -12103,11 +11457,11 @@
     "name": "Paul Tonko",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Paul Tonko",
+     "name": "Y Paul Tonko",
      "party": "D"
     },
     {
@@ -12131,7 +11485,7 @@
     "name": "Elise Stefanik",
     "party": "R"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retired. Republican hold.",
    "open": true,
    "candidates": [
     {
@@ -12139,7 +11493,7 @@
      "party": "D"
     },
     {
-     "name": "Anthony Constantino",
+     "name": "Y Anthony Constantino",
      "party": "R"
     }
    ],
@@ -12163,11 +11517,11 @@
     "name": "John Mannion",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "John Mannion",
+     "name": "Y John Mannion",
      "party": "D"
     },
     {
@@ -12191,15 +11545,15 @@
     "name": "Nick Langworthy",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Aaron Gies",
      "party": "D"
     },
     {
-     "name": "Nick Langworthy",
+     "name": "Y Nick Langworthy",
      "party": "R"
     }
    ],
@@ -12223,15 +11577,15 @@
     "name": "Claudia Tenney",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Alissa Ellman",
      "party": "D"
     },
     {
-     "name": "Claudia Tenney",
+     "name": "Y Claudia Tenney",
      "party": "R"
     }
    ],
@@ -12251,11 +11605,11 @@
     "name": "Joseph Morelle",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Joseph Morelle",
+     "name": "Y Joseph Morelle",
      "party": "D"
     },
     {
@@ -12279,11 +11633,11 @@
     "name": "Tim Kennedy",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Tim Kennedy",
+     "name": "Y Tim Kennedy",
      "party": "D"
     },
     {
@@ -12307,11 +11661,11 @@
     "name": "Don Davis",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Don Davis",
+     "name": "Y Don Davis",
      "party": "D"
     },
     {
@@ -12343,11 +11697,11 @@
     "name": "Deborah Ross",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Deborah Ross",
+     "name": "Y Deborah Ross",
      "party": "D"
     },
     {
@@ -12411,11 +11765,11 @@
     "name": "Valerie Foushee",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Valerie Foushee",
+     "name": "Y Valerie Foushee",
      "party": "D"
     },
     {
@@ -12443,8 +11797,8 @@
     "name": "Virginia Foxx",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
      "name": "Chuck Hubbard",
@@ -12479,11 +11833,11 @@
     "name": "Addison McDowell",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Cyril Jefferson",
+     "name": "Y Cyril Jefferson",
      "party": "D"
     },
     {
@@ -12511,15 +11865,15 @@
     "name": "David Rouzer",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Kimberly Hardy",
      "party": "D"
     },
     {
-     "name": "David Rouzer",
+     "name": "Y David Rouzer",
      "party": "R"
     },
     {
@@ -12547,15 +11901,15 @@
     "name": "Mark Harris",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Colby Watson",
      "party": "D"
     },
     {
-     "name": "Mark Harris",
+     "name": "Y Mark Harris",
      "party": "R"
     },
     {
@@ -12583,11 +11937,11 @@
     "name": "Richard Hudson",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Richard Ojeda",
+     "name": "Y Richard Ojeda",
      "party": "D"
     },
     {
@@ -12651,11 +12005,11 @@
     "name": "Chuck Edwards",
     "party": "R"
    },
-   "status": "Incumbent renominated but withdrew",
+   "status": "Incumbent renominated but withdrew. / Democratic gain.",
    "open": false,
    "candidates": [
     {
-     "name": "Jamie Ager",
+     "name": "Y Jamie Ager",
      "party": "D"
     },
     {
@@ -12687,11 +12041,11 @@
     "name": "Alma Adams",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Alma Adams",
+     "name": "Y Alma Adams",
      "party": "D"
     },
     {
@@ -12715,11 +12069,11 @@
     "name": "Brad Knott",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Paul Barringer",
+     "name": "Y Paul Barringer",
      "party": "D"
     },
     {
@@ -12751,11 +12105,11 @@
     "name": "Tim Moore",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Lakesha Womack",
+     "name": "Y LaKesha Womack",
      "party": "D"
     },
     {
@@ -12783,15 +12137,15 @@
     "name": "Julie Fedorchak",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Trygve Hammer",
      "party": "D"
     },
     {
-     "name": "Julie Fedorchak",
+     "name": "Y Julie Fedorchak",
      "party": "R"
     },
     {
@@ -12819,11 +12173,11 @@
     "name": "Greg Landsman",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected",
+   "open": true,
    "candidates": [
     {
-     "name": "Greg Landsman",
+     "name": "Y Greg Landsman",
      "party": "D"
     },
     {
@@ -12855,15 +12209,15 @@
     "name": "David Taylor",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected",
+   "open": true,
    "candidates": [
     {
      "name": "Jennifer Mazzuckelli",
      "party": "D"
     },
     {
-     "name": "David Taylor",
+     "name": "Y David Taylor",
      "party": "R"
     }
    ],
@@ -12883,11 +12237,11 @@
     "name": "Joyce Beatty",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Joyce Beatty",
+     "name": "Y Joyce Beatty",
      "party": "D"
     },
     {
@@ -12911,15 +12265,15 @@
     "name": "Jim Jordan",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected",
+   "open": true,
    "candidates": [
     {
      "name": "Joshua Kolasinski",
      "party": "D"
     },
     {
-     "name": "Jim Jordan",
+     "name": "Y Jim Jordan",
      "party": "R"
     },
     {
@@ -12943,15 +12297,15 @@
     "name": "Bob Latta",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected",
+   "open": true,
    "candidates": [
     {
      "name": "Brian Shaver",
      "party": "D"
     },
     {
-     "name": "Bob Latta",
+     "name": "Y Bob Latta",
      "party": "R"
     },
     {
@@ -12975,15 +12329,15 @@
     "name": "Michael Rulli",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected",
+   "open": true,
    "candidates": [
     {
      "name": "Elizabeth Kirtley",
      "party": "D"
     },
     {
-     "name": "Michael Rulli",
+     "name": "Y Michael Rulli",
      "party": "R"
     }
    ],
@@ -13003,11 +12357,11 @@
     "name": "Max Miller",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Brian Poindexter",
+     "name": "Y Brian Poindexter",
      "party": "D"
     },
     {
@@ -13035,15 +12389,15 @@
     "name": "Warren Davidson",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected",
+   "open": true,
    "candidates": [
     {
      "name": "Vanessa Enoch",
      "party": "D"
     },
     {
-     "name": "Warren Davidson",
+     "name": "Y Warren Davidson",
      "party": "R"
     }
    ],
@@ -13067,11 +12421,11 @@
     "name": "Marcy Kaptur",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected",
+   "open": true,
    "candidates": [
     {
-     "name": "Marcy Kaptur",
+     "name": "Y Marcy Kaptur",
      "party": "D"
     },
     {
@@ -13103,11 +12457,11 @@
     "name": "Mike Turner",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Kristina Knickerbocker",
+     "name": "Y Kristina Knickerbocker",
      "party": "D"
     },
     {
@@ -13139,11 +12493,11 @@
     "name": "Shontel Brown",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected",
+   "open": true,
    "candidates": [
     {
-     "name": "Shontel Brown",
+     "name": "Y Shontel Brown",
      "party": "D"
     },
     {
@@ -13167,15 +12521,15 @@
     "name": "Troy Balderson",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected",
+   "open": true,
    "candidates": [
     {
      "name": "Jerrad Christian",
      "party": "D"
     },
     {
-     "name": "Troy Balderson",
+     "name": "Y Troy Balderson",
      "party": "R"
     }
    ],
@@ -13195,11 +12549,11 @@
     "name": "Emilia Sykes",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected",
+   "open": true,
    "candidates": [
     {
-     "name": "Emilia Sykes",
+     "name": "Y Emilia Sykes",
      "party": "D"
     },
     {
@@ -13231,15 +12585,15 @@
     "name": "David Joyce",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected",
+   "open": true,
    "candidates": [
     {
      "name": "Maria Jukic",
      "party": "D"
     },
     {
-     "name": "David Joyce",
+     "name": "Y David Joyce",
      "party": "R"
     }
    ],
@@ -13259,11 +12613,11 @@
     "name": "Mike Carey",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Don Leonard",
+     "name": "Y Don Leonard",
      "party": "D"
     },
     {
@@ -13295,7 +12649,7 @@
     "name": "Kevin Hern",
     "party": "R"
    },
-   "status": "Incumbent retiring to run for U.S. Senate",
+   "status": "Incumbent retired to run for U.S. Senate. / Republican hold.",
    "open": true,
    "candidates": [
     {
@@ -13303,7 +12657,7 @@
      "party": "D"
     },
     {
-     "name": "Mark Tedford",
+     "name": "Y Mark Tedford",
      "party": "R"
     }
    ],
@@ -13327,15 +12681,15 @@
     "name": "Josh Brecheen",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Brandon Wade",
      "party": "D"
     },
     {
-     "name": "Josh Brecheen",
+     "name": "Y Josh Brecheen",
      "party": "R"
     },
     {
@@ -13359,15 +12713,15 @@
     "name": "Frank Lucas",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Suzie Byrd",
      "party": "D"
     },
     {
-     "name": "Frank Lucas",
+     "name": "Y Frank Lucas",
      "party": "R"
     }
    ],
@@ -13387,15 +12741,15 @@
     "name": "Tom Cole",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Mitchell Jacob",
      "party": "D"
     },
     {
-     "name": "Tom Cole",
+     "name": "Y Tom Cole",
      "party": "R"
     },
     {
@@ -13419,15 +12773,15 @@
     "name": "Stephanie Bice",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Jena Nelson",
      "party": "D"
     },
     {
-     "name": "Stephanie Bice",
+     "name": "Y Stephanie Bice",
      "party": "R"
     },
     {
@@ -13459,11 +12813,11 @@
     "name": "Suzanne Bonamici",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Suzanne Bonamici",
+     "name": "Y Suzanne Bonamici",
      "party": "D"
     },
     {
@@ -13487,15 +12841,15 @@
     "name": "Cliff Bentz",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Chris Beck",
      "party": "D"
     },
     {
-     "name": "Cliff Bentz",
+     "name": "Y Cliff Bentz",
      "party": "R"
     }
    ],
@@ -13515,11 +12869,11 @@
     "name": "Maxine Dexter",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Maxine Dexter",
+     "name": "Y Maxine Dexter",
      "party": "D"
     },
     {
@@ -13543,11 +12897,11 @@
     "name": "Val Hoyle",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Val Hoyle",
+     "name": "Y Val Hoyle",
      "party": "D"
     },
     {
@@ -13575,11 +12929,11 @@
     "name": "Janelle Bynum",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Janelle Bynum",
+     "name": "Y Janelle Bynum",
      "party": "D"
     },
     {
@@ -13607,11 +12961,11 @@
     "name": "Andrea Salinas",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Andrea Salinas",
+     "name": "Y Andrea Salinas",
      "party": "D"
     },
     {
@@ -13635,11 +12989,11 @@
     "name": "Brian Fitzpatrick",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Bob Harvie",
+     "name": "Y Bob Harvie",
      "party": "D"
     },
     {
@@ -13667,11 +13021,11 @@
     "name": "Brendan Boyle",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Brendan Boyle",
+     "name": "Y Brendan Boyle",
      "party": "D"
     },
     {
@@ -13695,11 +13049,11 @@
     "name": "Dwight Evans",
     "party": "D"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retired. / Democratic hold.",
    "open": true,
    "candidates": [
     {
-     "name": "Chris Rabb",
+     "name": "Y Chris Rabb",
      "party": "D"
     },
     {
@@ -13723,11 +13077,11 @@
     "name": "Madeleine Dean",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Madeleine Dean",
+     "name": "Y Madeleine Dean",
      "party": "D"
     },
     {
@@ -13751,11 +13105,11 @@
     "name": "Mary Gay Scanlon",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Mary Gay Scanlon",
+     "name": "Y Mary Gay Scanlon",
      "party": "D"
     },
     {
@@ -13779,11 +13133,11 @@
     "name": "Chrissy Houlahan",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Chrissy Houlahan",
+     "name": "Y Chrissy Houlahan",
      "party": "D"
     },
     {
@@ -13807,11 +13161,11 @@
     "name": "Ryan Mackenzie",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Bob Brooks",
+     "name": "Y Bob Brooks",
      "party": "D"
     },
     {
@@ -13839,11 +13193,11 @@
     "name": "Rob Bresnahan",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Paige Cognetti",
+     "name": "Y Paige Cognetti",
      "party": "D"
     },
     {
@@ -13871,15 +13225,15 @@
     "name": "Dan Meuser",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Rachel Wallace",
      "party": "D"
     },
     {
-     "name": "Dan Meuser",
+     "name": "Y Dan Meuser",
      "party": "R"
     }
    ],
@@ -13899,11 +13253,11 @@
     "name": "Scott Perry",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Janelle Stelson",
+     "name": "Y Janelle Stelson",
      "party": "D"
     },
     {
@@ -13931,15 +13285,15 @@
     "name": "Lloyd Smucker",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Nancy Mannion",
      "party": "D"
     },
     {
-     "name": "Lloyd Smucker",
+     "name": "Y Lloyd Smucker",
      "party": "R"
     }
    ],
@@ -13963,11 +13317,11 @@
     "name": "Summer Lee",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Summer Lee",
+     "name": "Y Summer Lee",
      "party": "D"
     },
     {
@@ -13991,15 +13345,15 @@
     "name": "John Joyce",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Beth Farnham",
      "party": "D"
     },
     {
-     "name": "John Joyce",
+     "name": "Y John Joyce",
      "party": "R"
     }
    ],
@@ -14019,15 +13373,15 @@
     "name": "Guy Reschenthaler",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Alan Bradstock",
      "party": "D"
     },
     {
-     "name": "Guy Reschenthaler",
+     "name": "Y Guy Reschenthaler",
      "party": "R"
     }
    ],
@@ -14047,15 +13401,15 @@
     "name": "Glenn Thompson",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Ray Bilger",
      "party": "D"
     },
     {
-     "name": "Glenn Thompson",
+     "name": "Y Glenn Thompson",
      "party": "R"
     }
    ],
@@ -14075,15 +13429,15 @@
     "name": "Mike Kelly",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Justin Wagner",
      "party": "D"
     },
     {
-     "name": "Mike Kelly",
+     "name": "Y Mike Kelly",
      "party": "R"
     }
    ],
@@ -14107,11 +13461,11 @@
     "name": "Chris Deluzio",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Chris Deluzio",
+     "name": "Y Chris Deluzio",
      "party": "D"
     },
     {
@@ -14135,11 +13489,11 @@
     "name": "Gabe Amo",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Gabe Amo",
+     "name": "Y Gabe Amo",
      "party": "D"
     },
     {
@@ -14167,11 +13521,11 @@
     "name": "Seth Magaziner",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Seth Magaziner",
+     "name": "Y Seth Magaziner",
      "party": "D"
     },
     {
@@ -14195,11 +13549,11 @@
     "name": "Nancy Mace",
     "party": "R"
    },
-   "status": "Incumbent retiring to run for governor",
+   "status": "Incumbent retired to run for governor. Democratic gain.",
    "open": true,
    "candidates": [
     {
-     "name": "Nancy Lacore",
+     "name": "Y Nancy Lacore",
      "party": "D"
     },
     {
@@ -14231,7 +13585,7 @@
     "name": "Joe Wilson",
     "party": "R"
    },
-   "status": "Incumbent renominated",
+   "status": "Incumbent renominated.",
    "open": false,
    "candidates": [
     {
@@ -14267,15 +13621,15 @@
     "name": "Sheri Biggs",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Eunice Lehmacher",
      "party": "D"
     },
     {
-     "name": "Sheri Biggs",
+     "name": "Y Sheri Biggs",
      "party": "R"
     },
     {
@@ -14299,15 +13653,15 @@
     "name": "William Timmons",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Courtney McClain",
      "party": "D"
     },
     {
-     "name": "William Timmons",
+     "name": "Y William Timmons",
      "party": "R"
     },
     {
@@ -14331,7 +13685,7 @@
     "name": "Ralph Norman",
     "party": "R"
    },
-   "status": "Incumbent retiring to run for governor",
+   "status": "Incumbent retired to run for governor. / Republican hold.",
    "open": true,
    "candidates": [
     {
@@ -14339,7 +13693,7 @@
      "party": "D"
     },
     {
-     "name": "Wes Climer",
+     "name": "Y Wes Climer",
      "party": "R"
     }
    ],
@@ -14363,11 +13717,11 @@
     "name": "Jim Clyburn",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Jim Clyburn",
+     "name": "Y Jim Clyburn",
      "party": "D"
     },
     {
@@ -14391,15 +13745,15 @@
     "name": "Russell Fry",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "John Vincent",
      "party": "D"
     },
     {
-     "name": "Russell Fry",
+     "name": "Y Russell Fry",
      "party": "R"
     }
    ],
@@ -14419,7 +13773,7 @@
     "name": "Dusty Johnson",
     "party": "R"
    },
-   "status": "Incumbent retiring to run for governor",
+   "status": "Incumbent retired to run for governor. / Republican hold.",
    "open": true,
    "candidates": [
     {
@@ -14427,7 +13781,7 @@
      "party": "D"
     },
     {
-     "name": "Marty Jackley",
+     "name": "Y Marty Jackley",
      "party": "R"
     }
    ],
@@ -14447,15 +13801,15 @@
     "name": "Diana Harshbarger",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Kristi Burke",
      "party": "D"
     },
     {
-     "name": "Diana Harshbarger",
+     "name": "Y Diana Harshbarger",
      "party": "R"
     },
     {
@@ -14495,15 +13849,15 @@
     "name": "Tim Burchett",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Michaela Barnett",
      "party": "D"
     },
     {
-     "name": "Tim Burchett",
+     "name": "Y Tim Burchett",
      "party": "R"
     },
     {
@@ -14531,15 +13885,15 @@
     "name": "Chuck Fleischmann",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Anna Golladay",
      "party": "D"
     },
     {
-     "name": "Chuck Fleischmann",
+     "name": "Y Chuck Fleischmann",
      "party": "R"
     },
     {
@@ -14579,11 +13933,11 @@
     "name": "Scott DesJarlais",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Victoria Broderick",
+     "name": "Y Victoria Broderick",
      "party": "D"
     },
     {
@@ -14600,11 +13954,15 @@
     }
    ],
    "pvi": "R+11",
-   "last": null,
+   "last": "70.0% R",
    "score": 3.0,
-   "n_raters": 0,
-   "ratings": {},
-   "rating": "Safe R"
+   "rating": "Safe R",
+   "n_raters": 10,
+   "ratings": {
+    "Cook": "Solid R",
+    "IE": "Solid R",
+    "Sabato": "Safe R"
+   }
   },
   "TN-05": {
    "state": "TN",
@@ -14615,7 +13973,7 @@
     "name": "Andy Ogles",
     "party": "R"
    },
-   "status": "Incumbent lost renomination",
+   "status": "Incumbent lost renomination. / Republican hold.",
    "open": true,
    "candidates": [
     {
@@ -14623,7 +13981,7 @@
      "party": "D"
     },
     {
-     "name": "Charlie Hatcher",
+     "name": "Y Charlie Hatcher",
      "party": "R"
     },
     {
@@ -14655,7 +14013,7 @@
     "name": "John Rose",
     "party": "R"
    },
-   "status": "Incumbent retiring to run for governor",
+   "status": "Incumbent retired to run for governor. / Republican hold.",
    "open": true,
    "candidates": [
     {
@@ -14663,7 +14021,7 @@
      "party": "D"
     },
     {
-     "name": "Johnny Garrett",
+     "name": "Y Johnny Garrett",
      "party": "R"
     },
     {
@@ -14691,15 +14049,15 @@
     "name": "Matt Van Epps",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Darden Copeland",
      "party": "D"
     },
     {
-     "name": "Matt Van Epps",
+     "name": "Y Matt Van Epps",
      "party": "R"
     },
     {
@@ -14731,15 +14089,15 @@
     "name": "David Kustoff",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Heidi Kuhn",
      "party": "D"
     },
     {
-     "name": "David Kustoff",
+     "name": "Y David Kustoff",
      "party": "R"
     },
     {
@@ -14783,7 +14141,7 @@
     "name": "Steve Cohen",
     "party": "D"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retired. / Republican gain.",
    "open": true,
    "candidates": [
     {
@@ -14791,7 +14149,7 @@
      "party": "D"
     },
     {
-     "name": "Brent Taylor",
+     "name": "Y Brent Taylor",
      "party": "R"
     },
     {
@@ -14823,15 +14181,15 @@
     "name": "Nathaniel Moran",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Yolanda Prince",
      "party": "D"
     },
     {
-     "name": "Nathaniel Moran",
+     "name": "Y Nathaniel Moran",
      "party": "R"
     }
    ],
@@ -14851,7 +14209,7 @@
     "name": "Dan Crenshaw",
     "party": "R"
    },
-   "status": "Incumbent lost renomination",
+   "status": "Incumbent lost renomination. / Republican hold.",
    "open": true,
    "candidates": [
     {
@@ -14859,7 +14217,7 @@
      "party": "D"
     },
     {
-     "name": "Steve Toth",
+     "name": "Y Steve Toth",
      "party": "R"
     }
    ],
@@ -14883,15 +14241,15 @@
     "name": "Keith Self",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Evan Hunt",
      "party": "D"
     },
     {
-     "name": "Keith Self",
+     "name": "Y Keith Self",
      "party": "R"
     }
    ],
@@ -14911,15 +14269,15 @@
     "name": "Pat Fallon",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Jason Pearce",
      "party": "D"
     },
     {
-     "name": "Pat Fallon",
+     "name": "Y Pat Fallon",
      "party": "R"
     }
    ],
@@ -14939,15 +14297,15 @@
     "name": "Lance Gooden",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Chelsey Hockett",
      "party": "D"
     },
     {
-     "name": "Lance Gooden",
+     "name": "Y Lance Gooden",
      "party": "R"
     }
    ],
@@ -14971,15 +14329,15 @@
     "name": "Jake Ellzey",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Danny Minton",
      "party": "D"
     },
     {
-     "name": "Jake Ellzey",
+     "name": "Y Jake Ellzey",
      "party": "R"
     }
    ],
@@ -14999,11 +14357,11 @@
     "name": "Lizzie Fletcher",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Lizzie Fletcher",
+     "name": "Y Lizzie Fletcher",
      "party": "D"
     },
     {
@@ -15031,7 +14389,7 @@
     "name": "Morgan Luttrell",
     "party": "R"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retired. / Republican hold.",
    "open": true,
    "candidates": [
     {
@@ -15039,7 +14397,7 @@
      "party": "D"
     },
     {
-     "name": "Jessica Hart Steinmann",
+     "name": "Y Jessica Steinmann",
      "party": "R"
     }
    ],
@@ -15059,11 +14417,11 @@
     "name": null,
     "party": null
    },
-   "status": "New representative to be elected",
+   "status": "New member elected. / Democratic gain.",
    "open": true,
    "candidates": [
     {
-     "name": "Leticia Gutierrez",
+     "name": "Y Leticia Gutierrez",
      "party": "D"
     },
     {
@@ -15073,7 +14431,7 @@
    ],
    "pvi": "R+9",
    "last": "–",
-   "score": 2.0,
+   "score": 1.9,
    "rating": "Likely R",
    "n_raters": 10,
    "ratings": {
@@ -15091,7 +14449,7 @@
     "name": "Michael McCaul",
     "party": "R"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retired. / Republican hold.",
    "open": true,
    "candidates": [
     {
@@ -15099,7 +14457,7 @@
      "party": "D"
     },
     {
-     "name": "Chris Gober",
+     "name": "Y Chris Gober",
      "party": "R"
     }
    ],
@@ -15123,15 +14481,15 @@
     "name": "August Pfluger",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Claire Reynolds",
      "party": "D"
     },
     {
-     "name": "August Pfluger",
+     "name": "Y August Pfluger",
      "party": "R"
     }
    ],
@@ -15151,15 +14509,15 @@
     "name": "Craig Goldman",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Angela Rodriguez Prilliman",
      "party": "D"
     },
     {
-     "name": "Craig Goldman",
+     "name": "Y Craig Goldman",
      "party": "R"
     }
    ],
@@ -15179,15 +14537,15 @@
     "name": "Ronny Jackson",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Mark Nair",
      "party": "D"
     },
     {
-     "name": "Ronny Jackson",
+     "name": "Y Ronny Jackson",
      "party": "R"
     }
    ],
@@ -15207,15 +14565,15 @@
     "name": "Randy Weber",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Thurman Bartie",
      "party": "D"
     },
     {
-     "name": "Randy Weber",
+     "name": "Y Randy Weber",
      "party": "R"
     }
    ],
@@ -15235,11 +14593,11 @@
     "name": "Monica De La Cruz",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Bobby Pulido",
+     "name": "Y Bobby Pulido",
      "party": "D"
     },
     {
@@ -15267,11 +14625,11 @@
     "name": "Veronica Escobar",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Veronica Escobar",
+     "name": "Y Veronica Escobar",
      "party": "D"
     },
     {
@@ -15295,15 +14653,15 @@
     "name": "Pete Sessions",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Casey Shepard",
      "party": "D"
     },
     {
-     "name": "Pete Sessions",
+     "name": "Y Pete Sessions",
      "party": "R"
     }
    ],
@@ -15331,7 +14689,7 @@
    "open": true,
    "candidates": [
     {
-     "name": "Christian Menefee",
+     "name": "Y Christian Menefee",
      "party": "D"
     },
     {
@@ -15355,7 +14713,7 @@
     "name": "Jodey Arrington",
     "party": "R"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retired. / Republican hold.",
    "open": true,
    "candidates": [
     {
@@ -15363,7 +14721,7 @@
      "party": "D"
     },
     {
-     "name": "Tom Sell",
+     "name": "Y Tom Sell",
      "party": "R"
     }
    ],
@@ -15383,11 +14741,11 @@
     "name": "Joaquin Castro",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Joaquin Castro",
+     "name": "Y Joaquin Castro",
      "party": "D"
     },
     {
@@ -15411,7 +14769,7 @@
     "name": "Chip Roy",
     "party": "R"
    },
-   "status": "Incumbent retiring to run for Texas attorney general",
+   "status": "Incumbent retired to run for Texas attorney general. / Republican hold.",
    "open": true,
    "candidates": [
     {
@@ -15419,7 +14777,7 @@
      "party": "D"
     },
     {
-     "name": "Mark Teixeira",
+     "name": "Y Mark Teixeira",
      "party": "R"
     }
    ],
@@ -15443,7 +14801,7 @@
     "name": "Troy Nehls",
     "party": "R"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retired. / Republican hold.",
    "open": true,
    "candidates": [
     {
@@ -15451,7 +14809,7 @@
      "party": "D"
     },
     {
-     "name": "Trever Nehls",
+     "name": "Y Trever Nehls",
      "party": "R"
     }
    ],
@@ -15475,11 +14833,11 @@
     "name": "Vacant",
     "party": "O"
    },
-   "status": "Rep. Tony Gonzales (R) resigned April 14, 2026.",
+   "status": "Rep. Tony Gonzales (R) resigned April 14, 2026. / Democratic gain.",
    "open": true,
    "candidates": [
     {
-     "name": "Katy Padilla Stout",
+     "name": "Y Katy Padilla Stout",
      "party": "D"
     },
     {
@@ -15511,15 +14869,15 @@
     "name": "Beth Van Duyne",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Kevin Burge",
      "party": "D"
     },
     {
-     "name": "Beth Van Duyne",
+     "name": "Y Beth Van Duyne",
      "party": "R"
     }
    ],
@@ -15543,7 +14901,7 @@
     "name": "Marc Veasey / Redistricted from the 33rd district",
     "party": "D"
    },
-   "status": "Incumbent retiring. / Democratic loss.",
+   "status": "Incumbent retired. / Democratic loss.",
    "open": true,
    "candidates": [
     {
@@ -15551,7 +14909,7 @@
      "party": "D"
     },
     {
-     "name": "Roger Williams",
+     "name": "Y Roger Williams",
      "party": "R"
     }
    ],
@@ -15571,15 +14929,15 @@
     "name": "Brandon Gill",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Steven Shook",
      "party": "D"
     },
     {
-     "name": "Brandon Gill",
+     "name": "Y Brandon Gill",
      "party": "R"
     },
     {
@@ -15603,15 +14961,15 @@
     "name": "Michael Cloud",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Tanya Lloyd",
      "party": "D"
     },
     {
-     "name": "Michael Cloud",
+     "name": "Y Michael Cloud",
      "party": "R"
     }
    ],
@@ -15635,11 +14993,11 @@
     "name": "Henry Cuellar",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Henry Cuellar",
+     "name": "Y Henry Cuellar",
      "party": "D"
     },
     {
@@ -15671,11 +15029,11 @@
     "name": "Sylvia Garcia",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Sylvia Garcia",
+     "name": "Y Sylvia Garcia",
      "party": "D"
     },
     {
@@ -15699,11 +15057,11 @@
     "name": null,
     "party": null
    },
-   "status": "New representative to be elected",
+   "status": "New member elected. / Democratic gain.",
    "open": true,
    "candidates": [
     {
-     "name": "Frederick Haynes III",
+     "name": "Y Frederick Haynes III",
      "party": "D"
     },
     {
@@ -15727,15 +15085,15 @@
     "name": "John Carter",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Justin Early",
      "party": "D"
     },
     {
-     "name": "John Carter",
+     "name": "Y John Carter",
      "party": "R"
     },
     {
@@ -15763,7 +15121,7 @@
     "name": null,
     "party": null
    },
-   "status": "New representative to be elected",
+   "status": "New member elected. / Republican gain.",
    "open": true,
    "candidates": [
     {
@@ -15771,7 +15129,7 @@
      "party": "D"
     },
     {
-     "name": "Jace Yarbrough",
+     "name": "Y Jace Yarbrough",
      "party": "R"
     }
    ],
@@ -15795,11 +15153,11 @@
     "name": "Julie Johnson / Redistricted from the 32nd district",
     "party": "D"
    },
-   "status": "Incumbent lost renomination",
+   "status": "Incumbent lost renomination. / Democratic loss.",
    "open": true,
    "candidates": [
     {
-     "name": "Colin Allred",
+     "name": "Y Colin Allred",
      "party": "D"
     },
     {
@@ -15823,11 +15181,11 @@
     "name": "Vicente Gonzalez",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Vicente Gonzalez",
+     "name": "Y Vicente Gonzalez",
      "party": "D"
     },
     {
@@ -15863,11 +15221,11 @@
     "name": null,
     "party": null
    },
-   "status": "New representative to be elected",
+   "status": "New member elected. / Democratic gain.",
    "open": true,
    "candidates": [
     {
-     "name": "Johnny Garcia",
+     "name": "Y Johnny Garcia",
      "party": "D"
     },
     {
@@ -15895,15 +15253,15 @@
     "name": "Brian Babin",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Rhonda Hart",
      "party": "D"
     },
     {
-     "name": "Brian Babin",
+     "name": "Y Brian Babin",
      "party": "R"
     }
    ],
@@ -15923,11 +15281,11 @@
     "name": "Greg Casar / Redistricted from the 35th district",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Greg Casar",
+     "name": "Y Greg Casar",
      "party": "D"
     },
     {
@@ -15951,7 +15309,7 @@
     "name": "Wesley Hunt",
     "party": "R"
    },
-   "status": "Incumbent retiring to run for U.S. Senate",
+   "status": "Incumbent retired to run for U.S. Senate / Republican hold.",
    "open": true,
    "candidates": [
     {
@@ -15959,7 +15317,7 @@
      "party": "D"
     },
     {
-     "name": "Jon Bonck",
+     "name": "Y Jon Bonck",
      "party": "R"
     },
     {
@@ -15987,26 +15345,9 @@
     "name": null,
     "party": null
    },
-   "status": "New representative to be elected",
+   "status": "New member elected. / Democratic gain.",
    "open": true,
-   "candidates": [
-    {
-     "name": "Ben McAdams",
-     "party": "D"
-    },
-    {
-     "name": "Riley Owen",
-     "party": "R"
-    },
-    {
-     "name": "Elias Montgomery",
-     "party": "I"
-    },
-    {
-     "name": "Jesse West",
-     "party": "L"
-    }
-   ],
+   "candidates": [],
    "pvi": "D+12",
    "last": null,
    "score": -3.0,
@@ -16023,30 +15364,9 @@
     "name": "Blake Moore / Redistricted from the 1st district",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
-   "candidates": [
-    {
-     "name": "Peter Crosby",
-     "party": "D"
-    },
-    {
-     "name": "Blake Moore",
-     "party": "R"
-    },
-    {
-     "name": "Carlton Bowen",
-     "party": "I"
-    },
-    {
-     "name": "Robert Moesinger",
-     "party": "I"
-    },
-    {
-     "name": "Daniel Cottam",
-     "party": "L"
-    }
-   ],
+   "status": "Incumbent re-elected.",
+   "open": true,
+   "candidates": [],
    "pvi": "R+15",
    "last": null,
    "score": 3.0,
@@ -16063,34 +15383,9 @@
     "name": "Celeste Maloy / Redistricted from the 2nd district",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
-   "candidates": [
-    {
-     "name": "Kent Udell",
-     "party": "D"
-    },
-    {
-     "name": "Celeste Maloy",
-     "party": "R"
-    },
-    {
-     "name": "Adonis Hooslyn",
-     "party": "I"
-    },
-    {
-     "name": "Ayden Scott",
-     "party": "I"
-    },
-    {
-     "name": "Cassie Easley",
-     "party": "O"
-    },
-    {
-     "name": "Michael Stoddard",
-     "party": "L"
-    }
-   ],
+   "status": "Incumbent re-elected.",
+   "open": true,
+   "candidates": [],
    "pvi": "R+21",
    "last": null,
    "score": 3.0,
@@ -16107,26 +15402,9 @@
     "name": "Mike Kennedy / Redistricted from the 3rd district",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
-   "candidates": [
-    {
-     "name": "Jonny Larsen",
-     "party": "D"
-    },
-    {
-     "name": "Mike Kennedy",
-     "party": "R"
-    },
-    {
-     "name": "Steven Burt",
-     "party": "I"
-    },
-    {
-     "name": "Taylor Wright",
-     "party": "L"
-    }
-   ],
+   "status": "Incumbent re-elected.",
+   "open": true,
+   "candidates": [],
    "pvi": "R+17",
    "last": null,
    "score": 3.0,
@@ -16143,11 +15421,11 @@
     "name": "Becca Balint",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Becca Balint",
+     "name": "Y Becca Balint",
      "party": "D"
     },
     {
@@ -16187,11 +15465,11 @@
     "name": "Suzan DelBene",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Suzan DelBene",
+     "name": "Y Suzan DelBene",
      "party": "D"
     },
     {
@@ -16215,11 +15493,11 @@
     "name": "Rick Larsen",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Rick Larsen",
+     "name": "Y Rick Larsen",
      "party": "D"
     },
     {
@@ -16243,11 +15521,11 @@
     "name": "Marie Gluesenkamp Perez",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Marie Gluesenkamp Perez",
+     "name": "Y Marie Gluesenkamp Perez",
      "party": "D"
     },
     {
@@ -16275,7 +15553,7 @@
     "name": "Dan Newhouse",
     "party": "R"
    },
-   "status": "Incumbent retiring",
+   "status": "Incumbent retired. / Republican hold.",
    "open": true,
    "candidates": [
     {
@@ -16283,7 +15561,7 @@
      "party": "D"
     },
     {
-     "name": "Amanda McKinney",
+     "name": "Y Amanda McKinney",
      "party": "R"
     }
    ],
@@ -16307,7 +15585,7 @@
     "name": "Michael Baumgartner",
     "party": "R"
    },
-   "status": "Incumbent advanced to general",
+   "status": "Incumbent advanced to general.",
    "open": false,
    "candidates": [
     {
@@ -16339,11 +15617,11 @@
     "name": "Emily Randall",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Emily Randall",
+     "name": "Y Emily Randall",
      "party": "D"
     },
     {
@@ -16367,11 +15645,11 @@
     "name": "Pramila Jayapal",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Pramila Jayapal",
+     "name": "Y Pramila Jayapal",
      "party": "D"
     },
     {
@@ -16395,11 +15673,11 @@
     "name": "Kim Schrier",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Kim Schrier",
+     "name": "Y Kim Schrier",
      "party": "D"
     },
     {
@@ -16423,11 +15701,11 @@
     "name": "Adam Smith",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Adam Smith",
+     "name": "Y Adam Smith",
      "party": "D"
     },
     {
@@ -16451,11 +15729,11 @@
     "name": "Marilyn Strickland",
     "party": "D"
    },
-   "status": "Incumbent advanced to general",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Marilyn Strickland",
+     "name": "Y Marilyn Strickland",
      "party": "D"
     },
     {
@@ -16479,15 +15757,15 @@
     "name": "Carol Miller",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Vince George",
      "party": "D"
     },
     {
-     "name": "Carol Miller",
+     "name": "Y Carol Miller",
      "party": "R"
     },
     {
@@ -16511,15 +15789,15 @@
     "name": "Riley Moore",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Ace Parsi",
      "party": "D"
     },
     {
-     "name": "Riley Moore",
+     "name": "Y Riley Moore",
      "party": "R"
     }
    ],
@@ -16539,11 +15817,11 @@
     "name": "Bryan Steil",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Mitchell Berman",
+     "name": "Y Mitchell Berman",
      "party": "D"
     },
     {
@@ -16571,11 +15849,11 @@
     "name": "Mark Pocan",
     "party": "D"
    },
-   "status": "Incumbent re-elected",
+   "status": "Incumbent re-elected.",
    "open": true,
    "candidates": [
     {
-     "name": "Mark Pocan",
+     "name": "Y Mark Pocan",
      "party": "D"
     }
    ],
@@ -16595,11 +15873,11 @@
     "name": "Derrick Van Orden",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Rebecca Cooke",
+     "name": "Y Rebecca Cooke",
      "party": "D"
     },
     {
@@ -16635,11 +15913,11 @@
     "name": "Gwen Moore",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Gwen Moore",
+     "name": "Y Gwen Moore",
      "party": "D"
     },
     {
@@ -16667,15 +15945,15 @@
     "name": "Scott Fitzgerald",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Andrew Beck",
      "party": "D"
     },
     {
-     "name": "Scott Fitzgerald",
+     "name": "Y Scott Fitzgerald",
      "party": "R"
     }
    ],
@@ -16695,15 +15973,15 @@
     "name": "Glenn Grothman",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Brad Smith",
      "party": "D"
     },
     {
-     "name": "Glenn Grothman",
+     "name": "Y Glenn Grothman",
      "party": "R"
     },
     {
@@ -16739,7 +16017,7 @@
     "name": "Tom Tiffany",
     "party": "R"
    },
-   "status": "Incumbent retiring to run for governor",
+   "status": "Incumbent retired to run for governor. / Republican hold.",
    "open": true,
    "candidates": [
     {
@@ -16747,7 +16025,7 @@
      "party": "D"
     },
     {
-     "name": "Michael Alfonso",
+     "name": "Y Michael Alfonso",
      "party": "R"
     }
    ],
@@ -16771,15 +16049,15 @@
     "name": "Tony Wied",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Rick Crosson",
      "party": "D"
     },
     {
-     "name": "Tony Wied",
+     "name": "Y Tony Wied",
      "party": "R"
     }
    ],
@@ -16803,7 +16081,7 @@
     "name": "Harriet Hageman",
     "party": "R"
    },
-   "status": "Incumbent retiring to run for U.S. Senate",
+   "status": "Incumbent retired to run for U.S. Senate. / Republican hold.",
    "open": true,
    "candidates": [
     {
@@ -16811,7 +16089,7 @@
      "party": "D"
     },
     {
-     "name": "Chuck Gray",
+     "name": "Y Chuck Gray",
      "party": "R"
     },
     {
@@ -16843,11 +16121,11 @@
     "name": "Rob Wittman",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Shannon Taylor",
+     "name": "Y Shannon Taylor",
      "party": "D"
     },
     {
@@ -16875,11 +16153,11 @@
     "name": "Jen Kiggans",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Elaine Luria",
+     "name": "Y Elaine Luria",
      "party": "D"
     },
     {
@@ -16915,11 +16193,11 @@
     "name": "Bobby Scott",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Bobby Scott",
+     "name": "Y Bobby Scott",
      "party": "D"
     },
     {
@@ -16951,11 +16229,11 @@
     "name": "Jennifer McClellan",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Jennifer McClellan",
+     "name": "Y Jennifer McClellan",
      "party": "D"
     },
     {
@@ -16983,15 +16261,15 @@
     "name": "John McGuire",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Tom Perriello",
      "party": "D"
     },
     {
-     "name": "John McGuire",
+     "name": "Y John McGuire",
      "party": "R"
     },
     {
@@ -17019,15 +16297,15 @@
     "name": "Ben Cline",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Beth Macy",
      "party": "D"
     },
     {
-     "name": "Ben Cline",
+     "name": "Y Ben Cline",
      "party": "R"
     }
    ],
@@ -17047,11 +16325,11 @@
     "name": "Eugene Vindman",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Eugene Vindman",
+     "name": "Y Eugene Vindman",
      "party": "D"
     },
     {
@@ -17095,11 +16373,11 @@
     "name": "Don Beyer",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Don Beyer",
+     "name": "Y Don Beyer",
      "party": "D"
     },
     {
@@ -17131,15 +16409,15 @@
     "name": "Morgan Griffith",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Joy Powers",
      "party": "D"
     },
     {
-     "name": "Morgan Griffith",
+     "name": "Y Morgan Griffith",
      "party": "R"
     }
    ],
@@ -17159,11 +16437,11 @@
     "name": "Suhas Subramanyam",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Suhas Subramanyam",
+     "name": "Y Suhas Subramanyam",
      "party": "D"
     },
     {
@@ -17191,11 +16469,11 @@
     "name": "James Walkinshaw",
     "party": "D"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "James Walkinshaw",
+     "name": "Y James Walkinshaw",
      "party": "D"
     },
     {
