@@ -2174,6 +2174,207 @@
         "resistance": 8
       },
       "systems": {}
+    },
+    {
+      "id": "E-20261106-02",
+      "date": "2026-11-06",
+      "domain": "economy",
+      "title": "October jobs report: payrolls +165,000 vs ~60,000 expected, unemployment 4.1%",
+      "sources": [
+        "BLS",
+        "CNBC",
+        "Benzinga"
+      ],
+      "url": "https://www.bls.gov/news.release/empsit.nr0.htm",
+      "omen": {
+        "chaos": 2,
+        "polarization": 1,
+        "economic": 4
+      },
+      "clio": {
+        "precedent": "2023 string of hot payroll surprises",
+        "precedent_match": 5,
+        "resistance": 5
+      },
+      "systems": {
+        "S-FEDDEC": 1,
+        "S-GROWTH": -1
+      }
+    },
+    {
+      "id": "E-20261106-03",
+      "date": "2026-11-06",
+      "domain": "economy",
+      "title": "Brent falls about 16% on the week, biggest weekly drop since 2020, to $98.32",
+      "sources": [
+        "Investing.com",
+        "Reuters"
+      ],
+      "url": "https://www.investing.com/commodities/brent-oil-historical-data",
+      "omen": {
+        "chaos": 3,
+        "polarization": 1,
+        "economic": 5
+      },
+      "clio": {
+        "precedent": "2022 Brent pullback from Ukraine-war spike",
+        "precedent_match": 4,
+        "resistance": 5
+      },
+      "systems": {
+        "S-INFLATION": -1,
+        "S-HORMUZ": -1
+      }
+    },
+    {
+      "id": "E-20261108-01",
+      "date": "2026-11-08",
+      "domain": "politics",
+      "title": "Jeffries backs impeaching Hegseth; Massie to force House vote this week, GOP leaders brace for defections",
+      "sources": [
+        "Axios",
+        "The Guardian US",
+        "CNN",
+        "Bloomberg"
+      ],
+      "url": "https://www.axios.com/2026/11/08/pete-hegseth-impeachment-house-republicans-massie",
+      "omen": {
+        "chaos": 2,
+        "polarization": 6,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "1876 Belknap impeachment of a cabinet secretary",
+        "precedent_match": 4,
+        "resistance": 5
+      },
+      "systems": {
+        "S-OVERSIGHT": 1
+      }
+    },
+    {
+      "id": "E-20261108-02",
+      "date": "2026-11-08",
+      "domain": "politics",
+      "title": "AG Blanche won't rule out prosecuting Democrats who investigate; Trump ordered DOJ to probe lawmakers",
+      "sources": [
+        "Axios",
+        "AP",
+        "PBS NewsHour"
+      ],
+      "url": "https://www.axios.com/2026/11/08/todd-blanche-doj-prosecuting-democrats-oversight",
+      "omen": {
+        "chaos": 3,
+        "polarization": 7,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "1973 Saturday Night Massacre clash with Congress",
+        "precedent_match": 3,
+        "resistance": 6
+      },
+      "systems": {
+        "S-OVERSIGHT": 1,
+        "S-STREETS": 1
+      }
+    },
+    {
+      "id": "E-20261108-03",
+      "date": "2026-11-08",
+      "domain": "economy",
+      "title": "Nvidia CEO Jensen Huang admits affair with suspected Chinese spy; board opens investigation; Trump backs him",
+      "sources": [
+        "AP",
+        "Reuters",
+        "Axios",
+        "BBC"
+      ],
+      "url": "https://www.axios.com/2026/11/08/nvidia-ceo-jensen-huang-admits-affair-board-t",
+      "omen": {
+        "chaos": 2,
+        "polarization": 4,
+        "economic": 3
+      },
+      "clio": {
+        "precedent": "2018 Intel CEO Krzanich resignation over a relationship",
+        "precedent_match": 3,
+        "resistance": 6
+      },
+      "systems": {
+        "S-GROWTH": 1
+      }
+    },
+    {
+      "id": "E-20261108-04",
+      "date": "2026-11-08",
+      "domain": "foreign",
+      "title": "Houthi strikes hit Aramco Tower in Riyadh; tanker attacks continue as Trump signals restraint on Iran if talks progress",
+      "sources": [
+        "BBC",
+        "Reuters"
+      ],
+      "url": "https://www.bbc.co.uk/news/articles/c6ly3mjx958eo",
+      "omen": {
+        "chaos": 5,
+        "polarization": 1,
+        "economic": 4
+      },
+      "clio": {
+        "precedent": "2019 Abqaiq-Khurais attack on Saudi oil",
+        "precedent_match": 5,
+        "resistance": 4
+      },
+      "systems": {
+        "S-HORMUZ": 0
+      }
+    },
+    {
+      "id": "E-20261108-05",
+      "date": "2026-11-08",
+      "domain": "politics",
+      "title": "Trump names Stephen Miller chief of staff, rewards loyalists; says deportation policy 'might have been too tough'",
+      "sources": [
+        "Fox News",
+        "The Hill",
+        "AP",
+        "NPR"
+      ],
+      "url": "https://thehill.com/blogs/in-the-know/6207095-katie-miller-pauses-podcast-afte",
+      "omen": {
+        "chaos": 1,
+        "polarization": 5,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2018 post-midterm Trump cabinet shakeup",
+        "precedent_match": 5,
+        "resistance": 6
+      },
+      "systems": {}
+    },
+    {
+      "id": "E-20261109-01",
+      "date": "2026-11-09",
+      "domain": "politics",
+      "title": "Lame-duck Congress returns with shutdown deadline Dec 11, farm bill and debt-ceiling fight",
+      "sources": [
+        "Fox News",
+        "Axios"
+      ],
+      "url": "https://www.foxnews.com/politics/congress-returns-brutal-lame-duck-stretch",
+      "omen": {
+        "chaos": 2,
+        "polarization": 4,
+        "economic": 2
+      },
+      "clio": {
+        "precedent": "2018 lame-duck funding standoff",
+        "precedent_match": 5,
+        "resistance": 7
+      },
+      "systems": {
+        "S-FUNDING": 1
+      }
     }
   ]
 }

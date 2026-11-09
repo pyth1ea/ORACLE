@@ -2894,7 +2894,16 @@
     "IE": "Tilt D",
     "Sabato": "Lean D"
    },
-   "prediction": "P-0042"
+   "prediction": "P-0042",
+   "result": {
+    "winner": "D",
+    "called": true,
+    "pct": {
+     "D": 53.3,
+     "R": 43.7
+    },
+    "as_of": "2026-11-09"
+   }
   },
   "PA-GOV": {
    "state": "PA",
