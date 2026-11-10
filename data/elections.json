@@ -1,7 +1,7 @@
 {
  "meta": {
   "election_day": "2026-11-03",
-  "refreshed": "2026-11-09",
+  "refreshed": "2026-11-10",
   "control": {
    "house": "P-0001",
    "senate": "P-0002"
@@ -537,7 +537,7 @@
     "name": "Tom Cotton",
     "party": "R"
    },
-   "status": "Incumbent re-elected",
+   "status": "Incumbent reelected",
    "open": true,
    "candidates": [
     {
@@ -572,7 +572,7 @@
     "name": "John Hickenlooper",
     "party": "D"
    },
-   "status": "Incumbent re-elected",
+   "status": "Incumbent reelected",
    "open": true,
    "candidates": [
     {
@@ -615,7 +615,7 @@
     "name": "Chris Coons",
     "party": "D"
    },
-   "status": "Incumbent re-elected",
+   "status": "Incumbent reelected",
    "open": true,
    "candidates": [
     {
@@ -646,7 +646,7 @@
     "name": "Jon Ossoff",
     "party": "D"
    },
-   "status": "Incumbent re-elected",
+   "status": "Incumbent reelected",
    "open": true,
    "candidates": [
     {
@@ -677,7 +677,7 @@
     "name": "Jim Risch",
     "party": "R"
    },
-   "status": "Incumbent re-elected",
+   "status": "Incumbent reelected",
    "open": true,
    "candidates": [
     {
@@ -800,7 +800,7 @@
     "name": "Roger Marshall",
     "party": "R"
    },
-   "status": "Incumbent lost re-election. / Democratic gain.",
+   "status": "Incumbent lost reelection. / Democratic gain.",
    "open": true,
    "candidates": [
     {
@@ -907,7 +907,7 @@
     "name": "Susan Collins",
     "party": "R"
    },
-   "status": "Incumbent lost re-election. / Democratic gain.",
+   "status": "Incumbent lost reelection. / Democratic gain.",
    "open": true,
    "candidates": [
     {
@@ -953,7 +953,7 @@
     "name": "Ed Markey",
     "party": "D"
    },
-   "status": "Incumbent re-elected",
+   "status": "Incumbent reelected",
    "open": true,
    "candidates": [
     {
@@ -1165,7 +1165,7 @@
     "name": "Pete Ricketts",
     "party": "R"
    },
-   "status": "Incumbent re-elected",
+   "status": "Incumbent reelected",
    "open": true,
    "candidates": [
     {
@@ -1254,7 +1254,7 @@
     "name": "Cory Booker",
     "party": "D"
    },
-   "status": "Incumbent re-elected",
+   "status": "Incumbent reelected",
    "open": true,
    "candidates": [
     {
@@ -1293,7 +1293,7 @@
     "name": "Ben Ray Luján",
     "party": "D"
    },
-   "status": "Incumbent re-elected",
+   "status": "Incumbent reelected",
    "open": true,
    "candidates": [
     {
@@ -1406,7 +1406,7 @@
     "name": "Jeff Merkley",
     "party": "D"
    },
-   "status": "Incumbent re-elected",
+   "status": "Incumbent reelected",
    "open": true,
    "candidates": [
     {
@@ -1445,7 +1445,7 @@
     "name": "Jack Reed",
     "party": "D"
    },
-   "status": "Incumbent re-elected",
+   "status": "Incumbent reelected",
    "open": true,
    "candidates": [
     {
@@ -1525,7 +1525,7 @@
     "name": "Mike Rounds",
     "party": "R"
    },
-   "status": "Incumbent re-elected",
+   "status": "Incumbent reelected",
    "open": true,
    "candidates": [
     {
@@ -1556,7 +1556,7 @@
     "name": "Bill Hagerty",
     "party": "R"
    },
-   "status": "Incumbent re-elected",
+   "status": "Incumbent reelected",
    "open": true,
    "candidates": [
     {
@@ -1665,7 +1665,7 @@
     "name": "Mark Warner",
     "party": "D"
    },
-   "status": "Incumbent re-elected",
+   "status": "Incumbent reelected",
    "open": true,
    "candidates": [
     {
@@ -1696,7 +1696,7 @@
     "name": "Shelley Moore Capito",
     "party": "R"
    },
-   "status": "Incumbent re-elected",
+   "status": "Incumbent reelected",
    "open": true,
    "candidates": [
     {
@@ -4503,11 +4503,11 @@
     "name": "Ken Calvert / Redistricted from the 41st district",
     "party": "R"
    },
-   "status": "Incumbent advanced to general.",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Ken Calvert",
+     "name": "Y Ken Calvert",
      "party": "R"
     },
     {
@@ -6079,7 +6079,7 @@
     "name": null,
     "party": null
    },
-   "status": "New representative elected. / Democratic gain.",
+   "status": "New member elected. / Democratic gain.",
    "open": true,
    "candidates": [
     {
@@ -6203,15 +6203,15 @@
     "name": "Mario Díaz-Balart",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Nicole Locklin",
      "party": "D"
     },
     {
-     "name": "Mario Díaz-Balart",
+     "name": "Y Mario Díaz-Balart",
      "party": "R"
     },
     {
@@ -11801,7 +11801,7 @@
    "open": true,
    "candidates": [
     {
-     "name": "Chuck Hubbard",
+     "name": "Y Chuck Hubbard",
      "party": "D"
     },
     {
@@ -13549,7 +13549,7 @@
     "name": "Nancy Mace",
     "party": "R"
    },
-   "status": "Incumbent retired to run for governor. Democratic gain.",
+   "status": "Incumbent retired to run for governor. / Democratic gain.",
    "open": true,
    "candidates": [
     {
@@ -15585,15 +15585,15 @@
     "name": "Michael Baumgartner",
     "party": "R"
    },
-   "status": "Incumbent advanced to general.",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Carmela Conroy",
      "party": "D"
     },
     {
-     "name": "Michael Baumgartner",
+     "name": "Y Michael Baumgartner",
      "party": "R"
     }
    ],
