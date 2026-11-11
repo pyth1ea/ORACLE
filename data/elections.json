@@ -1,7 +1,7 @@
 {
  "meta": {
   "election_day": "2026-11-03",
-  "refreshed": "2026-11-10",
+  "refreshed": "2026-11-11",
   "control": {
    "house": "P-0001",
    "senate": "P-0002"
@@ -3567,15 +3567,15 @@
     "name": "Doris Matsui",
     "party": "D"
    },
-   "status": "Incumbent advanced to general.",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
-     "name": "Doris Matsui",
+     "name": "Mai Vang",
      "party": "D"
     },
     {
-     "name": "Mai Vang",
+     "name": "Y Doris Matsui",
      "party": "D"
     }
    ],
@@ -5571,7 +5571,7 @@
     "name": "Cory Mills",
     "party": "R"
    },
-   "status": "Incumbent lost renomination.",
+   "status": "Incumbent lost renomination. / Republican hold.",
    "open": true,
    "candidates": [
     {
@@ -5579,7 +5579,7 @@
      "party": "D"
     },
     {
-     "name": "Ryan Elijah",
+     "name": "Y Ryan Elijah",
      "party": "R"
     },
     {
@@ -6239,15 +6239,15 @@
     "name": "María Elvira Salazar",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Eliott Rodriguez",
      "party": "D"
     },
     {
-     "name": "María Elvira Salazar",
+     "name": "Y María Elvira Salazar",
      "party": "R"
     }
    ],
@@ -9357,11 +9357,11 @@
     "name": "Brad Finstad",
     "party": "R"
    },
-   "status": "Incumbent lost re-election. / DFL gain.",
-   "open": true,
+   "status": "Incumbent renominated.",
+   "open": false,
    "candidates": [
     {
-     "name": "Y Jake Johnson",
+     "name": "Jake Johnson",
      "party": "D"
     },
     {
@@ -11729,11 +11729,11 @@
     "name": "Greg Murphy",
     "party": "R"
    },
-   "status": "Incumbent renominated",
-   "open": false,
+   "status": "Incumbent lost re-election. / Democratic gain.",
+   "open": true,
    "candidates": [
     {
-     "name": "Raymond Smith Jr.",
+     "name": "YRaymond Smith Jr.",
      "party": "D"
     },
     {
@@ -11797,11 +11797,11 @@
     "name": "Virginia Foxx",
     "party": "R"
    },
-   "status": "Incumbent lost re-election. / Democratic gain.",
-   "open": true,
+   "status": "Incumbent renominated",
+   "open": false,
    "candidates": [
     {
-     "name": "Y Chuck Hubbard",
+     "name": "Chuck Hubbard",
      "party": "D"
     },
     {
@@ -11865,15 +11865,15 @@
     "name": "David Rouzer",
     "party": "R"
    },
-   "status": "Incumbent re-elected.",
-   "open": true,
+   "status": "Incumbent renominated.",
+   "open": false,
    "candidates": [
     {
      "name": "Kimberly Hardy",
      "party": "D"
     },
     {
-     "name": "Y David Rouzer",
+     "name": "David Rouzer",
      "party": "R"
     },
     {
@@ -13585,15 +13585,15 @@
     "name": "Joe Wilson",
     "party": "R"
    },
-   "status": "Incumbent renominated.",
-   "open": false,
+   "status": "Incumbent re-elected.",
+   "open": true,
    "candidates": [
     {
      "name": "Zyon Khalifa",
      "party": "D"
     },
     {
-     "name": "Joe Wilson",
+     "name": "Y Joe Wilson",
      "party": "R"
     },
     {
@@ -13933,11 +13933,11 @@
     "name": "Scott DesJarlais",
     "party": "R"
    },
-   "status": "Incumbent lost re-election. / Democratic gain.",
-   "open": true,
+   "status": "Incumbent renominated.",
+   "open": false,
    "candidates": [
     {
-     "name": "Y Victoria Broderick",
+     "name": "Victoria Broderick",
      "party": "D"
     },
     {
