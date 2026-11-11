@@ -2375,6 +2375,158 @@
       "systems": {
         "S-FUNDING": 1
       }
+    },
+    {
+      "id": "E-20261110-01",
+      "date": "2026-11-10",
+      "domain": "economy",
+      "title": "October CPI +0.4% (core +0.3%), above forecasts; BLS can't publish annual rate; Waller leans to Dec hike",
+      "sources": [
+        "BLS",
+        "CNBC",
+        "Reuters"
+      ],
+      "url": "https://www.bls.gov/news.release/archives/cpi_11102026.htm",
+      "omen": {
+        "chaos": 2,
+        "polarization": 2,
+        "economic": 5
+      },
+      "clio": {
+        "precedent": "2022 persistent-core inflation and Fed hikes",
+        "precedent_match": 5,
+        "resistance": 6
+      },
+      "systems": {
+        "S-INFLATION": 1,
+        "S-FEDDEC": 2
+      }
+    },
+    {
+      "id": "E-20261110-02",
+      "date": "2026-11-10",
+      "domain": "politics",
+      "title": "House Republicans block Hegseth impeachment vote",
+      "sources": [
+        "Axios",
+        "AP",
+        "Reuters",
+        "PBS NewsHour"
+      ],
+      "url": "https://www.axios.com/2026/11/10/pete-hegseth-impeachment-house-republicans-massie",
+      "omen": {
+        "chaos": 2,
+        "polarization": 6,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2019 House GOP shielding of Trump officials",
+        "precedent_match": 5,
+        "resistance": 8
+      },
+      "systems": {
+        "S-OVERSIGHT": -1
+      }
+    },
+    {
+      "id": "E-20261110-03",
+      "date": "2026-11-10",
+      "domain": "economy",
+      "title": "Brent falls below $90, lowest since August, as Trump says Iran war 'effectively over'",
+      "sources": [
+        "Guardian",
+        "Reuters"
+      ],
+      "url": "https://www.theguardian.com/business/2026/nov/10/oil-prices-fall-donald-trump-iran-war-ftse-100-markets",
+      "omen": {
+        "chaos": 2,
+        "polarization": 2,
+        "economic": 4
+      },
+      "clio": {
+        "precedent": "1991 Gulf War oil price collapse",
+        "precedent_match": 4,
+        "resistance": 6
+      },
+      "systems": {
+        "S-HORMUZ": -1,
+        "S-INFLATION": -1,
+        "S-GROWTH": -1
+      }
+    },
+    {
+      "id": "E-20261110-04",
+      "date": "2026-11-10",
+      "domain": "foreign",
+      "title": "Trump launches Task Force Iron Gate to choke Iran's land trade; Bessent moved to military base after Iranian threats",
+      "sources": [
+        "Fox News",
+        "Reuters",
+        "Guardian"
+      ],
+      "url": "https://www.foxnews.com/politics/trumps-first-iran-war-escalation-post-midterm-losses-seeks-choke-off-tehrans-trade",
+      "omen": {
+        "chaos": 4,
+        "polarization": 3,
+        "economic": 2
+      },
+      "clio": {
+        "precedent": "2019 maximum-pressure sanctions on Iran",
+        "precedent_match": 5,
+        "resistance": 5
+      },
+      "systems": {
+        "S-HORMUZ": 1
+      }
+    },
+    {
+      "id": "E-20261110-05",
+      "date": "2026-11-10",
+      "domain": "politics",
+      "title": "House GOP picks Jim Jordan as minority leader; Senate GOP keeps Thune after losing at least seven seats",
+      "sources": [
+        "AP",
+        "PBS NewsHour",
+        "Axios"
+      ],
+      "url": "https://www.pbs.org/newshour/politics/house-republicans-pick-ohio-rep-jim-jordan-to-lead-them-in-the-minority",
+      "omen": {
+        "chaos": 1,
+        "polarization": 4,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2007 House GOP minority leadership after losing majority",
+        "precedent_match": 5,
+        "resistance": 7
+      },
+      "systems": {
+        "S-OVERSIGHT": 1
+      }
+    },
+    {
+      "id": "E-20261110-06",
+      "date": "2026-11-10",
+      "domain": "economy",
+      "title": "Household credit card debt hits record $1.29 trillion (NY Fed)",
+      "sources": [
+        "Axios",
+        "NY Fed"
+      ],
+      "url": "https://www.axios.com/2026/11/10/credit-card-debt-record-2026-delinquency-income-gap",
+      "omen": {
+        "chaos": 1,
+        "polarization": 3,
+        "economic": 4
+      },
+      "clio": {
+        "precedent": "2008 consumer credit stress",
+        "precedent_match": 3,
+        "resistance": 6
+      },
+      "systems": {
+        "S-GROWTH": 1
+      }
     }
   ]
 }
