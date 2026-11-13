@@ -72,3 +72,7 @@ Not financial advice.
 `.github/workflows/fred.yml` is a GitHub Action that downloads FRED series into `incoming/fred/` and refreshes the
 election ratings, because the cloud routine's VM cannot reach FRED. `tools/feed.py` reads `incoming/` and falls back to
 Yahoo Finance for the S&P 500, VIX and 10-year yield. See ORACLE.md section 1.
+
+`.github/workflows/breaking.yml` checks for big breaking stories every 30 minutes (`tools/breaking.py`, free, no AI),
+sends a phone alert, and logs it in `incoming/breaking.json` for the next ORACLE run to score. It needs a repository
+secret named `NTFY_TOPIC` (Settings → Secrets and variables → Actions); without it, alerts are only logged.

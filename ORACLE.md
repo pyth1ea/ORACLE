@@ -124,6 +124,14 @@ it works, else `incoming/fred/` if fresher, else Yahoo Finance for the S&P 500, 
 through Google News RSS. Wikipedia: if `elections.py refresh` fails here, the Action's copy of `data/elections.json` is
 the refresh. `feed.py` prints an Elections reminder at the end of its output.
 
+**Breaking news between runs.** `.github/workflows/breaking.yml` runs `tools/breaking.py` every 30 minutes on GitHub's
+servers (free, no AI). It reads Google News' US top stories and flags a story only when it sounds serious (outages,
+attacks, disasters, resignations, market shocks...) and at least 16 major national outlets have covered it in the last 3
+hours, or 24 for any story. At most 3 alerts a day, and similar stories are skipped for 48 hours. Each alert is pushed to
+the phone through ntfy (the `NTFY_TOPIC` repository secret, never written into the repo) and logged in
+`incoming/breaking.json`. `feed.py` prints the alerts sent since `meta.last_run`: score each as an event if it isn't
+already in `data/events.json`, and consider a forecast for it.
+
 **Python:** in the cloud (Linux), use `python3` after `python3 -m pip install -r requirements.txt` (plain `pip` there belongs to a different Python). On the owner's Windows PC, use
 `%LOCALAPPDATA%\Programs\Python\Python312\python.exe` (plain `python` there is a Store stub).
 

@@ -1,0 +1,23 @@
+{
+ "note": "Breaking-news alerts from tools/breaking.py. The next ORACLE run scores these.",
+ "alerts": [
+  {
+   "sent": "2026-11-13T23:38+00:00",
+   "published": "2026-11-13T23:22+00:00",
+   "headline": "Live updates: No timeline for resolving nationwide ground stop as flight cancellations climb",
+   "outlet": "CNN",
+   "outlets": 81,
+   "sample": [
+    "ABC News - Breaking News, Latest News and Videos",
+    "Axios",
+    "BBC",
+    "Business Insider",
+    "CBS News",
+    "CNBC",
+    "CNN",
+    "Forbes"
+   ],
+   "major": 26
+  }
+ ]
+}

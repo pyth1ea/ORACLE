@@ -1,0 +1,38 @@
+name: Breaking-news watch
+# Free, no AI: every 30 minutes, checks Google News for a big breaking story and pushes it to the phone (ntfy).
+# The ntfy channel is the NTFY_TOPIC repository secret; it is never stored in the repo.
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: breaking
+  cancel-in-progress: false
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check for breaking news
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: |
+          python3 -m pip install -q requests
+          python3 tools/breaking.py
+      - name: Commit the alert log if it changed
+        run: |
+          git config user.name "oracle-data-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add incoming/breaking.json 2>/dev/null || true
+          if git diff --cached --quiet; then echo "no new alerts"; else
+            git commit -m "Breaking-news alert"
+            git pull --rebase origin main && git push origin HEAD:main
+          fi

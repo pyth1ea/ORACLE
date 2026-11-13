@@ -404,6 +404,23 @@ def main():
             print(f"  {k}: {v['value']}{v['units'] if v['units'] == '%' else ''} ({v['date']})")
 
     elections_reminder()
+    breaking_reminder()
+
+
+def breaking_reminder():
+    """List breaking-news alerts (tools/breaking.py, every 30 min via GitHub Actions) sent since the last run."""
+    try:
+        last = json.loads((DATA / "oracle.json").read_text(encoding="utf-8"))["meta"]["last_run"]
+        alerts = json.loads((ROOT / "incoming" / "breaking.json").read_text(encoding="utf-8"))["alerts"]
+    except Exception:
+        return
+    new = [a for a in alerts if a["sent"][:10] >= last]
+    if not new:
+        return
+    print(f"\nBREAKING-NEWS ALERTS since the last run ({last}). Each was pushed to the phone. Check each one, score it "
+          "as an event (step 5) if it isn't already in data/events.json, and consider a forecast for it (step 7):")
+    for a in new:
+        print(f"  {a['sent'][:16]}  {a['headline']}  ({a['outlets']} outlets, {a.get('major', '?')} major)")
 
 
 def elections_reminder():
