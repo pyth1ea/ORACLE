@@ -2527,6 +2527,183 @@
       "systems": {
         "S-GROWTH": 1
       }
+    },
+    {
+      "id": "E-20261112-01",
+      "date": "2026-11-12",
+      "domain": "economy",
+      "title": "Nvidia CEO Jensen Huang resigns amid affair/spy probe; S&P recovers most early losses",
+      "sources": [
+        "AP",
+        "Reuters",
+        "BBC",
+        "Axios"
+      ],
+      "url": "https://www.axios.com/2026/11/12/jensen-huang-nvidia-board",
+      "omen": {
+        "chaos": 4,
+        "polarization": 3,
+        "economic": 5
+      },
+      "clio": {
+        "precedent": "2023 OpenAI Altman firing",
+        "precedent_match": 4,
+        "resistance": 6
+      },
+      "systems": {
+        "S-GROWTH": 1
+      }
+    },
+    {
+      "id": "E-20261112-02",
+      "date": "2026-11-12",
+      "domain": "economy",
+      "title": "Fed faces tougher inflation fight as pressure builds for more rate hikes",
+      "sources": [
+        "Axios"
+      ],
+      "url": "https://www.axios.com/2026/11/12/inflation-rates-fed-iran-tariffs",
+      "omen": {
+        "chaos": 2,
+        "polarization": 2,
+        "economic": 5
+      },
+      "clio": {
+        "precedent": "2022 Fed hiking cycle",
+        "precedent_match": 5,
+        "resistance": 5
+      },
+      "systems": {
+        "S-FEDDEC": 1,
+        "S-INFLATION": 1
+      }
+    },
+    {
+      "id": "E-20261112-03",
+      "date": "2026-11-12",
+      "domain": "economy",
+      "title": "US existing home sales fall to more than 16-year low in October",
+      "sources": [
+        "Reuters",
+        "The Guardian US"
+      ],
+      "url": "https://www.theguardian.com/",
+      "omen": {
+        "chaos": 2,
+        "polarization": 1,
+        "economic": 5
+      },
+      "clio": {
+        "precedent": "2023 mortgage-rate housing freeze",
+        "precedent_match": 5,
+        "resistance": 6
+      },
+      "systems": {
+        "S-GROWTH": 1
+      }
+    },
+    {
+      "id": "E-20261112-04",
+      "date": "2026-11-12",
+      "domain": "unrest",
+      "title": "Gunman kills one, wounds four near Washington DC gym, then kills himself; no political motive reported",
+      "sources": [
+        "BBC",
+        "The Guardian US",
+        "PBS NewsHour",
+        "Axios"
+      ],
+      "url": "https://www.pbs.org/newshour/show/news-wrap-1-killed-and-4-injured-in-d-c-shooting",
+      "omen": {
+        "chaos": 5,
+        "polarization": 1,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2026 Bend, Oregon school shooting",
+        "precedent_match": 5,
+        "resistance": 7
+      },
+      "systems": {}
+    },
+    {
+      "id": "E-20261112-05",
+      "date": "2026-11-12",
+      "domain": "foreign",
+      "title": "Trump says US does not need an Iran deal; Iran says LNG tanker hit mine in Hormuz; oil heads for second weekly drop",
+      "sources": [
+        "Axios",
+        "Reuters",
+        "Fox News",
+        "The Guardian US"
+      ],
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNTkdBWnZVWXZqcEFwdWFkTmw5XzVHVndjNzBhdW1GZVF",
+      "omen": {
+        "chaos": 3,
+        "polarization": 2,
+        "economic": 3
+      },
+      "clio": {
+        "precedent": "1987-88 Tanker War",
+        "precedent_match": 5,
+        "resistance": 6
+      },
+      "systems": {
+        "S-HORMUZ": 1
+      }
+    },
+    {
+      "id": "E-20261112-06",
+      "date": "2026-11-12",
+      "domain": "foreign",
+      "title": "Ukrainian drone hits Russian warship in Baltic; US envoys meet Putin in Moscow, then Zelenskyy in Dublin",
+      "sources": [
+        "BBC",
+        "Reuters",
+        "AP",
+        "NPR"
+      ],
+      "url": "https://www.bbc.co.uk/news/articles/cmn0d33zz34zo",
+      "omen": {
+        "chaos": 4,
+        "polarization": 1,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2022-23 Black Sea drone strikes",
+        "precedent_match": 5,
+        "resistance": 7
+      },
+      "systems": {
+        "S-UKRAINE": 1
+      }
+    },
+    {
+      "id": "E-20261113-01",
+      "date": "2026-11-13",
+      "domain": "politics",
+      "title": "AP calls Kansas governor for Holscher (D); Colom (D) wins Mississippi Senate seat; Van Hollen challenges Schumer for Senate Democratic leader",
+      "sources": [
+        "AP",
+        "NPR",
+        "PBS NewsHour",
+        "BBC",
+        "Axios"
+      ],
+      "url": "https://www.pbs.org/newshour/politics/cindy-holscher-wins-election-for-kansas-governor-extending-democ",
+      "omen": {
+        "chaos": 1,
+        "polarization": 3,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2018 Democratic House wave",
+        "precedent_match": 6,
+        "resistance": 6
+      },
+      "systems": {
+        "S-OVERSIGHT": 1
+      }
     }
   ]
 }
