@@ -2704,6 +2704,32 @@
       "systems": {
         "S-OVERSIGHT": 1
       }
+    },
+    {
+      "id": "E-20261113-02",
+      "date": "2026-11-13",
+      "domain": "economy",
+      "title": "FAA orders a rare nationwide ground stop after an air traffic control communications outage; about 11,000 flights delayed or canceled. DHS sees no sign of an attack but says a role for the FAA's new AI traffic-planning tool can't be ruled out; FBI reportedly examining a software update",
+      "sources": [
+        "Reuters",
+        "AP",
+        "NPR",
+        "ABC News",
+        "Bloomberg",
+        "GeekWire"
+      ],
+      "url": "https://www.reuters.com/",
+      "omen": {
+        "chaos": 5,
+        "polarization": 2,
+        "economic": 4
+      },
+      "clio": {
+        "precedent": "January 2023 FAA NOTAM outage and nationwide ground stop (contractor file error)",
+        "precedent_match": 7,
+        "resistance": 5
+      },
+      "systems": {}
     }
   ]
 }
