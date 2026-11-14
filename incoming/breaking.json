@@ -18,6 +18,24 @@
     "Forbes"
    ],
    "major": 26
+  },
+  {
+   "sent": "2026-11-14T16:52+00:00",
+   "published": "2026-11-14T16:44+00:00",
+   "headline": "US air travel schedule should recover from ground stop by the end of Sunday, FAA says",
+   "outlet": "AP News",
+   "outlets": 74,
+   "sample": [
+    "AP News",
+    "Al Jazeera",
+    "BBC",
+    "Bloomberg.com",
+    "CBS News",
+    "Fox News",
+    "NBC 5 Chicago",
+    "NBC Boston"
+   ],
+   "major": 18
   }
  ]
 }
