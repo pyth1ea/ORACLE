@@ -1,324 +1,295 @@
 {
-  "date": "2026-11-13",
+  "date": "2026-11-16",
   "runs": 1000,
-  "events_per_day": 3.0,
-  "event_pool": 93,
+  "events_per_day": 2.84,
+  "event_pool": 88,
   "horizon_days": 200,
-  "replayed_events": 0,
+  "replayed_events": 14,
   "systems": {
-    "S-INFLATION": {
-      "tip": 0.56,
-      "eval_date": "2026-11-13",
-      "p10": 6.4,
-      "p50": 6.4,
-      "p90": 6.4
-    },
     "S-GROWTH": {
-      "tip": 0.37,
+      "tip": 0.425,
       "eval_date": "2027-04-30",
-      "p10": 5.34,
-      "p50": 6.08,
-      "p90": 6.92
-    },
-    "S-HORMUZ": {
-      "tip": 0.192,
-      "eval_date": "2026-11-14",
-      "p10": 3.3,
-      "p50": 4.01,
-      "p90": 4.01
+      "p10": 5.78,
+      "p50": 6.45,
+      "p90": 7.21
     },
     "S-FUNDING": {
-      "tip": 0.295,
+      "tip": 0.298,
       "eval_date": "2026-12-11",
-      "p10": 4.5,
-      "p50": 4.54,
-      "p90": 4.59
+      "p10": 4.51,
+      "p50": 4.57,
+      "p90": 4.62
     },
     "S-UKRAINE": {
-      "tip": 0.05,
+      "tip": 0.051,
       "eval_date": "2026-12-31",
-      "p10": 2.71,
-      "p50": 2.79,
-      "p90": 2.87
+      "p10": 2.76,
+      "p50": 2.83,
+      "p90": 2.9
     },
     "S-FEDDEC": {
-      "tip": 0.647,
+      "tip": 0.685,
       "eval_date": "2026-12-09",
-      "p10": 6.52,
-      "p50": 6.61,
-      "p90": 6.71
+      "p10": 6.49,
+      "p50": 7.06,
+      "p90": 7.21
     },
     "S-OVERSIGHT": {
-      "tip": 0.381,
-      "eval_date": "2027-06-01",
-      "p10": 5.45,
-      "p50": 5.63,
-      "p90": 5.79
+      "tip": 0.413,
+      "eval_date": "2027-06-04",
+      "p10": 5.64,
+      "p50": 5.85,
+      "p90": 6.01
     }
   },
   "predictions": {
-    "P-0015": 0.56,
-    "P-0024": 0.37,
-    "P-0019": 0.192,
-    "P-0018": 0.295,
-    "P-0022": 0.05,
-    "P-0025": 0.647,
-    "P-0049": 0.381
+    "P-0024": 0.425,
+    "P-0018": 0.298,
+    "P-0022": 0.051,
+    "P-0025": 0.685,
+    "P-0049": 0.413
   },
   "catalysts": {
-    "C-004": {
-      "Accepts / deal announced": {
-        "share": 0.158,
-        "systems": {
-          "S-HORMUZ": 0.752,
-          "S-FEDDEC": 0.648,
-          "S-FUNDING": 0.295,
-          "S-UKRAINE": 0.05,
-          "S-GROWTH": 0.289,
-          "S-OVERSIGHT": 0.382
-        }
-      },
-      "Rejects or escalates": {
-        "share": 0.51,
-        "systems": {
-          "S-HORMUZ": 0.115,
-          "S-FEDDEC": 0.647,
-          "S-FUNDING": 0.295,
-          "S-UKRAINE": 0.05,
-          "S-GROWTH": 0.4,
-          "S-OVERSIGHT": 0.381
-        }
-      },
-      "No clear answer": {
-        "share": 0.332,
-        "systems": {
-          "S-HORMUZ": 0.166,
-          "S-FEDDEC": 0.647,
-          "S-FUNDING": 0.295,
-          "S-UKRAINE": 0.05,
-          "S-GROWTH": 0.361,
-          "S-OVERSIGHT": 0.382
-        }
-      }
-    },
     "C-010": {
       "Funding lapses": {
-        "share": 0.308,
+        "share": 0.295,
         "systems": {
-          "S-UKRAINE": 0.05,
-          "S-GROWTH": 0.398,
-          "S-OVERSIGHT": 0.382
+          "S-UKRAINE": 0.051,
+          "S-GROWTH": 0.455,
+          "S-OVERSIGHT": 0.412
         }
       },
       "Deal or stopgap": {
-        "share": 0.692,
+        "share": 0.705,
         "systems": {
-          "S-UKRAINE": 0.05,
-          "S-GROWTH": 0.357,
-          "S-OVERSIGHT": 0.381
+          "S-UKRAINE": 0.051,
+          "S-GROWTH": 0.412,
+          "S-OVERSIGHT": 0.414
         }
       }
     },
     "C-012": {
       "Hike": {
-        "share": 0.327,
+        "share": 0.325,
         "systems": {
-          "S-FUNDING": 0.295,
-          "S-UKRAINE": 0.05,
-          "S-GROWTH": 0.447,
-          "S-OVERSIGHT": 0.382
+          "S-FUNDING": 0.297,
+          "S-UKRAINE": 0.051,
+          "S-GROWTH": 0.499,
+          "S-OVERSIGHT": 0.412
         }
       },
       "Hold or cut": {
-        "share": 0.673,
+        "share": 0.675,
         "systems": {
-          "S-FUNDING": 0.295,
-          "S-UKRAINE": 0.05,
-          "S-GROWTH": 0.332,
-          "S-OVERSIGHT": 0.381
+          "S-FUNDING": 0.298,
+          "S-UKRAINE": 0.051,
+          "S-GROWTH": 0.389,
+          "S-OVERSIGHT": 0.413
         }
       }
     },
     "C-014": {
       "Hike": {
-        "share": 0.59,
+        "share": 0.609,
         "systems": {
-          "S-FUNDING": 0.295,
-          "S-UKRAINE": 0.05,
-          "S-GROWTH": 0.401,
-          "S-OVERSIGHT": 0.381
+          "S-FUNDING": 0.298,
+          "S-UKRAINE": 0.051,
+          "S-GROWTH": 0.455,
+          "S-OVERSIGHT": 0.414
         }
       },
       "Hold": {
-        "share": 0.41,
+        "share": 0.391,
         "systems": {
-          "S-FUNDING": 0.295,
-          "S-UKRAINE": 0.05,
-          "S-GROWTH": 0.325,
-          "S-OVERSIGHT": 0.382
+          "S-FUNDING": 0.297,
+          "S-UKRAINE": 0.051,
+          "S-GROWTH": 0.378,
+          "S-OVERSIGHT": 0.412
         }
       }
     },
     "C-015": {
       "Jeffries elected Speaker": {
-        "share": 0.923,
+        "share": 0.928,
         "systems": {
-          "S-GROWTH": 0.37,
-          "S-OVERSIGHT": 0.389
+          "S-GROWTH": 0.425,
+          "S-OVERSIGHT": 0.42
         }
       },
       "Speaker vote drags on": {
-        "share": 0.077,
+        "share": 0.072,
         "systems": {
-          "S-GROWTH": 0.369,
-          "S-OVERSIGHT": 0.294
+          "S-GROWTH": 0.425,
+          "S-OVERSIGHT": 0.321
         }
       }
     },
     "C-016": {
       "Peltola ahead after count": {
-        "share": 0.541,
+        "share": 0.53,
         "systems": {
-          "S-FEDDEC": 0.647,
-          "S-FUNDING": 0.295,
-          "S-UKRAINE": 0.05,
-          "S-GROWTH": 0.371,
-          "S-OVERSIGHT": 0.395
+          "S-FEDDEC": 0.685,
+          "S-FUNDING": 0.298,
+          "S-UKRAINE": 0.051,
+          "S-GROWTH": 0.425,
+          "S-OVERSIGHT": 0.427
         }
       },
       "Sullivan retakes lead or recount": {
-        "share": 0.459,
+        "share": 0.47,
         "systems": {
-          "S-FEDDEC": 0.648,
-          "S-FUNDING": 0.295,
-          "S-UKRAINE": 0.05,
-          "S-GROWTH": 0.369,
-          "S-OVERSIGHT": 0.366
+          "S-FEDDEC": 0.686,
+          "S-FUNDING": 0.297,
+          "S-UKRAINE": 0.051,
+          "S-GROWTH": 0.424,
+          "S-OVERSIGHT": 0.397
         }
       }
     },
     "C-017": {
       "Hot (0.3%+ monthly)": {
-        "share": 0.374,
+        "share": 0.402,
         "systems": {
-          "S-FUNDING": 0.295,
-          "S-UKRAINE": 0.05,
-          "S-GROWTH": 0.37,
-          "S-OVERSIGHT": 0.384
+          "S-FUNDING": 0.298,
+          "S-UKRAINE": 0.051,
+          "S-GROWTH": 0.428,
+          "S-OVERSIGHT": 0.411
         }
       },
       "Cooler (under 0.3%)": {
-        "share": 0.626,
+        "share": 0.598,
         "systems": {
-          "S-FUNDING": 0.295,
-          "S-UKRAINE": 0.05,
-          "S-GROWTH": 0.37,
-          "S-OVERSIGHT": 0.38
+          "S-FUNDING": 0.298,
+          "S-UKRAINE": 0.051,
+          "S-GROWTH": 0.423,
+          "S-OVERSIGHT": 0.415
+        }
+      }
+    },
+    "C-018": {
+      "Hawkish: many favored a hike": {
+        "share": 0.623,
+        "systems": {
+          "S-FEDDEC": 0.715,
+          "S-FUNDING": 0.298,
+          "S-UKRAINE": 0.051,
+          "S-GROWTH": 0.425,
+          "S-OVERSIGHT": 0.413
+        }
+      },
+      "Mixed or cautious": {
+        "share": 0.377,
+        "systems": {
+          "S-FEDDEC": 0.636,
+          "S-FUNDING": 0.298,
+          "S-UKRAINE": 0.051,
+          "S-GROWTH": 0.425,
+          "S-OVERSIGHT": 0.413
         }
       }
     }
   },
   "agents_now": {
     "A-SWING": {
-      "A": 44.7,
-      "M": 43.2,
-      "T": 42.0
+      "A": 44.0,
+      "M": 42.5,
+      "T": 42.3
     },
     "A-DBASE": {
-      "A": 58.2,
-      "M": 58.4,
-      "T": 35.5
+      "A": 56.6,
+      "M": 57.3,
+      "T": 35.8
     },
     "A-RBASE": {
-      "A": 44.4,
-      "M": 45.9,
-      "T": 45.4
+      "A": 43.4,
+      "M": 45.4,
+      "T": 45.2
     },
     "A-DLEAD": {
-      "A": 46.5,
-      "M": 49.4,
-      "T": 52.7
+      "A": 45.4,
+      "M": 48.6,
+      "T": 52.8
     },
     "A-RLEAD": {
-      "A": 39.8,
-      "M": 44.8,
-      "T": 53.5
+      "A": 38.9,
+      "M": 44.2,
+      "T": 53.6
     },
     "A-PROTEST": {
-      "A": 63.4,
-      "M": 61.4,
-      "T": 25.9
+      "A": 61.7,
+      "M": 60.3,
+      "T": 26.1
     },
     "A-HARD": {
-      "A": 51.5,
-      "M": 50.9,
+      "A": 50.3,
+      "M": 50.2,
       "T": 28.0
     },
     "A-BIZ": {
-      "A": 34.3,
-      "M": 37.1,
-      "T": 56.5
+      "A": 33.6,
+      "M": 36.3,
+      "T": 56.8
     },
     "A-FED": {
-      "A": 35.5,
-      "M": 39.2,
-      "T": 72.9
+      "A": 35.4,
+      "M": 38.5,
+      "T": 72.7
     },
     "A-COURTS": {
-      "A": 34.9,
-      "M": 37.0,
-      "T": 66.8
+      "A": 34.2,
+      "M": 36.4,
+      "T": 66.9
     },
     "A-IRAN": {
-      "A": 64.9,
-      "M": 63.6,
-      "T": 8.3
+      "A": 64.1,
+      "M": 62.8,
+      "T": 8.4
     }
   },
   "agents_day30": {
     "A-SWING": {
-      "A": 44.4,
-      "M": 41.0
+      "A": 43.8,
+      "M": 40.9
     },
     "A-DBASE": {
-      "A": 55.3,
-      "M": 54.5
+      "A": 54.9,
+      "M": 54.1
     },
     "A-RBASE": {
-      "A": 44.9,
-      "M": 45.9
+      "A": 44.7,
+      "M": 45.6
     },
     "A-DLEAD": {
-      "A": 44.9,
-      "M": 47.1
+      "A": 44.5,
+      "M": 46.7
     },
     "A-RLEAD": {
-      "A": 39.3,
-      "M": 43.5
+      "A": 38.8,
+      "M": 43.1
     },
     "A-PROTEST": {
-      "A": 61.2,
-      "M": 58.1
+      "A": 60.5,
+      "M": 57.5
     },
     "A-HARD": {
-      "A": 51.4,
-      "M": 50.1
+      "A": 50.9,
+      "M": 49.7
     },
     "A-BIZ": {
-      "A": 34.3,
-      "M": 35.2
+      "A": 33.3,
+      "M": 34.7
     },
     "A-FED": {
-      "A": 33.0,
+      "A": 32.6,
       "M": 35.0
     },
     "A-COURTS": {
-      "A": 33.1,
-      "M": 34.6
+      "A": 33.0,
+      "M": 34.5
     },
     "A-IRAN": {
-      "A": 61.8,
-      "M": 59.5
+      "A": 61.5,
+      "M": 59.4
     }
   }
 }

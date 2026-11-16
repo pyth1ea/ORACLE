@@ -2730,6 +2730,150 @@
         "resistance": 5
       },
       "systems": {}
+    },
+    {
+      "id": "E-20261115-01",
+      "date": "2026-11-15",
+      "domain": "politics",
+      "title": "DOJ officials warn Sen. Warren of 'legal consequences' over planned probes of Trump allies; Blanche says incoming Democrats 'act like prosecutors'",
+      "sources": [
+        "Reuters",
+        "Fox News",
+        "The Hill",
+        "The Guardian US"
+      ],
+      "url": "https://www.theguardian.com/us-news/live/2026/nov/16/donald-trump-asia-visit-democrats-republicans-elizabeth-warren-faa-air-disruptio",
+      "omen": {
+        "chaos": 2,
+        "polarization": 6,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "1998-99 Clinton-era counter-attacks on congressional investigators",
+        "precedent_match": 4,
+        "resistance": 6
+      },
+      "systems": {
+        "S-OVERSIGHT": 1
+      }
+    },
+    {
+      "id": "E-20261113-03",
+      "date": "2026-11-13",
+      "domain": "unrest",
+      "title": "Tanker loses steering and crashes into a cruise ship in New Orleans, ship overturns",
+      "sources": [
+        "AP",
+        "PBS NewsHour"
+      ],
+      "url": "https://www.pbs.org/newshour/nation/could-everything-be-broken-grounded-jets-microsoft-outage-ai-chaos-make-some-wonder",
+      "omen": {
+        "chaos": 4,
+        "polarization": 1,
+        "economic": 2
+      },
+      "clio": {
+        "precedent": "1980 Sunshine Skyway bridge ship collision",
+        "precedent_match": 3,
+        "resistance": 8
+      },
+      "systems": {}
+    },
+    {
+      "id": "E-20261116-01",
+      "date": "2026-11-16",
+      "domain": "economy",
+      "title": "Megaspeed (Nvidia partner) opens internal probe over alleged chip transfers to China; Nvidia fallout widens",
+      "sources": [
+        "AP",
+        "PBS NewsHour",
+        "Reuters"
+      ],
+      "url": "https://www.pbs.org/newshour/world/megaspeed-says-alice-huang-left-in-2025-as-company-conducts-internal-probe-o",
+      "omen": {
+        "chaos": 3,
+        "polarization": 3,
+        "economic": 4
+      },
+      "clio": {
+        "precedent": "2001 Enron-era corporate scandal contagion",
+        "precedent_match": 3,
+        "resistance": 7
+      },
+      "systems": {
+        "S-GROWTH": 1
+      }
+    },
+    {
+      "id": "E-20261116-02",
+      "date": "2026-11-16",
+      "domain": "economy",
+      "title": "US heating oil bills projected up 21% this winter; Fed hike called all but certain after post-election data",
+      "sources": [
+        "The Guardian US",
+        "Washington Examiner"
+      ],
+      "url": "https://www.theguardian.com/business/2026/nov/16/heating-oil-price-increase-winter",
+      "omen": {
+        "chaos": 2,
+        "polarization": 2,
+        "economic": 5
+      },
+      "clio": {
+        "precedent": "2022 winter heating-cost spike",
+        "precedent_match": 5,
+        "resistance": 5
+      },
+      "systems": {
+        "S-INFLATION": 1,
+        "S-FEDDEC": 1
+      }
+    },
+    {
+      "id": "E-20261116-03",
+      "date": "2026-11-16",
+      "domain": "politics",
+      "title": "Blue-wave results, Iran demands and a leadership fight rattle December shutdown talks",
+      "sources": [
+        "The Hill"
+      ],
+      "url": "https://thehill.com/homenews/house/6219857-democrats-clash-funding-iran/",
+      "omen": {
+        "chaos": 3,
+        "polarization": 5,
+        "economic": 2
+      },
+      "clio": {
+        "precedent": "2010 lame-duck funding fight after the midterm wave",
+        "precedent_match": 5,
+        "resistance": 6
+      },
+      "systems": {
+        "S-FUNDING": 1
+      }
+    },
+    {
+      "id": "E-20261116-04",
+      "date": "2026-11-16",
+      "domain": "foreign",
+      "title": "Ukraine launches its biggest drone attack on Russia since the war began (Russian MoD data)",
+      "sources": [
+        "Reuters"
+      ],
+      "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOTmhGNVhidkt3TlpMM3l5UmpTaGYyRnEyZ0pDQnhydG0wWm9sS3VGN0pndWVSODhUbFhYT",
+      "omen": {
+        "chaos": 5,
+        "polarization": 1,
+        "economic": 2
+      },
+      "clio": {
+        "precedent": "2025 Operation Spiderweb drone strikes",
+        "precedent_match": 5,
+        "resistance": 8
+      },
+      "systems": {
+        "S-UKRAINE": 1
+      }
     }
   ]
 }
