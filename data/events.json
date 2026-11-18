@@ -2874,6 +2874,154 @@
       "systems": {
         "S-UKRAINE": 1
       }
+    },
+    {
+      "id": "E-20261117-01",
+      "date": "2026-11-17",
+      "domain": "politics",
+      "title": "Mary Peltola projected to win Alaska Senate seat, flipping it from Republicans (Decision Desk HQ; ~50.1% of first-choice votes)",
+      "sources": [
+        "Decision Desk HQ",
+        "The Hill",
+        "Axios",
+        "Reuters"
+      ],
+      "url": "https://thehill.com/homenews/campaign/6176074-peltola-wins-alaska-senate/",
+      "omen": {
+        "chaos": 2,
+        "polarization": 4,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2018 Democratic midterm Senate flips",
+        "precedent_match": 5,
+        "resistance": 7
+      },
+      "systems": {
+        "S-OVERSIGHT": 1
+      }
+    },
+    {
+      "id": "E-20261117-02",
+      "date": "2026-11-17",
+      "domain": "foreign",
+      "title": "Ukraine strikes Kerch Bridge to Crimea with missiles and drones; span partly collapses (AP, BBC, Reuters)",
+      "sources": [
+        "AP",
+        "BBC",
+        "Reuters"
+      ],
+      "url": "https://www.bbc.co.uk/news/articles/cw772jk4rvmxo",
+      "omen": {
+        "chaos": 6,
+        "polarization": 1,
+        "economic": 2
+      },
+      "clio": {
+        "precedent": "2022 Kerch Bridge truck bombing",
+        "precedent_match": 7,
+        "resistance": 5
+      },
+      "systems": {
+        "S-UKRAINE": 1
+      }
+    },
+    {
+      "id": "E-20261117-03",
+      "date": "2026-11-17",
+      "domain": "foreign",
+      "title": "US strikes Iranian missile launch site on Qeshm Island, US official says; Trump warns Iran against a 'dirty bomb' plot, White House cites no credible threat",
+      "sources": [
+        "Reuters",
+        "Axios"
+      ],
+      "url": "https://www.axios.com/2026/11/17/dirty-bomb-radioactive-trump-washington-weapon",
+      "omen": {
+        "chaos": 6,
+        "polarization": 2,
+        "economic": 3
+      },
+      "clio": {
+        "precedent": "1987-88 Tanker War",
+        "precedent_match": 6,
+        "resistance": 5
+      },
+      "systems": {
+        "S-HORMUZ": 1
+      }
+    },
+    {
+      "id": "E-20261117-04",
+      "date": "2026-11-17",
+      "domain": "economy",
+      "title": "Classified US national-security communications network hit by outage, NSA says; Sen. Warner blames AI-related system failures",
+      "sources": [
+        "AP",
+        "Reuters",
+        "The Hill"
+      ],
+      "url": "https://thehill.com/homenews/senate/6226826-mark-warner-ai-cybersecurity-system-outages/",
+      "omen": {
+        "chaos": 4,
+        "polarization": 2,
+        "economic": 2
+      },
+      "clio": {
+        "precedent": "2025 airline and air-traffic IT outages",
+        "precedent_match": 4,
+        "resistance": 6
+      },
+      "systems": {}
+    },
+    {
+      "id": "E-20261118-01",
+      "date": "2026-11-18",
+      "domain": "politics",
+      "title": "House Oversight's incoming chair Garcia sends preservation letters to 12 Trump-circle figures; probes of Trump family, Vance and Lutnick-Nvidia ties",
+      "sources": [
+        "Axios",
+        "Fox News",
+        "The Hill"
+      ],
+      "url": "https://www.axios.com/2026/11/18/trump-garcia-house-oversight",
+      "omen": {
+        "chaos": 1,
+        "polarization": 6,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2019 House Democratic Trump investigations",
+        "precedent_match": 7,
+        "resistance": 6
+      },
+      "systems": {
+        "S-OVERSIGHT": 1
+      }
+    },
+    {
+      "id": "E-20261117-05",
+      "date": "2026-11-17",
+      "domain": "economy",
+      "title": "Nvidia posts stronger-than-expected quarter and bullish outlook after CEO Huang's exit; Huang agrees to testify to Senate Banking",
+      "sources": [
+        "Axios",
+        "AP",
+        "The Hill"
+      ],
+      "url": "https://www.axios.com/2026/11/17/nvidia-earnings-jensen-huang-colette-kress",
+      "omen": {
+        "chaos": 2,
+        "polarization": 2,
+        "economic": 3
+      },
+      "clio": {
+        "precedent": "2001 Enron-era corporate scandal hearings",
+        "precedent_match": 4,
+        "resistance": 7
+      },
+      "systems": {
+        "S-GROWTH": -1
+      }
     }
   ]
 }
