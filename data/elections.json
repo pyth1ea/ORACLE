@@ -527,7 +527,16 @@
     "source": "Kalshi",
     "as_of": "2026-10-30"
    },
-   "note": "DOJ probe of alleged second-Sullivan ballot scheme; governor says certification could be stopped."
+   "note": "DOJ probe of alleged second-Sullivan ballot scheme; governor says certification could be stopped.",
+   "result": {
+    "winner": "D",
+    "called": true,
+    "pct": {
+     "D": 50.1,
+     "R": 46.0
+    },
+    "as_of": "2026-11-17"
+   }
   },
   "AR-SEN": {
    "state": "AR",
@@ -1829,7 +1838,16 @@
    },
    "prediction": "P-0032",
    "yes_party": "D",
-   "note": "Murkowski endorsed the Democrat on Oct 27."
+   "note": "Murkowski endorsed the Democrat on Oct 27.",
+   "result": {
+    "winner": "D",
+    "called": true,
+    "pct": {
+     "D": 51.1,
+     "R": 27.9
+    },
+    "as_of": "2026-11-14"
+   }
   },
   "AZ-GOV": {
    "state": "AZ",

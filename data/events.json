@@ -3022,6 +3022,199 @@
       "systems": {
         "S-GROWTH": -1
       }
+    },
+    {
+      "id": "E-20261118-02",
+      "date": "2026-11-18",
+      "domain": "economy",
+      "title": "Fed minutes: almost all officials expect more hikes; some open to a half-point move in December",
+      "sources": [
+        "Bloomberg",
+        "CNBC",
+        "ABC News"
+      ],
+      "url": "https://www.cnbc.com/2026/11/18/fed-minutes-october-2026.html",
+      "omen": {
+        "chaos": 2,
+        "polarization": 1,
+        "economic": 5
+      },
+      "clio": {
+        "precedent": "1994 Fed tightening cycle",
+        "precedent_match": 5,
+        "resistance": 6
+      },
+      "systems": {
+        "S-FEDDEC": 2,
+        "S-GROWTH": 1
+      }
+    },
+    {
+      "id": "E-20261119-01",
+      "date": "2026-11-19",
+      "domain": "economy",
+      "title": "S&P 500 falls 2.0% for a sixth straight loss as rate-hike bets and tech selling weigh; VIX near 29",
+      "sources": [
+        "Reuters",
+        "Benzinga",
+        "CNBC"
+      ],
+      "url": "https://www.benzinga.com/markets/equities/26/11/63446162/stock-market-today-anthropic-ipo-debut-sp-500-sixth-loss-november-19",
+      "omen": {
+        "chaos": 4,
+        "polarization": 1,
+        "economic": 5
+      },
+      "clio": {
+        "precedent": "2018 Q4 rate-fear sell-off",
+        "precedent_match": 5,
+        "resistance": 5
+      },
+      "systems": {
+        "S-GROWTH": 1,
+        "S-FEDDEC": 1
+      }
+    },
+    {
+      "id": "E-20261119-02",
+      "date": "2026-11-19",
+      "domain": "foreign",
+      "title": "Trump, Xi and Putin hold first three-way summit; no breakthroughs on Ukraine or Iran",
+      "sources": [
+        "AP",
+        "PBS NewsHour",
+        "Al Jazeera",
+        "RFE/RL"
+      ],
+      "url": "https://www.pbs.org/newshour/world/3-takeaways-from-trump-xi-and-putins-historic-summit",
+      "omen": {
+        "chaos": 2,
+        "polarization": 3,
+        "economic": 2
+      },
+      "clio": {
+        "precedent": "1972 Nixon visit to China",
+        "precedent_match": 3,
+        "resistance": 7
+      },
+      "systems": {
+        "S-UKRAINE": -1
+      }
+    },
+    {
+      "id": "E-20261119-03",
+      "date": "2026-11-19",
+      "domain": "foreign",
+      "title": "Russia hits three Kyiv bridges in one of its biggest air attacks, rejects security guarantees; Putin vows 'far more painful' response to Crimea bridge strikes",
+      "sources": [
+        "BBC",
+        "Reuters"
+      ],
+      "url": "https://www.bbc.co.uk/news/articles/c6x29gn4pdn9o",
+      "omen": {
+        "chaos": 6,
+        "polarization": 1,
+        "economic": 2
+      },
+      "clio": {
+        "precedent": "2022-23 Russian infrastructure strikes on Ukraine",
+        "precedent_match": 7,
+        "resistance": 7
+      },
+      "systems": {
+        "S-UKRAINE": 1
+      }
+    },
+    {
+      "id": "E-20261119-04",
+      "date": "2026-11-19",
+      "domain": "foreign",
+      "title": "Senate Republicans block Iran war powers resolution 48-51, first vote since the midterms",
+      "sources": [
+        "Reuters",
+        "The Hill"
+      ],
+      "url": "https://thehill.com/homenews/senate/6231044-senate-republicans-war-powers-resolution-vote-fails/",
+      "omen": {
+        "chaos": 2,
+        "polarization": 5,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "1973 War Powers Resolution fights",
+        "precedent_match": 4,
+        "resistance": 8
+      },
+      "systems": {
+        "S-FUNDING": 1
+      }
+    },
+    {
+      "id": "E-20261119-05",
+      "date": "2026-11-19",
+      "domain": "politics",
+      "title": "Trump ousts cyber director after tech outages; names Kirsten Davies as new cyber chief",
+      "sources": [
+        "AP",
+        "Reuters"
+      ],
+      "url": "https://news.google.com/rss/search?q=Kirsten+Davies+cyber",
+      "omen": {
+        "chaos": 2,
+        "polarization": 2,
+        "economic": 2
+      },
+      "clio": {
+        "precedent": "2020 CISA director firing",
+        "precedent_match": 4,
+        "resistance": 7
+      },
+      "systems": {}
+    },
+    {
+      "id": "E-20261119-06",
+      "date": "2026-11-19",
+      "domain": "politics",
+      "title": "Trump ally Bill Essayli tapped to lead probe of Biden officials over the Mar-a-Lago raid",
+      "sources": [
+        "Fox News"
+      ],
+      "url": "https://www.foxnews.com/politics/trump-ally-bill-essayli-tapped-lead-investigation-biden-officials-mar-a-lago-raid",
+      "omen": {
+        "chaos": 1,
+        "polarization": 6,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2019 Durham review of the Russia probe",
+        "precedent_match": 6,
+        "resistance": 6
+      },
+      "systems": {
+        "S-OVERSIGHT": -1
+      }
+    },
+    {
+      "id": "E-20261119-07",
+      "date": "2026-11-19",
+      "domain": "unrest",
+      "title": "Wisconsin prosecutor declines to charge officer who fatally shot Black man in Madison",
+      "sources": [
+        "AP",
+        "PBS NewsHour"
+      ],
+      "url": "https://www.pbs.org/newshour/nation/prosecutor-declines-to-charge-wisconsin-officer-who-fatally-shot-black-man-in-madiso",
+      "omen": {
+        "chaos": 3,
+        "polarization": 4,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2020 Kenosha Jacob Blake no-charge decision",
+        "precedent_match": 5,
+        "resistance": 7
+      },
+      "systems": {}
     }
   ]
 }
