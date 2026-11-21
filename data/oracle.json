@@ -6,7 +6,7 @@
     "created": "2026-10-14",
     "last_run": "2026-11-21",
     "run_count": 20,
-    "next_id": 73,
+    "next_id": 76,
     "note": "Single source of truth. Rules live in ORACLE.md. Never rewrite past forecasts. Arithmetic is done by tools/core.py."
   },
   "weights": {
@@ -3957,6 +3957,135 @@
       "sim": null,
       "oracle": 0.53,
       "blend": 0.44
+    },
+    {
+      "id": "P-0073",
+      "created": "2026-11-21",
+      "domain": "politics",
+      "horizon": "6m+",
+      "question": "Will at least one more US state (besides Alaska and Maine) adopt ranked-choice voting for its statewide or congressional general elections, by legislation or ballot measure, between Nov 21, 2026 and Dec 31, 2028?",
+      "resolves_on": "2029-01-01",
+      "resolution_source": "Enacted state law or passed ballot measure, as reported by AP, Ballotpedia or FairVote. Local-only or primary-only ranked-choice voting does not count",
+      "clio": 0.15,
+      "omen": 0.25,
+      "adjustment": {
+        "value": 0.0,
+        "reason": ""
+      },
+      "market": null,
+      "market_source": null,
+      "reasoning": {
+        "clio": "Only two states have adopted it statewide in over a decade, and a dozen or so have banned it since 2022. In 2024, ranked-choice ballot measures failed in every state that voted on one (Oregon, Nevada, Colorado, Idaho and Arizona).",
+        "omen": "Anger at both parties is high, Alaska voters just kept their system a second time, and reform groups have money and a 2028 ballot to aim for in initiative states."
+      },
+      "status": "open",
+      "outcome": null,
+      "resolved_on": null,
+      "resolution_note": null,
+      "brier": {
+        "oracle": null,
+        "clio": null,
+        "omen": null,
+        "market": null,
+        "sim": null
+      },
+      "history": [
+        {
+          "date": "2026-11-21",
+          "clio": 0.15,
+          "omen": 0.25,
+          "oracle": 0.3
+        }
+      ],
+      "sim": null,
+      "oracle": 0.3,
+      "blend": 0.23
+    },
+    {
+      "id": "P-0074",
+      "created": "2026-11-21",
+      "domain": "politics",
+      "horizon": "6m+",
+      "question": "Will at least one more US state adopt open all-candidate ('top-two', 'top-four' or 'top-five') primaries for its congressional races, by legislation or ballot measure, between Nov 21, 2026 and Dec 31, 2028?",
+      "resolves_on": "2029-01-01",
+      "resolution_source": "Enacted state law or passed ballot measure, as reported by AP or Ballotpedia",
+      "clio": 0.15,
+      "omen": 0.2,
+      "adjustment": {
+        "value": 0.0,
+        "reason": ""
+      },
+      "market": null,
+      "market_source": null,
+      "reasoning": {
+        "clio": "Only California, Washington, Alaska and Louisiana (partly) use them. Party leaders on both sides oppose them, and several 2024 ballot measures failed.",
+        "omen": "Frustration with primaries that reward extremes is growing, and in about half the states citizens can bypass the legislature with a ballot initiative."
+      },
+      "status": "open",
+      "outcome": null,
+      "resolved_on": null,
+      "resolution_note": null,
+      "brier": {
+        "oracle": null,
+        "clio": null,
+        "omen": null,
+        "market": null,
+        "sim": null
+      },
+      "history": [
+        {
+          "date": "2026-11-21",
+          "clio": 0.15,
+          "omen": 0.2,
+          "oracle": 0.25
+        }
+      ],
+      "sim": null,
+      "oracle": 0.25,
+      "blend": 0.19
+    },
+    {
+      "id": "P-0075",
+      "created": "2026-11-21",
+      "domain": "politics",
+      "horizon": "6m+",
+      "question": "Will either chamber of Congress pass a bill allowing or requiring multi-member, proportional US House districts (such as the Fair Representation Act) between Nov 21, 2026 and Dec 31, 2028?",
+      "resolves_on": "2029-01-01",
+      "resolution_source": "Congress.gov record of a passed floor vote in the House or Senate",
+      "clio": 0.01,
+      "omen": 0.03,
+      "adjustment": {
+        "value": 0.0,
+        "reason": ""
+      },
+      "market": null,
+      "market_source": null,
+      "reasoning": {
+        "clio": "No proportional-representation bill has ever received a floor vote. The current single-member-district rule has stood since 1967, and sitting members benefit from it.",
+        "omen": "A new Democratic Congress elected on reform anger could take up election-law changes, but proportional representation is far outside both parties' agendas."
+      },
+      "status": "open",
+      "outcome": null,
+      "resolved_on": null,
+      "resolution_note": null,
+      "brier": {
+        "oracle": null,
+        "clio": null,
+        "omen": null,
+        "market": null,
+        "sim": null
+      },
+      "history": [
+        {
+          "date": "2026-11-21",
+          "clio": 0.01,
+          "omen": 0.03,
+          "oracle": 0.04
+        }
+      ],
+      "sim": null,
+      "oracle": 0.04,
+      "blend": 0.03
     }
   ],
   "score_log": [
