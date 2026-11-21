@@ -4,9 +4,9 @@
     "version": "2.0",
     "scope": "United States",
     "created": "2026-10-14",
-    "last_run": "2026-11-20",
-    "run_count": 19,
-    "next_id": 71,
+    "last_run": "2026-11-21",
+    "run_count": 20,
+    "next_id": 73,
     "note": "Single source of truth. Rules live in ORACLE.md. Never rewrite past forecasts. Arithmetic is done by tools/core.py."
   },
   "weights": {
@@ -3871,6 +3871,92 @@
         "met": false,
         "proxy": false
       }
+    },
+    {
+      "id": "P-0071",
+      "created": "2026-11-21",
+      "domain": "politics",
+      "horizon": "6m+",
+      "question": "Will JD Vance lead the RealClearPolitics average of 2028 Republican presidential primary polls on June 30, 2027?",
+      "resolves_on": "2027-07-01",
+      "resolution_source": "RealClearPolitics 2028 Republican nomination polling average on June 30, 2027; if RCP has no average, the leader in most national GOP primary polls released in June 2027",
+      "clio": 0.72,
+      "omen": 0.6,
+      "adjustment": {
+        "value": 0.0,
+        "reason": ""
+      },
+      "market": null,
+      "market_source": null,
+      "reasoning": {
+        "clio": "Sitting vice presidents usually lead the early polls for their party's next nomination (Nixon 1960, Bush 1988, Gore 2000), and Vance has led nearly every 2028 Republican poll since 2025, often by 20+ points.",
+        "omen": "The 2026 midterm losses invite blame on the Trump-Vance team, and Trump has not formally anointed an heir. A Trump-family candidate (Don Jr.), Rubio or a governor could surge if the party wants a fresh face or Trump signals someone else."
+      },
+      "status": "open",
+      "outcome": null,
+      "resolved_on": null,
+      "resolution_note": null,
+      "brier": {
+        "oracle": null,
+        "clio": null,
+        "omen": null,
+        "market": null,
+        "sim": null
+      },
+      "history": [
+        {
+          "date": "2026-11-21",
+          "clio": 0.72,
+          "omen": 0.6,
+          "oracle": 0.71
+        }
+      ],
+      "sim": null,
+      "oracle": 0.71,
+      "blend": 0.63
+    },
+    {
+      "id": "P-0072",
+      "created": "2026-11-21",
+      "domain": "politics",
+      "horizon": "6m+",
+      "question": "Will Donald Trump formally endorse a candidate for the 2028 Republican presidential nomination before Jan 15, 2028 (roughly before the first primary contests)?",
+      "resolves_on": "2028-01-15",
+      "resolution_source": "Trump's own explicit public endorsement (statement, Truth Social post or rally) reported by AP or Reuters. Praise or calling someone 'most likely' does not count",
+      "clio": 0.25,
+      "omen": 0.5,
+      "adjustment": {
+        "value": 0.0,
+        "reason": ""
+      },
+      "market": null,
+      "market_source": null,
+      "reasoning": {
+        "clio": "Outgoing presidents rarely endorse before the primaries: Reagan waited until Bush clinched in 1988, and Clinton and Obama stayed neutral. Endorsing early risks backing a loser and gives up leverage.",
+        "omen": "Trump treats endorsements as power and has decided dozens of Republican primaries with them. He has already floated Vance (and Rubio) as successors, and an endorsement keeps him the party's kingmaker after he leaves office."
+      },
+      "status": "open",
+      "outcome": null,
+      "resolved_on": null,
+      "resolution_note": null,
+      "brier": {
+        "oracle": null,
+        "clio": null,
+        "omen": null,
+        "market": null,
+        "sim": null
+      },
+      "history": [
+        {
+          "date": "2026-11-21",
+          "clio": 0.25,
+          "omen": 0.5,
+          "oracle": 0.53
+        }
+      ],
+      "sim": null,
+      "oracle": 0.53,
+      "blend": 0.44
     }
   ],
   "score_log": [
@@ -4139,6 +4225,20 @@
       "n_market": 4,
       "brier_sim": 0.0758,
       "n_sim": 5
+    },
+    {
+      "date": "2026-11-21",
+      "resolved_today": 0,
+      "total_resolved": 45,
+      "hits": 32,
+      "misses": 10,
+      "brier_oracle": 0.1726,
+      "brier_clio": 0.2049,
+      "brier_omen": 0.151,
+      "brier_market": 0.0981,
+      "n_market": 4,
+      "brier_sim": 0.0758,
+      "n_sim": 5
     }
   ],
   "config": {
@@ -4239,7 +4339,7 @@
       "linked_oracle": 0.87,
       "projection": null,
       "trend_per_week": null,
-      "momentum": 0.26,
+      "momentum": 0.23,
       "retired": true,
       "retired_note": "Resolved Nov 4: Democrats won the House. Successor: S-OVERSIGHT."
     },
@@ -4307,7 +4407,7 @@
       "linked_oracle": 0.55,
       "projection": null,
       "trend_per_week": null,
-      "momentum": 0.12,
+      "momentum": 0.1,
       "retired": true,
       "retired_note": "Resolved Nov 4: Democrats won the Senate. Successor: S-OVERSIGHT."
     },
@@ -4402,11 +4502,11 @@
       "linked_oracle": 0.6,
       "projection": {
         "kind": "restabilizing",
-        "date": "2026-12-02",
+        "date": "2026-12-03",
         "note": "friction regains the upper hand at the current trend"
       },
       "trend_per_week": -0.34,
-      "momentum": 0.33
+      "momentum": 0.3
     },
     {
       "id": "S-FED",
@@ -4581,11 +4681,11 @@
       "linked_oracle": 0.16,
       "projection": {
         "kind": "crossing",
-        "date": "2026-11-27",
+        "date": "2026-11-28",
         "note": "pressure overtakes friction at the current trend"
       },
-      "trend_per_week": 0.63,
-      "momentum": 1.55
+      "trend_per_week": 0.61,
+      "momentum": 1.36
     },
     {
       "id": "S-HORMUZ",
@@ -4672,11 +4772,11 @@
       "linked_oracle": 0.05,
       "projection": {
         "kind": "crossing",
-        "date": "2027-02-14",
+        "date": "2027-01-02",
         "note": "pressure overtakes friction at the current trend"
       },
-      "trend_per_week": 0.16,
-      "momentum": 0.31
+      "trend_per_week": 0.34,
+      "momentum": 0.28
     },
     {
       "id": "S-STREETS",
@@ -4736,7 +4836,7 @@
       "linked_oracle": 0.19,
       "projection": null,
       "trend_per_week": null,
-      "momentum": 0.11
+      "momentum": 0.1
     },
     {
       "id": "S-FUNDING",
@@ -4795,7 +4895,7 @@
       "linked_oracle": 0.41,
       "projection": null,
       "trend_per_week": null,
-      "momentum": 0.74
+      "momentum": 0.67
     },
     {
       "id": "S-UKRAINE",
@@ -4855,7 +4955,7 @@
       "linked_oracle": 0.07,
       "projection": null,
       "trend_per_week": null,
-      "momentum": 0.93
+      "momentum": 0.84
     },
     {
       "id": "S-FEDDEC",
@@ -4924,8 +5024,8 @@
       },
       "linked_oracle": 0.94,
       "projection": null,
-      "trend_per_week": 0.62,
-      "momentum": 1.76
+      "trend_per_week": 1.13,
+      "momentum": 1.6
     },
     {
       "id": "S-OVERSIGHT",
@@ -4985,11 +5085,11 @@
       "linked_oracle": 0.34,
       "projection": {
         "kind": "crossing",
-        "date": "2026-12-01",
+        "date": "2026-12-02",
         "note": "pressure overtakes friction at the current trend"
       },
       "trend_per_week": 0.53,
-      "momentum": 0.92
+      "momentum": 0.83
     }
   ],
   "catalysts": [
@@ -6915,8 +7015,8 @@
     ]
   },
   "review": {
-    "date": "2026-11-20",
-    "since": "2026-11-13",
+    "date": "2026-11-21",
+    "since": "2026-11-14",
     "resolved": [
       {
         "id": "P-0006",
@@ -6945,16 +7045,6 @@
         "oracle": 0.89,
         "clio": 0.65,
         "omen": 0.93,
-        "hit": true,
-        "closer_engine": "OMEN"
-      },
-      {
-        "id": "P-0039",
-        "question": "Will Cindy Holscher (D) win Kansas's 2026 governor race?",
-        "outcome": true,
-        "oracle": 0.93,
-        "clio": 0.85,
-        "omen": 0.96,
         "hit": true,
         "closer_engine": "OMEN"
       },
@@ -6990,7 +7080,7 @@
       }
     ],
     "clio_wins": 1,
-    "omen_wins": 6,
+    "omen_wins": 5,
     "big_moves": [
       {
         "id": "P-0025",
@@ -7064,14 +7154,6 @@
       }
     ],
     "weight_changes": [
-      {
-        "date": "2026-11-13",
-        "domain": "politics",
-        "prediction": "P-0039",
-        "clio": 0.255,
-        "omen": 0.745,
-        "change_clio": -0.002
-      },
       {
         "date": "2026-11-16",
         "domain": "foreign",
@@ -7161,7 +7243,7 @@
     "n": 45,
     "a": 0.368,
     "b": 1.0079,
-    "fitted_on": "2026-11-20"
+    "fitted_on": "2026-11-21"
   },
   "shock_watch": [
     {
@@ -7305,7 +7387,10 @@
       "date": "2026-11-13",
       "V": 0.497,
       "p": 0.373,
-      "outcome": null
+      "outcome": false,
+      "evidence": [],
+      "resolved_on": "2026-11-21",
+      "brier": 0.1391
     },
     {
       "date": "2026-11-15",
@@ -7330,52 +7415,63 @@
       "V": 0.494,
       "p": 0.368,
       "outcome": null
+    },
+    {
+      "date": "2026-11-21",
+      "V": 0.5,
+      "p": 0.378,
+      "outcome": null
     }
   ],
   "volatility": {
-    "V": 0.494,
+    "V": 0.5,
     "path": "gamma",
     "O": 3.71,
-    "C": 6.32,
-    "Pm": 1.264,
+    "C": 6.33,
+    "Pm": 1.291,
     "w_omen": 0.569,
     "w_clio": 0.431,
     "inertia": 1.0,
-    "n_events": 43,
+    "n_events": 40,
     "calendar_drivers": [
       {
         "id": "C-019",
         "name": "Georgia runoff elections",
-        "add": 0.166
+        "add": 0.184
       },
       {
         "id": "C-012",
         "name": "Fed's December interest-rate decision",
-        "add": 0.03
+        "add": 0.033
       },
       {
         "id": "C-014",
         "name": "Fed interest-rate decision (Dec 8-9)",
-        "add": 0.03
+        "add": 0.033
+      },
+      {
+        "id": "C-010",
+        "name": "Government funding deadline",
+        "add": 0.02
       }
     ],
-    "date": "2026-11-20",
+    "date": "2026-11-21",
     "by_domain": {
       "politics": {
-        "V": 0.693,
+        "V": 0.699,
         "path": "beta",
-        "O": 3.65,
-        "C": 6.43,
-        "Pm": 1.185,
-        "n_events": 14
+        "O": 3.66,
+        "C": 6.39,
+        "Pm": 1.204,
+        "n_events": 13
       },
       "economy": {
         "V": 0.416,
         "path": "gamma",
-        "O": 3.73,
-        "C": 5.82,
-        "Pm": 1.079,
-        "n_events": 16
+        "O": 3.74,
+        "C": 5.86,
+        "Pm": 1.087,
+        "n_events": 14
       },
       "unrest": {
         "V": 0.312,
@@ -7395,13 +7491,13 @@
       }
     },
     "shock": {
-      "p": 0.368,
+      "p": 0.378,
       "a": -4.0,
       "b": 7.0,
       "fitted": false,
-      "n_resolved": 14,
-      "brier": 0.2139,
-      "hits": 10
+      "n_resolved": 15,
+      "brier": 0.2089,
+      "hits": 11
     }
   },
   "volatility_log": [
@@ -7632,6 +7728,18 @@
         "unrest": 0.312,
         "foreign": 0.372
       }
+    },
+    {
+      "date": "2026-11-21",
+      "V": 0.5,
+      "path": "gamma",
+      "p_shock": 0.378,
+      "by_domain": {
+        "politics": 0.699,
+        "economy": 0.416,
+        "unrest": 0.312,
+        "foreign": 0.372
+      }
     }
   ],
   "history_scale": {
@@ -7661,7 +7769,7 @@
           "Parliament fights over the anti-Catholic Ecclesiastical Titles Bill",
           "Chartist reform movement fades after 1848"
         ],
-        "mix_similarity": 0.67
+        "mix_similarity": 0.673
       },
       {
         "id": "H-1997",
@@ -7716,7 +7824,7 @@
           "Suez Canal tension after Egypt nationalizes the canal",
           "Economy near full employment with low inflation"
         ],
-        "mix_similarity": 0.967
+        "mix_similarity": 0.969
       },
       {
         "id": "H-2018",
@@ -7743,7 +7851,7 @@
           "Mass protests at the Capitol; hundreds arrested",
           "Trade-war tariffs on China escalate"
         ],
-        "mix_similarity": 0.845
+        "mix_similarity": 0.849
       },
       {
         "id": "H-1974",
@@ -7771,7 +7879,7 @@
           "'Smoking gun' tape released",
           "House committee approves articles of impeachment"
         ],
-        "mix_similarity": 0.958
+        "mix_similarity": 0.961
       },
       {
         "id": "H-2001",
@@ -7799,7 +7907,7 @@
           "All US airspace shut down for days",
           "Terrorist attacks kill nearly 3,000 people"
         ],
-        "mix_similarity": 0.801
+        "mix_similarity": 0.798
       },
       {
         "id": "H-2011",
@@ -7826,7 +7934,7 @@
           "Unemployment stuck at 9.1%",
           "Debt-ceiling deal reached hours before default deadline"
         ],
-        "mix_similarity": 0.953
+        "mix_similarity": 0.95
       },
       {
         "id": "H-1979US",
@@ -7854,7 +7962,7 @@
           "Ted Kennedy launches a primary challenge to the president",
           "Militants seize the US embassy in Tehran and take hostages"
         ],
-        "mix_similarity": 0.918
+        "mix_similarity": 0.914
       },
       {
         "id": "H-2021",
@@ -7882,7 +7990,7 @@
           "Georgia runoffs flip control of the Senate",
           "Recording of pressure call to Georgia's secretary of state released"
         ],
-        "mix_similarity": 0.921
+        "mix_similarity": 0.925
       },
       {
         "id": "H-1962",
@@ -7937,7 +8045,7 @@
           "Inflation back above 9%; government pay caps collapse",
           "'Crisis? What crisis?' headline sums up the prime minister's response"
         ],
-        "mix_similarity": 0.972
+        "mix_similarity": 0.97
       },
       {
         "id": "H-1968",
@@ -7965,7 +8073,7 @@
           "Poor People's Campaign encamped on the National Mall",
           "Cities still scarred by riots after Martin Luther King Jr.'s assassination"
         ],
-        "mix_similarity": 0.953
+        "mix_similarity": 0.956
       },
       {
         "id": "H-2008",
@@ -7992,7 +8100,7 @@
           "House rejects the bailout; stocks plunge 7%",
           "Washington Mutual seized: largest bank failure in US history"
         ],
-        "mix_similarity": 0.916
+        "mix_similarity": 0.912
       },
       {
         "id": "H-2020",
@@ -8020,7 +8128,7 @@
           "US COVID deaths pass 100,000",
           "Fed and Congress pour trillions into the economy"
         ],
-        "mix_similarity": 0.996
+        "mix_similarity": 0.997
       },
       {
         "id": "H-1991",
@@ -8048,7 +8156,7 @@
           "Yeltsin defies the coup; crowds defend parliament",
           "Shortages and rationing across the country"
         ],
-        "mix_similarity": 0.972
+        "mix_similarity": 0.974
       },
       {
         "id": "H-1923",
@@ -8076,7 +8184,7 @@
           "Hitler's Beer Hall Putsch fails in Munich",
           "Separatist revolts in the Rhineland"
         ],
-        "mix_similarity": 0.954
+        "mix_similarity": 0.951
       },
       {
         "id": "H-1933",
@@ -8103,7 +8211,7 @@
           "Unemployment near 25%",
           "Farm foreclosure riots in the Midwest"
         ],
-        "mix_similarity": 0.912
+        "mix_similarity": 0.908
       },
       {
         "id": "H-1789",
@@ -8158,7 +8266,7 @@
           "Senate orders Caesar to disband his army",
           "Years of gang warfare in Rome's streets"
         ],
-        "mix_similarity": 0.932
+        "mix_similarity": 0.935
       },
       {
         "id": "H-1861",
@@ -8185,7 +8293,7 @@
           "Banks and trade between North and South collapse",
           "Seven states have seceded; more are about to follow"
         ],
-        "mix_similarity": 0.988
+        "mix_similarity": 0.989
       }
     ],
     "closest_level": [
@@ -8203,12 +8311,12 @@
       "H-2011"
     ],
     "today": {
-      "V": 0.494,
+      "V": 0.5,
       "profile": {
-        "chaos": 2.94,
-        "polarization": 2.9,
-        "economic": 2.47,
-        "resistance": 6.32
+        "chaos": 2.96,
+        "polarization": 2.92,
+        "economic": 2.45,
+        "resistance": 6.33
       }
     }
   }
