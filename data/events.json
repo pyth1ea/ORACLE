@@ -3215,6 +3215,159 @@
         "resistance": 7
       },
       "systems": {}
+    },
+    {
+      "id": "E-20261120-01",
+      "date": "2026-11-20",
+      "domain": "economy",
+      "title": "S&P 500 sinks 3.7% to 6,910, seventh straight loss; Nasdaq negative for 2026 as AI selloff accelerates (Nvidia -14%, chips -10.7%)",
+      "sources": [
+        "AP",
+        "NPR",
+        "CNBC",
+        "Reuters"
+      ],
+      "url": "https://www.npr.org/2026/11/20/g-s1-154797/nasdaq-sp500-stock-market-ai-sink-negative",
+      "omen": {
+        "chaos": 6,
+        "polarization": 2,
+        "economic": 6
+      },
+      "clio": {
+        "precedent": "1987 Black Monday and 2000 dot-com Nasdaq selloff",
+        "precedent_match": 4,
+        "resistance": 5
+      },
+      "systems": {
+        "S-GROWTH": 2,
+        "S-FEDDEC": -1
+      }
+    },
+    {
+      "id": "E-20261122-01",
+      "date": "2026-11-22",
+      "domain": "foreign",
+      "title": "Trump says he leans toward resuming Iran strikes after New Year, threatens to sink ships running the US blockade; Iranian attacks at yearlong high",
+      "sources": [
+        "Washington Examiner",
+        "Rudaw",
+        "Iran International",
+        "Fox News"
+      ],
+      "url": "https://www.rudaw.net/english/categories/world/1080270",
+      "omen": {
+        "chaos": 5,
+        "polarization": 3,
+        "economic": 4
+      },
+      "clio": {
+        "precedent": "1987-88 Tanker War",
+        "precedent_match": 6,
+        "resistance": 5
+      },
+      "systems": {
+        "S-HORMUZ": 1,
+        "S-INFLATION": 1
+      }
+    },
+    {
+      "id": "E-20261122-02",
+      "date": "2026-11-22",
+      "domain": "politics",
+      "title": "Democrats clinch 258 House seats after Hubbard beats Foxx in a recount, the biggest majority since 1992",
+      "sources": [
+        "AP",
+        "PBS NewsHour",
+        "BBC",
+        "Reuters"
+      ],
+      "url": "https://www.pbs.org/newshour/politics/democrats-clinch-a-historic-house-majority-of-at-least-258-sea",
+      "omen": {
+        "chaos": 1,
+        "polarization": 3,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "1992-94 House realignment",
+        "precedent_match": 4,
+        "resistance": 7
+      },
+      "systems": {
+        "S-OVERSIGHT": 1
+      }
+    },
+    {
+      "id": "E-20261122-03",
+      "date": "2026-11-22",
+      "domain": "foreign",
+      "title": "Ukraine sea drones hit Russian corvette in Libya and a Russia-bound ship in the Gulf of Finland; Russian strike kills 11 in Dymer near Kyiv",
+      "sources": [
+        "AP",
+        "BBC",
+        "Reuters",
+        "NPR"
+      ],
+      "url": "https://www.bbc.co.uk/news/articles/cqdr15l32d3go",
+      "omen": {
+        "chaos": 5,
+        "polarization": 1,
+        "economic": 2
+      },
+      "clio": {
+        "precedent": "2022-23 Black Sea escalation",
+        "precedent_match": 5,
+        "resistance": 6
+      },
+      "systems": {
+        "S-UKRAINE": 1
+      }
+    },
+    {
+      "id": "E-20261122-04",
+      "date": "2026-11-22",
+      "domain": "unrest",
+      "title": "Video of ICE detaining father and daughter at Seattle airport sparks protests",
+      "sources": [
+        "AP",
+        "The Guardian US",
+        "PBS NewsHour"
+      ],
+      "url": "https://www.theguardian.com/us-news/2026/nov/23/father-daughter-ice-arrests-video-sparks-protests-seattle-airport",
+      "omen": {
+        "chaos": 3,
+        "polarization": 5,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2025 Los Angeles ICE raid protests",
+        "precedent_match": 5,
+        "resistance": 7
+      },
+      "systems": {
+        "S-STREETS": 1
+      }
+    },
+    {
+      "id": "E-20261122-05",
+      "date": "2026-11-22",
+      "domain": "economy",
+      "title": "Delta automation problem and FAA ground stop at Atlanta disrupt Thanksgiving travel",
+      "sources": [
+        "AP",
+        "PBS NewsHour"
+      ],
+      "url": "https://www.pbs.org/newshour/nation/automation-system-problem-at-delta-causes-flight-delays-as-americans-travel-f",
+      "omen": {
+        "chaos": 3,
+        "polarization": 1,
+        "economic": 2
+      },
+      "clio": {
+        "precedent": "2024 CrowdStrike airline outage",
+        "precedent_match": 3,
+        "resistance": 7
+      },
+      "systems": {}
     }
   ]
 }
