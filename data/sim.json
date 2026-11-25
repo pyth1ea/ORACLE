@@ -1,24 +1,24 @@
 {
-  "date": "2026-11-23",
+  "date": "2026-11-25",
   "runs": 1000,
-  "events_per_day": 3.07,
-  "event_pool": 92,
+  "events_per_day": 3.19,
+  "event_pool": 99,
   "horizon_days": 200,
-  "replayed_events": 6,
+  "replayed_events": 9,
   "systems": {
     "S-GROWTH": {
-      "tip": 0.636,
+      "tip": 0.596,
       "eval_date": "2027-04-30",
-      "p10": 7.05,
-      "p50": 7.73,
-      "p90": 8.55
+      "p10": 6.84,
+      "p50": 7.52,
+      "p90": 8.36
     },
     "S-FUNDING": {
-      "tip": 0.301,
+      "tip": 0.327,
       "eval_date": "2026-12-11",
-      "p10": 4.54,
-      "p50": 4.6,
-      "p90": 4.66
+      "p10": 4.74,
+      "p50": 4.8,
+      "p90": 4.87
     },
     "S-UKRAINE": {
       "tip": 0.077,
@@ -28,268 +28,268 @@
       "p90": 3.63
     },
     "S-FEDDEC": {
-      "tip": 0.781,
+      "tip": 0.778,
       "eval_date": "2026-12-09",
-      "p10": 7.15,
-      "p50": 7.84,
-      "p90": 8.03
+      "p10": 7.16,
+      "p50": 7.79,
+      "p90": 8.01
     },
     "S-OVERSIGHT": {
-      "tip": 0.471,
-      "eval_date": "2027-06-11",
-      "p10": 6.02,
-      "p50": 6.25,
-      "p90": 6.37
+      "tip": 0.488,
+      "eval_date": "2027-06-13",
+      "p10": 6.11,
+      "p50": 6.37,
+      "p90": 6.51
     }
   },
   "predictions": {
-    "P-0024": 0.636,
-    "P-0018": 0.301,
+    "P-0024": 0.596,
+    "P-0018": 0.327,
     "P-0022": 0.077,
-    "P-0025": 0.781,
-    "P-0049": 0.471
+    "P-0025": 0.778,
+    "P-0049": 0.488
   },
   "catalysts": {
     "C-010": {
       "Funding lapses": {
-        "share": 0.33,
+        "share": 0.313,
         "systems": {
           "S-UKRAINE": 0.077,
-          "S-GROWTH": 0.662,
-          "S-OVERSIGHT": 0.47
+          "S-GROWTH": 0.626,
+          "S-OVERSIGHT": 0.489
         }
       },
       "Deal or stopgap": {
-        "share": 0.67,
+        "share": 0.687,
         "systems": {
           "S-UKRAINE": 0.077,
-          "S-GROWTH": 0.622,
-          "S-OVERSIGHT": 0.471
+          "S-GROWTH": 0.582,
+          "S-OVERSIGHT": 0.487
         }
       }
     },
     "C-012": {
       "Hike": {
-        "share": 0.334,
+        "share": 0.341,
         "systems": {
-          "S-FUNDING": 0.302,
+          "S-FUNDING": 0.327,
           "S-UKRAINE": 0.077,
-          "S-GROWTH": 0.708,
-          "S-OVERSIGHT": 0.473
+          "S-GROWTH": 0.67,
+          "S-OVERSIGHT": 0.489
         }
       },
       "Hold or cut": {
-        "share": 0.666,
+        "share": 0.659,
         "systems": {
-          "S-FUNDING": 0.301,
+          "S-FUNDING": 0.327,
           "S-UKRAINE": 0.077,
-          "S-GROWTH": 0.599,
-          "S-OVERSIGHT": 0.47
+          "S-GROWTH": 0.557,
+          "S-OVERSIGHT": 0.488
         }
       }
     },
     "C-014": {
       "Hike": {
-        "share": 0.629,
+        "share": 0.608,
         "systems": {
-          "S-FUNDING": 0.302,
+          "S-FUNDING": 0.327,
           "S-UKRAINE": 0.077,
-          "S-GROWTH": 0.665,
-          "S-OVERSIGHT": 0.47
+          "S-GROWTH": 0.629,
+          "S-OVERSIGHT": 0.488
         }
       },
       "Hold": {
-        "share": 0.371,
+        "share": 0.392,
         "systems": {
-          "S-FUNDING": 0.301,
-          "S-UKRAINE": 0.076,
-          "S-GROWTH": 0.586,
-          "S-OVERSIGHT": 0.472
+          "S-FUNDING": 0.327,
+          "S-UKRAINE": 0.077,
+          "S-GROWTH": 0.544,
+          "S-OVERSIGHT": 0.488
         }
       }
     },
     "C-015": {
       "Jeffries elected Speaker": {
-        "share": 0.94,
+        "share": 0.923,
         "systems": {
-          "S-GROWTH": 0.635,
-          "S-OVERSIGHT": 0.477
+          "S-GROWTH": 0.596,
+          "S-OVERSIGHT": 0.496
         }
       },
       "Speaker vote drags on": {
-        "share": 0.06,
+        "share": 0.077,
         "systems": {
-          "S-GROWTH": 0.648,
-          "S-OVERSIGHT": 0.376
+          "S-GROWTH": 0.594,
+          "S-OVERSIGHT": 0.394
         }
       }
     },
     "C-017": {
       "Hot (0.3%+ monthly)": {
-        "share": 0.377,
+        "share": 0.404,
         "systems": {
-          "S-FUNDING": 0.301,
-          "S-UKRAINE": 0.076,
-          "S-GROWTH": 0.637,
-          "S-OVERSIGHT": 0.473
+          "S-FUNDING": 0.328,
+          "S-UKRAINE": 0.077,
+          "S-GROWTH": 0.598,
+          "S-OVERSIGHT": 0.489
         }
       },
       "Cooler (under 0.3%)": {
-        "share": 0.623,
+        "share": 0.596,
         "systems": {
-          "S-FUNDING": 0.302,
+          "S-FUNDING": 0.327,
           "S-UKRAINE": 0.077,
-          "S-GROWTH": 0.635,
-          "S-OVERSIGHT": 0.47
+          "S-GROWTH": 0.595,
+          "S-OVERSIGHT": 0.487
         }
       }
     },
     "C-019": {
       "Democrats keep 91+ state House seats": {
-        "share": 0.854,
+        "share": 0.859,
         "systems": {
-          "S-FEDDEC": 0.781,
-          "S-FUNDING": 0.302,
+          "S-FEDDEC": 0.779,
+          "S-FUNDING": 0.327,
           "S-UKRAINE": 0.077,
-          "S-GROWTH": 0.637,
-          "S-OVERSIGHT": 0.475
+          "S-GROWTH": 0.596,
+          "S-OVERSIGHT": 0.492
         }
       },
       "Democrats fall short of 91": {
-        "share": 0.146,
+        "share": 0.141,
         "systems": {
-          "S-FEDDEC": 0.78,
-          "S-FUNDING": 0.301,
-          "S-UKRAINE": 0.076,
-          "S-GROWTH": 0.63,
-          "S-OVERSIGHT": 0.447
+          "S-FEDDEC": 0.776,
+          "S-FUNDING": 0.328,
+          "S-UKRAINE": 0.077,
+          "S-GROWTH": 0.592,
+          "S-OVERSIGHT": 0.461
         }
       }
     },
     "C-020": {
       "Strong hiring": {
-        "share": 0.581,
+        "share": 0.547,
         "systems": {
-          "S-FEDDEC": 0.812,
-          "S-FUNDING": 0.302,
-          "S-UKRAINE": 0.076,
-          "S-GROWTH": 0.616,
-          "S-OVERSIGHT": 0.472
+          "S-FEDDEC": 0.811,
+          "S-FUNDING": 0.327,
+          "S-UKRAINE": 0.077,
+          "S-GROWTH": 0.575,
+          "S-OVERSIGHT": 0.487
         }
       },
       "Weak hiring": {
-        "share": 0.419,
+        "share": 0.453,
         "systems": {
           "S-FEDDEC": 0.738,
-          "S-FUNDING": 0.301,
+          "S-FUNDING": 0.327,
           "S-UKRAINE": 0.077,
-          "S-GROWTH": 0.663,
-          "S-OVERSIGHT": 0.47
+          "S-GROWTH": 0.621,
+          "S-OVERSIGHT": 0.489
         }
       }
     }
   },
   "agents_now": {
     "A-SWING": {
-      "A": 43.0,
-      "M": 41.1,
-      "T": 42.4
+      "A": 42.2,
+      "M": 40.7,
+      "T": 42.6
     },
     "A-DBASE": {
-      "A": 55.1,
-      "M": 55.3,
-      "T": 36.3
+      "A": 54.3,
+      "M": 54.8,
+      "T": 36.5
     },
     "A-RBASE": {
-      "A": 43.0,
-      "M": 44.7,
+      "A": 42.6,
+      "M": 44.5,
       "T": 44.9
     },
     "A-DLEAD": {
-      "A": 44.5,
-      "M": 47.4,
-      "T": 53.1
+      "A": 43.9,
+      "M": 47.0,
+      "T": 53.2
     },
     "A-RLEAD": {
-      "A": 38.3,
-      "M": 43.2,
+      "A": 37.7,
+      "M": 42.9,
       "T": 53.7
     },
     "A-PROTEST": {
-      "A": 60.6,
-      "M": 58.6,
-      "T": 26.6
+      "A": 59.9,
+      "M": 58.1,
+      "T": 26.8
     },
     "A-HARD": {
-      "A": 49.8,
-      "M": 49.4,
+      "A": 49.5,
+      "M": 49.1,
       "T": 28.2
     },
     "A-BIZ": {
-      "A": 32.7,
-      "M": 34.9,
-      "T": 57.0
+      "A": 31.7,
+      "M": 34.4,
+      "T": 57.1
     },
     "A-FED": {
-      "A": 34.0,
-      "M": 37.2,
-      "T": 72.6
+      "A": 33.6,
+      "M": 36.8,
+      "T": 72.7
     },
     "A-COURTS": {
-      "A": 33.0,
-      "M": 35.3,
-      "T": 67.4
+      "A": 33.1,
+      "M": 35.1,
+      "T": 67.3
     },
     "A-IRAN": {
-      "A": 63.6,
-      "M": 61.7,
-      "T": 8.2
+      "A": 63.1,
+      "M": 61.3,
+      "T": 8.3
     }
   },
   "agents_day30": {
     "A-SWING": {
-      "A": 42.5,
-      "M": 40.3
+      "A": 41.8,
+      "M": 39.7
     },
     "A-DBASE": {
-      "A": 54.0,
-      "M": 53.3
+      "A": 53.3,
+      "M": 52.7
     },
     "A-RBASE": {
-      "A": 44.0,
-      "M": 45.2
+      "A": 43.5,
+      "M": 44.7
     },
     "A-DLEAD": {
-      "A": 43.9,
-      "M": 46.2
+      "A": 43.4,
+      "M": 45.8
     },
     "A-RLEAD": {
-      "A": 38.2,
-      "M": 42.6
+      "A": 37.6,
+      "M": 42.1
     },
     "A-PROTEST": {
-      "A": 59.8,
-      "M": 56.9
+      "A": 59.0,
+      "M": 56.3
     },
     "A-HARD": {
-      "A": 50.4,
-      "M": 49.3
+      "A": 49.8,
+      "M": 48.8
     },
     "A-BIZ": {
-      "A": 32.0,
-      "M": 33.8
+      "A": 31.0,
+      "M": 33.1
     },
     "A-FED": {
-      "A": 32.0,
+      "A": 31.9,
       "M": 34.6
     },
     "A-COURTS": {
-      "A": 32.6,
-      "M": 34.1
+      "A": 32.5,
+      "M": 34.0
     },
     "A-IRAN": {
-      "A": 61.6,
-      "M": 59.5
+      "A": 61.1,
+      "M": 59.0
     }
   }
 }

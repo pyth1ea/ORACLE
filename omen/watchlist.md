@@ -3,7 +3,7 @@
 Live list of disruptions OMEN is tracking. Each run: update severity, add new items, close dead ones.
 Severity: 🔴 high · 🟠 elevated · 🟡 watch · ⚪ closed. Direction: ↑ worsening · ↓ easing · → steady.
 
-_Last updated: 2026-11-23 (S&P -3.7% Nov 20, AI rout; Trump Iran blockade threats; Democrats 258 House seats)_
+_Last updated: 2026-11-25 (chip rout continues, S&P rebound to 7,201, Brent under $90, Dec hike ~97%)_
 
 ---
 

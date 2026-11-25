@@ -3368,6 +3368,222 @@
         "resistance": 7
       },
       "systems": {}
+    },
+    {
+      "id": "E-20261124-01",
+      "date": "2026-11-24",
+      "domain": "economy",
+      "title": "Chip stocks plunge (semiconductor index -7.9%, Nvidia -5.9%) as S&P 500 slips 0.5% to 7,201 after Monday's rebound; Dow closes above 50,000",
+      "sources": [
+        "Yahoo Finance",
+        "Motley Fool",
+        "AP"
+      ],
+      "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-nov-24-221148355.html",
+      "omen": {
+        "chaos": 4,
+        "polarization": 1,
+        "economic": 5
+      },
+      "clio": {
+        "precedent": "2000 Nasdaq tech-bubble selloff",
+        "precedent_match": 4,
+        "resistance": 6
+      },
+      "systems": {
+        "S-GROWTH": 1
+      }
+    },
+    {
+      "id": "E-20261124-02",
+      "date": "2026-11-24",
+      "domain": "politics",
+      "title": "Trump's pressure on Nvidia's board to reinstate CEO Jensen Huang draws bipartisan fury; Nvidia falls about 7%; AG dodges questions on Nvidia probe",
+      "sources": [
+        "The Hill",
+        "BBC",
+        "PBS NewsHour"
+      ],
+      "url": "https://thehill.com/policy/technology/6241448-trump-pressures-nvidia-huang-return/",
+      "omen": {
+        "chaos": 2,
+        "polarization": 5,
+        "economic": 3
+      },
+      "clio": {
+        "precedent": "2019 Trump-era Huawei/ZTE deal intervention",
+        "precedent_match": 3,
+        "resistance": 6
+      },
+      "systems": {
+        "S-OVERSIGHT": 1
+      }
+    },
+    {
+      "id": "E-20261124-03",
+      "date": "2026-11-24",
+      "domain": "politics",
+      "title": "White House order puts government contractors in the crossfire of coming Democratic probes; House Democrat widens probe of Donald Trump Jr.'s investment firm",
+      "sources": [
+        "The Hill",
+        "AP",
+        "PBS NewsHour"
+      ],
+      "url": "https://thehill.com/homenews/administration/6241294-trump-executive-order-contractors/",
+      "omen": {
+        "chaos": 2,
+        "polarization": 6,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2019 White House stonewalling of House Democratic subpoenas",
+        "precedent_match": 6,
+        "resistance": 6
+      },
+      "systems": {
+        "S-OVERSIGHT": 1
+      }
+    },
+    {
+      "id": "E-20261124-04",
+      "date": "2026-11-24",
+      "domain": "economy",
+      "title": "Brent settles up about $2 near $91 after new tanker attacks and mine strikes near Hormuz, despite a 24% slide from its late-October peak",
+      "sources": [
+        "CNBC",
+        "Axios"
+      ],
+      "url": "https://www.cnbc.com/2026/11/24/oil-wti-brent-hormuz-supply.html",
+      "omen": {
+        "chaos": 4,
+        "polarization": 1,
+        "economic": 4
+      },
+      "clio": {
+        "precedent": "1987-88 Tanker War",
+        "precedent_match": 5,
+        "resistance": 5
+      },
+      "systems": {
+        "S-HORMUZ": 1,
+        "S-INFLATION": -1
+      }
+    },
+    {
+      "id": "E-20261124-05",
+      "date": "2026-11-24",
+      "domain": "economy",
+      "title": "Conference Board consumer confidence jumps to 103.3 (forecast 92.2) as the election passes and gas prices fall",
+      "sources": [
+        "AP",
+        "Conference Board"
+      ],
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQTjdmLTE2Tm9OMElXaGg4WnlDLTRCOHpFcFJPNEttUWNfTkRmQmpFMTZYZmE3bXg1b3V5TmlHNE",
+      "omen": {
+        "chaos": 1,
+        "polarization": 1,
+        "economic": 3
+      },
+      "clio": {
+        "precedent": "2022 post-peak gasoline confidence rebound",
+        "precedent_match": 5,
+        "resistance": 7
+      },
+      "systems": {
+        "S-GROWTH": -1
+      }
+    },
+    {
+      "id": "E-20261125-01",
+      "date": "2026-11-25",
+      "domain": "politics",
+      "title": "December funding deal threatened by fights over THC hemp, Iran war funding and defense spending; Democrats aim to use funding to end the Iran war",
+      "sources": [
+        "The Hill",
+        "Fox News"
+      ],
+      "url": "https://thehill.com/homenews/senate/6241266-congress-december-funding-deadline/",
+      "omen": {
+        "chaos": 3,
+        "polarization": 5,
+        "economic": 2
+      },
+      "clio": {
+        "precedent": "2018-19 shutdown over border wall funding",
+        "precedent_match": 4,
+        "resistance": 6
+      },
+      "systems": {
+        "S-FUNDING": 1
+      }
+    },
+    {
+      "id": "E-20261124-06",
+      "date": "2026-11-24",
+      "domain": "foreign",
+      "title": "Russian strike on Ukraine kills 2 and wounds 48; Kyiv explains its sea-drone attack in Libya",
+      "sources": [
+        "AP",
+        "BBC"
+      ],
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOTnR2aXdGN1dOTnJ1QmhWQWhjWnEwOHQ3QzJ2VExKcHRVZEE3TlloVi11NnJRajdKaThMRGIxeElNM2Zv",
+      "omen": {
+        "chaos": 4,
+        "polarization": 1,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2022-25 Russian air campaign against Kyiv",
+        "precedent_match": 8,
+        "resistance": 8
+      },
+      "systems": {
+        "S-UKRAINE": 1
+      }
+    },
+    {
+      "id": "E-20261124-07",
+      "date": "2026-11-24",
+      "domain": "foreign",
+      "title": "Israeli air strike kills Hamas internal security chief in Gaza among seven reported dead",
+      "sources": [
+        "BBC"
+      ],
+      "url": "https://www.bbc.co.uk/news/articles/c6rrg7ggq190o",
+      "omen": {
+        "chaos": 4,
+        "polarization": 2,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2025 Gaza ceasefire-era targeted strikes",
+        "precedent_match": 6,
+        "resistance": 7
+      },
+      "systems": {}
+    },
+    {
+      "id": "E-20261124-08",
+      "date": "2026-11-24",
+      "domain": "unrest",
+      "title": "Kilmar Abrego Garcia leaves the US voluntarily for Spain, ending his deportation fight; first of possibly hundreds of ICE-conduct lawsuits looms",
+      "sources": [
+        "AP",
+        "BBC",
+        "Axios"
+      ],
+      "url": "https://www.bbc.co.uk/news/articles/c6808pyy5dl9o",
+      "omen": {
+        "chaos": 1,
+        "polarization": 4,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "2025 Abrego Garcia wrongful deportation",
+        "precedent_match": 8,
+        "resistance": 7
+      },
+      "systems": {}
     }
   ]
 }
