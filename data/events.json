@@ -3584,6 +3584,148 @@
         "resistance": 7
       },
       "systems": {}
+    },
+    {
+      "id": "E-20261127-01",
+      "date": "2026-11-27",
+      "domain": "foreign",
+      "title": "Two Italian workers killed in drone attack on Kuwait site; Iran denies involvement",
+      "sources": [
+        "Reuters",
+        "BBC"
+      ],
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPeE9DZXQ0VUMxV052eWlmWWlKM3R0LTFiMS1ITm93Ty1NOWpta1ZVNU5MeWVVMHRlcmdXd0NpZmxJeGlGZEhCekl",
+      "omen": {
+        "chaos": 6,
+        "polarization": 2,
+        "economic": 2
+      },
+      "clio": {
+        "precedent": "1987-88 Tanker War",
+        "precedent_match": 5,
+        "resistance": 4
+      },
+      "systems": {
+        "S-HORMUZ": 1
+      }
+    },
+    {
+      "id": "E-20261126-01",
+      "date": "2026-11-26",
+      "domain": "economy",
+      "title": "Trump announces new sharp tariffs; China and other trading partners vow to hit back",
+      "sources": [
+        "AP",
+        "Reuters"
+      ],
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQVWQ3MnMzTlQ5Y2lUTW9RTzloTmp3MmtycjBUbmZUOTExYWNsVmlXX1JmLVJGYUYyRjNHSGV1b2hzLWhWclNBRDRZb2hy",
+      "omen": {
+        "chaos": 3,
+        "polarization": 4,
+        "economic": 5
+      },
+      "clio": {
+        "precedent": "2025 Liberation Day tariffs",
+        "precedent_match": 6,
+        "resistance": 5
+      },
+      "systems": {
+        "S-INFLATION": 1,
+        "S-GROWTH": 1
+      }
+    },
+    {
+      "id": "E-20261126-02",
+      "date": "2026-11-26",
+      "domain": "politics",
+      "title": "Trump calls GDP figures 'fake' and demands a Commerce Department investigation",
+      "sources": [
+        "AP",
+        "Axios",
+        "Reuters"
+      ],
+      "url": "https://www.pbs.org/newshour/politics/trump-calls-gdp-figures-fake-and-demands-an-investigation-of-commerce-department",
+      "omen": {
+        "chaos": 1,
+        "polarization": 5,
+        "economic": 3
+      },
+      "clio": {
+        "precedent": "2025 Trump fires BLS commissioner after weak jobs data",
+        "precedent_match": 7,
+        "resistance": 6
+      },
+      "systems": {}
+    },
+    {
+      "id": "E-20261127-02",
+      "date": "2026-11-27",
+      "domain": "foreign",
+      "title": "Zelenskyy warns Russia is preparing a major strike on Ukraine's power grid in coming days",
+      "sources": [
+        "AP",
+        "Reuters"
+      ],
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQR3dNRHNDWkJtLWk2U1poUUJkTjNwb2lHcXZweUN1d3ZNRDRkZ0FsRU5adXNVRzcxWVVvbGE2ZTBYRz",
+      "omen": {
+        "chaos": 4,
+        "polarization": 1,
+        "economic": 2
+      },
+      "clio": {
+        "precedent": "2022-23 Russian winter grid campaign",
+        "precedent_match": 7,
+        "resistance": 6
+      },
+      "systems": {
+        "S-UKRAINE": 1
+      }
+    },
+    {
+      "id": "E-20261126-03",
+      "date": "2026-11-26",
+      "domain": "foreign",
+      "title": "Trump says Iran war ends 'sort of whenever I want it to be'; Democrats plan to cut war funding",
+      "sources": [
+        "The Hill"
+      ],
+      "url": "https://thehill.com/homenews/administration/6245034-trump-says-iran-war-ends-whenever/",
+      "omen": {
+        "chaos": 2,
+        "polarization": 5,
+        "economic": 1
+      },
+      "clio": {
+        "precedent": "1973 War Powers Resolution fights",
+        "precedent_match": 5,
+        "resistance": 6
+      },
+      "systems": {
+        "S-HORMUZ": 0,
+        "S-OVERSIGHT": 1
+      }
+    },
+    {
+      "id": "E-20261127-03",
+      "date": "2026-11-27",
+      "domain": "unrest",
+      "title": "Ebola outbreak in Congo reaches 12,000 cases as violence forces responders to evacuate",
+      "sources": [
+        "AP",
+        "NPR"
+      ],
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOODk5TW1rbDA5Ml84Vzh3OWVzdW12UkFLbXJzQlZSbG9rNTQxZGl1bjBPQ1FsNURnQ21MU3",
+      "omen": {
+        "chaos": 4,
+        "polarization": 1,
+        "economic": 2
+      },
+      "clio": {
+        "precedent": "2014-16 West Africa Ebola epidemic",
+        "precedent_match": 6,
+        "resistance": 5
+      },
+      "systems": {}
     }
   ]
 }

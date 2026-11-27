@@ -4,8 +4,8 @@
     "version": "2.0",
     "scope": "United States",
     "created": "2026-10-14",
-    "last_run": "2026-11-25",
-    "run_count": 22,
+    "last_run": "2026-11-27",
+    "run_count": 23,
     "next_id": 79,
     "note": "Single source of truth. Rules live in ORACLE.md. Never rewrite past forecasts. Arithmetic is done by tools/core.py."
   },
@@ -1342,7 +1342,7 @@
         "market": null,
         "sim": null
       },
-      "sim": 0.08,
+      "sim": 0.1,
       "blend": 0.05
     },
     {
@@ -4113,8 +4113,8 @@
       "question": "Will the S&P 500 close above 7,000 on Friday, November 27, 2026?",
       "resolves_on": "2026-11-27",
       "resolution_source": "S&P 500 official close (Yahoo Finance / S&P Dow Jones Indices)",
-      "clio": 0.75,
-      "omen": 0.8,
+      "clio": 0.85,
+      "omen": 0.9,
       "adjustment": {
         "value": 0.0,
         "reason": ""
@@ -4122,8 +4122,8 @@
       "market": null,
       "market_source": null,
       "reasoning": {
-        "clio": "With S&P at 7,201 it needs to avoid a drop over 2.8% in three sessions; with VIX near 30, that happens roughly one time in four.",
-        "omen": "S&P 7,201.09 on Nov 24 (Yahoo), 3% cushion; chip rout continues (SOX -7.9%) but the Dow broke 50,000 and money rotated to value; Thanksgiving half-day Friday."
+        "clio": "S&P 500 at 7,183 (Nov 25 close) has a 2.6% cushion over 7,000 with one half-day session left; a drop that big in one session is rare.",
+        "omen": "Nov 25 close 7,182.78 (Yahoo); new tariff news is a risk but the Thanksgiving half-day is usually quiet."
       },
       "status": "open",
       "outcome": null,
@@ -4148,20 +4148,26 @@
           "clio": 0.75,
           "omen": 0.8,
           "oracle": 0.84
+        },
+        {
+          "date": "2026-11-27",
+          "clio": 0.85,
+          "omen": 0.9,
+          "oracle": 0.92
         }
       ],
       "sim": null,
-      "oracle": 0.84,
+      "oracle": 0.92,
       "track": {
         "series": "SP500",
         "op": ">",
         "value": 7000,
         "proxy": false
       },
-      "blend": 0.78,
+      "blend": 0.88,
       "track_status": {
-        "date": "2026-11-24",
-        "value": 7201.0898,
+        "date": "2026-11-25",
+        "value": 7182.7798,
         "met": true,
         "proxy": false
       }
@@ -4174,8 +4180,8 @@
       "question": "Will the VIX close above 25 on Friday, November 27, 2026?",
       "resolves_on": "2026-11-27",
       "resolution_source": "Cboe VIX close (Yahoo Finance / FRED VIXCLS)",
-      "clio": 0.8,
-      "omen": 0.85,
+      "clio": 0.55,
+      "omen": 0.6,
       "adjustment": {
         "value": 0.0,
         "reason": ""
@@ -4183,8 +4189,8 @@
       "market": null,
       "market_source": null,
       "reasoning": {
-        "clio": "After a correction VIX typically stays above 25 for more than a week.",
-        "omen": "VIX 30.24 on Nov 25 (Yahoo) and chips still falling; a drop below 25 by Friday needs a calm rebound."
+        "clio": "VIX closes above a 25 line it is sitting on (about 25.6, down from 26.8 and 30 earlier in the week) hit about half the time; fear gauges tend to drift lower after spikes.",
+        "omen": "VIX 25.6 on the Nov 27 morning print (Yahoo) vs 26.8 prior; tariff news and chip rout keep it elevated but holiday half-day trading usually calms it. Cut from 88% because the cushion shrank from 5 points to under 1."
       },
       "status": "open",
       "outcome": null,
@@ -4209,20 +4215,26 @@
           "clio": 0.8,
           "omen": 0.85,
           "oracle": 0.88
+        },
+        {
+          "date": "2026-11-27",
+          "clio": 0.55,
+          "omen": 0.6,
+          "oracle": 0.66
         }
       ],
       "sim": null,
-      "oracle": 0.88,
+      "oracle": 0.66,
       "track": {
         "series": "VIXCLS",
         "op": ">",
         "value": 25,
         "proxy": false
       },
-      "blend": 0.83,
+      "blend": 0.58,
       "track_status": {
-        "date": "2026-11-25",
-        "value": 30.24,
+        "date": "2026-11-27",
+        "value": 25.6,
         "met": true,
         "proxy": false
       }
@@ -4585,6 +4597,20 @@
       "n_market": 4,
       "brier_sim": 0.0758,
       "n_sim": 5
+    },
+    {
+      "date": "2026-11-27",
+      "resolved_today": 0,
+      "total_resolved": 48,
+      "hits": 35,
+      "misses": 10,
+      "brier_oracle": 0.1632,
+      "brier_clio": 0.1934,
+      "brier_omen": 0.1419,
+      "brier_market": 0.0981,
+      "n_market": 4,
+      "brier_sim": 0.0758,
+      "n_sim": 5
     }
   ],
   "config": {
@@ -4685,7 +4711,7 @@
       "linked_oracle": 0.87,
       "projection": null,
       "trend_per_week": null,
-      "momentum": 0.16,
+      "momentum": 0.0,
       "retired": true,
       "retired_note": "Resolved Nov 4: Democrats won the House. Successor: S-OVERSIGHT."
     },
@@ -4753,7 +4779,7 @@
       "linked_oracle": 0.55,
       "projection": null,
       "trend_per_week": null,
-      "momentum": 0.1,
+      "momentum": 0.0,
       "retired": true,
       "retired_note": "Resolved Nov 4: Democrats won the Senate. Successor: S-OVERSIGHT."
     },
@@ -4853,11 +4879,11 @@
       "linked_oracle": 0.6,
       "projection": {
         "kind": "restabilizing",
-        "date": "2026-12-12",
+        "date": "2026-12-31",
         "note": "friction regains the upper hand at the current trend"
       },
-      "trend_per_week": -0.16,
-      "momentum": 0.25
+      "trend_per_week": -0.08,
+      "momentum": 0.61
     },
     {
       "id": "S-FED",
@@ -5033,15 +5059,15 @@
       "tip_probability": 0.515,
       "status": "critical",
       "sim": {
-        "tip": 0.596,
-        "p10": 6.84,
-        "p50": 7.52,
-        "p90": 8.36
+        "tip": 0.599,
+        "p10": 6.86,
+        "p50": 7.56,
+        "p90": 8.34
       },
       "linked_oracle": 0.17,
       "projection": null,
-      "trend_per_week": 0.75,
-      "momentum": 1.73
+      "trend_per_week": 0.72,
+      "momentum": 1.65
     },
     {
       "id": "S-HORMUZ",
@@ -5049,20 +5075,19 @@
       "domain": "foreign",
       "status_quo": "US-Iran tanker war continues",
       "change": "US-Iran deal reopens Hormuz shipping",
-      "pressure": 4.7,
+      "pressure": 5.2,
       "friction": 6.7,
       "pressure_drivers": [
-        "US strike on Iran's Qeshm Island missile site (Reuters, Nov 17)",
-        "Trump warns Iran against a dirty-bomb plot; White House cites no credible threat",
-        "Houthi drones at Saudi East-West pipeline",
-        "Iran war stalemate deepening (Reuters)",
-        "Tankers reported hit by mines (Iran says; CENTCOM disputes)"
+        "Two Italian workers killed in a drone attack on a Kuwait site (Reuters/BBC, Nov 27); Iran denies involvement",
+        "US strike on Iran's Qeshm Island missile site (Nov 17)",
+        "Houthi drones at Saudi pipeline; Hormuz mine and tanker incidents",
+        "Iran war in its ninth month; Trump says it ends 'whenever I want'"
       ],
       "friction_drivers": [
-        "Oil easing on US stock builds",
         "Qatar/Pakistan mediation channels remain",
         "Deep mutual distrust; Iran's seven conditions",
-        "Navy nominee admits strain on US forces"
+        "Oil easing on stock builds",
+        "Democrats plan to cut war funding in January"
       ],
       "window": "2026-11-14",
       "tip_prediction": "P-0019",
@@ -5114,10 +5139,15 @@
           "date": "2026-11-18",
           "pressure": 4.7,
           "friction": 6.7
+        },
+        {
+          "date": "2026-11-27",
+          "pressure": 5.2,
+          "friction": 6.7
         }
       ],
-      "margin": -2.0,
-      "tip_probability": 0.231,
+      "margin": -1.5,
+      "tip_probability": 0.289,
       "status": "strained",
       "sim": {
         "tip": 0.192,
@@ -5128,11 +5158,11 @@
       "linked_oracle": 0.05,
       "projection": {
         "kind": "crossing",
-        "date": "2027-01-06",
+        "date": "2026-12-21",
         "note": "pressure overtakes friction at the current trend"
       },
-      "trend_per_week": 0.34,
-      "momentum": 0.85
+      "trend_per_week": 0.44,
+      "momentum": 1.2
     },
     {
       "id": "S-STREETS",
@@ -5192,7 +5222,7 @@
       "linked_oracle": 0.19,
       "projection": null,
       "trend_per_week": null,
-      "momentum": 0.37
+      "momentum": 0.33
     },
     {
       "id": "S-FUNDING",
@@ -5248,15 +5278,15 @@
       "tip_probability": 0.327,
       "status": "strained",
       "sim": {
-        "tip": 0.327,
+        "tip": 0.328,
         "p10": 4.74,
         "p50": 4.8,
-        "p90": 4.87
+        "p90": 4.86
       },
       "linked_oracle": 0.4,
       "projection": null,
       "trend_per_week": null,
-      "momentum": 0.87
+      "momentum": 0.71
     },
     {
       "id": "S-UKRAINE",
@@ -5313,19 +5343,19 @@
       "tip_probability": 0.098,
       "status": "holding",
       "sim": {
-        "tip": 0.077,
-        "p10": 3.47,
-        "p50": 3.55,
-        "p90": 3.63
+        "tip": 0.101,
+        "p10": 3.98,
+        "p50": 4.06,
+        "p90": 4.15
       },
       "linked_oracle": 0.06,
       "projection": {
         "kind": "crossing",
-        "date": "2026-12-25",
+        "date": "2026-12-27",
         "note": "pressure overtakes friction at the current trend"
       },
       "trend_per_week": 0.86,
-      "momentum": 1.1
+      "momentum": 1.22
     },
     {
       "id": "S-FEDDEC",
@@ -5391,15 +5421,15 @@
       "tip_probability": 0.779,
       "status": "tipping",
       "sim": {
-        "tip": 0.778,
+        "tip": 0.777,
         "p10": 7.16,
         "p50": 7.79,
-        "p90": 8.01
+        "p90": 8.0
       },
       "linked_oracle": 0.95,
       "projection": null,
       "trend_per_week": 0.94,
-      "momentum": 0.75
+      "momentum": 0.65
     },
     {
       "id": "S-OVERSIGHT",
@@ -5456,19 +5486,19 @@
       "tip_probability": 0.397,
       "status": "strained",
       "sim": {
-        "tip": 0.488,
-        "p10": 6.11,
-        "p50": 6.37,
-        "p90": 6.51
+        "tip": 0.491,
+        "p10": 6.15,
+        "p50": 6.38,
+        "p90": 6.53
       },
       "linked_oracle": 0.33,
       "projection": {
         "kind": "crossing",
-        "date": "2026-12-07",
+        "date": "2026-12-15",
         "note": "pressure overtakes friction at the current trend"
       },
-      "trend_per_week": 0.42,
-      "momentum": 1.52
+      "trend_per_week": 0.27,
+      "momentum": 1.55
     }
   ],
   "catalysts": [
@@ -6272,19 +6302,19 @@
       ],
       "sim_conditional": {
         "Funding lapses": {
-          "share": 0.313,
+          "share": 0.308,
           "systems": {
-            "S-UKRAINE": 0.077,
-            "S-GROWTH": 0.626,
+            "S-UKRAINE": 0.101,
+            "S-GROWTH": 0.625,
             "S-OVERSIGHT": 0.489
           }
         },
         "Deal or stopgap": {
-          "share": 0.687,
+          "share": 0.692,
           "systems": {
-            "S-UKRAINE": 0.077,
-            "S-GROWTH": 0.582,
-            "S-OVERSIGHT": 0.487
+            "S-UKRAINE": 0.101,
+            "S-GROWTH": 0.588,
+            "S-OVERSIGHT": 0.492
           }
         }
       }
@@ -6427,21 +6457,21 @@
       ],
       "sim_conditional": {
         "Hike": {
-          "share": 0.341,
+          "share": 0.321,
           "systems": {
-            "S-FUNDING": 0.327,
-            "S-UKRAINE": 0.077,
-            "S-GROWTH": 0.67,
-            "S-OVERSIGHT": 0.489
+            "S-FUNDING": 0.328,
+            "S-UKRAINE": 0.101,
+            "S-GROWTH": 0.676,
+            "S-OVERSIGHT": 0.493
           }
         },
         "Hold or cut": {
-          "share": 0.659,
+          "share": 0.679,
           "systems": {
-            "S-FUNDING": 0.327,
-            "S-UKRAINE": 0.077,
-            "S-GROWTH": 0.557,
-            "S-OVERSIGHT": 0.488
+            "S-FUNDING": 0.328,
+            "S-UKRAINE": 0.101,
+            "S-GROWTH": 0.563,
+            "S-OVERSIGHT": 0.49
           }
         }
       }
@@ -6565,21 +6595,21 @@
       ],
       "sim_conditional": {
         "Hike": {
-          "share": 0.608,
+          "share": 0.623,
           "systems": {
-            "S-FUNDING": 0.327,
-            "S-UKRAINE": 0.077,
-            "S-GROWTH": 0.629,
-            "S-OVERSIGHT": 0.488
+            "S-FUNDING": 0.328,
+            "S-UKRAINE": 0.101,
+            "S-GROWTH": 0.634,
+            "S-OVERSIGHT": 0.49
           }
         },
         "Hold": {
-          "share": 0.392,
+          "share": 0.377,
           "systems": {
-            "S-FUNDING": 0.327,
-            "S-UKRAINE": 0.077,
-            "S-GROWTH": 0.544,
-            "S-OVERSIGHT": 0.488
+            "S-FUNDING": 0.328,
+            "S-UKRAINE": 0.101,
+            "S-GROWTH": 0.543,
+            "S-OVERSIGHT": 0.492
           }
         }
       }
@@ -6626,17 +6656,17 @@
       ],
       "sim_conditional": {
         "Jeffries elected Speaker": {
-          "share": 0.923,
+          "share": 0.935,
           "systems": {
-            "S-GROWTH": 0.596,
-            "S-OVERSIGHT": 0.496
+            "S-GROWTH": 0.599,
+            "S-OVERSIGHT": 0.498
           }
         },
         "Speaker vote drags on": {
-          "share": 0.077,
+          "share": 0.065,
           "systems": {
-            "S-GROWTH": 0.594,
-            "S-OVERSIGHT": 0.394
+            "S-GROWTH": 0.6,
+            "S-OVERSIGHT": 0.396
           }
         }
       }
@@ -6752,21 +6782,21 @@
       ],
       "sim_conditional": {
         "Hot (0.3%+ monthly)": {
-          "share": 0.404,
+          "share": 0.427,
           "systems": {
             "S-FUNDING": 0.328,
-            "S-UKRAINE": 0.077,
-            "S-GROWTH": 0.598,
-            "S-OVERSIGHT": 0.489
+            "S-UKRAINE": 0.101,
+            "S-GROWTH": 0.6,
+            "S-OVERSIGHT": 0.492
           }
         },
         "Cooler (under 0.3%)": {
-          "share": 0.596,
+          "share": 0.573,
           "systems": {
-            "S-FUNDING": 0.327,
-            "S-UKRAINE": 0.077,
-            "S-GROWTH": 0.595,
-            "S-OVERSIGHT": 0.487
+            "S-FUNDING": 0.328,
+            "S-UKRAINE": 0.101,
+            "S-GROWTH": 0.599,
+            "S-OVERSIGHT": 0.49
           }
         }
       }
@@ -6876,23 +6906,23 @@
       ],
       "sim_conditional": {
         "Democrats keep 91+ state House seats": {
-          "share": 0.859,
+          "share": 0.858,
           "systems": {
-            "S-FEDDEC": 0.779,
-            "S-FUNDING": 0.327,
-            "S-UKRAINE": 0.077,
-            "S-GROWTH": 0.596,
-            "S-OVERSIGHT": 0.492
+            "S-FEDDEC": 0.778,
+            "S-FUNDING": 0.328,
+            "S-UKRAINE": 0.101,
+            "S-GROWTH": 0.599,
+            "S-OVERSIGHT": 0.495
           }
         },
         "Democrats fall short of 91": {
-          "share": 0.141,
+          "share": 0.142,
           "systems": {
-            "S-FEDDEC": 0.776,
+            "S-FEDDEC": 0.774,
             "S-FUNDING": 0.328,
-            "S-UKRAINE": 0.077,
-            "S-GROWTH": 0.592,
-            "S-OVERSIGHT": 0.461
+            "S-UKRAINE": 0.101,
+            "S-GROWTH": 0.601,
+            "S-OVERSIGHT": 0.468
           }
         }
       }
@@ -6942,23 +6972,23 @@
       ],
       "sim_conditional": {
         "Strong hiring": {
-          "share": 0.547,
+          "share": 0.544,
           "systems": {
-            "S-FEDDEC": 0.811,
-            "S-FUNDING": 0.327,
-            "S-UKRAINE": 0.077,
-            "S-GROWTH": 0.575,
-            "S-OVERSIGHT": 0.487
+            "S-FEDDEC": 0.81,
+            "S-FUNDING": 0.328,
+            "S-UKRAINE": 0.101,
+            "S-GROWTH": 0.582,
+            "S-OVERSIGHT": 0.491
           }
         },
         "Weak hiring": {
-          "share": 0.453,
+          "share": 0.456,
           "systems": {
             "S-FEDDEC": 0.738,
-            "S-FUNDING": 0.327,
-            "S-UKRAINE": 0.077,
+            "S-FUNDING": 0.328,
+            "S-UKRAINE": 0.101,
             "S-GROWTH": 0.621,
-            "S-OVERSIGHT": 0.489
+            "S-OVERSIGHT": 0.491
           }
         }
       }
@@ -7462,8 +7492,8 @@
     ]
   },
   "review": {
-    "date": "2026-11-25",
-    "since": "2026-11-18",
+    "date": "2026-11-27",
+    "since": "2026-11-20",
     "resolved": [
       {
         "id": "P-0006",
@@ -7529,13 +7559,6 @@
     "clio_wins": 0,
     "omen_wins": 6,
     "big_moves": [
-      {
-        "id": "P-0025",
-        "question": "Will the Federal Reserve raise the federal funds target range at its December 8-9, 2026 meeting?",
-        "then": 0.77,
-        "now": 0.95,
-        "delta": 0.18
-      },
       {
         "id": "P-0058",
         "question": "Will Democrats hold at least 91 of the 180 Georgia House seats once the Dec 1 runoff and any recounts are settled (results as of Dec 15, 2026)?",
@@ -7613,16 +7636,16 @@
       {
         "id": "P-0076",
         "question": "Will the S&P 500 close above 7,000 on Friday, November 27, 2026?",
-        "date": "2026-11-24",
-        "value": 7201.0898,
+        "date": "2026-11-25",
+        "value": 7182.7798,
         "met": true,
         "proxy": false
       },
       {
         "id": "P-0077",
         "question": "Will the VIX close above 25 on Friday, November 27, 2026?",
-        "date": "2026-11-25",
-        "value": 30.24,
+        "date": "2026-11-27",
+        "value": 25.6,
         "met": true,
         "proxy": false
       }
@@ -7633,7 +7656,7 @@
     "n": 48,
     "a": 0.3539,
     "b": 1.0382,
-    "fitted_on": "2026-11-25"
+    "fitted_on": "2026-11-27"
   },
   "shock_watch": [
     {
@@ -7809,7 +7832,13 @@
       "date": "2026-11-18",
       "V": 0.466,
       "p": 0.323,
-      "outcome": null
+      "outcome": true,
+      "evidence": [
+        "S&P 500 move 2026-11-20",
+        "S&P 500 move 2026-11-23"
+      ],
+      "resolved_on": "2026-11-27",
+      "brier": 0.4583
     },
     {
       "date": "2026-11-20",
@@ -7834,14 +7863,20 @@
       "V": 0.521,
       "p": 0.413,
       "outcome": null
+    },
+    {
+      "date": "2026-11-27",
+      "V": 0.553,
+      "p": 0.468,
+      "outcome": null
     }
   ],
   "volatility": {
-    "V": 0.521,
+    "V": 0.553,
     "path": "gamma",
-    "O": 3.64,
-    "C": 6.37,
-    "Pm": 1.435,
+    "O": 3.71,
+    "C": 6.08,
+    "Pm": 1.531,
     "w_omen": 0.57,
     "w_clio": 0.43,
     "inertia": 1.0,
@@ -7850,71 +7885,71 @@
       {
         "id": "C-019",
         "name": "Georgia runoff elections",
-        "add": 0.274
+        "add": 0.335
       },
       {
         "id": "C-012",
         "name": "Fed's December interest-rate decision",
-        "add": 0.049
+        "add": 0.06
       },
       {
         "id": "C-014",
         "name": "Fed interest-rate decision (Dec 8-9)",
-        "add": 0.049
+        "add": 0.06
       },
       {
         "id": "C-010",
         "name": "Government funding deadline",
-        "add": 0.03
+        "add": 0.037
       },
       {
         "id": "C-020",
         "name": "November jobs report (date approx.)",
-        "add": 0.02
+        "add": 0.025
       }
     ],
-    "date": "2026-11-25",
+    "date": "2026-11-27",
     "by_domain": {
       "politics": {
-        "V": 0.725,
+        "V": 0.739,
         "path": "beta",
-        "O": 3.76,
-        "C": 6.25,
-        "Pm": 1.305,
-        "n_events": 11
+        "O": 3.8,
+        "C": 6.21,
+        "Pm": 1.372,
+        "n_events": 12
       },
       "economy": {
-        "V": 0.418,
+        "V": 0.437,
         "path": "gamma",
-        "O": 3.59,
-        "C": 5.95,
-        "Pm": 1.13,
-        "n_events": 15
+        "O": 3.7,
+        "C": 5.82,
+        "Pm": 1.159,
+        "n_events": 13
       },
       "unrest": {
-        "V": 0.32,
+        "V": 0.339,
         "path": "alpha",
-        "O": 3.41,
-        "C": 7.08,
+        "O": 3.3,
+        "C": 6.3,
         "Pm": 1.0,
         "n_events": 5
       },
       "foreign": {
-        "V": 0.358,
+        "V": 0.385,
         "path": "alpha",
-        "O": 3.69,
-        "C": 6.67,
+        "O": 3.8,
+        "C": 6.11,
         "Pm": 1.0,
-        "n_events": 12
+        "n_events": 13
       }
     },
     "shock": {
-      "p": 0.413,
+      "p": 0.468,
       "a": -4.0,
       "b": 7.0,
       "fitted": false,
-      "n_resolved": 17,
-      "brier": 0.2374,
+      "n_resolved": 18,
+      "brier": 0.2497,
       "hits": 11
     }
   },
@@ -8182,6 +8217,18 @@
         "unrest": 0.32,
         "foreign": 0.358
       }
+    },
+    {
+      "date": "2026-11-27",
+      "V": 0.553,
+      "path": "gamma",
+      "p_shock": 0.468,
+      "by_domain": {
+        "politics": 0.739,
+        "economy": 0.437,
+        "unrest": 0.339,
+        "foreign": 0.385
+      }
     }
   ],
   "history_scale": {
@@ -8211,7 +8258,7 @@
           "Parliament fights over the anti-Catholic Ecclesiastical Titles Bill",
           "Chartist reform movement fades after 1848"
         ],
-        "mix_similarity": 0.636
+        "mix_similarity": 0.642
       },
       {
         "id": "H-1997",
@@ -8266,7 +8313,7 @@
           "Suez Canal tension after Egypt nationalizes the canal",
           "Economy near full employment with low inflation"
         ],
-        "mix_similarity": 0.963
+        "mix_similarity": 0.967
       },
       {
         "id": "H-2018",
@@ -8293,7 +8340,7 @@
           "Mass protests at the Capitol; hundreds arrested",
           "Trade-war tariffs on China escalate"
         ],
-        "mix_similarity": 0.829
+        "mix_similarity": 0.836
       },
       {
         "id": "H-1974",
@@ -8321,7 +8368,7 @@
           "'Smoking gun' tape released",
           "House committee approves articles of impeachment"
         ],
-        "mix_similarity": 0.951
+        "mix_similarity": 0.955
       },
       {
         "id": "H-2001",
@@ -8349,7 +8396,7 @@
           "All US airspace shut down for days",
           "Terrorist attacks kill nearly 3,000 people"
         ],
-        "mix_similarity": 0.827
+        "mix_similarity": 0.821
       },
       {
         "id": "H-2011",
@@ -8376,7 +8423,7 @@
           "Unemployment stuck at 9.1%",
           "Debt-ceiling deal reached hours before default deadline"
         ],
-        "mix_similarity": 0.948
+        "mix_similarity": 0.941
       },
       {
         "id": "H-1979US",
@@ -8404,7 +8451,7 @@
           "Ted Kennedy launches a primary challenge to the president",
           "Militants seize the US embassy in Tehran and take hostages"
         ],
-        "mix_similarity": 0.915
+        "mix_similarity": 0.906
       },
       {
         "id": "H-2021",
@@ -8432,7 +8479,7 @@
           "Georgia runoffs flip control of the Senate",
           "Recording of pressure call to Georgia's secretary of state released"
         ],
-        "mix_similarity": 0.911
+        "mix_similarity": 0.916
       },
       {
         "id": "H-1962",
@@ -8460,7 +8507,7 @@
           "Kennedy announces naval quarantine of Cuba",
           "Congress and public rally behind the president"
         ],
-        "mix_similarity": 0.833
+        "mix_similarity": 0.834
       },
       {
         "id": "H-1979UK",
@@ -8487,7 +8534,7 @@
           "Inflation back above 9%; government pay caps collapse",
           "'Crisis? What crisis?' headline sums up the prime minister's response"
         ],
-        "mix_similarity": 0.957
+        "mix_similarity": 0.952
       },
       {
         "id": "H-1968",
@@ -8515,7 +8562,7 @@
           "Poor People's Campaign encamped on the National Mall",
           "Cities still scarred by riots after Martin Luther King Jr.'s assassination"
         ],
-        "mix_similarity": 0.957
+        "mix_similarity": 0.963
       },
       {
         "id": "H-2008",
@@ -8542,7 +8589,7 @@
           "House rejects the bailout; stocks plunge 7%",
           "Washington Mutual seized: largest bank failure in US history"
         ],
-        "mix_similarity": 0.916
+        "mix_similarity": 0.907
       },
       {
         "id": "H-2020",
@@ -8570,7 +8617,7 @@
           "US COVID deaths pass 100,000",
           "Fed and Congress pour trillions into the economy"
         ],
-        "mix_similarity": 0.997
+        "mix_similarity": 0.998
       },
       {
         "id": "H-1991",
@@ -8598,7 +8645,7 @@
           "Yeltsin defies the coup; crowds defend parliament",
           "Shortages and rationing across the country"
         ],
-        "mix_similarity": 0.964
+        "mix_similarity": 0.967
       },
       {
         "id": "H-1923",
@@ -8626,7 +8673,7 @@
           "Hitler's Beer Hall Putsch fails in Munich",
           "Separatist revolts in the Rhineland"
         ],
-        "mix_similarity": 0.947
+        "mix_similarity": 0.94
       },
       {
         "id": "H-1933",
@@ -8653,7 +8700,7 @@
           "Unemployment near 25%",
           "Farm foreclosure riots in the Midwest"
         ],
-        "mix_similarity": 0.91
+        "mix_similarity": 0.901
       },
       {
         "id": "H-1789",
@@ -8681,7 +8728,7 @@
           "Royal troops mass around Paris",
           "State bankruptcy looms"
         ],
-        "mix_similarity": 0.988
+        "mix_similarity": 0.986
       },
       {
         "id": "H-49BC",
@@ -8708,7 +8755,7 @@
           "Senate orders Caesar to disband his army",
           "Years of gang warfare in Rome's streets"
         ],
-        "mix_similarity": 0.926
+        "mix_similarity": 0.932
       },
       {
         "id": "H-1861",
@@ -8735,30 +8782,30 @@
           "Banks and trade between North and South collapse",
           "Seven states have seceded; more are about to follow"
         ],
-        "mix_similarity": 0.982
+        "mix_similarity": 0.984
       }
     ],
     "closest_level": [
-      "H-2001",
-      "H-1974",
-      "H-2011"
+      "H-2011",
+      "H-1979US",
+      "H-2021"
     ],
     "closest_kind": [
-      "H-1979UK",
+      "H-1968",
       "H-1974",
-      "H-2011"
+      "H-1979UK"
     ],
     "between": [
       "H-2001",
       "H-2011"
     ],
     "today": {
-      "V": 0.521,
+      "V": 0.553,
       "profile": {
-        "chaos": 3.08,
-        "polarization": 2.78,
-        "economic": 2.42,
-        "resistance": 6.37
+        "chaos": 3.17,
+        "polarization": 2.85,
+        "economic": 2.4,
+        "resistance": 6.08
       }
     }
   }
